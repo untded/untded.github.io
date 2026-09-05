@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4248> a utd:TradeDataElement;
+  schema:description "Restriction or condition to be fulfilled before goods can be released to the consignee or his agent.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Goods Release Restriction.Text";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Goods release restriction";
+  utd:representation "an..512";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4248 .

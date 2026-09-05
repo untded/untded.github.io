@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { href } from '../../lib/site'
+---
+
+<BaseLayout
+  title="Maintenance of the TDED — the original text · UN/TDED"
+  description="Section 2 of UNTDED 2005: the TDED Maintenance Agency, its composition and the procedures for changing the directory."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document · PDF pp. 14–18</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">2 — Maintenance of the TDED</h1>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">The Maintenance Agency</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          The Directory is maintained by the TDED Maintenance Agency (MA),
+          operating within the United Nations framework for trade
+          facilitation — the former UN/ECE Working Party on Facilitation of
+          Trade Procedures, now UN/CEFACT, its Forum and empowered groups. It
+          is composed of inter-governmental and non-governmental bodies and of
+          representatives of ISO national Member Bodies, of ISO TCs (Technical
+          Committees) and ISO/IEC JTC1 SCs (Sub-Committees) concerned, each
+          being entitled to appoint one official representative.
+        </p>
+        <p>
+          The MA is authorized to seek external expert advice where necessary,
+          and may consult directly users of the TDED, national facilitation
+          bodies and other interested parties, as required.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Changing the directory</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          If it is proposed to change the name or description of a data element
+          in such a way that, without substantially changing the concept, its
+          application area is extended or further clarified, the numeric
+          identifier may be retained provided that there are no objections from
+          users who might be adversely affected by the change.
+        </p>
+        <p>
+          If an urgent need arises for the introduction of a new data element,
+          or for a change of an existing one, the Maintenance Agency may act
+          through its procedures for such cases — the 2005 edition’s change
+          indicators record the outcome of exactly this process against the
+          1993 edition.
+        </p>
+      </div>
+      <p class="mt-4 text-sm text-body">
+        See the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/notation/#change-tags')}>change-tag legend</a>{' '}
+        for how each change is marked in the entries.
+      </p>
+    </section>
+
+    <p class="mt-10 rounded-md border border-line bg-mist p-4 text-xs leading-relaxed text-body">
+      Transcribed (abridged to the sections reproduced above) from OCR of PDF
+      pp. 14–18 (see the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/document')}>provenance note</a>).
+      This maintenance function is what ISO/TC 154 resolution P-2026-07 now
+      proposes to run on an open-source platform —{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/about')}>this one</a>.
+    </p>
+  </div>
+</BaseLayout>

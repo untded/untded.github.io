@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2280> a utd:TradeDataElement;
+  schema:description "Date and or time of the departure of means of transport, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Actual Departure Date Time.Text";
+  utd:bridges "MAR: IMO/FAL 1, 3, 5-6";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Departuredate (and time)";
+  utd:representation "an..17";
+  utd:sourcePage 46;
+  utd:status "active";
+  utd:tag 2280 .

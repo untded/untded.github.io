@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3041> a utd:TradeDataElement;
+  schema:description "Code of the port, either inward or outward, where a declaration is made.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Declaration. Reporting Port Location.Identifier";
+  utd:bridges "UNLK: L 23, P 39-44";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Port where report is made, coded";
+  utd:representation "an..35";
+  utd:sourcePage 51;
+  utd:status "active";
+  utd:tag 3041 .

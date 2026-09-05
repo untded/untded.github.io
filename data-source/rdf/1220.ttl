@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1220> a utd:TradeDataElement;
+  schema:description "Quantity of document copies required.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Copies Required.Quantity";
+  utd:bridges "SWIFT: an..65x12 UNLK: L 63, P 45-49 MAR: IMO/FAL 1";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Number of copies of document required";
+  utd:representation "n..2";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1220 .

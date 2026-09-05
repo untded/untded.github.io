@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3290> a utd:TradeDataElement;
+  schema:description "Name and address of party on whom any draft is to be drawn from the documentary credit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit Drawee. Party Identification.Text";
+  utd:bridges "SWIFT: an..35x2 UNLK: an..35x2; L 25- 26, P 45-80";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Documentary credit drawee";
+  utd:representation "an..512";
+  utd:sourcePage 64;
+  utd:status "active";
+  utd:tag 3290 .

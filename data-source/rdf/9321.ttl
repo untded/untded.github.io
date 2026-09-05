@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9321> a utd:TradeDataElement;
+  schema:description "Code specifying an application error.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Application. Error.Code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 8;
+  utd:minLength 1;
+  utd:oldName "Application error, coded";
+  utd:representation "an..8";
+  utd:sourcePage 130;
+  utd:status "active";
+  utd:tag 9321 .

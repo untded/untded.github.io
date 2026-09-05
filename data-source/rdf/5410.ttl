@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5410> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "AWB: Checkmark L 24, P 57-58";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Other charges, to collect";
+  utd:sourcePage 98;
+  utd:status "retired";
+  utd:tag 5410 .

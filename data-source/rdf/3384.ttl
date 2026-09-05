@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3384> a utd:TradeDataElement;
+  schema:description "Name of the place where a specific goods item is located.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Storage Location.Text";
+  utd:bridges "CIMP: (321):an..7 SAD: (SAD 30)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Location of goods";
+  utd:representation "an..256";
+  utd:sourcePage 67;
+  utd:status "active";
+  utd:tag 3384 .

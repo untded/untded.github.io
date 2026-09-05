@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3478> a utd:TradeDataElement;
+  schema:description "Free form description of the marital status of a person.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Marital. Status.Text";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:representation "an..35";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3478 .

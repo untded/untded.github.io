@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6160> a utd:TradeDataElement;
+  schema:description "Weight (mass) of goods including any packaging that normally going with the goods.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Net Weight. Measure";
+  utd:bridges "SAD: SAD: L 32, P 63-74 (SAD 38) UNLK: L 28-34, P 63-71 MAR: IMO/FAL 7";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 11;
+  utd:minLength 1;
+  utd:oldName "Net weight";
+  utd:representation "n..11";
+  utd:sourcePage 104;
+  utd:status "active";
+  utd:tag 6160 .

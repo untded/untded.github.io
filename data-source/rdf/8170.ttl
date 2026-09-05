@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8170> a utd:TradeDataElement;
+  schema:description "Mode of transport by which goods are moved prior to their main transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Movement. Pre-carriage Mode.Text";
+  utd:bridges "UNLK: L 22, P 09-26";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Pre-carriage transport mode";
+  utd:representation "an..17";
+  utd:sourcePage 123;
+  utd:status "active";
+  utd:tag 8170 .

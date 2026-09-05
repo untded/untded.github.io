@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5294> a utd:TradeDataElement;
+  schema:description "Amount of tax, to be collected.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tax. Collect Amount.Amount";
+  utd:bridges "AWB: L 52, P 23-36 CIMP: (501):n..12";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Tax, to collect";
+  utd:representation "n..18";
+  utd:sourcePage 94;
+  utd:status "active";
+  utd:tag 5294 .

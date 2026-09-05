@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5080> a utd:TradeDataElement;
+  schema:description "Amount paid by the sender, carried forward from the front page of the rail consignment note.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Sender Brought Forward Payment.Amount";
+  utd:bridges "CIM: (reverse of CIM form)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Amount paid by sender";
+  utd:representation "n..18";
+  utd:sourcePage 89;
+  utd:status "active";
+  utd:tag 5080 .

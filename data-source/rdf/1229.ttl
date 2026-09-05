@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1229> a utd:TradeDataElement;
+  schema:description "Code specifying the action to be taken or already taken.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Action. Code";
+  utd:bridges "CIMP: (409)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Action request/notification, coded";
+  utd:representation "an..3";
+  utd:sourcePage 34;
+  utd:status "active";
+  utd:tag 1229 .

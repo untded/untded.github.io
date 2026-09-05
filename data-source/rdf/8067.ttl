@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8067> a utd:TradeDataElement;
+  schema:description "Code specifying a mode of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Movement. Mode.Code";
+  utd:bridges "SAD: (SAD 26)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Mode of transport, coded";
+  utd:representation "an..3";
+  utd:sourcePage 120;
+  utd:status "active";
+  utd:tag 8067 .

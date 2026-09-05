@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1154> a utd:TradeDataElement;
+  schema:description "Identifies a reference.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Reference. Identifier";
+  utd:bridges "UNLK: an..35x2; L 06- 07, P 45-80";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Reference number";
+  utd:representation "an..70";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1154 .

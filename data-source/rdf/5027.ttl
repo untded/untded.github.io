@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5027> a utd:TradeDataElement;
+  schema:description "Code specifying a type of index.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Index. Type.Code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Index type, coded";
+  utd:representation "an..17";
+  utd:sourcePage 87;
+  utd:status "active";
+  utd:tag 5027 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3003> a utd:TradeDataElement;
+  schema:description "Identifier of a party to which merchandise or services are sold";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Buyer. Party.Identifier";
+  utd:bridges "UNLK: L 09, P 63-80";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Buyer, coded";
+  utd:representation "an..17";
+  utd:sourcePage 49;
+  utd:status "active";
+  utd:tag 3003 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6331> a utd:TradeDataElement;
+  schema:description "Code qualifying the type of a statistic.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Statistic. Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Statistic type, coded";
+  utd:representation "an..3";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6331 .

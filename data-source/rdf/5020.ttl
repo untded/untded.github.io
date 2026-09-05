@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5020> a utd:TradeDataElement;
+  schema:description "Allowable deductions from the price payable for calculating Customs value.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs. Allowable Deduction Basis.Amount";
+  utd:bridges "ODETTE: n..11";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Deducted amount (Customs)";
+  utd:representation "n..18";
+  utd:sourcePage 87;
+  utd:status "active";
+  utd:tag 5020 .

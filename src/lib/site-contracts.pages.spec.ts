@@ -45,6 +45,39 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('application/ld+json')
   })
 
+  it('serves dereferenceable per-element RDF with alternate links', () => {
+    for (const tag of [1000, 1001, 9649]) {
+      const jsonld = JSON.parse(readFileSync(`${dist}/elements/${tag}/data.jsonld`, 'utf8'))
+      expect(jsonld['@id']).toBe(`${site}/elements/${tag}`)
+      expect(readFileSync(`${dist}/elements/${tag}/data.ttl`, 'utf8')).toContain(`<${site}/elements/${tag}> a utd:TradeDataElement`)
+    }
+    const ttlCount = readdirSync(`${dist}/elements`).filter((d) =>
+      existsSync(`${dist}/elements/${d}/data.ttl`),
+    ).length
+    expect(ttlCount).toBe(elements.length)
+    const html = readFileSync(`${dist}/elements/1000/index.html`, 'utf8')
+    expect(html).toContain('rel="alternate" type="application/ld+json" href="/elements/1000/data.jsonld"')
+    expect(html).toContain(`${site}/elements/1000`)
+    expect(html).toContain('Copy IRI')
+  })
+
+  it('builds the original-documentation pages', () => {
+    for (const p of ['document/index.html', 'document/introduction/index.html', 'document/maintenance/index.html', 'document/presentation/index.html']) {
+      expect(existsSync(`${dist}/${p}`), p).toBe(true)
+    }
+    const presentation = readFileSync(`${dist}/document/presentation/index.html`, 'utf8')
+    expect(presentation).toContain('The change indicator marks shall be')
+    expect(presentation).toContain('marked for deletion')
+  })
+
+  it('ships the favicon set (SVG emblem + PNG fallbacks)', () => {
+    expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
+    for (const f of ['favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {
+      expect(existsSync(`${dist}/${f}`), f).toBe(true)
+    }
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('apple-touch-icon')
+  })
+
   it('lists all elements in the no-JS directory table', () => {
     const html = readFileSync(`${dist}/elements/index.html`, 'utf8')
     const rows = html.match(/<tr\b/g)?.length ?? 0

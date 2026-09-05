@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6324> a utd:TradeDataElement;
+  schema:description "Gross volume (cube) of a portion of a goods item in a specific piece of transport equipment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Split Consignment. Gross Measurement Cube.Measure";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Cube split";
+  utd:representation "n..9";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6324 .

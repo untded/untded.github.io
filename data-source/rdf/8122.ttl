@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8122> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "MAR: IMO/FAL 1-7 and UNLK: L 24, P 09-26";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Vessel";
+  utd:sourcePage 121;
+  utd:status "retired";
+  utd:tag 8122 .

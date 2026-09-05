@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3416> a utd:TradeDataElement;
+  schema:description "Location in port where the vessel is berthed or moored.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Port Berth Location.Text";
+  utd:bridges "MAR: IMO/FAL 1-6";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Position of ship in port";
+  utd:representation "an..256";
+  utd:sourcePage 69;
+  utd:status "active";
+  utd:tag 3416 .

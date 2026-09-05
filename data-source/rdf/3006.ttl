@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3006> a utd:TradeDataElement;
+  schema:description "Name and address of the party to whom an invoice is issued.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Invoicee. Party Identification.Text";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Invoicee";
+  utd:representation "an..512";
+  utd:sourcePage 50;
+  utd:status "active";
+  utd:tag 3006 .

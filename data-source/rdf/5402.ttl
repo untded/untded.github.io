@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5402> a utd:TradeDataElement;
+  schema:description "The rate at which one specified currency is expressed in another specified currency.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Currency. Exchange Rate.Numeric";
+  utd:bridges "AWB: L 62, P 09-22 CIM: n..8; L 39, P 75-82 and L.42, P 75-82 and L 47, P 51-18 and L 47, P 75-82 and L 53, P 51-58 and L 53, P 75-82 and L 59 CIMP: (607):n..11 SAD: (SAD 23)";
+  utd:businessTerm "Currency conversion rate";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Rate of exchange";
+  utd:representation "n..18";
+  utd:sourcePage 98;
+  utd:status "active";
+  utd:tag 5402 .

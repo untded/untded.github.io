@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4084> a utd:TradeDataElement;
+  schema:description "Report stating the facts in cases when packages are missing, when damages or defects have been observed or other observations made when packing the goods.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Shipment. Package Status Report Document.Text";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Packing remarks";
+  utd:representation "an..512";
+  utd:sourcePage 75;
+  utd:status "active";
+  utd:tag 4084 .

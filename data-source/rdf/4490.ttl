@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4490> a utd:TradeDataElement;
+  schema:description "General terms and conditions specified by the seller either directly or by reference.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Sales. Condition.Text";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Conditions of sale";
+  utd:representation "an..512";
+  utd:sourcePage 85;
+  utd:status "active";
+  utd:tag 4490 .

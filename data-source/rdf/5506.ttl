@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5506> a utd:TradeDataElement;
+  schema:description "Aggregate cost of freight, insurance and all other costs and expenses from the foreign exit location to the entry location.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Exit To Entry. Charge.Amount";
+  utd:businessTerm "Charges";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:representation "n..18";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 5506 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9032> a utd:TradeDataElement;
+  schema:description "Customs procedure, if any, which has been applied to the goods prior to the application of a different Customs procedure.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs. Previous Procedure.Text";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Previous Customs procedure";
+  utd:representation "an..17";
+  utd:sourcePage 129;
+  utd:status "active";
+  utd:tag 9032 .

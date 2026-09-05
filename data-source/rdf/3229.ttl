@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3229> a utd:TradeDataElement;
+  schema:description "To identify the name of a country subdivision.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Country. Subdivision.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Country sub-entity identification";
+  utd:representation "an..9";
+  utd:sourcePage 61;
+  utd:status "active";
+  utd:tag 3229 .

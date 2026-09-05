@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3468> a utd:TradeDataElement;
+  schema:description "Name of seller's sales contact";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Seller. Contact Name.Text";
+  utd:bridges "UNLK: L 08, P 09-44";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Seller's department or employee";
+  utd:representation "an..35";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3468 .

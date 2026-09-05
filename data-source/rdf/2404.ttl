@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2404> a utd:TradeDataElement;
+  schema:description "Date of issue of a proforma invoice, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Proforma Invoice Document. Issue Date Time.Text";
+  utd:bridges "UNLK: L 04, P 45-62";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Proforma Invoice date";
+  utd:representation "an..17";
+  utd:sourcePage 48;
+  utd:status "active";
+  utd:tag 2404 .

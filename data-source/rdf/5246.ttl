@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5246> a utd:TradeDataElement;
+  schema:description "Amount of ancillary charges payable to the carrier by a consignee.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Consignee Other Charge.Amount";
+  utd:bridges "CMR: L 56, P 71-80";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Other charges, consignee";
+  utd:representation "n..18";
+  utd:sourcePage 93;
+  utd:status "active";
+  utd:tag 5246 .

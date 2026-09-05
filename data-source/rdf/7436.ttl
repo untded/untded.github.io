@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7436> a utd:TradeDataElement;
+  schema:description "To identify the first level of a sequencing mechanism used to position an item within an indexing structure.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Index. First Level.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Level one ID";
+  utd:representation "an..17";
+  utd:sourcePage 116;
+  utd:status "active";
+  utd:tag 7436 .

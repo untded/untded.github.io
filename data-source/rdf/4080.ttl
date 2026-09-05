@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4080> a utd:TradeDataElement;
+  schema:description "Instructions on where or how specified packages or containers are to be loaded on a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Loading Instruction.Text";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Loading instructions";
+  utd:representation "an..35";
+  utd:sourcePage 75;
+  utd:status "active";
+  utd:tag 4080 .

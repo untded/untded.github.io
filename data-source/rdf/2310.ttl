@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2310> a utd:TradeDataElement;
+  schema:description "Period agreed between the seller and the buyer, during which the merchandise is to be delivered, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Delivery. Period Date Time.Text";
+  utd:bridges "UNLK: L 22, P 63-80";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Delivery month";
+  utd:representation "an..17";
+  utd:sourcePage 46;
+  utd:status "active";
+  utd:tag 2310 .

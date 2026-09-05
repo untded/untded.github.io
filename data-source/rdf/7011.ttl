@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7011> a utd:TradeDataElement;
+  schema:description "Code specifying the availability of a line item.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Line Item. Availability.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Article availability, coded";
+  utd:representation "an..3";
+  utd:sourcePage 109;
+  utd:status "active";
+  utd:tag 7011 .

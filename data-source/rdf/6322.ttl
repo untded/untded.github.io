@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6322> a utd:TradeDataElement;
+  schema:description "Measurement normally arrived at by multiplying the maximum length, width and height of pieces or package or transport equipment. Also known as cube.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Gross Measurement Cube.Measure";
+  utd:bridges "CIMP: (500):n..9 UNLK: L 28-38, P 72-80";
+  utd:businessTerm "Volume; Gross Measurement Cube (GMC)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Cube";
+  utd:representation "n..9";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6322 .

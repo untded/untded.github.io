@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7383> a utd:TradeDataElement;
+  schema:description "Code specifying the topological position on an object such as the position on a surface or layer.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Object. Topological Position.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Surface/layer indicator, coded";
+  utd:representation "an..3";
+  utd:sourcePage 115;
+  utd:status "active";
+  utd:tag 7383 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6316> a utd:TradeDataElement;
+  schema:description "Measurement normally arrived at by multiplying the maximum length, width and height of pieces or package or transport equipment. Also known as cube.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Line Item. Gross Volume.Measure";
+  utd:businessTerm "Cube";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:representation "n..9";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6316 .

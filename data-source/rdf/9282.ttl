@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9282> a utd:TradeDataElement;
+  schema:description "To identify the cryptographic key used for the calculation of the validation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Validation. Key.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Validation key identification";
+  utd:representation "an..35";
+  utd:sourcePage 130;
+  utd:status "active";
+  utd:tag 9282 .

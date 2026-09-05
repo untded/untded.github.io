@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3232> a utd:TradeDataElement;
+  schema:description "Name of a second related location.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Second Related Location. Name.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Related place/location two";
+  utd:representation "an..70";
+  utd:sourcePage 61;
+  utd:status "active";
+  utd:tag 3232 .

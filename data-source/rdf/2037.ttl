@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2037> a utd:TradeDataElement;
+  schema:description "Date on which a Goods declaration has been or will be accepted by Customs in accordance with Customs legislation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Declaration Document. Acceptance.Date Time";
+  utd:businessTerm "Goods declaration acceptancedate (Customs)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Goods declaration acceptancedate (Customs), coded";
+  utd:representation "an..19";
+  utd:sourcePage 39;
+  utd:status "active";
+  utd:tag 2037 .

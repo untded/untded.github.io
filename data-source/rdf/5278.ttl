@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5278> a utd:TradeDataElement;
+  schema:description "Textual representation of a rate of a duty or tax or fee.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tax Or Fee. Rate.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Duty/tax/fee rate";
+  utd:representation "an..18";
+  utd:sourcePage 94;
+  utd:status "active";
+  utd:tag 5278 .

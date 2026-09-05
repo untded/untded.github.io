@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3356> a utd:TradeDataElement;
+  schema:description "The place or port at which the cargo is discharged or unloaded from a means of transport according to the transport contract. The goods may or may not be discharged from the main means of transport at this place or port.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Baseport Unloading Location.Text";
+  utd:businessTerm "Baseport discharge";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Baseport for delivery";
+  utd:representation "an..256";
+  utd:sourcePage 66;
+  utd:status "active";
+  utd:tag 3356 .

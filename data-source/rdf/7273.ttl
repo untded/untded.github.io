@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7273> a utd:TradeDataElement;
+  schema:description "Code specifying a service requirement.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Service. Requirement.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Service requirement, coded";
+  utd:representation "an..3";
+  utd:sourcePage 114;
+  utd:status "active";
+  utd:tag 7273 .

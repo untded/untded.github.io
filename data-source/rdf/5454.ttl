@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5454> a utd:TradeDataElement;
+  schema:description "Amount deductible from the total goods or services value if payment takes place within a specified period.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Prompt Payment. Discount.Amount";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Payment discountamount";
+  utd:representation "n..18";
+  utd:sourcePage 99;
+  utd:status "active";
+  utd:tag 5454 .

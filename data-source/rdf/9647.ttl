@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9647> a utd:TradeDataElement;
+  schema:description "Code specifying the zone of a cavity.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Cavity. Zone.Code";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:representation "an..3";
+  utd:sourcePage 132;
+  utd:status "active";
+  utd:tag 9647 .

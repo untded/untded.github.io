@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4192> a utd:TradeDataElement;
+  schema:description "Text of official certification, legalisation or stamp etc.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Certificate. Text";
+  utd:bridges "UNLK: an35xn; L 36-64, P 45-80 SAD: (SAD G)";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Certification";
+  utd:representation "an..35";
+  utd:sourcePage 77;
+  utd:status "active";
+  utd:tag 4192 .

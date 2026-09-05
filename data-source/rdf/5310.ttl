@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5310> a utd:TradeDataElement;
+  schema:description "Quantity expressed in another unit than the Quantity delivered, and used as the basis for calculation of the Article item amount.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Price. Basis.Quantity";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Price determining quantity";
+  utd:representation "n..18";
+  utd:sourcePage 95;
+  utd:status "active";
+  utd:tag 5310 .

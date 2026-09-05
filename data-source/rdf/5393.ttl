@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5393> a utd:TradeDataElement;
+  schema:description "Code specifying the function of a price multiplier.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Price. Multiplier Function.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Price multiplier qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 97;
+  utd:status "active";
+  utd:tag 5393 .

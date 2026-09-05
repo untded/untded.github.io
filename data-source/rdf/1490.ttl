@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1490> a utd:TradeDataElement;
+  schema:description "Sequence number differentiating a specific consignment amongst others";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Sequence.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Consolidation item number";
+  utd:representation "n..5";
+  utd:sourcePage 36;
+  utd:status "active";
+  utd:tag 1490 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3056> a utd:TradeDataElement;
+  schema:description "Concatenation of the name of all ports of call or other locations of an itinerary of a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Itinerary.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Itinerary";
+  utd:representation "an..512";
+  utd:sourcePage 52;
+  utd:status "active";
+  utd:tag 3056 .

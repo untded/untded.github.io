@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2481> a utd:TradeDataElement;
+  schema:description "Date when an amount due should be made available to the creditor under the terms of payment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Due.Date Time";
+  utd:bridges "UNLK: L 25, P 63-80";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Payment duedate, coded";
+  utd:representation "an..19";
+  utd:sourcePage 49;
+  utd:status "active";
+  utd:tag 2481 .

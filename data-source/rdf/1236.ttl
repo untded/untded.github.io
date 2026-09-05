@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1236> a utd:TradeDataElement;
+  schema:description "Serial number differentiating each separate freight charge.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Freight Charge. Sequence.Identifier";
+  utd:bridges "UNLK: L 54-60, P 00-08";
+  utd:businessTerm "Freight charge number";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Freight item number";
+  utd:representation "n..5";
+  utd:sourcePage 34;
+  utd:status "active";
+  utd:tag 1236 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3358> a utd:TradeDataElement;
+  schema:description "Name of the place to which goods are to be, or have been, delivered by an on-carriage carrier following the main transport";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Movement. On-carriage Receipt Location.Text";
+  utd:bridges "UNLK: L 26, P 27-44";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Place of delivery by on-carrier";
+  utd:representation "an..256";
+  utd:sourcePage 67;
+  utd:status "active";
+  utd:tag 3358 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5007> a utd:TradeDataElement;
+  schema:description "Code specifying a function of a monetary amount.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Monetary Amount. Function.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Monetary function, coded";
+  utd:representation "an..3";
+  utd:sourcePage 86;
+  utd:status "active";
+  utd:tag 5007 .

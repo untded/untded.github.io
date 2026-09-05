@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2475> a utd:TradeDataElement;
+  schema:description "Code specifying a time that references an event that will or has occurred.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Event. Time Reference.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Payment time reference, coded";
+  utd:representation "an..3";
+  utd:sourcePage 49;
+  utd:status "active";
+  utd:tag 2475 .

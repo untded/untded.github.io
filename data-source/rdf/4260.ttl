@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4260> a utd:TradeDataElement;
+  schema:description "Any further conditions of the Documentary credit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit. Additional Condition.Text";
+  utd:bridges "SWIFT: an..65x24";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Documentary credit additional conditions";
+  utd:representation "an..512";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4260 .

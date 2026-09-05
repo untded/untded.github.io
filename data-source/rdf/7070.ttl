@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7070> a utd:TradeDataElement;
+  schema:description "Number assigned by the consignor to identify a particular package in a consignment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Package. Sequence.Identifier";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Package number";
+  utd:representation "an..17";
+  utd:sourcePage 110;
+  utd:status "active";
+  utd:tag 7070 .

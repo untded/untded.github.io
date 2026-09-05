@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1274> a utd:TradeDataElement;
+  schema:description "Reference number to identify a contract with a conference";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Conference Contract Document. Identifier";
+  utd:bridges "UNLK: an..17 L 04, P 63- 80";
+  utd:businessTerm "Contract of affreightment, Contract number for freight";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Conference Contract number";
+  utd:representation "an..35";
+  utd:sourcePage 34;
+  utd:status "active";
+  utd:tag 1274 .

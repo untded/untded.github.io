@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4210> a utd:TradeDataElement;
+  schema:description "Indication whether or not insurance has been effected through an intermediary of the issuer of a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Insurance. Action.Indicator";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 1;
+  utd:minLength 1;
+  utd:oldName "Insurance action specifier";
+  utd:representation "an1";
+  utd:sourcePage 78;
+  utd:status "active";
+  utd:tag 4210 .

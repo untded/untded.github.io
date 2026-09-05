@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6004> a utd:TradeDataElement;
+  schema:description "The measurement of the moisture in the air, measured as a percentage.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Humidity. Percentage.Measure";
+  utd:changeTag "add";
+  utd:extractionConfidence "high";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 6004 .

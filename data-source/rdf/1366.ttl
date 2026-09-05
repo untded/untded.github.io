@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1366> a utd:TradeDataElement;
+  schema:description "Free form description of the source of a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Source.Text";
+  utd:businessTerm "Document/message source";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Document/message source";
+  utd:representation "an..70";
+  utd:sourcePage 35;
+  utd:status "active";
+  utd:tag 1366 .

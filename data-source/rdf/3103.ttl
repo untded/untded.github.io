@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3103> a utd:TradeDataElement;
+  schema:description "To identify a place to which a transport charges tariff applies or where freight and other related charges are to be or have been incurred.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Freight Charge. Payable To Location.Identifier";
+  utd:bridges "CIM: (nn-nnnnn,n); L 49, P 04-12 and L 55, P 04- 12 and L 61, P 04-12 and on reverse of CIM form (CIM 63, bottom part)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Freight to, coded";
+  utd:representation "an..35";
+  utd:sourcePage 54;
+  utd:status "active";
+  utd:tag 3103 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8021> a utd:TradeDataElement;
+  schema:description "Code specifying a type of equipment attached to another piece of transport equipment, such as loading tackle, sheets, ropes, chains.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Attached Transport Equipment. Category.Code";
+  utd:bridges "CIM: L 09, P 45-51 and 64-70";
+  utd:businessTerm "Loading tackle category";
+  utd:changeTag "add";
+  utd:charset "a";
+  utd:extractionConfidence "medium";
+  utd:maxLength 7;
+  utd:minLength 1;
+  utd:representation "a..7";
+  utd:sourcePage 118;
+  utd:status "active";
+  utd:tag 8021 .

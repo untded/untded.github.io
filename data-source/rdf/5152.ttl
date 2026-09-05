@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5152> a utd:TradeDataElement;
+  schema:description "Type of duty or tax applicable to commodities or type of tax or fee applicable to services.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tax Or Fee. Type.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Duty/tax/fee type";
+  utd:representation "an..35";
+  utd:sourcePage 91;
+  utd:status "active";
+  utd:tag 5152 .

@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1097> a utd:TradeDataElement;
+  schema:description "Reference assigned by a trader to identify a declaration.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs Declaration Document. Trader Assigned.Identifier";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:representation "an..35";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1097 .

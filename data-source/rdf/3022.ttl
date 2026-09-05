@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3022> a utd:TradeDataElement;
+  schema:description "Name and address of party taking responsibility for goods entered into a warehouse.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Warehouse Keeper. Party Identification.Text";
+  utd:bridges "UNLK: an..35x5; L 10- 14, P 45-80";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Warehouse keeper";
+  utd:representation "an..512";
+  utd:sourcePage 50;
+  utd:status "active";
+  utd:tag 3022 .

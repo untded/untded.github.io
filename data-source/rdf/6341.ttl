@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6341> a utd:TradeDataElement;
+  schema:description "To identify an exchange rate currency market.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Currency. Market.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Currency market exchange, coded";
+  utd:representation "an..3";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6341 .

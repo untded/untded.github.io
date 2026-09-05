@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6061> a utd:TradeDataElement;
+  schema:description "Numeric representation of a quantity value.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Quantity. Quantity";
+  utd:bridges "UNLK: L 36-46 P 56-62";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 16;
+  utd:minLength 1;
+  utd:representation "n..16";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6061 .

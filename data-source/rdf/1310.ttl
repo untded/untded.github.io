@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1310> a utd:TradeDataElement;
+  schema:description "Identifier of a shipment which is part of an order.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Partial Shipment. Identifier";
+  utd:bridges "CIMP: (703): a1; (905): n2";
+  utd:businessTerm "Part consignment number";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Part consignment number";
+  utd:representation "an..35";
+  utd:sourcePage 34;
+  utd:status "active";
+  utd:tag 1310 .

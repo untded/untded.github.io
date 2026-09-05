@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2124> a utd:TradeDataElement;
+  schema:description "Date and optionally time when a consignment of goods has been picked-up by a carrier.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Actual Pick-up Date Time.Text";
+  utd:businessTerm "Actual Collection Date Time";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:representation "an..17";
+  utd:sourcePage 42;
+  utd:status "active";
+  utd:tag 2124 .

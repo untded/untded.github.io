@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4284> a utd:TradeDataElement;
+  schema:description "Instructions given and declarations made by the sender to the carrier concerning Customs, insurance, and other formalities.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Documentary Instruction.Text";
+  utd:bridges "CIM: an..35x4; L 04-07, P 45-82 (CIM 12) CMR: an..35x10 L 45-54, P 09-44 (CMR 13)";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 30;
+  utd:minLength 1;
+  utd:oldName "Sender's instructions to carrier";
+  utd:representation "an..30";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4284 .

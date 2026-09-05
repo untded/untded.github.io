@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4400> a utd:TradeDataElement;
+  schema:description "Free form description of an instruction.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Instruction. Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Instruction";
+  utd:representation "an..35";
+  utd:sourcePage 82;
+  utd:status "active";
+  utd:tag 4400 .

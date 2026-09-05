@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7416> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "MAR: IMO/FAL 7";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "IMDG class number";
+  utd:sourcePage 116;
+  utd:status "retired";
+  utd:tag 7416 .

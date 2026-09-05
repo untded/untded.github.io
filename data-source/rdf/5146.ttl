@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5146> a utd:TradeDataElement;
+  schema:description "Amount of valuation charge wholly to be collected.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Collect Valuation Charge.Amount";
+  utd:bridges "AWB: L 50, P 23-36 CIMP: (501):n..12";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Valuation charge, to collect";
+  utd:representation "n..18";
+  utd:sourcePage 91;
+  utd:status "active";
+  utd:tag 5146 .

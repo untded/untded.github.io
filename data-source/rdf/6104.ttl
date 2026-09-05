@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6104> a utd:TradeDataElement;
+  schema:description "Total number of persons (passengers and crew, including the captain/master) on board of a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Onboard Person.Quantity";
+  utd:bridges "MAR: IMO/FAL 3";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:representation "n..4";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6104 .

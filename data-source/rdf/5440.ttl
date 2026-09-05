@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5440> a utd:TradeDataElement;
+  schema:description "Specification of a tariff class applicable to a transport service.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Service. Tariff Class.Code";
+  utd:bridges "CIM: n4 (5); L 44-45, P 34-38 and L 50-51, P 34- 38 and L 56-57, P 34-38 (also on reverse) (CIM 57)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Tariff class specifier";
+  utd:representation "an..4";
+  utd:sourcePage 99;
+  utd:status "active";
+  utd:tag 5440 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1142> a utd:TradeDataElement;
+  schema:description "Reference number assigned to identify an agent account by an carrier.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Carrier Agent. Carrier Assigned Identifier.Identifier";
+  utd:bridges "AWB: L 20, P 27-44 CIMP: (108): n..14";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Agent's account number";
+  utd:representation "an..35";
+  utd:sourcePage 31;
+  utd:status "active";
+  utd:tag 1142 .

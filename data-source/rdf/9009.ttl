@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9009> a utd:TradeDataElement;
+  schema:description "Code specifying an occupation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Occupation. Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Occupation, coded";
+  utd:representation "an..3";
+  utd:sourcePage 128;
+  utd:status "active";
+  utd:tag 9009 .

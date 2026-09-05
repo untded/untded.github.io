@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3488> a utd:TradeDataElement;
+  schema:description "Name of the place where a person or persons join a means of transport";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Person. Embarkation Location.Text";
+  utd:bridges "MAR: IMO/FAL 6";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Place of embarkation";
+  utd:representation "an..256";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3488 .

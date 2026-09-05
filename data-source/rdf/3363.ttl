@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3363> a utd:TradeDataElement;
+  schema:description "To identify a party maintaining a tariff";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tariff Issuer. Party.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 3;
+  utd:oldName "Tariff issuer, coded";
+  utd:representation "an3";
+  utd:sourcePage 67;
+  utd:status "active";
+  utd:tag 3363 .

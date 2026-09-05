@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4240> a utd:TradeDataElement;
+  schema:description "Endorsement of the true weight (mass) as ascertained or verified.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Ascertained Weight. Measure.Text";
+  utd:bridges "CIM: Stamp and indication of weight (mass) when it differs from weight (mass) declared by consignor L 64-70, P 48-63";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Weight ascertained (stamp)";
+  utd:representation "an..70";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4240 .

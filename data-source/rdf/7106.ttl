@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7106> a utd:TradeDataElement;
+  schema:description "Temperature, in Celsius, determined by the closed cup test as per ISO 1523:1973 where a vapour is given off that can be ignited.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Substance. Flashpoint.Measure";
+  utd:bridges "MAR: IMO/FAL 7";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 3;
+  utd:oldName "Shipment flashpoint";
+  utd:representation "n3";
+  utd:sourcePage 111;
+  utd:status "active";
+  utd:tag 7106 .

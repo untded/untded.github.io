@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9302> a utd:TradeDataElement;
+  schema:description "Textual description of the role of a sealing party.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Sealing Party Type.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Sealing party";
+  utd:representation "an..35";
+  utd:sourcePage 130;
+  utd:status "active";
+  utd:tag 9302 .

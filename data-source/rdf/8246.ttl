@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8246> a utd:TradeDataElement;
+  schema:description "To identify the marking of dangerous goods.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Dangerous Goods. Marking.Identifier";
+  utd:bridges "MAR: IMO/FAL 7";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Dangerous goods label marking";
+  utd:representation "an..4";
+  utd:sourcePage 124;
+  utd:status "active";
+  utd:tag 8246 .

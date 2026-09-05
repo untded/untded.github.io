@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4439> a utd:TradeDataElement;
+  schema:description "Code specifying a set of payment conditions.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Condition.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Payment conditions, coded";
+  utd:representation "an..3";
+  utd:sourcePage 84;
+  utd:status "active";
+  utd:tag 4439 .

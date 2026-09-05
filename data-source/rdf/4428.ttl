@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4428> a utd:TradeDataElement;
+  schema:description "Proof that a document has been signed.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Endorsement.Text";
+  utd:bridges "UNLK: L 64, P55-80";
+  utd:businessTerm "Signature";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Endorsement";
+  utd:representation "an..35";
+  utd:sourcePage 84;
+  utd:status "active";
+  utd:tag 4428 .

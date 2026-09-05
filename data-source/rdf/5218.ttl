@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5218> a utd:TradeDataElement;
+  schema:description "Value declared for statistical purposes of those goods in a consignment which have the same statistical heading.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. For Statistics Declared Value.Amount";
+  utd:bridges "SAD: (SAD 46)";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Statistical value";
+  utd:representation "n..18";
+  utd:sourcePage 92;
+  utd:status "active";
+  utd:tag 5218 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3470> a utd:TradeDataElement;
+  schema:description "Name and address of a party responsible for the payment of freight charges";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Freight Payer. Party Identification.Text";
+  utd:businessTerm "Freight payor";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Freight payer";
+  utd:representation "an..512";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3470 .

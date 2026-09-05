@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3161> a utd:TradeDataElement;
+  schema:description "Code of the place at which the goods have been or are to be received by the consignee.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Goods Receipt Location.Identifier";
+  utd:businessTerm "Goods receipt place";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Goods receipt place, coded";
+  utd:representation "an..35";
+  utd:sourcePage 57;
+  utd:status "active";
+  utd:tag 3161 .

@@ -1,0 +1,11 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5306> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Minimum amount due";
+  utd:sourcePage 95;
+  utd:status "retired";
+  utd:tag 5306 .

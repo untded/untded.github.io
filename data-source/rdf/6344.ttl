@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6344> a utd:TradeDataElement;
+  schema:description "The name or symbol of a monetary unit or currency.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Currency. Text";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 26;
+  utd:minLength 1;
+  utd:oldName "Currency";
+  utd:representation "an..26";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6344 .

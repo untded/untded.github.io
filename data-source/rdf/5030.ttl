@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5030> a utd:TradeDataElement;
+  schema:description "To identify a value in an index.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Index. Value.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Index value";
+  utd:representation "an..35";
+  utd:sourcePage 87;
+  utd:status "active";
+  utd:tag 5030 .

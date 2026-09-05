@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4244> a utd:TradeDataElement;
+  schema:description "Remarks concerning the complete consignment to be printed on the transport document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Contract Document. Remark.Text";
+  utd:bridges "CIM: an..28x6 (reverse of form)";
+  utd:businessTerm "Bill of lading remark";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Shipper disposition";
+  utd:representation "an..17";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4244 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2034> a utd:TradeDataElement;
+  schema:description "Date that an amount due becomes available to a creditor under the terms of payment, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Availability Date Time.Text";
+  utd:businessTerm "Value Date";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Payment date";
+  utd:representation "an..17";
+  utd:sourcePage 39;
+  utd:status "active";
+  utd:tag 2034 .

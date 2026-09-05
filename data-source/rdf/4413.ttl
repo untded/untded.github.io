@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4413> a utd:TradeDataElement;
+  schema:description "Code specifying the status of the goods and of the transport equipment and any packaging/dunnage with respect to quarantine restrictions.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Quarantine. Status.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Quarantine status, coded";
+  utd:representation "an..3";
+  utd:sourcePage 83;
+  utd:status "active";
+  utd:tag 4413 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5350> a utd:TradeDataElement;
+  schema:description "Amount of wholly prepaid weight or volume charges.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Prepaid Weight Charge.Amount";
+  utd:bridges "AWB: L 48, P 09-22 CIMP: (501):n..12";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Weight charge, prepaid";
+  utd:representation "n..18";
+  utd:sourcePage 96;
+  utd:status "active";
+  utd:tag 5350 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4463> a utd:TradeDataElement;
+  schema:description "Code indicating an intra-company payment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Intra-company Payment. Indicator.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Intra-company payment, coded";
+  utd:representation "an..3";
+  utd:sourcePage 85;
+  utd:status "active";
+  utd:tag 4463 .

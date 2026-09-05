@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8250> a utd:TradeDataElement;
+  schema:description "To identify the means of transport used at the time of presentation (departure for export, arrival fro import) of the consignment to a Customs office in the context of a goods declaration.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. At Presentation.Identifier";
+  utd:bridges "SAD: (SAD 18)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 26;
+  utd:minLength 1;
+  utd:oldName "Identification of means of transport at departure/arrival";
+  utd:representation "an..26";
+  utd:sourcePage 125;
+  utd:status "active";
+  utd:tag 8250 .

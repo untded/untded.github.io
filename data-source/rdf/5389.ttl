@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5389> a utd:TradeDataElement;
+  schema:description "Code specifying a group of goods and or services grouped together for pricing purposes.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Product. Pricing Group.Code";
+  utd:businessTerm "Service group code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 25;
+  utd:minLength 1;
+  utd:oldName "Pricing group, coded";
+  utd:representation "an..25";
+  utd:sourcePage 97;
+  utd:status "active";
+  utd:tag 5389 .
