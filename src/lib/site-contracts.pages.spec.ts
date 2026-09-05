@@ -98,6 +98,14 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     }
   })
 
+  it('shows both organization cards with logos on the about page', () => {
+    const html = readFileSync(`${dist}/about/index.html`, 'utf8')
+    expect(html).toContain('img/logo-unece.svg')
+    expect(html).toContain('img/logo-iso.svg')
+    expect(html).toContain('UNECE — UN/CEFACT')
+    expect(html).toContain('ISO/TC 154')
+  })
+
   it('links adjacent elements on element pages', () => {
     const html = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
     expect(html).toContain('href="/elements/1000"')

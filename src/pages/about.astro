@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import OrgCards from '../components/OrgCards.astro'
 import { href } from '../lib/site'
 ---
 
@@ -72,17 +73,17 @@ import { href } from '../lib/site'
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Operation and governance</h2>
       <p class="mt-3 leading-relaxed text-body">
-        This site and its repositories are maintained and operated{' '}
-        <strong class="text-ink">on behalf of the United Nations Economic Commission
-        for Europe (UNECE) — UN/CEFACT</strong>, and the{' '}
-        <strong class="text-ink">International Organization for Standardization,
-        Technical Committee 154</strong> (ISO/TC 154, Processes, data elements and
-        documents in commerce, industry and administration), which jointly
-        maintain ISO 7372 / the TDED through their joint working group
-        ISO/TC 154/JWG 9. Hosting and code are provided by the{' '}
+        This site and its repositories are operated on behalf of the United
+        Nations and the International Organization for Standardization, which
+        jointly maintain ISO 7372 / the TDED through{' '}
+        <strong class="text-ink">ISO/TC 154/JWG 9</strong>. The United Nations
+        leads. Hosting and code are provided by the{' '}
         <a class="text-un-deep underline decoration-un/50" href="https://github.com/untded">untded</a>
         {' '}open-source organization.
       </p>
+      <div class="mt-5">
+        <OrgCards />
+      </div>
     </section>
 
     <section class="mt-10 rounded-md border border-line bg-mist p-6">
