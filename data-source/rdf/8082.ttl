@@ -7,6 +7,7 @@
   schema:name "Transport Movement. On-carriage Means Type.Text";
   utd:bridges "UNLK: L 26, P 09-26";
   utd:businessTerm "On-carriage by, Onward inland routing,";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

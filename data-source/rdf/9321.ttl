@@ -5,6 +5,7 @@
   schema:description "Code specifying an application error.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Application. Error.Code";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

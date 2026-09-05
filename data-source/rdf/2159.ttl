@@ -7,6 +7,7 @@
   schema:name "Quotation Document. Issue.Date Time";
   utd:bridges "UNLK: L 03, P 56-62";
   utd:businessTerm "Quote date, Quotation date";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

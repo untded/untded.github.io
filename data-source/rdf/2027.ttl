@@ -5,6 +5,7 @@
   schema:description "Date and optionally time when the shipper expects that the goods will be at the place of acceptance.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Expected Acceptance.Date Time";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

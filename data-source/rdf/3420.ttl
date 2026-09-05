@@ -5,6 +5,7 @@
   schema:description "Name and address of a bank employed by the buyer to make a payment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Buyer. Bank Identification.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "high";

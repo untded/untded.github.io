@@ -5,6 +5,7 @@
   schema:description "To identify the place or port at which the cargo is loaded on a means of transport according to the transport contract. The goods may or may not be loaded on the main means of transport at this place or port";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Baseport Loading Location.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

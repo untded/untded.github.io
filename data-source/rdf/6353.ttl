@@ -5,6 +5,7 @@
   schema:description "Code qualifying the type of unit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Unit. Type.Code";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

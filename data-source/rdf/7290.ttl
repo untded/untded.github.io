@@ -5,6 +5,7 @@
   schema:description "Indicator as to whether a particular consignment is covered by a documentary credit or not.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Documentary Credit Cover.Indicator";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -5,6 +5,7 @@
   schema:description "String data representation of a day of the week (Monday = 1).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Day Of Week. Code";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

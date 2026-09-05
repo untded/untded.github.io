@@ -5,6 +5,7 @@
   schema:description "Identifier of the party issuing an invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice Issuer. Party.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

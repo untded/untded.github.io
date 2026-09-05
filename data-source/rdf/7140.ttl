@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Line Item. Identifier";
   utd:bridges "UNLK: L 36-46, P 13-47 SAD: n..2 (SAD 32)";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

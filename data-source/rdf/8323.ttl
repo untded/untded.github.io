@@ -5,6 +5,7 @@
   schema:description "Code specifying a particular transport movement.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. For Government Transport Movement.Code";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

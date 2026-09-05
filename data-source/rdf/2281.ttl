@@ -7,6 +7,7 @@
   schema:name "Transport Means. Actual Departure.Date Time";
   utd:bridges "CIMP: Date only: (201): a3; (202): n2 Date and time: (201)+(202)+(203): n4 MAR: IMO/FAL 1";
   utd:businessTerm "Departuredate, Flight date, Sailing date";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

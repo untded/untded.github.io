@@ -7,6 +7,7 @@
   schema:name "Transport Means. Stores Stowage Location.Identifier";
   utd:bridges "MAR: IMO/FAL 3";
   utd:businessTerm "Ships Stores";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

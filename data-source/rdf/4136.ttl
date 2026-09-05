@@ -7,6 +7,7 @@
   schema:name "Haulage. Sending Party Authentication.Text";
   utd:bridges "AWB: an..43x5; L 56-60, P 37-80 (or 83) CIMP: (414): an..20 CMR: an..23x7; L 62-68, P 09-32 (CMR 22)";
   utd:businessTerm "Haulage party signature";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

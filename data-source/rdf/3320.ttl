@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Issuing Bank. Party Identification.Text";
   utd:bridges "ICC: an..35x5 L 04-08, P 09-44 SWIFT: (Header)";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

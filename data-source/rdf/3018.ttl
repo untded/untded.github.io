@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Trade Term. Location.Text";
   utd:bridges "UNLK: L 20, P 49-80 SAD: (SAD 20)";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

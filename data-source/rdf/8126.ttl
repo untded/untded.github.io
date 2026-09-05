@@ -5,6 +5,7 @@
   schema:description "To identify a dangerous goods TRansport EMergency (TREM) card.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Transport Emergency Card.Identifier";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

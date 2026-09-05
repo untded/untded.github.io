@@ -5,6 +5,7 @@
   schema:description "Code specifying the type of period.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Period. Type.Code";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

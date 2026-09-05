@@ -5,6 +5,7 @@
   schema:description "Actual total weight (mass) of the transport means and the goods loaded on it.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Laden Weight.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

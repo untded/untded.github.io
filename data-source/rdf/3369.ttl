@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Rate. Combination Location.Identifier";
   utd:bridges "AWB: L 33-44, P 09-12 (IATA location identifiercode)";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

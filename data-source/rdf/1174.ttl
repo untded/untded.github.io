@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Delivery Instruction. Identifier";
   utd:bridges "UNLK: an..17, L 04, P 63- 80";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

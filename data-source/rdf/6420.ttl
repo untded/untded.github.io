@@ -5,6 +5,7 @@
   schema:description "The weight (mass) or volume of the dangerous goods contained in a package excluding the weight (mass) or volume of any packaging material.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Net Weight.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

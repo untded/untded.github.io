@@ -5,6 +5,7 @@
   schema:description "The difference between two defined time zones.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Time Zone. Difference.Numeric";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

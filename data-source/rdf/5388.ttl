@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Product. Pricing Group Name.Text";
   utd:businessTerm "Service group name";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

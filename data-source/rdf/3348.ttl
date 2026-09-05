@@ -7,6 +7,7 @@
   schema:name "Consignment. Acceptance Location.Text";
   utd:bridges "CMR: L 20-22, P 09-44 (CMR 4) UNLK: L 22, P 27-44";
   utd:businessTerm "Place of receipt";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

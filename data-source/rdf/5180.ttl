@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice. Deduction.Amount";
   utd:bridges "UNLK: L 56, P 62-80";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cdr";
   utd:charset "n";
   utd:extractionConfidence "low";

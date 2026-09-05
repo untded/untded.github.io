@@ -5,6 +5,7 @@
   schema:description "Identifier of the function of a required document";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Required Document. Function.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

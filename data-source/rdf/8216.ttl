@@ -5,6 +5,7 @@
   schema:description "To specify the number of stops in a journey.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Journey. Stop.Quantity";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

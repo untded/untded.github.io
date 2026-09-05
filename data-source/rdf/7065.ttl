@@ -7,6 +7,7 @@
   schema:name "Package. Type.Code";
   utd:bridges "MAR: IMO/FAL 2,7 SAD: (SAD 31)";
   utd:businessTerm "Package classification code";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

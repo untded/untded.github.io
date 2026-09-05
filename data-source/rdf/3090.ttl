@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Payable From Location.Text";
   utd:bridges "CIM: L 50, P 02-20 and L 56, P 02-50 and on reverse of CIM form";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

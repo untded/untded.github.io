@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consolidated Invoice. Amount";
   utd:bridges "SAD: n..13 (SAD 22) UNLK: L 68, P 58-72";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "To identify an adjustment to a monetary amount such as an allowance or charge.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Monetary Amount Adjustment. Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

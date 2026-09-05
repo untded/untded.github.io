@@ -7,6 +7,7 @@
   schema:name "Transport Means. Type.Text";
   utd:bridges "MAR: IMO/FAL 1 SAD: (SAD 21)";
   utd:businessTerm "Vehicle type, Vessel type";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

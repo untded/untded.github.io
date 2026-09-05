@@ -5,6 +5,7 @@
   schema:description "Mode of transport by which goods are moved after their main transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. On-carriage Mode.Text";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

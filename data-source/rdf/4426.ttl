@@ -7,6 +7,7 @@
   schema:name "Document. Authentication.Text";
   utd:bridges "CIMP: (414):an..20 SAD: SAD: (SAD 54 and SAD D and SAD F and SAD H) UNLK: L 62-64, P 09-44";
   utd:businessTerm "Rubber stamp; Chop; Signature";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

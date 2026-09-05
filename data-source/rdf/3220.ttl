@@ -7,6 +7,7 @@
   schema:name "Exportation Country. Name.Text";
   utd:bridges "UNLK: L 16, P 45 - 61 SAD: (SAD 15)";
   utd:businessTerm "Country from which goods are despatched between countries of a Customs union, Despatch country, Country of exportation, Country of provenance";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

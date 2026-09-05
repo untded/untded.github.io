@@ -5,6 +5,7 @@
   schema:description "Customs procedure, if any, which has been applied to the goods prior to the application of a different Customs procedure.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs. Previous Procedure.Text";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

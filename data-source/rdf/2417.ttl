@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Issue.Date Time";
   utd:bridges "CIMP: (200):n2; (201):a3; (202): n2 CMR: L 59, P 39-44 MAR: L 61, P 56-62";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

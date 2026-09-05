@@ -7,6 +7,7 @@
   schema:name "Measurement. Unit.Code";
   utd:bridges "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))";
   utd:businessTerm "Measure unit qualifier";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "A textual description of a regime according to which tax is assessed such as preferential duty rate.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax. Regime Type.Text";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Name of the location of a branch of an institution.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Financial Institution. Branch Location.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

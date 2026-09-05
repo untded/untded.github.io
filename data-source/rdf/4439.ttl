@@ -5,6 +5,7 @@
   schema:description "Code specifying a set of payment conditions.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Condition.Code";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

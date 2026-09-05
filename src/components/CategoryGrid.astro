@@ -1,10 +1,13 @@
 ---
 import { href } from '../lib/site'
+import CompositionBar from './CompositionBar.astro'
+
 interface Category {
   k: number
   range: string
   label: string
   count: number
+  groups: { added: number; changed: number; undeleted: number; retired: number }
 }
 interface Props {
   categories: Category[]
@@ -18,7 +21,7 @@ const { categories } = Astro.props
       <a
         href={href(`/categories/${c.range}`)}
         class:list={[
-          'group rounded-md border border-line bg-white p-4 transition-colors hover:border-un/60',
+          'group rounded-md border border-line bg-paper p-4 transition-colors hover:border-un/60',
         ]}
       >
         <div class="flex items-center justify-between gap-2">
@@ -26,6 +29,7 @@ const { categories } = Astro.props
           <span class="font-mono text-sm tabular-nums text-body">{c.count}</span>
         </div>
         <div class={`mt-2 h-1 rounded-full bg-cat-${c.k}`} aria-hidden="true" />
+        <CompositionBar groups={c.groups} count={c.count} />
         <p class="mt-2 text-[0.95rem] font-medium text-ink group-hover:text-un-deep">{c.label}</p>
       </a>
     ))

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Consignee Section.Amount";
   utd:bridges "CIM: L 49, P 74-82 and L 55, P 74-82 and L 61, P 74-82 (also on reverse)";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Issue.Date Time";
   utd:bridges "SWIFT: n6 UNLK: L 09, P 38-44";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

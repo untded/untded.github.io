@@ -5,6 +5,7 @@
   schema:description "Code identifying a type of party that is the supplier of transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Supplier Party Type.Code";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Free form description of a process.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Process. Detail.Text";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

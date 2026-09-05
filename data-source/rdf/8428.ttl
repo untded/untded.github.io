@@ -7,6 +7,7 @@
   schema:name "Transport Movement. Pre-carriage Means Type.Text";
   utd:bridges "UNLK: L 22, P 09-26";
   utd:businessTerm "Despatched by";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

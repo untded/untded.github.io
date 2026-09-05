@@ -5,6 +5,7 @@
   schema:description "Identifier of an engineering change";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Engineering. Change.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

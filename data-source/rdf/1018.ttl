@@ -7,6 +7,7 @@
   schema:name "Order Acknowledgement Document. Identifier";
   utd:bridges "UNLK: L 04, P 63-80";
   utd:businessTerm "Purchase order response number";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

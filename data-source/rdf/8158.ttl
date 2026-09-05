@@ -5,6 +5,7 @@
   schema:description "To specify the identity number for the upper part of the orange hazard placard required on the means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Upper Part Orange Hazard Placard.Identifier";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

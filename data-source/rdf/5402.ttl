@@ -7,6 +7,7 @@
   schema:name "Currency. Exchange Rate.Numeric";
   utd:bridges "AWB: L 62, P 09-22 CIM: n..8; L 39, P 75-82 and L.42, P 75-82 and L 47, P 51-18 and L 47, P 75-82 and L 53, P 51-58 and L 53, P 75-82 and L 59 CIMP: (607):n..11 SAD: (SAD 23)";
   utd:businessTerm "Currency conversion rate";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

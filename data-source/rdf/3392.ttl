@@ -7,6 +7,7 @@
   schema:name "Consignment. Unloading Location.Text";
   utd:bridges "CIM: an..35x3; L 24-26, P 09-44 UNLK: L 26, P 09-26";
   utd:businessTerm "Discharge Location, Airport of discharge, Berth/Dock/Container base of discharge, Pier of discharge, Place of unloading";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

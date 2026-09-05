@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Import Permit. Effective End.Date Time";
   utd:businessTerm "Import licence expiry date, coded";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Dangerous Goods Declaration Document. Identifier";
   utd:bridges "MAR: IMO/FAL 7 UNLK: L 04, P 45-62";
   utd:businessTerm "Dangerous Goods Note";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Code giving specific meaning to a formula sequence.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Formula Sequence. Function.Code";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

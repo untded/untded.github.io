@@ -7,6 +7,7 @@
   schema:name "Document. Issue.Date Time";
   utd:bridges "CIMP: (200):n2; (201):a3; (202):n2 MAR: IMO/FAL 1-7 SAD: (SAD 54)";
   utd:businessTerm "Date of authentication, Date of issue of document,";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

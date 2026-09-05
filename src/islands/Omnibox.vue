@@ -59,8 +59,20 @@ function onKeydown(e: KeyboardEvent) {
   if (e.key === 'Enter') go(results.value[selected.value])
 }
 
-onMounted(() => window.addEventListener('keydown', onKeydown))
-onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
+onMounted(() => {
+  window.addEventListener('keydown', onKeydown)
+  window.addEventListener('untded:search', onSearchEvent as EventListener)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onKeydown)
+  window.removeEventListener('untded:search', onSearchEvent as EventListener)
+})
+
+async function onSearchEvent(e: CustomEvent<string>) {
+  await show()
+  query.value = e.detail ?? ''
+  run()
+}
 </script>
 
 <template>
@@ -72,15 +84,15 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
     >
       <span aria-hidden="true">⌕</span>
       Look up an element
-      <kbd class="rounded border border-line bg-white px-1.5 font-mono text-[0.7rem] text-body/80">⌘K</kbd>
+      <kbd class="rounded border border-line bg-paper px-1.5 font-mono text-[0.7rem] text-body/80">⌘K</kbd>
     </button>
 
-    <div v-if="open" class="fixed inset-0 z-50 flex items-start justify-center bg-ink/30 p-4 pt-[12vh]" @click.self="hide">
+    <div v-if="open" class="fixed inset-0 z-50 flex items-start justify-center bg-panel/40 p-4 pt-[12vh]" @click.self="hide">
       <div
         role="dialog"
         aria-modal="true"
         aria-label="Look up an element"
-        class="w-full max-w-xl overflow-hidden rounded-lg border border-line bg-white shadow-xl"
+        class="w-full max-w-xl overflow-hidden rounded-lg border border-line bg-paper shadow-xl"
       >
         <input
           ref="inputEl"

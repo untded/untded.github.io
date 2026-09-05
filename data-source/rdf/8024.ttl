@@ -5,6 +5,7 @@
   schema:description "Free form description of the purpose of the conveyance call.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Call Purpose.Text";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

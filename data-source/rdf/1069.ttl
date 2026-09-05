@@ -7,6 +7,7 @@
   schema:name "Document. Copies Issued.Quantity";
   utd:bridges "UNLK: L 64, P 45-49";
   utd:businessTerm "Number of original Bills of Lading";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "medium";

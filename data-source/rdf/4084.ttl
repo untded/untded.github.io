@@ -5,6 +5,7 @@
   schema:description "Report stating the facts in cases when packages are missing, when damages or defects have been observed or other observations made when packing the goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Shipment. Package Status Report Document.Text";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

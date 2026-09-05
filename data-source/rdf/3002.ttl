@@ -7,6 +7,7 @@
   schema:name "Buyer. Party Identification.Text";
   utd:bridges "UNLK: L 10-14, P 45-80";
   utd:businessTerm "Purchaser";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "high";

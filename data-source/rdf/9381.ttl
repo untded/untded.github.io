@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Party. Procedure.Code";
   utd:bridges "SAD: (SAD 37)";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

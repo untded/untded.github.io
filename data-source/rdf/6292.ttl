@@ -7,6 +7,7 @@
   schema:name "Goods Item. Gross Weight.Measure";
   utd:bridges "AWB: L 33-44, P 13-19 CIM: L 28-33, P 63-74 (CIM 26) CIMP: (600):n..7 CMR: L 28-42, P 63-71 (CMR 11) SAD: (SAD 35) UNLK: L 28-52, P 63-74";
   utd:businessTerm "Actual gross weight (mass)";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

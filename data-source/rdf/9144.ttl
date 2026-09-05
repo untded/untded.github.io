@@ -5,6 +5,7 @@
   schema:description "Indication as to whether or not there is any relationship between two parties such as financial relationship.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Party. Relationship.Indicator";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

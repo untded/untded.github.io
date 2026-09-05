@@ -5,6 +5,7 @@
   schema:description "Date and optionally time on which a piece of transport equipment should be available at the place of loading or unloading in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Availability Date Time.Text";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

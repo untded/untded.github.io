@@ -3,6 +3,7 @@
 
 <https://www.untded.org/elements/2121> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Quantities accumulation start date, coded";

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Issue Location.Identifier";
   utd:bridges "CIMP: (313):a3 CMR: L 59, P 20-26 INV: L 34-64, P 09-26 MAR: L 61, P 63-80";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

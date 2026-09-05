@@ -5,6 +5,7 @@
   schema:description "Export licence classification for control purposes, for example as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Export Permit. Control Classification.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

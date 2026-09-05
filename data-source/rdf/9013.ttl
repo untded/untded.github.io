@@ -5,6 +5,7 @@
   schema:description "Code specifying a reason for a status.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Status. Reason.Code";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

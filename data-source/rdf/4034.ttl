@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Information. Text";
   utd:bridges "CIM: an..32x5 L 35-39, P 51-82 SAD: (SAD H and SAD I)";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Monetary amount by which the valuation was adjusted.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Valuation. Adjustment.Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

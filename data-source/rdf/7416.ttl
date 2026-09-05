@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/7416> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "MAR: IMO/FAL 7";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "IMDG class number";

@@ -3,6 +3,7 @@
 
 <https://www.untded.org/elements/8143> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Goods/container movement service, coded";

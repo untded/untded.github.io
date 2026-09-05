@@ -5,6 +5,7 @@
   schema:description "Name of first related location.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "First Related Location. Name.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

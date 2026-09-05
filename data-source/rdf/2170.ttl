@@ -5,6 +5,7 @@
   schema:description "Date and optionally time on which goods are, or are expected to be despatched or consigned, in figures and words";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch. Actual Date Time.Text";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

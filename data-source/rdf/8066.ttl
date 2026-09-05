@@ -5,6 +5,7 @@
   schema:description "Name of a mode of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Mode.Text";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";
