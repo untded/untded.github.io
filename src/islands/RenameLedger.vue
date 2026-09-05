@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { href } from '../lib/site'
 import type { LedgerLine } from '../lib/ledgers'
 
 const props = defineProps<{ lines: LedgerLine[] }>()
@@ -7,15 +8,26 @@ const props = defineProps<{ lines: LedgerLine[] }>()
 const index = ref(0)
 let timer: ReturnType<typeof setInterval> | undefined
 let reduced = false
+let paused = false
 
 function advance() {
   index.value = (index.value + 1) % props.lines.length
 }
 
+function pause() {
+  paused = true
+}
+
+function resume() {
+  paused = false
+}
+
 onMounted(() => {
   reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (!reduced && props.lines.length > 1) {
-    timer = setInterval(advance, 3200)
+    timer = setInterval(() => {
+      if (!paused) advance()
+    }, 3200)
   }
 })
 
@@ -27,6 +39,10 @@ onBeforeUnmount(() => {
 <template>
   <div
     class="rounded-md border border-line bg-white"
+    @mouseenter="pause"
+    @mouseleave="resume"
+    @focusin="pause"
+    @focusout="resume"
     role="img"
     :aria-label="`Rename example: tag ${lines[index].tag}, ${lines[index].from}, renamed to ${lines[index].to}`"
   >
@@ -36,13 +52,13 @@ onBeforeUnmount(() => {
     <Transition name="ledger" mode="out-in">
       <div :key="index" class="grid gap-1 px-4 py-4 sm:grid-cols-[auto_1fr] sm:items-baseline sm:gap-x-4">
         <a
-          :href="`/elements/${lines[index].tag}`"
+          :href="href(`/elements/${lines[index].tag}`)"
           class="font-mono text-sm tabular-nums text-un-deep hover:underline"
         >
           {{ lines[index].tag }}
         </a>
         <p class="text-[0.95rem] leading-snug">
-          <span class="text-stamp line-through decoration-stamp/40">{{ lines[index].from }}</span>
+          <span class="text-stamp">{{ lines[index].from }}</span>
           <span class="mx-2 font-mono text-un">→</span>
           <span class="font-medium text-ink">{{ lines[index].to }}</span>
         </p>

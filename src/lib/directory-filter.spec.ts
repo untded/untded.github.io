@@ -30,13 +30,25 @@ describe('filterRows', () => {
   it('combines filters conjunctively', () => {
     expect(filterRows(rows, { ...EMPTY_FILTERS, cat: 1, status: 'active' })).toEqual([rows[0]])
   })
+
+  it('sorts by tag or name in both directions', () => {
+    // name order: Date… < Document… < Monetary…, unnamed (retired) rows last
+    expect(filterRows(rows, { ...EMPTY_FILTERS, sort: 'name' }).map((r) => r.t)).toEqual([
+      2000, 1000, 5004, 1002,
+    ])
+    expect(filterRows(rows, { ...EMPTY_FILTERS, sort: '-tag' }).map((r) => r.t)).toEqual([
+      5004, 2000, 1002, 1000,
+    ])
+  })
 })
 
 describe('filtersFromParams', () => {
   it('parses and guards the shareable URL form', () => {
     const f = filtersFromParams(new URLSearchParams('q=date&cat=2&status=active&change=u&cs=an'))
-    expect(f).toEqual({ q: 'date', cat: 2, status: 'active', change: 'u', cs: 'an' })
+    expect(f).toEqual({ q: 'date', cat: 2, status: 'active', change: 'u', cs: 'an', sort: 'tag' })
     expect(filtersFromParams(new URLSearchParams('cat=99&status=bogus')).cat).toBe(0)
     expect(filtersFromParams(new URLSearchParams('cat=99&status=bogus')).status).toBe('all')
+    expect(filtersFromParams(new URLSearchParams('sort=-name')).sort).toBe('-name')
+    expect(filtersFromParams(new URLSearchParams('sort=bogus')).sort).toBe('tag')
   })
 })

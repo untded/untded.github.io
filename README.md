@@ -1,4 +1,4 @@
-# unt·ded — the UNTDED registry website
+# UN/TDED — the registry website
 
 The public registry website for the digitized **UNTDED 2005** (United
 Nations Trade Data Elements Directory, ECE/TRADE/362 = ISO 7372:2005):

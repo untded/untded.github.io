@@ -1,25 +1,28 @@
 ---
 
+import { href } from '../lib/site'
 ---
 
 <footer class="mt-16 border-t border-line bg-mist">
   <div class="mx-auto max-w-6xl px-4 py-8 text-sm leading-relaxed text-body">
     <p>
-      <span class="font-semibold text-ink">unt<span class="wordmark-dot">·</span>ded</span>
+      <span class="font-mono font-semibold text-ink">UN<span class="wordmark-slash">/</span>TDED</span>
       — the United Nations Trade Data Elements Directory, 2005 edition (ECE/TRADE/362,
       ISO 7372:2005).
     </p>
     <p class="mt-2">
-      Operated on behalf of the
-      <a class="underline decoration-un/60 hover:text-un-deep" href="https://unece.org/trade/uncefact">United Nations Economic Commission for Europe — UN/CEFACT</a>
-      and
+      Operated on behalf of the{' '}
+      <a class="underline decoration-un/60 hover:text-un-deep" href="https://unece.org/trade/uncefact">United Nations Economic Commission for Europe — UN/CEFACT</a>{' '}
+      and{' '}
       <a class="underline decoration-un/60 hover:text-un-deep" href="https://www.isotc154.org">ISO/TC 154</a>.
       Content source © United Nations / UNECE, reproduced with attribution.
     </p>
     <p class="mt-2">
       <a class="underline decoration-un/60 hover:text-un-deep" href="https://github.com/untded">GitHub organization</a>
-      · <a class="underline decoration-un/60 hover:text-un-deep" href="/about">Mandate and governance</a>
-      · <a class="underline decoration-un/60 hover:text-un-deep" href="/method">How this data was verified</a>
+      {' · '}
+      <a class="underline decoration-un/60 hover:text-un-deep" href={href('/about')}>Mandate and governance</a>
+      {' · '}
+      <a class="underline decoration-un/60 hover:text-un-deep" href={href('/method')}>How this data was verified</a>
     </p>
   </div>
 </footer>

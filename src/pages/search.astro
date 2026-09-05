@@ -1,22 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { href } from '../lib/site'
 ---
 
 <BaseLayout
-  title="Search — unt·ded"
+  title="Search — UN/TDED"
   description="Full-text search across all 1504 UNTDED 2005 element entries."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Search</h1>
     <p class="mt-2 text-body">
-      Full text of every element entry — names, definitions, notes, bridges.
-      For tag/name lookup, <kbd class="rounded border border-line bg-mist px-1.5 font-mono text-sm">⌘K</kbd> anywhere.
+      Full text of every element entry — names, definitions, notes, bridges. For
+      tag/name lookup, press{' '}
+      <kbd class="rounded border border-line bg-mist px-1.5 font-mono text-sm">⌘K</kbd>{' '}
+      anywhere.
     </p>
     <div id="search" class="mt-6"></div>
-    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+    <link rel="stylesheet" href={href('/pagefind/pagefind-ui.css')} />
     <p id="search-fallback" class="mt-4 hidden rounded-md border border-line bg-mist p-4 text-sm text-body">
-      The search index is built with the production bundle — run
-      <span class="font-mono text-xs">npm run build && npm run preview</span>
+      The search index is built with the production bundle — run{' '}
+      <span class="font-mono text-xs">npm run build && npm run preview</span>{' '}
       locally, or search on the live site.
     </p>
   </div>
