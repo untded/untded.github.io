@@ -30,6 +30,8 @@ npm run dev
 - Islands are thin Vue shells over **pure seams**
   (`src/lib/directory-filter.ts`, `src/lib/omnibox-filter.ts`,
   `scripts/lib/*.mjs`) — logic goes in the seams, tests beside them.
+- Theme: light/dark via .dark class + localStorage (untded-theme) + no-flash
+  bootstrap in BaseLayout; keep bg-white only on logo plates.
 - Hostnames/base paths are NEVER hardcoded: `src/lib/site.ts` is the URL
   config SSOT (`href()` for internal routes — root and sub-path deploys are
   different; `astro.config.mjs` `site` is the origin, read by contracts).
