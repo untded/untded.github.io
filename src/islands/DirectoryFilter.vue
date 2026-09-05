@@ -114,7 +114,8 @@ onMounted(load)
       No elements match these filters. Clear the search or pick another category.
     </p>
 
-    <table v-if="loaded && visible.length > 0" class="dir-table">
+    <div v-if="loaded && visible.length > 0" class="overflow-x-auto">
+    <table class="dir-table">
       <thead>
         <tr>
           <th scope="col">Tag</th>
@@ -141,6 +142,7 @@ onMounted(load)
         </tr>
       </tbody>
     </table>
+    </div>
     <p v-if="loaded && shown < visible.length" class="mt-4 text-center">
       <button
         type="button"
