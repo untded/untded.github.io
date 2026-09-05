@@ -7,13 +7,20 @@ import '@fontsource/ibm-plex-mono/600.css'
 import '../styles/main.css'
 import SiteHeader from '../components/SiteHeader.astro'
 import SiteFooter from '../components/SiteFooter.astro'
+import { href } from '../lib/site'
+
+interface Alternate {
+  type: string
+  href: string
+}
 
 interface Props {
   title: string
   description: string
+  alternates?: Alternate[]
 }
 
-const { title, description } = Astro.props
+const { title, description, alternates = [] } = Astro.props
 const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
@@ -25,7 +32,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={href('/favicon.svg')} />
+    <link rel="alternate icon" type="image/png" href={href('/favicon-32.png')} sizes="32x32" />
+    <link rel="alternate icon" type="image/png" href={href('/favicon-16.png')} sizes="16x16" />
+    <link rel="apple-touch-icon" href={href('/apple-touch-icon.png')} />
+    {alternates.map((alt) => <link rel="alternate" type={alt.type} href={alt.href} />)}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

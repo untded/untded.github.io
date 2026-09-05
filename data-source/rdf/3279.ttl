@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3279> a utd:TradeDataElement;
+  schema:description "To identify a geographical area.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Geographic Area. Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Geographic environment, coded";
+  utd:representation "an..3";
+  utd:sourcePage 63;
+  utd:status "active";
+  utd:tag 3279 .

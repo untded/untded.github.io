@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8442> a utd:TradeDataElement;
+  schema:description "Mode of transport by which goods are moved after their main transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Movement. On-carriage Mode.Text";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "On-carriage transport mode";
+  utd:representation "an..17";
+  utd:sourcePage 127;
+  utd:status "active";
+  utd:tag 8442 .

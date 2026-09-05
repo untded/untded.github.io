@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5162> a utd:TradeDataElement;
+  schema:description "Amount of balance available in case of charges paid for a specified amount.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Available Balance. Amount";
+  utd:bridges "CIM: (n2-n..7) (reverse of CIM form)";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Balance available";
+  utd:representation "n..18";
+  utd:sourcePage 91;
+  utd:status "active";
+  utd:tag 5162 .

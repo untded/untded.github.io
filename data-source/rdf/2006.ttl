@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2006> a utd:TradeDataElement;
+  schema:description "Date that a document was issued and when appropriate, signed or otherwise authenticated, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Issue Date Time.Text";
+  utd:bridges "MAR: IMO/FAL 7 UNLK: L 04, P 45-62";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Document date";
+  utd:representation "an..17";
+  utd:sourcePage 37;
+  utd:status "active";
+  utd:tag 2006 .

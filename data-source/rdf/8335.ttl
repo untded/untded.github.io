@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8335> a utd:TradeDataElement;
+  schema:description "Code specifying a type of transport movement.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Transport Movement Type.Code";
+  utd:bridges "UNLK: L 28, P 09-ll";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Movement type, coded";
+  utd:representation "an..3";
+  utd:sourcePage 126;
+  utd:status "active";
+  utd:tag 8335 .

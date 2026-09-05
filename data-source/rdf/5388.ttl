@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5388> a utd:TradeDataElement;
+  schema:description "Name of a group of goods and or services grouped together for pricing purposes.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Product. Pricing Group Name.Text";
+  utd:businessTerm "Service group name";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Pricing group";
+  utd:representation "an..35";
+  utd:sourcePage 97;
+  utd:status "active";
+  utd:tag 5388 .

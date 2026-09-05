@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4451> a utd:TradeDataElement;
+  schema:description "Code specifying the subject of the text.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Free Text. Subject.Code";
+  utd:bridges "MAR: IMO/FAL 7";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Text subject qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 84;
+  utd:status "active";
+  utd:tag 4451 .

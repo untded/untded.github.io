@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6024> a utd:TradeDataElement;
+  schema:description "The quantity which has been ordered.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Order Document. Quantity";
+  utd:bridges "UNLK: L 36-46 P 56-62";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Quantity ordered";
+  utd:representation "n..9";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 6024 .

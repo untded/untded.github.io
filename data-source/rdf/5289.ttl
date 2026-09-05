@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5289> a utd:TradeDataElement;
+  schema:description "Code specifying a duty or tax or fee account.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tax Or Fee. Account.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 6;
+  utd:minLength 1;
+  utd:oldName "Duty/tax/fee account identification";
+  utd:representation "an..6";
+  utd:sourcePage 94;
+  utd:status "active";
+  utd:tag 5289 .

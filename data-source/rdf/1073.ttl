@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1073> a utd:TradeDataElement;
+  schema:description "Code identifying an action associated with a line of a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Line Action.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Document line indicator,";
+  utd:representation "an..3";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1073 .

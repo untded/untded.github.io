@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2151> a utd:TradeDataElement;
+  schema:description "Code specifying the type of period.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Period. Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Type of period, coded";
+  utd:representation "an..3";
+  utd:sourcePage 43;
+  utd:status "active";
+  utd:tag 2151 .

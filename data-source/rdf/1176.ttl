@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1176> a utd:TradeDataElement;
+  schema:description "Reference number assigned by a buyer to identify a financial transaction";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Financial Transaction. Buyer Assigned.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Buyer's financial transaction reference";
+  utd:representation "an..35";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1176 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6272> a utd:TradeDataElement;
+  schema:description "Number of working days in a specified period.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Working Days. Quantity";
+  utd:changeTag "cn";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Number of working days";
+  utd:representation "n..3";
+  utd:sourcePage 106;
+  utd:status "active";
+  utd:tag 6272 .

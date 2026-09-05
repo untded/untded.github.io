@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5014> a utd:TradeDataElement;
+  schema:description "Amount of discount or percentage, other than payment (cash) discount, deductible from Invoice amount under conditions to be specified.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Discount. Amount";
+  utd:bridges "AWB: L 33-44, P 39-46, P 48-59 CIMP: (514):n..8 UNLK: L 54, P 62-80";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Discount";
+  utd:representation "n..18";
+  utd:sourcePage 86;
+  utd:status "active";
+  utd:tag 5014 .

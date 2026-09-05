@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8028> a utd:TradeDataElement;
+  schema:description "To identify a journey of a means of transport, for example voyage number, flight number, trip number.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Journey.Identifier";
+  utd:bridges "CIMP: (201):a3; (202):n2; (312):an2;(800):n3(n1)(a 1) MAR: IMO/FAL 1, 5-7";
+  utd:businessTerm "Flight number, Trip number, Voyage number";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Conveyance reference number";
+  utd:representation "an..17";
+  utd:sourcePage 118;
+  utd:status "active";
+  utd:tag 8028 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6090> a utd:TradeDataElement;
+  schema:description "To specify the quantity on which a duty or tax or fee will be assessed.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Tax Or Fee. Assessment Basis.Quantity";
+  utd:bridges "SAD: (SAD 47)";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:representation "n..18";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6090 .

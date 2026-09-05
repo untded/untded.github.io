@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5057> a utd:TradeDataElement;
+  schema:description "Code specifying a percentage discount which is deductible from the total amount due if payment takes place within a specified period or before the fixed due date.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Discount Percentage Numeric.Code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Payment discount, coded";
+  utd:representation "an..5";
+  utd:sourcePage 88;
+  utd:status "active";
+  utd:tag 5057 .

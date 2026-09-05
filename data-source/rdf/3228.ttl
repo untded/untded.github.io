@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3228> a utd:TradeDataElement;
+  schema:description "Name of a country subdivision.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Country. Subdivision.Text";
+  utd:businessTerm "Canton, County, Departement, Prefecture, Province, State, etc.";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Country sub-entity, name";
+  utd:representation "an..70";
+  utd:sourcePage 61;
+  utd:status "active";
+  utd:tag 3228 .

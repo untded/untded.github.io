@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6002> a utd:TradeDataElement;
+  schema:description "The measure of the angular distance east or west from the Greenwich meridan to the meridan of a specific place";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Geographical Coordinate. Longitude.Measure";
+  utd:changeTag "add";
+  utd:extractionConfidence "high";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 6002 .

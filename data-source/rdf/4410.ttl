@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4410> a utd:TradeDataElement;
+  schema:description "Information for accounting purposes.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Accounting. Information.Text";
+  utd:bridges "AWB: L 16-22, P 45-81 and CIMP: (410): an..34 SAD: (SAD B)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Accounting information";
+  utd:representation "an..512";
+  utd:sourcePage 83;
+  utd:status "active";
+  utd:tag 4410 .

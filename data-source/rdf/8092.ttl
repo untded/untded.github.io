@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8092> a utd:TradeDataElement;
+  schema:description "To identify the version number of a hazard code.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Hazard Code. Version.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 10;
+  utd:minLength 1;
+  utd:oldName "Hazard code version number";
+  utd:representation "an..10";
+  utd:sourcePage 120;
+  utd:status "active";
+  utd:tag 8092 .

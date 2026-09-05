@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1496> a utd:TradeDataElement;
+  schema:description "Sequence number differentiating a specific goods item within a consignment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Sequence.Identifier";
+  utd:bridges "UNLK: L 28-50, P 00-08 SAD (SAD 32)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Goods item number";
+  utd:representation "n..5";
+  utd:sourcePage 36;
+  utd:status "active";
+  utd:tag 1496 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5460> a utd:TradeDataElement;
+  schema:description "Instructions regarding charges for Documentary credit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit. Charge Instruction.Text";
+  utd:bridges "SWIFT: an..35x6";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Documentary credit charges";
+  utd:representation "an..512";
+  utd:sourcePage 99;
+  utd:status "active";
+  utd:tag 5460 .

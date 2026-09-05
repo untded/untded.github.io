@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2253> a utd:TradeDataElement;
+  schema:description "Date on which the calculation is made.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Calculation. Date Time";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Calculation date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 45;
+  utd:status "active";
+  utd:tag 2253 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6306> a utd:TradeDataElement;
+  schema:description "Percentage of means of transport capacity used.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Utilisation Percentage.Numeric";
+  utd:businessTerm "Maximum useable loading capacity on a ship";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Vehicle capacity used";
+  utd:representation "n..4";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6306 .

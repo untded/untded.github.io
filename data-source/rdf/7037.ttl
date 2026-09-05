@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7037> a utd:TradeDataElement;
+  schema:description "A code specifying a characteristic.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Characteristic. Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Characteristic identification";
+  utd:representation "an..17";
+  utd:sourcePage 110;
+  utd:status "active";
+  utd:tag 7037 .

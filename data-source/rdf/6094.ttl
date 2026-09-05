@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6094> a utd:TradeDataElement;
+  schema:description "Count of the total number of packages in all of the consignments referred to as one consolidation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consolidation. Package.Quantity";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 16;
+  utd:minLength 1;
+  utd:representation "n..16";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6094 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9381> a utd:TradeDataElement;
+  schema:description "Code specifying a procedure performed by Customs on goods which are subject to Customs control.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs Party. Procedure.Code";
+  utd:bridges "SAD: (SAD 37)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 7;
+  utd:minLength 1;
+  utd:oldName "Customs procedure, coded";
+  utd:representation "an..7";
+  utd:sourcePage 130;
+  utd:status "active";
+  utd:tag 9381 .

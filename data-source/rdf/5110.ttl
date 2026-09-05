@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5110> a utd:TradeDataElement;
+  schema:description "Price per unit of quantity on which an article item amount is calculated.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Line Item. Unit Price.Amount";
+  utd:bridges "UNLK: L36-46, P 64-71";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Unit price";
+  utd:representation "n..18";
+  utd:sourcePage 89;
+  utd:status "active";
+  utd:tag 5110 .

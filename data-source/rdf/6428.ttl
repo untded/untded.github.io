@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6428> a utd:TradeDataElement;
+  schema:description "To identify a particular process stage.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Process. Stage.Identifier";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:representation "n..2";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6428 .

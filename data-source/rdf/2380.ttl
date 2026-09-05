@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2380> a utd:TradeDataElement;
+  schema:description "The value of a date, a date and time, a time or of a period in a specified representation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Date Or Time Or Period. Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Date/time/period";
+  utd:representation "an..35";
+  utd:sourcePage 48;
+  utd:status "active";
+  utd:tag 2380 .

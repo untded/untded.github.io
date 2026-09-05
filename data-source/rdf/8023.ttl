@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8023> a utd:TradeDataElement;
+  schema:description "Code specifying a charge such as freight and other charges.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Charge. Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Freight and charges identification";
+  utd:representation "an..17";
+  utd:sourcePage 118;
+  utd:status "active";
+  utd:tag 8023 .

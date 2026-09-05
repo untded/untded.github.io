@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6130> a utd:TradeDataElement;
+  schema:description "Unit of quantity for the calculation of freight charges and other charges expressed as free text.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Freight Charge. Basis.Text";
+  utd:bridges "UNLK: L 52-66 P 27-54";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 10;
+  utd:minLength 1;
+  utd:oldName "Freight rate basis";
+  utd:representation "an..10";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6130 .

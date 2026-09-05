@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7187> a utd:TradeDataElement;
+  schema:description "Code specifying a type of process.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Process. Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Process type identification";
+  utd:representation "an..17";
+  utd:sourcePage 113;
+  utd:status "active";
+  utd:tag 7187 .

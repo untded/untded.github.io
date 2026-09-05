@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6424> a utd:TradeDataElement;
+  schema:description "The quantity of samples that have been or should be collected per measure or count..";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Sample. Frequency.Quantity";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Sample frequency value";
+  utd:representation "n..9";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6424 .

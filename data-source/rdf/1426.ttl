@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1426> a utd:TradeDataElement;
+  schema:description "Reference number, assigned or accepted by Customs, to identify a goods declaration.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Declaration Document. Customs.Identifier";
+  utd:bridges "CIMP: (904): an..17 UNLK: an..17 L 04, P 63- 80 SAD: (SAD A and SAD C)";
+  utd:businessTerm "Goods declaration number";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Goods declaration number (Customs)";
+  utd:representation "an..35";
+  utd:sourcePage 36;
+  utd:status "active";
+  utd:tag 1426 .

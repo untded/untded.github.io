@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6240> a utd:TradeDataElement;
+  schema:description "Level of heat or cold at which the goods should be stored.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Storage Temperature. Measure";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 8;
+  utd:minLength 1;
+  utd:oldName "Storage temperature";
+  utd:representation "an..8";
+  utd:sourcePage 105;
+  utd:status "active";
+  utd:tag 6240 .

@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2148> a utd:TradeDataElement;
+  schema:description "A number to indicate the difference between two dates.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Date. Variation.Numeric";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:representation "n..5";
+  utd:sourcePage 43;
+  utd:status "active";
+  utd:tag 2148 .

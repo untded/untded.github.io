@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6026> a utd:TradeDataElement;
+  schema:description "Weight (mass) of a package excluding all packing";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Package. Net Weight.Measure";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 16;
+  utd:minLength 1;
+  utd:representation "n..16";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 6026 .

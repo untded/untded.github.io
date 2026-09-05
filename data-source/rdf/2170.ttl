@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2170> a utd:TradeDataElement;
+  schema:description "Date and optionally time on which goods are, or are expected to be despatched or consigned, in figures and words";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Despatch. Actual Date Time.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Despatch date";
+  utd:representation "an..17";
+  utd:sourcePage 44;
+  utd:status "active";
+  utd:tag 2170 .

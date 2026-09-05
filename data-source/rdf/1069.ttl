@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1069> a utd:TradeDataElement;
+  schema:description "Total number, in figures, of the copies of a document issued";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Copies Issued.Quantity";
+  utd:bridges "UNLK: L 64, P 45-49";
+  utd:businessTerm "Number of original Bills of Lading";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:representation "n..2";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1069 .

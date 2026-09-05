@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8410> a utd:TradeDataElement;
+  schema:description "Aid To identify a Medical First Aid Guide (MFAG) for hazardous goods.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Hazardous Material. Medical First Guide.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "MFAG";
+  utd:representation "an..4";
+  utd:sourcePage 127;
+  utd:status "active";
+  utd:tag 8410 .

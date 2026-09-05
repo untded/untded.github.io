@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4219> a utd:TradeDataElement;
+  schema:description "Code specifying the priority of a transport service.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Service. Priority.Code";
+  utd:bridges "CIMP: (704):a1";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Transport priority, coded";
+  utd:representation "an..3";
+  utd:sourcePage 78;
+  utd:status "active";
+  utd:tag 4219 .

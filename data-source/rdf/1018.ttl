@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1018> a utd:TradeDataElement;
+  schema:description "Reference number identifying the acknowledgement of an order.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Order Acknowledgement Document. Identifier";
+  utd:bridges "UNLK: L 04, P 63-80";
+  utd:businessTerm "Purchase order response number";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Acknowledgement of Order number";
+  utd:representation "an..35";
+  utd:sourcePage 28;
+  utd:status "active";
+  utd:tag 1018 .

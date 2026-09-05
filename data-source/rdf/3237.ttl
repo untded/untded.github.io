@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3237> a utd:TradeDataElement;
+  schema:description "To identify the location of a sample.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Sample. Location.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Sample location, coded";
+  utd:representation "an..35";
+  utd:sourcePage 62;
+  utd:status "active";
+  utd:tag 3237 .

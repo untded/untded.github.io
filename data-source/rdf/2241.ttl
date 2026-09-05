@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2241> a utd:TradeDataElement;
+  schema:description "Date on which the validity of an export licence takes effect";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Export Permit. Effective Start.Date Time";
+  utd:businessTerm "Export licence commencement date, coded";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Export Licence commencement date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 45;
+  utd:status "active";
+  utd:tag 2241 .

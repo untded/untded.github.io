@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5150> a utd:TradeDataElement;
+  schema:description "Part of 'Paid' charges utilized at the time of departure, in the case of charges paid for a specified amount.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Prepaid Utilised.Amount";
+  utd:bridges "CIM: (reverse of CIM form)";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Amount utilized";
+  utd:representation "n..18";
+  utd:sourcePage 91;
+  utd:status "active";
+  utd:tag 5150 .

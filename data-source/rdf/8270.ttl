@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8270> a utd:TradeDataElement;
+  schema:description "To identify the means of transport used in crossing the border out of the country of despatch for export or into the country of final destination for import.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. At Border Crossing.Identifier";
+  utd:bridges "SAD: (SAD 21)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 25;
+  utd:minLength 1;
+  utd:oldName "Identification of active means of transport crossing the border";
+  utd:representation "an..25";
+  utd:sourcePage 125;
+  utd:status "active";
+  utd:tag 8270 .

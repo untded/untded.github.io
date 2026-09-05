@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3422> a utd:TradeDataElement;
+  schema:description "Name and address of a bank designated by the payee to receive a payment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payee. Bank Identification.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Payee's bank";
+  utd:representation "an..512";
+  utd:sourcePage 69;
+  utd:status "active";
+  utd:tag 3422 .

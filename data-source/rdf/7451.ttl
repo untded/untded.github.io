@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7451> a utd:TradeDataElement;
+  schema:description "Code specifying a membership category.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Membership. Category.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Membership category identification";
+  utd:representation "an..4";
+  utd:sourcePage 117;
+  utd:status "active";
+  utd:tag 7451 .

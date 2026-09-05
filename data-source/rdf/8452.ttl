@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8452> a utd:TradeDataElement;
+  schema:description "Name of the country in which a means of transport is registered";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Registration Nationality.Text";
+  utd:bridges "MAR: IMO/FAL 1-7 SAD: (SAD 55)";
+  utd:businessTerm "Flag of vessel, Nationality of ship";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Nationality of means of transport";
+  utd:representation "an..17";
+  utd:sourcePage 127;
+  utd:status "active";
+  utd:tag 8452 .

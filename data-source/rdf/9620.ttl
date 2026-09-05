@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9620> a utd:TradeDataElement;
+  schema:description "Code specifying a policy limitation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Policy. Limitation.Identifier";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 10;
+  utd:minLength 1;
+  utd:representation "an..10";
+  utd:sourcePage 131;
+  utd:status "active";
+  utd:tag 9620 .

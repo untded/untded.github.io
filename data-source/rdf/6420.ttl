@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6420> a utd:TradeDataElement;
+  schema:description "The weight (mass) or volume of the dangerous goods contained in a package excluding the weight (mass) or volume of any packaging material.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Dangerous Goods. Net Weight.Measure";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 14;
+  utd:minLength 1;
+  utd:oldName "Dangerous goods net quantity";
+  utd:representation "n..14";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6420 .

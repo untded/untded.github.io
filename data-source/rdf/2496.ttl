@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2496> a utd:TradeDataElement;
+  schema:description "Indication that freshness of goods is limited in time to the date shown, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Product. Best Before Date Time.Text";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Freshness guarantee date";
+  utd:representation "an..17";
+  utd:sourcePage 49;
+  utd:status "active";
+  utd:tag 2496 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3484> a utd:TradeDataElement;
+  schema:description "Name of the nationality of a an object, for example the nationality of a person or the nationality of a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Person. Nationality.Text";
+  utd:bridges "MAR: (IMO FAL Forms 5-6)";
+  utd:changeTag "cnd";
+  utd:charset "a";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Nationality of person";
+  utd:representation "a..35";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3484 .

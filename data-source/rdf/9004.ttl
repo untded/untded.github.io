@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9004> a utd:TradeDataElement;
+  schema:description "Free form description of an employment category.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Employment. Category.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Employment category";
+  utd:representation "an..35";
+  utd:sourcePage 128;
+  utd:status "active";
+  utd:tag 9004 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2027> a utd:TradeDataElement;
+  schema:description "Date and optionally time when the shipper expects that the goods will be at the place of acceptance.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Expected Acceptance.Date Time";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Expected date of delivery to carrier, coded";
+  utd:representation "an..19";
+  utd:sourcePage 38;
+  utd:status "active";
+  utd:tag 2027 .

@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4052> a utd:TradeDataElement;
+  schema:description "Free form description of delivery or transport terms.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Trade Term. Description.Text";
+  utd:bridges "UNLK: an..35xn; L 20, P 49-80";
+  utd:businessTerm "Incoterms";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Terms of delivery";
+  utd:representation "an..70";
+  utd:sourcePage 74;
+  utd:status "active";
+  utd:tag 4052 .

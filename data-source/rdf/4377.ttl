@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4377> a utd:TradeDataElement;
+  schema:description "To identify details regarding undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled, e.g. under a transit procedure.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Obligation. Guarantee.Code";
+  utd:bridges "SAD: (SAD 52)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Security details, coded";
+  utd:representation "an..3";
+  utd:sourcePage 82;
+  utd:status "active";
+  utd:tag 4377 .

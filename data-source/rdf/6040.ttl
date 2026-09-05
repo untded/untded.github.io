@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6040> a utd:TradeDataElement;
+  schema:description "Total net weight (mass) of all consignments referred to as one consolidation excluding both packaging and transport equipment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consolidation. Net Weight.Measure";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 16;
+  utd:minLength 1;
+  utd:representation "n..16";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6040 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7410> a utd:TradeDataElement;
+  schema:description "Description and quantities of such personal belongings in the possession of individual crew members which according to regulations in force at the place of arrival of a means of transport are dutiable or subject to prohibitions or restrictions.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Crew. Personal Effects.Text";
+  utd:bridges "MAR: IMO/FAL 4";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Crew's effects";
+  utd:representation "an..35";
+  utd:sourcePage 116;
+  utd:status "active";
+  utd:tag 7410 .

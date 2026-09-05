@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9380> a utd:TradeDataElement;
+  schema:description "Textual description of a procedure performed by Customs on goods which are subject to Customs control.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs Party. Procedure.Text";
+  utd:bridges "SAD: (SAD E)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Customs procedure";
+  utd:representation "an..17";
+  utd:sourcePage 130;
+  utd:status "active";
+  utd:tag 9380 .

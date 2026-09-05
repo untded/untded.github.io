@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4097> a utd:TradeDataElement;
+  schema:description "Code specifying a request, including a reason, to override previously submitted information, such as due to an error condition.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Request. Override.Code";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:representation "an..3";
+  utd:sourcePage 76;
+  utd:status "active";
+  utd:tag 4097 .

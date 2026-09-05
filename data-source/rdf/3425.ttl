@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3425> a utd:TradeDataElement;
+  schema:description "To identify a place where goods are to be or have been transferred from one means of transport to another during the course of one transport operation";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Transshipment Location.Identifier";
+  utd:bridges "CIMP: (313):a3";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Transhipment place, coded";
+  utd:representation "an..35";
+  utd:sourcePage 69;
+  utd:status "active";
+  utd:tag 3425 .

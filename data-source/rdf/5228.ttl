@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5228> a utd:TradeDataElement;
+  schema:description "Transport charges to be paid by the consignee for each tariff class.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Consignee Tariff Charge.Amount";
+  utd:bridges "CIM: L 44-45, P 67-74 and L 50-51, P 67-74 and L 56-57, P 67-74 (also on reverse)";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Charges 'To pay' - Tariff currency";
+  utd:representation "n..18";
+  utd:sourcePage 92;
+  utd:status "active";
+  utd:tag 5228 .

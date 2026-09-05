@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8260> a utd:TradeDataElement;
+  schema:description "To identify a piece of transport equipment e.g. container or unit load device.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Identifier";
+  utd:bridges "MAR: IMO/FAL 2, 7 UNLK: L 13-14, P 45-68";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Equipment identification number";
+  utd:representation "an..35";
+  utd:sourcePage 125;
+  utd:status "active";
+  utd:tag 8260 .

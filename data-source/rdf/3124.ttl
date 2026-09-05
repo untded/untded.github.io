@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3124> a utd:TradeDataElement;
+  schema:description "Textual representation of an identification of a party such as the party name and address.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Party. Identification.Text";
+  utd:businessTerm "Name and address line";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Name and address line";
+  utd:representation "an..512";
+  utd:sourcePage 55;
+  utd:status "active";
+  utd:tag 3124 .

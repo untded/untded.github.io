@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4022> a utd:TradeDataElement;
+  schema:description "Free form description of a business.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Business. Description.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Business description";
+  utd:representation "an..70";
+  utd:sourcePage 73;
+  utd:status "active";
+  utd:tag 4022 .

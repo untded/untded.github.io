@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2079> a utd:TradeDataElement;
+  schema:description "Time Date on which an export licence expires";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Export Permit. Effective End.Date";
+  utd:businessTerm "Export licence expiry date, coded";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Export Licence expiry date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 40;
+  utd:status "active";
+  utd:tag 2079 .

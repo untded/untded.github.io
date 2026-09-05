@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1346> a utd:TradeDataElement;
+  schema:description "Name of an enclosed document function";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Enclosed Document. Function Name.Text";
+  utd:bridges "CIM: an..47x4; L 39-42, P 02-49 CMR: an..35x3; L 24-26, P 09-44";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Document enclosed";
+  utd:representation "an..70";
+  utd:sourcePage 35;
+  utd:status "active";
+  utd:tag 1346 .

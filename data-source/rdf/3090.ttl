@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3090> a utd:TradeDataElement;
+  schema:description "Name of place from which the transport charges tariff applies or where charges have been incurred.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Freight Charge. Payable From Location.Text";
+  utd:bridges "CIM: L 50, P 02-20 and L 56, P 02-50 and on reverse of CIM form";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Freight from";
+  utd:representation "an..256";
+  utd:sourcePage 54;
+  utd:status "active";
+  utd:tag 3090 .

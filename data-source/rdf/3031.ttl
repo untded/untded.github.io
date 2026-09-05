@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3031> a utd:TradeDataElement;
+  schema:description "To identify the name and address of party who makes, or on whose behalf the export declaration is made, and who is the owner of the goods or has similar rights of disposal over them at the time when the declaration is accepted.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Exporter. Party.Identifier";
+  utd:bridges "UNLK: L 03, P 27-44 SAD: (SAD 14(Nr))";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Exporter, coded";
+  utd:representation "an..17";
+  utd:sourcePage 51;
+  utd:status "active";
+  utd:tag 3031 .

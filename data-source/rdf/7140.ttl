@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7140> a utd:TradeDataElement;
+  schema:description "A reference number such as a part number which identifies a line item.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Line Item. Identifier";
+  utd:bridges "UNLK: L 36-46, P 13-47 SAD: n..2 (SAD 32)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Item number";
+  utd:representation "an..35";
+  utd:sourcePage 112;
+  utd:status "active";
+  utd:tag 7140 .

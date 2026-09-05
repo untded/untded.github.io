@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6174> a utd:TradeDataElement;
+  schema:description "To specify a value of magnitude.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Size. Measure";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 15;
+  utd:minLength 1;
+  utd:oldName "Size";
+  utd:representation "n..15";
+  utd:sourcePage 105;
+  utd:status "active";
+  utd:tag 6174 .

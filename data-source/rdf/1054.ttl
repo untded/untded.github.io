@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1054> a utd:TradeDataElement;
+  schema:description "To identify a sub-item within a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Sub-Item.Identifier";
+  utd:businessTerm "Message sub-item number";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 6;
+  utd:minLength 1;
+  utd:oldName "Message sub-item number";
+  utd:representation "n..6";
+  utd:sourcePage 29;
+  utd:status "active";
+  utd:tag 1054 .

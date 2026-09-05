@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6242> a utd:TradeDataElement;
+  schema:description "Instructions regarding the temperature under which the cargo has to be transported.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Temperature. Measure";
+  utd:businessTerm "Reefer/cool cargo temperature setting";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 8;
+  utd:minLength 1;
+  utd:oldName "Transport temperature";
+  utd:representation "an..8";
+  utd:sourcePage 106;
+  utd:status "active";
+  utd:tag 6242 .

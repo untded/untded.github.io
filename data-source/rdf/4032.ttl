@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4032> a utd:TradeDataElement;
+  schema:description "Additional information regarding the transport means. For vessels, information called for under the IMO Facilitation Convention to be submitted by the master of the ship but not specifically provided for in the standard forms.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Additional.Text";
+  utd:bridges "MAR: IMO/FAL 1";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Remarks on ship's general declaration";
+  utd:representation "an..512";
+  utd:sourcePage 73;
+  utd:status "active";
+  utd:tag 4032 .

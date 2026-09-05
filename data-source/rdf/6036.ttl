@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6036> a utd:TradeDataElement;
+  schema:description "Total gross weight (mass) of all goods items referred to as one consignment including packaging but excluding the transport equipment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consolidation. Gross Weight.Measure";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 16;
+  utd:minLength 1;
+  utd:representation "n..16";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6036 .

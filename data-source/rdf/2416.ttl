@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2416> a utd:TradeDataElement;
+  schema:description "Date of issue of a transport contract document, in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Contract Document. Issue Date Time.Text";
+  utd:bridges "AWB: L 60, P 37-43 CMR: L 60, P 27-44 (CMR 21) MAR: L 62, P 54-80";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Transport document date";
+  utd:representation "an..17";
+  utd:sourcePage 48;
+  utd:status "active";
+  utd:tag 2416 .

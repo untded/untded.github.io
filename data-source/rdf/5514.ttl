@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5514> a utd:TradeDataElement;
+  schema:description "Monetary amount by which the valuation was adjusted.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Valuation. Adjustment.Amount";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:representation "n..18";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 5514 .

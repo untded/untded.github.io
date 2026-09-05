@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3322> a utd:TradeDataElement;
+  schema:description "The place or port at which the cargo is loaded on a means of transport according to the transport contract. The goods may or may not be loaded on the main means of transport at this place or port.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Baseport Loading Location.Text";
+  utd:businessTerm "Baseport loading";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Baseport for acceptance";
+  utd:representation "an..256";
+  utd:sourcePage 65;
+  utd:status "active";
+  utd:tag 3322 .

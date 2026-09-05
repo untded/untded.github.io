@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3196> a utd:TradeDataElement;
+  schema:description "Name and address of a party authorised to act on behalf of another party.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Agent. Party Identification.Text";
+  utd:bridges "SAD: (SAD 14)";
+  utd:businessTerm "Authorized representati ve's name, Authorized agent for principal";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Agent";
+  utd:representation "an..512";
+  utd:sourcePage 59;
+  utd:status "active";
+  utd:tag 3196 .

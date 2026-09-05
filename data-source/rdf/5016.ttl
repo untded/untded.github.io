@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5016> a utd:TradeDataElement;
+  schema:description "Monetary amount to be paid at time of delivery in words and figures.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Cash On Delivery.Text";
+  utd:bridges "CMR: L 60, P 45-80";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Cash-on-delivery amount, in words";
+  utd:representation "an..35";
+  utd:sourcePage 87;
+  utd:status "active";
+  utd:tag 5016 .

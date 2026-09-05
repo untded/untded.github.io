@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3486> a utd:TradeDataElement;
+  schema:description "Name of the place where a person was born";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Person. Birth Location.Text";
+  utd:bridges "MAR: IMO/FAL 5-6";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Place of birth";
+  utd:representation "an..256";
+  utd:sourcePage 71;
+  utd:status "active";
+  utd:tag 3486 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2308> a utd:TradeDataElement;
+  schema:description "Period of the validity of an export licence, in figures and words..";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Export Permit. Validity Period.Text";
+  utd:businessTerm "Export licence validity period";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Export Licence validity period";
+  utd:representation "an..35";
+  utd:sourcePage 46;
+  utd:status "active";
+  utd:tag 2308 .

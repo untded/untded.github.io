@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5125> a utd:TradeDataElement;
+  schema:description "Code specifying a type of price.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Price. Congeries.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Price qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 90;
+  utd:status "active";
+  utd:tag 5125 .

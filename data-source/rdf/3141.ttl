@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3141> a utd:TradeDataElement;
+  schema:description "Identifier of party which makes a declaration to an official body or - where legally permitted - in whose name, or on whose behalf, a declaration to an official body is made.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Declarant. Party.Identifier";
+  utd:bridges "UNLK: L 03, P 27-44";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Declarant, coded";
+  utd:representation "an..17";
+  utd:sourcePage 57;
+  utd:status "active";
+  utd:tag 3141 .

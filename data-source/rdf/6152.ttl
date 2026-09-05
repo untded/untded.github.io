@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6152> a utd:TradeDataElement;
+  schema:description "To specify the maximum value of a range.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Range. Maximum Value.Measure";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Range maximum";
+  utd:representation "n..18";
+  utd:sourcePage 104;
+  utd:status "active";
+  utd:tag 6152 .

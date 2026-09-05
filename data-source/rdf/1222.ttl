@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1222> a utd:TradeDataElement;
+  schema:description "To identify a level within a configuration.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Configuration. Level .Identifier";
+  utd:businessTerm "Configuration level number";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Configuration level";
+  utd:representation "n..2";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1222 .

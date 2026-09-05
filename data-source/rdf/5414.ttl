@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5414> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "CIM: n..24; L 39-40, P 50- 73 (CIM 30)";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Disburseme nt amount";
+  utd:sourcePage 98;
+  utd:status "retired";
+  utd:tag 5414 .

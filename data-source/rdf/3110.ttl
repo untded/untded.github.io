@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3110> a utd:TradeDataElement;
+  schema:description "Customs office at which a security or guarantee for the movement of goods under a transit procedure is lodged.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transit Guarantee. Customs Office Location.Text";
+  utd:bridges "SAD: (SAD 52)";
+  utd:businessTerm "Customs office of guarantee";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Customs office of guarantee";
+  utd:representation "an..256";
+  utd:sourcePage 55;
+  utd:status "active";
+  utd:tag 3110 .

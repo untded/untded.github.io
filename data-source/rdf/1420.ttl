@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1420> a utd:TradeDataElement;
+  schema:description "Reference number to identify a kanban card";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Kanban Card. Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Kanban card number";
+  utd:representation "an..3";
+  utd:sourcePage 36;
+  utd:status "active";
+  utd:tag 1420 .

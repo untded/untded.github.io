@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1160> a utd:TradeDataElement;
+  schema:description "Name of the function of a required document";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Required Document. Function Name.Text";
+  utd:bridges "SWIFT: an..65x12";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Document required";
+  utd:representation "an..35";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1160 .

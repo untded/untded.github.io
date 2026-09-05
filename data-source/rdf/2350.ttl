@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2350> a utd:TradeDataElement;
+  schema:description "Period of time in which a means of transport stays, or is to stay, in a specific port or other location expressed as startdate and end date in figures and words.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Stay Date Time.Text";
+  utd:bridges "MAR: IMO/FAL 3";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Period of stay";
+  utd:representation "an..35";
+  utd:sourcePage 47;
+  utd:status "active";
+  utd:tag 2350 .

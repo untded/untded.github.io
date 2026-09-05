@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8154> a utd:TradeDataElement;
+  schema:description "Free form description of the characteristics, I.e. size and type of a piece of transport equipment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Characteristic.Text";
+  utd:bridges "UNLK: L 28-50, P 09-26";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Equipment size and type";
+  utd:representation "an..35";
+  utd:sourcePage 122;
+  utd:status "active";
+  utd:tag 8154 .

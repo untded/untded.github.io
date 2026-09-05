@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3283> a utd:TradeDataElement;
+  schema:description "To identify the name and address of the party where goods are to be, or have been, taken over by a carrier such as the place where a container is picked-up.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Despatch Party. Party.Identifier";
+  utd:businessTerm "Pick-up Party";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Despatch party, coded";
+  utd:representation "an..17";
+  utd:sourcePage 64;
+  utd:status "active";
+  utd:tag 3283 .

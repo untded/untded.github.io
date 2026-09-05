@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8040> a utd:TradeDataElement;
+  schema:description "Count of the number of axles on a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Axle.Quantity";
+  utd:bridges "CIM: L 13-14, P 80-82 (CIM 45)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Vehicle axles";
+  utd:representation "n..2";
+  utd:sourcePage 119;
+  utd:status "active";
+  utd:tag 8040 .

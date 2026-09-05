@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4270> a utd:TradeDataElement;
+  schema:description "Any further qualification of the amount of the Documentary credit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit Document. Additional Information.Text";
+  utd:bridges "SWIFT: an..35x4 UNLK: an..35x4; L 28- 52, P 09-44";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Documentary credit amount qualification";
+  utd:representation "an..35";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4270 .

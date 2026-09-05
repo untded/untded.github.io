@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6314> a utd:TradeDataElement;
+  schema:description "To specify the value of a measurement.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Measurement. Value.Measure";
+  utd:bridges "MAR: IMO/FAL 2";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Measurement value";
+  utd:representation "an..18";
+  utd:sourcePage 107;
+  utd:status "active";
+  utd:tag 6314 .
