@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3175> a utd:TradeDataElement;
+  schema:description "To identify the party owning, operating or controlling the transport equipment, for example container.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment Operator. Party.Identifier";
+  utd:bridges "CIMP: (801): an2";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Container operator, coded";
+  utd:representation "an..35";
+  utd:sourcePage 58;
+  utd:status "active";
+  utd:tag 3175 .

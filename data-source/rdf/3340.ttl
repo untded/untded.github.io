@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3340> a utd:TradeDataElement;
+  schema:description "Name and address of a party liable for goods moving under a customs authorisation and, when applicable, a guarantee";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Responsible To Customs. Party Identification.Text";
+  utd:bridges "SAD: (SAD 50)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Principal responsible party";
+  utd:representation "an..512";
+  utd:sourcePage 66;
+  utd:status "active";
+  utd:tag 3340 .

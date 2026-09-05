@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2015> a utd:TradeDataElement;
+  schema:description "Code specifying the days/periods for routine despatches";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Despatch. Pattern.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Despatch pattern, coded";
+  utd:representation "an..3";
+  utd:sourcePage 38;
+  utd:status "active";
+  utd:tag 2015 .

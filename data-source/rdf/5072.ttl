@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5072> a utd:TradeDataElement;
+  schema:description "Total of all invoice amounts declared in a single declaration.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs Declaration. Invoice.Amount";
+  utd:bridges "SAD: (SAD 22)";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:representation "n..18";
+  utd:sourcePage 89;
+  utd:status "active";
+  utd:tag 5072 .

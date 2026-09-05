@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6411> a utd:TradeDataElement;
+  schema:description "Indication of a unit of measurement in which weight (mass), capacity, length, area, volume or other quantity or measurement is expressed.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Measurement. Unit.Code";
+  utd:bridges "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))";
+  utd:businessTerm "Measure unit qualifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 8;
+  utd:minLength 1;
+  utd:oldName "Measure unit qualifier";
+  utd:representation "an..8";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6411 .

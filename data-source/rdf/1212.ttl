@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1212> a utd:TradeDataElement;
+  schema:description "To identify a page number";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Page.Identifier";
+  utd:bridges "UNLK: L 02, P 72-75 SAD: (SAD(3(1))";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Page number";
+  utd:representation "n..3";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1212 .

@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7012> a utd:TradeDataElement;
+  schema:description "Number of packages per goods item packaged in such away that they cannot be divided without first undoing the package.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Package.Quantity";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:representation "n..9";
+  utd:sourcePage 109;
+  utd:status "active";
+  utd:tag 7012 .

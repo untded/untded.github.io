@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6348> a utd:TradeDataElement;
+  schema:description "To specify the value of the multiplication factor used in expressing currency units.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Currency. Rate.Numeric";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Currency rate base";
+  utd:representation "n..4";
+  utd:sourcePage 108;
+  utd:status "active";
+  utd:tag 6348 .

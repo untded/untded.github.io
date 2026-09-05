@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3117> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "UNLK: L 15, P 60-62";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Country of sale, coded";
+  utd:sourcePage 55;
+  utd:status "retired";
+  utd:tag 3117 .

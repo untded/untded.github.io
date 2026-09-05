@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3347> a utd:TradeDataElement;
+  schema:description "Identifier of the party selling merchandise or services to a buyer.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Seller. Party.Identifier";
+  utd:bridges "UNLK: L 03, P 27-44";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Seller, coded";
+  utd:representation "an..35";
+  utd:sourcePage 66;
+  utd:status "active";
+  utd:tag 3347 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7036> a utd:TradeDataElement;
+  schema:description "Free form description of a characteristic.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Characteristic. Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Characteristic";
+  utd:representation "an..35";
+  utd:sourcePage 110;
+  utd:status "active";
+  utd:tag 7036 .

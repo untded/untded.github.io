@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6092> a utd:TradeDataElement;
+  schema:description "Weight (mass) of all goods including packing but excluding carrier's equipment as declared in a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document Declared Gross Weight. Measure";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 14;
+  utd:minLength 1;
+  utd:representation "n..14";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6092 .

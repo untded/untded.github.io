@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1198> a utd:TradeDataElement;
+  schema:description "Total number of originals and copies of a document enclosed";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Exemplar.Quantity";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Number of copies of document enclosed";
+  utd:representation "n..2";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1198 .

@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1067> a utd:TradeDataElement;
+  schema:description "Total number, in figures, of the originals of a document issued";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Originals Issued.Quantity";
+  utd:bridges "UNLK: L 64, P 36-40";
+  utd:businessTerm "Number of original Bills of Lading";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Number of original Bills of Lading, in figures";
+  utd:representation "n..2";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1067 .

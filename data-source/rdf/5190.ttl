@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5190> a utd:TradeDataElement;
+  schema:description "Balance available brought forward.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Account. Brought Forward Balance.Amount";
+  utd:bridges "CIM: (reverse of CIM form)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Balance brought forward";
+  utd:representation "n..18";
+  utd:sourcePage 92;
+  utd:status "active";
+  utd:tag 5190 .

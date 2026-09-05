@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8053> a utd:TradeDataElement;
+  schema:description "Code specifying a type of equipment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Category.Code";
+  utd:bridges "CIM: L 09, P 45-51 and 64-70";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Equipment qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 119;
+  utd:status "active";
+  utd:tag 8053 .

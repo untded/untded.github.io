@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2101> a utd:TradeDataElement;
+  schema:description "Date and or time on which a piece of transport equipment should be available at the place of loading or unloading.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Availability.Date Time";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Transport unit disposition date (and time), coded";
+  utd:representation "an..19";
+  utd:sourcePage 41;
+  utd:status "active";
+  utd:tag 2101 .

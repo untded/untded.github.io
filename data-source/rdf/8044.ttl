@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8044> a utd:TradeDataElement;
+  schema:description "Textual description of a location on board a means of transport where specified stores have been or are to be stowed.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Stores Stowage Location.Text";
+  utd:bridges "MAR: IMO/FAL 3";
+  utd:businessTerm "Ships Stores";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Store place";
+  utd:representation "an..256";
+  utd:sourcePage 119;
+  utd:status "active";
+  utd:tag 8044 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4065> a utd:TradeDataElement;
+  schema:description "Code to identify the conditions of contract and carriage.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Contract Document. Condition.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Contract and carriage condition, coded";
+  utd:representation "an..3";
+  utd:sourcePage 75;
+  utd:status "active";
+  utd:tag 4065 .

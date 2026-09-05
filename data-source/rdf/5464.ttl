@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5464> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "AWB: L 62, P 23-36 and CIMP: (501):n..12";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Collect charges in destination currency";
+  utd:sourcePage 100;
+  utd:status "retired";
+  utd:tag 5464 .

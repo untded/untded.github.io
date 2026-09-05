@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2293> a utd:TradeDataElement;
+  schema:description "Date of issue of an import licence";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Import Permit. Issue.Date Time";
+  utd:bridges "UNLK: L 03, P 56-62";
+  utd:businessTerm "Import licence date, coded";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Import Licence date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 46;
+  utd:status "active";
+  utd:tag 2293 .

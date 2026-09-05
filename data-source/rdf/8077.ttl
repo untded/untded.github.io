@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8077> a utd:TradeDataElement;
+  schema:description "Code identifying a type of party that is the supplier of transport equipment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Supplier Party Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Equipment supplier, coded";
+  utd:representation "an..3";
+  utd:sourcePage 120;
+  utd:status "active";
+  utd:tag 8077 .

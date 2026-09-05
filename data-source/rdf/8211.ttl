@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8211> a utd:TradeDataElement;
+  schema:description "Code specifying the authorisation for the transportation of hazardous cargo.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Dangerous Goods. Transport Authorisation.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Permission for transport, coded";
+  utd:representation "an..3";
+  utd:sourcePage 124;
+  utd:status "active";
+  utd:tag 8211 .

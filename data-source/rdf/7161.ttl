@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7161> a utd:TradeDataElement;
+  schema:description "Code specifying a special service.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Special Service. Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Special services, coded";
+  utd:representation "an..3";
+  utd:sourcePage 112;
+  utd:status "active";
+  utd:tag 7161 .

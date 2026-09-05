@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1001> a utd:TradeDataElement;
+  schema:description "Code specifying the name of a document such as 352 for proforma invoice, 380 for commercial invoice.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Type.Code";
+  utd:bridges "UNLK: L 04, P 41-45 CIMP: (120): a1 SAD: (SAD 1(first to third subdivision))";
+  utd:businessTerm "Document/message name code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Document/message name, coded";
+  utd:representation "an..3";
+  utd:sourcePage 28;
+  utd:status "active";
+  utd:tag 1001 .

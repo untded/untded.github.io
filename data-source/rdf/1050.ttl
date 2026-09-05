@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1050> a utd:TradeDataElement;
+  schema:description "To identify a position within a sequence.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Sequence. Position.Identifier";
+  utd:bridges "MAR: IMO/FAL 4-5";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 10;
+  utd:minLength 1;
+  utd:oldName "Sequence number";
+  utd:representation "an..10";
+  utd:sourcePage 29;
+  utd:status "active";
+  utd:tag 1050 .

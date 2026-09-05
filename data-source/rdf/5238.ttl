@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5238> a utd:TradeDataElement;
+  schema:description "Required additions to the Customs value basis used.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs. Additional Value Basis.Amount";
+  utd:bridges "SAD: (SAD 47(3))";
+  utd:businessTerm "Other amount to be added";
+  utd:changeTag "cnr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 18;
+  utd:minLength 1;
+  utd:oldName "Added amount (Customs)";
+  utd:representation "n..18";
+  utd:sourcePage 92;
+  utd:status "active";
+  utd:tag 5238 .

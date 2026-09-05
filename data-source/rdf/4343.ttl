@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4343> a utd:TradeDataElement;
+  schema:description "Code specifying the type of acknowledgment required or transmitted.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Response. Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Response type, coded";
+  utd:representation "an..3";
+  utd:sourcePage 81;
+  utd:status "active";
+  utd:tag 4343 .

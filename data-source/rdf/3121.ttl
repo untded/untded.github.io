@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3121> a utd:TradeDataElement;
+  schema:description "To identify the type of party that is performing the loading of transport equipment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment Loading. Party.Identifier";
+  utd:bridges "CIM: (CIM 28) L32, P07 or L33, P07";
+  utd:businessTerm "Loader indicator, coded";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Load indicator, coded";
+  utd:representation "an..17";
+  utd:sourcePage 55;
+  utd:status "active";
+  utd:tag 3121 .

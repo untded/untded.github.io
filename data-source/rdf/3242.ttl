@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3242> a utd:TradeDataElement;
+  schema:description "Name and address of a bank at which the Documentary credit is available.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit Available Bank. Party Identification.Text";
+  utd:bridges "ICC: L 18, P 45-80 SWIFT: an..35x2";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Documentary credit available with";
+  utd:representation "an..512";
+  utd:sourcePage 62;
+  utd:status "active";
+  utd:tag 3242 .

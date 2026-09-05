@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6180> a utd:TradeDataElement;
+  schema:description "Name of the monetary unit in which payment is made, or is to be made.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Currency.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 26;
+  utd:minLength 1;
+  utd:oldName "Payment currency";
+  utd:representation "an..26";
+  utd:sourcePage 105;
+  utd:status "active";
+  utd:tag 6180 .

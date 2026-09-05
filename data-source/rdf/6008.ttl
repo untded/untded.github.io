@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6008> a utd:TradeDataElement;
+  schema:description "To specify the value of a height dimension.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Height. Measure";
+  utd:bridges "UNLK: L 36-64, P 09-44";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 15;
+  utd:minLength 1;
+  utd:oldName "Height dimension";
+  utd:representation "n..15";
+  utd:sourcePage 101;
+  utd:status "active";
+  utd:tag 6008 .

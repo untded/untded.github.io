@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1208> a utd:TradeDataElement;
+  schema:description "Reference number to identify an export licence or permit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Export Permit. Identifier";
+  utd:bridges "UNLK: an..17, L 04, P 63- 80";
+  utd:businessTerm "Export licence permit number";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Export Licence number";
+  utd:representation "an..35";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1208 .

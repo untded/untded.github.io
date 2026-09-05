@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5284> a utd:TradeDataElement;
+  schema:description "To specify the basis for a unit price.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Unit Price. Basis.Quantity";
+  utd:businessTerm "Rate basis";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Unit price basis";
+  utd:representation "n..9";
+  utd:sourcePage 94;
+  utd:status "active";
+  utd:tag 5284 .

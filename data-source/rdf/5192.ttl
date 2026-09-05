@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5192> a utd:TradeDataElement;
+  schema:description "Description in plain language of an item to be deducted from the article items total in a commercial invoice.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Invoice. Deduction.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Invoice deduction specification";
+  utd:representation "an..35";
+  utd:sourcePage 92;
+  utd:status "active";
+  utd:tag 5192 .

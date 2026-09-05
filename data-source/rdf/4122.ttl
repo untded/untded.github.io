@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4122> a utd:TradeDataElement;
+  schema:description "Instructions from the consignor to the carrier regarding local transport from pick-up point to carrier's organization, from carrier's organization to delivery point, or between carriers' organizations at the same place.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Haulage Instruction.Text";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Cartage instructions";
+  utd:representation "an..512";
+  utd:sourcePage 76;
+  utd:status "active";
+  utd:tag 4122 .

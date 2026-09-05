@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6110> a utd:TradeDataElement;
+  schema:description "The distance between two points for which a specific tariff applies.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Chargeable Distance. Measure";
+  utd:bridges "CIM: L 47, P 14-19 and L 53, P 13-19 and L 59, P 13-19 (also on reverse)";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 7;
+  utd:minLength 1;
+  utd:oldName "Tariff distance, km";
+  utd:representation "n..7";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6110 .

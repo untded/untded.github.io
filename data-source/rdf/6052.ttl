@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6052> a utd:TradeDataElement;
+  schema:description "Weight (mass) of transport means including permanent equipment but excluding goods and loose accessories.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Tare Weight.Measure";
+  utd:bridges "CIM: L 13-14, P 69-73 (CIM 20)";
+  utd:businessTerm "Vehicle tare";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 14;
+  utd:minLength 1;
+  utd:oldName "Vehicle tare";
+  utd:representation "n..14";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6052 .

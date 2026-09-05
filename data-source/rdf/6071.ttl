@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6071> a utd:TradeDataElement;
+  schema:description "Code qualifying the frequency.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Frequency. Type.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Frequency qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6071 .

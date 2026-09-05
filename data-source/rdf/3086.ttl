@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3086> a utd:TradeDataElement;
+  schema:description "Name of the customs office at which goods are released from a Customs transit regime.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transit Regime. End Customs Office Location.Text";
+  utd:bridges "SAD: (SAD 53)";
+  utd:businessTerm "Customs office of destination (transit)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:oldName "Customs office of destination (transit)";
+  utd:representation "an..256";
+  utd:sourcePage 53;
+  utd:status "active";
+  utd:tag 3086 .

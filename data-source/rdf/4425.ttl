@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4425> a utd:TradeDataElement;
+  schema:description "Code specifying a reason for performing a test.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Test. Reason.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Test reason identification";
+  utd:representation "an..17";
+  utd:sourcePage 83;
+  utd:status "active";
+  utd:tag 4425 .

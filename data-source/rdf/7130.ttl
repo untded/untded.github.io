@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7130> a utd:TradeDataElement;
+  schema:description "To identify an authorisation to ship issued by the buyer.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Shipment. Authorisation.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Customer authorization number";
+  utd:representation "an..17";
+  utd:sourcePage 112;
+  utd:status "active";
+  utd:tag 7130 .

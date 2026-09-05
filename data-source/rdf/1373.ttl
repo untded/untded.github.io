@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1373> a utd:TradeDataElement;
+  schema:description "Code specifying the status of a document.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Status.Code";
+  utd:businessTerm "Document/message status code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Document/message status, coded";
+  utd:representation "an..3";
+  utd:sourcePage 35;
+  utd:status "active";
+  utd:tag 1373 .

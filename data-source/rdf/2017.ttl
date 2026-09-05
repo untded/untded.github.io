@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2017> a utd:TradeDataElement;
+  schema:description "Code specifying a set of dates/times within a despatch pattern.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Despatch. Pattern Timing.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Despatch pattern timing, coded";
+  utd:representation "an..3";
+  utd:sourcePage 38;
+  utd:status "active";
+  utd:tag 2017 .

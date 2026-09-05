@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5446> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "UNLK: L 48, P 69-78 to be moved";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Packing cost";
+  utd:sourcePage 99;
+  utd:status "retired";
+  utd:tag 5446 .

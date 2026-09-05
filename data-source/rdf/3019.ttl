@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3019> a utd:TradeDataElement;
+  schema:description "Identifier of the point or port of departure, shipment or destination, as required under the applicable delivery term, e.g. Incoterm.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Trade Term. Location.Identifier";
+  utd:bridges "UNLK: L 19, P 72-80";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Incoterms place, coded";
+  utd:representation "an..35";
+  utd:sourcePage 50;
+  utd:status "active";
+  utd:tag 3019 .

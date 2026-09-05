@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3227> a utd:TradeDataElement;
+  schema:description "Code specifying the function of a location.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Location. Function.Code";
+  utd:bridges "MAR: IMO/FAL 1-7";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Place/location qualifier";
+  utd:representation "an..3";
+  utd:sourcePage 61;
+  utd:status "active";
+  utd:tag 3227 .

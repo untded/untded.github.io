@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3404> a utd:TradeDataElement;
+  schema:description "Family name and given names of an individual.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Person. Name.Text";
+  utd:bridges "MAR: (IMO FAL Forms 4- 6)";
+  utd:changeTag "cn";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 25;
+  utd:minLength 1;
+  utd:oldName "Name of person";
+  utd:representation "an..25";
+  utd:sourcePage 68;
+  utd:status "active";
+  utd:tag 3404 .

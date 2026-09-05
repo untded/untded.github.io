@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6074> a utd:TradeDataElement;
+  schema:description "To specify the confidence that a true value falls within a certain confidence interval expressed as a percentage.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Confidence. Percentage.Numeric";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 6;
+  utd:minLength 1;
+  utd:oldName "Confidence limit";
+  utd:representation "n..6";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6074 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4237> a utd:TradeDataElement;
+  schema:description "Code specifying the arrangements for a payment.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Arrangement.Code";
+  utd:bridges "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57- 58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Prepaid/Collect indicator, coded";
+  utd:representation "an..3";
+  utd:sourcePage 78;
+  utd:status "active";
+  utd:tag 4237 .

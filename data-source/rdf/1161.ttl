@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1161> a utd:TradeDataElement;
+  schema:description "Identifier of the function of a required document";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Required Document. Function.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Document required, coded";
+  utd:representation "an..3";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1161 .

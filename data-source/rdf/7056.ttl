@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7056> a utd:TradeDataElement;
+  schema:description "Total number of the passengers on board a means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Passenger.Quantity";
+  utd:bridges "MAR: IMO/FAL 1";
+  utd:changeTag "cn";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Number of passengers";
+  utd:representation "n..4";
+  utd:sourcePage 110;
+  utd:status "active";
+  utd:tag 7056 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3036> a utd:TradeDataElement;
+  schema:description "Name of a party.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Party. Name.Text";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Party name";
+  utd:representation "an..35";
+  utd:sourcePage 51;
+  utd:status "active";
+  utd:tag 3036 .

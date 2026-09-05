@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3109> a utd:TradeDataElement;
+  schema:description "To identify the place where the payment has been, or should be made.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Location.Identifier";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Payment place, coded";
+  utd:representation "an..35";
+  utd:sourcePage 55;
+  utd:status "active";
+  utd:tag 3109 .

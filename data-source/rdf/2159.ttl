@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2159> a utd:TradeDataElement;
+  schema:description "Issue date of a quotation";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Quotation Document. Issue.Date Time";
+  utd:bridges "UNLK: L 03, P 56-62";
+  utd:businessTerm "Quote date, Quotation date";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Offer date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 43;
+  utd:status "active";
+  utd:tag 2159 .

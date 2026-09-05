@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2281> a utd:TradeDataElement;
+  schema:description "Date and or time of the departure of means of transport";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Actual Departure.Date Time";
+  utd:bridges "CIMP: Date only: (201): a3; (202): n2 Date and time: (201)+(202)+(203): n4 MAR: IMO/FAL 1";
+  utd:businessTerm "Departuredate, Flight date, Sailing date";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Departuredate (and time), coded";
+  utd:representation "an..19";
+  utd:sourcePage 46;
+  utd:status "active";
+  utd:tag 2281 .

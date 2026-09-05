@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1070> a utd:TradeDataElement;
+  schema:description "Indication that a charges note has been established and attached to a transport contract document or not";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Charges Note Document. Attachment.Indicator";
+  utd:bridges "CIM: Checkmark L 62, P 47";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 1;
+  utd:minLength 1;
+  utd:oldName "Charges Note";
+  utd:representation "an1";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1070 .

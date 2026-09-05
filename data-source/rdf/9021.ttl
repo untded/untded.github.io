@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/9021> a utd:TradeDataElement;
+  schema:description "Coded specifying an attribute type.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Attribute. Type.Code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Attribute type, coded";
+  utd:representation "an..17";
+  utd:sourcePage 129;
+  utd:status "active";
+  utd:tag 9021 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4034> a utd:TradeDataElement;
+  schema:description "Free text information provided by Customs";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Customs Information. Text";
+  utd:bridges "CIM: an..32x5 L 35-39, P 51-82 SAD: (SAD H and SAD I)";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Customs information";
+  utd:representation "an..70";
+  utd:sourcePage 74;
+  utd:status "active";
+  utd:tag 4034 .

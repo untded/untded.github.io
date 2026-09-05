@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2326> a utd:TradeDataElement;
+  schema:description "Date on which a contract is issued, in figures and words";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Contract Document. Issue Date Time.Text";
+  utd:bridges "UNLK: L 04, P 45-62";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Contract date";
+  utd:representation "an..17";
+  utd:sourcePage 47;
+  utd:status "active";
+  utd:tag 2326 .

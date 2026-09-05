@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3432> a utd:TradeDataElement;
+  schema:description "Name of an institution.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Financial Institution. Name.Text";
+  utd:businessTerm "Bank name";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 70;
+  utd:minLength 1;
+  utd:oldName "Institution name";
+  utd:representation "an..70";
+  utd:sourcePage 69;
+  utd:status "active";
+  utd:tag 3432 .

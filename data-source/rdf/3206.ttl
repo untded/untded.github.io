@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3206> a utd:TradeDataElement;
+  schema:description "Name of the country or other geographical entity as specified in ISO 3166 and UN/ECE Rec 3";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Country. Name.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Country";
+  utd:representation "an..35";
+  utd:sourcePage 59;
+  utd:status "active";
+  utd:tag 3206 .

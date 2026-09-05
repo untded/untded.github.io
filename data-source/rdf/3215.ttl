@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3215> a utd:TradeDataElement;
+  schema:description "To identify the port, airport or other type of location from which a means of transport is scheduled to depart or has departed";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Departure Location.Identifier";
+  utd:bridges "AWB: L 01, P 12-14 CIMP: (313):a3 UNLK: L 21, P 54-62";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Place of departure, coded";
+  utd:representation "an..35";
+  utd:sourcePage 60;
+  utd:status "active";
+  utd:tag 3215 .

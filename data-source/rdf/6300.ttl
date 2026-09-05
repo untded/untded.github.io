@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6300> a utd:TradeDataElement;
+  schema:description "The measure of the overall size of a vessel determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Gross Weight.Measure";
+  utd:businessTerm "Vessel Tonnage";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 14;
+  utd:minLength 1;
+  utd:oldName "Gross tonnage";
+  utd:representation "n..14";
+  utd:sourcePage 106;
+  utd:status "active";
+  utd:tag 6300 .

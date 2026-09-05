@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4344> a utd:TradeDataElement;
+  schema:description "Free form description of a response.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Response. Description.Text";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 256;
+  utd:minLength 1;
+  utd:representation "an..256";
+  utd:sourcePage 81;
+  utd:status "active";
+  utd:tag 4344 .

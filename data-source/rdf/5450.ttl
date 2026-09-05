@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5450> a utd:TradeDataElement;
+  schema:description "Amount of the documentary credit.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Documentary Credit. Amount";
+  utd:bridges "ICC: L 16, P 45-80 SWIFT: (a3) :n..12";
+  utd:changeTag "cd";
+  utd:charset "an";
+  utd:extractionConfidence "low";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Documentary Credit. Amount";
+  utd:representation "an..35";
+  utd:sourcePage 99;
+  utd:status "active";
+  utd:tag 5450 .

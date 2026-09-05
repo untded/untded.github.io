@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1438> a utd:TradeDataElement;
+  schema:description "Unique number allocated by the buyer to identify an individual package.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Package. Buyer Assigned.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 9;
+  utd:minLength 1;
+  utd:oldName "Buyer's package identification number";
+  utd:representation "an..9";
+  utd:sourcePage 36;
+  utd:status "active";
+  utd:tag 1438 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5325> a utd:TradeDataElement;
+  schema:description "Code giving reason for difference between the actual amount of payment and the amount charged.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment. Discrepancy Reason.Code";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Reason for payment discrepancy, coded";
+  utd:representation "an..3";
+  utd:sourcePage 95;
+  utd:status "active";
+  utd:tag 5325 .

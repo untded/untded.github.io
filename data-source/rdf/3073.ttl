@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3073> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "UNLK: L 09, P 63-80";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Service provider, coded";
+  utd:sourcePage 53;
+  utd:status "retired";
+  utd:tag 3073 .

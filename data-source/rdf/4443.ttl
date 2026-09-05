@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4443> a utd:TradeDataElement;
+  schema:description "Indication whether the place specified for the performance of a (contractual) obligation is located in the country where the declaration is made, in another member country of the same economic or Customs union, or in a third country.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Country. Relationship.Code";
+  utd:bridges "SAD: (SAD 20)";
+  utd:changeTag "cnr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Country relationship, coded";
+  utd:representation "an..3";
+  utd:sourcePage 84;
+  utd:status "active";
+  utd:tag 4443 .

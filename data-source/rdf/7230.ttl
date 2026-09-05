@@ -1,0 +1,12 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7230> a utd:TradeDataElement;
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridges "AWB: L 33-44, P 61-81 and CIMP: (708):an..15; (709):an..20";
+  utd:changeTag "x";
+  utd:extractionConfidence "medium";
+  utd:oldName "Nature and quantity of goods";
+  utd:sourcePage 113;
+  utd:status "retired";
+  utd:tag 7230 .

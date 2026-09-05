@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8046> a utd:TradeDataElement;
+  schema:description "Count of the number of pieces of transport equipment in a consignment, such as containers and similar unit load devices.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Transport Equipment.Quantity";
+  utd:bridges "AWB: L 46, P 09-12 CIM: L 12, P 57-59 or L 12, P 63-65 CIMP: (702): n..2 CMR: L 28-42, P 27-33 (CMR 7) UNLK: L 28-50, P 27-33 MAR: IMO/FAL 2";
+  utd:businessTerm "Number of pieces";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 6;
+  utd:minLength 1;
+  utd:oldName "Number of containers";
+  utd:representation "n..6";
+  utd:sourcePage 119;
+  utd:status "active";
+  utd:tag 8046 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4276> a utd:TradeDataElement;
+  schema:description "Free form description of the conditions of payment between the parties to a transaction.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payment Term. Text";
+  utd:bridges "UNLK: an..35x10; L 29- 54, P 45-80";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Terms of payment";
+  utd:representation "an..35";
+  utd:sourcePage 79;
+  utd:status "active";
+  utd:tag 4276 .

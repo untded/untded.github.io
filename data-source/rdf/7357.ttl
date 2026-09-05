@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/7357> a utd:TradeDataElement;
+  schema:description "Code specifying a type of goods for Customs, transport or statistical purposes (generic term).";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Goods Item. Type.Code";
+  utd:bridges "AWB: L 33-44, P 23-29 CIM: L 44-45, P 38-32 and L 50-51, P 28-32 and L 56-57,P 28-32 (also on reverse) CIMP: (707):n4..7 and (900):n4..8 CMR: n5; L 28-32, P 75- 82 CIM: n5; L 28-32, P 75-82 MAR: IMO/FAL 2 SAD: (SAD 33) UNLK: L 28-50, P 52-62";
+  utd:businessTerm "Carrier's commodity code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Commodity/rate identification";
+  utd:representation "an..35";
+  utd:sourcePage 115;
+  utd:status "active";
+  utd:tag 7357 .

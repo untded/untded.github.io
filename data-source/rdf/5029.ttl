@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/5029> a utd:TradeDataElement;
+  schema:description "Code specifying an agreed percentage of annual interest by which an amount due will be increased if the payment duedate is not respected.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Late Payment. Annual Interest Percentage Numeric.Code";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Interest on arrears, coded";
+  utd:representation "an..5";
+  utd:sourcePage 87;
+  utd:status "active";
+  utd:tag 5029 .

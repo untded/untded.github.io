@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2327> a utd:TradeDataElement;
+  schema:description "Date on which a contract is issued";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Contract Document. Issue.Date Time";
+  utd:bridges "UNLK: L 03, P 56-62";
+  utd:businessTerm "Contract Signed Date";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 19;
+  utd:minLength 1;
+  utd:oldName "Contract date, coded";
+  utd:representation "an..19";
+  utd:sourcePage 47;
+  utd:status "active";
+  utd:tag 2327 .

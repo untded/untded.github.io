@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3099> a utd:TradeDataElement;
+  schema:description "To identify the seaport, airport, freight terminal, rail station or other location where the goods were first loaded onto the means of transport being utilised for their carriage.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Consignment. Original Loading Location.Identifier";
+  utd:bridges "MAR: IMO/FAL 2";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:representation "an..35";
+  utd:sourcePage 54;
+  utd:status "active";
+  utd:tag 3099 .

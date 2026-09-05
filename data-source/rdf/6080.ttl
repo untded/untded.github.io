@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6080> a utd:TradeDataElement;
+  schema:description "Maximum load imposed for transport purposes under applicable regulations.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Maximum Load Weight.Measure";
+  utd:bridges "CIM: L 13-14, P 75-79 (CIM 44)";
+  utd:businessTerm "CSC Weight, Container Safety Convention Maximum Weight";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:oldName "Vehicle load limit, t";
+  utd:representation "n..4";
+  utd:sourcePage 103;
+  utd:status "active";
+  utd:tag 6080 .

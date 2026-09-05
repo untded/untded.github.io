@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1166> a utd:TradeDataElement;
+  schema:description "The number of loading lists, manifests or similar documents";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Loading List Document. Quantity";
+  utd:bridges "SAD: (SAD 4)";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Number of loading lists";
+  utd:representation "n..5";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1166 .

@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1218> a utd:TradeDataElement;
+  schema:description "Quantity of document originals required.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Originals Required.Quantity";
+  utd:bridges "UNLK: L 63, P 36-40";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 2;
+  utd:minLength 1;
+  utd:oldName "Number of originals of document required";
+  utd:representation "n..2";
+  utd:sourcePage 33;
+  utd:status "active";
+  utd:tag 1218 .

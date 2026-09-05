@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4383> a utd:TradeDataElement;
+  schema:description "Code specifying a bank operation.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Financial Institution. Operation.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Bank operation, coded";
+  utd:representation "an..3";
+  utd:sourcePage 82;
+  utd:status "active";
+  utd:tag 4383 .

@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6048> a utd:TradeDataElement;
+  schema:description "Weight (mass) of goods without any packaging.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Net Net Weight. Measure";
+  utd:bridges "SAD: (SAD 38)";
+  utd:businessTerm "Customs weight";
+  utd:changeTag "cndr";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 14;
+  utd:minLength 1;
+  utd:oldName "Net net weight";
+  utd:representation "n..14";
+  utd:sourcePage 102;
+  utd:status "active";
+  utd:tag 6048 .

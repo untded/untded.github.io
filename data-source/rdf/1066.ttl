@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1066> a utd:TradeDataElement;
+  schema:description "Total number, in words, of the originals of a document issued";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Document. Originals Issued Quantity.Text";
+  utd:bridges "UNLK: L 64, P 36-54";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Number of original Bills of Lading, in words";
+  utd:representation "an..17";
+  utd:sourcePage 30;
+  utd:status "active";
+  utd:tag 1066 .

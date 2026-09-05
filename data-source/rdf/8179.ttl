@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8179> a utd:TradeDataElement;
+  schema:description "Code specifying a type of means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Type.Code";
+  utd:bridges "MAR: IMO/FAL 1 SAD: (SAD 26)";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 8;
+  utd:minLength 1;
+  utd:oldName "Type of means of transport identification";
+  utd:representation "an..8";
+  utd:sourcePage 123;
+  utd:status "active";
+  utd:tag 8179 .

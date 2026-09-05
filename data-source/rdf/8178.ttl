@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/8178> a utd:TradeDataElement;
+  schema:description "Free form description of a type of means of transport.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Means. Type.Text";
+  utd:bridges "MAR: IMO/FAL 1 SAD: (SAD 21)";
+  utd:businessTerm "Vehicle type, Vessel type";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Type of means of transport";
+  utd:representation "an..17";
+  utd:sourcePage 123;
+  utd:status "active";
+  utd:tag 8178 .

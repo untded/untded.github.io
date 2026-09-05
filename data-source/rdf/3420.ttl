@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3420> a utd:TradeDataElement;
+  schema:description "Name and address of a bank employed by the buyer to make a payment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Buyer. Bank Identification.Text";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 512;
+  utd:minLength 1;
+  utd:oldName "Buyer's bank";
+  utd:representation "an..512";
+  utd:sourcePage 69;
+  utd:status "active";
+  utd:tag 3420 .

@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/3309> a utd:TradeDataElement;
+  schema:description "To identify a party responsible for making a payment";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Payer. Party.Identifier";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 17;
+  utd:minLength 1;
+  utd:oldName "Payer, coded";
+  utd:representation "an..17";
+  utd:sourcePage 65;
+  utd:status "active";
+  utd:tag 3309 .

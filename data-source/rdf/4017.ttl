@@ -1,0 +1,17 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/4017> a utd:TradeDataElement;
+  schema:description "Code specifying the level of commitment to a delivery plan.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Delivery Plan. Commitment Level.Code";
+  utd:changeTag "cnd";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:oldName "Delivery plan status indicator, coded";
+  utd:representation "an..3";
+  utd:sourcePage 73;
+  utd:status "active";
+  utd:tag 4017 .

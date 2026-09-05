@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { href } from '../../lib/site'
+---
+
+<BaseLayout
+  title="Introduction — the original text · UN/TDED"
+  description="Section 1 of UNTDED 2005: scope, sources and volumes, references, definitions, abbreviations, and how the Directory is organized."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document · PDF pp. 9–13</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">1 — Introduction</h1>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.1 Scope, content and sources</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          The standard data elements included in this Directory are intended to
+          facilitate an open interchange of data in international trade.
+        </p>
+        <p>
+          These standard data elements can be used with any method for data
+          interchange on paper documents as well as with other means of data
+          processing and communication: they can be selected for transmission
+          one by one, or used within a particular system of interchange rules,
+          e.g. the United Nations rules for Electronic Data Interchange for
+          Administration, Commerce and Transport (UN/EDIFACT), developed within
+          the UN/CEFACT of the United Nations Economic Commission for Europe
+          (UNECE) and published as International Standard ISO 9735.
+        </p>
+        <p>
+          This Directory has been compiled by the TDED Maintenance Agency (see
+          Section 2), on the basis of the work within this UN/CEFACT, as well
+          as work within other Maintenance Agency members as specially WCO and
+          IMO. This edition has been adopted by Technical Committee ISO/TC 154
+          and the UN/CEFACT.
+        </p>
+        <p>
+          Volume I of the Directory constitutes International Standard ISO 7372.
+          Volume II includes the User Code List; the preparation and maintenance
+          of Vol. II is an activity of the UN/CEFACT. Volume III is a Compendium
+          of Trade Facilitation Recommendations, a joint activity of the UNECE
+          and the UN Conference on Trade and Development (UNCTAD), Special
+          Programme on Trade Efficiency (SPTE).
+        </p>
+        <p>
+          The main source of this edition of TDED is the set of UN/EDIFACT
+          directories D.02A: Vol. I has been built as a true superset of
+          D.02A EDED = data elements; Vol. II is a straight forward subset of
+          D.02A UNCL = codes. This third edition supersedes the second, 1993
+          edition of the TDED.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.3 Definitions (selected)</h2>
+      <p class="mt-2 text-sm text-body">
+        The source defines its vocabulary from ISO 9735 and ISO 2382/4; two
+        entries that matter for reading the registry:
+      </p>
+      <dl class="mt-3 space-y-3 text-sm">
+        <div class="rounded-md border border-line bg-white p-4">
+          <dt class="font-mono font-medium text-ink">data element tag</dt>
+          <dd class="mt-1 text-body">A unique identifier for a data element in a data elements directory. (Source: ISO 9735:1988)</dd>
+        </div>
+        <div class="rounded-md border border-line bg-white p-4">
+          <dt class="font-mono font-medium text-ink">data element value</dt>
+          <dd class="mt-1 text-body">Specific instance of a simple data element, represented as specified in a simple data element specification and, if the simple data element is coded, in a code list. (Source: ISO 9735:2002)</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.6 Explanation of the contents</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          In addition to this introduction, the Directory contains the
+          following sections: Section 2 provides rules and procedures for
+          maintenance. Section 3 is reserved for future indexes. Section 4 is
+          the main part of the Directory and contains the complete list of
+          standard data elements — in principle, each entry in this part should
+          be self-contained and consultation of other parts of the Directory or
+          outside sources should be required only exceptionally.
+        </p>
+        <p>
+          Each identified data element has been given: a data element name; a
+          description of the concept to explain the agreed meaning and to aid
+          in determining the content of the information (data value) to be
+          provided with the data element; a specification of the character
+          representation of the data value, with indication of space (in number
+          of characters) available and location in aligned forms, and of field
+          lengths where such have been established in particular interchange
+          protocols; and, when applicable or required, notes providing
+          additional information and references to other parts of the
+          Directory, or to other sources, as appropriate.
+        </p>
+      </div>
+    </section>
+
+    <p class="mt-10 rounded-md border border-line bg-mist p-4 text-xs leading-relaxed text-body">
+      Transcribed from OCR of PDF pp. 9–13 (see the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/document')}>provenance note</a>);
+      sections 1.2 (references) and 1.4–1.5 (abbreviations, notation) are
+      rendered in practical form on the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/notation')}>notation</a> page.
+    </p>
+  </div>
+</BaseLayout>

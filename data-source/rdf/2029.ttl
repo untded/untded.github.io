@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2029> a utd:TradeDataElement;
+  schema:description "To identify a time zone.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Time Zone. Identifier";
+  utd:changeTag "add";
+  utd:charset "an";
+  utd:extractionConfidence "high";
+  utd:maxLength 3;
+  utd:minLength 1;
+  utd:representation "an..3";
+  utd:sourcePage 38;
+  utd:status "active";
+  utd:tag 2029 .

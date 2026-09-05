@@ -1,0 +1,16 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/2116> a utd:TradeDataElement;
+  schema:description "The difference between two defined time zones.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Time Zone. Difference.Numeric";
+  utd:changeTag "add";
+  utd:charset "n";
+  utd:extractionConfidence "high";
+  utd:maxLength 4;
+  utd:minLength 1;
+  utd:representation "n..4";
+  utd:sourcePage 42;
+  utd:status "active";
+  utd:tag 2116 .

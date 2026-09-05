@@ -1,0 +1,18 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/6156> a utd:TradeDataElement;
+  schema:description "Weight (mass) of transport equipment including permanent equipment but excluding goods and loose accessories.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Equipment. Tare Weight.Measure";
+  utd:bridges "AWB: L 33-44, P 13-19";
+  utd:changeTag "cnd";
+  utd:charset "n";
+  utd:extractionConfidence "medium";
+  utd:maxLength 5;
+  utd:minLength 1;
+  utd:oldName "Container tare weight";
+  utd:representation "n..5";
+  utd:sourcePage 104;
+  utd:status "active";
+  utd:tag 6156 .

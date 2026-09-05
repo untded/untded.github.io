@@ -1,0 +1,19 @@
+@prefix schema: <https://schema.org/> .
+@prefix utd: <https://www.untded.org/ns/untded#> .
+
+<https://www.untded.org/elements/1188> a utd:TradeDataElement;
+  schema:description "Reference number to identify a document evidencing a transport contract.";
+  schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  schema:name "Transport Contract Document. Identifier";
+  utd:bridges "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63- 80";
+  utd:businessTerm "Bill of Lading number, Master waybill number";
+  utd:changeTag "cndr";
+  utd:charset "an";
+  utd:extractionConfidence "medium";
+  utd:maxLength 35;
+  utd:minLength 1;
+  utd:oldName "Transport document number";
+  utd:representation "an..35";
+  utd:sourcePage 32;
+  utd:status "active";
+  utd:tag 1188 .
