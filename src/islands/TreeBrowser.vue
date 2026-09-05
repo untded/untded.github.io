@@ -56,7 +56,7 @@ onMounted(load)
 
 <template>
   <div>
-    <div class="mb-4 flex flex-wrap items-center gap-3">
+    <div class="filter-card mb-4"><div class="filter-bar">
       <label class="sr-only" for="tree-q">Filter the tree by tag or name</label>
       <input
         id="tree-q"
@@ -69,6 +69,7 @@ onMounted(load)
       <span v-if="searching" class="filter-count" aria-live="polite">
         {{ filtered.matches }} {{ filtered.matches === 1 ? 'match' : 'matches' }}
       </span>
+      </div>
     </div>
 
     <p v-if="!loaded" class="text-sm text-body">loading…</p>
@@ -91,7 +92,7 @@ onMounted(load)
           <span class="me-1 inline-block h-2.5 w-2.5 rounded-full align-middle" :class="`bg-cat-${cat.k}`" aria-hidden="true"></span>
           <span class="font-mono text-xs tabular-nums text-body">{{ categoryRange(cat) }}</span>
           <span class="font-medium text-ink">{{ categoryLabel(cat) }}</span>
-          <span class="ms-auto font-mono text-xs tabular-nums text-body/80">{{ cat.count }}</span>
+          <span class="filter-count ms-auto">{{ cat.count }}</span>
           <span aria-hidden="true" class="font-mono text-xs text-body/60" v-if="!searching">
             {{ expanded.has(cat.key) ? '−' : '+' }}
           </span>
@@ -107,7 +108,7 @@ onMounted(load)
             <li v-for="cls in cat.classes" :key="cls.key">
               <div class="flex items-baseline gap-2 border-s border-line ps-3 py-0.5">
                 <span class="text-sm font-medium text-ink break-words">{{ cls.label }}</span>
-                <span class="font-mono text-xs tabular-nums text-body/70">{{ cls.count }}</span>
+                <span class="filter-count">{{ cls.count }}</span>
               </div>
               <ul class="space-y-0.5">
                 <li v-for="leaf in cls.leaves" :key="leaf.tag">

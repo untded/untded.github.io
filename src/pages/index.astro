@@ -36,9 +36,9 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
       </p>
       <p class="mt-3 flex flex-wrap items-center gap-2 text-sm text-body/80">
         <span>Try:</span>
-        <button type="button" class="try-chip rounded-full border border-line bg-paper px-2.5 py-0.5 font-mono text-xs text-body hover:border-un/60 hover:text-un-deep" data-q="1001">1001</button>
-        <button type="button" class="try-chip rounded-full border border-line bg-paper px-2.5 py-0.5 font-mono text-xs text-body hover:border-un/60 hover:text-un-deep" data-q="Monetary Amount">Monetary Amount</button>
-        <button type="button" class="try-chip rounded-full border border-line bg-paper px-2.5 py-0.5 font-mono text-xs text-body hover:border-un/60 hover:text-un-deep" data-q="Charges Note">Charges Note</button>
+        <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="1001">1001</button>
+        <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Monetary Amount">Monetary Amount</button>
+        <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Charges Note">Charges Note</button>
       </p>
       <div class="mt-8 max-w-3xl">
         <RenameLedger client:visible="idle" lines={ledger} />
@@ -86,7 +86,7 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
   {datasetJsonld && <script type="application/ld+json" set:html={JSON.stringify(datasetJsonld)} />}
 </BaseLayout>
 
-<script>
+<script data-astro-rerun>
   for (const chip of document.querySelectorAll<HTMLButtonElement>('.try-chip')) {
     chip.addEventListener('click', () => {
       window.dispatchEvent(new CustomEvent('untded:search', { detail: chip.dataset.q }))

@@ -35,11 +35,11 @@ const current = Astro.url.pathname
       }
     </nav>
     <div class="ms-auto flex items-center gap-2">
-      <Omnibox client:load />
+      <Omnibox client:idle />
       <button
         type="button"
         id="theme-toggle"
-        class="rounded-md border border-line bg-paper p-1.5 text-body hover:border-un/60 hover:text-un-deep"
+        class="rounded-full border border-line bg-paper p-2 text-body hover:border-un/60 hover:text-un-deep transition-colors"
         aria-label="Switch light or dark theme"
         aria-pressed="false"
       >
@@ -55,7 +55,7 @@ const current = Astro.url.pathname
   </div>
 </header>
 
-<script>
+<script data-astro-rerun>
   const btn = document.getElementById('theme-toggle')
   const sync = () => btn?.setAttribute('aria-pressed', String(document.documentElement.classList.contains('dark')))
   sync()
