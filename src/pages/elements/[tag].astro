@@ -52,7 +52,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
       <ElementPager prev={prev} next={next}>
         <button
           type="button"
-          class="copy-btn rounded-md border border-line bg-mist px-2.5 py-1 font-mono text-xs text-body hover:border-un/60 hover:text-un-deep"
+          class="copy-btn filter-btn font-mono text-xs"
           data-copy={String(element.tag)}
         >
           Copy tag {element.tag}
@@ -92,7 +92,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
           <p class="break-all font-mono text-[0.7rem] leading-snug text-ink">{iri}</p>
           <button
             type="button"
-            class="copy-btn mt-1 rounded-sm border border-line bg-mist px-1.5 py-0.5 font-mono text-xs text-body hover:border-un/60 hover:text-un-deep"
+            class="copy-btn filter-btn mt-1 font-mono text-xs"
             data-copy={iri}
           >
             Copy IRI
@@ -220,7 +220,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
   />
 </BaseLayout>
 
-<script>
+<script data-astro-rerun>
   for (const btn of document.querySelectorAll<HTMLButtonElement>('.copy-btn')) {
     btn.addEventListener('click', async () => {
       const value = btn.dataset.copy ?? ''

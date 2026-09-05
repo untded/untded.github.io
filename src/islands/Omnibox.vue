@@ -79,12 +79,12 @@ async function onSearchEvent(e: CustomEvent<string>) {
   <div>
     <button
       type="button"
-      class="flex items-center gap-2 rounded-md border border-line bg-mist px-3 py-1.5 text-sm text-body hover:border-un/60 hover:text-un-deep"
+      class="flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-sm text-body hover:border-un/60 hover:text-un-deep transition-colors"
       @click="show"
     >
       <span aria-hidden="true">⌕</span>
       Look up an element
-      <kbd class="rounded border border-line bg-paper px-1.5 font-mono text-[0.7rem] text-body/80">⌘K</kbd>
+      <kbd class="rounded-full border border-line bg-mist px-2 font-mono text-[0.7rem] text-body/80">⌘K</kbd>
     </button>
 
     <div v-if="open" class="fixed inset-0 z-50 flex items-start justify-center bg-panel/40 p-4 pt-[12vh]" @click.self="hide">
@@ -97,7 +97,7 @@ async function onSearchEvent(e: CustomEvent<string>) {
         <input
           ref="inputEl"
           v-model="query"
-          class="w-full border-b border-line px-4 py-3 text-base outline-none"
+          class="w-full border-b border-line bg-paper px-4 py-3 text-base outline-none"
           type="search"
           placeholder="Tag (1001) or name (document type)…"
           @input="run"
