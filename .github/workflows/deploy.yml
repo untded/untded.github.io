@@ -10,6 +10,12 @@ permissions:
   pages: write
   id-token: write
 
+# Queue deploys instead of racing them: two merges in quick succession
+# otherwise collide on the Pages deployment ("in progress deployment").
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
