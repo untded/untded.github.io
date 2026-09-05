@@ -5,6 +5,7 @@
   schema:description "Name and address of a party responsible for the payment of charges and fees other than freight costs";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight. Other Charge Payer.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

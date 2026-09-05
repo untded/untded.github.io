@@ -5,6 +5,7 @@
   schema:description "General terms and conditions specified by the seller either directly or by reference.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Sales. Condition.Text";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

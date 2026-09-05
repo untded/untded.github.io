@@ -5,6 +5,7 @@
   schema:description "To specify the rate of a price multiplier.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Price. Multiplier Rate.Numeric";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Trade Term. Description.Text";
   utd:bridges "UNLK: an..35xn; L 20, P 49-80";
   utd:businessTerm "Incoterms";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

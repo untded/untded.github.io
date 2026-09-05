@@ -5,6 +5,7 @@
   schema:description "Code specifying a time that references an event that will or has occurred.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Event. Time Reference.Code";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

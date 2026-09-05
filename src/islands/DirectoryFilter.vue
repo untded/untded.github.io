@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import type { IndexRow } from '../lib/data'
 import { href } from '../lib/site'
 import { filterRows, filtersFromParams, EMPTY_FILTERS, type DirectoryFilters } from '../lib/directory-filter'
@@ -31,6 +31,9 @@ const CHANGE_LABELS: Record<string, string> = {
 }
 
 const visible = computed(() => filterRows(rows.value, filters.value))
+const shown = ref(120)
+const shownRows = computed(() => visible.value.slice(0, shown.value))
+watch(visible, () => (shown.value = 120))
 
 async function load() {
   const res = await fetch(href('/data/index.json'))
@@ -58,7 +61,6 @@ function onSelect(key: keyof DirectoryFilters, e: Event) {
 }
 
 onMounted(load)
-onBeforeUnmount(() => {})
 </script>
 
 <template>
@@ -123,7 +125,7 @@ onBeforeUnmount(() => {})
         </tr>
       </thead>
       <tbody>
-        <tr v-for="r in visible" :key="r.t" :class="r.s === 'r' ? 'retired' : ''">
+        <tr v-for="r in shownRows" :key="r.t" :class="r.s === 'r' ? 'retired' : ''">
           <td class="font-mono tabular-nums">
             <a :href="href(`/elements/${r.t}`)">{{ r.t }}</a>
           </td>
@@ -139,5 +141,14 @@ onBeforeUnmount(() => {})
         </tr>
       </tbody>
     </table>
+    <p v-if="loaded && shown < visible.length" class="mt-4 text-center">
+      <button
+        type="button"
+        class="rounded-md border border-line bg-mist px-4 py-1.5 text-sm text-body hover:border-un/60 hover:text-un-deep"
+        @click="shown = visible.length"
+      >
+        Show all {{ visible.length.toLocaleString() }} elements
+      </button>
+    </p>
   </div>
 </template>

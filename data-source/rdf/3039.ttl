@@ -5,6 +5,7 @@
   schema:description "Code specifying the identity of a party.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Party. Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

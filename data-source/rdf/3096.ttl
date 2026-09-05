@@ -5,6 +5,7 @@
   schema:description "Name of the customs office at which the goods leave or intended to leave the customs territory of despatch.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Exit Customs Office Location.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Code qualifying an object in a hierarchy.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Hierarchical Structure. Object Type.Code";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

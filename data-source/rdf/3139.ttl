@@ -5,6 +5,7 @@
   schema:description "Code specifying the function of a contact (e.g. department or person).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Contact. Function.Code";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

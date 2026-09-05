@@ -5,7 +5,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import astroConfig from '../../astro.config.mjs'
 import { loadElements } from './data'
-import { CATEGORY_RANGES } from './element'
+import { loadCategories as CATEGORY_RANGES } from './element'
 
 const site = astroConfig.site as string
 const dist = 'dist'
@@ -21,10 +21,10 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
   })
 
   it('builds every category route and the core pages', () => {
-    for (const c of CATEGORY_RANGES) {
+    for (const c of CATEGORY_RANGES()) {
       expect(existsSync(`${dist}/categories/${c.range}/index.html`)).toBe(true)
     }
-    for (const p of ['index.html', 'about/index.html', 'notation/index.html', 'method/index.html', 'download/index.html', 'search/index.html', 'elements/index.html', '404.html']) {
+    for (const p of ['index.html', 'about/index.html', 'notation/index.html', 'download/index.html', 'search/index.html', 'document/index.html', 'elements/index.html', '404.html']) {
       expect(existsSync(`${dist}/${p}`), `missing ${p}`).toBe(true)
     }
   })
@@ -37,7 +37,7 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
 
   it('ships the linked-data payloads and embeds JSON-LD on pages', () => {
     const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
-    expect(jsonld['@graph']).toHaveLength(elements.length + 1)
+    expect(jsonld['@graph']).toHaveLength(elements.length + 29)
     expect(readFileSync(`${dist}/data/untded.ttl`, 'utf8')).toMatch(/^@prefix .*utd: <https:\/\/www\.untded\.org\/ns\/untded#>/m)
     const elementHtml = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
     expect(elementHtml).toContain('application/ld+json')
@@ -69,6 +69,31 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     expect(presentation).toContain('The change indicator marks shall be')
     expect(presentation).toContain('marked for deletion')
   })
+
+
+it('embeds category nodes with ontology relations', () => {
+  const html = readFileSync(`${dist}/categories/1000-1699/index.html`, 'utf8')
+  expect(html).toContain('application/ld+json')
+  expect(html).toContain('tagRange')
+  const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
+  const cat = jsonld['@graph'].find((n: Record<string, unknown>) => n['@id'] === `${site}/categories/1000-1699`)
+  expect(cat).toMatchObject({ '@type': 'Category', tagRange: '1000-1699', position: 1 })
+  const el = jsonld['@graph'].find((n: Record<string, unknown>) => n['@id'] === `${site}/elements/1001`)
+  expect(el.category?.['@id']).toBe(`${site}/categories/1000-1699`)
+})
+
+it('declares the vocabulary classes and properties', () => {
+  const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
+  const types = jsonld['@graph'].map((n: Record<string, unknown>) => n['@type'])
+  expect(types.filter((t: unknown) => t === 'rdfs:Class')).toHaveLength(3)
+  expect(types.filter((t: unknown) => t === 'rdf:Property')).toHaveLength(15)
+})
+
+it('emits breadcrumb structured data on element pages', () => {
+  const html = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
+  expect(html).toContain('BreadcrumbList')
+  expect(html).toContain(`${site}/categories/1000-1699`)
+})
 
   it('ships the favicon set (SVG emblem + PNG fallbacks)', () => {
     expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
@@ -111,6 +136,7 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
       [`${dist}/index.html`, 40_000],
       [`${dist}/elements/index.html`, 700_000],
       [`${dist}/about/index.html`, 40_000],
+      [`${dist}/document/presentation/index.html`, 40_000],
     ]
     for (const [p, max] of budgets) {
       expect(statSync(p).size, `${p} over budget`).toBeLessThan(max)

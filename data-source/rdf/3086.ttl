@@ -7,6 +7,7 @@
   schema:name "Transit Regime. End Customs Office Location.Text";
   utd:bridges "SAD: (SAD 53)";
   utd:businessTerm "Customs office of destination (transit)";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

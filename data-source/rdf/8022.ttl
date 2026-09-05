@@ -7,6 +7,7 @@
   schema:name "Charge. Text";
   utd:bridges "UNLK: L53-66, P 28-65";
   utd:businessTerm "Charge type";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Total number, in words, of the copies of a document issued";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Copies Issued Quantity.Text";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

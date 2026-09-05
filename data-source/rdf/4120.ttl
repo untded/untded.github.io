@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/4120> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "CIM: an..35x3 L 20-22, P 09-44";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Tariffs and routes requested";

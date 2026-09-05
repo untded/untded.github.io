@@ -7,6 +7,7 @@
   schema:name "Document. Issue Location.Text";
   utd:bridges "AWB: L 60, P 44-60 CIMP: (302):an..17 CMR: L 60, P 09-26 (CMR 21) INV: L 34-64, P 09-26 MAR: IMO/FAL 7 SAD: (SAD 54)";
   utd:businessTerm "Place document completed";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

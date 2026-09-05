@@ -1,0 +1,22 @@
+---
+interface Props {
+  groups: { added: number; changed: number; undeleted: number; retired: number }
+  count: number
+}
+const { groups, count } = Astro.props
+const parts = [
+  { n: groups.added, cls: 'bg-un', label: 'added' },
+  { n: groups.changed + groups.undeleted, cls: 'bg-flag', label: 'changed' },
+  { n: groups.retired, cls: 'bg-stamp', label: 'retired' },
+]
+const total = parts.reduce((n, p) => n + p.n, 0) || 1
+---
+
+<div class="mt-2" role="img" aria-label={`Composition of ${count} elements: ${groups.added} added, ${groups.changed + groups.undeleted} changed, ${groups.retired} retired`}>
+  <div class="flex h-1.5 overflow-hidden rounded-full" aria-hidden="true">
+    {parts.map((p) => <span class={p.cls} style={`width: ${(p.n / total) * 100}%`}></span>)}
+  </div>
+  <p class="mt-1 font-mono text-[0.65rem] tabular-nums text-body/80">
+    {groups.added} add · {groups.changed + groups.undeleted} chg · {groups.retired} ret
+  </p>
+</div>

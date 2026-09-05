@@ -7,6 +7,7 @@
   schema:name "Document. Type Name.Text";
   utd:bridges "UNLK: L 02, P 45-80 MAR: IMO/FAL 1-7";
   utd:businessTerm "Document/message name";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

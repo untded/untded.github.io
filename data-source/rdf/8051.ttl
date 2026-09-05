@@ -5,6 +5,7 @@
   schema:description "Code specifying a specific stage of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Stage.Identifier";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

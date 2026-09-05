@@ -5,6 +5,7 @@
   schema:description "Code relating terms to a reference date, time or period.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Terms. Time Reference.Code";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Indication whether or not insurance has been effected through an intermediary of the issuer of a document.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Insurance. Action.Indicator";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

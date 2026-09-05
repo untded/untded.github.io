@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Axle.Quantity";
   utd:bridges "CIM: L 13-14, P 80-82 (CIM 45)";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

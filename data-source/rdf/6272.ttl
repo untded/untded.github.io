@@ -5,6 +5,7 @@
   schema:description "Number of working days in a specified period.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Working Days. Quantity";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cn";
   utd:charset "n";
   utd:extractionConfidence "medium";

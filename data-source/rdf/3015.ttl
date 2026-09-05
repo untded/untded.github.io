@@ -5,6 +5,7 @@
   schema:description "To identify the country to which a consignment of goods is to be or has been delivered.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Destination Country.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -7,6 +7,7 @@
   schema:name "Customs. Additional Value Basis.Amount";
   utd:bridges "SAD: (SAD 47(3))";
   utd:businessTerm "Other amount to be added";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

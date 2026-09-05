@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Issue Date Time.Text";
   utd:bridges "AWB: L 60, P 37-43 CMR: L 60, P 27-44 (CMR 21) MAR: L 62, P 54-80";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

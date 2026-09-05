@@ -1,0 +1,33 @@
+---
+import { href } from '../lib/site'
+
+interface Props {
+  prev: number | null
+  next: number | null
+}
+const { prev, next } = Astro.props
+---
+
+<nav class="flex items-center justify-between gap-4 text-sm" aria-label="Adjacent elements">
+  {
+    prev ? (
+      <a class="min-w-0 truncate text-body hover:text-un-deep" href={href(`/elements/${prev}`)}>
+        <span aria-hidden="true">← </span>
+        <span class="font-mono tabular-nums">{prev}</span>
+      </a>
+    ) : (
+      <span />
+    )
+  }
+  <slot />
+  {
+    next ? (
+      <a class="min-w-0 truncate text-right text-body hover:text-un-deep" href={href(`/elements/${next}`)}>
+        <span class="font-mono tabular-nums">{next}</span>
+        <span aria-hidden="true"> →</span>
+      </a>
+    ) : (
+      <span />
+    )
+  }
+</nav>

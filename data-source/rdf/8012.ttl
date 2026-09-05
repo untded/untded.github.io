@@ -7,6 +7,7 @@
   schema:name "Consignment. Transport.Text";
   utd:bridges "CIMP: (314, 404, 405, 406, 407, 408, 415, 418):an..65 UNLK: an..35x3 L 20-22, P 09-44";
   utd:businessTerm "Transport information";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

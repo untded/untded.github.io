@@ -7,6 +7,7 @@
   schema:name "Document. Endorsement.Text";
   utd:bridges "UNLK: L 64, P55-80";
   utd:businessTerm "Signature";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

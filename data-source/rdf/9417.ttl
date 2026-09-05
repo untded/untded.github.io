@@ -5,6 +5,7 @@
   schema:description "Code specifying a type of government action such as inspection, detention, fumigation, security.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Government. Action.Code";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

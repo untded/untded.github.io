@@ -5,6 +5,7 @@
   schema:description "The measure of the angular distance north or south from the Equator meridan to the meridan of a specific place";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Geographical Coordinate. Latitude.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:extractionConfidence "high";
   utd:sourcePage 101;

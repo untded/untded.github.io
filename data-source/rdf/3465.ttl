@@ -5,6 +5,7 @@
   schema:description "A unique locally assigned identification.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "In-house. Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

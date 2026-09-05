@@ -5,6 +5,7 @@
   schema:description "A country through which a goods or passengers are routed between the country of original departure and final destination.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transit. Country.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

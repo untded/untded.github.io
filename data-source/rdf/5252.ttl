@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Charge.Text";
   utd:bridges "AWB: L 48-52, P 37-81";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

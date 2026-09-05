@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Collect Carry Forward Charge.Amount";
   utd:bridges "CIM: L 62, P 74-82";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

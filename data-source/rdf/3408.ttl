@@ -7,6 +7,7 @@
   schema:name "Transport Means. Master Name.Text";
   utd:bridges "MAR: (IMO FAL Forms 1- 2)";
   utd:businessTerm "Vessel master, Driver, Pilot";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Transport Contract Document. Remark.Text";
   utd:bridges "CIM: an..28x6 (reverse of form)";
   utd:businessTerm "Bill of lading remark";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

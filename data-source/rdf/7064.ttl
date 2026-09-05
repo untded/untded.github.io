@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Type.Text";
   utd:bridges "AWB: L 28-30, P 09-81 CIMP: (412): an..38 CMR: L 28-42, P 34-51 (CMR 8) MAR: IMO/FAL 2 UNLK: an..17 L 28-34, P 34-51";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

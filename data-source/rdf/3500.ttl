@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Family Name.Text";
   utd:businessTerm "Surname, Last name";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

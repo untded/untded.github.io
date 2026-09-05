@@ -7,6 +7,7 @@
   schema:name "Transport Means. Destination Location.Text";
   utd:bridges "AWB: L 24, P 09-12 and P 30-33 and P 37-40 MAR: IMO/FAL 1, 3";
   utd:businessTerm "Airport of destination, Arrival location";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

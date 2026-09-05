@@ -5,6 +5,7 @@
   schema:description "Code qualifying a type of relationship.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Relationship. Type.Code";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

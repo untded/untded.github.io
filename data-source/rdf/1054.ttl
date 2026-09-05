@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Sub-Item.Identifier";
   utd:businessTerm "Message sub-item number";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

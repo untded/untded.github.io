@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Nationality.Text";
   utd:bridges "MAR: (IMO FAL Forms 5-6)";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "a";
   utd:extractionConfidence "medium";

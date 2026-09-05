@@ -5,6 +5,7 @@
   schema:description "Code specifying the ownership of a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Ownership.Code";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Specification of the status of the goods and of the transport equipment and any packaging/dunnage with respect to quarantine restrictions.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Quarantine. Status.Text";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Enclosed Document. Function Name.Text";
   utd:bridges "CIM: an..47x4; L 39-42, P 02-49 CMR: an..35x3; L 24-26, P 09-44";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

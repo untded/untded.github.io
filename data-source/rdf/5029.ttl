@@ -5,6 +5,7 @@
   schema:description "Code specifying an agreed percentage of annual interest by which an amount due will be increased if the payment duedate is not respected.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Late Payment. Annual Interest Percentage Numeric.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

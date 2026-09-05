@@ -5,6 +5,7 @@
   schema:description "To identify the first arrival location. This would be a port for sea, airport for air and border post for land crossing.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. First Arrival Location.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -7,6 +7,7 @@
   schema:name "Attached Transport Equipment. Shipping Marks.Text";
   utd:bridges "CIM: L 09, P 52-63 and P 71082";
   utd:businessTerm "Loading tackle marks and numbers";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Total value of a contract.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Contract. Total Amount.Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

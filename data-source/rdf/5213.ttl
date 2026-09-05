@@ -5,6 +5,7 @@
   schema:description "Code specifying the price change operation for a sub-line item.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Sub Line Item. Price Change Operation.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Split Goods Item. Package.Quantity";
   utd:bridges "CIMP: (701):n..4";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

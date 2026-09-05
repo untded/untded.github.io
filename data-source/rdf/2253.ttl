@@ -5,6 +5,7 @@
   schema:description "Date on which the calculation is made.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Calculation. Date Time";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

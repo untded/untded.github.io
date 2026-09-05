@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Stowage Location.Identifier";
   utd:bridges "CIMP: (807):a1 MAR: IMO/FAL 7";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

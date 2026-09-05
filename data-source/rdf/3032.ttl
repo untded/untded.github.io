@@ -5,6 +5,7 @@
   schema:description "Name of the place up to which freight has been prepaid.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Prepaid To Location.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

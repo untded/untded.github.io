@@ -7,6 +7,7 @@
   schema:name "Transit Guarantee. Customs Office Location.Text";
   utd:bridges "SAD: (SAD 52)";
   utd:businessTerm "Customs office of guarantee";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

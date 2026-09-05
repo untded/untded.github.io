@@ -7,6 +7,7 @@
   schema:name "Document. Carrier Party Authentication.Text";
   utd:bridges "AWB: L 56, P 37-81 CIMP: (414):an..20 CMR: an..23x7; L 62-68, P 09-32 (CMR 23)";
   utd:businessTerm "Carrier signature";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

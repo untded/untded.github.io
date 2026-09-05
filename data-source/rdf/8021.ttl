@@ -7,6 +7,7 @@
   schema:name "Attached Transport Equipment. Category.Code";
   utd:bridges "CIM: L 09, P 45-51 and 64-70";
   utd:businessTerm "Loading tackle category";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "add";
   utd:charset "a";
   utd:extractionConfidence "medium";

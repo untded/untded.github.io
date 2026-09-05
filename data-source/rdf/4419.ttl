@@ -5,6 +5,7 @@
   schema:description "Code specifying the method of the administration of a test.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Test. Method Administration.Code";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

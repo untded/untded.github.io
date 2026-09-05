@@ -5,6 +5,7 @@
   schema:description "Reference to the general conditions of contract under which an Insurance certificate is issued , and/or wording of the specific conditions pertaining to the shipment in question.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Insurance. Condition.Text";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Code specifying a function of a monetary amount.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Monetary Amount. Function.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

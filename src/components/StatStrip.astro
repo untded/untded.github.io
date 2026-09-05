@@ -13,7 +13,7 @@ const { stats } = Astro.props
 <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-line bg-line sm:grid-cols-5">
   {
     stats.map((s) => (
-      <div class="bg-white px-4 py-3">
+      <div class="bg-paper px-4 py-3">
         <dt class="text-xs uppercase tracking-wider text-body">{s.label}</dt>
         <dd class="mt-0.5 font-mono text-2xl tabular-nums text-ink">
           {s.href ? <a href={s.href} class="hover:text-un-deep">{s.value}</a> : s.value}

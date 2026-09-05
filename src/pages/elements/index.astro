@@ -2,13 +2,13 @@
 import '../../styles/filter.css'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import DirectoryFilter from '../../islands/DirectoryFilter.vue'
-import { CATEGORY_RANGES } from '../../lib/element'
+import { loadCategories as CATEGORY_RANGES } from '../../lib/element'
 import { loadElements } from '../../lib/data'
 import { href } from '../../lib/site'
 
 const elements = loadElements()
 const changes = [...new Set(elements.map((e) => e.change_tag))].sort()
-const categories = CATEGORY_RANGES.map(({ k, range, label }) => ({
+const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
   k,
   range,
   label,

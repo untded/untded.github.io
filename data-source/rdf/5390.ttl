@@ -5,6 +5,7 @@
   schema:description "Total amount of an order.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Order. Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cr";
   utd:charset "n";
   utd:extractionConfidence "low";

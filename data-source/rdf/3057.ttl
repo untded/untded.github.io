@@ -5,6 +5,7 @@
   schema:description "Concatenation of the code of all the ports of call or other locations of an itinerary of a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Itinerary Codes.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

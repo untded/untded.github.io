@@ -5,6 +5,7 @@
   schema:description "Code identifying the object sub-type of a risk.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Risk Object. Sub-type.Identifier";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

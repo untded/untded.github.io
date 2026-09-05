@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignor. Party.Identifier";
   utd:bridges "AWB: L 03, P 27-44 CIM: n13; L 03, P 32-44 CIM 11 CIMP: (320):an..15 SAD: (SAD 2 (Nr))";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

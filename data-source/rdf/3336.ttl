@@ -7,6 +7,7 @@
   schema:name "Consignor. Party Identification.Text";
   utd:bridges "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04- 08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)";
   utd:businessTerm "Sender, Shipper";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

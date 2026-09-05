@@ -5,6 +5,7 @@
   schema:description "To identify the customs office at which goods are released from a Customs transit regime.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transit Regime. End Customs Office Location.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

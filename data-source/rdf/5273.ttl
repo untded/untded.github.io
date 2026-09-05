@@ -5,6 +5,7 @@
   schema:description "Code specifying the basis for a duty or tax or fee rate such as weight or value or quantity.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax or Fee. Rate Basis.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

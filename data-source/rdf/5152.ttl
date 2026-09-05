@@ -5,6 +5,7 @@
   schema:description "Type of duty or tax applicable to commodities or type of tax or fee applicable to services.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax Or Fee. Type.Text";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

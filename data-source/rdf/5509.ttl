@@ -5,6 +5,7 @@
   schema:description "Indicates the method on which the Customs value is determined.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Valuation. Method.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

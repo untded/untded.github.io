@@ -5,6 +5,7 @@
   schema:description "Sequence number differentiating a specific packing list item within a packing list.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Packing List Document. Item Sequence.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

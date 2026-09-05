@@ -5,6 +5,7 @@
   schema:description "Generalised description of the form in which all the goods in a consignment are presented.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Package Type.Text";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

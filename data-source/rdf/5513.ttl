@@ -5,6 +5,7 @@
   schema:description "Method of the proportional allocation of freight charges for each consignment in a multi consignment declaration.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Apportion Method.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

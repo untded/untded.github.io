@@ -7,6 +7,7 @@
   schema:name "Delivery Party. Party Identification.Text";
   utd:bridges "CMR: an..35x3; L 16-18, P 09-44 (CMR 3) UNLK: an..35x5; L 16- 20, P 09-44";
   utd:businessTerm "Positioning Party, Delivery address";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Reference number identifying a plan which defines how and in which order a consolidation of consignments are to be loaded onto a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consolidation. Load Plan.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

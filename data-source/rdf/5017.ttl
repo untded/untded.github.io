@@ -7,6 +7,7 @@
   schema:name "Consignment. Cash On Delivery.Amount";
   utd:bridges "CIM: L 41-42, P 50-73 (CIM 31) CIM: L 41 P 75-82 (CIM 74)";
   utd:businessTerm "COD amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

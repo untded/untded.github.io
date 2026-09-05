@@ -5,6 +5,7 @@
   schema:description "To specify a value of magnitude.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Size. Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "high";

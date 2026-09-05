@@ -5,6 +5,7 @@
   schema:description "The identifier of the monetary unit in which payment is made, or is to be made.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Currency.Identifier";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "a";
   utd:extractionConfidence "medium";

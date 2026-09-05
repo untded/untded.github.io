@@ -5,6 +5,7 @@
   schema:description "Name of party who is to receive or has received a document";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Recipient Name.Text";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

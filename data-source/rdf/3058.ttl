@@ -5,6 +5,7 @@
   schema:description "The name of the person to be contacted in the event of a dangerous goods emergency";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Emergency Contact Name.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

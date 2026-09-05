@@ -7,6 +7,7 @@
   schema:name "Carrier Agent. Party.Identifier";
   utd:bridges "AWB: L 20, P 09-26 CIMP: (309):n4; (311):n7";
   utd:businessTerm "Air agent's IATA code";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

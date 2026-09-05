@@ -5,6 +5,7 @@
   schema:description "Weight (mass) of all goods including packing but excluding carrier's equipment as declared in a document.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document Declared Gross Weight. Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

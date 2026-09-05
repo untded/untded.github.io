@@ -7,6 +7,7 @@
   schema:name "Trade Term. Conditions.Code";
   utd:bridges "UNLK: L 20, P 45-48 SAD: (SAD 20)";
   utd:businessTerm "Incoterms Code";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

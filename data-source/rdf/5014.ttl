@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Discount. Amount";
   utd:bridges "AWB: L 33-44, P 39-46, P 48-59 CIMP: (514):n..8 UNLK: L 54, P 62-80";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

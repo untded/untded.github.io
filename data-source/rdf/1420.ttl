@@ -5,6 +5,7 @@
   schema:description "Reference number to identify a kanban card";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Kanban Card. Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

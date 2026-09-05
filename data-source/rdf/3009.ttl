@@ -5,6 +5,7 @@
   schema:description "A code identifying the type of party paying for a maintenance operation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Maintenance Operation. Payer Type.Code";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";
