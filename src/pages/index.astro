@@ -5,8 +5,8 @@ import StatStrip from '../components/StatStrip.astro'
 import CategoryGrid from '../components/CategoryGrid.astro'
 import { loadElements } from '../lib/data'
 import { buildLedger } from '../lib/ledgers'
-import { CATEGORY_RANGES } from '../lib/element'
 import { buildMeta } from '../../scripts/lib/meta.mjs'
+import { href } from '../lib/site'
 
 const elements = loadElements()
 const ledger = buildLedger(elements)
@@ -14,7 +14,7 @@ const meta = buildMeta(elements)
 ---
 
 <BaseLayout
-  title="unt·ded — the UN Trade Data Elements Directory, machine-readable"
+  title="UN/TDED — the UN Trade Data Elements Directory, machine-readable"
   description="The United Nations Trade Data Elements Directory 2005 (ISO 7372:2005): 1504 trade data elements, digitized with verifiable provenance. Operated on behalf of UN/CEFACT and ISO/TC 154."
 >
   <section class="border-b border-line bg-mist">
@@ -28,10 +28,10 @@ const meta = buildMeta(elements)
       </h1>
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-body">
         Every data element on a trade document — its number, name, definition and
-        representation — in one verified dataset. Press
-        <kbd class="rounded border border-line bg-white px-1.5 font-mono text-sm">⌘K</kbd>
-        to look one up, or browse the
-        <a class="text-un-deep underline decoration-un/50" href="/elements">directory</a>.
+        representation — in one verified dataset. Press{' '}
+        <kbd class="rounded border border-line bg-white px-1.5 font-mono text-sm">⌘K</kbd>{' '}
+        to look one up, or browse the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
       </p>
       <div class="mt-8 max-w-3xl">
         <RenameLedger client:visible="idle" lines={ledger} />
@@ -42,8 +42,8 @@ const meta = buildMeta(elements)
   <section class="mx-auto max-w-6xl px-4 py-10" aria-label="The directory in numbers">
     <StatStrip
       stats={[
-        { value: String(meta.count), label: 'elements', href: '/elements' },
-        { value: String(meta.categories.length), label: 'categories', href: '/elements' },
+        { value: String(meta.count), label: 'elements', href: href('/elements') },
+        { value: String(meta.categories.length), label: 'categories', href: href('/elements') },
         { value: String(meta.groups.added), label: 'added in 2005' },
         { value: String(meta.groups.changed), label: 'renamed / changed' },
         { value: String(meta.groups.retired), label: 'retired' },
@@ -58,21 +58,21 @@ const meta = buildMeta(elements)
 
   <section class="mx-auto max-w-6xl px-4 pb-14" aria-label="Why trust this data">
     <div class="grid gap-4 md:grid-cols-2">
-      <a href="/method" class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
-        <h3 class="text-base font-semibold text-ink">How you can verify this data →</h3>
+      <a href={href('/method')} class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">Why you can trust this data →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Character conservation (169,020 characters, exact), row reconciliation
-          (1504 = 1504), independent OCR re-reads, and a cross-check against the
-          UN/EDIFACT D.05B directory. Every element carries its source page and
-          extraction confidence.
+          Every entry was checked character-by-character against the printed
+          directory, re-read from the page images by an independent OCR engine,
+          and cross-checked against the UN/EDIFACT directory. Each entry names
+          the exact source page.
         </p>
       </a>
-      <a href="/download" class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
+      <a href={href('/download')} class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
         <h3 class="text-base font-semibold text-ink">Take the dataset →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          YAML single source of truth, CSV and JSON exports, per-element pages —
-          plus the digitization code and its test suite, all open source under
-          the <span class="font-mono text-xs">untded</span> organization.
+          The full directory as YAML, CSV or JSON, plus the open-source
+          digitization and verification code — all under the{' '}
+          <span class="font-mono text-xs">untded</span> organization.
         </p>
       </a>
     </div>

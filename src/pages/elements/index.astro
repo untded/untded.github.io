@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import DirectoryFilter from '../../islands/DirectoryFilter.vue'
 import { CATEGORY_RANGES } from '../../lib/element'
 import { loadElements } from '../../lib/data'
+import { href } from '../../lib/site'
 
 const elements = loadElements()
 const changes = [...new Set(elements.map((e) => e.change_tag))].sort()
@@ -15,7 +16,7 @@ const categories = CATEGORY_RANGES.map(({ k, range, label }) => ({
 ---
 
 <BaseLayout
-  title="Directory — unt·ded"
+  title="Directory — UN/TDED"
   description="All 1504 trade data elements of UNTDED 2005, filterable by tag, name, category, change and representation."
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
@@ -48,10 +49,10 @@ const categories = CATEGORY_RANGES.map(({ k, range, label }) => ({
             elements.map((e) => (
               <tr class={e.status === 'retired' ? 'retired' : ''}>
                 <td class="font-mono tabular-nums">
-                  <a href={`/elements/${e.tag}`}>{e.tag}</a>
+                  <a href={href(`/elements/${e.tag}`)}>{e.tag}</a>
                 </td>
                 <td class="name-cell">
-                  <a href={`/elements/${e.tag}`}>{e.name ?? '(retired — see entry)'}</a>
+                  <a href={href(`/elements/${e.tag}`)}>{e.name ?? '(retired — see entry)'}</a>
                 </td>
                 <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
                 <td class="font-mono text-xs text-body">{e.change_tag}</td>

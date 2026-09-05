@@ -3,9 +3,11 @@
 // same suite works in validate-only contexts.
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
+import astroConfig from '../../astro.config.mjs'
 import { loadElements } from './data'
 import { CATEGORY_RANGES } from './element'
 
+const site = astroConfig.site as string
 const dist = 'dist'
 const elements = loadElements()
 const hasDist = existsSync(dist)
@@ -43,8 +45,8 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     const sitemap = readFileSync(`${dist}/sitemap-index.xml`, 'utf8')
     expect(sitemap).toContain('<loc>')
     const main = readFileSync(`${dist}/sitemap-0.xml`, 'utf8')
-    expect(main).toContain('https://untded.github.io/elements/1001')
-    expect(main).toContain('https://untded.github.io/categories/1000-1699')
+    expect(main).toContain(`${site}/elements/1001`)
+    expect(main).toContain(`${site}/categories/1000-1699`)
     const count = (main.match(/\/elements\/\d{4}<\/loc>/g) ?? []).length
     expect(count).toBe(elements.length)
   })
@@ -76,4 +78,44 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     const entries = readdirSync(`${dist}/pagefind`)
     expect(entries).toContain('pagefind-entry.json')
   })
+
+  it('brands every page UN/TDED and never the old wordmark', () => {
+    const pages = ['index.html', 'about/index.html', 'elements/1001/index.html', '404.html']
+    for (const p of pages) {
+      const html = readFileSync(`${dist}/${p}`, 'utf8')
+      expect(html).toContain('wordmark-slash')
+      expect(html).not.toContain('unt·ded')
+    }
+  })
+
+  it('links adjacent elements on element pages', () => {
+    const html = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
+    expect(html).toContain('href="/elements/1000"')
+    expect(html).toContain('href="/elements/1002"')
+  })
+
+  // Astro collapses whitespace between text and elements across newlines,
+  // which once produced "theUnited Nations" on every page. This contract
+  // fails on any recurrence of that bug class.
+  it('renders no collapsed text/element boundaries', () => {
+    const files = collectHtml(dist)
+    const broken: string[] = []
+    const re = /<\/(a|kbd|strong|em|code)>(?=[A-Za-z])|(?<=[a-z…,)”])<(a|kbd|strong|em|code)[\s>]/
+    for (const f of files) {
+      const html = readFileSync(f, 'utf8')
+        .replace(/<script[\s\S]*?<\/script>/g, '')
+        .replace(/<style[\s\S]*?<\/style>/g, '')
+      const m = html.match(re)
+      if (m) broken.push(`${f.replace(`${dist}/`, '')}: ${JSON.stringify(m[0].slice(0, 40))}`)
+    }
+    expect(broken, broken.join('\n')).toEqual([])
+  })
 })
+
+function collectHtml(dir: string): string[] {
+  return readdirSync(dir).flatMap((name) => {
+    const p = `${dir}/${name}`
+    if (name === 'pagefind' || name === '_astro') return []
+    return statSync(p).isDirectory() ? collectHtml(p) : p.endsWith('.html') ? [p] : []
+  })
+}

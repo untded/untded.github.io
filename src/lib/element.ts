@@ -2,6 +2,7 @@
 // Every label, category resolution and bridge parse in the site derives
 // from here — components never re-encode this knowledge.
 import type { ElementRecord } from './data'
+import { BASE } from './site'
 
 // Legend as printed in UNTDED 2005 section 4.1 (the source's own words,
 // abridged); tags outside the printed legend (cd/cr/cdr) are annotated.
@@ -50,7 +51,7 @@ export function categoryOf(tag: number): Category {
 }
 
 export function elementUrl(tag: number): string {
-  return `/elements/${tag}`
+  return `${BASE}/elements/${tag}`
 }
 
 export interface Bridge {
@@ -93,4 +94,24 @@ export function replacementPointer(element: ElementRecord): number | null {
 export function reprSummary(repr: ElementRecord['representation']): string {
   if (!repr) return '—'
   return `${repr.charset}${repr.min_length === repr.max_length ? repr.max_length : `..${repr.max_length}`}`
+}
+
+// Document-order neighbours (the printed table is tag-ordered except for
+// two known inversions).
+export function neighbours(
+  tag: number,
+  tags: number[],
+): { prev: number | null; next: number | null } {
+  const sorted = [...tags].sort((a, b) => a - b)
+  const i = sorted.indexOf(tag)
+  if (i === -1) return { prev: null, next: null }
+  return { prev: i > 0 ? sorted[i - 1] : null, next: i < sorted.length - 1 ? sorted[i + 1] : null }
+}
+
+// UNTDED convention (section 4.2.2): the even tag carries the clear-text
+// version, the following odd tag the coded value. Returns the
+// counterpart's tag when both sides exist in this edition.
+export function pairedTag(tag: number, tags: Set<number>): number | null {
+  const partner = tag % 2 === 0 ? tag + 1 : tag - 1
+  return partner > 999 && partner < 10000 && tags.has(partner) ? partner : null
 }

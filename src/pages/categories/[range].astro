@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import ChangeTagBadge from '../../components/ChangeTagBadge.astro'
 import { CATEGORY_RANGES, categoryOf } from '../../lib/element'
 import { loadElements } from '../../lib/data'
+import { href } from '../../lib/site'
 
 export function getStaticPaths() {
   return CATEGORY_RANGES.map((category) => ({
@@ -19,7 +20,7 @@ const elements = loadElements()
 ---
 
 <BaseLayout
-  title={`${category.range} — ${category.label} · unt·ded`}
+  title={`${category.range} — ${category.label} · UN/TDED`}
   description={`TDED category ${category.range} (${category.label}) of UNTDED 2005: ${elements.length} data elements.`}
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
@@ -28,13 +29,14 @@ const elements = loadElements()
     <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink">{category.label}</h1>
     <p class="mt-2 text-body">
       {elements.length} elements
-      ({elements.filter((e) => e.status === 'active').length} active) ·
-      <a class="text-un-deep underline decoration-un/50" href={`/elements?cat=${category.k}`}>
+      ({elements.filter((e) => e.status === 'active').length} active) ·{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href(`/elements?cat=${category.k}`)}>
         filter this category in the directory
       </a>
     </p>
 
-    <table class="dir-table mt-6">
+    <div class="mt-6 overflow-x-auto">
+      <table class="dir-table">
       <thead>
         <tr>
           <th scope="col">Tag</th>
@@ -48,10 +50,10 @@ const elements = loadElements()
           elements.map((e) => (
             <tr class={e.status === 'retired' ? 'retired' : ''}>
               <td class="font-mono tabular-nums">
-                <a href={`/elements/${e.tag}`}>{e.tag}</a>
+                <a href={href(`/elements/${e.tag}`)}>{e.tag}</a>
               </td>
               <td class="name-cell">
-                <a href={`/elements/${e.tag}`}>{e.name ?? '(retired — see entry)'}</a>
+                <a href={href(`/elements/${e.tag}`)}>{e.name ?? '(retired — see entry)'}</a>
               </td>
               <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
               <td>
@@ -61,6 +63,7 @@ const elements = loadElements()
           ))
         }
       </tbody>
-    </table>
+      </table>
+    </div>
   </div>
 </BaseLayout>

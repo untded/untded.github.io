@@ -16,7 +16,7 @@ const { oldName, businessTerm } = Astro.props
         {oldName && (
           <div>
             <dt class="text-xs uppercase tracking-wide text-body/70">Data element name</dt>
-            <dd class="prose-def text-[1.05rem] text-ink/90 line-through decoration-stamp/50">{oldName}</dd>
+            <dd class="prose-def text-[1.05rem] text-ink/90">{oldName}</dd>
           </div>
         )}
         {businessTerm && (
@@ -26,6 +26,7 @@ const { oldName, businessTerm } = Astro.props
           </div>
         )}
       </dl>
+      <p class="mt-3 text-xs text-body/70">Superseded by the 2005 name above.</p>
     </section>
   )
 }

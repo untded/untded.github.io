@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  site: 'https://untded.github.io',
+  site: 'https://www.untded.org',
   output: 'static',
   trailingSlash: 'never',
   integrations: [vue(), sitemap()],

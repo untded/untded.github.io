@@ -1,5 +1,6 @@
 ---
 import Omnibox from '../islands/Omnibox.vue'
+import { href } from '../lib/site'
 
 const nav = [
   { href: '/elements', label: 'Directory' },
@@ -13,14 +14,15 @@ const current = Astro.url.pathname
 
 <header class="border-b border-line">
   <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
-    <a href="/" class="text-xl font-semibold tracking-tight text-ink" aria-label="unt ded home">
-      unt<span class="wordmark-dot">·</span>ded
+    <a href={href('/')} class="font-mono text-xl font-semibold tracking-tight text-ink" aria-label="UN/TDED home">
+      UN<span class="wordmark-slash">/</span>TDED
     </a>
     <nav aria-label="Site" class="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem]">
       {
         nav.map((item) => (
           <a
             href={item.href}
+            aria-current={current.startsWith(item.href) && item.href !== '/' ? 'page' : undefined}
             class:list={[
               'hover:text-un-deep',
               current.startsWith(item.href) && item.href !== '/' ? 'text-un-deep font-medium' : 'text-body',
