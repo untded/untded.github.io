@@ -5,6 +5,7 @@
   schema:description "Number assigned by the consignor to identify a particular package in a consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Sequence.Identifier";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

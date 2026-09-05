@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Accounting. Information.Text";
   utd:bridges "AWB: L 16-22, P 45-81 and CIMP: (410): an..34 SAD: (SAD B)";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

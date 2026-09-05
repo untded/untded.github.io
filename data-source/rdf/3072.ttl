@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/3072> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "UNLK: L 10-14, P 45-80";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Service provider";

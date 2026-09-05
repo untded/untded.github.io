@@ -7,6 +7,7 @@
   schema:name "Transport Equipment. Maximum Load Weight.Measure";
   utd:bridges "CIM: L 13-14, P 75-79 (CIM 44)";
   utd:businessTerm "CSC Weight, Container Safety Convention Maximum Weight";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

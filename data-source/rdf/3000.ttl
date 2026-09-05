@@ -5,6 +5,7 @@
   schema:description "Name and address of the location to which a consignment is to be delivered to the final consignee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Final Delivery Location.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

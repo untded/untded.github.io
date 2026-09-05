@@ -7,6 +7,7 @@
   schema:name "Consignment. Actual Acceptance Date Time.Text";
   utd:bridges "CIM: n4; L 69, P 65-69 UNLK: L 22, P 09-26";
   utd:businessTerm "Cargo acceptancedate, Date of taking over of the goods (Road)";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

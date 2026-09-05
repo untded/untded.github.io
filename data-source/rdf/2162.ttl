@@ -5,6 +5,7 @@
   schema:description "To specify the elapsed time between departure and arrival for a segment or leg of a journey.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Journey. Duration.Measure";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

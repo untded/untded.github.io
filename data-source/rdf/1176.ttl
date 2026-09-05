@@ -5,6 +5,7 @@
   schema:description "Reference number assigned by a buyer to identify a financial transaction";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Financial Transaction. Buyer Assigned.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

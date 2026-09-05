@@ -5,6 +5,7 @@
   schema:description "Date when a consignment is loaded onto a means of transport, in figures and words";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Loading Date Time.Text";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

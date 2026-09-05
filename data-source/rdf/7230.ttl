@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/7230> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "AWB: L 33-44, P 61-81 and CIMP: (708):an..15; (709):an..20";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Nature and quantity of goods";

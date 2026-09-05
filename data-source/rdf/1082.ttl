@@ -7,6 +7,7 @@
   schema:name "Line Item. Sequence.Identifier";
   utd:bridges "UNLK: L 36-46, P 00-08";
   utd:businessTerm "Line Item Number";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

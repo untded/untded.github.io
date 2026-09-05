@@ -7,6 +7,7 @@
   schema:name "Insurer. Party Identification.Text";
   utd:bridges "UNLK: an..35x5 L 10-18, P 45-80";
   utd:businessTerm "Underwriter";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

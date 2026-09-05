@@ -5,6 +5,7 @@
   schema:description "Total net weight (mass) of all the goods items referred to as one consignment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Net Weight.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

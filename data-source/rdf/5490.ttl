@@ -5,6 +5,7 @@
   schema:description "Amount in national currency resulting from the application, at the appropriate rate, of value added tax (or similar tax) to the invoice amount subject to such tax.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Value Added Tax. Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

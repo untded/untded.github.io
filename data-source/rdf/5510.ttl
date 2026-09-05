@@ -5,6 +5,7 @@
   schema:description "Percentage adjustment made to the valuation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Valuation. Adjustment Percentage.Numeric";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

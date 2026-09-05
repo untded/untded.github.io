@@ -7,6 +7,7 @@
   schema:name "House Waybill Document. Identifier";
   utd:bridges "UNLK: an..17 L 04, P 63- 80";
   utd:businessTerm "House bill, House bill of lading";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

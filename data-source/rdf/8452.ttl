@@ -7,6 +7,7 @@
   schema:name "Transport Means. Registration Nationality.Text";
   utd:bridges "MAR: IMO/FAL 1-7 SAD: (SAD 55)";
   utd:businessTerm "Flag of vessel, Nationality of ship";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

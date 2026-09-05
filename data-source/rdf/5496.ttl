@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/5496> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "MAR: IMO/FAL 3";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Number of persons onboard";

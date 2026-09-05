@@ -7,6 +7,7 @@
   schema:name "Consignment. Origin Country Name.Text";
   utd:bridges "UNLK: L 18, P 45-62";
   utd:businessTerm "Country of origin";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

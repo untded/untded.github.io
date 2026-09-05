@@ -7,6 +7,7 @@
   schema:name "Line Item. Charge.Amount";
   utd:bridges "UNLK: L36-46, P 72-80 SAD: (SAD 42)";
   utd:businessTerm "Item price";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

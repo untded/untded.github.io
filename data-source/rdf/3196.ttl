@@ -7,6 +7,7 @@
   schema:name "Agent. Party Identification.Text";
   utd:bridges "SAD: (SAD 14)";
   utd:businessTerm "Authorized representati ve's name, Authorized agent for principal";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

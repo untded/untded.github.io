@@ -7,6 +7,7 @@
   schema:name "Dangerous Goods. Hazard Class. Identifier";
   utd:bridges "CMR: L 44, P 09-44 MAR: IMO/FAL 7";
   utd:businessTerm "IMDG Class Number, ADR/RID Class Number";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

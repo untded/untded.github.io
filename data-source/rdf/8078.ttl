@@ -5,6 +5,7 @@
   schema:description "To identify an additional hazard class.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Additional Hazard. Class.Identifier";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

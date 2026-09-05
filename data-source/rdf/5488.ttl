@@ -5,6 +5,7 @@
   schema:description "Amount of premium payable to the insurance company to insure the goods to the port or place of importation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. To Importation Location Insurance.Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

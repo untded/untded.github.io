@@ -3,6 +3,23 @@
 // from here — components never re-encode this knowledge.
 import type { ElementRecord } from './data'
 import { BASE } from './site'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+export type Category = { k: number; range: string; label: string }
+
+// SSOT: src/data/categories.json — shared with the build pipeline
+// (scripts/lib/meta.mjs reads the same file). Read from cwd because
+// import.meta.url breaks in build chunks (same as data.ts).
+let categoryCache: readonly Category[] | null = null
+export function loadCategories(): readonly Category[] {
+  if (categoryCache === null) {
+    categoryCache = JSON.parse(
+      readFileSync(resolve(process.cwd(), 'src/data/categories.json'), 'utf8'),
+    )
+  }
+  return categoryCache
+}
 
 // Legend as printed in UNTDED 2005 section 4.1 (the source's own words,
 // abridged); tags outside the printed legend (cd/cr/cdr) are annotated.
@@ -32,22 +49,9 @@ export function changeTagInfo(changeTag: string): ChangeTagInfo {
   }
 }
 
-export const CATEGORY_RANGES = [
-  { k: 1, range: '1000-1699', label: 'Documentation, references' },
-  { k: 2, range: '2000-2699', label: 'Dates, times, periods' },
-  { k: 3, range: '3000-3699', label: 'Parties, addresses, places, countries' },
-  { k: 4, range: '4000-4699', label: 'Clauses, conditions, terms, instructions' },
-  { k: 5, range: '5000-5699', label: 'Amounts, charges, percentages' },
-  { k: 6, range: '6000-6699', label: 'Measures, quantities' },
-  { k: 7, range: '7000-7699', label: 'Goods and articles' },
-  { k: 8, range: '8000-8699', label: 'Transport modes, means, equipment' },
-  { k: 9, range: '9000-9699', label: 'Other data elements (Customs, etc.)' },
-] as const
-
-export type Category = (typeof CATEGORY_RANGES)[number]
 
 export function categoryOf(tag: number): Category {
-  return CATEGORY_RANGES[Math.floor(tag / 1000) - 1]
+  return loadCategories()[Math.floor(tag / 1000) - 1]
 }
 
 export function elementUrl(tag: number): string {

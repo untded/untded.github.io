@@ -5,6 +5,7 @@
   schema:description "Code giving reason for difference between the actual amount of payment and the amount charged.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Discrepancy Reason.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Consignment. Goods Receipt Location Name.Text";
   utd:bridges "CMR: L 62, P 45-62 (CMR 24)";
   utd:businessTerm "Goods receipt place";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Consignment. Package.Quantity";
   utd:bridges "SAD: (SAD 6)";
   utd:businessTerm "Total number of packages";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

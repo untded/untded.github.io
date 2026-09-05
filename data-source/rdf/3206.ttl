@@ -5,6 +5,7 @@
   schema:description "Name of the country or other geographical entity as specified in ISO 3166 and UN/ECE Rec 3";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Country. Name.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -5,6 +5,7 @@
   schema:description "Name and address of the party receiving a document";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Receiving Party Identification.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

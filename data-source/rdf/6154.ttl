@@ -5,6 +5,7 @@
   schema:description "Name of a non-discrete measurement.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Non-discrete Measurement. Name.Text";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -5,6 +5,7 @@
   schema:description "To identify an account with the bank designated to receive payment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Seller. Bank Account.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

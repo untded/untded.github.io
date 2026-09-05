@@ -5,6 +5,7 @@
   schema:description "Code specifying the days/periods for routine despatches";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch. Pattern.Code";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Issuer Declaration.Text";
   utd:bridges "CIM: L 4-8, P 45-82 UNLK: an..35; L 36-64, P 09-44";
+  utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

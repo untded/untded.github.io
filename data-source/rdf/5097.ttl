@@ -5,6 +5,7 @@
   schema:description "Code specifying any additions necessary under the World Trade Organisation (WTO) Valuation Agreement used for assessment of the Customs valuation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "World Trade Organisation Valuation Agreement. Addition.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

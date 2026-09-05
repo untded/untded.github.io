@@ -7,6 +7,7 @@
   schema:name "Buyer. Contact Name.Text";
   utd:bridges "UNLK: L 14, P 45-80";
   utd:businessTerm "Purchaser's department or employee";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

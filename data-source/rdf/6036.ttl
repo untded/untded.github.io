@@ -5,6 +5,7 @@
   schema:description "Total gross weight (mass) of all goods items referred to as one consignment including packaging but excluding the transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consolidation. Gross Weight.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

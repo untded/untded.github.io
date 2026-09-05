@@ -33,7 +33,7 @@ const orgs: Org[] = [
     orgs.map((org) => (
       <a
         href={org.url}
-        class="flex flex-col rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60"
+        class="flex flex-col rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60"
       >
         <img src={href(org.logo.src)} alt={org.logo.alt} class={org.logo.class} width="auto" height="auto" />
         <h3 class="mt-4 text-base font-semibold text-ink">{org.name}</h3>

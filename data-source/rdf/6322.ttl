@@ -7,6 +7,7 @@
   schema:name "Goods Item. Gross Measurement Cube.Measure";
   utd:bridges "CIMP: (500):n..9 UNLK: L 28-38, P 72-80";
   utd:businessTerm "Volume; Gross Measurement Cube (GMC)";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

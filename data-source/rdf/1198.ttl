@@ -5,6 +5,7 @@
   schema:description "Total number of originals and copies of a document enclosed";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Exemplar.Quantity";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

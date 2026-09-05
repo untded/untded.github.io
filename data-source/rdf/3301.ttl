@@ -5,6 +5,7 @@
   schema:description "To identify the party enacting an instruction.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Instruction Enacting. Party.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

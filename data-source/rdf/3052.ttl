@@ -7,6 +7,7 @@
   schema:name "Carrier Agent. Party Identification.Text";
   utd:bridges "AWB: L 16-18, P 09-44 CIMP: (109):an..14;(300):an..35; (301):an..35; (302):an..17; (303):an..9;(305):an..9 MAR: IMO/FAL 1,7";
   utd:businessTerm "Loading broker, Shipping agent";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
   utd:charset "an";
   utd:extractionConfidence "medium";

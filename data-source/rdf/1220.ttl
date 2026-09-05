@@ -6,6 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Copies Required.Quantity";
   utd:bridges "SWIFT: an..65x12 UNLK: L 63, P 45-49 MAR: IMO/FAL 1";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "n";
   utd:extractionConfidence "medium";

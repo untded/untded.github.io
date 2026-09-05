@@ -5,6 +5,7 @@
   schema:description "Value of the goods for the calculation of the freight or similar transport charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Goods Value.Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

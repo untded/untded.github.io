@@ -5,6 +5,7 @@
   schema:description "Code specifying either a yes or no.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Response. Yes Or No.Indicator";
+  utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

@@ -5,6 +5,7 @@
   schema:description "Code identifying a user or association maintained code list.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Code List. Identifier.Code";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

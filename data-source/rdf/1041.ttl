@@ -5,6 +5,7 @@
   schema:description "Reference number identifying a transport service which is additional to an existing transport contract";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Excess Transport Movement. Service.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

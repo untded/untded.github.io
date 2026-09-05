@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/7148> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "UNLK: L 28-51, P 52-62";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Statistical code number (Customs)";

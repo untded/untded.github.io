@@ -5,6 +5,7 @@
   schema:description "Code specifying the type of rate.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Rate. Type.Code";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

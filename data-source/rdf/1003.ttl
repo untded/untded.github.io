@@ -7,6 +7,7 @@
   schema:name "Document. Type.Identifier";
   utd:bridges "CIMP: (101): a3";
   utd:businessTerm "Message name code";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Costs incurred for all containers and coverings of whatever nature which are considered as being one for Customs purposes with the goods, and the cost of packing whether for labour or material.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Total For Customs Packing Cost.Amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

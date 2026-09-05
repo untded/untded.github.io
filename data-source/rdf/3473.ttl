@@ -5,6 +5,7 @@
   schema:description "To identify a party responsible for the payment of charges and fees other than freight costs";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight. Other Charge Payer.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

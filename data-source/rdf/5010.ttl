@@ -7,6 +7,7 @@
   schema:name "Consignment. Insured Value. Text";
   utd:bridges "UNLK L 24, P45-80";
   utd:businessTerm "Amount of insurance";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

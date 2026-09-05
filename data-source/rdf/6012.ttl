@@ -7,6 +7,7 @@
   schema:name "Consignment. Gross Weight.Measure";
   utd:bridges "AWB: n..7; L 46, P 13-19 CIMP: (600):n..7 MAR: IMO/FAL 2, 7 UNLK: L 34 P 64-71";
   utd:businessTerm "Consignment gross weight; Total gross weight";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
   utd:charset "n";
   utd:extractionConfidence "medium";

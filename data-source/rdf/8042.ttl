@@ -7,6 +7,7 @@
   schema:name "Transport Means. Stowage Location.Text";
   utd:bridges "MAR: IMO/FAL 7";
   utd:businessTerm "Cell location";
+  utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

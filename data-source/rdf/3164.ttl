@@ -5,6 +5,7 @@
   schema:description "Name of a city.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Address. City.Text";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "high";

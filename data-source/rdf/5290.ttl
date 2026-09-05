@@ -7,6 +7,7 @@
   schema:name "Consignment. Freight Charge.Amount";
   utd:bridges "UNLK: L 60, P 63-80";
   utd:businessTerm "Freight cost (Customs), Freight and charges total amount";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

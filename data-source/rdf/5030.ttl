@@ -5,6 +5,7 @@
   schema:description "To identify a value in an index.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Index. Value.Identifier";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "high";

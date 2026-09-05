@@ -5,6 +5,7 @@
   schema:description "To specify the length of a package";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Length.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

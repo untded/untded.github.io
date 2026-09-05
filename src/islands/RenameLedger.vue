@@ -38,7 +38,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div
-    class="rounded-md border border-line bg-white"
+    class="rounded-md border border-line bg-paper"
     @mouseenter="pause"
     @mouseleave="resume"
     @focusin="pause"

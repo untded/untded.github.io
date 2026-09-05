@@ -5,6 +5,7 @@
   schema:description "To specify the length of time that a person or thing has existed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Age. Measure";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "n";
   utd:extractionConfidence "high";

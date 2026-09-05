@@ -5,6 +5,7 @@
   schema:description "Indication that freshness of goods is limited in time to the date shown, in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Product. Best Before Date Time.Text";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

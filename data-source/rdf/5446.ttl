@@ -4,6 +4,7 @@
 <https://www.untded.org/elements/5446> a utd:TradeDataElement;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:bridges "UNLK: L 48, P 69-78 to be moved";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
   utd:extractionConfidence "medium";
   utd:oldName "Packing cost";

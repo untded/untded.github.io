@@ -7,6 +7,7 @@
   schema:name "Late Payment. Annual Interest Percentage.Numeric";
   utd:bridges "UNLK: L 36-46, P 09-44";
   utd:businessTerm "Interest on arrears";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

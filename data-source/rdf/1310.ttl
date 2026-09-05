@@ -7,6 +7,7 @@
   schema:name "Partial Shipment. Identifier";
   utd:bridges "CIMP: (703): a1; (905): n2";
   utd:businessTerm "Part consignment number";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

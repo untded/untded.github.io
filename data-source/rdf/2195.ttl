@@ -7,6 +7,7 @@
   schema:name "Transport Means. Estimated Departure.Date Time";
   utd:bridges "MAR: IMO/FAL 1";
   utd:businessTerm "Estimated time departure (ETD)";
+  utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "medium";

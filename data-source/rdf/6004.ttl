@@ -5,6 +5,7 @@
   schema:description "The measurement of the moisture in the air, measured as a percentage.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Humidity. Percentage.Measure";
+  utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
   utd:extractionConfidence "high";
   utd:sourcePage 101;

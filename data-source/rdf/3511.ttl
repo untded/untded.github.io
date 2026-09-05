@@ -5,6 +5,7 @@
   schema:description "Identification of a place where goods are to be examined if different from the specified goods item location (3385)";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Examination Location.Identifier";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
   utd:charset "an";
   utd:extractionConfidence "high";

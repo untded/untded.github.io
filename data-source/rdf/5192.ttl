@@ -5,6 +5,7 @@
   schema:description "Description in plain language of an item to be deducted from the article items total in a commercial invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice. Deduction.Text";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -7,6 +7,7 @@
   schema:name "Insurer At Destination Agent. Party Identification.Text";
   utd:bridges "UNLK: an..35x5; L 50- 54, P 09-44";
   utd:businessTerm "Insurer's Agent at destination";
+  utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
   utd:extractionConfidence "medium";

@@ -5,6 +5,7 @@
   schema:description "Unique number allocated by the buyer to identify an individual package.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Buyer Assigned.Identifier";
+  utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "an";
   utd:extractionConfidence "medium";

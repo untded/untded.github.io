@@ -1,16 +1,18 @@
-// Pure seam: dataset aggregates. CATEGORIES is the SSOT for the nine
-// TDED tag ranges; the site derives all category UI from meta.json.
-export const CATEGORIES = [
-  { k: 1, range: '1000-1699', label: 'Documentation, references' },
-  { k: 2, range: '2000-2699', label: 'Dates, times, periods' },
-  { k: 3, range: '3000-3699', label: 'Parties, addresses, places, countries' },
-  { k: 4, range: '4000-4699', label: 'Clauses, conditions, terms, instructions' },
-  { k: 5, range: '5000-5699', label: 'Amounts, charges, percentages' },
-  { k: 6, range: '6000-6699', label: 'Measures, quantities' },
-  { k: 7, range: '7000-7699', label: 'Goods and articles' },
-  { k: 8, range: '8000-8699', label: 'Transport modes, means, equipment' },
-  { k: 9, range: '9000-9699', label: 'Other data elements (Customs, etc.)' },
-]
+// Pure seam: dataset aggregates. The nine TDED tag ranges are read from
+// src/data/categories.json — the single category definition shared with
+// the site's domain lib (src/lib/element.ts). Read lazily from cwd
+// because this module is also bundled into build chunks, where
+// import.meta.url-relative paths no longer resolve.
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+let cache = null
+export function categories() {
+  if (cache === null) {
+    cache = JSON.parse(readFileSync(resolve(process.cwd(), 'src/data/categories.json'), 'utf8'))
+  }
+  return cache
+}
 
 const CHANGE_GROUPS = {
   added: ['add'],
@@ -21,7 +23,7 @@ const CHANGE_GROUPS = {
 
 export function buildMeta(elements) {
   const byCategory = Object.fromEntries(
-    CATEGORIES.map((c) => {
+    categories().map((c) => {
       const inRange = elements.filter((e) => Math.floor(e.tag / 1000) === c.k)
       return [
         c.k,
@@ -29,6 +31,7 @@ export function buildMeta(elements) {
           ...c,
           count: inRange.length,
           active: inRange.filter((e) => e.status === 'active').length,
+          groups: groupTally(inRange),
         },
       ]
     }),
@@ -36,19 +39,24 @@ export function buildMeta(elements) {
   const changeTagTally = tally(elements.map((e) => e.change_tag))
   return {
     count: elements.length,
-    categories: CATEGORIES.map((c) => byCategory[c.k]),
+    categories: categories().map((c) => byCategory[c.k]),
     changeTagTally,
-    groups: Object.fromEntries(
-      Object.entries(CHANGE_GROUPS).map(([group, tags]) => [
-        group,
-        tags.reduce((n, t) => n + (changeTagTally[t] ?? 0), 0),
-      ]),
-    ),
+    groups: groupTally(elements),
     provenance: {
       pdf: 'UNTDED2005_Redacted.pdf',
       pages: '28-132',
       edition: 'UNTDED 2005 (ECE/TRADE/362, ISO 7372:2005)',
     },
+  }
+}
+
+function groupTally(elements) {
+  const t = tally(elements.map((e) => e.change_tag))
+  return {
+    added: CHANGE_GROUPS.added.reduce((n, tag) => n + (t[tag] ?? 0), 0),
+    changed: CHANGE_GROUPS.changed.reduce((n, tag) => n + (t[tag] ?? 0), 0),
+    undeleted: CHANGE_GROUPS.undeleted.reduce((n, tag) => n + (t[tag] ?? 0), 0),
+    retired: CHANGE_GROUPS.retired.reduce((n, tag) => n + (t[tag] ?? 0), 0),
   }
 }
 

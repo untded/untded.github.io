@@ -5,6 +5,7 @@
   schema:description "Quantity expressed in another unit than the Quantity delivered, and used as the basis for calculation of the Article item amount.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Price. Basis.Quantity";
+  utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
   utd:extractionConfidence "medium";

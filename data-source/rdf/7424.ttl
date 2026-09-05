@@ -5,6 +5,7 @@
   schema:description "Identifier used to group articles into a pre-described unit load for shipment/despatch as agreed between parties.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Shipment. Transport Unit.Identifier";
+  utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
   utd:charset "an";
   utd:extractionConfidence "medium";

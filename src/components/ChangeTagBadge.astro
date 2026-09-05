@@ -15,8 +15,8 @@ const info = changeTagInfo(changeTag)
       ? 'border-stamp/50 bg-stamp/10 text-stamp'
       : 'border-line bg-mist text-body',
   ]}
-  title={info.outside
-    ? `${info.label} — tag printed outside the section 4.1 legend, see /method/`
+  title={info.outsideLegend
+    ? `${info.label} — printed outside the section 4.1 legend, kept verbatim`
     : info.label}
 >
   {info.short}
