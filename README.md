@@ -18,7 +18,7 @@ CSS 4 via `@tailwindcss/vite` · Pagefind full-text search · Node 22.
 ## Commands
 
 ```sh
-npm run sync-data   # pull elements.json from ../untded-2005 (the SSOT) into data-source/
+npm run sync-data   # pull elements.json + untded.jsonld + untded.ttl from ../untded-2005 (the SSOT)
 npm run build-data  # data-source -> public/data/{index,meta}.json (pure seams, tested)
 npm run dev         # build-data + astro dev
 npm run build       # build-data + astro build + pagefind
@@ -31,7 +31,7 @@ npm run links       # lychee internal link check over dist/
 ```
 data-source/elements.json   committed sync of the dataset SSOT (npm run sync-data)
 scripts/                    sync + build-data pipelines; pure seams in scripts/lib/ with specs
-src/lib/data.ts             the only data accessor (typed)
+src/lib/data.ts             the only data accessor (typed; JSON-LD nodes read verbatim)
 src/lib/element.ts          domain SSOT: labels, categories, bridges, pointers
 src/lib/*-filter.ts         pure seams behind the islands (thin Vue shells)
 src/lib/*.spec.ts           sibling specs + dist-based site contracts
