@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import ChangeTagBadge from '../../components/ChangeTagBadge.astro'
-import { href } from '../../lib/site'
 ---
 
 <BaseLayout
   title="Presentation of data elements — the original text · UN/TDED"
-  description="Section 4.1 of UNTDED 2005, verbatim from the text layer: the layout of data element entries and the change-indicator legend."
+  description="Section 4.1 of UNTDED 2005, verbatim: entry layout, the change-indicator legend, character representation including entry locations, grouping into categories, cross-referencing, tag allocation and issue numbering."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document · PDF pp. 20–27</p>
@@ -52,6 +51,7 @@ import { href } from '../../lib/site'
         <p>The change indicator marks shall be:</p>
       </div>
       <table class="mt-3 w-full border-collapse text-sm">
+        <caption class="sr-only">Change indicator marks and their meanings</caption>
         <tbody class="divide-y divide-line">
           <tr><td class="py-2 pe-4"><ChangeTagBadge changeTag="add" /></td><td class="py-2 text-body">added</td></tr>
           <tr><td class="py-2 pe-4"><ChangeTagBadge changeTag="cn" /></td><td class="py-2 text-body">changed name</td></tr>
@@ -62,43 +62,231 @@ import { href } from '../../lib/site'
           <tr><td class="py-2 pe-4"><ChangeTagBadge changeTag="u" /></td><td class="py-2 text-body">undeleted (re-instated)</td></tr>
         </tbody>
       </table>
-      <div class="prose-def mt-4 space-y-4">
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="sr-only">Change indicators for deleted and undeleted entries</caption>
+          <thead>
+            <tr class="border-b-2 border-line text-left text-xs uppercase tracking-wider text-body">
+              <th scope="col" class="py-2 pe-4">In 1990 and 1993 editions</th>
+              <th scope="col" class="py-2 pe-4">In 2005 edition</th>
+              <th scope="col" class="py-2">Change indicator shall be</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            <tr><td class="py-2 pe-4 text-body">active entry</td><td class="py-2 pe-4 text-body">deleted entry</td><td class="py-2 font-mono">x</td></tr>
+            <tr><td class="py-2 pe-4 text-body">deleted entry</td><td class="py-2 pe-4 text-body">active entry</td><td class="py-2 font-mono">u</td></tr>
+            <tr><td class="py-2 pe-4 text-body">deleted entry</td><td class="py-2 pe-4 text-body">deleted entry</td><td class="py-2 font-mono">x</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prose-def mt-4">
         <p>
-          Change indicator marks for deleted and undeleted data elements are
-          now: in the 1990 and 1993 editions an active entry that becomes
-          deleted in the 2005 edition is marked <span class="font-mono text-sm">x</span>;
-          a deleted entry that becomes active is marked{' '}
-          <span class="font-mono text-sm">u</span>; a deleted entry that stays
-          deleted is marked <span class="font-mono text-sm">x</span>. That
-          means that the mfd change indicator shall not anymore be used.
+          That means that the mfd change indicator shall not anymore be used.
         </p>
       </div>
     </section>
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.2 Abbreviations of character representations</h2>
-      <div class="prose-def mt-3 space-y-4">
-        <p>
-          The following abbreviations are used to explain character
-          representation: <span class="font-mono text-sm">a</span> = alphabetic
-          characters; <span class="font-mono text-sm">n</span> = numeric
-          characters; <span class="font-mono text-sm">an</span> = alphanumeric
-          characters. A fixed length is stated as digits; a length up to a
-          maximum is stated after “..”.
-        </p>
+      <p class="mt-2 text-sm text-body">The following abbreviations are used to explain character representation:</p>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="sr-only">Character representation abbreviations</caption>
+          <tbody class="divide-y divide-line">
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">a</td><td class="py-2 text-body">alphabetic characters</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">n</td><td class="py-2 text-body">numeric characters</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">an</td><td class="py-2 text-body">alphabetic and numeric characters</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">3</td><td class="py-2 text-body">fixed length of 3 characters</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">..17</td><td class="py-2 text-body">variable data unit size where “17” indicates the maximum number of available character positions</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">..35x5</td><td class="py-2 text-body">undefined length where space is available to accommodate up to 5 lines of 35 characters each</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">..35xn</td><td class="py-2 text-body">undefined length where the data item requires an undefined number of lines of up to 35 characters each</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">an5 (aannn)</td><td class="py-2 text-body">fixed length of 5 alphanumeric characters, with 2 alphabetic characters to be followed by 3 numeric digits, in that order, without separation</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">an5 (aa-nn)</td><td class="py-2 text-body">fixed length of 5 alphanumeric characters, composed of two sub-elements as shown, with mandatory separation by hyphen (-)</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">n7 (nn,nnnn,n)</td><td class="py-2 text-body">fixed length of 7 numeric digits, composed of three sub-elements as shown, without mandatory separation; the comma (,) indicates the division between the sub-elements</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">(n2) a3</td><td class="py-2 text-body">fixed length of 3 alphabetic characters, to be preceded by another data element of 2 numeric digits</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">L</td><td class="py-2 text-body">line, to be followed by the line number (or numbers) for the data entry according to ISO 3535 and the UNLK</td></tr>
+            <tr><td class="py-2 pe-4 font-mono align-top whitespace-nowrap">P</td><td class="py-2 text-body">position, to be followed by the character position number (or numbers) for the data entry according to ISO 3535 and the UNLK</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p class="mt-3 text-sm text-body">
-        The practical decoder lives on the{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/notation')}>notation</a> page.
-      </p>
     </section>
 
-    <p class="mt-10 rounded-md border border-line bg-mist p-4 text-xs leading-relaxed text-body">
-      Transcribed verbatim from the PDF text layer of pp. 20–27
-      (<span class="font-mono">section-4.1-presentation.txt</span> in
-      untded/references). Sections 4.1.3–4.1.7 (references concerning
-      character representations, grouping, explicit cross-referencing,
-      category allocation and issue numbering) are in the raw text file.
-    </p>
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.3 References concerning character representations</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          When character representation is specified, using these abbreviations,
+          it refers either to the space available for the data entry, and the
+          location of the entry in the United Nations Layout Key (UNLK), or in
+          another aligned international document referred to, or to the
+          representation in an identified interchange protocol.
+        </p>
+        <p>
+          Whenever line and character positions are given for data elements
+          appearing in internationally-established, aligned forms, this is done
+          with a view either to confirm conformity to the UNLK, or to indicate
+          deviations from the UNLK, or differences between such forms.
+        </p>
+        <p>
+          If fixed field lengths have been specified in a particular
+          interchange protocol, this will be shown after an acronym, e.g.
+          SWIFT: n6, CIMP: an..12, UNSM: an5. This is done mainly to indicate
+          possible constraints for data items likely to be transmitted through
+          such systems. In some instances organizations have introduced
+          sectoral codes other than those recommended within UNECE. Such cases
+          are indicated by reference to the relevant organization or
+          Convention, e.g. currency code in Rail Consignment Note: CIM n2.
+        </p>
+        <p>
+          In specifications of character representation and entry location in
+          aligned forms, these acronyms are used as follows:
+        </p>
+        <ol class="list-decimal space-y-3 ps-6 text-sm">
+          <li>Representation and location unique for AWB: <span class="block font-mono text-xs text-body">Repr: AWB: a2; L 24, P 49-50</span></li>
+          <li>Representation and location in AWB deviates from general UNLK-based standard: <span class="block font-mono text-xs text-body">Repr: n..10; L 54-60, P 49-56<br />- AWB: n..8; L 33-44, P 39-46</span></li>
+          <li>Representation in AWB and CMR follows general standard but location is specific for each document: <span class="block font-mono text-xs text-body">Repr: an..17; L 04, P 63-80<br />- AWB: L 01, P 08-22<br />- CMR: L 59, P 20-26</span></li>
+          <li>Representation in AWB follows general standard but differs in CIM: <span class="block font-mono text-xs text-body">Repr: n..14<br />- AWB: L 60, P 09-22<br />- CIM: an..8; L 49, P 51-58</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.4 Grouping of data elements into broad categories</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          As set out in 1.8, the data elements have been grouped into broad
+          categories in a way that will assist users of the Directory, at the
+          same time taking into account the need to reserve substantial
+          capacity for national and company use. This version of the directory
+          does not include the service data elements (tags 0001-0699), as they
+          are provided within the ISO 9735 EDIFACT Syntax, version 4 release 1
+          Part 10, 2002.
+        </p>
+        <p>
+          The system selected for the Directory for grouping data elements into
+          broad categories is based on the characteristics of the data item,
+          taking into account its nature rather than its application area. This
+          means that all dates are placed in one group, all names in another,
+          and all amounts in a third, without any consideration of the kind of
+          date, name and amount.
+        </p>
+        <p>
+          Users, even if they do not know the exact name of a data element, or
+          in which application area a particular data element might have been
+          placed, are likely to know the expected contents of the data item
+          with sufficient accuracy to be able to find it within a limited range
+          of not more than one hundred data elements placed together according
+          to this principle.
+        </p>
+        <p>Attention is drawn to the allocation of tag numbers in each category:</p>
+        <ul class="list-disc space-y-1 ps-6 text-sm">
+          <li>Up to 699 are reserved for allocation by the TDED Maintenance Agency.</li>
+          <li>Tags 700 to 799 are used in message under development and are allocated by the submitter.</li>
+          <li>Tags from 800 upwards are for use within national or regional message development groups.</li>
+        </ul>
+      </div>
+      <h3 class="mt-5 text-sm font-semibold uppercase tracking-wider text-body">The grouping used in the Directory</h3>
+      <dl class="mt-3 divide-y divide-line text-sm">
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 1 (1000-1699) documentation, references</dt><dd class="mt-1 text-body">Data elements intended for data handling or documentation purposes, such as those required to service the interchange of user data, document and message names, references and reference numbers, ordinal numbers such as item and page numbers, number of copies of documents.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 2 (2000-2699) Dates, times, periods of time</dt><dd class="mt-1 text-body">All expressions of time, such as calendar dates, periods of time (month, week, day), time limits, commencement and expiry dates.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 3 (3000-3699) Parties, addresses, places, countries</dt><dd class="mt-1 text-body">Names and addresses of legal and physical persons, designations of officials, organizational units, places, countries, routes.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 4 (4000-4699) Clauses, conditions, terms, instructions</dt><dd class="mt-1 text-body">Authentications, authorizations, endorsements, certifications, clauses, conditions, terms, reference clauses, stamps, labels, requests, instructions, receipts, statements, information texts.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 5 (5000-5699) Amounts, charges, percentages</dt><dd class="mt-1 text-body">Financial values, amounts, charges; other quantities and values for commercial, transport, Customs, statistical and any other purposes; other details, such as prices, rates, percentages and discounts, used as a basis for invoice calculations, etc.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 6 (6000-6699) Measure identifiers, quantities (other than monetary)</dt><dd class="mt-1 text-body">Dimensions, weights, volumes, distances, temperature, currency, other quantities, with the exception of monetary quantities in Group 5, measure unit specifiers.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 7 (7000-7699) Goods and articles: descriptions and identifiers</dt><dd class="mt-1 text-body">Descriptions, classifications and identification of goods and articles, consignment identifiers, number and kind of packages, dangerous goods details.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 8 (8000-8699) Transport modes, means and equipments</dt><dd class="mt-1 text-body">Identification and description of means of transport and transport equipments (including containers), transport equipment details, transport modes and movements, voyage and flight numbers.</dd></div>
+        <div class="py-3"><dt class="font-mono font-medium text-ink">Group 9 (9000-9699) Other data elements (Customs, etc.)</dt><dd class="mt-1 text-body">Data elements not belonging to any of the specific categories 1-8.</dd></div>
+      </dl>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.5 Explicit cross-referencing between data elements and codes: () and []</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          In UN/EDIFACT UNCL Code List, rule 1.3: if a generic data element
+          combined with a qualifier value is identical to an existing specific
+          data element in TDED, then the description of the qualifier code
+          value starts with the tag of the specific data element in
+          [square brackets]. Example: under 3035 Party function code
+          qualifier, the value BB “Buyer’s bank” carries <span class="font-mono text-sm">[3420]</span>{' '}
+          Bank employed by the buyer to make payment — indicating that 3420 is
+          a specific data element in the current TDED.
+        </p>
+        <p>
+          Rule 1.4: if a generic data element combined with a qualifier value
+          is identical to an existing specific data element in TDED but the
+          specific data element gives information which is normally provided in
+          EDIFACT messages in associated separate data elements, then only the
+          functional meaning is copied and the description of the qualifier
+          code value starts with the tag of the specific data element in
+          (round brackets). Example: under 3035, the value AL “Principal”
+          carries <span class="font-mono text-sm">(3340)</span> Party accepting
+          liability for goods held or moving (e.g. transit) under a Customs
+          authorization and — when applicable — a guarantee.
+        </p>
+        <p>
+          This rule has now been applied similarly in TDED, allowing the same
+          flagging, but the other way round.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.6 Categories of data elements, allocation of identifiers (tags)</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          Four-digit numbers are used as data element identifiers (tags) in the
+          Directory. Taking into account the desirability of grouping the data
+          elements into broad categories in a way that will assist users of
+          the Directory, and also the need to reserve substantial capacity for
+          national and company use, numbers have been assigned as follows,
+          within the framework of a sub-division into 9 general categories.
+        </p>
+        <p>
+          Even tag numbers are used to designate the plain language
+          representation of the data item (which includes numerical values
+          other than codes), whereas the following odd, uneven number is
+          reserved for the coded representation, when applicable, of the same
+          data element, e.g. 4460 Payment means; 4461 Payment means, coded.
+        </p>
+        <p>For identifiers:</p>
+        <ul class="list-disc space-y-1 ps-6 text-sm">
+          <li>identifiers, also alpha-numerical ones, should have an odd tag (except for sequence identifiers, having an even tag);</li>
+          <li>the preceding even number should not be used, except if a text version is required.</li>
+        </ul>
+        <p>
+          Existing entries not compliant with this rule should be corrected
+          only if an explicit business need has been identified, asking for
+          such a change. The purpose of the tags is to provide language
+          independent identifiers for the data elements; the only significance
+          attributed to the numbers is their designation of broad categories
+          and the indication of plain language and coded version.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">4.1.7 Data element issue numbering</h2>
+      <div class="prose-def mt-3 space-y-4">
+        <p>
+          Data elements used in UNSMs are identified by an “E” in front of the
+          issue number. This information is available only from the source
+          database. These data elements are also included in the United Nations
+          Trade Data Interchange Directory (UNTDID), Part 5, Chapter 6, EDED.
+        </p>
+        <p>Each data element has been given an issue number:</p>
+        <ol class="list-decimal space-y-1 ps-6 text-sm">
+          <li>
+            for data elements used in UNSMs (identified by “E”), version/release
+            control is reflected in data elements 0052 and 0054 and is based on
+            changes to UN/EDIFACT directory version/release procedures;
+          </li>
+          <li>
+            for other data elements, the year of introduction into TDED or of
+            amendment (e.g. 87).
+          </li>
+        </ol>
+      </div>
+    </section>
   </div>
 </BaseLayout>
