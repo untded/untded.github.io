@@ -33,9 +33,10 @@ data-source/elements.json   committed sync of the dataset SSOT (npm run sync-dat
 scripts/                    sync + build-data pipelines; pure seams in scripts/lib/ with specs
 src/lib/data.ts             the only data accessor (typed; JSON-LD nodes read verbatim)
 src/lib/element.ts          domain SSOT: labels, categories, bridges, pointers
+src/lib/tree.ts             name-hierarchy seam behind /tree
 src/lib/*-filter.ts         pure seams behind the islands (thin Vue shells)
 src/lib/*.spec.ts           sibling specs + dist-based site contracts
-src/islands/                RenameLedger, DirectoryFilter, Omnibox (Vue)
+src/islands/                RenameLedger, DirectoryFilter, TreeBrowser, Omnibox (Vue)
 src/components/             Astro components (TagPlate, ReprChip, …)
 src/pages/                  / · /elements/… · /categories/… · /notation /method /download /about /search · 404
 ```
