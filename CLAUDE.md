@@ -32,6 +32,9 @@ npm run dev
   `scripts/lib/*.mjs`) — logic goes in the seams, tests beside them.
 - Theme: light/dark via .dark class + localStorage (untded-theme) + no-flash
   bootstrap in BaseLayout; keep bg-white only on logo plates.
+- Perf contracts: /elements HTML budget is 60 KB (the noscript table once
+  ballooned it to 490 KB). Vanilla scripts that touch the DOM need
+  data-astro-rerun to survive view transitions.
 - Hostnames/base paths are NEVER hardcoded: `src/lib/site.ts` is the URL
   config SSOT (`href()` for internal routes — root and sub-path deploys are
   different; `astro.config.mjs` `site` is the origin, read by contracts).
