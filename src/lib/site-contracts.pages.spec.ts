@@ -100,8 +100,7 @@ it("builds the tree page and serves the source PDFs", () => {
   expect(existsSync(`${dist}/tree/index.html`)).toBe(true)
   expect(readFileSync(`${dist}/tree/index.html`, "utf8")).toContain("The name tree")
   expect(existsSync(`${dist}/pdf/UNTDED2005.pdf`)).toBe(true)
-  expect(existsSync(`${dist}/pdf/UNTDED2005_Redacted.pdf`)).toBe(true)
-  expect(readFileSync(`${dist}/elements/1001/index.html`, "utf8")).toContain(`pdf/UNTDED2005_Redacted.pdf#page=`)
+  expect(readFileSync(`${dist}/elements/1001/index.html`, "utf8")).toContain(`pdf/UNTDED2005.pdf#page=`)
 })
 
 it("ships the theme system, footer logos and sharing metadata", () => {
