@@ -12,12 +12,15 @@ const { provenance } = Astro.props
   <h2 class="mb-2 text-xs font-semibold uppercase tracking-wider text-body">Source</h2>
   <dl class="space-y-1.5 text-body">
     <div class="flex justify-between gap-3">
-      <dt>Source</dt>
-      <dd class="text-right font-mono text-xs text-ink">{provenance.pdf}</dd>
-    </div>
-    <div class="flex justify-between gap-3">
       <dt>PDF page</dt>
-      <dd class="font-mono tabular-nums text-ink">{provenance.page}</dd>
+      <dd>
+        <a
+          class="font-mono tabular-nums text-ink underline decoration-un/50 hover:text-un-deep"
+          href={href(`/pdf/${provenance.pdf}#page=${provenance.page}`)}
+        >
+          {provenance.page} ↗
+        </a>
+      </dd>
     </div>
     <div class="flex justify-between gap-3">
       <dt>Transcription confidence</dt>
@@ -26,5 +29,4 @@ const { provenance } = Astro.props
       </dd>
     </div>
   </dl>
-
 </aside>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /*
  * Single palette source (SSOT). UN identity colors verified against the
  * UNSSC Brand Book (#009EDB, Pantone 2925) and the UNECE "UN blue +
@@ -39,8 +41,7 @@
 /* Dark: the same ink-and-paper system with the lights inverted —
  * UN blue is unchanged; only the neutrals flip. Logos sit on constant
  * white plates (bg-white is kept for exactly that). */
-@media (prefers-color-scheme: dark) {
-  :root {
+.dark {
     --color-paper: #101a26;
     --color-mist: #16222e;
     --color-line: #2b3a49;
@@ -49,8 +50,11 @@
     --color-stamp: #d29b78;
     --color-un-deep: #4cc4f0;
     --color-un-ink: #9fd9f2;
-    color-scheme: dark;
-  }
+  color-scheme: dark;
+}
+
+:root {
+  color-scheme: light;
 }
 
 html {

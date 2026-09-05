@@ -19,4 +19,10 @@ for (const f of ['untded.jsonld', 'untded.ttl']) {
 const rdfDir = fileURLToPath(new URL('../data-source/rdf/', import.meta.url))
 rmSync(rdfDir, { recursive: true, force: true })
 cpSync(`${datasetDir}/derived/elements-rdf`, rdfDir, { recursive: true })
-console.log('synced elements.json, untded.jsonld, untded.ttl, rdf/* -> data-source/')
+// host the source PDFs (ECE/TRADE/362, © UN/UNECE, attribution) on the site
+const pdfDir = fileURLToPath(new URL('../public/pdf/', import.meta.url))
+mkdirSync(pdfDir, { recursive: true })
+for (const pdf of ['UNTDED2005.pdf', 'UNTDED2005_Redacted.pdf']) {
+  cpSync(`${datasetDir}/../references/${pdf}`, `${pdfDir}${pdf}`)
+}
+console.log('synced elements.json, untded.jsonld, untded.ttl, rdf/, pdf/')

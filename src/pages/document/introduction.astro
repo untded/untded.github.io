@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { href } from '../../lib/site'
 ---
 
 <BaseLayout
   title="Introduction — the original text · UN/TDED"
-  description="Section 1 of UNTDED 2005: scope, sources and volumes, references, definitions, abbreviations, and how the Directory is organized."
+  description="Section 1 of UNTDED 2005: scope, sources and volumes, references, definitions, abbreviations, character sets, and how the Directory is organized."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document · PDF pp. 9–13</p>
@@ -41,7 +40,7 @@ import { href } from '../../lib/site'
           of Vol. II is an activity of the UN/CEFACT. Volume III is a Compendium
           of Trade Facilitation Recommendations, a joint activity of the UNECE
           and the UN Conference on Trade and Development (UNCTAD), Special
-          Programme on Trade Efficiency (SPTE).
+          Programme for Trade Efficiency (SPTE).
         </p>
         <p>
           The main source of this edition of TDED is the set of UN/EDIFACT
@@ -54,21 +53,108 @@ import { href } from '../../lib/site'
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-semibold tracking-tight text-ink">1.3 Definitions (selected)</h2>
-      <p class="mt-2 text-sm text-body">
-        The source defines its vocabulary from ISO 9735 and ISO 2382/4; two
-        entries that matter for reading the registry:
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.2 References</h2>
+      <h3 class="mt-4 text-sm font-semibold uppercase tracking-wider text-body">1.2.1 International Standards</h3>
+      <p class="mt-2 text-sm leading-relaxed text-body">
+        The following standards contain provisions which, through reference in
+        this text, constitute provisions of this International Standard. All
+        standards are subject to revision, and parties to agreements based on
+        this International Standard are encouraged to investigate the
+        possibility of applying the most recent editions of the standards
+        indicated below. Members of IEC and ISO maintain registers of currently
+        valid International Standards. (Dates provided in the table are based
+        upon checking the ISO website 2004-09-08.)
       </p>
-      <dl class="mt-3 space-y-3 text-sm">
-        <div class="rounded-md border border-line bg-paper p-4">
-          <dt class="font-mono font-medium text-ink">data element tag</dt>
-          <dd class="mt-1 text-body">A unique identifier for a data element in a data elements directory. (Source: ISO 9735:1988)</dd>
-        </div>
-        <div class="rounded-md border border-line bg-paper p-4">
-          <dt class="font-mono font-medium text-ink">data element value</dt>
-          <dd class="mt-1 text-body">Specific instance of a simple data element, represented as specified in a simple data element specification and, if the simple data element is coded, in a code list. (Source: ISO 9735:2002)</dd>
-        </div>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="sr-only">International Standards referenced by UNTDED 2005</caption>
+          <tbody class="divide-y divide-line">
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 216:1975</td><td class="py-1.5 text-body">Writing paper and certain classes of printed matter — Trimmed sizes — A and B series</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 639-1:2002, -2:1998</td><td class="py-1.5 text-body">Codes for the representation of names of languages (alpha-2, alpha-3)</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 1000:1992</td><td class="py-1.5 text-body">SI units and recommendations for the use of their multiples and of certain other units</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO/IEC 2382-1:1993</td><td class="py-1.5 text-body">Information technology — Vocabulary — Part 1: Fundamental terms</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 2784:1974</td><td class="py-1.5 text-body">Continuous forms used for information processing — Sizes and sprocket feed holes</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 2955:1983</td><td class="py-1.5 text-body">Representation of SI and other units for use in systems with limited character sets (withdrawn)</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 3166-1/-2/-3</td><td class="py-1.5 text-body">Codes for the representation of names of countries and their subdivisions</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 3535:1977</td><td class="py-1.5 text-body">Forms design sheet and layout chart</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 4217:2001</td><td class="py-1.5 text-body">Codes for the representation of currencies and funds</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 6346:1995</td><td class="py-1.5 text-body">Freight containers — Coding, identification and marking</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 6422:1985</td><td class="py-1.5 text-body">Layout Key for trade documents</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 8601:2004</td><td class="py-1.5 text-body">Data elements and interchange formats — information interchange — representation of dates and times</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO/IEC 8859-1/-2/-5/-7</td><td class="py-1.5 text-body">Information processing — 8-bit single-byte coded graphic character sets</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">ISO 9735:2002 (Parts 1–10)</td><td class="py-1.5 text-body">Electronic data interchange for administration, commerce and transport (EDIFACT) — Application level syntax rules</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="mt-6 text-sm font-semibold uppercase tracking-wider text-body">1.2.2 UN and UN/CEFACT Recommendations</h3>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="sr-only">UN and UN/CEFACT Recommendations referenced by UNTDED 2005</caption>
+          <tbody class="divide-y divide-line">
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 1</td><td class="py-1.5 text-body">United Nations Layout Key for Trade Documents; reflected as ISO 6422:1985, 8439:1990 and 8440:1986 and Corr.1:2000</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 6</td><td class="py-1.5 text-body">Aligned Invoice Layout Key for International Trade</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 8</td><td class="py-1.5 text-body">Unique Identification Code Methodology — UNIC</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 11</td><td class="py-1.5 text-body">Documentary Aspects of the International Transport of Dangerous Goods</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 12</td><td class="py-1.5 text-body">Measures to Facilitate Maritime Transport Documents Procedures</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 15</td><td class="py-1.5 text-body">Simpler Shipping Marks</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 22</td><td class="py-1.5 text-body">Layout Key for Standard Consignment Instructions</td></tr>
+            <tr><td class="py-1.5 pe-4 font-mono align-top whitespace-nowrap">Rec. No. 25</td><td class="py-1.5 text-body">Use of the United Nations Electronic Data Interchange for Administration, Commerce and Transport (UN/EDIFACT)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.3 Definitions</h2>
+      <p class="mt-2 text-sm text-body">For the purpose of this International Standard, the following definitions apply.</p>
+      <dl class="mt-3 divide-y divide-line text-sm">
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.1 alphabetic character set</dt><dd class="mt-0.5 text-body">A character set that contains letters and may contain control characters and special characters, but not digits. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.2 alphanumeric character set</dt><dd class="mt-0.5 text-body">A character set that contains both letters and digits and may contain control characters and special characters. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.3 blank (character)</dt><dd class="mt-0.5 text-body">A character that represents an empty position in a graphic character string. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.4 character</dt><dd class="mt-0.5 text-body">A member of a set of elements that is used for the representation, organization, or control of data. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.9 data element tag</dt><dd class="mt-0.5 text-body">A unique identifier for a data element in a data elements directory. (Source: ISO 9735:1988)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.10 data element value</dt><dd class="mt-0.5 text-body">Specific instance of a simple data element, represented as specified in a simple data element specification and, if the simple data element is coded, in a code list. (Source: ISO 9735:2002)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.11 data element value length</dt><dd class="mt-0.5 text-body">The number of characters in a data element value. (Source: ECE)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.12 digit (numeric character)</dt><dd class="mt-0.5 text-body">A graphic character that represents a non-negative integer. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.13 letter</dt><dd class="mt-0.5 text-body">A graphic character that, when appearing alone or combined with others, is primarily used to represent a sound element of a spoken language. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.14 numeric character set</dt><dd class="mt-0.5 text-body">A character set that contains digits and may contain control characters and special characters, but not letters. (Source: ISO 2382/4)</dd></div>
+        <div class="py-2"><dt class="font-mono font-medium text-ink">1.3.15 special character</dt><dd class="mt-0.5 text-body">A graphic character that is not a letter, a digit, or blank character, and usually not an ideogram. (Source: ISO 2382/4)</dd></div>
       </dl>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.4 Abbreviations</h2>
+      <p class="mt-2 text-sm text-body">
+        The following acronyms or abbreviations are used for making reference
+        to documents, conventions and interchange standards:
+      </p>
+      <dl class="mt-3 grid gap-x-8 gap-y-1.5 text-sm sm:grid-cols-2">
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">AWB</dt><dd class="text-body">IATA Air Waybill</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">CIM</dt><dd class="text-body">Rail Consignment Note (CIM Convention)</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">CIMP</dt><dd class="text-body">IATA Cargo Interchange Message Procedures Manual (CARGO-IMP manual)</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">CMR</dt><dd class="text-body">Road Consignment Note (CMR Convention)</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">EC</dt><dd class="text-body">European Communities</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">EFTA</dt><dd class="text-body">European Free Trade Association</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">IATA</dt><dd class="text-body">International Air Transport Association</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">ICC</dt><dd class="text-body">International Chamber of Commerce</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">INV</dt><dd class="text-body">United Nations Layout Key for Aligned Invoices</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">MAR</dt><dd class="text-body">IMO Model forms and ICS Standard Bill of Lading</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">SAD</dt><dd class="text-body">Single Administrative Document (EC and EFTA)</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">SWIFT</dt><dd class="text-body">Society for Worldwide Interbank Financial Telecommunication</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">UNLK</dt><dd class="text-body">United Nations Layout Key</dd></div>
+        <div class="flex gap-3"><dt class="w-20 shrink-0 font-mono font-medium text-ink">UNSM</dt><dd class="text-body">United Nations Standard Message (UN/EDIFACT)</dd></div>
+      </dl>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">1.5 Character sets</h2>
+      <div class="prose-def mt-3">
+        <p>
+          The characters in ISO 8859 shall be used for the representation of
+          the data elements in this Directory.
+        </p>
+      </div>
     </section>
 
     <section class="mt-10">
@@ -83,27 +169,21 @@ import { href } from '../../lib/site'
           be self-contained and consultation of other parts of the Directory or
           outside sources should be required only exceptionally.
         </p>
-        <p>
-          Each identified data element has been given: a data element name; a
-          description of the concept to explain the agreed meaning and to aid
-          in determining the content of the information (data value) to be
-          provided with the data element; a specification of the character
-          representation of the data value, with indication of space (in number
-          of characters) available and location in aligned forms, and of field
-          lengths where such have been established in particular interchange
-          protocols; and, when applicable or required, notes providing
-          additional information and references to other parts of the
-          Directory, or to other sources, as appropriate.
-        </p>
+      </div>
+      <h3 class="mt-6 text-sm font-semibold uppercase tracking-wider text-body">1.7 Presentation of data elements in the Directory</h3>
+      <div class="prose-def mt-3 space-y-4">
+        <p>Each identified data element has been given:</p>
+        <ol class="list-decimal space-y-1 ps-6">
+          <li>a data element name;</li>
+          <li>a description of the concept to explain the agreed meaning and to aid in determining the content of the information (data value) to be provided with the data element;</li>
+          <li>a specification of the character representation of the data value, with indication of space (in number of characters) available and location in aligned forms, and of field lengths where such have been established in particular interchange protocols;</li>
+        </ol>
+        <p>and, when applicable or required:</p>
+        <ol class="list-decimal space-y-1 ps-6">
+          <li>notes providing additional information;</li>
+          <li>references to other parts of the Directory, or to other sources, as appropriate.</li>
+        </ol>
       </div>
     </section>
-
-    <p class="mt-10 rounded-md border border-line bg-mist p-4 text-xs leading-relaxed text-body">
-      Transcribed from OCR of PDF pp. 9–13 (see the{' '}
-      <a class="text-un-deep underline decoration-un/50" href={href('/document')}>provenance note</a>);
-      sections 1.2 (references) and 1.4–1.5 (abbreviations, notation) are
-      rendered in practical form on the{' '}
-      <a class="text-un-deep underline decoration-un/50" href={href('/notation')}>notation</a> page.
-    </p>
   </div>
 </BaseLayout>
