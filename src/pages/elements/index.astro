@@ -32,36 +32,51 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
 
     <noscript>
       <p class="mb-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
-        JavaScript is off, so filtering is unavailable — the full table follows.
+        JavaScript is off, so filtering is unavailable — here are the first 40
+        elements; browse the rest by category (
+        {
+          CATEGORY_RANGES().map((c, i) => (
+            <span>
+              {i > 0 && ' · '}
+              <a class="text-un-deep underline decoration-un/50" href={href(`/categories/${c.range}`)}>
+                {c.range}
+              </a>
+            </span>
+          ))
+        }
+        ) or the <a class="text-un-deep underline decoration-un/50" href={href('/tree')}>name tree</a>.
       </p>
-      <table class="dir-table">
-        <thead>
-          <tr>
-            <th scope="col">Tag</th>
-            <th scope="col">Name</th>
-            <th scope="col">Repr.</th>
-            <th scope="col">Change</th>
-            <th scope="col">Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            elements.map((e) => (
-              <tr class={e.status === 'retired' ? 'retired' : ''}>
-                <td class="font-mono tabular-nums">
-                  <a href={href(`/elements/${e.tag}`)}>{e.tag}</a>
-                </td>
-                <td class="name-cell">
-                  <a href={href(`/elements/${e.tag}`)}>{e.name ?? '(retired — see entry)'}</a>
-                </td>
-                <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
-                <td class="font-mono text-xs text-body">{e.change_tag}</td>
-                <td class="font-mono text-xs text-body">{Math.floor(e.tag / 1000)}000</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
+      <div class="overflow-x-auto">
+        <table class="dir-table">
+          <caption class="sr-only">First 40 data elements of UNTDED 2005</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tag</th>
+              <th scope="col">Name</th>
+              <th scope="col">Repr.</th>
+              <th scope="col">Change</th>
+              <th scope="col">Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              elements.slice(0, 40).map((e) => (
+                <tr class={e.status === 'retired' ? 'retired' : ''}>
+                  <td class="font-mono tabular-nums">
+                    <a href={href(`/elements/${e.tag}`)}>{e.tag}</a>
+                  </td>
+                  <td class="name-cell">
+                    <a href={href(`/elements/${e.tag}`)}>{e.name ?? '(retired — see entry)'}</a>
+                  </td>
+                  <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
+                  <td class="font-mono text-xs text-body">{e.change_tag}</td>
+                  <td class="font-mono text-xs text-body">{Math.floor(e.tag / 1000)}000</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
     </noscript>
   </div>
 </BaseLayout>

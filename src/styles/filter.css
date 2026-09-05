@@ -1,4 +1,15 @@
-/* Shared filter-bar family (used by the directory island). */
+/* Shared control kit (directory island, tree, search-adjacent UI).
+ * One machined instrument panel: 36px controls, soft UN-blue focus rings,
+ * custom select chevrons, pill badges. All colors via tokens so the dark
+ * flip follows automatically. */
+
+.filter-card {
+  border: 1px solid var(--color-line);
+  background: color-mix(in srgb, var(--color-mist) 60%, var(--color-paper));
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -8,37 +19,106 @@
 
 .filter-input,
 .filter-select {
+  height: 2.25rem;
   border: 1px solid var(--color-line);
   background: var(--color-paper);
-  border-radius: 0.375rem;
-  max-width: 100%;
-  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  padding: 0 0.75rem;
   font-size: 0.925rem;
   color: var(--color-ink);
+  max-width: 100%;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
 }
 
 .filter-input {
-  min-width: min(16rem, 100%);
-  flex: 1 1 14rem;
+  min-width: min(15rem, 100%);
+  flex: 1 1 12rem;
+}
+
+.filter-input::placeholder {
+  color: color-mix(in srgb, var(--color-body) 70%, transparent);
+}
+
+.filter-input:hover,
+.filter-select:hover {
+  border-color: color-mix(in srgb, var(--color-un) 45%, var(--color-line));
 }
 
 .filter-input:focus,
 .filter-select:focus {
   border-color: var(--color-un);
-  outline: 2px solid color-mix(in srgb, var(--color-un) 35%, transparent);
-  outline-offset: 0;
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-un) 22%, transparent);
 }
 
+/* custom chevron: appearance-free selects read as one kit with the inputs */
+.filter-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%2345526b' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  cursor: pointer;
+}
+
+.dark .filter-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%23b4c1cf' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* the count reads as a quiet pill */
 .filter-count {
-  font-size: 0.85rem;
-  color: var(--color-body);
+  display: inline-flex;
+  align-items: center;
+  height: 1.5rem;
+  padding: 0 0.625rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--color-un) 12%, transparent);
+  color: var(--color-un-ink);
+  font-size: 0.8rem;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.dark .filter-count {
+  color: var(--color-un-deep);
+}
+
+/* pill buttons (Show all, copy chips) share one recipe */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  color: var(--color-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 120ms ease, color 120ms ease, box-shadow 120ms ease;
+}
+
+.filter-btn:hover {
+  border-color: color-mix(in srgb, var(--color-un) 55%, var(--color-line));
+  color: var(--color-un-deep);
+}
+
+.filter-btn:focus-visible {
+  outline: none;
+  border-color: var(--color-un);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-un) 22%, transparent);
 }
 
 .dir-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.925rem;
+}
+
+.dir-table caption {
+  text-align: left;
 }
 
 .dir-table th {
@@ -59,6 +139,14 @@
   border-bottom: 1px solid var(--color-line);
   padding: 0.45rem 0.75rem;
   vertical-align: top;
+}
+
+.dir-table tbody tr {
+  transition: background-color 100ms ease;
+}
+
+.dir-table tbody tr:hover {
+  background: color-mix(in srgb, var(--color-mist) 55%, transparent);
 }
 
 .dir-table a {

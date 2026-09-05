@@ -65,7 +65,8 @@ onMounted(load)
 
 <template>
   <div>
-    <div class="filter-bar mb-4">
+    <div class="filter-card mb-4">
+     <div class="filter-bar">
       <label class="sr-only" for="dir-q">Search by tag or name</label>
       <input
         id="dir-q"
@@ -108,6 +109,7 @@ onMounted(load)
       <span class="filter-count" aria-live="polite">
         {{ loaded ? `${visible.length} of ${rows.length} elements` : 'loading…' }}
       </span>
+      </div>
     </div>
 
     <p v-if="loaded && visible.length === 0" class="rounded-md border border-line bg-mist p-6 text-center text-body">
@@ -146,7 +148,7 @@ onMounted(load)
     <p v-if="loaded && shown < visible.length" class="mt-4 text-center">
       <button
         type="button"
-        class="rounded-md border border-line bg-mist px-4 py-1.5 text-sm text-body hover:border-un/60 hover:text-un-deep"
+        class="filter-btn"
         @click="shown = visible.length"
       >
         Show all {{ visible.length.toLocaleString() }} elements

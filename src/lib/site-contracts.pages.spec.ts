@@ -128,10 +128,13 @@ it("carries the full original documentation", () => {
     expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('apple-touch-icon')
   })
 
-  it('lists all elements in the no-JS directory table', () => {
+  it('keeps the no-JS directory sample lean and signposts categories', () => {
     const html = readFileSync(`${dist}/elements/index.html`, 'utf8')
     const rows = html.match(/<tr\b/g)?.length ?? 0
-    expect(rows).toBeGreaterThanOrEqual(elements.length)
+    expect(rows).toBeGreaterThanOrEqual(40)
+    expect(html).toContain('/categories/1000-1699')
+    expect(html).toContain('/tree')
+    expect(statSync(`${dist}/elements/index.html`).size).toBeLessThan(60_000)
   })
 
   it('sitemaps the element and category routes', () => {
