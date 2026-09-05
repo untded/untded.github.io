@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import RenameLedger from '../islands/RenameLedger.vue'
 import StatStrip from '../components/StatStrip.astro'
 import CategoryGrid from '../components/CategoryGrid.astro'
-import { loadElements } from '../lib/data'
+import { loadElements, jsonldNode } from '../lib/data'
 import { buildLedger } from '../lib/ledgers'
 import { buildMeta } from '../../scripts/lib/meta.mjs'
 import { href } from '../lib/site'
@@ -11,6 +11,7 @@ import { href } from '../lib/site'
 const elements = loadElements()
 const ledger = buildLedger(elements)
 const meta = buildMeta(elements)
+const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/dataset/untded-2005`)
 ---
 
 <BaseLayout
@@ -77,4 +78,5 @@ const meta = buildMeta(elements)
       </a>
     </div>
   </section>
+  {datasetJsonld && <script type="application/ld+json" set:html={JSON.stringify(datasetJsonld)} />}
 </BaseLayout>

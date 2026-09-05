@@ -6,7 +6,7 @@ import ChangeTagBadge from '../../components/ChangeTagBadge.astro'
 import OldNameBlock from '../../components/OldNameBlock.astro'
 import BridgeList from '../../components/BridgeList.astro'
 import ProvenanceCard from '../../components/ProvenanceCard.astro'
-import { loadElements } from '../../lib/data'
+import { loadElements, jsonldNode } from '../../lib/data'
 import { categoryOf, changeTagInfo, elementUrl, neighbours, pairedTag, replacementPointer } from '../../lib/element'
 import { href } from '../../lib/site'
 import { DATASET_FILE_BASE } from '../../lib/site'
@@ -26,6 +26,7 @@ const allTags = loadElements().map((e) => e.tag)
 const { prev, next } = neighbours(element.tag, allTags)
 const pair = pairedTag(element.tag, new Set(allTags))
 const dataFile = `${DATASET_FILE_BASE}/${category.range}.yaml`
+const jsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag}`)
 ---
 
 <BaseLayout
@@ -219,6 +220,11 @@ const dataFile = `${DATASET_FILE_BASE}/${category.range}.yaml`
       </article>
     </div>
   </div>
+  {
+    jsonld && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+    )
+  }
 </BaseLayout>
 
 <script>

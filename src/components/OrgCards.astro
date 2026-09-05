@@ -1,0 +1,45 @@
+---
+import { href } from '../lib/site'
+import { ISO_TC154_URL, UNECE_UNCEFACT_URL } from '../lib/site'
+
+interface Org {
+  name: string
+  sub: string
+  role: string
+  logo: { src: string; alt: string; class: string }
+  url: string
+}
+
+const orgs: Org[] = [
+  {
+    name: 'UNECE — UN/CEFACT',
+    sub: 'United Nations Economic Commission for Europe, Centre for Trade Facilitation and Electronic Business',
+    role: 'The United Nations home of this directory (ISO 7372 / TDED), maintained jointly through ISO/TC 154/JWG 9.',
+    logo: { src: '/img/logo-unece.svg', alt: 'UNECE logo', class: 'h-14' },
+    url: UNECE_UNCEFACT_URL,
+  },
+  {
+    name: 'ISO/TC 154',
+    sub: 'Processes, data elements and documents in commerce, industry and administration',
+    role: 'The ISO committee that publishes ISO 7372 in parallel with the UN; its plenary resolutions mandate this open-source platform.',
+    logo: { src: '/img/logo-iso.svg', alt: 'ISO logo', class: 'h-14' },
+    url: ISO_TC154_URL,
+  },
+]
+---
+
+<div class="grid gap-4 sm:grid-cols-2">
+  {
+    orgs.map((org) => (
+      <a
+        href={org.url}
+        class="flex flex-col rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60"
+      >
+        <img src={href(org.logo.src)} alt={org.logo.alt} class={org.logo.class} width="auto" height="auto" />
+        <h3 class="mt-4 text-base font-semibold text-ink">{org.name}</h3>
+        <p class="mt-1 text-xs uppercase tracking-wide text-body/80">{org.sub}</p>
+        <p class="mt-3 text-sm leading-relaxed text-body">{org.role}</p>
+      </a>
+    ))
+  }
+</div>
