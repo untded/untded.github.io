@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="Method — unt·ded"
+  description="How the UNTDED 2005 PDF was digitized and how every element can be verified: character conservation, row reconciliation, OCR re-reads, UN/EDIFACT cross-check."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-semibold tracking-tight text-ink">Method</h1>
+    <p class="mt-2 max-w-2xl text-body">
+      The 2005 edition exists as a 132-page scan. The digitization parses the
+      page text layer by word coordinates, reassembles wrapped cells, and then
+      proves the result with checks that are independent of the extraction
+      code. Everything below runs in the open:
+      <a class="text-un-deep underline decoration-un/50" href="https://github.com/untded/untded-2005">untded/untded-2005</a>.
+    </p>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Extraction</h2>
+      <ol class="mt-3 list-decimal space-y-2 leading-relaxed text-body">
+        <li>Pages 28–132 (the element table) are read with <span class="font-mono text-sm">pdftotext -bbox-layout</span>; every word carries PDF coordinates.</li>
+        <li>Nine column ranges in points were calibrated from the layout (tag ≈ x68.8, UID ≈ x108.6, name ≈ x131.3, description ≈ x286.6, representation ≈ x523.1, old name ≈ x558.9, business term ≈ x612.7, bridges ≈ x705.5) — stable across all 105 table pages.</li>
+        <li>Rows start where a change tag meets a four-digit tag; wrapped cells are reassembled line by line, with rules for the text layer’s mid-word breaks (slash-compounds such as “Document/message”, lone-letter tails, vocabulary-confirmed merges).</li>
+        <li>The result is a YAML single source of truth, typed with lutaml-model; CSV/JSON/HTML are derived, never hand-edited.</li>
+      </ol>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Verification</h2>
+      <dl class="mt-4 space-y-4">
+        <div class="rounded-md border border-line bg-mist p-4">
+          <dt class="font-semibold text-ink">Character conservation — exact</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-body">
+            Joining rules can only concatenate or insert whitespace, so the
+            multiset of non-space characters in the table region must equal the
+            multiset in the cells. Result: <strong class="text-ink">169,020 characters, exact match</strong>
+            in both stages (words → fragments → YAML).
+          </dd>
+        </div>
+        <div class="rounded-md border border-line bg-mist p-4">
+          <dt class="font-semibold text-ink">Row reconciliation</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-body">
+            The tag column and the UID column are independent word streams:
+            <strong class="text-ink">1504 UID words = 1504 elements</strong>, per-tag counts equal.
+            Regeneration is byte-identical.
+          </dd>
+        </div>
+        <div class="rounded-md border border-line bg-mist p-4">
+          <dt class="font-semibold text-ink">Independent OCR re-read</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-body">
+            Tesseract — a different engine from whatever produced the text
+            layer — re-reads random row crops from the rendered page images:
+            <strong class="text-ink">names 80/80 agree</strong>, representation values 31/31 readable crops agree.
+          </dd>
+        </div>
+        <div class="rounded-md border border-line bg-mist p-4">
+          <dt class="font-semibold text-ink">Cross-source check (UN/EDIFACT D.05B)</dt>
+          <dd class="mt-1 text-sm leading-relaxed text-body">
+            Joined against an independent electronic typesetting of the same
+            element base (586 shared tags): representations agree on charset
+            and length for 549/584; every image-readable difference matches
+            <em>this</em> edition’s print, i.e. the diffs are the 2005
+            edition’s own editorial revisions. Description differences follow
+            the edition’s systematic “message”→“document” rewrite.
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="mt-10" id="confidence">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Confidence labels</h2>
+      <p class="mt-3 text-sm leading-relaxed text-body">
+        Every element carries a provenance record: source file, PDF page, and a
+        confidence grade. <strong class="text-ink">High</strong> — all cells
+        single-line in the source. <strong class="text-ink">Medium</strong> —
+        line-wrapped cells were re-joined (the risky narrow columns) or a
+        mid-word break was repaired. <strong class="text-ink">Low</strong> —
+        flagged for review (currently the four legend-external change tags).
+        Current split: 472 high / 1028 medium / 4 low.
+      </p>
+    </section>
+
+    <section class="mt-10" id="anomalies">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Anomalies we keep, not fix</h2>
+      <ul class="mt-3 list-disc space-y-2 text-sm leading-relaxed text-body">
+        <li>
+          The print itself orders 1481 before 1478 (p. 36) and starts page 44
+          with 2141 after page 43 ended at 2159. Transcribed as printed.
+        </li>
+        <li>
+          Element 4000’s note says “use instead — 1056”, but 1056 is not in
+          this edition (the note dangles in the source itself).
+        </li>
+        <li>
+          Four rows print change tags outside the section 4.1 legend
+          (5082 “cr”, 5180 “cdr”, 5390 “cr”, 5450 “cd”). Glyph-count analysis
+          of 600 dpi renders confirms the print really shows those letters.
+        </li>
+        <li>
+          Some names print a space before a dot (“Configuration. Level
+          .Identifier”) — the source’s own typography, kept verbatim.
+        </li>
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

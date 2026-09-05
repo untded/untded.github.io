@@ -1,0 +1,24 @@
+---
+import { parseBridges } from '../lib/element'
+
+interface Props {
+  bridges: string | null
+}
+const { bridges } = Astro.props
+const entries = parseBridges(bridges)
+---
+
+{
+  entries.length === 0 ? (
+    <p class="text-sm text-body/70">No layout-key or document bridges recorded.</p>
+  ) : (
+    <ul class="space-y-1.5">
+      {entries.map((b) => (
+        <li class="flex flex-wrap items-baseline gap-x-2 text-sm">
+          <span class="rounded-sm bg-ink px-1.5 py-0.5 font-mono text-xs text-white">{b.scheme}</span>
+          <span class="font-mono text-xs text-body">{b.detail}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}

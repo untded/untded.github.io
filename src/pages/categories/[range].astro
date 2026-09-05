@@ -1,0 +1,66 @@
+---
+import '../../styles/filter.css'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ChangeTagBadge from '../../components/ChangeTagBadge.astro'
+import { CATEGORY_RANGES, categoryOf } from '../../lib/element'
+import { loadElements } from '../../lib/data'
+
+export function getStaticPaths() {
+  return CATEGORY_RANGES.map((category) => ({
+    params: { range: category.range },
+    props: { category },
+  }))
+}
+
+const { category } = Astro.props
+const elements = loadElements()
+  .filter((e) => categoryOf(e.tag).k === category.k)
+  .sort((a, b) => a.tag - b.tag)
+---
+
+<BaseLayout
+  title={`${category.range} — ${category.label} · unt·ded`}
+  description={`TDED category ${category.range} (${category.label}) of UNTDED 2005: ${elements.length} data elements.`}
+>
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <p class="font-mono text-sm tabular-nums text-body">{category.range}</p>
+    <div class={`mt-2 h-1.5 w-24 rounded-full bg-cat-${category.k}`} aria-hidden="true"></div>
+    <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink">{category.label}</h1>
+    <p class="mt-2 text-body">
+      {elements.length} elements
+      ({elements.filter((e) => e.status === 'active').length} active) ·
+      <a class="text-un-deep underline decoration-un/50" href={`/elements?cat=${category.k}`}>
+        filter this category in the directory
+      </a>
+    </p>
+
+    <table class="dir-table mt-6">
+      <thead>
+        <tr>
+          <th scope="col">Tag</th>
+          <th scope="col">Name</th>
+          <th scope="col">Repr.</th>
+          <th scope="col">Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          elements.map((e) => (
+            <tr class={e.status === 'retired' ? 'retired' : ''}>
+              <td class="font-mono tabular-nums">
+                <a href={`/elements/${e.tag}`}>{e.tag}</a>
+              </td>
+              <td class="name-cell">
+                <a href={`/elements/${e.tag}`}>{e.name ?? '(retired — see entry)'}</a>
+              </td>
+              <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
+              <td>
+                <ChangeTagBadge changeTag={e.change_tag} />
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>

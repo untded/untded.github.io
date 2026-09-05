@@ -1,0 +1,66 @@
+---
+import '../../styles/filter.css'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import DirectoryFilter from '../../islands/DirectoryFilter.vue'
+import { CATEGORY_RANGES } from '../../lib/element'
+import { loadElements } from '../../lib/data'
+
+const elements = loadElements()
+const changes = [...new Set(elements.map((e) => e.change_tag))].sort()
+const categories = CATEGORY_RANGES.map(({ k, range, label }) => ({
+  k,
+  range,
+  label,
+}))
+---
+
+<BaseLayout
+  title="Directory — unt·ded"
+  description="All 1504 trade data elements of UNTDED 2005, filterable by tag, name, category, change and representation."
+>
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="text-3xl font-semibold tracking-tight text-ink">Directory</h1>
+    <p class="mt-2 max-w-2xl text-body">
+      All {elements.length} elements of the 2005 edition. Filters are shareable —
+      the URL always reflects what you see.
+    </p>
+
+    <div class="mt-6">
+      <DirectoryFilter client:visible="idle" categories={categories} changes={changes} />
+    </div>
+
+    <noscript>
+      <p class="mb-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
+        JavaScript is off, so filtering is unavailable — the full table follows.
+      </p>
+      <table class="dir-table">
+        <thead>
+          <tr>
+            <th scope="col">Tag</th>
+            <th scope="col">Name</th>
+            <th scope="col">Repr.</th>
+            <th scope="col">Change</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            elements.map((e) => (
+              <tr class={e.status === 'retired' ? 'retired' : ''}>
+                <td class="font-mono tabular-nums">
+                  <a href={`/elements/${e.tag}`}>{e.tag}</a>
+                </td>
+                <td class="name-cell">
+                  <a href={`/elements/${e.tag}`}>{e.name ?? '(retired — see entry)'}</a>
+                </td>
+                <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
+                <td class="font-mono text-xs text-body">{e.change_tag}</td>
+                <td class="font-mono text-xs text-body">{Math.floor(e.tag / 1000)}000</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </noscript>
+  </div>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  oldName: string | null
+  businessTerm: string | null
+}
+const { oldName, businessTerm } = Astro.props
+---
+
+{
+  (oldName || businessTerm) && (
+    <section aria-label="1993 edition" class="rounded-md border border-stamp/30 bg-stamp/5 p-4">
+      <h2 class="mb-2 text-xs font-semibold uppercase tracking-wider text-stamp">
+        1993 edition — before the renaming
+      </h2>
+      <dl class="space-y-2 text-sm">
+        {oldName && (
+          <div>
+            <dt class="text-xs uppercase tracking-wide text-body/70">Data element name</dt>
+            <dd class="prose-def text-[1.05rem] text-ink/90 line-through decoration-stamp/50">{oldName}</dd>
+          </div>
+        )}
+        {businessTerm && (
+          <div>
+            <dt class="text-xs uppercase tracking-wide text-body/70">Business term</dt>
+            <dd class="text-ink/90">{businessTerm}</dd>
+          </div>
+        )}
+      </dl>
+    </section>
+  )
+}

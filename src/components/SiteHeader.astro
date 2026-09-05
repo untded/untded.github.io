@@ -1,0 +1,38 @@
+---
+import Omnibox from '../islands/Omnibox.vue'
+
+const nav = [
+  { href: '/elements', label: 'Directory' },
+  { href: '/notation', label: 'Notation' },
+  { href: '/method', label: 'Method' },
+  { href: '/download', label: 'Download' },
+  { href: '/about', label: 'About' },
+]
+const current = Astro.url.pathname
+---
+
+<header class="border-b border-line">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
+    <a href="/" class="text-xl font-semibold tracking-tight text-ink" aria-label="unt ded home">
+      unt<span class="wordmark-dot">·</span>ded
+    </a>
+    <nav aria-label="Site" class="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem]">
+      {
+        nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'hover:text-un-deep',
+              current.startsWith(item.href) && item.href !== '/' ? 'text-un-deep font-medium' : 'text-body',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="ms-auto">
+      <Omnibox client:load />
+    </div>
+  </div>
+</header>

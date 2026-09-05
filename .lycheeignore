@@ -1,0 +1,2 @@
+# external URLs are intentionally out of scope for the offline check
+^https?://

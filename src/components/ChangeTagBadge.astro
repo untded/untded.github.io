@@ -1,0 +1,23 @@
+---
+import { changeTagInfo } from '../lib/element'
+
+interface Props {
+  changeTag: string
+}
+const { changeTag } = Astro.props
+const info = changeTagInfo(changeTag)
+---
+
+<span
+  class:list={[
+    'inline-flex items-center rounded-sm border px-1.5 py-0.5 font-mono text-xs',
+    info.outsideLegend
+      ? 'border-stamp/50 bg-stamp/10 text-stamp'
+      : 'border-line bg-mist text-body',
+  ]}
+  title={info.outside
+    ? `${info.label} — tag printed outside the section 4.1 legend, see /method/`
+    : info.label}
+>
+  {info.short}
+</span>

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+ * Single palette source (SSOT). UN identity colors verified against the
+ * UNSSC Brand Book (#009EDB, Pantone 2925) and the UNECE "UN blue +
+ * dark gray + white" logotype formula. The cat-1..cat-9 ramp is an
+ * ordered blue→teal→slate scale: tag ranges are ordered, so the ramp
+ * encodes that order rather than decorating.
+ */
+@theme {
+  --color-un: #009edb;
+  --color-un-deep: #0077a8;
+  --color-un-ink: #003a52;
+  --color-flag: #5b92e5;
+  --color-ink: #1f2a3d;
+  --color-body: #45526b;
+  --color-mist: #f2f7fa;
+  --color-line: #d9e3ec;
+  --color-stamp: #8a4b2a;
+
+  --color-cat-1: #4c86de;
+  --color-cat-2: #2e8fd0;
+  --color-cat-3: #1b96bf;
+  --color-cat-4: #1997a6;
+  --color-cat-5: #22928c;
+  --color-cat-6: #2f8a78;
+  --color-cat-7: #3a7f6d;
+  --color-cat-8: #407268;
+  --color-cat-9: #3f655f;
+
+  --font-sans: "Source Sans 3 Variable", "Source Sans 3", system-ui, sans-serif;
+  --font-serif: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-un) 25%, white);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-un);
+  outline-offset: 2px;
+}
+
+.wordmark-dot {
+  color: var(--color-un);
+}
+
+.skip-link {
+  @apply absolute left-4 top-4 z-50 -translate-y-20 bg-ink px-3 py-2 text-sm text-white transition-transform focus:translate-y-0;
+}
+
+.prose-def {
+  @apply font-serif text-[1.15rem] leading-relaxed text-ink;
+}
+
+/* Category ramp utilities: components build these class names
+ * dynamically, so they must exist literally for Tailwind to emit. */
+@utility bg-cat-1 { background-color: var(--color-cat-1); }
+@utility bg-cat-2 { background-color: var(--color-cat-2); }
+@utility bg-cat-3 { background-color: var(--color-cat-3); }
+@utility bg-cat-4 { background-color: var(--color-cat-4); }
+@utility bg-cat-5 { background-color: var(--color-cat-5); }
+@utility bg-cat-6 { background-color: var(--color-cat-6); }
+@utility bg-cat-7 { background-color: var(--color-cat-7); }
+@utility bg-cat-8 { background-color: var(--color-cat-8); }
+@utility bg-cat-9 { background-color: var(--color-cat-9); }
+@utility text-cat-1 { color: var(--color-cat-1); }
+@utility text-cat-2 { color: var(--color-cat-2); }
+@utility text-cat-3 { color: var(--color-cat-3); }
+@utility text-cat-4 { color: var(--color-cat-4); }
+@utility text-cat-5 { color: var(--color-cat-5); }
+@utility text-cat-6 { color: var(--color-cat-6); }
+@utility text-cat-7 { color: var(--color-cat-7); }
+@utility text-cat-8 { color: var(--color-cat-8); }
+@utility text-cat-9 { color: var(--color-cat-9); }

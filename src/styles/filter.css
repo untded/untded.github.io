@@ -1,0 +1,76 @@
+/* Shared filter-bar family (used by the directory island). */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filter-input,
+.filter-select {
+  border: 1px solid var(--color-line);
+  background: white;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.925rem;
+  color: var(--color-ink);
+}
+
+.filter-input {
+  min-width: 16rem;
+  flex: 1 1 14rem;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  border-color: var(--color-un);
+  outline: 2px solid color-mix(in srgb, var(--color-un) 35%, transparent);
+  outline-offset: 0;
+}
+
+.filter-count {
+  font-size: 0.85rem;
+  color: var(--color-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.dir-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.925rem;
+}
+
+.dir-table th {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 2px solid var(--color-line);
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-body);
+  z-index: 1;
+}
+
+.dir-table td {
+  border-bottom: 1px solid var(--color-line);
+  padding: 0.45rem 0.75rem;
+  vertical-align: top;
+}
+
+.dir-table a {
+  color: var(--color-ink);
+  text-decoration-color: color-mix(in srgb, var(--color-un) 60%, transparent);
+  text-decoration-thickness: 1px;
+}
+
+.dir-table a:hover {
+  color: var(--color-un-deep);
+  text-decoration-color: var(--color-un);
+}
+
+.dir-table tr.retired .name-cell {
+  color: var(--color-stamp);
+}

@@ -1,0 +1,17 @@
+---
+interface Props {
+  tag: number
+  size?: 'sm' | 'lg'
+}
+const { tag, size = 'sm' } = Astro.props
+---
+
+<span
+  class:list={[
+    'inline-flex items-center border-l-4 border-un bg-mist font-mono tabular-nums text-ink',
+    size === 'lg' ? 'px-4 py-2 text-4xl font-medium' : 'px-2 py-0.5 text-sm',
+  ]}
+  aria-label={`element tag ${tag}`}
+>
+  {tag}
+</span>

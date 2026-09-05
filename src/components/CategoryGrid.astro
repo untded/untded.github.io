@@ -1,0 +1,32 @@
+---
+interface Category {
+  k: number
+  range: string
+  label: string
+  count: number
+}
+interface Props {
+  categories: Category[]
+}
+const { categories } = Astro.props
+---
+
+<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    categories.map((c) => (
+      <a
+        href={`/categories/${c.range}`}
+        class:list={[
+          'group rounded-md border border-line bg-white p-4 transition-colors hover:border-un/60',
+        ]}
+      >
+        <div class="flex items-center justify-between gap-2">
+          <span class={`font-mono text-xs tabular-nums text-cat-${c.k}`}>{c.range}</span>
+          <span class="font-mono text-sm tabular-nums text-body">{c.count}</span>
+        </div>
+        <div class={`mt-2 h-1 rounded-full bg-cat-${c.k}`} aria-hidden="true" />
+        <p class="mt-2 text-[0.95rem] font-medium text-ink group-hover:text-un-deep">{c.label}</p>
+      </a>
+    ))
+  }
+</div>

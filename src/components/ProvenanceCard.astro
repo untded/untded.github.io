@@ -1,0 +1,36 @@
+---
+import type { Provenance } from '../lib/data'
+
+interface Props {
+  provenance: Provenance
+}
+const { provenance } = Astro.props
+const confidenceNote: Record<string, string> = {
+  high: 'all cells single-line in the source',
+  medium: 'line-wrapped cells re-joined (see method)',
+  low: 'flagged for review',
+}
+---
+
+<aside class="rounded-md border border-line bg-white p-4 text-sm" aria-label="Provenance">
+  <h2 class="mb-2 text-xs font-semibold uppercase tracking-wider text-body">Provenance</h2>
+  <dl class="space-y-1.5 text-body">
+    <div class="flex justify-between gap-3">
+      <dt>Source</dt>
+      <dd class="text-right font-mono text-xs text-ink">{provenance.pdf}</dd>
+    </div>
+    <div class="flex justify-between gap-3">
+      <dt>PDF page</dt>
+      <dd class="font-mono tabular-nums text-ink">{provenance.page}</dd>
+    </div>
+    <div class="flex justify-between gap-3">
+      <dt>Confidence</dt>
+      <dd>
+        <a href="/method/#confidence" class="font-mono text-xs text-un-deep underline decoration-un/50">
+          {provenance.confidence}
+        </a>
+      </dd>
+    </div>
+  </dl>
+  <p class="mt-2 text-xs leading-snug text-body/80">{confidenceNote[provenance.confidence]}</p>
+</aside>
