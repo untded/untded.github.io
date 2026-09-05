@@ -95,6 +95,32 @@ it('emits breadcrumb structured data on element pages', () => {
   expect(html).toContain(`${site}/categories/1000-1699`)
 })
 
+
+it("builds the tree page and serves the source PDFs", () => {
+  expect(existsSync(`${dist}/tree/index.html`)).toBe(true)
+  expect(readFileSync(`${dist}/tree/index.html`, "utf8")).toContain("The name tree")
+  expect(existsSync(`${dist}/pdf/UNTDED2005.pdf`)).toBe(true)
+  expect(existsSync(`${dist}/pdf/UNTDED2005_Redacted.pdf`)).toBe(true)
+  expect(readFileSync(`${dist}/elements/1001/index.html`, "utf8")).toContain(`pdf/UNTDED2005_Redacted.pdf#page=`)
+})
+
+it("ships the theme system, footer logos and sharing metadata", () => {
+  const html = readFileSync(`${dist}/index.html`, "utf8")
+  expect(html).toContain("untded-theme")
+  expect(html).toContain("theme-toggle")
+  expect(html).toContain("logo-unece.svg")
+  expect(html).toContain("logo-iso.svg")
+  expect(html).toContain("og:image")
+  expect(html).toContain("twitter:card")
+  expect(readFileSync(`${dist}/robots.txt`, "utf8")).toContain(`Sitemap: ${site}/sitemap-index.xml`)
+})
+
+it("carries the full original documentation", () => {
+  expect(readFileSync(`${dist}/document/introduction/index.html`, "utf8")).toContain("Rec. No. 25")
+  expect(readFileSync(`${dist}/document/presentation/index.html`, "utf8")).toContain("Group 9")
+  expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
+})
+
   it('ships the favicon set (SVG emblem + PNG fallbacks)', () => {
     expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
     for (const f of ['favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {

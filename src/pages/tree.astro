@@ -1,0 +1,36 @@
+---
+import '../styles/filter.css'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import TreeBrowser from '../islands/TreeBrowser.vue'
+import { loadCategories } from '../lib/element'
+import { href } from '../lib/site'
+
+const categories = loadCategories().map(({ k, range, label }) => ({ k, range, label }))
+---
+
+<BaseLayout
+  title="The name tree — UN/TDED"
+  description="Browse all 1504 elements through their 2005 names: category, object class, element. The dotted entry names are a designed hierarchy."
+>
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <h1 class="text-3xl font-semibold tracking-tight text-ink">The name tree</h1>
+    <p class="mt-2 max-w-2xl text-body">
+      The 2005 entry names are dotted structures — object class, property,
+      representation (<span class="font-mono text-sm">Document. Type.Code</span>).
+      This tree groups every element by category, then by object class, so the
+      vocabulary reads the way it is designed. Prefer a flat list? Use the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
+    </p>
+
+    <div class="mt-6">
+      <TreeBrowser client:visible="idle" categories={categories} />
+    </div>
+
+    <noscript>
+      <p class="mt-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
+        The tree needs JavaScript — the full table is in the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
+      </p>
+    </noscript>
+  </div>
+</BaseLayout>

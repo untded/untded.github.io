@@ -1,17 +1,21 @@
 ---
-
 import { href } from '../lib/site'
 ---
 
 <footer class="mt-16 border-t border-line bg-mist">
   <div class="mx-auto max-w-6xl px-4 py-8 text-sm leading-relaxed text-body">
-    <p>
+    <div class="flex flex-wrap items-center gap-4">
+      <span class="inline-flex h-10 items-center rounded-md bg-white px-3">
+        <img src={href('/img/logo-unece.svg')} alt="UNECE" class="h-7 w-auto" width="auto" height="auto" />
+      </span>
+      <span class="inline-flex h-10 items-center rounded-md bg-white px-3">
+        <img src={href('/img/logo-iso.svg')} alt="ISO" class="h-6 w-auto" width="auto" height="auto" />
+      </span>
       <span class="font-mono font-semibold text-ink">UN<span class="wordmark-slash">/</span>TDED</span>
-      — the United Nations Trade Data Elements Directory, 2005 edition (ECE/TRADE/362,
-      ISO 7372:2005).
-    </p>
-    <p class="mt-2">
-      Operated on behalf of the{' '}
+    </div>
+    <p class="mt-3">
+      The United Nations Trade Data Elements Directory, 2005 edition (ECE/TRADE/362,
+      ISO 7372:2005). Operated on behalf of the{' '}
       <a class="underline decoration-un/60 hover:text-un-deep" href="https://unece.org/trade/uncefact">United Nations Economic Commission for Europe — UN/CEFACT</a>{' '}
       and{' '}
       <a class="underline decoration-un/60 hover:text-un-deep" href="https://www.isotc154.org">ISO/TC 154</a>.
@@ -21,7 +25,6 @@ import { href } from '../lib/site'
       <a class="underline decoration-un/60 hover:text-un-deep" href="https://github.com/untded">GitHub organization</a>
       {' · '}
       <a class="underline decoration-un/60 hover:text-un-deep" href={href('/about')}>Mandate and governance</a>
-
     </p>
   </div>
 </footer>
