@@ -1,4 +1,5 @@
 ---
+import { href } from '../lib/site'
 interface Category {
   k: number
   range: string
@@ -15,13 +16,13 @@ const { categories } = Astro.props
   {
     categories.map((c) => (
       <a
-        href={`/categories/${c.range}`}
+        href={href(`/categories/${c.range}`)}
         class:list={[
           'group rounded-md border border-line bg-white p-4 transition-colors hover:border-un/60',
         ]}
       >
         <div class="flex items-center justify-between gap-2">
-          <span class={`font-mono text-xs tabular-nums text-cat-${c.k}`}>{c.range}</span>
+          <span class="font-mono text-xs tabular-nums text-body">{c.range}</span>
           <span class="font-mono text-sm tabular-nums text-body">{c.count}</span>
         </div>
         <div class={`mt-2 h-1 rounded-full bg-cat-${c.k}`} aria-hidden="true" />

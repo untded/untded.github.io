@@ -1,27 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { href } from '../lib/site'
 ---
 
 <BaseLayout
-  title="About — unt·ded"
-  description="What unt·ded is, who operates it, and the ISO/TC 154 resolution mandate behind the open-source maintenance of ISO 7372 (UNTDED)."
+  title="About — UN/TDED"
+  description="What UN/TDED is, who operates it, and the ISO/TC 154 resolution mandate behind the open-source maintenance of ISO 7372 (UNTDED)."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">About</p>
     <h1 class="mt-2 font-mono text-5xl font-semibold tracking-tight text-ink">
-      unt<span class="wordmark-dot">·</span>ded
+      UN<span class="wordmark-slash">/</span>TDED
     </h1>
 
     <div class="mt-4 flex flex-wrap items-baseline gap-x-3 font-serif text-xl text-body">
-      <span><strong class="text-ink">U</strong>nited <strong class="text-ink">N</strong>ations</span>
-      <span aria-hidden="true" class="text-un">·</span>
-      <span><strong class="text-ink">T</strong>rade</span>
-      <span aria-hidden="true" class="text-un">·</span>
-      <span><strong class="text-ink">D</strong>ata <strong class="text-ink">E</strong>lements</span>
-      <span aria-hidden="true" class="text-un">·</span>
-      <span><strong class="text-ink">D</strong>irectory</span>
+      <span><strong class="text-ink">UN</strong> — United Nations</span>
+      <span aria-hidden="true" class="font-mono text-un">/</span>
+      <span><strong class="text-ink">TDED</strong> — Trade Data Elements Directory</span>
     </div>
-    <p class="mt-2 text-sm text-body">The dot is the 2005 naming convention — keep reading.</p>
+    <p class="mt-2 text-sm text-body">One slash, the whole standards family. Keep reading.</p>
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Mission</h2>
@@ -38,15 +35,15 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">The wordmark</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-[auto_1fr] sm:items-center">
-        <div class="flex items-center gap-3 rounded-md border border-line bg-mist p-5">
+        <div class="flex flex-wrap items-center gap-3 rounded-md border border-line bg-mist p-5">
           <span class="inline-flex items-center border-l-4 border-un bg-white px-4 py-2 font-mono text-3xl tabular-nums text-ink">1001</span>
-          <span class="text-3xl font-semibold tracking-tight text-ink">unt<span class="wordmark-dot">·</span>ded</span>
+          <span class="font-mono text-3xl font-semibold tracking-tight text-ink">UN<span class="wordmark-slash">/</span>TDED</span>
         </div>
         <ul class="space-y-2 text-sm leading-relaxed text-body">
           <li>
             <span class="inline-block h-3 w-3 rounded-[2px] bg-un align-middle" aria-hidden="true"></span>
             <strong class="text-ink">UN blue #009EDB</strong> — the official blue of the United
-            Nations (Pantone 2925), used for the dot, the accents and the tag-plate edge.
+            Nations (Pantone 2925), used for the slash, the accents and the tag-plate edge.
           </li>
           <li>
             <span class="inline-block h-3 w-3 rounded-[2px] bg-flag align-middle" aria-hidden="true"></span>
@@ -55,9 +52,9 @@ import BaseLayout from '../layouts/BaseLayout.astro'
             scale for the nine tag ranges, because tag ranges are ordered.
           </li>
           <li>
-            <strong class="text-ink">The period</strong> — the 2005 edition renamed the entire
-            vocabulary into dot-separated entry names (<span class="font-mono text-xs">Document. Type.Code</span>).
-            The wordmark’s dot carries that convention.
+            <strong class="text-ink">The slash</strong> — the UN standards-family notation:
+            UN/CEFACT, UN/EDIFACT, UN/TDED. The directory belongs to that family,
+            and the wordmark writes its name the family way.
           </li>
           <li>
             <strong class="text-ink">The tag plate</strong> — a bordered plate carrying a
@@ -75,16 +72,16 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Operation and governance</h2>
       <p class="mt-3 leading-relaxed text-body">
-        This site and its repositories are maintained and operated
-        <strong>on behalf of the United Nations Economic Commission for Europe
-        (UNECE) — UN/CEFACT</strong>, and the
-        <strong>International Organization for Standardization, Technical
-        Committee 154</strong> (ISO/TC 154, Processes, data elements and
+        This site and its repositories are maintained and operated{' '}
+        <strong class="text-ink">on behalf of the United Nations Economic Commission
+        for Europe (UNECE) — UN/CEFACT</strong>, and the{' '}
+        <strong class="text-ink">International Organization for Standardization,
+        Technical Committee 154</strong> (ISO/TC 154, Processes, data elements and
         documents in commerce, industry and administration), which jointly
         maintain ISO 7372 / the TDED through their joint working group
-        ISO/TC 154/JWG 9. Hosting and code are provided by the
+        ISO/TC 154/JWG 9. Hosting and code are provided by the{' '}
         <a class="text-un-deep underline decoration-un/50" href="https://github.com/untded">untded</a>
-        open-source organization.
+        {' '}open-source organization.
       </p>
     </section>
 
@@ -110,14 +107,13 @@ import BaseLayout from '../layouts/BaseLayout.astro'
       <p class="mt-3 text-sm leading-relaxed text-body">
         Companion resolutions: <strong class="text-ink">P-2026-06</strong> (JWG 9)
         calls for strengthened ISO- and UNECE-side expert support for ISO 7372’s
-        “timely publication before October 2028”; <strong class="text-ink">P-2026-01</strong>
-        (JWG 1) initiates a meeting with the UNECE Secretariat on the stalled
+        “timely publication before October 2028”;{' '}
+        <strong class="text-ink">P-2026-01</strong>
+        {' '}(JWG 1) initiates a meeting with the UNECE Secretariat on the stalled
         maintenance and publication of the UN/EDIFACT Directories (D.25A
-        severely delayed); <strong class="text-ink">P-2026-10</strong> appoints
-        ISO/TC 154 liaison representatives to ISO/IEC JTC 5. This platform —
-        dataset, verification tooling and website — is the open-source platform
-        those resolutions call for, with UNTDED 2005 as its first complete,
-        verifiable edition.
+        severely delayed). This platform — dataset, verification tooling and
+        website — is the open-source platform those resolutions call for, with
+        UNTDED 2005 as its first complete, verifiable edition.
       </p>
     </section>
 
@@ -127,10 +123,11 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         The directory content is the UN publication ECE/TRADE/362 (in parallel
         as ISO 7372:2005), © United Nations / UNECE, reproduced with
         attribution. The digitization, its code and this website are open
-        source under MIT. See <a class="text-un-deep underline decoration-un/50" href="/download">download</a>
-        for the exact artifacts and the
-        <a class="text-un-deep underline decoration-un/50" href="/method">method</a>
-        page for how every character was verified against the source.
+        source under MIT. See{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/download')}>download</a>
+        {' '}for the exact artifacts and the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/method')}>method</a>
+        {' '}page for how every character was verified against the source.
       </p>
     </section>
   </div>

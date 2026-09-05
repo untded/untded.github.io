@@ -8,7 +8,7 @@ The public registry website for the digitized UNTDED 2005 (UN Trade Data
 Elements Directory = ISO 7372:2005): 1504 data elements, built and
 operated on behalf of UN/CEFACT (UNECE) and ISO/TC 154 per the mandate
 in ISO/TC 154 N1727 (resolutions P-2026-06/07 — see /about). Deployed to
-GitHub Pages from `main` at https://untded.github.io.
+GitHub Pages (custom domain www.untded.org) from `main` at https://untded.github.io.
 
 ## Commands
 
@@ -30,6 +30,9 @@ npm run dev
 - Islands are thin Vue shells over **pure seams**
   (`src/lib/directory-filter.ts`, `src/lib/omnibox-filter.ts`,
   `scripts/lib/*.mjs`) — logic goes in the seams, tests beside them.
+- Hostnames/base paths are NEVER hardcoded: `src/lib/site.ts` is the URL
+  config SSOT (`href()` for internal routes — root and sub-path deploys are
+  different; `astro.config.mjs` `site` is the origin, read by contracts).
 - The palette is the SSOT in `src/styles/main.css` `@theme` (UN blue
   #009EDB + cat-1..cat-9 ramp). Dynamic `cat-*` class names require the
   literal `@utility` declarations in main.css.

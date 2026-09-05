@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
 <BaseLayout
-  title="Method — unt·ded"
+  title="Method — UN/TDED"
   description="How the UNTDED 2005 PDF was digitized and how every element can be verified: character conservation, row reconciliation, OCR re-reads, UN/EDIFACT cross-check."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
@@ -12,7 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
       The 2005 edition exists as a 132-page scan. The digitization parses the
       page text layer by word coordinates, reassembles wrapped cells, and then
       proves the result with checks that are independent of the extraction
-      code. Everything below runs in the open:
+      code. Everything below runs in the open:{' '}
       <a class="text-un-deep underline decoration-un/50" href="https://github.com/untded/untded-2005">untded/untded-2005</a>.
     </p>
 
@@ -34,14 +34,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
           <dd class="mt-1 text-sm leading-relaxed text-body">
             Joining rules can only concatenate or insert whitespace, so the
             multiset of non-space characters in the table region must equal the
-            multiset in the cells. Result: <strong class="text-ink">169,020 characters, exact match</strong>
+            multiset in the cells. Result: <strong class="text-ink">169,020 characters, exact match</strong>{' '}
             in both stages (words → fragments → YAML).
           </dd>
         </div>
         <div class="rounded-md border border-line bg-mist p-4">
           <dt class="font-semibold text-ink">Row reconciliation</dt>
           <dd class="mt-1 text-sm leading-relaxed text-body">
-            The tag column and the UID column are independent word streams:
+            The tag column and the UID column are independent word streams:{' '}
             <strong class="text-ink">1504 UID words = 1504 elements</strong>, per-tag counts equal.
             Regeneration is byte-identical.
           </dd>
@@ -50,7 +50,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
           <dt class="font-semibold text-ink">Independent OCR re-read</dt>
           <dd class="mt-1 text-sm leading-relaxed text-body">
             Tesseract — a different engine from whatever produced the text
-            layer — re-reads random row crops from the rendered page images:
+            layer — re-reads random row crops from the rendered page images:{' '}
             <strong class="text-ink">names 80/80 agree</strong>, representation values 31/31 readable crops agree.
           </dd>
         </div>
@@ -59,7 +59,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
           <dd class="mt-1 text-sm leading-relaxed text-body">
             Joined against an independent electronic typesetting of the same
             element base (586 shared tags): representations agree on charset
-            and length for 549/584; every image-readable difference matches
+            and length for 549/584; every image-readable difference matches{' '}
             <em>this</em> edition’s print, i.e. the diffs are the 2005
             edition’s own editorial revisions. Description differences follow
             the edition’s systematic “message”→“document” rewrite.

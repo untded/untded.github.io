@@ -1,5 +1,6 @@
 ---
 import type { Provenance } from '../lib/data'
+import { href } from '../lib/site'
 
 interface Props {
   provenance: Provenance
@@ -26,7 +27,7 @@ const confidenceNote: Record<string, string> = {
     <div class="flex justify-between gap-3">
       <dt>Confidence</dt>
       <dd>
-        <a href="/method/#confidence" class="font-mono text-xs text-un-deep underline decoration-un/50">
+        <a href={href('/method/#confidence')} class="font-mono text-xs text-un-deep underline decoration-un/50">
           {provenance.confidence}
         </a>
       </dd>

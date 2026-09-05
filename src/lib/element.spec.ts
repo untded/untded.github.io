@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest'
 import {
   categoryOf,
   changeTagInfo,
+  neighbours,
+  pairedTag,
   parseBridges,
   reprSummary,
   replacementPointer,
@@ -67,5 +69,25 @@ describe('reprSummary', () => {
     expect(reprSummary({ raw: 'an..3', charset: 'an', min_length: 1, max_length: 3 })).toBe('an..3')
     expect(reprSummary({ raw: 'n9', charset: 'n', min_length: 9, max_length: 9 })).toBe('n9')
     expect(reprSummary(null)).toBe('—')
+  })
+})
+
+describe('neighbours', () => {
+  it('walks document order', () => {
+    expect(neighbours(2000, [1000, 2000, 3000])).toEqual({ prev: 1000, next: 3000 })
+    expect(neighbours(1000, [1000, 2000])).toEqual({ prev: null, next: 2000 })
+    expect(neighbours(2000, [1000, 2000])).toEqual({ prev: 1000, next: null })
+    expect(neighbours(9999, [1000])).toEqual({ prev: null, next: null })
+  })
+})
+
+describe('pairedTag', () => {
+  it('pairs even text tags with the following odd coded tag', () => {
+    const tags = new Set([1000, 1001, 1004])
+    expect(pairedTag(1000, tags)).toBe(1001)
+    expect(pairedTag(1001, tags)).toBe(1000)
+    // 1002 absent -> 1004 has no coded counterpart in this edition
+    expect(pairedTag(1004, tags)).toBeNull()
+    expect(pairedTag(9999, tags)).toBeNull()
   })
 })

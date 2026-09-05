@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import type { IndexRow } from '../lib/data'
+import { href } from '../lib/site'
 import { omniboxFilter } from '../lib/omnibox-filter'
 
 const open = ref(false)
@@ -13,7 +14,7 @@ const results = ref<IndexRow[]>([])
 
 async function ensureRows() {
   if (rows.value.length > 0) return
-  const res = await fetch('/data/index.json')
+  const res = await fetch(href('/data/index.json'))
   rows.value = await res.json()
 }
 
@@ -36,7 +37,7 @@ function hide() {
 
 function go(row: IndexRow | undefined) {
   if (!row) return
-  window.location.href = `/elements/${row.t}`
+  window.location.href = href(`/elements/${row.t}`)
 }
 
 function onKeydown(e: KeyboardEvent) {

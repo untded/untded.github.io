@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { CATEGORY_RANGES } from '../lib/element'
+import { href } from '../lib/site'
 ---
 
 <BaseLayout
-  title="Notation — unt·ded"
+  title="Notation — UN/TDED"
   description="How to read UNTDED 2005: representation notation (an..35), change tags, categories, and the layout-key bridges."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
@@ -68,7 +69,7 @@ import { CATEGORY_RANGES } from '../lib/element'
       <p class="mt-3 text-sm text-body">
         Three rows print tags outside this legend
         (<span class="font-mono text-xs">cd, cr ×2, cdr</span>). They are kept
-        verbatim and flagged — see <a class="text-un-deep underline decoration-un/50" href="/method/#anomalies">method</a>.
+        verbatim and flagged — see{' '}<a class="text-un-deep underline decoration-un/50" href={href('/method/#anomalies')}>method</a>.
       </p>
     </section>
 
@@ -85,9 +86,9 @@ import { CATEGORY_RANGES } from '../lib/element'
           {
             CATEGORY_RANGES.map((c) => (
               <tr>
-                <td class={`py-2 pe-4 font-mono tabular-nums text-cat-${c.k}`}>{c.range}</td>
+                <td class="py-2 pe-4 font-mono tabular-nums text-body">{c.range}</td>
                 <td class="py-2">
-                  <a class="hover:text-un-deep" href={`/categories/${c.range}`}>{c.label}</a>
+                  <a class="hover:text-un-deep" href={href(`/categories/${c.range}`)}>{c.label}</a>
                 </td>
               </tr>
             ))

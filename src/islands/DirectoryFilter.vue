@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import type { IndexRow } from '../lib/data'
+import { href } from '../lib/site'
 import { filterRows, filtersFromParams, EMPTY_FILTERS, type DirectoryFilters } from '../lib/directory-filter'
 
 export interface CategoryMeta {
@@ -32,7 +33,7 @@ const CHANGE_LABELS: Record<string, string> = {
 const visible = computed(() => filterRows(rows.value, filters.value))
 
 async function load() {
-  const res = await fetch('/data/index.json')
+  const res = await fetch(href('/data/index.json'))
   rows.value = await res.json()
   loaded.value = true
 }
@@ -95,6 +96,13 @@ onBeforeUnmount(() => {})
         <option value="n">n…</option>
         <option value="a">a…</option>
       </select>
+      <label class="sr-only" for="dir-sort">Sort order</label>
+      <select id="dir-sort" class="filter-select" :value="filters.sort" @change="onSelect('sort', $event)">
+        <option value="tag">Tag ↑</option>
+        <option value="-tag">Tag ↓</option>
+        <option value="name">Name A–Z</option>
+        <option value="-name">Name Z–A</option>
+      </select>
       <span class="filter-count" aria-live="polite">
         {{ loaded ? `${visible.length} of ${rows.length} elements` : 'loading…' }}
       </span>
@@ -117,15 +125,16 @@ onBeforeUnmount(() => {})
       <tbody>
         <tr v-for="r in visible" :key="r.t" :class="r.s === 'r' ? 'retired' : ''">
           <td class="font-mono tabular-nums">
-            <a :href="`/elements/${r.t}`">{{ r.t }}</a>
+            <a :href="href(`/elements/${r.t}`)">{{ r.t }}</a>
           </td>
           <td class="name-cell">
-            <a :href="`/elements/${r.t}`">{{ r.n || '(retired — see entry)' }}</a>
+            <a :href="href(`/elements/${r.t}`)">{{ r.n || '(retired — see entry)' }}</a>
           </td>
           <td class="font-mono text-xs text-body">{{ r.r || '—' }}</td>
           <td class="font-mono text-xs text-body">{{ r.c }}</td>
           <td>
-            <span :class="`text-cat-${r.k}`" class="font-mono text-xs">{{ r.k }}000</span>
+            <span class="me-1 inline-block h-2 w-2 rounded-full align-middle" :class="`bg-cat-${r.k}`" aria-hidden="true"></span>
+            <span class="font-mono text-xs text-body">{{ r.k }}000</span>
           </td>
         </tr>
       </tbody>
