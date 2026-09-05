@@ -2,7 +2,7 @@
 // public/data/ (gitignored, regenerated on every dev/build run):
 //   index.json — the compact directory index (filter island + omnibox)
 //   meta.json  — categories, counts, stats (build-time + footer)
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { toIndexRows } from './lib/build-index.mjs'
 import { buildMeta } from './lib/meta.mjs'
@@ -17,4 +17,10 @@ const outDir = fileURLToPath(new URL('../public/data/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 writeFileSync(`${outDir}/index.json`, JSON.stringify(rows))
 writeFileSync(`${outDir}/meta.json`, JSON.stringify(meta))
-console.log(`build-data: ${rows.length} index rows, ${meta.categories.length} categories -> public/data/`)
+for (const f of ['untded.jsonld', 'untded.ttl']) {
+  copyFileSync(
+    fileURLToPath(new URL(`../data-source/${f}`, import.meta.url)),
+    `${outDir}/${f}`,
+  )
+}
+console.log(`build-data: ${rows.length} index rows, ${meta.categories.length} categories, linked data -> public/data/`)

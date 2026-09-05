@@ -43,6 +43,22 @@ const elements = loadElements()
           <span class="font-mono text-xs">bin/export</span>.
         </p>
       </a>
+      <a href={href('/data/untded.jsonld')} class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">JSON-LD</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/data/untded.jsonld</span> — the whole
+          directory as a linked-data graph: every element an identified
+          resource with schema.org and UNTDED vocabulary terms.
+        </p>
+      </a>
+      <a href={href('/data/untded.ttl')} class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">RDF Turtle</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/data/untded.ttl</span> — the same
+          graph as Turtle, for SPARQL stores and RDF tooling. The vocabulary is
+          defined in the dataset’s YAML-LD context.
+        </p>
+      </a>
       <a href={href('/data/index.json')} class="rounded-md border border-line bg-white p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Compact index</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">

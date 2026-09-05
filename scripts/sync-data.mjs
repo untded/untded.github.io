@@ -14,4 +14,7 @@ const src = `${datasetDir}/derived/elements.json`
 const outDir = fileURLToPath(new URL('../data-source/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 cpSync(src, `${outDir}/elements.json`)
-console.log(`synced ${src} -> data-source/elements.json`)
+for (const f of ['untded.jsonld', 'untded.ttl']) {
+  cpSync(`${datasetDir}/derived/${f}`, `${outDir}/${f}`)
+}
+console.log(`synced elements.json, untded.jsonld, untded.ttl -> data-source/`)

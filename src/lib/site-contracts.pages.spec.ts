@@ -35,6 +35,16 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     expect(JSON.parse(readFileSync(`${dist}/data/meta.json`, 'utf8')).count).toBe(elements.length)
   })
 
+  it('ships the linked-data payloads and embeds JSON-LD on pages', () => {
+    const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
+    expect(jsonld['@graph']).toHaveLength(elements.length + 1)
+    expect(readFileSync(`${dist}/data/untded.ttl`, 'utf8')).toMatch(/^@prefix .*utd: <https:\/\/www\.untded\.org\/ns\/untded#>/m)
+    const elementHtml = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
+    expect(elementHtml).toContain('application/ld+json')
+    expect(elementHtml).toContain('TradeDataElement')
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('application/ld+json')
+  })
+
   it('lists all elements in the no-JS directory table', () => {
     const html = readFileSync(`${dist}/elements/index.html`, 'utf8')
     const rows = html.match(/<tr\b/g)?.length ?? 0
