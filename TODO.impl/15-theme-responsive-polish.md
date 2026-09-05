@@ -17,3 +17,6 @@ Additional from user during implementation:
       no deflection to other pages
 - [x] Host the source PDFs on the site (/pdf/UNTDED2005.pdf + Redacted);
       every element's Source card deep-links to its PDF page
+- [x] Private redacted working copy removed from the site (card, file, sync,
+      contracts); element deep-links point at the public full PDF (identical
+      pagination for the table pages)
