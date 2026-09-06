@@ -6,7 +6,6 @@
   utd:bridges "SWIFT: an..35x2 and UNLK: an..35x2; L 23- 24, P 45-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Documentary credit draft tenor";
   utd:sourcePage 80;
   utd:status "retired";

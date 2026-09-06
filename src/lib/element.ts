@@ -88,10 +88,10 @@ export function parseBridges(bridges: string | null): Bridge[] {
   return out
 }
 
-export function replacementPointer(element: ElementRecord): number | null {
+export function replacementPointer(element: ElementRecord, tags: Set<number>): number | null {
   if (element.status !== 'retired' || !element.notes) return null
   const refs = [...element.notes.matchAll(/\b\d{4}\b/g)].map((m) => Number(m[0]))
-    .filter((n) => n !== element.tag && n > 699 && !(n >= 1970 && n <= 2099))
+    .filter((n) => n !== element.tag && n > 699 && !(n >= 1970 && n <= 2099) && tags.has(n))
   return refs[0] ?? null
 }
 

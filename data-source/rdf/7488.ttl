@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 26;
   utd:minLength 1;
   utd:oldName "Dangerous goods additional information";

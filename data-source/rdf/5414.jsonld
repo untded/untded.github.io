@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 98,
-  "extractionConfidence": "medium",
   "oldName": "Disburseme nt amount",
   "bridges": "CIM: n..24; L 39-40, P 50- 73 (CIM 30)"
 }

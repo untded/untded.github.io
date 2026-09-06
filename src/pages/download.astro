@@ -8,7 +8,7 @@ const elements = loadElements()
 
 <BaseLayout
   title="Download — UN/TDED"
-  description="The UNTDED 2005 dataset: YAML single source of truth, CSV and JSON exports, and the source PDFs."
+  description="The UNTDED 2005 dataset as YAML, CSV, JSON, JSON-LD and RDF Turtle, plus the source publication."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Download</h1>
@@ -24,9 +24,8 @@ const elements = loadElements()
         <h2 class="font-semibold text-ink">YAML — full dataset ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
           <span class="font-mono text-xs">untded/untded-2005</span> — nine
-          category files covering every element, each with its source page and
-          extraction confidence, plus the extraction and verification code
-          (Ruby, lutaml-model).
+          category files covering every element, each naming its page in the
+          source publication.
         </p>
       </a>
       <a
@@ -70,11 +69,10 @@ const elements = loadElements()
         href="https://github.com/untded/references"
         class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60"
       >
-        <h2 class="font-semibold text-ink">Source PDFs &amp; provenance ↗</h2>
+        <h2 class="font-semibold text-ink">Source publication ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">untded/references</span> — both PDFs,
-          the front-matter OCR, the printed legend, and the D.05B cross-check
-          corpus.
+          <span class="font-mono text-xs">untded/references</span> — the
+          2005 edition PDF and related reference documents.
         </p>
       </a>
     </div>
@@ -86,7 +84,7 @@ const elements = loadElements()
         © United Nations / UNECE. Digitized by this project on behalf of
         UN/CEFACT and ISO/TC 154; reproduced with attribution. Code: MIT.
         When you use the dataset, cite the source publication and this
-        digitization.
+        dataset.
       </p>
     </section>
   </div>

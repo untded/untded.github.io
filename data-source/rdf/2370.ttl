@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Delivery time-limit";
   utd:sourcePage 48;
   utd:status "retired";

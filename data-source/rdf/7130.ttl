@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 17;
   utd:minLength 1;
   utd:oldName "Customer authorization number";

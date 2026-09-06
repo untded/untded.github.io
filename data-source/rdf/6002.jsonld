@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "add",
   "status": "active",
   "sourcePage": 101,
-  "extractionConfidence": "high",
   "name": "Geographical Coordinate. Longitude.Measure",
   "description": "The measure of the angular distance east or west from the Greenwich meridan to the meridan of a specific place"
 }

@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Equipment restriction code";
   utd:sourcePage 124;
   utd:status "retired";

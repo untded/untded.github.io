@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 3;
   utd:minLength 1;
   utd:oldName "Measurement dimension, coded";

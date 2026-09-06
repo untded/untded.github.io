@@ -6,7 +6,6 @@
   utd:bridges "UNLK: L 09, P 63-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Service provider, coded";
   utd:sourcePage 53;
   utd:status "retired";

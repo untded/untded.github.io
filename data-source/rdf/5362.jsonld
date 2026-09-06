@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 96,
-  "extractionConfidence": "medium",
   "oldName": "Section total charges amount, consignor",
   "bridges": "CIM: L 49, P 66-73 and L 55, P 66-73 and L 61, P 66-73 (also on reverse)"
 }

@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 80,
-  "extractionConfidence": "medium",
   "oldName": "Documentary credit available by",
   "bridges": "ICC: checkmark L 20, P 51 or 61 or 72 SWIFT: an..35x2"
 }

@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";
-  utd:extractionConfidence "high";
   utd:maxLength 18;
   utd:minLength 1;
   utd:oldName "Percentage";

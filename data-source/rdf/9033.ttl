@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 7;
   utd:minLength 1;
   utd:oldName "Previous Customs procedure, coded";

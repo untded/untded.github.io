@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "high";
   utd:maxLength 35;
   utd:minLength 1;
   utd:oldName "Instruction";

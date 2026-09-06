@@ -6,7 +6,6 @@
   utd:bridges "CIMP: (411)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Accounting information qualifier";
   utd:sourcePage 83;
   utd:status "retired";

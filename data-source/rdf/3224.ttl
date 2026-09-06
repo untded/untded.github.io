@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 256;
   utd:minLength 1;
   utd:oldName "Place/location";

@@ -6,7 +6,6 @@
   utd:bridges "UNLK: L 36-44, P 09-44";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Current domestic value";
   utd:sourcePage 88;
   utd:status "retired";

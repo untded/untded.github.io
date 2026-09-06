@@ -6,7 +6,6 @@
   utd:bridges "CIM: an..35x3 L 20-22, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Tariffs and routes requested";
   utd:sourcePage 76;
   utd:status "retired";

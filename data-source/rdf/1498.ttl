@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Packed in transport item number";
   utd:sourcePage 37;
   utd:status "retired";

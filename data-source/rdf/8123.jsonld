@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 121,
-  "extractionConfidence": "medium",
   "oldName": "Vessel, coded",
   "bridges": "MAR: IMO/FAL 1-3,5-7 and UNLK: L 23, P 19-26"
 }

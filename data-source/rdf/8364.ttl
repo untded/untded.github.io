@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "high";
   utd:maxLength 6;
   utd:minLength 1;
   utd:oldName "EMS number";

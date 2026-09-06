@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 6;
   utd:minLength 1;
   utd:oldName "Package split";

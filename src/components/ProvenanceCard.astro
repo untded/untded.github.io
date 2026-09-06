@@ -10,23 +10,10 @@ const { provenance } = Astro.props
 
 <aside class="rounded-md border border-line bg-paper p-4 text-sm" aria-label="Source">
   <h2 class="mb-2 text-xs font-semibold uppercase tracking-wider text-body">Source</h2>
-  <dl class="space-y-1.5 text-body">
-    <div class="flex justify-between gap-3">
-      <dt>PDF page</dt>
-      <dd>
-        <a
-          class="font-mono tabular-nums text-ink underline decoration-un/50 hover:text-un-deep"
-          href={href(`/pdf/UNTDED2005.pdf#page=${provenance.page}`)}
-        >
-          {provenance.page} ↗
-        </a>
-      </dd>
-    </div>
-    <div class="flex justify-between gap-3">
-      <dt>Transcription confidence</dt>
-      <dd>
-        <span class="font-mono text-xs text-ink">{provenance.confidence}</span>
-      </dd>
-    </div>
-  </dl>
+  <a
+    class="font-mono text-xs text-un-deep underline decoration-un/50 hover:text-un-deep"
+    href={href(`/pdf/UNTDED2005.pdf#page=${provenance.page}`)}
+  >
+    ECE/TRADE/362, page {provenance.page} ↗
+  </a>
 </aside>

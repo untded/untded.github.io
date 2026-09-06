@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 4;
   utd:minLength 1;
   utd:oldName "Number of passengers";

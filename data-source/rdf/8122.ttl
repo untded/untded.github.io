@@ -6,7 +6,6 @@
   utd:bridges "MAR: IMO/FAL 1-7 and UNLK: L 24, P 09-26";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Vessel";
   utd:sourcePage 121;
   utd:status "retired";

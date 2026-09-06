@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnr";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 1;
   utd:minLength 1;
   utd:oldName "Dangerous goods: RID indicator";

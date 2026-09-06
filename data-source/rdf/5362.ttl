@@ -6,7 +6,6 @@
   utd:bridges "CIM: L 49, P 66-73 and L 55, P 66-73 and L 61, P 66-73 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Section total charges amount, consignor";
   utd:sourcePage 96;
   utd:status "retired";

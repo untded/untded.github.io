@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Allowance/charge percentage";
   utd:sourcePage 98;
   utd:status "retired";

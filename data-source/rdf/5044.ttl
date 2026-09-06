@@ -10,7 +10,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 4;
   utd:minLength 1;
   utd:oldName "Additional charges/deductions";

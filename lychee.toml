@@ -1,6 +1,6 @@
 # Internal link checking over the built site (see npm run links).
 offline = true
-no-progress = true
+no_progress = true
 exclude = [
   '^https?://',
 ]
