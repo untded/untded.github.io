@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import UnlkForm from '../components/UnlkForm.astro'
+import { loadElements } from '../lib/data'
+import { unlkRects, unlkZones, type UnlkRect } from '../lib/unlk'
+import { href } from '../lib/site'
+
+// One field per distinct zone; many elements share a field — that is
+// the point of the master document.
+const fieldsMap = new Map<string, { rect: UnlkRect; elements: Array<{ tag: number; name: string | null }> }>()
+for (const e of loadElements()) {
+  for (const z of unlkZones(e.bridges)) {
+    const rects = unlkRects(e.bridges)
+    const rect = rects.find(
+      (r) => r.lineFrom === z.lineFrom && r.lineTo === z.lineTo && r.posFrom === z.posFrom && r.posTo === z.posTo,
+    )
+    if (!rect) continue
+    const key = [z.lineFrom, z.lineTo, z.posFrom, z.posTo].join(':')
+    const field = fieldsMap.get(key) ?? { rect, elements: [] }
+    field.elements.push({ tag: e.tag, name: e.name })
+    fieldsMap.set(key, field)
+  }
+}
+const fields = [...fieldsMap.values()].sort(
+  (a, b) => a.rect.y - b.rect.y || a.rect.x - b.rect.x,
+)
+const elementsWithUnlk = loadElements().filter((e) => unlkZones(e.bridges).length > 0).length
+---
+
+<BaseLayout
+  title="The UN layout key — UN/TDED"
+  description="The UN layout key (ISO 6422) reconstructed from the directory: every UNLK bridge plotted as a field on the standard A4 form."
+>
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Parallel realization</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The UN layout key</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      The United Nations Layout Key (UNLK, ISO 6422) is the standard A4 form for aligned
+      trade documents: an image area of 183 × 280 mm on the layout-chart grid agreed with
+      ISO 3535 — eight standard boxes across, 33 lines down. The directory’s bridges
+      locate {elementsWithUnlk} elements on that grid by line and character position
+      (L, P). Plotting them reconstructs the model form: the same data the directory
+      carries, realized as the printed document.
+    </p>
+
+    <div class="mt-8 flex flex-wrap items-start gap-8">
+      <div class="rounded-lg border border-line bg-paper p-4 shadow-sm">
+        <UnlkForm variant="page" fields={fields} />
+      </div>
+      <div class="min-w-[14rem] flex-1 space-y-4">
+        <div class="rounded-md border border-line bg-mist p-4 text-sm text-body">
+          <p class="font-semibold text-ink">{fields.length} distinct fields</p>
+          <p class="mt-1">{elementsWithUnlk} elements carry a UNLK bridge; shared fields
+          are the master-document principle at work — one box on the form serves every
+          document derived from it.</p>
+        </div>
+        <div class="rounded-md border border-line bg-mist p-4 text-sm text-body">
+          <p class="font-semibold text-ink">How to read a location</p>
+          <p class="mt-1">L is the line on the form (1–33), P the character position
+          within the line (1–82). A field spans both, e.g. an..17 at L 04, P 63–80:
+          seventeen characters in eighteen positions on line 4 of the right-hand
+          column.</p>
+        </div>
+        <p class="text-sm text-body">
+          Hover a field to see the elements it carries. Sources: UNECE
+          Recommendation No. 1 (ECE/TRADE/432E), ISO 6422, ISO 3535 — the
+          {' '}<a class="text-un-deep underline decoration-un/50" href={href('/document')}>document pages</a>{' '}
+          transcribe the directory’s own presentation rules.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

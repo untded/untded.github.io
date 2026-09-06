@@ -6,6 +6,9 @@ import ChangeTagBadge from '../../components/ChangeTagBadge.astro'
 import ElementPager from '../../components/ElementPager.astro'
 import OldNameBlock from '../../components/OldNameBlock.astro'
 import BridgeList from '../../components/BridgeList.astro'
+import UnlkForm from '../../components/UnlkForm.astro'
+import PositionRuler from '../../components/PositionRuler.astro'
+import { unlkRects, unlkZones } from '../../lib/unlk'
 import ProvenanceCard from '../../components/ProvenanceCard.astro'
 import { loadElements, jsonldNode } from '../../lib/data'
 import { categoryOf, changeTagInfo, elementUrl, neighbours, pairedTag, replacementPointer } from '../../lib/element'
@@ -23,6 +26,8 @@ const category = categoryOf(element.tag)
 const info = changeTagInfo(element.change_tag)
 const allTags = loadElements().map((e) => e.tag)
 const replacement = replacementPointer(element, new Set(allTags))
+const unlk = unlkZones(element.bridges)
+const unlkR = unlkRects(element.bridges)
 const { prev, next } = neighbours(element.tag, allTags)
 const pair = pairedTag(element.tag, new Set(allTags))
 const dataFile = `${DATASET_FILE_BASE}/${category.range}.yaml`
@@ -181,6 +186,34 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
             <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
           </p>
         </section>
+
+        {unlk.length > 0 && (
+          <section class="mt-8" aria-label="Location on the UN layout key">
+            <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-body">
+              On the UN layout key
+            </h2>
+            <div class="flex flex-wrap items-start gap-6">
+              <UnlkForm variant="card" zones={unlkR} />
+              <div class="min-w-[12rem] flex-1 space-y-3">
+                {unlk.map((z) => (
+                  <div>
+                    <p class="text-sm text-body">
+                      line{z.lineTo > z.lineFrom ? 's' : ''} {z.lineFrom}{z.lineTo > z.lineFrom ? `–${z.lineTo}` : ''},
+                      position{z.posTo > z.posFrom ? 's' : ''} {z.posFrom}{z.posTo > z.posFrom ? `–${z.posTo}` : ''}
+                      {z.format && <span> — field format <span class="font-mono text-xs">{z.format}</span></span>}
+                    </p>
+                    <PositionRuler from={z.posFrom} to={z.posTo} format={z.format} />
+                  </div>
+                ))}
+                <p class="text-xs text-body/80">
+                  The standard A4 form of ISO 6422 — the same data realized as a printed
+                  document. See the{' '}
+                  <a class="text-un-deep underline decoration-un/50" href={href('/unlk')}>full reconstruction</a>.
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {
           info.outsideLegend && (
