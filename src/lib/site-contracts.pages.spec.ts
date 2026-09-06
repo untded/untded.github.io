@@ -143,7 +143,7 @@ it("carries the full original documentation", () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
     expect(html).toContain('favicon.svg?v=20260906')
     expect(html).toContain('favicon-dark.svg')
-    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4BCCFF')
+    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4bccff')
     expect(html).toContain('favicon.ico')
     expect(html).toContain('site.webmanifest')
     expect(html).toContain('apple-touch-icon')
