@@ -65,6 +65,41 @@ const elements = loadElements()
           representation, change tag, status, category.
         </p>
       </a>
+      <a href={href('/data/vocabulary.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Vocabulary declaration</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/data/vocabulary.json</span> — the
+          ontology as data: prefixes, classes and properties, generated from
+          the dataset’s single vocabulary declaration.
+        </p>
+      </a>
+      <a href={href('/data/edifact-links.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">UN/EDIFACT join</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/data/edifact-links.json</span> —
+          the element-by-element join against the D05B EDED mirror, with the
+          representation-alignment verdict for every joined tag.
+        </p>
+      </a>
+      <a href={href('/ns/untded-context.jsonld')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">JSON-LD context</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/ns/untded-context.jsonld</span> —
+          the context for referencing TDED elements from JSON-LD, pinned to
+          this edition. See the{' '}
+          <a class="text-un-deep underline decoration-un/50" href={href('/docs/context')}>context guide</a>.
+        </p>
+      </a>
+      <a href={href('/elements/1004/data.ttl')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Per-element RDF</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">/elements/&lt;tag&gt;/data.ttl</span>
+          {' '}and{' '}
+          <span class="font-mono text-xs">data.jsonld</span> — every element
+          resolves individually in both RDF syntaxes (example:{' '}
+          <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>).
+        </p>
+      </a>
       <a
         href="https://github.com/untded/references"
         class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60"
