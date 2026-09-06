@@ -49,15 +49,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
     </nav>
 
     <div class="mb-6">
-      <ElementPager prev={prev} next={next}>
-        <button
-          type="button"
-          class="copy-btn filter-btn font-mono text-xs"
-          data-copy={String(element.tag)}
-        >
-          Copy tag {element.tag}
-        </button>
-      </ElementPager>
+      <ElementPager prev={prev} next={next} />
     </div>
 
     <div class="grid gap-8 lg:grid-cols-[16rem_1fr]">
