@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4260> a utd:TradeDataElement;
+  skos:altLabel "Documentary credit additional conditions";
   schema:description "Any further conditions of the Documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit. Additional Condition.Text";
+  utd:bridge [];
   utd:bridges "SWIFT: an..65x24";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Documentary credit additional conditions";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4260 .

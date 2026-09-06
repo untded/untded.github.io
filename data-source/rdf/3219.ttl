@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3219> a utd:TradeDataElement;
+  skos:altLabel "Country of first destination, coded";
   schema:description "To identify the country where a consignment is off-loaded from the means of transport used for its original exportation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. First Destination Country.Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 10) ISO Alpha-2 Country code, cf. Vol. II of UNTDED";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Country of first destination, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 60;
   utd:status "active";
   utd:tag 3219 .

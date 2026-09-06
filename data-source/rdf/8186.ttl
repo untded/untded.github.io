@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8186> a utd:TradeDataElement;
+  skos:altLabel "Substance identification number, lower part";
   schema:description "To specify the identity number for the lower part of the orange hazard placard required on the means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Lower Part Orange Hazard Placard.Identifier";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 4;
-  utd:minLength 4;
-  utd:oldName "Substance identification number, lower part";
-  utd:representation "an4";
+  utd:representation [];
   utd:sourcePage 124;
   utd:status "active";
   utd:tag 8186 .

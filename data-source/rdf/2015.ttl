@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2015> a utd:TradeDataElement;
+  skos:altLabel "Despatch pattern, coded";
   schema:description "Code specifying the days/periods for routine despatches";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch. Pattern.Code";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Despatch pattern, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 38;
   utd:status "active";
   utd:tag 2015 .

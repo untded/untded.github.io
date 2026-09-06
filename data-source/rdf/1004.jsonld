@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,48 @@
   "sourcePage": 28,
   "name": "Document. Identifier",
   "description": "Reference number identifying a specific document.",
-  "representation": "an..35",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 35,
-  "oldName": "Document/message number",
-  "businessTerm": "Document/message number",
-  "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..35",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 35
+  },
+  "altLabel": [
+    "Document/message number",
+    "Document/message number"
+  ],
+  "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(112) n3 and (114) an6 or (805) n8 and (118) n6"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 2"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..17 L 04, P 63-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 4,
+          "lineTo": 4,
+          "posFrom": 63,
+          "posTo": 80,
+          "fieldFormat": "an..17"
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": ""
+    }
+  ]
 }

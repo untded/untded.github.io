@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4034> a utd:TradeDataElement;
+  skos:altLabel "Customs information";
   schema:description "Free text information provided by Customs";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Information. Text";
+  utd:bridge [], [];
   utd:bridges "CIM: an..32x5 L 35-39, P 51-82 SAD: (SAD H and SAD I)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 70;
-  utd:minLength 1;
-  utd:oldName "Customs information";
-  utd:representation "an..70";
+  utd:representation [];
   utd:sourcePage 74;
   utd:status "active";
   utd:tag 4034 .

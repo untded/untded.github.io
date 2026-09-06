@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3336> a utd:TradeDataElement;
+  skos:altLabel "Consignor",
+    "Sender, Shipper";
   schema:description "Name of the party consigning goods as stipulated in the transport contract by the party ordering transport";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignor. Party Identification.Text";
+  utd:bridge [], [], [], [];
   utd:bridges "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04-08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)";
-  utd:businessTerm "Sender, Shipper";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Consignor";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 65;
   utd:status "active";
   utd:tag 3336 .

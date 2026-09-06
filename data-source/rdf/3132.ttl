@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3132> a utd:TradeDataElement;
+  skos:altLabel "Consignee",
+    "Consigned to order of";
   schema:description "Name and address of party to which goods are consigned.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignee. Party Identification.Text";
+  utd:bridge [], [], [], [], [], [];
   utd:bridges "AWB: L 11-14, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35;(302):an..17; (303):an..9 ; (304):a2; (305):an..9 UNLK: an..35x5 L 10-14, P 09-44 CIM: (CIM 14; CMR 2) MAR: IMO/FAL 2 SAD: (SAD 8)";
-  utd:businessTerm "Consigned to order of";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Consignee";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 56;
   utd:status "active";
   utd:tag 3132 .

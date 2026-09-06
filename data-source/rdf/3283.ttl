@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3283> a utd:TradeDataElement;
+  skos:altLabel "Despatch party, coded",
+    "Pick-up Party";
   schema:description "To identify the name and address of the party where goods are to be, or have been, taken over by a carrier such as the place where a container is picked-up.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch Party. Party.Identifier";
-  utd:businessTerm "Pick-up Party";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Despatch party, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 64;
   utd:status "active";
   utd:tag 3283 .

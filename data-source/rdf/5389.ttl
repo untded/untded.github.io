@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5389> a utd:TradeDataElement;
+  skos:altLabel "Pricing group, coded",
+    "Service group code";
   schema:description "Code specifying a group of goods and or services grouped together for pricing purposes.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Product. Pricing Group.Code";
-  utd:businessTerm "Service group code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 25;
-  utd:minLength 1;
-  utd:oldName "Pricing group, coded";
-  utd:representation "an..25";
+  utd:representation [];
   utd:sourcePage 97;
   utd:status "active";
   utd:tag 5389 .

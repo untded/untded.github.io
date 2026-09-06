@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6422> a utd:TradeDataElement;
+  skos:altLabel "Consignment cube",
+    "Cube";
   schema:description "Total cube of all goods items referred to as one consignment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Gross Volume.Measure";
+  utd:bridge [];
   utd:bridges "UNLK: L34 P 72-80";
-  utd:businessTerm "Cube";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cn";
-  utd:charset "n";
-  utd:maxLength 9;
-  utd:minLength 1;
-  utd:oldName "Consignment cube";
-  utd:representation "n..9";
+  utd:representation [];
   utd:sourcePage 108;
   utd:status "active";
   utd:tag 6422 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/9308> a utd:TradeDataElement;
+  skos:altLabel "Seal number";
   schema:description "The identification number of a seal affixed to a piece of transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Seal.Identifier";
+  utd:bridge [], [];
   utd:bridges "MAR: IMO/FAL 2, 7 SAD: (SAD D)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Seal number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 130;
   utd:status "active";
   utd:tag 9308 .

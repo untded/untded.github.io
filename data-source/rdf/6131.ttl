@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6131> a utd:TradeDataElement;
+  skos:altLabel "Freight rate basis, coded";
   schema:description "Unit of quantity for the calculation of freight charges and other charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Quantity Unit Basis.Code";
+  utd:bridge [];
   utd:bridges "UNLK: L 52-66 P 27-54";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Freight rate basis, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 104;
   utd:status "active";
   utd:tag 6131 .

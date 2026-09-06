@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6316> a utd:TradeDataElement;
+  skos:altLabel "Cube";
   schema:description "Measurement normally arrived at by multiplying the maximum length, width and height of pieces or package or transport equipment. Also known as cube.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Line Item. Gross Volume.Measure";
-  utd:businessTerm "Cube";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 9;
-  utd:minLength 1;
-  utd:representation "n..9";
+  utd:representation [];
   utd:sourcePage 107;
   utd:status "active";
   utd:tag 6316 .

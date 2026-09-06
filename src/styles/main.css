@@ -147,3 +147,21 @@ body {
 @utility text-cat-7 { color: var(--color-cat-7); }
 @utility text-cat-8 { color: var(--color-cat-8); }
 @utility text-cat-9 { color: var(--color-cat-9); }
+
+/* Documentation prose (MDX docs pages) */
+.prose-doc { max-width: 72ch; }
+.prose-doc h2 { margin-top: 2.25rem; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; color: var(--color-ink); }
+.prose-doc h3 { margin-top: 1.75rem; font-size: 1rem; font-weight: 600; color: var(--color-ink); }
+.prose-doc p, .prose-doc ul, .prose-doc ol { margin-top: 0.75rem; line-height: 1.7; color: var(--color-body); }
+.prose-doc ul, .prose-doc ol { padding-inline-start: 1.25rem; list-style: disc; }
+.prose-doc ol { list-style: decimal; }
+.prose-doc li { margin-top: 0.3rem; }
+.prose-doc a { color: var(--color-un-deep); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--color-un) 50%, transparent); }
+.prose-doc code { font-family: var(--font-mono, ui-monospace, monospace); font-size: 0.85em; background: var(--color-mist); border: 1px solid var(--color-line); border-radius: 0.25rem; padding: 0.1rem 0.3rem; }
+.prose-doc pre { margin-top: 0.75rem; overflow-x: auto; border: 1px solid var(--color-line); border-radius: 0.375rem; background: var(--color-mist); padding: 0.9rem 1rem; font-size: 0.8rem; line-height: 1.6; }
+.prose-doc pre code { background: none; border: 0; padding: 0; font-size: inherit; }
+.prose-doc table { margin-top: 0.75rem; width: 100%; border: 1px solid var(--color-line); border-radius: 0.375rem; border-collapse: collapse; font-size: 0.875rem; }
+.prose-doc th { border-bottom: 1px solid var(--color-line); padding: 0.4rem 0.75rem; text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: color-mix(in oklab, var(--color-body) 80%, transparent); }
+.prose-doc td { border-bottom: 1px solid color-mix(in oklab, var(--color-line) 60%, transparent); padding: 0.4rem 0.75rem; color: var(--color-body); vertical-align: top; }
+.prose-doc tr:last-child td { border-bottom: 0; }
+.prose-doc blockquote { margin-top: 0.75rem; border-inline-start: 3px solid var(--color-un); padding-inline-start: 1rem; color: var(--color-body); }

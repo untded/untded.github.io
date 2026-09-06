@@ -92,7 +92,11 @@ export const BRIDGE_SCHEME_DEFS: Record<string, { text: string; source: 'publica
 
 // "UNLK: L 04, P 41-45 CIMP: (120): a1" -> per-scheme entries. The
 // trailing colon is part of the match so a scheme word occurring inside
-// a detail (e.g. "SAD: (SAD 1)") is not mistaken for a new entry.
+// a detail (e.g. "SAD: (SAD 1)") is not mistaken for a new entry. One
+// entry prints its scheme without the colon at the start of the cell
+// (element 5010, verbatim from the source).
+const SCHEME_WORDS = 'Inland Waterways B/L|CIMP|UNLK|UNSM|EDIFACT|ODETTE|SWIFT|SAD|MAR|AWB|CMR|CIM|ICC|INV|ISO|B/L'
+
 export function parseBridges(bridges: string | null): Bridge[] {
   if (!bridges) return []
   const out: Bridge[] = []
@@ -110,7 +114,9 @@ export function parseBridges(bridges: string | null): Bridge[] {
   if (lastScheme) {
     out.push({ scheme: lastScheme, detail: bridges.slice(last).trim() })
   }
-  return out
+  if (out.length > 0) return out
+  const leading = bridges.match(new RegExp(`^(${SCHEME_WORDS})\\s+([\\s\\S]+)$`, 'm'))
+  return leading ? [{ scheme: leading[1], detail: leading[2] }] : []
 }
 
 export type BridgeSegment =

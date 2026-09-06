@@ -8,10 +8,7 @@
   schema:name "Time. Variation.Numeric";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:representation "n..3";
+  utd:representation [];
   utd:sourcePage 40;
   utd:status "active";
   utd:tag 2077 .

@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8022> a utd:TradeDataElement;
+  skos:altLabel "Freight and charges",
+    "Charge type";
   schema:description "Free form description of a charge such as freight and other charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Charge. Text";
+  utd:bridge [];
   utd:bridges "UNLK: L53-66, P 28-65";
-  utd:businessTerm "Charge type";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 26;
-  utd:minLength 1;
-  utd:oldName "Freight and charges";
-  utd:representation "an..26";
+  utd:representation [];
   utd:sourcePage 118;
   utd:status "active";
   utd:tag 8022 .

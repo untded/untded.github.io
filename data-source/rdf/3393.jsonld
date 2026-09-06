@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,36 @@
   "sourcePage": 68,
   "name": "Consignment. Unloading Location.Identifier",
   "description": "To identify a seaport, airport, freight terminal, rail station or other place at which goods are unloaded from the means of transport having been used for their carriage",
-  "representation": "an..35",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 35,
-  "oldName": "Place of discharge, coded",
-  "bridges": "CIM: n..8 (nn,nnnnn,n); L 23, P 32-44 UNLK: L 25, P 18-26"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..35",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 35
+  },
+  "altLabel": [
+    "Place of discharge, coded"
+  ],
+  "bridges": "CIM: n..8 (nn,nnnnn,n); L 23, P 32-44 UNLK: L 25, P 18-26",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "n..8 (nn,nnnnn,n); L 23, P 32-44"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 25, P 18-26",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 25,
+          "lineTo": 25,
+          "posFrom": 18,
+          "posTo": 26
+        }
+      ]
+    }
+  ]
 }

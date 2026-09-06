@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1492> a utd:TradeDataElement;
+  skos:altLabel "Container item number";
   schema:description "Sequence number differentiating a specific piece of transport equipment amongst others";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Sequence.Identifier";
+  utd:bridge [], [], [];
   utd:bridges "CIMP: (115): an1n3 UNLK: L 28-50, P 00-08 MAR: IMO/FAL 2";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 5;
-  utd:minLength 1;
-  utd:oldName "Container item number";
-  utd:representation "n..5";
+  utd:representation [];
   utd:sourcePage 36;
   utd:status "active";
   utd:tag 1492 .

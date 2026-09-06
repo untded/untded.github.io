@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1332> a utd:TradeDataElement;
+  skos:altLabel "Offer number",
+    "Quote number, Bid number";
   schema:description "Reference number to identify a quotation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Quotation Document. Identifier";
+  utd:bridge [];
   utd:bridges "UNLK: an..17 L 04, P 63-80";
-  utd:businessTerm "Quote number, Bid number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Offer number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 35;
   utd:status "active";
   utd:tag 1332 .

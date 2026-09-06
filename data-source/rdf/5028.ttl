@@ -1,20 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5028> a utd:TradeDataElement;
+  skos:altLabel "Interest on arrears";
   schema:description "Agreed percentage of annual interest by which an amount due will be increased if the payment due date is not respected.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Late Payment. Annual Interest Percentage.Numeric";
+  utd:bridge [];
   utd:bridges "UNLK: L 36-46, P 09-44";
-  utd:businessTerm "Interest on arrears";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Interest on arrears";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 87;
   utd:status "active";
   utd:tag 5028 .

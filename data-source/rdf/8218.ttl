@@ -8,10 +8,7 @@
   schema:name "Traveller. Accompanied By Infant.Indicator";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 1;
-  utd:minLength 1;
-  utd:representation "an1";
+  utd:representation [];
   utd:sourcePage 124;
   utd:status "active";
   utd:tag 8218 .

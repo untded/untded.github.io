@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5116> a utd:TradeDataElement;
+  skos:altLabel "Item amount",
+    "Item price";
   schema:description "Amount due for each chargeable item of goods or services.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Line Item. Charge.Amount";
+  utd:bridge [], [];
   utd:bridges "UNLK: L36-46, P 72-80 SAD: (SAD 42)";
-  utd:businessTerm "Item price";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Item amount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5116 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7488> a utd:TradeDataElement;
+  skos:altLabel "Dangerous goods additional information";
   schema:description "Additional information required for each dangerous substance or article in a consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Additional Information.Text";
+  utd:bridge [];
   utd:bridges "Add MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 26;
-  utd:minLength 1;
-  utd:oldName "Dangerous goods additional information";
-  utd:representation "an..26";
+  utd:representation [];
   utd:sourcePage 117;
   utd:status "active";
   utd:tag 7488 .

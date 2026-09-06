@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { loadElements } from '../lib/data'
+import { loadCategories, parseBridges, BRIDGE_SCHEME_DEFS } from '../lib/element'
+import { href } from '../lib/site'
+
+const elements = loadElements()
+const categories = loadCategories()
+
+// scheme -> [{tag, name, detail}]
+const byScheme = new Map<string, Array<{ tag: number; name: string | null; detail: string }>>()
+for (const e of elements) {
+  for (const b of parseBridges(e.bridges)) {
+    const list = byScheme.get(b.scheme) ?? []
+    list.push({ tag: e.tag, name: e.name, detail: b.detail })
+    byScheme.set(b.scheme, list)
+  }
+}
+const schemes = [...byScheme.entries()].sort((a, b) => b[1].length - a[1].length)
+
+const matrix = schemes.map(([scheme, rows]) => ({
+  scheme,
+  cells: categories.map((c) => rows.filter((r) => Math.floor(r.tag / 1000) === c.k).length),
+}))
+const maxCell = Math.max(...matrix.flatMap((m) => m.cells), 1)
+const tint = (n: number) => (n === 0 ? '' : `background-color: rgb(0 158 219 / ${Math.max(0.08, (n / maxCell) * 0.55).toFixed(2)})`)
+---
+
+<BaseLayout
+  title="Bridges — the document systems — UN/TDED"
+  description="Where the directory's elements live on the aligned trade document systems: UNLK, SAD, MAR, CIMP, CIM, AWB, CMR, SWIFT and the rest, element by element."
+>
+  <div class="mx-auto max-w-5xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Document systems</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">Bridges by scheme</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      The directory’s Locations column places each element on the document systems of
+      aligned trade documents — the master-document principle of the UN layout key: one
+      box on the master serves every document derived from it. Each scheme below is a
+      carrier; the counts say how many elements the directory places on it.
+    </p>
+
+    <section class="mt-8" aria-label="Schemes">
+      <div class="flex flex-wrap gap-2">
+        {schemes.map(([scheme, rows]) => (
+          <a
+            href={`#${scheme.replace(/[^A-Za-z0-9]/g, '')}`}
+            class="inline-flex items-baseline gap-2 rounded-full border border-line bg-mist px-3 py-1.5 text-sm transition-colors hover:border-un/60"
+          >
+            <span class="font-mono font-semibold text-ink">{scheme}</span>
+            <span class="tabular-nums text-body/80">{rows.length}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Coverage by category</h2>
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Scheme</th>
+              {categories.map((c) => <th class="px-3 py-2 text-right font-mono">{c.k}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {matrix.map(({ scheme, cells }) => (
+              <tr class="border-b border-line/60 last:border-0">
+                <td class="px-4 py-2 font-mono text-body">{scheme}</td>
+                {cells.map((n) => (
+                  <td class="px-3 py-2 text-right font-mono tabular-nums text-body" style={tint(n)}>{n === 0 ? '' : n}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-2 text-xs text-body/80">
+        Column heads are the nine tag-range categories (thousands). Tint scales with count.
+      </p>
+    </section>
+
+    {schemes.map(([scheme, rows]) => {
+      const def = BRIDGE_SCHEME_DEFS[scheme]
+      return (
+        <section class="mt-10" id={scheme.replace(/[^A-Za-z0-9]/g, '')}>
+          <h2 class="text-xl font-semibold tracking-tight text-ink">
+            <span class="font-mono">{scheme}</span>
+            <span class="ms-2 text-base font-normal text-body">{def?.text ?? ''}</span>
+          </h2>
+          {def?.source === 'editorial' && (
+            <p class="mt-1 text-xs text-body/80">Expansion is editorial; not printed in the publication’s abbreviation list.</p>
+          )}
+          {scheme === 'UNLK' && (
+            <p class="mt-2 text-sm text-body">
+              The master form itself — see the{' '}
+              <a class="text-un-deep underline decoration-un/50" href={href('/unlk')}>full interactive reconstruction</a>.
+            </p>
+          )}
+          <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+                  <th class="px-4 py-2">Tag</th>
+                  <th class="px-4 py-2">Name</th>
+                  <th class="px-4 py-2">Printed location</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr class="border-b border-line/60 align-top last:border-0">
+                    <td class="px-4 py-2 font-mono whitespace-nowrap text-body">
+                      <a class="text-un-deep underline decoration-un/50" href={href(`/elements/${r.tag}`)}>{r.tag}</a>
+                    </td>
+                    <td class="px-4 py-2 text-body">{r.name ?? '(retired)'}</td>
+                    <td class="px-4 py-2 font-mono text-xs text-body">{r.detail}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )
+    })}
+
+    <p class="mt-10 max-w-2xl text-sm text-body">
+      Scheme expansions are the publication’s own abbreviations list (introduction,
+      section 1.4) — see the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
+    </p>
+  </div>
+</BaseLayout>

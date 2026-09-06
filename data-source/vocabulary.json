@@ -1,0 +1,294 @@
+{
+  "namespace": "https://www.untded.org/ns/untded#",
+  "prefixes": {
+    "utd": "https://www.untded.org/ns/untded#",
+    "schema": "https://schema.org/",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "classes": [
+    {
+      "term": "TradeDataElement",
+      "comment": "A data element of the Trade Data Elements Directory: a named, defined unit of trade information with a tag and a representation."
+    },
+    {
+      "term": "Representation",
+      "comment": "The character representation of a data element: charset, length bounds, and the printed notation."
+    },
+    {
+      "term": "Bridge",
+      "comment": "A location of a data element on a document scheme of an aligned trade document system (UNLK, SAD, MAR, CIMP, …)."
+    },
+    {
+      "term": "UnlkZone",
+      "comment": "A line and character-position span locating an element on the UN layout key."
+    },
+    {
+      "term": "Category",
+      "comment": "One of the nine ordered tag ranges into which the directory groups its data elements."
+    },
+    {
+      "term": "CategoryScheme",
+      "comment": "The ordered scheme of the nine tag-range categories."
+    }
+  ],
+  "terms": [
+    {
+      "term": "name",
+      "iri": "schema:name",
+      "group": "dataset-level"
+    },
+    {
+      "term": "description",
+      "iri": "schema:description",
+      "group": "dataset-level"
+    },
+    {
+      "term": "isPartOf",
+      "iri": "schema:isPartOf",
+      "group": "dataset-level"
+    },
+    {
+      "term": "isBasedOn",
+      "iri": "schema:isBasedOn",
+      "group": "dataset-level"
+    },
+    {
+      "term": "distribution",
+      "iri": "schema:distribution",
+      "group": "dataset-level"
+    },
+    {
+      "term": "encodingFormat",
+      "iri": "schema:encodingFormat",
+      "group": "dataset-level"
+    },
+    {
+      "term": "source",
+      "iri": "dct:source",
+      "group": "dataset-level"
+    },
+    {
+      "term": "elementCount",
+      "iri": "utd:elementCount",
+      "group": "dataset-level",
+      "comment": "The number of member elements."
+    },
+    {
+      "term": "tag",
+      "iri": "utd:tag",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The four-digit unique identifier of the data element."
+    },
+    {
+      "term": "representation",
+      "iri": "utd:representation",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The character representation as a structured node: printed form, charset, length bounds."
+    },
+    {
+      "term": "printedForm",
+      "iri": "utd:printedForm",
+      "group": "element-level",
+      "domain": "Representation",
+      "comment": "The printed representation notation, e.g. an..35."
+    },
+    {
+      "term": "charset",
+      "iri": "utd:charset",
+      "group": "element-level",
+      "domain": "Representation",
+      "comment": "The character class of the representation: a, an or n."
+    },
+    {
+      "term": "minLength",
+      "iri": "utd:minLength",
+      "group": "element-level",
+      "domain": "Representation",
+      "comment": "Minimum number of characters in a value."
+    },
+    {
+      "term": "maxLength",
+      "iri": "utd:maxLength",
+      "group": "element-level",
+      "domain": "Representation",
+      "comment": "Maximum number of characters in a value."
+    },
+    {
+      "term": "changeTag",
+      "iri": "utd:changeTag",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The printed change indicator against the 1993 edition."
+    },
+    {
+      "term": "status",
+      "iri": "utd:status",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "active or retired, per the printed change indicator."
+    },
+    {
+      "term": "oldName",
+      "iri": "utd:oldName",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The data element name in the 1993 edition."
+    },
+    {
+      "term": "businessTerm",
+      "iri": "utd:businessTerm",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The printed business term (synonym)."
+    },
+    {
+      "term": "altLabel",
+      "iri": "skos:altLabel",
+      "group": "element-level"
+    },
+    {
+      "term": "replacedBy",
+      "iri": "utd:replacedBy",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The element to use instead, per the printed pointer on retired entries."
+    },
+    {
+      "term": "bridges",
+      "iri": "utd:bridges",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "Printed locations on aligned trade documents (UNLK, SAD, CIMP, CIM, MAR)."
+    },
+    {
+      "term": "bridge",
+      "iri": "utd:bridge",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "One parsed location on a document scheme, with its zones when the scheme is the UN layout key."
+    },
+    {
+      "term": "scheme",
+      "iri": "utd:scheme",
+      "group": "element-level",
+      "domain": "Bridge",
+      "comment": "The document scheme the bridge locates the element on (UNLK, SAD, MAR, CIMP, …)."
+    },
+    {
+      "term": "detail",
+      "iri": "utd:detail",
+      "group": "element-level",
+      "domain": "Bridge",
+      "comment": "The bridge detail as printed."
+    },
+    {
+      "term": "zone",
+      "iri": "utd:zone",
+      "group": "element-level",
+      "domain": "Bridge",
+      "comment": "A line and character-position span on the UN layout key."
+    },
+    {
+      "term": "lineFrom",
+      "iri": "utd:lineFrom",
+      "group": "element-level",
+      "domain": "UnlkZone",
+      "comment": "First line of the span on the UN layout key."
+    },
+    {
+      "term": "lineTo",
+      "iri": "utd:lineTo",
+      "group": "element-level",
+      "domain": "UnlkZone",
+      "comment": "Last line of the span on the UN layout key."
+    },
+    {
+      "term": "posFrom",
+      "iri": "utd:posFrom",
+      "group": "element-level",
+      "domain": "UnlkZone",
+      "comment": "First character position of the span."
+    },
+    {
+      "term": "posTo",
+      "iri": "utd:posTo",
+      "group": "element-level",
+      "domain": "UnlkZone",
+      "comment": "Last character position of the span."
+    },
+    {
+      "term": "fieldFormat",
+      "iri": "utd:fieldFormat",
+      "group": "element-level",
+      "domain": "UnlkZone",
+      "comment": "The interchange format token of the field, e.g. an..17."
+    },
+    {
+      "term": "sourcePage",
+      "iri": "utd:sourcePage",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "Page of the source publication the entry appears on."
+    },
+    {
+      "term": "category",
+      "iri": "utd:category",
+      "group": "element-level",
+      "domain": "TradeDataElement",
+      "comment": "The tag-range category the element belongs to."
+    },
+    {
+      "term": "tagRange",
+      "iri": "utd:tagRange",
+      "group": "category-level",
+      "domain": "Category",
+      "comment": "The tag interval of the category, e.g. 1000-1699."
+    },
+    {
+      "term": "position",
+      "iri": "schema:position",
+      "group": "category-level"
+    },
+    {
+      "term": "member",
+      "iri": "skos:member",
+      "group": "category-level"
+    },
+    {
+      "term": "inScheme",
+      "iri": "skos:inScheme",
+      "group": "category-level"
+    },
+    {
+      "term": "label",
+      "iri": "rdfs:label",
+      "group": "vocabulary definitions"
+    },
+    {
+      "term": "comment",
+      "iri": "rdfs:comment",
+      "group": "vocabulary definitions"
+    },
+    {
+      "term": "domain",
+      "iri": "rdfs:domain",
+      "group": "vocabulary definitions"
+    },
+    {
+      "term": "range",
+      "iri": "rdfs:range",
+      "group": "vocabulary definitions"
+    },
+    {
+      "term": "subClassOf",
+      "iri": "rdfs:subClassOf",
+      "group": "vocabulary definitions"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4290> a utd:TradeDataElement;
+  skos:altLabel "Documentary credit available by";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridge [], [];
   utd:bridges "ICC: checkmark L 20, P 51 or 61 or 72 SWIFT: an..35x2";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
-  utd:oldName "Documentary credit available by";
   utd:sourcePage 80;
   utd:status "retired";
   utd:tag 4290 .

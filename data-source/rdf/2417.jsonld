@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,32 @@
   "sourcePage": 48,
   "name": "Transport Contract Document. Issue.Date Time",
   "description": "Date of issue of a transport contract document",
-  "representation": "an..19",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 19,
-  "oldName": "Transport document date, coded",
-  "bridges": "CIMP: (200):n2; (201):a3; (202): n2 CMR: L 59, P 39-44 MAR: L 61, P 56-62"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..19",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 19
+  },
+  "altLabel": [
+    "Transport document date, coded"
+  ],
+  "bridges": "CIMP: (200):n2; (201):a3; (202): n2 CMR: L 59, P 39-44 MAR: L 61, P 56-62",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(200):n2; (201):a3; (202): n2"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 59, P 39-44"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "L 61, P 56-62"
+    }
+  ]
 }

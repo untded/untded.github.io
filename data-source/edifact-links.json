@@ -1,0 +1,5868 @@
+{
+  "source": "UN/EDIFACT D.05B segments mirror (unece.org/trade/uncefact/unedifact)",
+  "coverage": "active elements referenced by D05B segments (first occurrence per tag)",
+  "joined": 586,
+  "aligned": 549,
+  "links": [
+    {
+      "tag": 1000,
+      "edifact": {
+        "name": "documentName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1001,
+      "edifact": {
+        "name": "documentNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1003,
+      "edifact": {
+        "name": "messageTypeCode",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 1004,
+      "edifact": {
+        "name": "documentIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1049,
+      "edifact": {
+        "name": "messageSectionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1050,
+      "edifact": {
+        "name": "sequencePositionIdentifier",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..10",
+      "aligned": true
+    },
+    {
+      "tag": 1052,
+      "edifact": {
+        "name": "messageItemIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1054,
+      "edifact": {
+        "name": "messageSubitemIdentifier",
+        "type": "n",
+        "maxLength": 6
+      },
+      "reprRaw": "n..6",
+      "aligned": true
+    },
+    {
+      "tag": 1073,
+      "edifact": {
+        "name": "documentLineActionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1082,
+      "edifact": {
+        "name": "lineItemIdentifier",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 1131,
+      "edifact": {
+        "name": "codeListIdentificationCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 1145,
+      "edifact": {
+        "name": "travellerReferenceIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1146,
+      "edifact": {
+        "name": "accountName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1147,
+      "edifact": {
+        "name": "accountIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1148,
+      "edifact": {
+        "name": "accountAbbreviatedName",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 1153,
+      "edifact": {
+        "name": "referenceCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1154,
+      "edifact": {
+        "name": "referenceIdentifier",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 1156,
+      "edifact": {
+        "name": "documentLineIdentifier",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 1159,
+      "edifact": {
+        "name": "sequenceIdentifierSourceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1170,
+      "edifact": {
+        "name": "accountingJournalName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1171,
+      "edifact": {
+        "name": "accountingJournalIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 1218,
+      "edifact": {
+        "name": "documentOriginalsRequiredQuantity",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 1220,
+      "edifact": {
+        "name": "documentCopiesRequiredQuantity",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 1222,
+      "edifact": {
+        "name": "configurationLevelNumber",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 1225,
+      "edifact": {
+        "name": "messageFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1227,
+      "edifact": {
+        "name": "calculationSequenceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1228,
+      "edifact": {
+        "name": "actionRequestnotificationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1229,
+      "edifact": {
+        "name": "actionRequestnotificationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1230,
+      "edifact": {
+        "name": "allowanceOrChargeIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1312,
+      "edifact": {
+        "name": "consignmentLoadSequenceIdentifier",
+        "type": "n",
+        "maxLength": 4
+      },
+      "reprRaw": "n..4",
+      "aligned": true
+    },
+    {
+      "tag": 1366,
+      "edifact": {
+        "name": "documentSourceDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 1373,
+      "edifact": {
+        "name": "documentStatusCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1490,
+      "edifact": {
+        "name": "consolidationItemNumber",
+        "type": "n",
+        "maxLength": 5
+      },
+      "reprRaw": "n..5",
+      "aligned": true
+    },
+    {
+      "tag": 1496,
+      "edifact": {
+        "name": "goodsItemNumber",
+        "type": "n",
+        "maxLength": 5
+      },
+      "reprRaw": "n..5",
+      "aligned": true
+    },
+    {
+      "tag": 1502,
+      "edifact": {
+        "name": "dataFormatDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1503,
+      "edifact": {
+        "name": "dataFormatDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1505,
+      "edifact": {
+        "name": "valueListTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1507,
+      "edifact": {
+        "name": "designatedClassCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1508,
+      "edifact": {
+        "name": "fileName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1510,
+      "edifact": {
+        "name": "computerEnvironmentName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 1511,
+      "edifact": {
+        "name": "computerEnvironmentNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 1514,
+      "edifact": {
+        "name": "valueListName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 1516,
+      "edifact": {
+        "name": "fileFormatName",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 1523,
+      "edifact": {
+        "name": "messageImplementationIdentificationCode",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 2000,
+      "edifact": {
+        "name": "date",
+        "type": "an",
+        "maxLength": 14
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 2002,
+      "edifact": {
+        "name": "time",
+        "type": "n",
+        "maxLength": 0
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 2005,
+      "edifact": {
+        "name": "dateOrTimeOrPeriodFunctionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2009,
+      "edifact": {
+        "name": "termsTimeRelationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2013,
+      "edifact": {
+        "name": "frequencyCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2015,
+      "edifact": {
+        "name": "despatchPatternCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2017,
+      "edifact": {
+        "name": "despatchPatternTimingCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2018,
+      "edifact": {
+        "name": "age",
+        "type": "n",
+        "maxLength": 3
+      },
+      "reprRaw": "n..3",
+      "aligned": true
+    },
+    {
+      "tag": 2023,
+      "edifact": {
+        "name": "periodTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2029,
+      "edifact": {
+        "name": "timeZoneIdentifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2116,
+      "edifact": {
+        "name": "timeZoneDifferenceQuantity",
+        "type": "n",
+        "maxLength": 4
+      },
+      "reprRaw": "n..4",
+      "aligned": true
+    },
+    {
+      "tag": 2118,
+      "edifact": {
+        "name": "periodDetailDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 2119,
+      "edifact": {
+        "name": "periodDetailDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2148,
+      "edifact": {
+        "name": "dateVariationNumber",
+        "type": "n",
+        "maxLength": 5
+      },
+      "reprRaw": "n..5",
+      "aligned": true
+    },
+    {
+      "tag": 2151,
+      "edifact": {
+        "name": "periodTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2152,
+      "edifact": {
+        "name": "periodCountQuantity",
+        "type": "n",
+        "maxLength": 3
+      },
+      "reprRaw": "n..3",
+      "aligned": true
+    },
+    {
+      "tag": 2155,
+      "edifact": {
+        "name": "chargePeriodTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2156,
+      "edifact": {
+        "name": "checkinTime",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..17",
+      "aligned": false
+    },
+    {
+      "tag": 2162,
+      "edifact": {
+        "name": "journeyLegDurationQuantity",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 2379,
+      "edifact": {
+        "name": "dateOrTimeOrPeriodFormatCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 2380,
+      "edifact": {
+        "name": "dateOrTimeOrPeriodText",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 2475,
+      "edifact": {
+        "name": "timeReferenceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3009,
+      "edifact": {
+        "name": "maintenanceOperationPayerCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3035,
+      "edifact": {
+        "name": "partyFunctionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3036,
+      "edifact": {
+        "name": "partyName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3039,
+      "edifact": {
+        "name": "partyIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3042,
+      "edifact": {
+        "name": "streetAndNumberOrPostOfficeBoxIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..256",
+      "aligned": false
+    },
+    {
+      "tag": 3045,
+      "edifact": {
+        "name": "partyNameFormatCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3055,
+      "edifact": {
+        "name": "codeListResponsibleAgencyCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3077,
+      "edifact": {
+        "name": "testMediumCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3079,
+      "edifact": {
+        "name": "organisationClassificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3082,
+      "edifact": {
+        "name": "organisationalClassName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3083,
+      "edifact": {
+        "name": "organisationalClassNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3124,
+      "edifact": {
+        "name": "nameAndAddressDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..512",
+      "aligned": false
+    },
+    {
+      "tag": 3127,
+      "edifact": {
+        "name": "carrierIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3131,
+      "edifact": {
+        "name": "addressTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3139,
+      "edifact": {
+        "name": "contactFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3148,
+      "edifact": {
+        "name": "communicationAddressIdentifier",
+        "type": "an",
+        "maxLength": 512
+      },
+      "reprRaw": "an..512",
+      "aligned": true
+    },
+    {
+      "tag": 3153,
+      "edifact": {
+        "name": "communicationMediumTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3155,
+      "edifact": {
+        "name": "communicationAddressCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3164,
+      "edifact": {
+        "name": "cityName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3192,
+      "edifact": {
+        "name": "accountHolderName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3194,
+      "edifact": {
+        "name": "accountHolderIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3197,
+      "edifact": {
+        "name": "agentIdentifier",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 3207,
+      "edifact": {
+        "name": "countryNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3222,
+      "edifact": {
+        "name": "firstRelatedLocationName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3223,
+      "edifact": {
+        "name": "firstRelatedLocationNameCode",
+        "type": "an",
+        "maxLength": 25
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 3224,
+      "edifact": {
+        "name": "locationName",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 3225,
+      "edifact": {
+        "name": "locationNameCode",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3227,
+      "edifact": {
+        "name": "locationFunctionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3228,
+      "edifact": {
+        "name": "countrySubentityName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3229,
+      "edifact": {
+        "name": "countrySubentityNameCode",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 3232,
+      "edifact": {
+        "name": "secondRelatedLocationName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3233,
+      "edifact": {
+        "name": "secondRelatedLocationNameCode",
+        "type": "an",
+        "maxLength": 25
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 3236,
+      "edifact": {
+        "name": "sampleLocationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..256",
+      "aligned": false
+    },
+    {
+      "tag": 3237,
+      "edifact": {
+        "name": "sampleLocationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 3239,
+      "edifact": {
+        "name": "countryOfOriginNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3251,
+      "edifact": {
+        "name": "postalIdentificationCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3279,
+      "edifact": {
+        "name": "geographicAreaCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3285,
+      "edifact": {
+        "name": "instructionReceivingPartyIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3286,
+      "edifact": {
+        "name": "addressComponentDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3289,
+      "edifact": {
+        "name": "personCharacteristicCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3292,
+      "edifact": {
+        "name": "nationalityName",
+        "type": "a",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 3293,
+      "edifact": {
+        "name": "nationalityNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3295,
+      "edifact": {
+        "name": "nameOriginalAlphabetCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3299,
+      "edifact": {
+        "name": "addressPurposeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3301,
+      "edifact": {
+        "name": "enactingPartyIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3310,
+      "edifact": {
+        "name": "inheritedCharacteristicDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3311,
+      "edifact": {
+        "name": "inheritedCharacteristicDescriptionCode",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 3397,
+      "edifact": {
+        "name": "nameStatusCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3398,
+      "edifact": {
+        "name": "nameComponentDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3401,
+      "edifact": {
+        "name": "nameComponentUsageCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3403,
+      "edifact": {
+        "name": "nameTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3412,
+      "edifact": {
+        "name": "departmentOrEmployeeName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3413,
+      "edifact": {
+        "name": "departmentOrEmployeeNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3432,
+      "edifact": {
+        "name": "institutionName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3433,
+      "edifact": {
+        "name": "institutionNameCode",
+        "type": "an",
+        "maxLength": 11
+      },
+      "reprRaw": "an..11",
+      "aligned": true
+    },
+    {
+      "tag": 3434,
+      "edifact": {
+        "name": "institutionBranchIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3436,
+      "edifact": {
+        "name": "institutionBranchLocationName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..256",
+      "aligned": false
+    },
+    {
+      "tag": 3446,
+      "edifact": {
+        "name": "partyTaxIdentifier",
+        "type": "an",
+        "maxLength": 20
+      },
+      "reprRaw": "an..20",
+      "aligned": true
+    },
+    {
+      "tag": 3452,
+      "edifact": {
+        "name": "languageName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3453,
+      "edifact": {
+        "name": "languageNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3455,
+      "edifact": {
+        "name": "languageCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3457,
+      "edifact": {
+        "name": "originatorTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3459,
+      "edifact": {
+        "name": "frequentTravellerIdentifier",
+        "type": "an",
+        "maxLength": 25
+      },
+      "reprRaw": "an..25",
+      "aligned": true
+    },
+    {
+      "tag": 3460,
+      "edifact": {
+        "name": "givenName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3463,
+      "edifact": {
+        "name": "gateIdentifier",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 3465,
+      "edifact": {
+        "name": "inhouseIdentifier",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 3475,
+      "edifact": {
+        "name": "addressStatusCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3477,
+      "edifact": {
+        "name": "addressFormatCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3478,
+      "edifact": {
+        "name": "maritalStatusDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3479,
+      "edifact": {
+        "name": "maritalStatusDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3482,
+      "edifact": {
+        "name": "religionName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 3483,
+      "edifact": {
+        "name": "religionNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3496,
+      "edifact": {
+        "name": "salesChannelIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 3499,
+      "edifact": {
+        "name": "genderCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 3500,
+      "edifact": {
+        "name": "familyName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 3503,
+      "edifact": {
+        "name": "accessAuthorisationIdentifier",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 3504,
+      "edifact": {
+        "name": "givenNameTitleDescription",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 4009,
+      "edifact": {
+        "name": "optionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4017,
+      "edifact": {
+        "name": "deliveryPlanCommitmentLevelCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4018,
+      "edifact": {
+        "name": "relatedInformationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4022,
+      "edifact": {
+        "name": "businessDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 4025,
+      "edifact": {
+        "name": "businessFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4027,
+      "edifact": {
+        "name": "businessFunctionTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4035,
+      "edifact": {
+        "name": "priorityTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4036,
+      "edifact": {
+        "name": "priorityDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4037,
+      "edifact": {
+        "name": "priorityDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4038,
+      "edifact": {
+        "name": "additionalSafetyInformationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4039,
+      "edifact": {
+        "name": "additionalSafetyInformationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4043,
+      "edifact": {
+        "name": "tradeClassCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4044,
+      "edifact": {
+        "name": "safetySectionName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 4046,
+      "edifact": {
+        "name": "safetySectionNumber",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "an..3",
+      "aligned": false
+    },
+    {
+      "tag": 4048,
+      "edifact": {
+        "name": "certaintyDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4049,
+      "edifact": {
+        "name": "certaintyDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4051,
+      "edifact": {
+        "name": "characteristicRelevanceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4052,
+      "edifact": {
+        "name": "deliveryOrTransportTermsDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 4053,
+      "edifact": {
+        "name": "deliveryOrTransportTermsDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4055,
+      "edifact": {
+        "name": "deliveryOrTransportTermsFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4056,
+      "edifact": {
+        "name": "questionDescription",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 4057,
+      "edifact": {
+        "name": "questionDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4059,
+      "edifact": {
+        "name": "clauseCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4065,
+      "edifact": {
+        "name": "contractAndCarriageConditionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4068,
+      "edifact": {
+        "name": "clauseName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 4069,
+      "edifact": {
+        "name": "clauseNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4072,
+      "edifact": {
+        "name": "provisoTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4073,
+      "edifact": {
+        "name": "provisoTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4074,
+      "edifact": {
+        "name": "provisoCalculationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4075,
+      "edifact": {
+        "name": "provisoCalculationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4078,
+      "edifact": {
+        "name": "handlingInstructionDescription",
+        "type": "an",
+        "maxLength": 512
+      },
+      "reprRaw": "an..512",
+      "aligned": true
+    },
+    {
+      "tag": 4079,
+      "edifact": {
+        "name": "handlingInstructionDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4183,
+      "edifact": {
+        "name": "specialConditionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4184,
+      "edifact": {
+        "name": "specialRequirementDescription",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4187,
+      "edifact": {
+        "name": "specialRequirementTypeCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 4215,
+      "edifact": {
+        "name": "transportChargesPaymentMethodCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4219,
+      "edifact": {
+        "name": "transportServicePriorityCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4221,
+      "edifact": {
+        "name": "discrepancyNatureIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..17",
+      "aligned": false
+    },
+    {
+      "tag": 4233,
+      "edifact": {
+        "name": "markingInstructionsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4237,
+      "edifact": {
+        "name": "paymentArrangementCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4276,
+      "edifact": {
+        "name": "paymentTermsDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4277,
+      "edifact": {
+        "name": "paymentTermsDescriptionIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4279,
+      "edifact": {
+        "name": "paymentTermsTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4294,
+      "edifact": {
+        "name": "changeReasonDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4295,
+      "edifact": {
+        "name": "changeReasonDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4343,
+      "edifact": {
+        "name": "responseTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4344,
+      "edifact": {
+        "name": "responseDescription",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 4345,
+      "edifact": {
+        "name": "responseDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4347,
+      "edifact": {
+        "name": "productIdentifierCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4383,
+      "edifact": {
+        "name": "bankOperationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4400,
+      "edifact": {
+        "name": "instructionDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4401,
+      "edifact": {
+        "name": "instructionDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4403,
+      "edifact": {
+        "name": "instructionTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4404,
+      "edifact": {
+        "name": "statusDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4405,
+      "edifact": {
+        "name": "statusDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4407,
+      "edifact": {
+        "name": "sampleProcessStepCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4415,
+      "edifact": {
+        "name": "testMethodIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4416,
+      "edifact": {
+        "name": "testDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 4419,
+      "edifact": {
+        "name": "testAdministrationMethodCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4424,
+      "edifact": {
+        "name": "testReasonName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4425,
+      "edifact": {
+        "name": "testReasonNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4431,
+      "edifact": {
+        "name": "paymentGuaranteeMeansCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4435,
+      "edifact": {
+        "name": "paymentChannelCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4437,
+      "edifact": {
+        "name": "accountTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4439,
+      "edifact": {
+        "name": "paymentConditionsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4440,
+      "edifact": {
+        "name": "freeText",
+        "type": "an",
+        "maxLength": 512
+      },
+      "reprRaw": "an..512",
+      "aligned": true
+    },
+    {
+      "tag": 4441,
+      "edifact": {
+        "name": "freeTextDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4447,
+      "edifact": {
+        "name": "freeTextFormatCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4451,
+      "edifact": {
+        "name": "textSubjectCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4453,
+      "edifact": {
+        "name": "freeTextFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4455,
+      "edifact": {
+        "name": "backOrderArrangementTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4457,
+      "edifact": {
+        "name": "substitutionConditionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4461,
+      "edifact": {
+        "name": "paymentMeansCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4463,
+      "edifact": {
+        "name": "intracompanyPaymentIndicatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4465,
+      "edifact": {
+        "name": "adjustmentReasonDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4467,
+      "edifact": {
+        "name": "paymentMethodCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 4469,
+      "edifact": {
+        "name": "paymentPurposeCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 4471,
+      "edifact": {
+        "name": "settlementMeansCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4473,
+      "edifact": {
+        "name": "informationTypeCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 4474,
+      "edifact": {
+        "name": "accountingEntryTypeName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4475,
+      "edifact": {
+        "name": "accountingEntryTypeNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4487,
+      "edifact": {
+        "name": "financialTransactionTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4493,
+      "edifact": {
+        "name": "deliveryInstructionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4494,
+      "edifact": {
+        "name": "insuranceCoverDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4495,
+      "edifact": {
+        "name": "insuranceCoverDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 4497,
+      "edifact": {
+        "name": "insuranceCoverTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4499,
+      "edifact": {
+        "name": "inventoryMovementReasonCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4501,
+      "edifact": {
+        "name": "inventoryMovementDirectionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4503,
+      "edifact": {
+        "name": "inventoryBalanceMethodCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4505,
+      "edifact": {
+        "name": "creditCoverRequestTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4507,
+      "edifact": {
+        "name": "creditCoverResponseTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4509,
+      "edifact": {
+        "name": "creditCoverResponseReasonCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4510,
+      "edifact": {
+        "name": "requestedInformationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4511,
+      "edifact": {
+        "name": "requestedInformationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4513,
+      "edifact": {
+        "name": "maintenanceOperationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4517,
+      "edifact": {
+        "name": "sealConditionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 4519,
+      "edifact": {
+        "name": "definitionIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 4521,
+      "edifact": {
+        "name": "premiumCalculationComponentIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 5004,
+      "edifact": {
+        "name": "monetaryAmount",
+        "type": "n",
+        "maxLength": 35
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5006,
+      "edifact": {
+        "name": "monetaryAmountFunctionDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 5007,
+      "edifact": {
+        "name": "monetaryAmountFunctionDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5013,
+      "edifact": {
+        "name": "indexCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5025,
+      "edifact": {
+        "name": "monetaryAmountTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5027,
+      "edifact": {
+        "name": "indexTypeIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 5030,
+      "edifact": {
+        "name": "indexText",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5039,
+      "edifact": {
+        "name": "indexRepresentationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5047,
+      "edifact": {
+        "name": "contributionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5048,
+      "edifact": {
+        "name": "contributionTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5049,
+      "edifact": {
+        "name": "contributionTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5104,
+      "edifact": {
+        "name": "monetaryAmountFunctionDetailDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 5105,
+      "edifact": {
+        "name": "monetaryAmountFunctionDetailDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 5118,
+      "edifact": {
+        "name": "priceAmount",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5125,
+      "edifact": {
+        "name": "priceCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5152,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeTypeName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5153,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeTypeNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5160,
+      "edifact": {
+        "name": "totalMonetaryAmount",
+        "type": "n",
+        "maxLength": 20
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5189,
+      "edifact": {
+        "name": "allowanceOrChargeIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5213,
+      "edifact": {
+        "name": "sublineItemPriceChangeOperationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5237,
+      "edifact": {
+        "name": "chargeCategoryCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5242,
+      "edifact": {
+        "name": "rateOrTariffClassDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5243,
+      "edifact": {
+        "name": "rateOrTariffClassDescriptionCode",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 5245,
+      "edifact": {
+        "name": "percentageTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5249,
+      "edifact": {
+        "name": "percentageBasisIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5261,
+      "edifact": {
+        "name": "chargeUnitCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5267,
+      "edifact": {
+        "name": "serviceTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5273,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeRateBasisCode",
+        "type": "an",
+        "maxLength": 12
+      },
+      "reprRaw": "an..3",
+      "aligned": false
+    },
+    {
+      "tag": 5275,
+      "edifact": {
+        "name": "supplementaryRateOrTariffCode",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 5278,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeRate",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..18",
+      "aligned": false
+    },
+    {
+      "tag": 5279,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeRateCode",
+        "type": "an",
+        "maxLength": 7
+      },
+      "reprRaw": "an..7",
+      "aligned": true
+    },
+    {
+      "tag": 5283,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeFunctionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5284,
+      "edifact": {
+        "name": "unitPriceBasisQuantity",
+        "type": "n",
+        "maxLength": 9
+      },
+      "reprRaw": "n..9",
+      "aligned": true
+    },
+    {
+      "tag": 5289,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeAccountCode",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 5305,
+      "edifact": {
+        "name": "dutyOrTaxOrFeeCategoryCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5314,
+      "edifact": {
+        "name": "remunerationTypeName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5315,
+      "edifact": {
+        "name": "remunerationTypeNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5375,
+      "edifact": {
+        "name": "priceTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5377,
+      "edifact": {
+        "name": "priceChangeTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5379,
+      "edifact": {
+        "name": "productGroupTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5387,
+      "edifact": {
+        "name": "priceSpecificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5388,
+      "edifact": {
+        "name": "productGroupName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 5389,
+      "edifact": {
+        "name": "productGroupNameCode",
+        "type": "an",
+        "maxLength": 25
+      },
+      "reprRaw": "an..25",
+      "aligned": true
+    },
+    {
+      "tag": 5393,
+      "edifact": {
+        "name": "priceMultiplierTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5394,
+      "edifact": {
+        "name": "priceMultiplierRate",
+        "type": "n",
+        "maxLength": 12
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5402,
+      "edifact": {
+        "name": "currencyExchangeRate",
+        "type": "n",
+        "maxLength": 12
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5419,
+      "edifact": {
+        "name": "rateTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..20",
+      "aligned": false
+    },
+    {
+      "tag": 5420,
+      "edifact": {
+        "name": "unitPriceBasisRate",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5463,
+      "edifact": {
+        "name": "allowanceOrChargeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 5482,
+      "edifact": {
+        "name": "percentage",
+        "type": "n",
+        "maxLength": 10
+      },
+      "reprRaw": "n..18",
+      "aligned": false
+    },
+    {
+      "tag": 5495,
+      "edifact": {
+        "name": "sublineIndicatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6000,
+      "edifact": {
+        "name": "latitudeDegree",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": null,
+      "aligned": false
+    },
+    {
+      "tag": 6002,
+      "edifact": {
+        "name": "longitudeDegree",
+        "type": "an",
+        "maxLength": 11
+      },
+      "reprRaw": null,
+      "aligned": false
+    },
+    {
+      "tag": 6008,
+      "edifact": {
+        "name": "heightMeasure",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6060,
+      "edifact": {
+        "name": "quantity",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 6063,
+      "edifact": {
+        "name": "quantityTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6064,
+      "edifact": {
+        "name": "varianceQuantity",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6066,
+      "edifact": {
+        "name": "controlTotalQuantity",
+        "type": "n",
+        "maxLength": 18
+      },
+      "reprRaw": "n..18",
+      "aligned": true
+    },
+    {
+      "tag": 6069,
+      "edifact": {
+        "name": "controlTotalTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6071,
+      "edifact": {
+        "name": "frequencyCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6072,
+      "edifact": {
+        "name": "frequencyRate",
+        "type": "n",
+        "maxLength": 9
+      },
+      "reprRaw": "n..9",
+      "aligned": true
+    },
+    {
+      "tag": 6074,
+      "edifact": {
+        "name": "confidencePercent",
+        "type": "n",
+        "maxLength": 6
+      },
+      "reprRaw": "n..6",
+      "aligned": true
+    },
+    {
+      "tag": 6077,
+      "edifact": {
+        "name": "resultRepresentationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6079,
+      "edifact": {
+        "name": "resultNormalcyCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6082,
+      "edifact": {
+        "name": "dosageDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 6083,
+      "edifact": {
+        "name": "dosageDescriptionIdentifier",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 6085,
+      "edifact": {
+        "name": "dosageAdministrationCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6087,
+      "edifact": {
+        "name": "resultValueTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6096,
+      "edifact": {
+        "name": "altitude",
+        "type": "n",
+        "maxLength": 18
+      },
+      "reprRaw": "n..7",
+      "aligned": false
+    },
+    {
+      "tag": 6140,
+      "edifact": {
+        "name": "widthMeasure",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6145,
+      "edifact": {
+        "name": "dimensionTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6152,
+      "edifact": {
+        "name": "rangeMaximumQuantity",
+        "type": "n",
+        "maxLength": 18
+      },
+      "reprRaw": "n..18",
+      "aligned": true
+    },
+    {
+      "tag": 6154,
+      "edifact": {
+        "name": "nondiscreteMeasurementName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 6155,
+      "edifact": {
+        "name": "nondiscreteMeasurementNameCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 6162,
+      "edifact": {
+        "name": "rangeMinimumQuantity",
+        "type": "n",
+        "maxLength": 18
+      },
+      "reprRaw": "n..18",
+      "aligned": true
+    },
+    {
+      "tag": 6167,
+      "edifact": {
+        "name": "rangeTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6168,
+      "edifact": {
+        "name": "lengthMeasure",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6173,
+      "edifact": {
+        "name": "sizeTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6174,
+      "edifact": {
+        "name": "sizeMeasure",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6176,
+      "edifact": {
+        "name": "occurrencesMaximumNumber",
+        "type": "n",
+        "maxLength": 7
+      },
+      "reprRaw": "n..7",
+      "aligned": true
+    },
+    {
+      "tag": 6178,
+      "edifact": {
+        "name": "editFieldLengthMeasure",
+        "type": "n",
+        "maxLength": 3
+      },
+      "reprRaw": "n..3",
+      "aligned": true
+    },
+    {
+      "tag": 6245,
+      "edifact": {
+        "name": "temperatureTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6246,
+      "edifact": {
+        "name": "temperatureDegree",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6311,
+      "edifact": {
+        "name": "measurementPurposeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6313,
+      "edifact": {
+        "name": "measuredAttributeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6314,
+      "edifact": {
+        "name": "measure",
+        "type": "an",
+        "maxLength": 18
+      },
+      "reprRaw": "an..18",
+      "aligned": true
+    },
+    {
+      "tag": 6321,
+      "edifact": {
+        "name": "measurementSignificanceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6331,
+      "edifact": {
+        "name": "statisticTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6341,
+      "edifact": {
+        "name": "exchangeRateCurrencyMarketIdentifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6343,
+      "edifact": {
+        "name": "currencyTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6345,
+      "edifact": {
+        "name": "currencyIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6347,
+      "edifact": {
+        "name": "currencyUsageCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6348,
+      "edifact": {
+        "name": "currencyRate",
+        "type": "n",
+        "maxLength": 4
+      },
+      "reprRaw": "n..4",
+      "aligned": true
+    },
+    {
+      "tag": 6350,
+      "edifact": {
+        "name": "unitsQuantity",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 6353,
+      "edifact": {
+        "name": "unitTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 6410,
+      "edifact": {
+        "name": "measurementUnitName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 6411,
+      "edifact": {
+        "name": "measurementUnitCode",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 6426,
+      "edifact": {
+        "name": "processStagesQuantity",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 6428,
+      "edifact": {
+        "name": "processStagesActualQuantity",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 6432,
+      "edifact": {
+        "name": "significantDigitsQuantity",
+        "type": "n",
+        "maxLength": 2
+      },
+      "reprRaw": "n..2",
+      "aligned": true
+    },
+    {
+      "tag": 6434,
+      "edifact": {
+        "name": "statisticalConceptIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7006,
+      "edifact": {
+        "name": "physicalOrLogicalStateDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 7007,
+      "edifact": {
+        "name": "physicalOrLogicalStateDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7008,
+      "edifact": {
+        "name": "itemDescription",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 7009,
+      "edifact": {
+        "name": "itemDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7036,
+      "edifact": {
+        "name": "characteristicDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7037,
+      "edifact": {
+        "name": "characteristicDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7039,
+      "edifact": {
+        "name": "sampleSelectionMethodCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7045,
+      "edifact": {
+        "name": "sampleStateCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7047,
+      "edifact": {
+        "name": "sampleDirectionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7059,
+      "edifact": {
+        "name": "classTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7064,
+      "edifact": {
+        "name": "typeOfPackages",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7065,
+      "edifact": {
+        "name": "packageTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7073,
+      "edifact": {
+        "name": "packagingTermsAndConditionsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7075,
+      "edifact": {
+        "name": "packagingLevelCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7077,
+      "edifact": {
+        "name": "descriptionFormatCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7081,
+      "edifact": {
+        "name": "itemCharacteristicCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7083,
+      "edifact": {
+        "name": "configurationOperationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7085,
+      "edifact": {
+        "name": "cargoTypeClassificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7088,
+      "edifact": {
+        "name": "dangerousGoodsFlashpointDescription",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 7102,
+      "edifact": {
+        "name": "shippingMarksDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..512",
+      "aligned": false
+    },
+    {
+      "tag": 7106,
+      "edifact": {
+        "name": "shipmentFlashpointDegree",
+        "type": "n",
+        "maxLength": 0
+      },
+      "reprRaw": "n3",
+      "aligned": false
+    },
+    {
+      "tag": 7110,
+      "edifact": {
+        "name": "characteristicValueDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7111,
+      "edifact": {
+        "name": "characteristicValueDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7124,
+      "edifact": {
+        "name": "unitedNationsDangerousGoodsUndgIdentifier",
+        "type": "n",
+        "maxLength": 0
+      },
+      "reprRaw": "n4",
+      "aligned": false
+    },
+    {
+      "tag": 7130,
+      "edifact": {
+        "name": "customerShipmentAuthorisationIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7133,
+      "edifact": {
+        "name": "productDetailsTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7135,
+      "edifact": {
+        "name": "productIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7139,
+      "edifact": {
+        "name": "productCharacteristicIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7140,
+      "edifact": {
+        "name": "itemIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7143,
+      "edifact": {
+        "name": "itemTypeIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7160,
+      "edifact": {
+        "name": "specialServiceDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7161,
+      "edifact": {
+        "name": "specialServiceDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7164,
+      "edifact": {
+        "name": "hierarchicalStructureLevelIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7166,
+      "edifact": {
+        "name": "hierarchicalStructureParentIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7168,
+      "edifact": {
+        "name": "levelNumber",
+        "type": "n",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": false
+    },
+    {
+      "tag": 7171,
+      "edifact": {
+        "name": "hierarchicalStructureRelationshipCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7173,
+      "edifact": {
+        "name": "hierarchyObjectCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7176,
+      "edifact": {
+        "name": "riskObjectSubtypeDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 7177,
+      "edifact": {
+        "name": "riskObjectSubtypeDescriptionIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7179,
+      "edifact": {
+        "name": "riskObjectTypeIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7186,
+      "edifact": {
+        "name": "processTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7187,
+      "edifact": {
+        "name": "processTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7188,
+      "edifact": {
+        "name": "testMethodRevisionIdentifier",
+        "type": "an",
+        "maxLength": 30
+      },
+      "reprRaw": "an..30",
+      "aligned": true
+    },
+    {
+      "tag": 7190,
+      "edifact": {
+        "name": "processDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 7191,
+      "edifact": {
+        "name": "processDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7224,
+      "edifact": {
+        "name": "packageQuantity",
+        "type": "n",
+        "maxLength": 8
+      },
+      "reprRaw": "n..8",
+      "aligned": true
+    },
+    {
+      "tag": 7233,
+      "edifact": {
+        "name": "packagingRelatedDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7240,
+      "edifact": {
+        "name": "itemTotalQuantity",
+        "type": "n",
+        "maxLength": 15
+      },
+      "reprRaw": "n..15",
+      "aligned": true
+    },
+    {
+      "tag": 7273,
+      "edifact": {
+        "name": "serviceRequirementCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7293,
+      "edifact": {
+        "name": "sectorAreaIdentificationCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7294,
+      "edifact": {
+        "name": "requirementOrConditionDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7295,
+      "edifact": {
+        "name": "requirementOrConditionDescriptionIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7297,
+      "edifact": {
+        "name": "setTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7299,
+      "edifact": {
+        "name": "requirementDesignatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7357,
+      "edifact": {
+        "name": "commodityIdentificationCode",
+        "type": "an",
+        "maxLength": 18
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 7361,
+      "edifact": {
+        "name": "customsGoodsIdentifier",
+        "type": "an",
+        "maxLength": 18
+      },
+      "reprRaw": "an..18",
+      "aligned": true
+    },
+    {
+      "tag": 7364,
+      "edifact": {
+        "name": "processingIndicatorDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7365,
+      "edifact": {
+        "name": "processingIndicatorDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7383,
+      "edifact": {
+        "name": "surfaceOrLayerCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7402,
+      "edifact": {
+        "name": "objectIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7405,
+      "edifact": {
+        "name": "objectIdentificationCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7418,
+      "edifact": {
+        "name": "hazardousMaterialCategoryName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7419,
+      "edifact": {
+        "name": "hazardousMaterialCategoryNameCode",
+        "type": "an",
+        "maxLength": 7
+      },
+      "reprRaw": "an..7",
+      "aligned": true
+    },
+    {
+      "tag": 7429,
+      "edifact": {
+        "name": "indexingStructureCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7431,
+      "edifact": {
+        "name": "agreementTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7433,
+      "edifact": {
+        "name": "agreementTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7436,
+      "edifact": {
+        "name": "levelOneIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7438,
+      "edifact": {
+        "name": "levelTwoIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7440,
+      "edifact": {
+        "name": "levelThreeIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7442,
+      "edifact": {
+        "name": "levelFourIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7444,
+      "edifact": {
+        "name": "levelFiveIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7446,
+      "edifact": {
+        "name": "levelSixIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 7449,
+      "edifact": {
+        "name": "membershipTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7450,
+      "edifact": {
+        "name": "membershipCategoryDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7451,
+      "edifact": {
+        "name": "membershipCategoryDescriptionCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 7452,
+      "edifact": {
+        "name": "membershipStatusDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7453,
+      "edifact": {
+        "name": "membershipStatusDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7455,
+      "edifact": {
+        "name": "membershipLevelCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7456,
+      "edifact": {
+        "name": "membershipLevelDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7457,
+      "edifact": {
+        "name": "membershipLevelDescriptionCode",
+        "type": "an",
+        "maxLength": 9
+      },
+      "reprRaw": "an..9",
+      "aligned": true
+    },
+    {
+      "tag": 7458,
+      "edifact": {
+        "name": "attendeeCategoryDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7459,
+      "edifact": {
+        "name": "attendeeCategoryDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7491,
+      "edifact": {
+        "name": "inventoryTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7493,
+      "edifact": {
+        "name": "damageDetailsCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7495,
+      "edifact": {
+        "name": "objectTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7500,
+      "edifact": {
+        "name": "damageTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7501,
+      "edifact": {
+        "name": "damageTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7502,
+      "edifact": {
+        "name": "damageAreaDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7503,
+      "edifact": {
+        "name": "damageAreaDescriptionCode",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 7504,
+      "edifact": {
+        "name": "unitOrComponentTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7505,
+      "edifact": {
+        "name": "unitOrComponentTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7506,
+      "edifact": {
+        "name": "componentMaterialDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7507,
+      "edifact": {
+        "name": "componentMaterialDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7508,
+      "edifact": {
+        "name": "damageSeverityDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7509,
+      "edifact": {
+        "name": "damageSeverityDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7511,
+      "edifact": {
+        "name": "markingTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 7512,
+      "edifact": {
+        "name": "structureComponentIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 7515,
+      "edifact": {
+        "name": "structureTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8015,
+      "edifact": {
+        "name": "trafficRestrictionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8017,
+      "edifact": {
+        "name": "trafficRestrictionApplicationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8022,
+      "edifact": {
+        "name": "freightAndOtherChargesDescription",
+        "type": "an",
+        "maxLength": 26
+      },
+      "reprRaw": "an..26",
+      "aligned": true
+    },
+    {
+      "tag": 8023,
+      "edifact": {
+        "name": "freightAndOtherChargesDescriptionIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 8024,
+      "edifact": {
+        "name": "conveyanceCallPurposeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 8025,
+      "edifact": {
+        "name": "conveyanceCallPurposeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8028,
+      "edifact": {
+        "name": "meansOfTransportJourneyIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 8035,
+      "edifact": {
+        "name": "trafficRestrictionTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8051,
+      "edifact": {
+        "name": "transportStageCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..17",
+      "aligned": false
+    },
+    {
+      "tag": 8053,
+      "edifact": {
+        "name": "equipmentTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8066,
+      "edifact": {
+        "name": "transportModeName",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 8067,
+      "edifact": {
+        "name": "transportModeNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8077,
+      "edifact": {
+        "name": "equipmentSupplierCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8078,
+      "edifact": {
+        "name": "additionalHazardClassificationIdentifier",
+        "type": "an",
+        "maxLength": 7
+      },
+      "reprRaw": "an..7",
+      "aligned": true
+    },
+    {
+      "tag": 8092,
+      "edifact": {
+        "name": "hazardCodeVersionIdentifier",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..10",
+      "aligned": true
+    },
+    {
+      "tag": 8101,
+      "edifact": {
+        "name": "transitDirectionIndicatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8126,
+      "edifact": {
+        "name": "transportEmergencyCardIdentifier",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..10",
+      "aligned": true
+    },
+    {
+      "tag": 8154,
+      "edifact": {
+        "name": "equipmentSizeAndTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 8155,
+      "edifact": {
+        "name": "equipmentSizeAndTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..10",
+      "aligned": true
+    },
+    {
+      "tag": 8158,
+      "edifact": {
+        "name": "orangeHazardPlacardUpperPartIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 8169,
+      "edifact": {
+        "name": "fullOrEmptyIndicatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8178,
+      "edifact": {
+        "name": "transportMeansDescription",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 8179,
+      "edifact": {
+        "name": "transportMeansDescriptionCode",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 8186,
+      "edifact": {
+        "name": "orangeHazardPlacardLowerPartIdentifier",
+        "type": "an",
+        "maxLength": 0
+      },
+      "reprRaw": "an4",
+      "aligned": false
+    },
+    {
+      "tag": 8212,
+      "edifact": {
+        "name": "transportMeansIdentificationName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 8213,
+      "edifact": {
+        "name": "transportMeansIdentificationNameIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..9",
+      "aligned": false
+    },
+    {
+      "tag": 8216,
+      "edifact": {
+        "name": "journeyStopsQuantity",
+        "type": "n",
+        "maxLength": 3
+      },
+      "reprRaw": "n..3",
+      "aligned": true
+    },
+    {
+      "tag": 8246,
+      "edifact": {
+        "name": "dangerousGoodsMarkingIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 8249,
+      "edifact": {
+        "name": "equipmentStatusCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8255,
+      "edifact": {
+        "name": "packingInstructionTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8260,
+      "edifact": {
+        "name": "equipmentIdentifier",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..35",
+      "aligned": false
+    },
+    {
+      "tag": 8273,
+      "edifact": {
+        "name": "dangerousGoodsRegulationsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8281,
+      "edifact": {
+        "name": "transportMeansOwnershipIndicatorCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8323,
+      "edifact": {
+        "name": "transportMovementCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8334,
+      "edifact": {
+        "name": "movementTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 8335,
+      "edifact": {
+        "name": "movementTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8339,
+      "edifact": {
+        "name": "packagingDangerLevelCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8341,
+      "edifact": {
+        "name": "haulageArrangementsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8351,
+      "edifact": {
+        "name": "hazardIdentificationCode",
+        "type": "an",
+        "maxLength": 7
+      },
+      "reprRaw": "an..7",
+      "aligned": true
+    },
+    {
+      "tag": 8364,
+      "edifact": {
+        "name": "emergencyProcedureForShipsIdentifier",
+        "type": "an",
+        "maxLength": 6
+      },
+      "reprRaw": "an..6",
+      "aligned": true
+    },
+    {
+      "tag": 8393,
+      "edifact": {
+        "name": "returnablePackageLoadContentsCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8395,
+      "edifact": {
+        "name": "returnablePackageFreightPaymentResponsibilityCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8410,
+      "edifact": {
+        "name": "hazardMedicalFirstAidGuideIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 8453,
+      "edifact": {
+        "name": "transportMeansNationalityCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8457,
+      "edifact": {
+        "name": "excessTransportationReasonCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 8459,
+      "edifact": {
+        "name": "excessTransportationResponsibilityCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9003,
+      "edifact": {
+        "name": "employmentDetailsCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9004,
+      "edifact": {
+        "name": "employmentCategoryDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9005,
+      "edifact": {
+        "name": "employmentCategoryDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9006,
+      "edifact": {
+        "name": "qualificationClassificationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9007,
+      "edifact": {
+        "name": "qualificationClassificationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9008,
+      "edifact": {
+        "name": "occupationDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9009,
+      "edifact": {
+        "name": "occupationDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9012,
+      "edifact": {
+        "name": "statusReasonDescription",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 9013,
+      "edifact": {
+        "name": "statusReasonDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9015,
+      "edifact": {
+        "name": "statusCategoryCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9017,
+      "edifact": {
+        "name": "attributeFunctionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9018,
+      "edifact": {
+        "name": "attributeDescription",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 9019,
+      "edifact": {
+        "name": "attributeDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 9020,
+      "edifact": {
+        "name": "attributeTypeDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9021,
+      "edifact": {
+        "name": "attributeTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 9023,
+      "edifact": {
+        "name": "definitionFunctionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9025,
+      "edifact": {
+        "name": "definitionExtentCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9026,
+      "edifact": {
+        "name": "editMaskFormatIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9029,
+      "edifact": {
+        "name": "valueDefinitionCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9031,
+      "edifact": {
+        "name": "editMaskRepresentationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9035,
+      "edifact": {
+        "name": "qualificationApplicationAreaCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9037,
+      "edifact": {
+        "name": "qualificationTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9038,
+      "edifact": {
+        "name": "facilityTypeDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9039,
+      "edifact": {
+        "name": "facilityTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9040,
+      "edifact": {
+        "name": "reservationIdentifier",
+        "type": "an",
+        "maxLength": 20
+      },
+      "reprRaw": "an..20",
+      "aligned": true
+    },
+    {
+      "tag": 9043,
+      "edifact": {
+        "name": "reservationIdentifierCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9045,
+      "edifact": {
+        "name": "basisCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9046,
+      "edifact": {
+        "name": "basisTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9047,
+      "edifact": {
+        "name": "basisTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9048,
+      "edifact": {
+        "name": "applicabilityTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9049,
+      "edifact": {
+        "name": "applicabilityTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9051,
+      "edifact": {
+        "name": "applicabilityCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9141,
+      "edifact": {
+        "name": "relationshipTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9142,
+      "edifact": {
+        "name": "relationshipDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9143,
+      "edifact": {
+        "name": "relationshipDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9146,
+      "edifact": {
+        "name": "compositeDataElementTagIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 9148,
+      "edifact": {
+        "name": "directoryStatusIdentifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9150,
+      "edifact": {
+        "name": "simpleDataElementTagIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 9162,
+      "edifact": {
+        "name": "dataElementTagIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 9164,
+      "edifact": {
+        "name": "groupIdentifier",
+        "type": "an",
+        "maxLength": 4
+      },
+      "reprRaw": "an..4",
+      "aligned": true
+    },
+    {
+      "tag": 9166,
+      "edifact": {
+        "name": "segmentTagIdentifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9169,
+      "edifact": {
+        "name": "dataRepresentationTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9170,
+      "edifact": {
+        "name": "eventTypeDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9171,
+      "edifact": {
+        "name": "eventTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9172,
+      "edifact": {
+        "name": "event",
+        "type": "an",
+        "maxLength": 256
+      },
+      "reprRaw": "an..256",
+      "aligned": true
+    },
+    {
+      "tag": 9173,
+      "edifact": {
+        "name": "eventDescriptionCode",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9175,
+      "edifact": {
+        "name": "dataElementUsageTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9213,
+      "edifact": {
+        "name": "dutyRegimeTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9280,
+      "edifact": {
+        "name": "validationResultText",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9282,
+      "edifact": {
+        "name": "validationKeyIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9285,
+      "edifact": {
+        "name": "validationCriteriaCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9302,
+      "edifact": {
+        "name": "sealingPartyName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9303,
+      "edifact": {
+        "name": "sealingPartyNameCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9308,
+      "edifact": {
+        "name": "transportUnitSealIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9321,
+      "edifact": {
+        "name": "applicationErrorCode",
+        "type": "an",
+        "maxLength": 8
+      },
+      "reprRaw": "an..8",
+      "aligned": true
+    },
+    {
+      "tag": 9353,
+      "edifact": {
+        "name": "governmentProcedureCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9411,
+      "edifact": {
+        "name": "governmentInvolvementCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9415,
+      "edifact": {
+        "name": "governmentAgencyIdentificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9417,
+      "edifact": {
+        "name": "governmentActionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9419,
+      "edifact": {
+        "name": "serviceLayerCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9421,
+      "edifact": {
+        "name": "processStageCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9422,
+      "edifact": {
+        "name": "valueText",
+        "type": "an",
+        "maxLength": 512
+      },
+      "reprRaw": "an..512",
+      "aligned": true
+    },
+    {
+      "tag": 9424,
+      "edifact": {
+        "name": "arrayCellDataDescription",
+        "type": "an",
+        "maxLength": 512
+      },
+      "reprRaw": "an..512",
+      "aligned": true
+    },
+    {
+      "tag": 9426,
+      "edifact": {
+        "name": "codeValueText",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9428,
+      "edifact": {
+        "name": "arrayCellStructureIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9430,
+      "edifact": {
+        "name": "footnoteSetIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9432,
+      "edifact": {
+        "name": "footnoteIdentifier",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9434,
+      "edifact": {
+        "name": "codeName",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9436,
+      "edifact": {
+        "name": "clinicalInterventionDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9437,
+      "edifact": {
+        "name": "clinicalInterventionDescriptionCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 9441,
+      "edifact": {
+        "name": "clinicalInterventionTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9443,
+      "edifact": {
+        "name": "attendanceTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9444,
+      "edifact": {
+        "name": "admissionTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9445,
+      "edifact": {
+        "name": "admissionTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9446,
+      "edifact": {
+        "name": "dischargeTypeDescription",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9447,
+      "edifact": {
+        "name": "dischargeTypeDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9448,
+      "edifact": {
+        "name": "fileGenerationCommandName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9450,
+      "edifact": {
+        "name": "fileCompressionTechniqueName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9453,
+      "edifact": {
+        "name": "codeValueSourceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9501,
+      "edifact": {
+        "name": "formulaTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9502,
+      "edifact": {
+        "name": "formulaName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9505,
+      "edifact": {
+        "name": "formulaComplexityCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9507,
+      "edifact": {
+        "name": "formulaSequenceCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9509,
+      "edifact": {
+        "name": "formulaSequenceOperandCode",
+        "type": "an",
+        "maxLength": 17
+      },
+      "reprRaw": "an..17",
+      "aligned": true
+    },
+    {
+      "tag": 9510,
+      "edifact": {
+        "name": "formulaSequenceName",
+        "type": "an",
+        "maxLength": 35
+      },
+      "reprRaw": "an..35",
+      "aligned": true
+    },
+    {
+      "tag": 9605,
+      "edifact": {
+        "name": "dataCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9619,
+      "edifact": {
+        "name": "adjustmentCategoryCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9620,
+      "edifact": {
+        "name": "policyLimitationIdentifier",
+        "type": "an",
+        "maxLength": 10
+      },
+      "reprRaw": "an..10",
+      "aligned": true
+    },
+    {
+      "tag": 9623,
+      "edifact": {
+        "name": "diagnosisTypeCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9625,
+      "edifact": {
+        "name": "relatedCauseCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9627,
+      "edifact": {
+        "name": "admissionSourceCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9629,
+      "edifact": {
+        "name": "procedureModificationCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9635,
+      "edifact": {
+        "name": "eventDetailsCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9636,
+      "edifact": {
+        "name": "eventCategoryDescription",
+        "type": "an",
+        "maxLength": 70
+      },
+      "reprRaw": "an..70",
+      "aligned": true
+    },
+    {
+      "tag": 9637,
+      "edifact": {
+        "name": "eventCategoryDescriptionCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9639,
+      "edifact": {
+        "name": "diagnosisCategoryCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9641,
+      "edifact": {
+        "name": "serviceBasisCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9643,
+      "edifact": {
+        "name": "supportingEvidenceTypeCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9647,
+      "edifact": {
+        "name": "cavityZoneCode",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    },
+    {
+      "tag": 9649,
+      "edifact": {
+        "name": "processingInformationCodeQualifier",
+        "type": "an",
+        "maxLength": 3
+      },
+      "reprRaw": "an..3",
+      "aligned": true
+    }
+  ]
+}

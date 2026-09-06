@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3334> a utd:TradeDataElement;
+  skos:altLabel "Place of loading",
+    "Berth/Dock/Container base of loading, Airport of loading, Pier of loading";
   schema:description "Name of a seaport, airport, freight terminal, rail station or other place at which goods are loaded onto the means of transport being used for their carriage";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Loading Location.Text";
+  utd:bridge [], [];
   utd:bridges "UNLK: L 24, P 27-44 SAD: (SAD 27)";
-  utd:businessTerm "Berth/Dock/Container base of loading, Airport of loading, Pier of loading";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Place of loading";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 65;
   utd:status "active";
   utd:tag 3334 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5210> a utd:TradeDataElement;
+  skos:altLabel "Offer amount";
   schema:description "Total monetary amount of a quotation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Quotation. Total Amount.Amount";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Offer amount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 92;
   utd:status "active";
   utd:tag 5210 .

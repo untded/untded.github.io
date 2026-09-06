@@ -11,7 +11,8 @@ import PositionRuler from '../../components/PositionRuler.astro'
 import { unlkRects, unlkZones } from '../../lib/unlk'
 import ProvenanceCard from '../../components/ProvenanceCard.astro'
 import { loadElements, jsonldNode } from '../../lib/data'
-import { categoryOf, changeTagInfo, elementUrl, neighbours, pairedTag, replacementPointer } from '../../lib/element'
+import { categoryOf, changeTagInfo, elementUrl, neighbours, pairedTag, parseBridges, replacementPointer } from '../../lib/element'
+import { loadEdifactLinks } from '../../lib/edifact'
 import { DATASET_FILE_BASE, href } from '../../lib/site'
 
 export function getStaticPaths() {
@@ -28,6 +29,8 @@ const allTags = loadElements().map((e) => e.tag)
 const replacement = replacementPointer(element, new Set(allTags))
 const unlk = unlkZones(element.bridges)
 const unlkR = unlkRects(element.bridges)
+const edifact = loadEdifactLinks().get(element.tag)
+const schemes = [...new Set(parseBridges(element.bridges).map((b) => b.scheme))]
 const unlkDeep = unlk[0] && `${href('/unlk')}#field=${[unlk[0].lineFrom, unlk[0].lineTo, unlk[0].posFrom, unlk[0].posTo].join(':')}`
 const { prev, next } = neighbours(element.tag, allTags)
 const pair = pairedTag(element.tag, new Set(allTags))
@@ -62,7 +65,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
       <aside class="space-y-4 lg:sticky lg:top-6 lg:self-start">
         <TagPlate tag={element.tag} size="lg" />
         <div class="flex flex-wrap items-center gap-2">
-          <ChangeTagBadge changeTag={element.change_tag} expand />
+          <a href={href('/ledger#tag-' + element.change_tag)} class="shrink-0"><ChangeTagBadge changeTag={element.change_tag} expand /></a>
           <span
             class:list={[
               'rounded-sm border px-1.5 py-0.5 font-mono text-xs',
@@ -182,9 +185,39 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
             Locations &amp; bridges
           </h2>
           <BridgeList bridges={element.bridges} />
+          {schemes.length > 0 && (
+            <p class="mt-3 text-xs text-body/80">
+              All elements on{' '}
+              {schemes.map((sc, i) => (
+                <>
+                  {i > 0 && <span>{' · '}</span>}
+                  <a class="text-un-deep underline decoration-un/50" href={href('/bridges#' + sc.replace(/[^A-Za-z0-9]/g, ''))}>{sc}</a>
+                </>
+              ))}{' '}
+              — see the{' '}
+              <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
+            </p>
+          )}
+          {edifact && (
+            <p class="mt-3">
+              <a
+                class:list={[
+                  'inline-flex items-baseline gap-2 rounded-full border px-3 py-1 text-xs',
+                  edifact.aligned ? 'border-line bg-mist text-body' : 'border-stamp/50 bg-stamp/5 text-stamp',
+                ]}
+                href={href(edifact.aligned ? '/docs/alignment-edifact' : '/docs/alignment-edifact#diff-' + edifact.tag)}
+              >
+                <span class="font-mono font-semibold">EDED {edifact.tag}</span>
+                <span class="font-mono">{edifact.edifact.type}..{edifact.edifact.maxLength}</span>
+                <span>{edifact.aligned ? 'aligned' : 'representation differs'}</span>
+              </a>
+            </p>
+          )}
           <p class="mt-3 text-xs text-body/80">
-            Where the element appears on aligned documents — see the{' '}
-            <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
+            Machine formats:{' '}
+            <a class="text-un-deep underline decoration-un/50" href={href('/elements/' + element.tag + '/data.ttl')}>Turtle</a>
+            {' · '}
+            <a class="text-un-deep underline decoration-un/50" href={href('/elements/' + element.tag + '/data.jsonld')}>JSON-LD</a>.
           </p>
         </section>
 

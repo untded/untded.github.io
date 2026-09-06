@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8453> a utd:TradeDataElement;
+  skos:altLabel "Nationality of means of transport, coded";
   schema:description "Code specifying the country in which a means of transport is registered";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Registration Nationality.Identifier";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 1-7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Nationality of means of transport, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 127;
   utd:status "active";
   utd:tag 8453 .

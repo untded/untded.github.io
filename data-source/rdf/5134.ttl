@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5134> a utd:TradeDataElement;
+  skos:altLabel "ULD rate class type";
   schema:description "Coded description of a rate class for transport equipment such as a Unit Load Device (ULD) rate class.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Rate Class.Code";
+  utd:bridge [], [];
   utd:bridges "AWB: L 33-44, P 23-29 CIMP: (513): n1(a1)a1";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "ULD rate class type";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5134 .

@@ -6,13 +6,11 @@
   schema:description "Weight (mass) of goods item excluding all packing";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Net Weight.Measure";
+  utd:bridge [];
   utd:bridges "UNLK: L 40-50 P 64-71";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 16;
-  utd:minLength 1;
-  utd:representation "n..16";
+  utd:representation [];
   utd:sourcePage 101;
   utd:status "active";
   utd:tag 6016 .

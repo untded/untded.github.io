@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5122> a utd:TradeDataElement;
+  skos:altLabel "Value-addes tax rate";
   schema:description "Rate of value-added tax to be applied to amounts subjects to the application of value-added tax, or similar tax.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Value Added Tax . Rate.Numeric";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 10;
-  utd:minLength 1;
-  utd:oldName "Value-addes tax rate";
-  utd:representation "an..10";
+  utd:representation [];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5122 .

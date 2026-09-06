@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7188> a utd:TradeDataElement;
+  skos:altLabel "Test revision number";
   schema:description "To identify a revision of a test method.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Test. Method Revision.Identifier";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 30;
-  utd:minLength 1;
-  utd:oldName "Test revision number";
-  utd:representation "an..30";
+  utd:representation [];
   utd:sourcePage 113;
   utd:status "active";
   utd:tag 7188 .

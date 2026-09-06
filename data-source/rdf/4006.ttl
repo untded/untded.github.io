@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4006> a utd:TradeDataElement;
+  skos:altLabel "Goods receipt";
   schema:description "Authentication by the consignee that the goods have been received.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Receipt Document. Consignee Party Authentication.Text";
+  utd:bridge [];
   utd:bridges "CMR: an..23x6 L 63-68, P 57-80 (CMR 24)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 23;
-  utd:minLength 1;
-  utd:oldName "Goods receipt";
-  utd:representation "an..23";
+  utd:representation [];
   utd:sourcePage 72;
   utd:status "active";
   utd:tag 4006 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8211> a utd:TradeDataElement;
+  skos:altLabel "Permission for transport, coded";
   schema:description "Code specifying the authorisation for the transportation of hazardous cargo.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Transport Authorisation.Code";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Permission for transport, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 124;
   utd:status "active";
   utd:tag 8211 .

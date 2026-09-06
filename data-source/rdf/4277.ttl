@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4277> a utd:TradeDataElement;
+  skos:altLabel "Terms of payment identification";
   schema:description "Identification of the terms of payment between the parties to a transaction (generic term).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment Term. Code";
+  utd:bridge [];
   utd:bridges "UNLK: L 23, P 63-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Terms of payment identification";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4277 .

@@ -8,10 +8,7 @@
   schema:name "Period. Function.Code";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 38;
   utd:status "active";
   utd:tag 2023 .

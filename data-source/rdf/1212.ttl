@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1212> a utd:TradeDataElement;
+  skos:altLabel "Page number";
   schema:description "To identify a page number";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Page.Identifier";
+  utd:bridge [], [];
   utd:bridges "UNLK: L 02, P 72-75 SAD: (SAD(3(1))";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Page number";
-  utd:representation "n..3";
+  utd:representation [];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1212 .

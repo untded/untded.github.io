@@ -6,13 +6,11 @@
   schema:description "To identify the region or sub-division of a country in which goods have been produced or manufactured, according to criteria laid down for the purposes of application of the Customs tariff, or quantitative restrictions, or of any other measure related to trade";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Origin Country Subdivision.Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 34b)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 63;
   utd:status "active";
   utd:tag 3267 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1346> a utd:TradeDataElement;
+  skos:altLabel "Document enclosed";
   schema:description "Name of an enclosed document function";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Enclosed Document. Function Name.Text";
+  utd:bridge [], [];
   utd:bridges "CIM: an..47x4; L 39-42, P 02-49 CMR: an..35x3; L 24-26, P 09-44";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 70;
-  utd:minLength 1;
-  utd:oldName "Document enclosed";
-  utd:representation "an..70";
+  utd:representation [];
   utd:sourcePage 35;
   utd:status "active";
   utd:tag 1346 .

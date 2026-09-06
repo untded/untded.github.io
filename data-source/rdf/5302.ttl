@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5302> a utd:TradeDataElement;
+  skos:altLabel "Prepaidamount";
   schema:description "Monetary amount of all of the consignment charges which have been paid in advance.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Total Prepaid Freight Charge.Amount";
+  utd:bridge [], [], [];
   utd:bridges "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Prepaidamount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 95;
   utd:status "active";
   utd:tag 5302 .

@@ -1,12 +1,13 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3438> a utd:TradeDataElement;
+  skos:altLabel "Sub-location";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:oldName "Sub-location";
   utd:sourcePage 70;
   utd:status "retired";
   utd:tag 3438 .

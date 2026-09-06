@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5022> a utd:TradeDataElement;
+  skos:altLabel "Additional charges total, consignee";
   schema:description "Total additional charges to be paid by the consignee, in addition to freight charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Consignee Additional Charge.Amount";
+  utd:bridge [], [];
   utd:bridges "CIM: L 47, P 67-74 and L 53, P 67-74 and L 59, P 67-74 (also on reverse) CMR: L 54, P 71-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Additional charges total, consignee";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 87;
   utd:status "active";
   utd:tag 5022 .

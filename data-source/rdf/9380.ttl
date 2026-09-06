@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/9380> a utd:TradeDataElement;
+  skos:altLabel "Customs procedure";
   schema:description "Textual description of a procedure performed by Customs on goods which are subject to Customs control.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Party. Procedure.Text";
+  utd:bridge [];
   utd:bridges "SAD: (SAD E)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Customs procedure";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 130;
   utd:status "active";
   utd:tag 9380 .

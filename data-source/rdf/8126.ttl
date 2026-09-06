@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8126> a utd:TradeDataElement;
+  skos:altLabel "Trem card number";
   schema:description "To identify a dangerous goods TRansport EMergency (TREM) card.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Transport Emergency Card.Identifier";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 10;
-  utd:minLength 1;
-  utd:oldName "Trem card number";
-  utd:representation "an..10";
+  utd:representation [];
   utd:sourcePage 121;
   utd:status "active";
   utd:tag 8126 .

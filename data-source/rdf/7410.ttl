@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7410> a utd:TradeDataElement;
+  skos:altLabel "Crew's effects";
   schema:description "Description and quantities of such personal belongings in the possession of individual crew members which according to regulations in force at the place of arrival of a means of transport are dutiable or subject to prohibitions or restrictions.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Crew. Personal Effects.Text";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 4";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Crew's effects";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 116;
   utd:status "active";
   utd:tag 7410 .

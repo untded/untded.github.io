@@ -1,0 +1,70 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Ontology guide — UN/TDED
+description: The RDF model of the UN Trade Data Elements Directory — classes, properties, and worked examples in Turtle and JSON-LD.
+---
+
+Every element of the directory is published as linked data under
+`https://www.untded.org/ns/untded#`. This guide walks through the model; the
+[ontology page](/ontology) tabulates it in full and links the downloads.
+
+## The core resource
+
+Each of the 1504 entries becomes a `utd:TradeDataElement` whose IRI is the
+element's registry page, e.g. `https://www.untded.org/elements/1004`. The
+name is `schema:name`, the definition `schema:description`, and the entry
+carries the tag, change tag, status and source page as typed properties.
+
+## Representation
+
+The printed notation (e.g. `an..35`) is decomposed into a structured node:
+
+```turtle
+utd:representation [ a utd:Representation ;
+    utd:printedForm "an..35" ;
+    utd:charset "an" ;
+    utd:minLength 1 ;
+    utd:maxLength 35 ] .
+```
+
+`charset` is one of `a` (alphabetic), `an` (alphanumeric) or `n` (numeric),
+per the publication's presentation rules.
+
+## Bridges and zones
+
+The Locations column places elements on aligned document systems. Each
+parsed location is a `utd:Bridge` node naming its `utd:scheme` (UNLK, SAD,
+MAR, CIMP, …) and keeping the `utd:detail` verbatim. UNLK bridges — the
+master form — carry `utd:UnlkZone` nodes with the line and character
+position span and the field format:
+
+```turtle
+utd:bridge [ a utd:Bridge ;
+    utd:scheme "UNLK" ;
+    utd:detail "an..17 L 04, P 63-80" ;
+    utd:zone [ a utd:UnlkZone ;
+        utd:lineFrom 4 ; utd:lineTo 4 ;
+        utd:posFrom 63 ; utd:posTo 80 ;
+        utd:fieldFormat "an..17" ] ] .
+```
+
+One entry (5010) prints its scheme without the colon — the source is
+followed verbatim and the parser accepts that form at the start of the
+cell.
+
+## Edition semantics
+
+Entries retired against the 1993 edition link to the element to use
+instead (`utd:replacedBy`), when the source prints the pointer. Old names
+and business terms appear as `skos:altLabel`. The nine tag-range
+categories form a `skos:ConceptScheme`; each element is a member of
+exactly one category.
+
+## Machine access
+
+- Whole directory: [/data/untded.ttl](/data/untded.ttl), [/data/untded.jsonld](/data/untded.jsonld)
+- One element: `/elements/<tag>/data.ttl` and `data.jsonld`
+- Context: [/ns/untded-context.jsonld](/ns/untded-context.jsonld) — see the [context guide](/docs/context)
+
+Everything above is generated from the dataset's single vocabulary
+declaration; nothing on the registry is hand-maintained RDF.

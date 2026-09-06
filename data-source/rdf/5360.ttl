@@ -1,12 +1,13 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5360> a utd:TradeDataElement;
+  skos:altLabel "Message line item total monetary";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:oldName "Message line item total monetary";
   utd:sourcePage 96;
   utd:status "retired";
   utd:tag 5360 .

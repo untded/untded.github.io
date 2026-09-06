@@ -6,13 +6,11 @@
   schema:description "Self assessed amount of duty/tax/fee (includes all types of charges and duties) due and amount of reduction (if applicable). Assessed per duty/tax/fee type by item and/or declaration.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax Or Fee. Assessed.Amount";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 47(4))";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 100;
   utd:status "active";
   utd:tag 5504 .

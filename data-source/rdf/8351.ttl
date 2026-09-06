@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8351> a utd:TradeDataElement;
+  skos:altLabel "Hazard code identification",
+    "IMDG Class Number, ADR/RID Class Number";
   schema:description "To identify a hazard class applicable to dangerous goods as defined by the relevant regulation authority such as the IMDG Class Number of the SOLAS Convention of IMO and the ADR/RID Class Number for the road/rail environment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Hazard Class. Identifier";
+  utd:bridge [], [];
   utd:bridges "CMR: L 44, P 09-44 MAR: IMO/FAL 7";
-  utd:businessTerm "IMDG Class Number, ADR/RID Class Number";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 7;
-  utd:minLength 1;
-  utd:oldName "Hazard code identification";
-  utd:representation "an..7";
+  utd:representation [];
   utd:sourcePage 126;
   utd:status "active";
   utd:tag 8351 .

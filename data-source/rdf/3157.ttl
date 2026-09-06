@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3157> a utd:TradeDataElement;
+  skos:altLabel "Warehouse, coded";
   schema:description "To identify a warehouse where a particular consignment has been stored.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Warehouse. Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 49)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Warehouse, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3157 .

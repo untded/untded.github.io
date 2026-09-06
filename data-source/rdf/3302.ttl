@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3302> a utd:TradeDataElement;
+  skos:altLabel "Place of receipt by pre-carrier";
   schema:description "Name of the place at which goods are to be, or have been, taken over for carriage prior to the main transport";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Pre-carriage Receipt Location.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 22, P 27-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Place of receipt by pre-carrier";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 64;
   utd:status "active";
   utd:tag 3302 .

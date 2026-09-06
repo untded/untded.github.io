@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3468> a utd:TradeDataElement;
+  skos:altLabel "Seller's department or employee";
   schema:description "Name of seller's sales contact";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Seller. Contact Name.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 08, P 09-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Seller's department or employee";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3468 .

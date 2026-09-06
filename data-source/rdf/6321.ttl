@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6321> a utd:TradeDataElement;
+  skos:altLabel "Measurement significance, coded";
   schema:description "Code specifying the significance of a measurement.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Measurement. Significance.Code";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Measurement significance, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 107;
   utd:status "active";
   utd:tag 6321 .

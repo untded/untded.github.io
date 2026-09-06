@@ -8,10 +8,7 @@
   schema:name "Consolidation. Net Weight.Measure";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 16;
-  utd:minLength 1;
-  utd:representation "n..16";
+  utd:representation [];
   utd:sourcePage 102;
   utd:status "active";
   utd:tag 6040 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3091> a utd:TradeDataElement;
+  skos:altLabel "Freight from, coded";
   schema:description "To identify the place from which the transport charges tariff applies or where charges have been incurred.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Payable From Location.Identifier";
+  utd:bridge [];
   utd:bridges "CIM: (nn-nnnnn,n); L 47, P 04-12 and L 53, P 04-12 and L 59, P 04-12 and on reverse of CIM form (CIM 63, top part)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Freight from, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 54;
   utd:status "active";
   utd:tag 3091 .

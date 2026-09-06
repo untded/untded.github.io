@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8250> a utd:TradeDataElement;
+  skos:altLabel "Identification of means of transport at departure/arrival";
   schema:description "To identify the means of transport used at the time of presentation (departure for export, arrival fro import) of the consignment to a Customs office in the context of a goods declaration.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. At Presentation.Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 18)";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 26;
-  utd:minLength 1;
-  utd:oldName "Identification of means of transport at departure/arrival";
-  utd:representation "an..26";
+  utd:representation [];
   utd:sourcePage 125;
   utd:status "active";
   utd:tag 8250 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2351> a utd:TradeDataElement;
+  skos:altLabel "Period of stay, coded";
   schema:description "Period of time in which a means of transport stays, or is to stay, in a specific port or other location expressed as startdate and end date in figures.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Stay.Date Time";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 3";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 21;
-  utd:minLength 1;
-  utd:oldName "Period of stay, coded";
-  utd:representation "an..21";
+  utd:representation [];
   utd:sourcePage 47;
   utd:status "active";
   utd:tag 2351 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1066> a utd:TradeDataElement;
+  skos:altLabel "Number of original Bills of Lading, in words";
   schema:description "Total number, in words, of the originals of a document issued";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Originals Issued Quantity.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 64, P 36-54";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Number of original Bills of Lading, in words";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 30;
   utd:status "active";
   utd:tag 1066 .

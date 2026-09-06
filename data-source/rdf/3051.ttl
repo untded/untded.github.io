@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3051> a utd:TradeDataElement;
+  skos:altLabel "Route, coded";
   schema:description "Code specifying a route to be used for the transport of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Route.Code";
+  utd:bridge [];
   utd:bridges "CIM: n..3; L 44, P 18-19 and L 50, P 18-19 and L 56,P 18-19 and on reverse of CIM form (CIM 54)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Route, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 52;
   utd:status "active";
   utd:tag 3051 .

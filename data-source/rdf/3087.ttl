@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3087> a utd:TradeDataElement;
+  skos:altLabel "Customs office of destination (transit), coded";
   schema:description "To identify the customs office at which goods are released from a Customs transit regime.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transit Regime. End Customs Office Location.Identifier";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Customs office of destination (transit), coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 54;
   utd:status "active";
   utd:tag 3087 .

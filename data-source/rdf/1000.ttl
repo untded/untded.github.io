@@ -1,20 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1000> a utd:TradeDataElement;
+  skos:altLabel "Document/message name";
   schema:description "Free text name of a document such as 'Proforma invoice', 'Commercial invoice'.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Type Name.Text";
+  utd:bridge [], [];
   utd:bridges "UNLK: L 02, P 45-80 MAR: IMO/FAL 1-7";
-  utd:businessTerm "Document/message name";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Document/message name";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1000 .

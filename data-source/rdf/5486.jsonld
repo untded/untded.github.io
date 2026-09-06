@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,31 @@
   "sourcePage": 100,
   "name": "Consignment. Insurance.Amount",
   "description": "Amount of premium payable to the insurance company for insuring the goods.",
-  "representation": "n..10",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 10,
-  "oldName": "Insurance cost",
-  "bridges": "UNLK:L 52, P 62-80"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..10",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 10
+  },
+  "altLabel": [
+    "Insurance cost"
+  ],
+  "bridges": "UNLK:L 52, P 62-80",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 52, P 62-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 52,
+          "lineTo": 52,
+          "posFrom": 62,
+          "posTo": 80
+        }
+      ]
+    }
+  ]
 }

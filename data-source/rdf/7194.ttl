@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7194> a utd:TradeDataElement;
+  skos:altLabel "Seller's article number";
   schema:description "Identification of an item assigned by the seller.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Line Item. Seller Assigned.Identifier";
+  utd:bridge [];
   utd:bridges "UNLK: L36-46, P 09-44";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Seller's article number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 113;
   utd:status "active";
   utd:tag 7194 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5082> a utd:TradeDataElement;
+  skos:altLabel "Paymentamount";
   schema:description "Actual amount paid, or to be paid.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Amount";
+  utd:bridge [];
   utd:bridges "ODETTE: n..11";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Paymentamount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5082 .

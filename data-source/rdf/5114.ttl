@@ -1,12 +1,14 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5114> a utd:TradeDataElement;
+  skos:altLabel "Freight totalamount";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:oldName "Freight totalamount";
+  utd:replacedBy <https://www.untded.org/elements/5290>;
   utd:sourcePage 90;
   utd:status "retired";
   utd:tag 5114 .

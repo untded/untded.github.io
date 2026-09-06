@@ -1,0 +1,44 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: UN/EDIFACT alignment — UN/TDED
+description: How the Trade Data Elements Directory and the UN/EDIFACT D.05B directories corroborate each other, element by element, and the method and limits of the join.
+---
+
+The publication's foreword states the relationship plainly: the 2005
+revision of the TDED is "fully consistent with the set of UN/EDIFACT
+directories supporting electronic data interchange, especially with the
+EDIFACT Data Element Directory (EDED)". This page makes that claim
+checkable against our data.
+
+## The join
+
+Element pages show an **EDED chip** when the element's tag appears in the
+UN/EDIFACT **D.05B** segments directory (a mirror of the official UNECE
+publication). The chip shows the EDED representation (`type..maxlength`)
+next to ours:
+
+- **aligned** — charset and maximum length corroborate;
+- **representation differs** — the two printed forms disagree; the chip
+  links to the corresponding row below.
+
+## The 37 disagreements
+
+{/* The table below is generated from the dataset at build time; see
+src/pages/docs/alignment-edifact-table.astro */}
+
+import AlignmentTable from './_alignment-table.astro'
+
+<AlignmentTable />
+
+## Method and limits
+
+- The mirror lists every data element **used in segments**, with name,
+  description, type and max length; elements not referenced by any
+  segment do not appear, so absence of a chip is informational, not a
+  mismatch.
+- The join is by tag number. The cross-check
+  (`bin/crosscheck-edifact` in the dataset) additionally compares names
+  and descriptions with a normalized similarity threshold; its full
+  report lives in the dataset repository.
+- Representation disagreements are printed as-is on both sides; none are
+  silently reconciled.

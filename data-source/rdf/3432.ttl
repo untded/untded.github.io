@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3432> a utd:TradeDataElement;
+  skos:altLabel "Institution name",
+    "Bank name";
   schema:description "Name of an institution.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Financial Institution. Name.Text";
-  utd:businessTerm "Bank name";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 70;
-  utd:minLength 1;
-  utd:oldName "Institution name";
-  utd:representation "an..70";
+  utd:representation [];
   utd:sourcePage 69;
   utd:status "active";
   utd:tag 3432 .

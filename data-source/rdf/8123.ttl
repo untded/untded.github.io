@@ -1,13 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8123> a utd:TradeDataElement;
+  skos:altLabel "Vessel, coded";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridge [], [];
   utd:bridges "MAR: IMO/FAL 1-3,5-7 and UNLK: L 23, P 19-26";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "x";
-  utd:oldName "Vessel, coded";
+  utd:replacedBy <https://www.untded.org/elements/8213>;
   utd:sourcePage 121;
   utd:status "retired";
   utd:tag 8123 .

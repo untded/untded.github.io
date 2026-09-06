@@ -6,13 +6,11 @@
   schema:description "To identify the nationality of a an object, for example the nationality of a person or the nationality of a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Nationality.Identifier";
+  utd:bridge [];
   utd:bridges "MAR: (IMO FAL Forms 5-6)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3485 .
