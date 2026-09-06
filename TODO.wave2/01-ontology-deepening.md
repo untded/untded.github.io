@@ -36,7 +36,7 @@ ontology. Branch: `wave2-ontology` in `untded/untded-2005`.
     per scheme entry (`scheme`, `detail`, and `zone*` for UNLK entries)
   - `altLabel`: old_name and business_term (when present)
   - `replacedBy`: `{"@id": .../elements/<tag>}` from `Untded::Replacement`
-- [ ] Exporter grows (all under `derived/`):
+- [x] Exporter grows (all under `derived/`):
   - [x] `vocabulary.json` — prefixes, classes, terms from `Vocabulary`
         (for the /ontology page; one writer)
   - [x] ~~ledger.json~~ — dropped: the site derives the ledger from
