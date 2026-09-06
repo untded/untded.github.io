@@ -391,6 +391,49 @@ it("carries the full original documentation", () => {
     expect(entries).toContain('pagefind-entry.json')
   })
 
+  it('mounts the search UI with a script valid in inline context', () => {
+    // The mount script is emitted inline (data-astro-rerun): a classic
+    // script, where top-level await is a SyntaxError and the UI never
+    // mounts. The async IIFE is the fix; this is the tripwire.
+    const html = readFileSync(`${dist}/search/index.html`, 'utf8')
+    expect(html).toContain('PagefindUI')
+    expect(html).toMatch(/\(async\s*\(\)\s*=>/)
+    for (const f of collectHtml(dist)) {
+      const inline = readFileSync(f, 'utf8').match(/<script data-astro-rerun>([\s\S]*?)<\/script>/g) ?? []
+      for (const block of inline) {
+        // top-level statements sit at script-body indentation (≤ 2 spaces);
+        // awaits inside a wrapped function are deeper and fine
+        expect(block, f).not.toMatch(/\n {0,2}await\s/)
+      }
+    }
+  })
+
+  it('serves every machine artifact from the download page', () => {
+    const html = readFileSync(`${dist}/download/index.html`, 'utf8')
+    for (const artifact of [
+      '/data/untded.jsonld',
+      '/data/untded.ttl',
+      '/data/index.json',
+      '/data/vocabulary.json',
+      '/data/edifact-links.json',
+      '/ns/untded-context.jsonld',
+      '/elements/1004/data.ttl',
+    ]) {
+      expect(html, artifact).toContain(artifact)
+      expect(existsSync(`${dist}${artifact}`), `${artifact} not built`).toBe(true)
+    }
+  })
+
+  it('keeps the per-element context identical to the served context', () => {
+    const inline = JSON.parse(readFileSync(`data-source/rdf/1004.jsonld`, 'utf8'))['@context']
+    const served = JSON.parse(readFileSync(`data-source/context.jsonld`, 'utf8'))
+    const ctx = served['@context'] ?? served
+    expect(Object.keys(inline).sort()).toEqual(Object.keys(ctx).sort())
+    for (const k of Object.keys(inline)) {
+      expect(inline[k], k).toEqual(ctx[k])
+    }
+  })
+
   it('brands every page UN/TDED and never the old stylisation', () => {
     const pages = ['index.html', 'about/index.html', 'elements/1001/index.html', '404.html']
     for (const p of pages) {

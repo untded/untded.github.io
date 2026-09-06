@@ -56,3 +56,14 @@ seeAlso for EDIFACT (the join ships as edifact-links.json; the graph stays
 mirror-independent). Track 06 also corrected a workspace premise: the
 working copy's pp. 5–8 carry the original Volumes II/III note and Foreword
 with a text layer, not an inserted placeholder.
+
+Late tracks from the close-out sweep (2026-09-06): 09 repaired the
+full-text search page — which had never mounted in production (two
+stacked bugs: top-level await in an inline classic script, and
+PagefindUI destructured from a bundle that only sets window.PagefindUI)
+— completed /download, and pinned per-element/served context parity
+(PR #29). 10, the UNCL code-list join (the other half of the Foreword's
+consistency claim), is fully specified but input-blocked: the official
+UNCL archive sits behind the UNECE CDN challenge and mirrors strip the
+bracket cross-references; one manual browser download of uncl.zip
+(D.02A preferred) unblocks it — see the file.
