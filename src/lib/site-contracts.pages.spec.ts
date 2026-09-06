@@ -270,6 +270,57 @@ it("carries the full original documentation", () => {
     expect(html).toContain('On the UN layout key')
   })
 
+  it('transcribes the foreword and the cover matter with coverage accounting', () => {
+    const foreword = readFileSync(`${dist}/document/foreword/index.html`, 'utf8')
+    expect(foreword).toContain('This third edition cancels and replaces the second edition (ISO 7372:1993)')
+    expect(foreword).toContain('(ISO6422)')
+    expect(foreword).toContain('fully consistent with the set of UN/EDIFACT directories')
+    expect(foreword).toContain('François Vuilleumier')
+
+    const index = readFileSync(`${dist}/document/index.html`, 'utf8')
+    expect(index).toContain('ECE/TRADE/362')
+    expect(index).toContain('New York and Geneva, 2005')
+    expect(index).toContain('no ISBN or copyright line is printed')
+    expect(index).toContain('Vol. I - Data Elements')
+    for (const row of ['PDF pp. 1–2', 'PDF pp. 6–8', 'PDF pp. 9–13', 'PDF p. 19', 'PDF pp. 28–132']) {
+      expect(index, row).toContain(row)
+    }
+  })
+
+  it('completes the introduction and maintenance transcriptions', () => {
+    const intro = readFileSync(`${dist}/document/introduction/index.html`, 'utf8')
+    for (const def of ['1.3.5', '1.3.6', '1.3.7', '1.3.8']) {
+      expect(intro, def).toContain(def)
+    }
+    expect(intro).toContain('1.3.8 data element')
+    expect(intro).toContain('1.8 Availability of the UNTDED and ISO 7372')
+    expect(intro).toContain('(1)&nbsp; Available from the International Organization for Standardization')
+
+    const maintenance = readFileSync(`${dist}/document/maintenance/index.html`, 'utf8')
+    for (const heading of [
+      '2.2 Role of the Maintenance Agency',
+      '2.3 Membership',
+      '2.3.2 International Organization for Standardization',
+      '2.3.3 Associate members',
+      '2.4 Rules of procedure',
+      '2.4.1 Proposals for changes, additions or deletions',
+      '2.4.2 Changes to TDED',
+      '2.4.2.1 Change of the name or description',
+      '2.4.2.2 Change in the concept',
+      '2.4.3 Technical Assessment Checklist (TAC)',
+      '2.5 Consultation of members of the MA',
+      '2.6 Voting procedures',
+      '2.7 Implementation of approved amendments',
+    ]) {
+      expect(maintenance, heading).toContain(heading)
+    }
+    expect(maintenance).toContain('UPU')
+    expect(maintenance).toContain('Universal Postal Union')
+    expect(maintenance).toContain('participate ex officio')
+    expect(maintenance).toContain('http://www.iso.org/tc154')
+    expect(maintenance).toContain('(cc')
+  })
+
   it('sitemaps the element and category routes', () => {
     const sitemap = readFileSync(`${dist}/sitemap-index.xml`, 'utf8')
     expect(sitemap).toContain('<loc>')

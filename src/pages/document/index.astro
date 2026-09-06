@@ -1,8 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { href, ISO_7372_URL, REFERENCES_REPO_URL, sourcePdfUrl, UNECE_UNTDED_URL } from '../../lib/site'
+import { href, ISO_7372_URL, sourcePdfUrl, UNECE_UNTDED_URL } from '../../lib/site'
 
 const sections = [
+  {
+    href: '/document/foreword',
+    title: 'Foreword',
+    pages: 'PDF pp. 6–8',
+    desc: 'How the third edition was produced: its six commitments — UNLK support, UN/EDIFACT consistency, multimodality — resources, and DMR cooperation.',
+  },
   {
     href: '/document/introduction',
     title: '1 — Introduction',
@@ -22,11 +28,23 @@ const sections = [
     desc: 'The printed anatomy of an entry: headers, the change-indicator legend, character representation, categories.',
   },
 ]
+
+const coverage = [
+  { pages: 'PDF pp. 1–2', printed: 'cover, page ii', content: 'Title, edition and imprint', where: 'the cover card above' },
+  { pages: 'PDF pp. 3–4', printed: 'pages iii–iv', content: 'Contents', where: 'this coverage table' },
+  { pages: 'PDF p. 5', printed: 'page v', content: 'The Volumes II and III note', where: 'below' },
+  { pages: 'PDF pp. 6–8', printed: 'pages vi–viii', content: 'Foreword', where: '/document/foreword' },
+  { pages: 'PDF pp. 9–13', printed: 'pages 1–5', content: 'Section 1 — Introduction', where: '/document/introduction' },
+  { pages: 'PDF pp. 14–18', printed: 'pages 6–10', content: 'Section 2 — Maintenance of the TDED', where: '/document/maintenance' },
+  { pages: 'PDF p. 19', printed: 'page 11', content: 'Section 3 — Indexes [reserved for future use]', where: 'nothing to transcribe' },
+  { pages: 'PDF pp. 20–27', printed: 'pages 12–19', content: 'Section 4.1 — Presentation of data elements', where: '/document/presentation' },
+  { pages: 'PDF pp. 28–132', printed: 'pages 20–124', content: 'Section 4.2 — the 1504 entries of the TDED', where: '/elements' },
+]
 ---
 
 <BaseLayout
   title="The document — UN/TDED"
-  description="The original documentation of UNTDED 2005 (ECE/TRADE/362, ISO 7372:2005): introduction, maintenance procedures, and the presentation rules — transcribed onto the site."
+  description="The original documentation of UNTDED 2005 (ECE/TRADE/362, ISO 7372:2005): cover, foreword, introduction, maintenance procedures, and the presentation rules — transcribed onto the site."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document</p>
@@ -34,12 +52,57 @@ const sections = [
     <p class="mt-3 leading-relaxed text-body">
       The element entries are the Directory’s main part, but the publication
       documents itself first: what it covers, who maintains it, and how an
-      entry is built. Those sections are transcribed here so the registry
-      carries its own documentation. Section 3 (Indexes) is reserved for
-      future use in the source; the 1504 entries of section 4.2 are the{' '}
+      entry is built. Those sections are transcribed here — from the cover to
+      the presentation rules — so the registry carries its own documentation.
+      Section 3 (Indexes) is reserved for future use in the source; the 1504
+      entries of section 4.2 are the{' '}
       <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>{' '}
       itself.
     </p>
+
+    <section class="mt-8" aria-label="Cover">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-body">Cover and imprint · PDF pp. 1–2</h2>
+      <div class="mt-3 rounded-md border border-line bg-paper p-5">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 text-sm">
+          <span class="font-medium text-ink">United Nations</span>
+          <span class="text-body/70">International Organization for Standardization</span>
+        </div>
+        <p class="mt-6 text-center">
+          <span class="italic text-body">Trade Facilitation</span>
+        </p>
+        <p class="mt-2 text-center text-lg font-semibold tracking-tight text-ink">
+          Trade Data Elements<br />Directory (TDED)
+        </p>
+        <p class="mt-4 text-center font-medium text-ink">UNTDED 2005{' '}·{' '}ISO 7372:2005</p>
+        <p class="mt-1 text-center text-body">Vol. I - Data Elements</p>
+        <p class="mt-6 text-center text-sm text-body">
+          UNITED NATIONS<br />New York and Geneva, 2005
+        </p>
+        <p class="mt-6 border-t border-line pt-3 text-xs leading-relaxed text-body/80">
+          Verso (page ii): the publication reference{' '}
+          <span class="font-mono">ECE/TRADE/362</span> and{' '}
+          <span class="font-mono">ISO 7372:2005(E)</span>, with{' '}
+          <span class="font-mono">www.uncefact.org</span>; no ISBN or
+          copyright line is printed in this edition.
+        </p>
+      </div>
+    </section>
+
+    <section class="mt-8" aria-label="Volumes II and III">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-body">The other volumes · PDF p. 5</h2>
+      <p class="mt-3 text-sm leading-relaxed text-body">
+        Volume I — transcribed here — is the data elements directory itself.
+        Page v describes the other two volumes of the publication:{' '}
+        <strong class="font-medium text-ink">Volume II — User Code List</strong>,
+        the code list part of the UN/EDIFACT directory (part of UNCL), and{' '}
+        <strong class="font-medium text-ink">Volume III — Compendium of Trade
+        Facilitation Recommendations</strong>, the UNECE recommendations with
+        their ISO equivalents (Rec. 3/ISO 3166 country codes, Rec. 9/ISO 4217
+        currencies, Rec. 16 LOCODE, Rec. 20 units of measurement, and others).
+        This edition carries Volume I only; Volumes II and III are separate
+        publications.
+      </p>
+    </section>
 
     <div class="mt-8 space-y-3">
       {
@@ -58,6 +121,45 @@ const sections = [
       }
     </div>
 
+    <section class="mt-10" aria-label="Coverage">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-body">Coverage</h2>
+      <p class="mt-3 text-sm leading-relaxed text-body">
+        Every page of the 132-page publication is accounted for below — the
+        site either transcribes it or carries its content as data.
+      </p>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <caption class="sr-only">Page-by-page coverage of UNTDED 2005</caption>
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wider text-body/80">
+              <th class="py-2 pe-4 font-medium">PDF pages</th>
+              <th class="py-2 pe-4 font-medium">Printed</th>
+              <th class="py-2 pe-4 font-medium">Content</th>
+              <th class="py-2 font-medium">On this site</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line">
+            {
+              coverage.map((row) => (
+                <tr>
+                  <td class="py-2 pe-4 font-mono text-xs text-body">{row.pages}</td>
+                  <td class="py-2 pe-4 text-body">{row.printed}</td>
+                  <td class="py-2 pe-4 text-body">{row.content}</td>
+                  <td class="py-2 text-body">
+                    {row.where.startsWith('/') ? (
+                      <a class="text-un-deep underline decoration-un/50" href={href(row.where)}>{row.where}</a>
+                    ) : (
+                      row.where
+                    )}
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <div class="mt-8">
       <a href={sourcePdfUrl()} class="block rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Read the source PDF ↗</h2>
@@ -73,5 +175,6 @@ const sections = [
         {' · '}
         <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372 — ISO</a>
       </p>
-    </div>  </div>
+    </div>
+  </div>
 </BaseLayout>
