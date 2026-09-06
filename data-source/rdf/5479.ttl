@@ -6,7 +6,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 3;
   utd:minLength 1;
   utd:oldName "Relation, coded";

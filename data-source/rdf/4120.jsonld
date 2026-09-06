@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 76,
-  "extractionConfidence": "medium",
   "oldName": "Tariffs and routes requested",
   "bridges": "CIM: an..35x3 L 20-22, P 09-44"
 }

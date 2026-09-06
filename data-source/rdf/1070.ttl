@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 1;
   utd:minLength 1;
   utd:oldName "Charges Note";

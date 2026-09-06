@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 3;
   utd:minLength 3;
   utd:oldName "Shipment flashpoint";

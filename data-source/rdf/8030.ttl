@@ -10,7 +10,6 @@
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 12;
   utd:minLength 1;
   utd:oldName "Loading tackle/containers, Marks and Numbers";

@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
   utd:charset "a";
-  utd:extractionConfidence "medium";
   utd:maxLength 2;
   utd:minLength 2;
   utd:oldName "Country of last consignment, coded";

@@ -42,11 +42,6 @@ export function buildMeta(elements) {
     categories: categories().map((c) => byCategory[c.k]),
     changeTagTally,
     groups: groupTally(elements),
-    provenance: {
-      pdf: 'UNTDED2005_Redacted.pdf',
-      pages: '28-132',
-      edition: 'UNTDED 2005 (ECE/TRADE/362, ISO 7372:2005)',
-    },
   }
 }
 

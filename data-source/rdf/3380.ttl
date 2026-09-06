@@ -6,7 +6,6 @@
   utd:bridges "SWIFT: an..35 and UNLK: L 26, P 18-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Transport destination";
   utd:sourcePage 67;
   utd:status "retired";

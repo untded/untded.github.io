@@ -6,7 +6,6 @@
   utd:bridges "AWB: Checkmark L 24, P 57-58";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Other charges, to collect";
   utd:sourcePage 98;
   utd:status "retired";

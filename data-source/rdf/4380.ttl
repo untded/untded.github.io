@@ -6,7 +6,6 @@
   utd:bridges "UNLK: L 20, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Transhipment authorization";
   utd:sourcePage 82;
   utd:status "retired";

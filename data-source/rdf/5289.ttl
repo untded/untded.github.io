@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 6;
   utd:minLength 1;
   utd:oldName "Duty/tax/fee account identification";

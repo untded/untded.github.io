@@ -10,7 +10,6 @@
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 8;
   utd:minLength 1;
   utd:oldName "Total number of packages";

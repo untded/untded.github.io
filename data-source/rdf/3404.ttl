@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cn";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 25;
   utd:minLength 1;
   utd:oldName "Name of person";

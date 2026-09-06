@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 9;
   utd:minLength 1;
   utd:oldName "Quantity delivered";

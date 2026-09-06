@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 98,
-  "extractionConfidence": "medium",
   "oldName": "Other charges, to collect",
   "bridges": "AWB: Checkmark L 24, P 57-58"
 }

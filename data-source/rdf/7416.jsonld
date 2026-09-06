@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 116,
-  "extractionConfidence": "medium",
   "oldName": "IMDG class number",
   "bridges": "MAR: IMO/FAL 7"
 }

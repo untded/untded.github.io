@@ -6,7 +6,6 @@
   utd:bridges "UNLK: an..35x5; L 04- 08, P 09-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Supplier, coded";
   utd:sourcePage 64;
   utd:status "retired";

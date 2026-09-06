@@ -10,7 +10,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 18;
   utd:minLength 1;
   utd:oldName "Freight cost";

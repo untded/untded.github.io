@@ -6,7 +6,6 @@
   utd:bridges "MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "IMDG class number";
   utd:sourcePage 116;
   utd:status "retired";

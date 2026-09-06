@@ -6,7 +6,6 @@
   utd:bridges "UNLK: L 16, P 45-62";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Country of purchase";
   utd:sourcePage 68;
   utd:status "retired";

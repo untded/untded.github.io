@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cn";
   utd:charset "an";
-  utd:extractionConfidence "high";
   utd:maxLength 26;
   utd:minLength 1;
   utd:oldName "Currency";

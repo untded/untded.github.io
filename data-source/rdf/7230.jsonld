@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 113,
-  "extractionConfidence": "medium",
   "oldName": "Nature and quantity of goods",
   "bridges": "AWB: L 33-44, P 61-81 and CIMP: (708):an..15; (709):an..20"
 }
