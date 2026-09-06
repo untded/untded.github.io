@@ -1,56 +1,38 @@
 ---
 // The UN layout key drawn to scale (A4, millimetre geometry from
-// src/lib/unlk.ts). Variant "card": a compact form with the element's
-// zones highlighted, for element pages. Variant "page": the full
-// reconstruction with the model-form section bands and hover titles,
-// for /unlk.
+// src/lib/unlk.ts) — the compact locator for element pages, with the
+// element's zones highlighted. The full interactive reconstruction
+// lives in UnlkExplorer on /unlk.
 import { UNLK, type UnlkRect } from '../lib/unlk'
 
 interface Props {
-  variant: 'card' | 'page'
-  zones?: UnlkRect[]
-  fields?: Array<{ rect: UnlkRect; elements: Array<{ tag: number; name: string | null }> }>
+  zones: UnlkRect[]
 }
-const { variant, zones = [], fields = [] } = Astro.props
+const { zones = [] } = Astro.props
 
-const bands = [
-  { label: 'Parties · transport', x: UNLK.marginX, y: UNLK.marginY, w: UNLK.imageW / 2, h: 12 * UNLK.linePitch },
-  { label: 'Commercial', x: UNLK.marginX + UNLK.imageW / 2, y: UNLK.marginY, w: UNLK.imageW / 2, h: 12 * UNLK.linePitch },
-  { label: 'Goods · customs', x: UNLK.marginX, y: UNLK.marginY + 12 * UNLK.linePitch, w: UNLK.imageW, h: 15 * UNLK.linePitch },
-  { label: 'Free disposal', x: UNLK.marginX, y: UNLK.marginY + 27 * UNLK.linePitch, w: UNLK.imageW, h: 6 * UNLK.linePitch },
-]
 const gridV = Array.from({ length: UNLK.boxesAcross + 1 }, (_, i) => UNLK.marginX + i * UNLK.boxW)
-const gridH = Array.from({ length: UNLK.lines + 1 }, (_, i) => UNLK.marginY + i * UNLK.linePitch * 2).filter((y) => y <= UNLK.marginY + UNLK.imageH)
+const gridH = Array.from({ length: UNLK.lines + 1 }, (_, i) => UNLK.marginY + i * UNLK.linePitch * 2).filter(
+  (y) => y <= UNLK.marginY + UNLK.imageH,
+)
 ---
 
 <svg
   viewBox={`0 0 ${UNLK.pageW} ${UNLK.pageH}`}
-  class:list={[variant === 'card' ? 'block w-full max-w-[15rem]' : 'block w-full max-w-[26rem]', 'rounded-md']}
+  class="block w-full max-w-[15rem] rounded-md"
   role="img"
-  aria-label={variant === 'page' ? 'The UN layout key reconstructed from the directory' : 'Element location on the UN layout key'}
+  aria-label="Element location on the UN layout key"
 >
   <rect x="0" y="0" width={UNLK.pageW} height={UNLK.pageH} class="fill-white dark:fill-[#101a26]" />
   <rect x={UNLK.marginX} y={UNLK.marginY} width={UNLK.imageW} height={UNLK.imageH} class="fill-un/[0.04] stroke-line" stroke-width="0.6" />
 
-  {variant === 'page' && bands.map((b) => (
-    <rect x={b.x} y={b.y} width={b.w} height={b.h} class="fill-cat-4/[0.10]" />
-  ))}
-
   {gridV.map((x) => <line x1={x} y1={UNLK.marginY} x2={x} y2={UNLK.marginY + UNLK.imageH} class="stroke-line" stroke-width="0.3" />)}
   {gridH.map((y) => <line x1={UNLK.marginX} y1={y} x2={UNLK.marginX + UNLK.imageW} y2={y} class="stroke-line" stroke-width="0.3" />)}
 
-  {variant === 'card' && zones.map((z) => (
+  {zones.map((z) => (
     <rect x={z.x} y={z.y} width={z.w} height={z.h} rx="0.8" class="fill-un/60 stroke-un" stroke-width="0.8" />
   ))}
 
-  {variant === 'page' && fields.map((f) => (
-    <rect x={f.rect.x} y={f.rect.y} width={f.rect.w} height={f.rect.h} rx="0.8" class="fill-un/50 stroke-un" stroke-width="0.5">
-      <title>{f.elements.map((e) => `${e.tag} ${e.name ?? '(retired)'}`).join('\n')}</title>
-    </rect>
-  ))}
-
-  {variant === 'page' && bands.map((b) => (
-    <text x={b.x + 1.5} y={b.y + 3.2} class="fill-body" font-size="3.1">{b.label}</text>
-  ))}
-  <text x={UNLK.marginX} y={UNLK.pageH - 3.5} class="fill-body" font-size="2.9">UN layout key · ISO 6422 / ISO 3535 grid · lines 1–{UNLK.lines}</text>
+  <text x={UNLK.marginX} y={UNLK.pageH - 3.5} class="fill-body" font-size="2.9">
+    UN layout key · ISO 6422 / ISO 3535 grid · lines 1–{UNLK.lines}
+  </text>
 </svg>
