@@ -47,6 +47,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/png" href={href('/favicon-96x96.png?v=20260906')} sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" media="(prefers-color-scheme: dark)" href={href('/favicon-dark.svg?v=20260906')} />
     <link rel="icon" type="image/svg+xml" href={href('/favicon.svg?v=20260906')} />
     <link rel="shortcut icon" href={href('/favicon.ico?v=20260906')} />
     <link rel="apple-touch-icon" sizes="180x180" href={href('/apple-touch-icon.png?v=20260906')} />
