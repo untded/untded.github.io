@@ -15,8 +15,10 @@ const current = Astro.url.pathname
 
 <header class="border-b border-line">
   <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
-    <a href={href('/')} class="font-mono text-xl font-semibold tracking-tight text-ink" aria-label="UN/TDED home">
-      UN<span class="name-slash">/</span>TDED
+    <a href={href('/')} class="flex items-center gap-2.5" aria-label="UN/TDED home">
+      <img src={href('/img/un-logo-light.svg')} alt="United Nations emblem" class="h-7 w-7 dark:hidden" width="28" height="28" />
+      <img src={href('/img/un-logo-dark.svg')} alt="" aria-hidden="true" class="hidden h-7 w-7 dark:block" width="28" height="28" />
+      <span class="font-mono text-xl font-semibold tracking-tight text-ink">UN<span class="name-slash">/</span>TDED</span>
     </a>
     <nav aria-label="Site" class="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem]">
       {
