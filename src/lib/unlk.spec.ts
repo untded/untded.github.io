@@ -1,5 +1,16 @@
 import { describe, expect, it } from 'vitest'
-import { UNLK, posToMm, unlkRects, unlkZones } from './unlk'
+import {
+  FULL_VIEW,
+  MAX_ZOOM,
+  UNLK,
+  UNLK_BANDS,
+  fitZone,
+  panView,
+  posToMm,
+  unlkRects,
+  unlkZones,
+  zoomView,
+} from './unlk'
 
 describe('unlkZones', () => {
   it('pairs line and position into a zone, attaching the format', () => {
@@ -42,5 +53,31 @@ describe('geometry', () => {
     const [r] = unlkRects('UNLK: L 36-46, P 00-08')
     expect(r.x).toBeCloseTo(UNLK.marginX, 5)
     expect(r.y + r.h).toBeLessThanOrEqual(UNLK.marginY + UNLK.imageH + 1e-6)
+  })
+})
+
+describe('view box', () => {
+  it('zooms toward the anchor and keeps the page aspect', () => {
+    const z = zoomView(FULL_VIEW, 2, 105, 148.5)
+    expect(z.w).toBeCloseTo(UNLK.pageW / 2, 5)
+    expect(z.h / z.w).toBeCloseTo(UNLK.pageH / UNLK.pageW, 5)
+    expect(z.x + z.w / 2).toBeCloseTo(105, 3)
+  })
+
+  it('clamps zoom between the full page and the maximum', () => {
+    expect(zoomView(FULL_VIEW, 0.1, 100, 100).w).toBe(UNLK.pageW)
+    expect(zoomView(FULL_VIEW, 1000, 100, 100).w).toBeCloseTo(UNLK.pageW / MAX_ZOOM, 5)
+  })
+
+  it('keeps a full-page view fixed under panning', () => {
+    expect(panView(FULL_VIEW, -40, 60)).toEqual(FULL_VIEW)
+  })
+
+  it('fits a band around its zone', () => {
+    const band = UNLK_BANDS[0]
+    const v = fitZone(band, 4)
+    expect(v.w).toBeLessThanOrEqual(UNLK.pageW)
+    expect(v.x).toBeLessThanOrEqual(band.x + 1e-6)
+    expect(v.x + v.w).toBeGreaterThanOrEqual(band.x + band.w - 1e-6)
   })
 })

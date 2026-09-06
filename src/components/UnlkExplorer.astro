@@ -1,0 +1,386 @@
+---
+// The interactive reconstruction of the UN layout key. The A4 form is
+// rendered to scale with every bridge plotted as a selectable field;
+// the script adds pan and zoom (wheel, drag, pinch) and a detail
+// panel. Without JavaScript the complete form still renders — only the
+// interaction is lost.
+import { FULL_VIEW, MAX_ZOOM, UNLK, UNLK_BANDS, type UnlkRect } from '../lib/unlk'
+
+export interface UnlkField {
+  key: string
+  rect: UnlkRect
+  elements: Array<{ tag: number; name: string | null; href: string }>
+}
+
+interface Props {
+  fields: UnlkField[]
+}
+const { fields } = Astro.props
+
+const inBand = (r: UnlkRect, b: { x: number; y: number; w: number; h: number }) => {
+  const cx = r.x + r.w / 2
+  const cy = r.y + r.h / 2
+  return cx >= b.x && cx <= b.x + b.w && cy >= b.y && cy <= b.y + b.h
+}
+const bandStats = UNLK_BANDS.map((b) => {
+  const own = fields.filter((f) => inBand(f.rect, b))
+  return { ...b, fieldCount: own.length, elementCount: own.reduce((n, f) => n + f.elements.length, 0) }
+})
+
+const island = JSON.stringify(
+  fields.map((f) => ({
+    k: f.key,
+    l: [f.rect.lineFrom, f.rect.lineTo, f.rect.posFrom, f.rect.posTo],
+    r: [f.rect.x, f.rect.y, f.rect.w, f.rect.h],
+    f: f.rect.format ?? null,
+    e: f.elements.map((el) => [el.tag, el.name ?? '(retired)', el.href]),
+  })),
+).replace(/</g, '\\u003c')
+
+const gridV = Array.from({ length: UNLK.boxesAcross + 1 }, (_, i) => UNLK.marginX + i * UNLK.boxW)
+const gridH = Array.from({ length: Math.floor(UNLK.lines / 2) + 1 }, (_, i) => UNLK.marginY + i * UNLK.linePitch * 2).filter(
+  (y) => y <= UNLK.marginY + UNLK.imageH,
+)
+const fieldLabel = (f: UnlkField) => `${f.elements[0].tag}${f.elements.length > 1 ? ` +${f.elements.length - 1}` : ''}`
+const fieldAria = (f: UnlkField) => {
+  const lines = f.rect.lineTo > f.rect.lineFrom ? `lines ${f.rect.lineFrom} to ${f.rect.lineTo}` : `line ${f.rect.lineFrom}`
+  const positions = f.rect.posTo > f.rect.posFrom ? `positions ${f.rect.posFrom} to ${f.rect.posTo}` : `position ${f.rect.posFrom}`
+  return `Field, ${lines}, ${positions}, ${f.elements.length} ${f.elements.length === 1 ? 'element' : 'elements'}`
+}
+const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-body shadow-sm hover:bg-mist disabled:opacity-40'
+---
+
+<div id="unlk-explorer" class="grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(15rem,1.3fr)]">
+  <div class="rounded-lg border border-line bg-paper p-4 shadow-sm">
+    <div class="mb-3 flex items-center justify-between gap-2">
+      <div class="flex items-center gap-1">
+        <button type="button" data-zoom="out" aria-label="Zoom out" class={btn}>−</button>
+        <span data-readout class="min-w-[3.5rem] text-center text-sm tabular-nums text-body">1.0×</span>
+        <button type="button" data-zoom="in" aria-label="Zoom in" class={btn}>+</button>
+      </div>
+      <button type="button" data-reset class={btn}>Reset view</button>
+    </div>
+    <div class="relative">
+      <svg
+        id="unlk-svg"
+        viewBox={`0 0 ${UNLK.pageW} ${UNLK.pageH}`}
+        class="block h-auto w-full cursor-grab touch-none select-none active:cursor-grabbing"
+        role="group"
+        aria-label="The UN layout key. Pan and zoom; fields are selectable."
+      >
+        <rect x="0" y="0" width={UNLK.pageW} height={UNLK.pageH} class="fill-white dark:fill-[#101a26]" />
+        <rect x={UNLK.marginX} y={UNLK.marginY} width={UNLK.imageW} height={UNLK.imageH} class="fill-un/[0.04] stroke-line" stroke-width="0.6" />
+        {UNLK_BANDS.map((b) => (
+          <rect x={b.x} y={b.y} width={b.w} height={b.h} class="fill-cat-4/[0.10]" />
+        ))}
+        {gridV.map((x) => <line x1={x} y1={UNLK.marginY} x2={x} y2={UNLK.marginY + UNLK.imageH} class="stroke-line" stroke-width="0.3" />)}
+        {gridH.map((y) => <line x1={UNLK.marginX} y1={y} x2={UNLK.marginX + UNLK.imageW} y2={y} class="stroke-line" stroke-width="0.3" />)}
+        {fields.map((f) => (
+          <rect
+            class="unlk-field fill-un/50 stroke-un"
+            data-key={f.key}
+            tabindex="0"
+            role="button"
+            aria-label={fieldAria(f)}
+            x={f.rect.x}
+            y={f.rect.y}
+            width={f.rect.w}
+            height={f.rect.h}
+            rx="0.8"
+            stroke-width="0.5"
+          >
+            <title>{f.elements.map((el) => `${el.tag} ${el.name ?? '(retired)'}`).join('\n')}</title>
+          </rect>
+        ))}
+        {fields.map((f) => (
+          <text
+            class="unlk-field-label fill-ink font-mono"
+            font-size="2.6"
+            text-anchor="middle"
+            x={f.rect.x + f.rect.w / 2}
+            y={f.rect.y + f.rect.h / 2 + 0.9}
+          >
+            {fieldLabel(f)}
+          </text>
+        ))}
+        {UNLK_BANDS.map((b) => (
+          <text x={b.x + 1.5} y={b.y + 3.4} class="fill-body" font-size="3.2" pointer-events="none">{b.label}</text>
+        ))}
+        <text x={UNLK.marginX} y={UNLK.pageH - 3.5} class="fill-body" font-size="2.9" pointer-events="none">
+          UN layout key · ISO 6422 / ISO 3535 grid · lines 1–{UNLK.lines}
+        </text>
+      </svg>
+      <div
+        id="unlk-tip"
+        hidden
+        class="pointer-events-none absolute z-10 max-w-[16rem] whitespace-pre-line rounded bg-ink px-2 py-1 text-xs leading-snug text-paper shadow-lg"
+      >
+      </div>
+    </div>
+    <p class="mt-2 text-xs text-body/80">Scroll or pinch to zoom, drag to pan. Field tags appear at higher zoom.</p>
+  </div>
+
+  <div class="space-y-4">
+    <div id="unlk-bands" class="rounded-md border border-line bg-mist p-4">
+      <p class="text-sm font-semibold text-ink">Sections of the model form</p>
+      <ul class="mt-2 space-y-1">
+        {bandStats.map((b) => (
+          <li>
+            <button
+              type="button"
+              data-fit
+              data-zone={`${b.x},${b.y},${b.w},${b.h}`}
+              class="flex w-full items-baseline justify-between gap-2 rounded px-1.5 py-1 text-left text-sm hover:bg-paper"
+            >
+              <span class="text-body">{b.label}</span>
+              <span class="shrink-0 text-xs tabular-nums text-body/80">{b.fieldCount} fields · {b.elementCount} elements</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+      <noscript>
+        <p class="mt-3 text-xs text-body">Zooming and field details need JavaScript; the form itself is complete.</p>
+      </noscript>
+    </div>
+    <div id="unlk-detail" hidden class="rounded-md border border-line bg-mist p-4"></div>
+  </div>
+
+  <script type="application/json" id="unlk-fields" set:html={island}></script>
+</div>
+
+<style>
+  .unlk-field { cursor: pointer; }
+  .unlk-field:hover, .unlk-field:focus-visible { opacity: 0.85; stroke-width: 1; }
+  .unlk-field.selected { opacity: 1; stroke-width: 1.2; }
+  .unlk-field-label { opacity: 0; transition: opacity 0.15s; pointer-events: none; }
+  #unlk-svg.zoomed-in .unlk-field-label { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .unlk-field-label { transition: none; } }
+</style>
+
+<script>
+  import { FULL_VIEW, MAX_ZOOM, UNLK, fitZone, panView, zoomView, type UnlkViewBox } from '../lib/unlk'
+
+  interface Island {
+    k: string
+    l: number[]
+    r: number[]
+    f: string | null
+    e: Array<[number, string, string]>
+  }
+
+  function init() {
+    const root = document.getElementById('unlk-explorer')
+    if (!root) return
+    const svg = document.getElementById('unlk-svg')
+    const readout = root.querySelector<HTMLElement>('[data-readout]')
+    const bandsPanel = document.getElementById('unlk-bands')
+    const detail = document.getElementById('unlk-detail')
+    const tip = document.getElementById('unlk-tip')
+    const island = document.getElementById('unlk-fields')
+    if (!(svg instanceof SVGSVGElement) || !readout || !bandsPanel || !detail || !tip || !island) return
+    const fields: Island[] = JSON.parse(island.textContent ?? '[]')
+
+    let vb: UnlkViewBox = FULL_VIEW
+
+    const apply = () => {
+      if (!svg.isConnected) return
+      svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`)
+      svg.classList.toggle('zoomed-in', svg.getBoundingClientRect().width / vb.w >= 6)
+      readout.textContent = `${(FULL_VIEW.w / vb.w).toFixed(1)}×`
+      const zoomIn = root.querySelector<HTMLButtonElement>('[data-zoom="in"]')
+      const zoomOut = root.querySelector<HTMLButtonElement>('[data-zoom="out"]')
+      if (zoomIn) zoomIn.disabled = vb.w <= UNLK.pageW / MAX_ZOOM + 1e-9
+      if (zoomOut) zoomOut.disabled = vb.w >= UNLK.pageW - 1e-9
+    }
+
+    const userPoint = (cx: number, cy: number) => {
+      const r = svg.getBoundingClientRect()
+      return { x: vb.x + ((cx - r.left) / r.width) * vb.w, y: vb.y + ((cy - r.top) / r.height) * vb.h }
+    }
+    const userDelta = (dxPx: number, dyPx: number) => {
+      const r = svg.getBoundingClientRect()
+      return { dx: (dxPx / r.width) * vb.w, dy: (dyPx / r.height) * vb.h }
+    }
+
+    const hideTip = () => {
+      tip.hidden = true
+    }
+    const placeTip = (cx: number, cy: number) => {
+      if (tip.hidden) return
+      const wrap = svg.parentElement?.getBoundingClientRect()
+      if (!wrap) return
+      tip.style.left = `${Math.max(4, Math.min(cx - wrap.left + 14, wrap.width - tip.offsetWidth - 4))}px`
+      tip.style.top = `${Math.max(4, cy - wrap.top + 14)}px`
+    }
+
+    svg.addEventListener(
+      'wheel',
+      (e) => {
+        e.preventDefault()
+        const p = userPoint(e.clientX, e.clientY)
+        vb = zoomView(vb, Math.exp(-e.deltaY * 0.0016), p.x, p.y)
+        apply()
+        hideTip()
+      },
+      { passive: false },
+    )
+
+    // drag to pan, two pointers to pinch, a click without drag to select
+    const pointers = new Map<number, { x: number; y: number }>()
+    let moved = 0
+    // pointer capture redirects later events to the svg, so the field
+    // under the pointer is remembered when it goes down
+    let downField: string | null = null
+    const midpoint = (a: { x: number; y: number }, b: { x: number; y: number }) => ({ x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 })
+
+    svg.addEventListener('pointerdown', (e) => {
+      svg.setPointerCapture(e.pointerId)
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+      moved = 0
+      downField = (e.target as Element).closest('[data-key]')?.getAttribute('data-key') ?? null
+      hideTip()
+    })
+    svg.addEventListener('pointermove', (e) => {
+      const prev = pointers.get(e.pointerId)
+      if (!prev) {
+        placeTip(e.clientX, e.clientY)
+        return
+      }
+      if (pointers.size === 1) {
+        moved += Math.abs(e.clientX - prev.x) + Math.abs(e.clientY - prev.y)
+        const d = userDelta(prev.x - e.clientX, prev.y - e.clientY)
+        vb = panView(vb, d.dx, d.dy)
+        apply()
+      } else if (pointers.size === 2) {
+        const other = [...pointers.entries()].find(([id]) => id !== e.pointerId)![1]
+        const before = { mid: midpoint(other, prev), dist: Math.hypot(other.x - prev.x, other.y - prev.y) }
+        const cur = { x: e.clientX, y: e.clientY }
+        const after = { mid: midpoint(other, cur), dist: Math.hypot(other.x - cur.x, other.y - cur.y) }
+        const p = userPoint(after.mid.x, after.mid.y)
+        vb = zoomView(vb, after.dist / Math.max(before.dist, 1), p.x, p.y)
+        const pan = userDelta(before.mid.x - after.mid.x, before.mid.y - after.mid.y)
+        vb = panView(vb, pan.dx, pan.dy)
+        moved = 99
+        apply()
+      }
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY })
+    })
+    const release = (e: PointerEvent) => {
+      const single = pointers.size === 1
+      pointers.delete(e.pointerId)
+      if (single && moved < 5 && downField) select(downField)
+      downField = null
+    }
+    svg.addEventListener('pointerup', release)
+    svg.addEventListener('pointercancel', (e) => pointers.delete(e.pointerId))
+    svg.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return
+      const field = (e.target as Element).closest('[data-key]')
+      if (field) {
+        e.preventDefault()
+        select(field.getAttribute('data-key')!)
+      }
+    })
+
+    const node = <K extends keyof HTMLElementTagNameMap>(tag: K, cls: string, text?: string): HTMLElementTagNameMap[K] => {
+      const n = document.createElement(tag)
+      if (cls) n.className = cls
+      if (text != null) n.textContent = text
+      return n
+    }
+
+    const clear = () => {
+      svg.querySelectorAll('.selected').forEach((el) => el.classList.remove('selected'))
+      detail.hidden = true
+      bandsPanel.hidden = false
+      history.replaceState(null, '', location.pathname + location.search)
+    }
+
+    const renderDetail = (f: Island) => {
+      const [lineFrom, lineTo, posFrom, posTo] = f.l
+      const lines = lineTo > lineFrom ? `lines ${lineFrom}–${lineTo}` : `line ${lineFrom}`
+      const positions = posTo > posFrom ? `positions ${posFrom}–${posTo}` : `position ${posFrom}`
+      detail.replaceChildren()
+      detail.append(
+        node('p', 'text-sm font-semibold text-ink', `${lines}, ${positions}`),
+        node('p', 'mt-1 text-xs text-body', f.f ? `Field format ${f.f}` : 'No format recorded in the bridge'),
+        node('p', 'mt-3 text-xs font-semibold uppercase tracking-wider text-body', `${f.e.length} ${f.e.length === 1 ? 'element' : 'elements'} at this field`),
+      )
+      const list = node('ul', 'mt-1 space-y-1')
+      for (const [tag, name, href] of f.e) {
+        const li = node('li', '', '')
+        const a = node('a', 'text-sm text-un-deep underline decoration-un/50 hover:decoration-un', `${tag} — ${name}`)
+        a.href = href
+        li.append(a)
+        list.append(li)
+      }
+      detail.append(list)
+      const back = node('button', 'mt-3 text-xs text-body underline hover:text-ink', 'Back to sections')
+      back.type = 'button'
+      back.addEventListener('click', clear)
+      detail.append(back)
+      detail.hidden = false
+      bandsPanel.hidden = true
+    }
+
+    const select = (key: string) => {
+      const f = fields.find((x) => x.k === key)
+      if (!f) return
+      svg.querySelectorAll('.selected').forEach((el) => el.classList.remove('selected'))
+      svg.querySelector(`[data-key="${key}"]`)?.classList.add('selected')
+      renderDetail(f)
+      vb = fitZone({ x: f.r[0], y: f.r[1], w: f.r[2], h: f.r[3] }, 8)
+      apply()
+      history.replaceState(null, '', `#field=${key}`)
+    }
+
+    root.querySelectorAll<HTMLButtonElement>('[data-fit]').forEach((b) => {
+      b.addEventListener('click', () => {
+        const [x, y, w, h] = (b.dataset.zone ?? '').split(',').map(Number)
+        vb = fitZone({ x, y, w, h }, 4)
+        apply()
+      })
+    })
+    root.querySelector<HTMLButtonElement>('[data-zoom="in"]')?.addEventListener('click', () => {
+      vb = zoomView(vb, 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+      apply()
+    })
+    root.querySelector<HTMLButtonElement>('[data-zoom="out"]')?.addEventListener('click', () => {
+      vb = zoomView(vb, 1 / 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+      apply()
+    })
+    root.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click', () => {
+      vb = FULL_VIEW
+      clear()
+      apply()
+    })
+
+    svg.addEventListener('pointerover', (e) => {
+      if (pointers.size > 0) return
+      const field = (e.target as Element).closest('[data-key]')
+      if (!field) return
+      const f = fields.find((x) => x.k === field.getAttribute('data-key'))
+      if (!f) return
+      tip.textContent =
+        f.e.slice(0, 3).map(([tag, name]) => `${tag} ${name}`).join('\n') + (f.e.length > 3 ? `\n+ ${f.e.length - 3} more` : '')
+      tip.hidden = false
+      placeTip(e.clientX, e.clientY)
+    })
+    svg.addEventListener('pointerout', (e) => {
+      if ((e.target as Element).closest('[data-key]')) hideTip()
+    })
+
+    window.addEventListener('resize', apply, { passive: true })
+    window.addEventListener('hashchange', () => {
+      const m = location.hash.match(/^#field=(\d+:\d+:\d+:\d+)$/)
+      if (m) select(m[1])
+    })
+
+    const hash = location.hash.match(/^#field=(\d+:\d+:\d+:\d+)$/)
+    if (hash) select(hash[1])
+    apply()
+  }
+
+  document.addEventListener('astro:after-swap', init)
+  init()
+</script>

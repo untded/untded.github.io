@@ -188,7 +188,11 @@ it("carries the full original documentation", () => {
     expect(html).toContain('The UN layout key')
     expect(html).toContain('ISO 6422')
     expect((html.match(/<title>/g) ?? []).length).toBeGreaterThanOrEqual(100)
-    expect(statSync(`${dist}/unlk/index.html`).size).toBeLessThan(80_000)
+    expect(html).toContain('id="unlk-fields"')
+    expect(html).toContain('aria-label="Zoom in"')
+    expect(html).toContain('data-zone=')
+    expect(html).toContain('Sections of the model form')
+    expect(statSync(`${dist}/unlk/index.html`).size).toBeLessThan(150_000)
     expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/unlk"')
   })
 
@@ -196,6 +200,7 @@ it("carries the full original documentation", () => {
     const html = readFileSync(`${dist}/elements/1128/index.html`, 'utf8')
     expect(html).toContain('On the UN layout key')
     expect(html).toContain('positions 63–80')
+    expect(html).toContain('unlk#field=4:4:63:80')
   })
 
   it('sitemaps the element and category routes', () => {
