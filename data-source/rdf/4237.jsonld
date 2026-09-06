@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 3,
   "oldName": "Prepaid/Collect indicator, coded",
-  "bridges": "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57- 58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect"
+  "bridges": "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57-58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect"
 }

@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 256,
   "oldName": "Warehouse",
-  "bridges": "CIMP: (321): an..7 UNLK: an..35x3; L 16- 18, P 45-80"
+  "bridges": "CIMP: (321): an..7 UNLK: an..35x3; L 16-18, P 45-80"
 }

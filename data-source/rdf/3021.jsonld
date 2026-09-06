@@ -55,7 +55,7 @@
   "status": "active",
   "sourcePage": 50,
   "name": "Importer. Party.Identifier",
-  "description": "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes -an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.",
+  "description": "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.",
   "representation": "an..17",
   "charset": "an",
   "minLength": 1,

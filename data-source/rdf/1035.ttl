@@ -6,7 +6,7 @@
   schema:description "Reference number to identify a despatch advice document";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch Advice Document. Identifier";
-  utd:bridges "UNLK: an..17 L 04, P 63- 80";
+  utd:bridges "UNLK: an..17 L 04, P 63-80";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
   utd:charset "an";

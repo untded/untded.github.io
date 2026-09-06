@@ -6,7 +6,7 @@
   schema:description "Identifies a reference.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Reference. Identifier";
-  utd:bridges "UNLK: an..35x2; L 06- 07, P 45-80";
+  utd:bridges "UNLK: an..35x2; L 06-07, P 45-80";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
   utd:charset "an";

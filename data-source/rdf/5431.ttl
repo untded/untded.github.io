@@ -6,7 +6,7 @@
   schema:description "Code specifying a tariff applied to a consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Tariff.Code";
-  utd:bridges "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21- 26 and L 56-57, P 21-26 (also on reverse)";
+  utd:bridges "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21-26 and L 56-57, P 21-26 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";

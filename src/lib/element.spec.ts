@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   categoryOf,
+  formatBridgeDetail,
   changeTagInfo,
   neighbours,
   pairedTag,
@@ -94,5 +95,38 @@ describe('pairedTag', () => {
     // 1002 absent -> 1004 has no coded counterpart in this edition
     expect(pairedTag(1004, tags)).toBeNull()
     expect(pairedTag(9999, tags)).toBeNull()
+  })
+})
+
+describe('formatBridgeDetail', () => {
+  it('parses line, positions and format', () => {
+    expect(formatBridgeDetail('an..17 L 04, P 63-80')).toEqual([
+      { kind: 'format', text: 'an..17' },
+      { kind: 'lines', from: 4, to: null },
+      { kind: 'text', text: ',' },
+      { kind: 'positions', from: 63, to: 80 },
+    ])
+  })
+
+  it('parses ranges and spaced hyphens as printed', () => {
+    expect(formatBridgeDetail('L 36-64, P 09-26')).toEqual([
+      { kind: 'lines', from: 36, to: 64 },
+      { kind: 'text', text: ',' },
+      { kind: 'positions', from: 9, to: 26 },
+    ])
+    expect(formatBridgeDetail('P 45 - 61')).toEqual([
+      { kind: 'positions', from: 45, to: 61 },
+    ])
+  })
+
+  it('keeps protocol codes as text', () => {
+    expect(formatBridgeDetail('(112): n3; (113): n8 or (119): n8')).toEqual([
+      { kind: 'text', text: '(112):' },
+      { kind: 'format', text: 'n3' },
+      { kind: 'text', text: '; (113):' },
+      { kind: 'format', text: 'n8' },
+      { kind: 'text', text: 'or (119):' },
+      { kind: 'format', text: 'n8' },
+    ])
   })
 })

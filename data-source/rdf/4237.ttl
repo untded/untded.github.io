@@ -6,7 +6,7 @@
   schema:description "Code specifying the arrangements for a payment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Arrangement.Code";
-  utd:bridges "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57- 58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect";
+  utd:bridges "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57-58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
   utd:charset "an";

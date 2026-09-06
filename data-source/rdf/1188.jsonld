@@ -62,5 +62,5 @@
   "maxLength": 35,
   "oldName": "Transport document number",
   "businessTerm": "Bill of Lading number, Master waybill number",
-  "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63- 80"
+  "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63-80"
 }

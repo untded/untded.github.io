@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 18,
   "oldName": "Rate per unit",
-  "bridges": "CIM: n..6; L 44-45, P 45- 50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)"
+  "bridges": "CIM: n..6; L 44-45, P 45-50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)"
 }

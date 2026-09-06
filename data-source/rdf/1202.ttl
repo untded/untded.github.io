@@ -6,7 +6,7 @@
   schema:description "Unique reference identifying a particular consignment of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Identifier";
-  utd:bridges "UNLK: an..17, L 06, P 63- 80 CIM: L 64, P 69-79 and n7; L 66, P 73-82";
+  utd:bridges "UNLK: an..17, L 06, P 63-80 CIM: L 64, P 69-79 and n7; L 66, P 73-82";
   utd:businessTerm "Unique Consignment reference (UCR)";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "u";

@@ -62,5 +62,5 @@
   "maxLength": 512,
   "oldName": "Consignee",
   "businessTerm": "Consigned to order of",
-  "bridges": "AWB: L 11-14, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35;(302):an..17; (303):an..9 ; (304):a2; (305):an..9 UNLK: an..35x5 L 10- 14, P 09-44 CIM: (CIM 14; CMR 2) MAR: IMO/FAL 2 SAD: (SAD 8)"
+  "bridges": "AWB: L 11-14, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35;(302):an..17; (303):an..9 ; (304):a2; (305):an..9 UNLK: an..35x5 L 10-14, P 09-44 CIM: (CIM 14; CMR 2) MAR: IMO/FAL 2 SAD: (SAD 8)"
 }

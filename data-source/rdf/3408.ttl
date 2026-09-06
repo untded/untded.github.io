@@ -6,7 +6,7 @@
   schema:description "Name of the Master of a means of transport such as a vessel";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Master Name.Text";
-  utd:bridges "MAR: (IMO FAL Forms 1- 2)";
+  utd:bridges "MAR: (IMO FAL Forms 1-2)";
   utd:businessTerm "Vessel master, Driver, Pilot";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";

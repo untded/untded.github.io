@@ -6,7 +6,7 @@
   schema:description "Name and address of a party to be notified.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Notify Party. Party Identification.Text";
-  utd:bridges "AWB: L 28-30, P 09-81 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 MAR: IMO/FAL 2 UNLK: an..35x3; L 16- 18, P 09-44 SAD: (SAD 50)";
+  utd:bridges "AWB: L 28-30, P 09-81 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 MAR: IMO/FAL 2 UNLK: an..35x3; L 16-18, P 09-44 SAD: (SAD 50)";
   utd:businessTerm "Notify address, Notify party 1";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";

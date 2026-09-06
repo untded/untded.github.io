@@ -172,6 +172,30 @@ it("carries the full original documentation", () => {
     expect(count).toBe(elements.length)
   })
 
+  it('wires clipboard copy, shows the change meaning and the 1993 name', () => {
+    const html = readFileSync(`${dist}/elements/1128/index.html`, 'utf8')
+    expect(html).toContain('__copyWired')
+    expect(html).toContain('navigator.clipboard')
+    expect(html).toContain('— Changed name + description + representation')
+    expect(html).toContain('1993 name:')
+    expect(html).toContain('Despatch Note number')
+  })
+
+  it('renders bridges with structured line/position semantics', () => {
+    const html = readFileSync(`${dist}/elements/1128/index.html`, 'utf8')
+    expect(html).toContain('positions 63–80')
+    expect(html).toContain('title="UNLK — United Nations Layout Key"')
+    const e1188 = readFileSync(`${dist}/elements/1188/index.html`, 'utf8')
+    expect(e1188).toContain('Inland Waterways B/L')
+  })
+
+  it('carries the publication’s own bridge abbreviations in the glossary', () => {
+    const html = readFileSync(`${dist}/notation/index.html`, 'utf8')
+    expect(html).toContain('ICS Standard Bill of Lading')
+    expect(html).toContain('ISO 3535')
+    expect(html).toContain('Aligned Invoices')
+  })
+
   it('retired entries carry their replacement pointer', () => {
     const html = readFileSync(`${dist}/elements/1002/index.html`, 'utf8')
     expect(html).toContain('href="/elements/1000"')

@@ -62,5 +62,5 @@
   "maxLength": 512,
   "oldName": "Freight forwarder",
   "businessTerm": "Forwarder",
-  "bridges": "CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 16- 18, P 09-44"
+  "bridges": "CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 16-18, P 09-44"
 }

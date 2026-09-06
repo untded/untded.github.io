@@ -6,7 +6,7 @@
   schema:description "Any further qualification of the amount of the Documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Additional Information.Text";
-  utd:bridges "SWIFT: an..35x4 UNLK: an..35x4; L 28- 52, P 09-44";
+  utd:bridges "SWIFT: an..35x4 UNLK: an..35x4; L 28-52, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
   utd:charset "an";

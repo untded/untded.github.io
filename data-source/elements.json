@@ -84,7 +84,7 @@
       "status": "active",
       "old_name": "Document/message number",
       "business_term": "Document/message number",
-      "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63- 80 SAD:",
+      "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:",
       "provenance": {
         "page": 28
       }
@@ -168,7 +168,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Packing List number",
-      "bridges": "UNLK: an..17, L 04 P 63- 80",
+      "bridges": "UNLK: an..17, L 04 P 63-80",
       "provenance": {
         "page": 28
       }
@@ -187,7 +187,7 @@
       "status": "active",
       "old_name": "Booking reference number",
       "business_term": "Reservation number of shipment",
-      "bridges": "CIMP: (117): an..15 MAR: IMO/FAL 7 UNLK: an..17 L 04, P 63- 80",
+      "bridges": "CIMP: (117): an..15 MAR: IMO/FAL 7 UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 28
       }
@@ -307,7 +307,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Advice of collection number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 29
       }
@@ -324,7 +324,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 29
       }
@@ -341,7 +341,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 29
       }
@@ -358,7 +358,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 29
       }
@@ -376,7 +376,7 @@
       "change_tag": "add",
       "status": "active",
       "business_term": "House bill, House bill of lading",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 29
       }
@@ -702,7 +702,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80 MAR: IMO/FAL 1-3, 5-6",
+      "bridges": "UNLK: an..17 L 04, P 63-80 MAR: IMO/FAL 1-3, 5-6",
       "provenance": {
         "page": 30
       }
@@ -719,7 +719,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80 MAR: IMO/FAL 1-3, 5-6",
+      "bridges": "UNLK: an..17 L 04, P 63-80 MAR: IMO/FAL 1-3, 5-6",
       "provenance": {
         "page": 30
       }
@@ -756,7 +756,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Proforma Invoice number",
-      "bridges": "UNLK: an..17, L 04, P 63- 80",
+      "bridges": "UNLK: an..17, L 04, P 63-80",
       "provenance": {
         "page": 30
       }
@@ -952,7 +952,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 31
       }
@@ -970,7 +970,7 @@
       "change_tag": "add",
       "status": "active",
       "business_term": "Freight forwarding instruction (FFI), Shippers letter of instruction (SLI)",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 31
       }
@@ -987,7 +987,7 @@
       },
       "change_tag": "add",
       "status": "active",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 31
       }
@@ -1037,7 +1037,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Despatch Note number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 31
       }
@@ -1072,7 +1072,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Consignor's Reference number",
-      "bridges": "UNLK: an..17 L 06, P 63- 80 SAD: (SAD 7)",
+      "bridges": "UNLK: an..17 L 06, P 63-80 SAD: (SAD 7)",
       "provenance": {
         "page": 31
       }
@@ -1208,7 +1208,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Reference number",
-      "bridges": "UNLK: an..35x2; L 06- 07, P 45-80",
+      "bridges": "UNLK: an..35x2; L 06-07, P 45-80",
       "provenance": {
         "page": 32
       }
@@ -1364,7 +1364,7 @@
       "status": "active",
       "old_name": "Documentary credit number",
       "business_term": "Letter of credit number",
-      "bridges": "SWIFT: an..16 UNLK: an..17, L 04, P 63- 80",
+      "bridges": "SWIFT: an..16 UNLK: an..17, L 04, P 63-80",
       "provenance": {
         "page": 32
       }
@@ -1382,7 +1382,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Delivery instruction number",
-      "bridges": "UNLK: an..17, L 04, P 63- 80",
+      "bridges": "UNLK: an..17, L 04, P 63-80",
       "provenance": {
         "page": 32
       }
@@ -1418,7 +1418,7 @@
       "status": "active",
       "old_name": "Transport document number",
       "business_term": "Bill of Lading number, Master waybill number",
-      "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63- 80",
+      "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63-80",
       "provenance": {
         "page": 32
       }
@@ -1492,7 +1492,7 @@
       "status": "active",
       "old_name": "Common access reference (CAR)",
       "business_term": "Unique Consignment reference (UCR)",
-      "bridges": "UNLK: an..17, L 06, P 63- 80 CIM: L 64, P 69-79 and n7; L 66, P 73-82",
+      "bridges": "UNLK: an..17, L 06, P 63-80 CIM: L 64, P 69-79 and n7; L 66, P 73-82",
       "provenance": {
         "page": 33
       }
@@ -1511,7 +1511,7 @@
       "status": "active",
       "old_name": "Export Licence number",
       "business_term": "Export licence permit number",
-      "bridges": "UNLK: an..17, L 04, P 63- 80",
+      "bridges": "UNLK: an..17, L 04, P 63-80",
       "provenance": {
         "page": 33
       }
@@ -1745,7 +1745,7 @@
       "status": "active",
       "old_name": "Conference Contract number",
       "business_term": "Contract of affreightment, Contract number for freight",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 34
       }
@@ -1764,7 +1764,7 @@
       "status": "active",
       "old_name": "Contract number",
       "business_term": "Contract number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 34
       }
@@ -1818,7 +1818,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Contract Addendum number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 35
       }
@@ -1837,7 +1837,7 @@
       "status": "active",
       "old_name": "Offer number",
       "business_term": "Quote number, Bid number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 35
       }
@@ -1856,7 +1856,7 @@
       "status": "active",
       "old_name": "Invoice number",
       "business_term": "Invoice number",
-      "bridges": "UNLK: an..17 L 04, P 63- 80",
+      "bridges": "UNLK: an..17 L 04, P 63-80",
       "provenance": {
         "page": 35
       }
@@ -1929,7 +1929,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Consignee's shipment reference number",
-      "bridges": "UNLK: an..17 L 06, P 63- 80",
+      "bridges": "UNLK: an..17 L 06, P 63-80",
       "provenance": {
         "page": 35
       }
@@ -2035,7 +2035,7 @@
       "status": "active",
       "old_name": "Goods declaration number (Customs)",
       "business_term": "Goods declaration number",
-      "bridges": "CIMP: (904): an..17 UNLK: an..17 L 04, P 63- 80 SAD: (SAD A and SAD C)",
+      "bridges": "CIMP: (904): an..17 UNLK: an..17 L 04, P 63-80 SAD: (SAD A and SAD C)",
       "provenance": {
         "page": 36
       }
@@ -2080,7 +2080,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Freight forwarder's reference number",
-      "bridges": "UNLK: an..17 L 06, P 63- 80",
+      "bridges": "UNLK: an..17 L 06, P 63-80",
       "provenance": {
         "page": 36
       }
@@ -2649,7 +2649,7 @@
       "tag": 2020,
       "change_tag": "x",
       "status": "retired",
-      "old_name": "Forwarding date (day -month)",
+      "old_name": "Forwarding date (day - month)",
       "notes": "DE to use instead - 2126",
       "provenance": {
         "page": 38
@@ -5308,7 +5308,7 @@
       "change_tag": "cnr",
       "status": "active",
       "old_name": "Warehouse depositor",
-      "bridges": "UNLK: an..35x5; L 10- 18, P 09-44",
+      "bridges": "UNLK: an..35x5; L 10-18, P 09-44",
       "provenance": {
         "page": 50
       }
@@ -5534,7 +5534,7 @@
     {
       "tag": 3021,
       "name": "Importer. Party.Identifier",
-      "description": "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes -an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.",
+      "description": "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.",
       "representation": {
         "raw": "an..17",
         "charset": "an",
@@ -5562,7 +5562,7 @@
       "change_tag": "cnr",
       "status": "active",
       "old_name": "Warehouse keeper",
-      "bridges": "UNLK: an..35x5; L 10- 14, P 45-80",
+      "bridges": "UNLK: an..35x5; L 10-14, P 45-80",
       "provenance": {
         "page": 50
       }
@@ -5665,7 +5665,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Exporter",
-      "bridges": "UNLK: an..35x5; L 04- 08, P 09-44 SAD: (SAD 14)",
+      "bridges": "UNLK: an..35x5; L 04-08, P 09-44 SAD: (SAD 14)",
       "provenance": {
         "page": 51
       }
@@ -6345,7 +6345,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Freight from, coded",
-      "bridges": "CIM: (nn-nnnnn,n); L 47, P 04-12 and L 53, P 04- 12 and L 59, P 04-12 and on reverse of CIM form (CIM 63, top part)",
+      "bridges": "CIM: (nn-nnnnn,n); L 47, P 04-12 and L 53, P 04-12 and L 59, P 04-12 and on reverse of CIM form (CIM 63, top part)",
       "provenance": {
         "page": 54
       }
@@ -6467,7 +6467,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Freight to, coded",
-      "bridges": "CIM: (nn-nnnnn,n); L 49, P 04-12 and L 55, P 04- 12 and L 61, P 04-12 and on reverse of CIM form (CIM 63, bottom part)",
+      "bridges": "CIM: (nn-nnnnn,n); L 49, P 04-12 and L 55, P 04-12 and L 61, P 04-12 and on reverse of CIM form (CIM 63, bottom part)",
       "provenance": {
         "page": 54
       }
@@ -6704,7 +6704,7 @@
       "change_tag": "cnd",
       "status": "active",
       "old_name": "Carrier identification",
-      "bridges": "AWB: L 24, P 13-29, 34- 36, 41-43 CIM: L 04-08, P 02-07 CIMP: (312):an2 CMR: L 09, P 63-80 MAR: L 13, P 63-80 UNLK: L 09, P 63-80 MAR: IMO/FAL 1,7",
+      "bridges": "AWB: L 24, P 13-29, 34-36, 41-43 CIM: L 04-08, P 02-07 CIMP: (312):an2 CMR: L 09, P 63-80 MAR: L 13, P 63-80 UNLK: L 09, P 63-80 MAR: IMO/FAL 1,7",
       "provenance": {
         "page": 56
       }
@@ -6749,7 +6749,7 @@
       "status": "active",
       "old_name": "Consignee",
       "business_term": "Consigned to order of",
-      "bridges": "AWB: L 11-14, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35;(302):an..17; (303):an..9 ; (304):a2; (305):an..9 UNLK: an..35x5 L 10- 14, P 09-44 CIM: (CIM 14; CMR 2) MAR: IMO/FAL 2 SAD: (SAD 8)",
+      "bridges": "AWB: L 11-14, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35;(302):an..17; (303):an..9 ; (304):a2; (305):an..9 UNLK: an..35x5 L 10-14, P 09-44 CIM: (CIM 14; CMR 2) MAR: IMO/FAL 2 SAD: (SAD 8)",
       "provenance": {
         "page": 56
       }
@@ -6785,7 +6785,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Insured",
-      "bridges": "UNLK: an..35x5; L 04- 08, P 09-44",
+      "bridges": "UNLK: an..35x5; L 04-08, P 09-44",
       "provenance": {
         "page": 57
       }
@@ -6820,7 +6820,7 @@
       "change_tag": "cnr",
       "status": "active",
       "old_name": "Declarant",
-      "bridges": "UNLK: an..35x5; L 04- 08, P 09-44",
+      "bridges": "UNLK: an..35x5; L 04-08, P 09-44",
       "provenance": {
         "page": 57
       }
@@ -6857,7 +6857,7 @@
       "status": "active",
       "old_name": "Delivery party",
       "business_term": "Positioning Party, Delivery address",
-      "bridges": "CMR: an..35x3; L 16-18, P 09-44 (CMR 3) UNLK: an..35x5; L 16- 20, P 09-44",
+      "bridges": "CMR: an..35x3; L 16-18, P 09-44 (CMR 3) UNLK: an..35x5; L 16-20, P 09-44",
       "provenance": {
         "page": 57
       }
@@ -6963,7 +6963,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Warehouse",
-      "bridges": "CIMP: (321): an..7 UNLK: an..35x3; L 16- 18, P 45-80",
+      "bridges": "CIMP: (321): an..7 UNLK: an..35x3; L 16-18, P 45-80",
       "provenance": {
         "page": 57
       }
@@ -7070,7 +7070,7 @@
       "status": "active",
       "old_name": "Freight forwarder",
       "business_term": "Forwarder",
-      "bridges": "CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 16- 18, P 09-44",
+      "bridges": "CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 16-18, P 09-44",
       "provenance": {
         "page": 58
       }
@@ -7159,7 +7159,7 @@
       "status": "active",
       "old_name": "Notify party",
       "business_term": "Notify address, Notify party 1",
-      "bridges": "AWB: L 28-30, P 09-81 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 MAR: IMO/FAL 2 UNLK: an..35x3; L 16- 18, P 09-44 SAD: (SAD 50)",
+      "bridges": "AWB: L 28-30, P 09-81 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 MAR: IMO/FAL 2 UNLK: an..35x3; L 16-18, P 09-44 SAD: (SAD 50)",
       "provenance": {
         "page": 58
       }
@@ -7915,7 +7915,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Seller's representative",
-      "bridges": "UNLK: an..35x5; L 16- 18, P 09-44",
+      "bridges": "UNLK: an..35x5; L 16-18, P 09-44",
       "provenance": {
         "page": 62
       }
@@ -8137,7 +8137,7 @@
       "status": "retired",
       "old_name": "Supplier, coded",
       "notes": "DE to use instead - 3347",
-      "bridges": "UNLK: an..35x5; L 04- 08, P 09-44",
+      "bridges": "UNLK: an..35x5; L 04-08, P 09-44",
       "provenance": {
         "page": 64
       }
@@ -8240,7 +8240,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Documentary credit drawee",
-      "bridges": "SWIFT: an..35x2 UNLK: an..35x2; L 25- 26, P 45-80",
+      "bridges": "SWIFT: an..35x2 UNLK: an..35x2; L 25-26, P 45-80",
       "provenance": {
         "page": 64
       }
@@ -8560,7 +8560,7 @@
       "status": "active",
       "old_name": "Consignor",
       "business_term": "Sender, Shipper",
-      "bridges": "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04- 08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)",
+      "bridges": "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04-08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)",
       "provenance": {
         "page": 65
       }
@@ -8715,7 +8715,7 @@
       "change_tag": "x",
       "status": "retired",
       "old_name": "Accepting party",
-      "notes": "DE to use instead -the appropriate such as Consignor (3336/7)",
+      "notes": "DE to use instead - the appropriate such as Consignor (3336/7)",
       "provenance": {
         "page": 66
       }
@@ -8804,7 +8804,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Insurance claims adjuster",
-      "bridges": "UNLK: an..35x5; L 56- 60, P 09-44",
+      "bridges": "UNLK: an..35x5; L 56-60, P 09-44",
       "provenance": {
         "page": 67
       }
@@ -9126,7 +9126,7 @@
       "change_tag": "cn",
       "status": "active",
       "old_name": "Name of person",
-      "bridges": "MAR: (IMO FAL Forms 4- 6)",
+      "bridges": "MAR: (IMO FAL Forms 4-6)",
       "provenance": {
         "page": 68
       }
@@ -9145,7 +9145,7 @@
       "status": "active",
       "old_name": "Master",
       "business_term": "Vessel master, Driver, Pilot",
-      "bridges": "MAR: (IMO FAL Forms 1- 2)",
+      "bridges": "MAR: (IMO FAL Forms 1-2)",
       "provenance": {
         "page": 68
       }
@@ -9377,7 +9377,7 @@
       "status": "active",
       "old_name": "Insurer's Agent at destination",
       "business_term": "Insurer's Agent at destination",
-      "bridges": "UNLK: an..35x5; L 50- 54, P 09-44",
+      "bridges": "UNLK: an..35x5; L 50-54, P 09-44",
       "provenance": {
         "page": 69
       }
@@ -11818,7 +11818,7 @@
       "change_tag": "cnd",
       "status": "active",
       "old_name": "Prepaid/Collect indicator, coded",
-      "bridges": "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57- 58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect",
+      "bridges": "AWB: L 24, P 51-52 or 52-53 and P 55-56 or 57-58 CIMP: (403):a1 CMR: a1 P = prepaid, C = collect",
       "provenance": {
         "page": 78
       }
@@ -11926,7 +11926,7 @@
       "change_tag": "cn",
       "status": "active",
       "old_name": "Documentary credit amount qualification",
-      "bridges": "SWIFT: an..35x4 UNLK: an..35x4; L 28- 52, P 09-44",
+      "bridges": "SWIFT: an..35x4 UNLK: an..35x4; L 28-52, P 09-44",
       "provenance": {
         "page": 79
       }
@@ -11944,7 +11944,7 @@
       "change_tag": "cnd",
       "status": "active",
       "old_name": "Terms of payment",
-      "bridges": "UNLK: an..35x10; L 29- 54, P 45-80",
+      "bridges": "UNLK: an..35x10; L 29-54, P 45-80",
       "provenance": {
         "page": 79
       }
@@ -12093,7 +12093,7 @@
       "status": "retired",
       "old_name": "Documentary credit draft tenor",
       "notes": "No business requirement identified",
-      "bridges": "SWIFT: an..35x2 and UNLK: an..35x2; L 23- 24, P 45-80",
+      "bridges": "SWIFT: an..35x2 and UNLK: an..35x2; L 23-24, P 45-80",
       "provenance": {
         "page": 80
       }
@@ -14942,7 +14942,7 @@
       "change_tag": "cn",
       "status": "active",
       "old_name": "Other charges amount",
-      "bridges": "AWB: Included in L 48- 52, P 37-81 CIMP: (501): n..12",
+      "bridges": "AWB: Included in L 48-52, P 37-81 CIMP: (501): n..12",
       "provenance": {
         "page": 92
       }
@@ -15247,7 +15247,7 @@
       "status": "active",
       "old_name": "Charge description, coded",
       "business_term": "Accessorial charges",
-      "bridges": "AWB: Included in L 48- 52, P 37-81 CIMP: (504):an2",
+      "bridges": "AWB: Included in L 48-52, P 37-81 CIMP: (504):an2",
       "provenance": {
         "page": 93
       }
@@ -15420,7 +15420,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Additional charges",
-      "bridges": "CIM: (n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23- 48 (also on reverse)",
+      "bridges": "CIM: (n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23-48 (also on reverse)",
       "provenance": {
         "page": 94
       }
@@ -15583,7 +15583,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Prepaidamount",
-      "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51- 58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12",
+      "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12",
       "provenance": {
         "page": 95
       }
@@ -16223,7 +16223,7 @@
       "status": "retired",
       "old_name": "Disburseme nt amount",
       "notes": "DE to use instead - 5416",
-      "bridges": "CIM: n..24; L 39-40, P 50- 73 (CIM 30)",
+      "bridges": "CIM: n..24; L 39-40, P 50-73 (CIM 30)",
       "provenance": {
         "page": 98
       }
@@ -16270,7 +16270,7 @@
       "change_tag": "cndr",
       "status": "active",
       "old_name": "Rate per unit",
-      "bridges": "CIM: n..6; L 44-45, P 45- 50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)",
+      "bridges": "CIM: n..6; L 44-45, P 45-50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)",
       "provenance": {
         "page": 98
       }
@@ -16353,7 +16353,7 @@
       "change_tag": "cnd",
       "status": "active",
       "old_name": "Tariff applied, coded",
-      "bridges": "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21- 26 and L 56-57, P 21-26 (also on reverse)",
+      "bridges": "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21-26 and L 56-57, P 21-26 (also on reverse)",
       "provenance": {
         "page": 99
       }
@@ -16407,7 +16407,7 @@
       "change_tag": "cnd",
       "status": "active",
       "old_name": "Tariff class specifier",
-      "bridges": "CIM: n4 (5); L 44-45, P 34-38 and L 50-51, P 34- 38 and L 56-57, P 34-38 (also on reverse) (CIM 57)",
+      "bridges": "CIM: n4 (5); L 44-45, P 34-38 and L 50-51, P 34-38 and L 56-57, P 34-38 (also on reverse) (CIM 57)",
       "provenance": {
         "page": 99
       }
@@ -18831,7 +18831,7 @@
       "status": "active",
       "old_name": "Description of goods",
       "business_term": "Nature of goods",
-      "bridges": "CIM: L 28-38, P 09-49 CIMP: (708):an..15 CMR: L 29-52, P 34-60 (CMR 9) MAR: IMO/FAL 7 SWIFT: an..65x4 (an..65x24) UNLK: an..26xn; L 28- 50, P 34-60 SAD: (SAD 31)",
+      "bridges": "CIM: L 28-38, P 09-49 CIMP: (708):an..15 CMR: L 29-52, P 34-60 (CMR 9) MAR: IMO/FAL 7 SWIFT: an..65x4 (an..65x24) UNLK: an..26xn; L 28-50, P 34-60 SAD: (SAD 31)",
       "provenance": {
         "page": 109
       }
@@ -20217,7 +20217,7 @@
       "status": "active",
       "old_name": "Commodity/rate identification",
       "business_term": "Carrier's commodity code",
-      "bridges": "AWB: L 33-44, P 23-29 CIM: L 44-45, P 38-32 and L 50-51, P 28-32 and L 56-57,P 28-32 (also on reverse) CIMP: (707):n4..7 and (900):n4..8 CMR: n5; L 28-32, P 75- 82 CIM: n5; L 28-32, P 75-82 MAR: IMO/FAL 2 SAD: (SAD 33) UNLK: L 28-50, P 52-62",
+      "bridges": "AWB: L 33-44, P 23-29 CIM: L 44-45, P 38-32 and L 50-51, P 28-32 and L 56-57,P 28-32 (also on reverse) CIMP: (707):n4..7 and (900):n4..8 CMR: n5; L 28-32, P 75-82 CIM: n5; L 28-32, P 75-82 MAR: IMO/FAL 2 SAD: (SAD 33) UNLK: L 28-50, P 52-62",
       "provenance": {
         "page": 115
       }
