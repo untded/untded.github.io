@@ -49,18 +49,23 @@ describe('parseBridges', () => {
 describe('replacementPointer', () => {
   const el = (notes: string | null, status = 'retired') =>
     ({ notes, status }) as never
+  const tags = new Set([1000])
 
   it('extracts the use-instead tag', () => {
-    expect(replacementPointer(el('DE to use instead - 1000'))).toBe(1000)
+    expect(replacementPointer(el('DE to use instead - 1000'), tags)).toBe(1000)
+  })
+
+  it('ignores tags absent from this edition', () => {
+    expect(replacementPointer(el('DE to use instead - 1056'), tags)).toBeNull()
   })
 
   it('ignores years and service elements', () => {
-    expect(replacementPointer(el('mfd in TDED 1993 No business requirement'))).toBeNull()
-    expect(replacementPointer(el('DE to use instead - 0004 /0010'))).toBeNull()
+    expect(replacementPointer(el('mfd in TDED 1993 No business requirement'), tags)).toBeNull()
+    expect(replacementPointer(el('DE to use instead - 0004 /0010'), tags)).toBeNull()
   })
 
   it('returns null for active elements', () => {
-    expect(replacementPointer(el('see 1000', 'active'))).toBeNull()
+    expect(replacementPointer(el('see 1000', 'active'), tags)).toBeNull()
   })
 })
 

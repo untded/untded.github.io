@@ -21,8 +21,8 @@ export function getStaticPaths() {
 const { element } = Astro.props
 const category = categoryOf(element.tag)
 const info = changeTagInfo(element.change_tag)
-const replacement = replacementPointer(element)
 const allTags = loadElements().map((e) => e.tag)
+const replacement = replacementPointer(element, new Set(allTags))
 const { prev, next } = neighbours(element.tag, allTags)
 const pair = pairedTag(element.tag, new Set(allTags))
 const dataFile = `${DATASET_FILE_BASE}/${category.range}.yaml`
