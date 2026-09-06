@@ -5,12 +5,13 @@ import { href } from '../lib/site'
 
 <BaseLayout
   title="Search — UN/TDED"
-  description="Full-text search across all 1504 UNTDED 2005 element entries."
+  description="Full-text search across the whole registry — all 1504 element entries and every page of the publication's documentation."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Search</h1>
     <p class="mt-2 text-body">
-      Full text of every element entry — names, definitions, notes, bridges. For
+      Full text of every element entry and every documentation page —
+      names, definitions, notes, bridges, guides. For
       tag/name lookup, press{' '}
       <kbd class="rounded border border-line bg-mist px-1.5 font-mono text-sm">⌘K</kbd>{' '}
       anywhere.
@@ -25,21 +26,27 @@ import { href } from '../lib/site'
 </BaseLayout>
 
 <script data-astro-rerun>
-  const mount = document.getElementById('search')
-  const fallback = document.getElementById('search-fallback')
-  try {
-    const ui = await import(/* @vite-ignore */ '/pagefind/pagefind.js')
-    await ui.search()
-    const { PagefindUI } = await import(/* @vite-ignore */ '/pagefind/pagefind-ui.js')
-    new PagefindUI({
-      element: '#search',
-      showImages: false,
-      showSubResults: true,
-    })
-  } catch {
-    if (mount && fallback) {
-      mount.remove()
-      fallback.classList.remove('hidden')
+  // Emitted inline (data-astro-rerun) — a classic script, where top-level
+  // await is a SyntaxError. Keep everything inside the async IIFE.
+  ;(async () => {
+    const mount = document.getElementById('search')
+    const fallback = document.getElementById('search-fallback')
+    try {
+      const ui = await import(/* @vite-ignore */ '/pagefind/pagefind.js')
+      await ui.search()
+      // pagefind-ui.js attaches itself to window (no ES export)
+      await import(/* @vite-ignore */ '/pagefind/pagefind-ui.js')
+      const PagefindUI = window.PagefindUI
+      new PagefindUI({
+        element: '#search',
+        showImages: false,
+        showSubResults: true,
+      })
+    } catch {
+      if (mount && fallback) {
+        mount.remove()
+        fallback.classList.remove('hidden')
+      }
     }
-  }
+  })()
 </script>
