@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+---
+
+<BaseLayout
+  title="Foreword — the original text · UN/TDED"
+  description="The Foreword of UNTDED 2005 (ISO 7372:2005, pages vi–viii): how the third edition was produced, its six design commitments, and its acknowledgment."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">The document · PDF pp. 6–8</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">Foreword</h1>
+
+    <div class="prose-def mt-6 space-y-4">
+      <p>
+        The United Nations, through its Centre for Trade Facilitation and Electronic Business
+        (UN/CEFACT), supports activities dedicated to improving the ability of business, trade and
+        administrative organizations, from developed, developing and transitional economies, to
+        exchange products and relevant services effectively. Its principal focus is on facilitating
+        national and international transactions, through the simplification and harmonisation of
+        processes, procedures and information flows, and so contribute to the growth of global
+        commerce.
+      </p>
+      <p>
+        ISO (the International Organization for Standardization) is a worldwide federation of national
+        standards bodies (ISO member bodies). The work of preparing International Standards is
+        normally carried out through ISO technical committees. Each member body interested in a
+        subject for which a technical committee has been established has the right to be represented
+        on that committee. International Organizations, governmental and non-governmental, in
+        liaison with ISO, also take part in the work.
+      </p>
+      <p>
+        Attention is drawn to the possibility that some of the elements of this International Standard
+        may be the subject of patent rights. ISO shall not be held responsible for identifying any or all
+        such patent rights.
+      </p>
+      <p>
+        International Standard ISO 7372 was prepared jointly with the United Nations Economic
+        Commission for Europe (UNECE) and adopted by Technical Committee ISO/TC 154,
+        Processes, data elements and documents in commerce, industry and administration, as the
+        Trade Data Elements Directory (TDED); and is maintained by a joint ISO-UNECE
+        Maintenance Agency (see section 2).
+      </p>
+      <p>This third edition cancels and replaces the second edition (ISO 7372:1993).</p>
+      <p>
+        This International Standard adopted by the technical committee has been circulated to the
+        member bodies for voting and formally adopted by ISO and by the UN compliant to the
+        procedures of each.
+      </p>
+      <p>
+        When producing this edition of the Trade Data Elements Directory, the Maintenance Agency
+        has delivered a directory that is:
+      </p>
+      <ul class="list-disc space-y-1.5 ps-6">
+        <li>
+          supporting the UN Layout Key for Trade Documents (ISO6422) by registering data
+          elements that can be conveyed in such documents
+        </li>
+        <li>
+          fully consistent with the set of UN/EDIFACT directories supporting electronic data
+          interchange, especially with the EDIFACT Data Element Directory (EDED) and the UN
+          Codes Library (UNCL).
+        </li>
+        <li>
+          multimodal (all means of transport); (uni)modal requirements are satisfied by using
+          business terms or synonyms, and not by specific entries; multimodal requirements are
+          satisfied by generic entries
+        </li>
+        <li>multisectoral (trade/transport/Customs/etc.)</li>
+        <li>technology and syntax independent</li>
+        <li>
+          ebXML Core Components Technical Specification compliant, providing the core
+          component dictionary entry name with 1) object class, 2) property term and 3)
+          representation term, and support the Controlled Vocabulary with list of permissible words
+        </li>
+        <li>
+          backward compatible wherever possible and allows a migration path from previous
+          editions; when an element (a duplicate) has been marked for deletion a preferred element is
+          recommended.
+        </li>
+      </ul>
+      <p>
+        Achieving the last point was crucial to ensuring consistency among the directories and also
+        with the data elements of other international organizations. Developments in international
+        trade since the publication of the previous edition of the TDED in 1993 resulted in some
+        incompatibility with other UN publications. This current revision of the TDED has
+        eliminated the inconsistencies and again secured the bi-directional references by the use of
+        round and square brackets in the UN/EDIFACT UNCL code list, and similar notations in the
+        TDED. Changes made in the TDED, for example the removal of duplicate data elements, are
+        fully reflected in the EDIFACT Directories and Code Lists.
+      </p>
+      <p>This approach should provide the framework that reduces the risk of divergence between the publications in the future.</p>
+      <p>
+        The main resources used in this revision were: UN/EDIFACT D.02A edition, UN/CEFACT
+        TBG3 (Transport), the International Maritime Organization (IMO), the World Customs
+        Organization Customs Data Model Version 1 (2002), UNCTAD ASYCUDA and the joint
+        UNeDocs SITPRO project team. In summer 2004, at the time of the finalisation of the draft
+        for this new edition of TDED, the targets as listed above have been met within the framework
+        of the resources and time available.
+      </p>
+      <p>
+        During the revision process, the Maintenance Agency has developed data element names
+        which fully comply with the naming rules defined by ISO 11179, and required by the ebXML
+        Core Components Technical Specification (also ISO/TS 15000 part 5). The Maintenance
+        Agency will submit these compliant data elements to UN/CEFACT for Core Component
+        harmonization.
+      </p>
+      <p>
+        Throughout the production process the Maintenance Agency continually updated the revision
+        drafts and performed numerous quality checks and public reviews.
+      </p>
+      <p>
+        Additionally, the Maintenance Agency reviewed and revised the procedures for submitting
+        Data Maintenance Requests (DMRs). The MA recognized that its work must be as universal
+        as possible; and consequently cooperated closely with the following bodies:
+      </p>
+      <ul class="list-disc space-y-1.5 ps-6">
+        <li>
+          UN/CEFACT Forum: TBG, ATG, ICG and their Regional Entry Points:
+          UN/EDIFACT and XML DMR procedures
+        </li>
+        <li>UN/CEFACT Forum TMG : ebXML CCTS WG DMR procedures</li>
+        <li>OASIS UBL TC DMR procedures</li>
+        <li>ISO9735 JSWG Joint Syntax WG DMR procedures</li>
+        <li>WCO Customs Data Model DMR procedures</li>
+        <li>UNCTAD ASYCUDA DMR procedures</li>
+        <li>
+          As well as other Maintenance Agency members’ DMR procedures as UIC for CIM, IATA
+          for CIMP and IMO for FAL.
+        </li>
+      </ul>
+      <p>
+        Management and registration of aggregates, composites and other combinations of single
+        TDED entries are outside the scope of the Maintenance Agency; this work is the
+        responsibility of standardization bodies such as JTC1/SC32 and UN/CEFACT TBG17
+        (Harmonization).
+      </p>
+      <p>
+        Last, but not least, all members of the Maintenance Agency kept clearly in mind that the best
+        is the enemy of the good, and that some revisions and improvement to the TDED could have a
+        significant migration cost for some users. To assist users in migration, explicit paths have
+        been provided, especially for the deleted entries. Items in the previous version which were
+        inconsistently tagged (e.g. wrong Group, or wrong even/uneven tag) have not been corrected,
+        except when an explicit business requirement had been identified. In this way, the
+        Maintenance Agency did its utmost to meet the needs of members and TDED users.
+      </p>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Acknowledgment</h2>
+      <div class="prose-def mt-3">
+        <p>
+          The UNECE Secretariat would like to thank Mr. François Vuilleumier, Chair of ISO/TC154,
+          for his support which made the revision of UNTDED possible.
+        </p>
+      </div>
+      <p class="mt-6 text-center text-2xl text-body/60" aria-hidden="true">*&#8195;*&#8195;*</p>
+    </section>
+
+    <p class="mt-8 text-sm leading-relaxed text-body">
+      Transcribed from the publication’s working copy (text layer), verified line by line
+      against 300 dpi and 600 dpi renders of the original scans. Printed pages vi–viii.
+    </p>
+  </div>
+</BaseLayout>
