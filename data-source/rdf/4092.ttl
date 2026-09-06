@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4092> a utd:TradeDataElement;
   schema:description "Identity assigned to the loading authorisation granted by the forwarding location e.g. railway or airport, when the consignment id subject to traffic limitations.";

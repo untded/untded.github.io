@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5070> a utd:TradeDataElement;
   schema:description "Total amount for customs purposes of all goods in a consignment, whether or not they are subject to the same customs procedure, and have the same tariff/statistical heading, country information and duty regime";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1426> a utd:TradeDataElement;
   schema:description "Reference number, assigned or accepted by Customs, to identify a goods declaration.";

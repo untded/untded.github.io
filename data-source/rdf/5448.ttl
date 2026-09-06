@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5448> a utd:TradeDataElement;
   schema:description "Costs incurred for all containers and coverings of whatever nature which are considered as being one for Customs purposes with the goods, and the cost of packing whether for labour or material.";

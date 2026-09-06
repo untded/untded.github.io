@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3425> a utd:TradeDataElement;
   schema:description "To identify a place where goods are to be or have been transferred from one means of transport to another during the course of one transport operation";

@@ -11,7 +11,7 @@ import { href } from '../lib/site'
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">About</p>
     <h1 class="mt-2 font-mono text-5xl font-semibold tracking-tight text-ink">
-      UN<span class="wordmark-slash">/</span>TDED
+      UN<span class="name-slash">/</span>TDED
     </h1>
 
     <div class="mt-4 flex flex-wrap items-baseline gap-x-3 font-serif text-xl text-body">
@@ -19,7 +19,6 @@ import { href } from '../lib/site'
       <span aria-hidden="true" class="font-mono text-un">/</span>
       <span><strong class="text-ink">TDED</strong> — Trade Data Elements Directory</span>
     </div>
-    <p class="mt-2 text-sm text-body">One slash, the whole standards family. Keep reading.</p>
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Mission</h2>
@@ -34,39 +33,37 @@ import { href } from '../lib/site'
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-semibold tracking-tight text-ink">The wordmark</h2>
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Name and colours</h2>
       <div class="mt-4 grid gap-4 sm:grid-cols-[auto_1fr] sm:items-center">
         <div class="flex flex-wrap items-center gap-3 rounded-md border border-line bg-mist p-5">
           <span class="inline-flex items-center border-l-4 border-un bg-paper px-4 py-2 font-mono text-3xl tabular-nums text-ink">1001</span>
-          <span class="font-mono text-3xl font-semibold tracking-tight text-ink">UN<span class="wordmark-slash">/</span>TDED</span>
+          <span class="font-mono text-3xl font-semibold tracking-tight text-ink">UN<span class="name-slash">/</span>TDED</span>
         </div>
         <ul class="space-y-2 text-sm leading-relaxed text-body">
           <li>
             <span class="inline-block h-3 w-3 rounded-[2px] bg-un align-middle" aria-hidden="true"></span>
-            <strong class="text-ink">UN blue #009EDB</strong> — the official blue of the United
-            Nations (Pantone 2925), used for the slash, the accents and the tag-plate edge.
+            <strong class="text-ink">UN blue #009EDB</strong> — the official blue of the
+            United Nations (Pantone 2925), used for the slash and the accents.
           </li>
           <li>
             <span class="inline-block h-3 w-3 rounded-[2px] bg-flag align-middle" aria-hidden="true"></span>
             <span class="inline-block h-3 w-3 rounded-[2px] bg-cat-5 align-middle" aria-hidden="true"></span>
-            <strong class="text-ink">The category ramp</strong> — an ordered blue→teal→slate
-            scale for the nine tag ranges, because tag ranges are ordered.
+            <strong class="text-ink">Category colours</strong> — one colour per tag range,
+            in tag order.
           </li>
           <li>
-            <strong class="text-ink">The slash</strong> — the UN standards-family notation:
-            UN/CEFACT, UN/EDIFACT, UN/TDED. The directory belongs to that family,
-            and the wordmark writes its name the family way.
+            <strong class="text-ink">The name</strong> — written the UN standards-family
+            way, like UN/CEFACT and UN/EDIFACT.
           </li>
           <li>
-            <strong class="text-ink">The tag plate</strong> — a bordered plate carrying a
-            four-digit tag, echoing the pre-printed field boxes of aligned trade
-            documents. The tag is the directory’s lookup key.
+            <strong class="text-ink">The tag plate</strong> — a bordered plate with the
+            four-digit tag, after the pre-printed field boxes of trade documents.
           </li>
         </ul>
       </div>
       <p class="mt-4 text-sm text-body">
-        The identity is UN-like by palette and register; it does not use the UN
-        emblem or name as a logo, which the United Nations reserves to itself.
+        The site does not use the UN emblem or name as a logo; the United
+        Nations reserves those to itself.
       </p>
     </section>
 
@@ -76,10 +73,7 @@ import { href } from '../lib/site'
         This site and its repositories are operated on behalf of the United
         Nations and the International Organization for Standardization, which
         jointly maintain ISO 7372 / the TDED through{' '}
-        <strong class="text-ink">ISO/TC 154/JWG 9</strong>. The United Nations
-        leads. Hosting and code are provided by the{' '}
-        <a class="text-un-deep underline decoration-un/50" href="https://github.com/untded">untded</a>
-        {' '}open-source organization.
+        <strong class="text-ink">ISO/TC 154/JWG 9</strong>.
       </p>
       <div class="mt-5">
         <OrgCards />

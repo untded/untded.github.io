@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7012> a utd:TradeDataElement;
   schema:description "Number of packages per goods item packaged in such away that they cannot be divided without first undoing the package.";

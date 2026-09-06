@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4122> a utd:TradeDataElement;
   schema:description "Instructions from the consignor to the carrier regarding local transport from pick-up point to carrier's organization, from carrier's organization to delivery point, or between carriers' organizations at the same place.";

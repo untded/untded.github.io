@@ -33,7 +33,7 @@ export function buildTree(rows: IndexRow[]): TreeCategory[] {
   const byCategory = new Map<number, { classes: Map<string, TreeClass>; unnamed: TreeLeaf[] }>()
 
   for (const row of rows) {
-    const bucket = byCategory.get(row.k) ?? { classes: new Map(), unnamed: [] }
+    const bucket = byCategory.get(row.k) ?? { classes: new Map<string, TreeClass>(), unnamed: [] as TreeLeaf[] }
     byCategory.set(row.k, bucket)
 
     const leaf: TreeLeaf = {

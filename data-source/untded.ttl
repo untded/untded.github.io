@@ -1,18 +1,21 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-utd:Category a <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "One of the nine ordered tag ranges into which the directory groups its data elements." .
+utd:Category a rdfs:Class;
+  rdfs:comment "One of the nine ordered tag ranges into which the directory groups its data elements." .
 
-utd:CategoryScheme a <http://www.w3.org/2000/01/rdf-schema#Class>,
+utd:CategoryScheme a rdfs:Class,
     utd:CategoryScheme;
-  <http://www.w3.org/2000/01/rdf-schema#label> "UNTDED tag-range category scheme";
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The ordered scheme of the nine tag-range categories.",
+  rdfs:label "UNTDED tag-range category scheme";
+  rdfs:comment "The ordered scheme of the nine tag-range categories.",
     "The nine ordered tag ranges of the Trade Data Elements Directory (TDED section 4.2)." .
 
-utd:TradeDataElement a <http://www.w3.org/2000/01/rdf-schema#Class>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "A data element of the Trade Data Elements Directory: a named, defined unit of trade information with a tag and a representation." .
+utd:TradeDataElement a rdfs:Class;
+  rdfs:comment "A data element of the Trade Data Elements Directory: a named, defined unit of trade information with a tag and a representation." .
 
 <https://www.untded.org/elements/1000> a utd:TradeDataElement;
   schema:description "Free text name of a document such as 'Proforma invoice', 'Commercial invoice'.";
@@ -21695,126 +21698,127 @@ utd:TradeDataElement a <http://www.w3.org/2000/01/rdf-schema#Class>;
   utd:tag 9649 .
 
 utd:bridges a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "Printed locations on aligned trade documents (UNLK, SAD, CIMP, CIM, MAR).";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "Printed locations on aligned trade documents (UNLK, SAD, CIMP, CIM, MAR).";
+  rdfs:domain utd:TradeDataElement .
 
 utd:businessTerm a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The printed business term (synonym).";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The printed business term (synonym).";
+  rdfs:domain utd:TradeDataElement .
 
 utd:category a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The tag-range category the element belongs to.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The tag-range category the element belongs to.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:changeTag a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The printed change indicator against the 1993 edition.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The printed change indicator against the 1993 edition.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:charset a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The character class of the representation: a, an or n.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The character class of the representation: a, an or n.";
+  rdfs:domain utd:TradeDataElement .
 
-utd:elementCount a <rdf:Property> .
+utd:elementCount a <rdf:Property>;
+  rdfs:comment "The number of member elements." .
 
 utd:maxLength a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum number of characters in a value.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "Maximum number of characters in a value.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:minLength a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum number of characters in a value.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "Minimum number of characters in a value.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:oldName a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The data element name in the 1993 edition.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The data element name in the 1993 edition.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:representation a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The printed character representation notation, e.g. an..35.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The printed character representation notation, e.g. an..35.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:sourcePage a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "Page of the source publication the entry appears on.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "Page of the source publication the entry appears on.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:status a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "active or retired, per the printed change indicator.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "active or retired, per the printed change indicator.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:tag a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The four-digit unique identifier of the data element.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:TradeDataElement .
+  rdfs:comment "The four-digit unique identifier of the data element.";
+  rdfs:domain utd:TradeDataElement .
 
 utd:tagRange a <rdf:Property>;
-  <http://www.w3.org/2000/01/rdf-schema#comment> "The tag interval of the category, e.g. 1000-1699.";
-  <http://www.w3.org/2000/01/rdf-schema#domain> utd:Category .
+  rdfs:comment "The tag interval of the category, e.g. 1000-1699.";
+  rdfs:domain utd:Category .
 
 <https://www.untded.org/categories/8000-8699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Transport modes, means and equipments";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Transport modes, means and equipments";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 8;
   utd:elementCount 105;
   utd:tagRange "8000-8699" .
 
 <https://www.untded.org/categories/9000-9699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Other data elements (Customs, etc.)";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Other data elements (Customs, etc.)";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 9;
   utd:elementCount 110;
   utd:tagRange "9000-9699" .
 
 <https://www.untded.org/categories/6000-6699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Measure identifiers, quantities (other than monetary)";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Measure identifiers, quantities (other than monetary)";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 6;
   utd:elementCount 120;
   utd:tagRange "6000-6699" .
 
 <https://www.untded.org/categories/7000-7699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Goods and articles: descriptions and identifiers";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Goods and articles: descriptions and identifiers";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 7;
   utd:elementCount 143;
   utd:tagRange "7000-7699" .
 
 <https://www.untded.org/categories/1000-1699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Documentation, references";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Documentation, references";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 1;
   utd:elementCount 144;
   utd:tagRange "1000-1699" .
 
 <https://www.untded.org/categories/2000-2699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Dates, times, periods of time";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Dates, times, periods of time";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 2;
   utd:elementCount 171;
   utd:tagRange "2000-2699" .
 
 <https://www.untded.org/categories/5000-5699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Amounts, charges, percentages";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Amounts, charges, percentages";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 5;
   utd:elementCount 201;
   utd:tagRange "5000-5699" .
 
 <https://www.untded.org/categories/4000-4699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Clauses, conditions, terms, instructions";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Clauses, conditions, terms, instructions";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 4;
   utd:elementCount 206;
   utd:tagRange "4000-4699" .
 
 <https://www.untded.org/categories/3000-3699> a utd:Category;
-  <http://www.w3.org/2000/01/rdf-schema#label> "Parties, addresses, places, countries";
-  <http://www.w3.org/2004/02/skos/core#inScheme> utd:CategoryScheme;
+  rdfs:label "Parties, addresses, places, countries";
+  skos:inScheme utd:CategoryScheme;
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:position 3;
   utd:elementCount 304;

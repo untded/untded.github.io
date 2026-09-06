@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8270> a utd:TradeDataElement;
   schema:description "To identify the means of transport used in crossing the border out of the country of despatch for export or into the country of final destination for import.";

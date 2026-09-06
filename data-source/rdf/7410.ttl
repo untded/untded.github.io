@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7410> a utd:TradeDataElement;
   schema:description "Description and quantities of such personal belongings in the possession of individual crew members which according to regulations in force at the place of arrival of a means of transport are dutiable or subject to prohibitions or restrictions.";

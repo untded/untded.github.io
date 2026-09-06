@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6104> a utd:TradeDataElement;
   schema:description "Total number of persons (passengers and crew, including the captain/master) on board of a means of transport.";

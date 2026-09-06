@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3207> a utd:TradeDataElement;
   schema:description "Identification of the name of the country or other geographical entity as specified in ISO 3166 and UN/ECE Rec 3";

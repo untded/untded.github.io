@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3183> a utd:TradeDataElement;
   schema:description "To identify an authorized party responsible for certifying that the goods were loaded into the transport equipment.";

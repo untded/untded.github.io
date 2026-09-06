@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4030> a utd:TradeDataElement;
   schema:description "Report for the purpose of adding clauses to the transport contract document stating the facts in cases when packages are missing or when damages or defects have been observed when loading the goods.";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3358> a utd:TradeDataElement;
   schema:description "Name of the place to which goods are to be, or have been, delivered by an on-carriage carrier following the main transport";

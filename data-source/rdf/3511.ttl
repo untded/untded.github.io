@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3511> a utd:TradeDataElement;
   schema:description "Identification of a place where goods are to be examined if different from the specified goods item location (3385)";

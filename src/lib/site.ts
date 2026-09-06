@@ -15,5 +15,10 @@ export const DATASET_REPO_URL = `${GITHUB_ORG_URL}/untded-2005`
 export const REFERENCES_REPO_URL = `${GITHUB_ORG_URL}/references`
 export const DATASET_FILE_BASE = `${DATASET_REPO_URL}/blob/main/data/elements`
 export const DATASET_RELEASES_URL = `${DATASET_REPO_URL}/releases`
+/** The source publication hosted on the site; pass a page for a deep link. */
+export function sourcePdfUrl(page?: number): string {
+  return href(`/pdf/UNTDED2005.pdf${page ? `#page=${page}` : ''}`)
+}
+
 export const UNECE_UNCEFACT_URL = 'https://unece.org/trade/uncefact'
 export const ISO_TC154_URL = 'https://www.isotc154.org'

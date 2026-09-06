@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5332> a utd:TradeDataElement;
   schema:description "Total amount for the tariff section to be paid by the consignee in currency of collection.";

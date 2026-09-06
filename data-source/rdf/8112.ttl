@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8112> a utd:TradeDataElement;
   schema:description "Indication of whether or not a consignor requires exclusive use of a piece of transport equipment for his goods.";
