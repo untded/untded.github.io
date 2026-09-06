@@ -120,8 +120,12 @@ it("ships the theme system, footer logos and sharing metadata", () => {
   expect(html).toContain("untded-theme")
   expect(html).toContain("astro:after-swap")
   expect(html).toContain("theme-toggle")
-  expect(html).toContain("logo-unece.svg")
-  expect(html).toContain("logo-iso.svg")
+  expect(html).toContain("logo-unece-light.svg")
+  expect(html).toContain("logo-unece-dark.svg")
+  expect(html).toContain("logo-iso-light.svg")
+  expect(html).toContain("logo-iso-dark.svg")
+  expect(html).toContain("https://unece.org/untded-iso7372")
+  expect(html).toContain("https://www.iso.org/standard/41237.html")
   expect(html).toContain("og:image")
   expect(html).toContain("twitter:card")
   expect(readFileSync(`${dist}/robots.txt`, "utf8")).toContain(`Sitemap: ${site}/sitemap-index.xml`)
@@ -131,6 +135,9 @@ it("carries the full original documentation", () => {
   expect(readFileSync(`${dist}/document/introduction/index.html`, "utf8")).toContain("Rec. No. 25")
   expect(readFileSync(`${dist}/document/presentation/index.html`, "utf8")).toContain("Group 9")
   expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
+  const html = readFileSync(`${dist}/document/index.html`, "utf8")
+  expect(html).toContain("https://unece.org/untded-iso7372")
+  expect(html).toContain("https://www.iso.org/standard/41237.html")
 })
 
   it('ships the favicon set (RealFaviconGenerator package)', () => {
@@ -277,10 +284,14 @@ it("carries the full original documentation", () => {
 
   it('shows both organization cards with logos on the about page', () => {
     const html = readFileSync(`${dist}/about/index.html`, 'utf8')
-    expect(html).toContain('img/logo-unece.svg')
-    expect(html).toContain('img/logo-iso.svg')
+    expect(html).toContain('img/logo-unece-light.svg')
+    expect(html).toContain('img/logo-unece-dark.svg')
+    expect(html).toContain('img/logo-iso-light.svg')
+    expect(html).toContain('img/logo-iso-dark.svg')
     expect(html).toContain('UNECE — UN/CEFACT')
     expect(html).toContain('ISO/TC 154')
+    expect(html).toContain('https://unece.org/untded-iso7372')
+    expect(html).toContain('https://www.iso.org/standard/41237.html')
   })
 
   it('links adjacent elements on element pages', () => {

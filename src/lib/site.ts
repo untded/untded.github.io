@@ -22,3 +22,5 @@ export function sourcePdfUrl(page?: number): string {
 
 export const UNECE_UNCEFACT_URL = 'https://unece.org/trade/uncefact'
 export const ISO_TC154_URL = 'https://www.isotc154.org'
+export const UNECE_UNTDED_URL = 'https://unece.org/untded-iso7372'
+export const ISO_7372_URL = 'https://www.iso.org/standard/41237.html'

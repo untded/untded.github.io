@@ -1,30 +1,48 @@
 ---
-import { href } from '../lib/site'
+import { href, ISO_7372_URL, ISO_TC154_URL, UNECE_UNCEFACT_URL, UNECE_UNTDED_URL } from '../lib/site'
+
+const link = 'underline decoration-un/60 hover:text-un-deep'
 ---
 
 <footer class="mt-16 border-t border-line bg-mist">
   <div class="mx-auto max-w-6xl px-4 py-8 text-sm leading-relaxed text-body">
     <div class="flex flex-wrap items-center gap-4">
-      <span class="inline-flex h-10 items-center rounded-md bg-white px-3">
-        <img src={href('/img/logo-unece.svg')} alt="UNECE" class="h-7 w-auto" width="auto" height="auto" />
-      </span>
-      <span class="inline-flex h-10 items-center rounded-md bg-white px-3">
-        <img src={href('/img/logo-iso.svg')} alt="ISO" class="h-6 w-auto" width="auto" height="auto" />
-      </span>
+      <a
+        href={UNECE_UNTDED_URL}
+        aria-label="UN/TDED on the UNECE site"
+        class="inline-flex h-10 items-center rounded-md border border-line bg-paper px-3 transition-colors hover:border-un/60"
+      >
+        <img src={href('/img/logo-unece-light.svg')} alt="UNECE" class="h-7 w-auto dark:hidden" width="auto" height="auto" />
+        <img src={href('/img/logo-unece-dark.svg')} alt="" aria-hidden="true" class="hidden h-7 w-auto dark:block" width="auto" height="auto" />
+      </a>
+      <a
+        href={ISO_7372_URL}
+        aria-label="ISO 7372 in the ISO catalog"
+        class="inline-flex h-10 items-center rounded-md border border-line bg-paper px-3 transition-colors hover:border-un/60"
+      >
+        <img src={href('/img/logo-iso-light.svg')} alt="ISO" class="h-6 w-auto dark:hidden" width="auto" height="auto" />
+        <img src={href('/img/logo-iso-dark.svg')} alt="" aria-hidden="true" class="hidden h-6 w-auto dark:block" width="auto" height="auto" />
+      </a>
       <span class="font-mono font-semibold text-ink">UN<span class="name-slash">/</span>TDED</span>
     </div>
     <p class="mt-3">
       The United Nations Trade Data Elements Directory, 2005 edition (ECE/TRADE/362,
       ISO 7372:2005). Operated on behalf of the{' '}
-      <a class="underline decoration-un/60 hover:text-un-deep" href="https://unece.org/trade/uncefact">United Nations Economic Commission for Europe — UN/CEFACT</a>{' '}
+      <a class={link} href={UNECE_UNCEFACT_URL}>United Nations Economic Commission for Europe — UN/CEFACT</a>{' '}
       and{' '}
-      <a class="underline decoration-un/60 hover:text-un-deep" href="https://www.isotc154.org">ISO/TC 154</a>.
+      <a class={link} href={ISO_TC154_URL}>ISO/TC 154</a>.
       Content source © United Nations / UNECE, reproduced with attribution.
     </p>
     <p class="mt-2">
-      <a class="underline decoration-un/60 hover:text-un-deep" href="https://github.com/untded">GitHub organization</a>
+      Official pages of the directory:{' '}
+      <a class={link} href={UNECE_UNTDED_URL}>UN/TDED — UNECE</a>
       {' · '}
-      <a class="underline decoration-un/60 hover:text-un-deep" href={href('/about')}>Mandate and governance</a>
+      <a class={link} href={ISO_7372_URL}>ISO 7372 — ISO</a>
+    </p>
+    <p class="mt-2">
+      <a class={link} href="https://github.com/untded">GitHub organization</a>
+      {' · '}
+      <a class={link} href={href('/about')}>Mandate and governance</a>
     </p>
   </div>
 </footer>
