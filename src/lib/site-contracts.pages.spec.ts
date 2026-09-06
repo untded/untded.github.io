@@ -133,17 +133,18 @@ it("carries the full original documentation", () => {
   expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
 })
 
-  it('ships the favicon set (UN/TDED slash mark, light + dark SVG, PNG fallbacks)', () => {
-    expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
-    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4BCCFF')
-    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#00293D')
-    expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('#009EDB')
-    for (const f of ['favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {
+  it('ships the favicon set (RealFaviconGenerator package)', () => {
+    for (const f of ['favicon.svg', 'favicon-96x96.png', 'favicon.ico', 'apple-touch-icon.png',
+                     'web-app-manifest-192x192.png', 'web-app-manifest-512x512.png', 'site.webmanifest']) {
       expect(existsSync(`${dist}/${f}`), f).toBe(true)
     }
+    const manifest = JSON.parse(readFileSync(`${dist}/site.webmanifest`, 'utf8'))
+    expect(manifest.name).toContain('UN/TDED')
     const html = readFileSync(`${dist}/index.html`, 'utf8')
+    expect(html).toContain('favicon.svg?v=20260906')
+    expect(html).toContain('favicon.ico')
+    expect(html).toContain('site.webmanifest')
     expect(html).toContain('apple-touch-icon')
-    expect(html).toContain('favicon-dark.svg')
   })
 
   it('shows the UN emblem in the header (light and dark variants)', () => {
