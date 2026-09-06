@@ -77,7 +77,7 @@ onMounted(load)
       v-else-if="searching && filtered.matches === 0"
       class="rounded-md border border-line bg-mist p-6 text-center text-body"
     >
-      No element matches “{{ query }}”. Try a tag such as <span class="font-mono">1001</span>, or a
+      No element matches “{{ query }}”. Search by tag, e.g. <span class="font-mono">1001</span>, or by
       name fragment like “document”.
     </p>
 

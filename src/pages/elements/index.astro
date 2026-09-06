@@ -22,8 +22,8 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
   <div class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Directory</h1>
     <p class="mt-2 max-w-2xl text-body">
-      All {elements.length} elements of the 2005 edition. Filters are shareable —
-      the URL always reflects what you see.
+      All {elements.length} elements of the 2005 edition. Filter state is carried
+      in the URL — any view can be shared as a link.
     </p>
 
     <div class="mt-6">
@@ -32,8 +32,8 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
 
     <noscript>
       <p class="mb-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
-        JavaScript is off, so filtering is unavailable — here are the first 40
-        elements; browse the rest by category (
+        Filtering requires JavaScript. The first 40 elements are listed below;
+        the complete directory is available by category (
         {
           CATEGORY_RANGES().map((c, i) => (
             <span>
