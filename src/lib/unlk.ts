@@ -116,3 +116,62 @@ function zoneOf(
 export function unlkRects(bridges: string | null): UnlkRect[] {
   return unlkZones(bridges).map(zoneToRect)
 }
+
+// The model form's fixed sections, per the UNLK: parties and transport
+// upper left, commercial upper right, goods and customs across the
+// middle, free disposal at the base.
+export interface UnlkBand {
+  key: string
+  label: string
+  x: number
+  y: number
+  w: number
+  h: number
+}
+
+export const UNLK_BANDS: UnlkBand[] = [
+  { key: 'parties', label: 'Parties · transport', x: UNLK.marginX, y: UNLK.marginY, w: UNLK.imageW / 2, h: 12 * UNLK.linePitch },
+  { key: 'commercial', label: 'Commercial', x: UNLK.marginX + UNLK.imageW / 2, y: UNLK.marginY, w: UNLK.imageW / 2, h: 12 * UNLK.linePitch },
+  { key: 'goods', label: 'Goods · customs', x: UNLK.marginX, y: UNLK.marginY + 12 * UNLK.linePitch, w: UNLK.imageW, h: 15 * UNLK.linePitch },
+  { key: 'free', label: 'Free disposal', x: UNLK.marginX, y: UNLK.marginY + 27 * UNLK.linePitch, w: UNLK.imageW, h: 6 * UNLK.linePitch },
+]
+
+// A view over the sheet for the interactive form: a window in millimetre
+// coordinates. The aspect is pinned to the page's, so one factor
+// (clientWidth / vb.w) describes the render at every zoom.
+export interface UnlkViewBox {
+  x: number
+  y: number
+  w: number
+  h: number
+}
+
+const VIEW_ASPECT = UNLK.pageH / UNLK.pageW
+
+export const FULL_VIEW: UnlkViewBox = { x: 0, y: 0, w: UNLK.pageW, h: UNLK.pageH }
+
+export const MAX_ZOOM = 12
+
+function normalized(vb: UnlkViewBox): UnlkViewBox {
+  const w = Math.min(Math.max(vb.w, UNLK.pageW / MAX_ZOOM), UNLK.pageW)
+  const h = w * VIEW_ASPECT
+  const clampAxis = (v: number, size: number, total: number) =>
+    Math.min(Math.max(v, Math.min(0, total - size)), Math.max(0, total - size))
+  return { x: clampAxis(vb.x, w, UNLK.pageW), y: clampAxis(vb.y, h, UNLK.pageH), w, h }
+}
+
+export function zoomView(vb: UnlkViewBox, factor: number, ax: number, ay: number): UnlkViewBox {
+  const w = Math.min(Math.max(vb.w / factor, UNLK.pageW / MAX_ZOOM), UNLK.pageW)
+  const r = w / vb.w
+  return normalized({ x: ax - (ax - vb.x) * r, y: ay - (ay - vb.y) * r, w, h: vb.h * r })
+}
+
+export function panView(vb: UnlkViewBox, dxUser: number, dyUser: number): UnlkViewBox {
+  return normalized({ x: vb.x + dxUser, y: vb.y + dyUser, w: vb.w, h: vb.h })
+}
+
+export function fitZone(z: { x: number; y: number; w: number; h: number }, pad = 6): UnlkViewBox {
+  const w = Math.max(z.w + pad * 2, (z.h + pad * 2) / VIEW_ASPECT)
+  const h = w * VIEW_ASPECT
+  return normalized({ x: z.x + z.w / 2 - w / 2, y: z.y + z.h / 2 - h / 2, w, h })
+}
