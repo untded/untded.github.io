@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { href, REFERENCES_REPO_URL, sourcePdfUrl } from '../../lib/site'
+import { href, ISO_7372_URL, REFERENCES_REPO_URL, sourcePdfUrl, UNECE_UNTDED_URL } from '../../lib/site'
 
 const sections = [
   {
@@ -67,5 +67,11 @@ const sections = [
           entry links to its page in it.
         </p>
       </a>
+      <p class="mt-3 text-sm text-body">
+        Official pages of the directory:{' '}
+        <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>UN/TDED — UNECE</a>
+        {' · '}
+        <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372 — ISO</a>
+      </p>
     </div>  </div>
 </BaseLayout>
