@@ -133,9 +133,11 @@ it("carries the full original documentation", () => {
   expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
 })
 
-  it('ships the favicon set (official UN emblem, light + dark SVG, PNG fallbacks)', () => {
+  it('ships the favicon set (UN/TDED slash mark, light + dark SVG, PNG fallbacks)', () => {
     expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
-    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4bccff')
+    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4BCCFF')
+    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#00293D')
+    expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('#009EDB')
     for (const f of ['favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {
       expect(existsSync(`${dist}/${f}`), f).toBe(true)
     }
