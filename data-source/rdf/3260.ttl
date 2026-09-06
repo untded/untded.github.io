@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3260> a utd:TradeDataElement;
+  skos:altLabel "Documentary credit beneficiary";
   schema:description "Name and address of the beneficiary of a documentary credit";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Beneficiary. Party Identification.Text";
+  utd:bridge [], [];
   utd:bridges "ICC: an..35x5 L 10-14, P 45-80 SWIFT: 35x4";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Documentary credit beneficiary";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 63;
   utd:status "active";
   utd:tag 3260 .

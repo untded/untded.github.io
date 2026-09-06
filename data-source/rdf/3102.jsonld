@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,36 @@
   "sourcePage": 54,
   "name": "Freight Charge. Payable To Location.Text",
   "description": "Name of a place to which a transport charges tariff applies or where freight and other related charges are to be or have been incurred.",
-  "representation": "an..256",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 256,
-  "oldName": "Freight to",
-  "bridges": "CIM: L 45, P 02-20 and L 51, P 02-20 and L 57, P 02-20 and on reverse of CIM form UNLK: L 62, P 36-53"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..256",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 256
+  },
+  "altLabel": [
+    "Freight to"
+  ],
+  "bridges": "CIM: L 45, P 02-20 and L 51, P 02-20 and L 57, P 02-20 and on reverse of CIM form UNLK: L 62, P 36-53",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "L 45, P 02-20 and L 51, P 02-20 and L 57, P 02-20 and on reverse of CIM form"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 62, P 36-53",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 62,
+          "lineTo": 62,
+          "posFrom": 36,
+          "posTo": 53
+        }
+      ]
+    }
+  ]
 }

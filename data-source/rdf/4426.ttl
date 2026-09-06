@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4426> a utd:TradeDataElement;
+  skos:altLabel "Authentication",
+    "Rubber stamp; Chop; Signature";
   schema:description "Proof that a document has been authenticated indicating where appropriate the authentication party";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Authentication.Text";
+  utd:bridge [], [], [], [];
   utd:bridges "CIMP: (414):an..20 SAD: SAD: (SAD 54 and SAD D and SAD F and SAD H) UNLK: L 62-64, P 09-44";
-  utd:businessTerm "Rubber stamp; Chop; Signature";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Authentication";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 84;
   utd:status "active";
   utd:tag 4426 .

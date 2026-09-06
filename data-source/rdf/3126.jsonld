@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,42 @@
   "sourcePage": 56,
   "name": "Carrier. Party Identification.Text",
   "description": "Name and address of party providing the transport of goods between named points.",
-  "representation": "an..512",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 512,
-  "oldName": "Carrier",
-  "businessTerm": "Airline, Haulier, Shipping Line, Railway network/co mpany, Intemodal transport company",
-  "bridges": "AWB: L 03-07, P 63-81, L 24, P 13-29 CMR: an..35x5 L 10-14, P 45-80 (CMR 16) UNLK: L 10-14, P 45-80"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..512",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  "altLabel": [
+    "Carrier",
+    "Airline, Haulier, Shipping Line, Railway network/co mpany, Intemodal transport company"
+  ],
+  "bridges": "AWB: L 03-07, P 63-81, L 24, P 13-29 CMR: an..35x5 L 10-14, P 45-80 (CMR 16) UNLK: L 10-14, P 45-80",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 03-07, P 63-81, L 24, P 13-29"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "an..35x5 L 10-14, P 45-80 (CMR 16)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 10-14, P 45-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 10,
+          "lineTo": 14,
+          "posFrom": 45,
+          "posTo": 80
+        }
+      ]
+    }
+  ]
 }

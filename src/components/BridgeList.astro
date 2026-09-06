@@ -5,10 +5,27 @@ interface Props {
   bridges: string | null
 }
 const { bridges } = Astro.props
+
+// Punctuation-only fragments (the "," between "L 4" and "P 63-80") fold onto
+// the previous segment: a separate flex child would get gap-x-2 space before
+// it ("line 4 , positions").
+const fold = (segments: ReturnType<typeof formatBridgeDetail>) => {
+  const out: (ReturnType<typeof formatBridgeDetail>[number] & { sep?: string })[] = []
+  for (const seg of segments) {
+    const last = out[out.length - 1]
+    if (seg.kind === 'text' && !/[A-Za-z0-9]/.test(seg.text) && last) {
+      last.sep = (last.sep ?? '') + seg.text
+    } else {
+      out.push({ ...seg })
+    }
+  }
+  return out
+}
+
 const entries = parseBridges(bridges).map((b) => ({
   ...b,
   def: BRIDGE_SCHEME_DEFS[b.scheme],
-  segments: formatBridgeDetail(b.detail),
+  segments: fold(formatBridgeDetail(b.detail)),
 }))
 ---
 
@@ -27,15 +44,15 @@ const entries = parseBridges(bridges).map((b) => ({
           </span>
           {b.segments.map((seg) => {
             if (seg.kind === 'format') {
-              return <span class="rounded-full border border-un/40 bg-un/5 px-2 py-0.5 font-mono text-xs text-un-ink">{seg.text}</span>
+              return <span class="rounded-full border border-un/40 bg-un/5 px-2 py-0.5 font-mono text-xs text-un-ink">{seg.text}{seg.sep}</span>
             }
             if (seg.kind === 'lines') {
-              return <span class="text-body">line{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}</span>
+              return <span class="text-body">line{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}{seg.sep}</span>
             }
             if (seg.kind === 'positions') {
-              return <span class="text-body">position{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}</span>
+              return <span class="text-body">position{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}{seg.sep}</span>
             }
-            return <span class="font-mono text-xs text-body">{seg.text}</span>
+            return <span class="font-mono text-xs text-body">{seg.text}{seg.sep}</span>
           })}
         </li>
       ))}

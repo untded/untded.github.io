@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1194> a utd:TradeDataElement;
+  skos:altLabel "Personal identity document";
   schema:description "Registration number of document identifying an individual.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Document.Identifier";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 5";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Personal identity document";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1194 .

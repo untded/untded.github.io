@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6242> a utd:TradeDataElement;
+  skos:altLabel "Transport temperature",
+    "Reefer/cool cargo temperature setting";
   schema:description "Instructions regarding the temperature under which the cargo has to be transported.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Temperature. Measure";
-  utd:businessTerm "Reefer/cool cargo temperature setting";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:oldName "Transport temperature";
-  utd:representation "an..8";
+  utd:representation [];
   utd:sourcePage 106;
   utd:status "active";
   utd:tag 6242 .

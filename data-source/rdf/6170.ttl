@@ -1,12 +1,13 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6170> a utd:TradeDataElement;
+  skos:altLabel "Number of pricing units";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "x";
-  utd:oldName "Number of pricing units";
   utd:sourcePage 105;
   utd:status "retired";
   utd:tag 6170 .

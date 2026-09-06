@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3258> a utd:TradeDataElement;
+  skos:altLabel "Place of destination",
+    "Airport of destination, Arrival location";
   schema:description "Name of the port, airport or other type of location at which a means of transport is scheduled to arrive or has arrived";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Destination Location.Text";
+  utd:bridge [], [];
   utd:bridges "AWB: L 24, P 09-12 and P 30-33 and P 37-40 MAR: IMO/FAL 1, 3";
-  utd:businessTerm "Airport of destination, Arrival location";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Place of destination";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 62;
   utd:status "active";
   utd:tag 3258 .

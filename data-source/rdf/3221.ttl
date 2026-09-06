@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3221> a utd:TradeDataElement;
+  skos:altLabel "Country whence consigned, coded";
   schema:description "To identify the country from which a consignment of goods was initially exported to the importing country without any commercial transaction taking place in intermediate countries. Syn.: country whence consigned. Country of despatch: country from which goods are despatched between countries of a Customs union";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Exportation Country.Identifier";
+  utd:bridge [], [];
   utd:bridges "UNLK: L 15, P 56 - 61 SAD: (SAD 15a)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Country whence consigned, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 60;
   utd:status "active";
   utd:tag 3221 .

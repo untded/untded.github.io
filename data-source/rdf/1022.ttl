@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1022> a utd:TradeDataElement;
+  skos:altLabel "Order number",
+    "Purchase Order Number";
   schema:description "Identifier assigned by the buyer to an order.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Order Document. Buyer Assigned.Identifier";
+  utd:bridge [], [];
   utd:bridges "UNLK: L 04, P 63-80 CIM: n..7; L 62, P 13-19";
-  utd:businessTerm "Purchase Order Number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Order number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1022 .

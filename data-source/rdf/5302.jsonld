@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,32 @@
   "sourcePage": 95,
   "name": "Consignment. Total Prepaid Freight Charge.Amount",
   "description": "Monetary amount of all of the consignment charges which have been paid in advance.",
-  "representation": "n..18",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 18,
-  "oldName": "Prepaidamount",
-  "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..18",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 18
+  },
+  "altLabel": [
+    "Prepaidamount"
+  ],
+  "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 60, P 09-22"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(501): n..12"
+    }
+  ]
 }

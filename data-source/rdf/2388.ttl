@@ -1,12 +1,13 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2388> a utd:TradeDataElement;
+  skos:altLabel "Transit time/limits";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "x";
-  utd:oldName "Transit time/limits";
   utd:sourcePage 48;
   utd:status "retired";
   utd:tag 2388 .

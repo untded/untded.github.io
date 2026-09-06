@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7228> a utd:TradeDataElement;
+  skos:altLabel "Number of packages stuffed";
   schema:description "Number of packages loaded into or onto one piece of transport equipment as part of, or total of one consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Package.Quantity";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 6;
-  utd:minLength 1;
-  utd:oldName "Number of packages stuffed";
-  utd:representation "n..6";
+  utd:representation [];
   utd:sourcePage 113;
   utd:status "active";
   utd:tag 7228 .

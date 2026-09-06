@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5486> a utd:TradeDataElement;
+  skos:altLabel "Insurance cost";
   schema:description "Amount of premium payable to the insurance company for insuring the goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Insurance.Amount";
+  utd:bridge [];
   utd:bridges "UNLK:L 52, P 62-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cn";
-  utd:charset "n";
-  utd:maxLength 10;
-  utd:minLength 1;
-  utd:oldName "Insurance cost";
-  utd:representation "n..10";
+  utd:representation [];
   utd:sourcePage 100;
   utd:status "active";
   utd:tag 5486 .

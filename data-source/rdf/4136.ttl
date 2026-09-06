@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4136> a utd:TradeDataElement;
+  skos:altLabel "Authentication by sender",
+    "Haulage party signature";
   schema:description "Proof that the document has been signed or otherwise authenticated by the sender or his agent which, in combination with the carrier's authentication, validates the contract of carriage.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Haulage. Sending Party Authentication.Text";
+  utd:bridge [], [], [];
   utd:bridges "AWB: an..43x5; L 56-60, P 37-80 (or 83) CIMP: (414): an..20 CMR: an..23x7; L 62-68, P 09-32 (CMR 22)";
-  utd:businessTerm "Haulage party signature";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 45;
-  utd:minLength 1;
-  utd:oldName "Authentication by sender";
-  utd:representation "an..45";
+  utd:representation [];
   utd:sourcePage 77;
   utd:status "active";
   utd:tag 4136 .

@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,23 @@
   "sourcePage": 88,
   "name": "Monetary Amount Adjustment. Percentage.Numeric",
   "description": "Specification of any additional charges, dues or deductions, expressed as a percentage.",
-  "representation": "n..4",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 4,
-  "oldName": "Additional charges/deductions",
-  "businessTerm": "Additional charges/deductions",
-  "bridges": "CIM: L 44-45, P 40-43 and L 50-51, P 40-43 and L 56-57,P 40-43 (also on reverse)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..4",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 4
+  },
+  "altLabel": [
+    "Additional charges/deductions",
+    "Additional charges/deductions"
+  ],
+  "bridges": "CIM: L 44-45, P 40-43 and L 50-51, P 40-43 and L 56-57,P 40-43 (also on reverse)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "L 44-45, P 40-43 and L 50-51, P 40-43 and L 56-57,P 40-43 (also on reverse)"
+    }
+  ]
 }

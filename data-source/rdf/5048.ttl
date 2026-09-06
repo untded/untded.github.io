@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5048> a utd:TradeDataElement;
+  skos:altLabel "Contribution type";
   schema:description "Free form description of a type of contribution scheme.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Contribution. Type.Text";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Contribution type";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 88;
   utd:status "active";
   utd:tag 5048 .

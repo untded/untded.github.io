@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5180> a utd:TradeDataElement;
+  skos:altLabel "Invoice deductionamount";
   schema:description "Amount to be deducted from the total in a commercial invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice. Deduction.Amount";
+  utd:bridge [];
   utd:bridges "UNLK: L 56, P 62-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cdr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Invoice deductionamount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 91;
   utd:status "active";
   utd:tag 5180 .

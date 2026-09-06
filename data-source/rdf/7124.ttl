@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7124> a utd:TradeDataElement;
+  skos:altLabel "UNDG number";
   schema:description "United Nations Dangerous Goods Identifier (UNDG) is the unique serial number assigned within the United Nations to substances and articles contained in a list of the dangerous goods most commonly carried.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "United Nations Dangerous Goods. Identifier";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 4;
-  utd:minLength 4;
-  utd:oldName "UNDG number";
-  utd:representation "n4";
+  utd:representation [];
   utd:sourcePage 111;
   utd:status "active";
   utd:tag 7124 .

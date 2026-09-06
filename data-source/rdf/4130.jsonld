@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,33 @@
   "sourcePage": 77,
   "name": "Document. Carrier Party Authentication.Text",
   "description": "Proof that the document has been signed or otherwise authenticated by the carrier or his agent which, in combination with the sender's authentication, validates the contract of carriage.",
-  "representation": "an..45",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 45,
-  "oldName": "Authentication by carrier",
-  "businessTerm": "Carrier signature",
-  "bridges": "AWB: L 56, P 37-81 CIMP: (414):an..20 CMR: an..23x7; L 62-68, P 09-32 (CMR 23)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..45",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 45
+  },
+  "altLabel": [
+    "Authentication by carrier",
+    "Carrier signature"
+  ],
+  "bridges": "AWB: L 56, P 37-81 CIMP: (414):an..20 CMR: an..23x7; L 62-68, P 09-32 (CMR 23)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 56, P 37-81"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(414):an..20"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "an..23x7; L 62-68, P 09-32 (CMR 23)"
+    }
+  ]
 }

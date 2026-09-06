@@ -1,13 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7230> a utd:TradeDataElement;
+  skos:altLabel "Nature and quantity of goods";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridge [], [];
   utd:bridges "AWB: L 33-44, P 61-81 and CIMP: (708):an..15; (709):an..20";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
-  utd:oldName "Nature and quantity of goods";
+  utd:replacedBy <https://www.untded.org/elements/7002>;
   utd:sourcePage 113;
   utd:status "retired";
   utd:tag 7230 .

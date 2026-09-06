@@ -1,0 +1,55 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Provenance — UN/TDED
+description: How the UN Trade Data Elements Directory 2005 was digitized, verified, and is maintained — extraction, character conservation, OCR cross-checks, and the review queue.
+---
+
+## Source
+
+One source: the published directory, *United Nations Trade Data Elements
+Directory (UNTDED) 2005* — ECE/TRADE/362, published in parallel as
+ISO 7372:2005. The working copy's pages 20–132 carry a text layer; the
+front matter (pp. 9–19) exists only as page images in the original
+publication and was transcribed from renders of it.
+
+## Extraction
+
+- The element table (pp. 28–132) is extracted from the text layer with
+  layout preserved (`pdftotext -layout`), routed by column bounding
+  boxes into the nine printed columns.
+- Wrapped cells are joined by explicit rules (the printed hyphenation of
+  narrow columns, e.g. "Document/m essage", is reassembled; prose
+  spacing is never glued).
+- The result is a YAML single source of truth: 1504 elements, one file
+  per tag-range category, every entry carrying its PDF page.
+
+## Verification
+
+Every claim on this site is backed by a check that runs in the dataset's
+test suite:
+
+- **Regeneration** — the YAML must be byte-identical to a fresh
+  extraction from the source PDF; any hand-drift fails the build.
+- **Character conservation** — the exact multiset of non-space
+  characters is conserved from the text layer through routing, joining
+  and normalization, in two independently checked stages.
+- **UID reconciliation** — every printed four-digit tag became exactly
+  one element.
+- **Independent re-reads** — sampled rows are re-read from page images
+  via OCR (tesseract) and compared against the extracted cells.
+- **Bridge zones** — parsed UNLK zones stay within printable ranges with
+  ordered spans.
+
+## The review queue
+
+Where the source itself is ambiguous (a wrapped digit, a change tag
+printed outside the legend), the entry is recorded with its provenance
+and flagged in a review queue — never silently guessed. Two change tags
+(`cd`, `cr`-class) are printed outside the section 4.1 legend and are
+marked as such wherever they appear.
+
+## Corrections
+
+Suspect a cell? The [contributing page](/docs/contributing) describes
+how to raise a correction request; every correction is re-verified
+against the source before it lands.

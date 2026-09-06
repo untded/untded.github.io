@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3451> a utd:TradeDataElement;
+  skos:altLabel "Party responsible for financial settlement, coded";
   schema:description "To identify the party responsible for either the transfer or repatriation of the funds relating to a transaction";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Financial Settlement. Party.Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 9)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Party responsible for financial settlement, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 70;
   utd:status "active";
   utd:tag 3451 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1490> a utd:TradeDataElement;
+  skos:altLabel "Consolidation item number";
   schema:description "Sequence number differentiating a specific consignment amongst others";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Sequence.Identifier";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 5;
-  utd:minLength 1;
-  utd:oldName "Consolidation item number";
-  utd:representation "n..5";
+  utd:representation [];
   utd:sourcePage 36;
   utd:status "active";
   utd:tag 1490 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/9213> a utd:TradeDataElement;
+  skos:altLabel "Type of duty regime, coded";
   schema:description "Code specifying a regime according to which tax is assessed such as preferential duty rate.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax. Regime Type.Code";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 36)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Type of duty regime, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 130;
   utd:status "active";
   utd:tag 9213 .

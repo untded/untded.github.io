@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6345> a utd:TradeDataElement;
+  skos:altLabel "Currency, coded";
   schema:description "Code specifying a monetary unit or currency.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Currency. Identifier";
+  utd:bridge [], [], [], [];
   utd:bridges "AWB: L 24, P 45-48 CIM: n2; L 45, P 18-19 and L 55, P 18-19 and L 61, P 18-19 (also on reverse)(CIM 70) CIMP: (606):a3 SAD: (SAD 22)";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Currency, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 108;
   utd:status "active";
   utd:tag 6345 .

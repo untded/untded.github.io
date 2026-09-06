@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,32 @@
   "sourcePage": 34,
   "name": "Freight Charge. Sequence.Identifier",
   "description": "Serial number differentiating each separate freight charge.",
-  "representation": "n..5",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 5,
-  "oldName": "Freight item number",
-  "businessTerm": "Freight charge number",
-  "bridges": "UNLK: L 54-60, P 00-08"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..5",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 5
+  },
+  "altLabel": [
+    "Freight item number",
+    "Freight charge number"
+  ],
+  "bridges": "UNLK: L 54-60, P 00-08",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 54-60, P 00-08",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 54,
+          "lineTo": 60,
+          "posFrom": 1,
+          "posTo": 8
+        }
+      ]
+    }
+  ]
 }

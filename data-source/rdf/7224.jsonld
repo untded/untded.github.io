@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,57 @@
   "sourcePage": 113,
   "name": "Package. Quantity",
   "description": "Number of individual items packaged in such a way that they cannot be divided without first undoing the packing.",
-  "representation": "n..8",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 8,
-  "oldName": "Number of packages",
-  "businessTerm": "Number of packages",
-  "bridges": "AWB: L 33-44, P 09-12 CIMP: (701):n..4 CMR: L 28-42, P 27-33 (CMR 7) UNLK: L 28-51, P 27-33 Add MAR: IMO/FAL 2,7 SAD: (SAD 31)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..8",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 8
+  },
+  "altLabel": [
+    "Number of packages",
+    "Number of packages"
+  ],
+  "bridges": "AWB: L 33-44, P 09-12 CIMP: (701):n..4 CMR: L 28-42, P 27-33 (CMR 7) UNLK: L 28-51, P 27-33 Add MAR: IMO/FAL 2,7 SAD: (SAD 31)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 33-44, P 09-12"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(701):n..4"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 28-42, P 27-33 (CMR 7)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 28-51, P 27-33 Add",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 28,
+          "lineTo": 51,
+          "posFrom": 27,
+          "posTo": 33
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 2,7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 31)"
+    }
+  ]
 }

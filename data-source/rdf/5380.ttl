@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5380> a utd:TradeDataElement;
+  skos:altLabel "Remaining ordered quantity",
+    "Non-delivered ordered quantity";
   schema:description "Quantity noted by the seller for subsequent delivery.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Order. Undelivered Quantity.Quantity";
-  utd:businessTerm "Non-delivered ordered quantity";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Remaining ordered quantity";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 97;
   utd:status "active";
   utd:tag 5380 .

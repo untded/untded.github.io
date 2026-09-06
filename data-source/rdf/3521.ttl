@@ -8,10 +8,7 @@
   schema:name "Document. Receiving Party.Identifier";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 72;
   utd:status "active";
   utd:tag 3521 .

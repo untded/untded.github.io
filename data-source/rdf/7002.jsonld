@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,62 @@
   "sourcePage": 109,
   "name": "Goods Item. Description.Text",
   "description": "Plain language description of the nature of a goods item sufficient to identify it for customs, statistical or transport purposes.",
-  "representation": "an..512",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 512,
-  "oldName": "Description of goods",
-  "businessTerm": "Nature of goods",
-  "bridges": "CIM: L 28-38, P 09-49 CIMP: (708):an..15 CMR: L 29-52, P 34-60 (CMR 9) MAR: IMO/FAL 7 SWIFT: an..65x4 (an..65x24) UNLK: an..26xn; L 28-50, P 34-60 SAD: (SAD 31)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..512",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  "altLabel": [
+    "Description of goods",
+    "Nature of goods"
+  ],
+  "bridges": "CIM: L 28-38, P 09-49 CIMP: (708):an..15 CMR: L 29-52, P 34-60 (CMR 9) MAR: IMO/FAL 7 SWIFT: an..65x4 (an..65x24) UNLK: an..26xn; L 28-50, P 34-60 SAD: (SAD 31)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "L 28-38, P 09-49"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(708):an..15"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 29-52, P 34-60 (CMR 9)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SWIFT",
+      "detail": "an..65x4 (an..65x24)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..26xn; L 28-50, P 34-60",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 28,
+          "lineTo": 50,
+          "posFrom": 34,
+          "posTo": 60
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 31)"
+    }
+  ]
 }

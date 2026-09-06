@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5444> a utd:TradeDataElement;
+  skos:altLabel "Total Invoiceamount";
   schema:description "Total monetary amount charged in respect of one or more invoices.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consolidated Invoice. Amount";
+  utd:bridge [], [];
   utd:bridges "SAD: n..13 (SAD 22) UNLK: L 68, P 58-72";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Total Invoiceamount";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 99;
   utd:status "active";
   utd:tag 5444 .

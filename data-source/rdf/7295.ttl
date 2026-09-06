@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7295> a utd:TradeDataElement;
+  skos:altLabel "Requirement /condition identification";
   schema:description "To identify a requirement or a condition of a domain.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Domain. Requirement Or Condition.Identifier";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Requirement /condition identification";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 114;
   utd:status "active";
   utd:tag 7295 .

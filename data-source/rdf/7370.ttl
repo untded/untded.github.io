@@ -1,20 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7370> a utd:TradeDataElement;
+  skos:altLabel "Total number of packages";
   schema:description "Count of total number of packages referred to as one consignment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Package.Quantity";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 6)";
-  utd:businessTerm "Total number of packages";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:oldName "Total number of packages";
-  utd:representation "n..8";
+  utd:representation [];
   utd:sourcePage 115;
   utd:status "active";
   utd:tag 7370 .

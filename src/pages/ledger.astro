@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { loadElements } from '../lib/data'
+import { loadCategories, changeTagInfo, replacementPointer } from '../lib/element'
+import { href } from '../lib/site'
+
+const elements = loadElements()
+const categories = loadCategories()
+const tags = new Set(elements.map((e) => e.tag))
+
+const tagOrder = ['add', 'u', 'cn', 'cnd', 'cnr', 'cndr', 'cd', 'cr', 'cdr', 'x']
+const counts = new Map<string, number>()
+const byTag = new Map<string, number[]>()
+for (const e of elements) {
+  counts.set(e.change_tag, (counts.get(e.change_tag) ?? 0) + 1)
+  const list = byTag.get(e.change_tag) ?? []
+  list.push(e.tag)
+  byTag.set(e.change_tag, list)
+}
+
+const replacements = elements.flatMap((e) => {
+  const to = replacementPointer(e, tags)
+  return to === null ? [] : [{ from: e, to }]
+})
+
+const matrix = categories.map((c) => {
+  const inCat = elements.filter((e) => Math.floor(e.tag / 1000) === c.k)
+  const row = new Map<string, number>()
+  for (const e of inCat) row.set(e.change_tag, (row.get(e.change_tag) ?? 0) + 1)
+  return { c, total: inCat.length, row }
+})
+
+const name = (t: number) => elements.find((e) => e.tag === t)?.name
+---
+
+<BaseLayout
+  title="Edition ledger 1993–2005 — UN/TDED"
+  description="What changed between the 1993 and 2005 editions of the Trade Data Elements Directory: added, changed and retired elements, and the replacement graph."
+>
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Edition history</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The 1993–2005 ledger</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      Every entry of the 2005 edition carries a printed change indicator against the 1993
+      edition (ISO 7372:1993). Collected here, they are the edition’s migration ledger:
+      what was added, what changed, what was retired — and, for the retired entries, the
+      element to use instead, as printed.
+    </p>
+
+    <section class="mt-8" aria-label="Legend">
+      <div class="grid gap-2 sm:grid-cols-2">
+        {tagOrder.filter((t) => counts.has(t)).map((t) => {
+          const info = changeTagInfo(t)
+          return (
+            <a
+              id={`tag-${t}`}
+              href={`#tag-${t}`}
+              class:list={[
+                'flex items-baseline justify-between gap-3 rounded-md border px-4 py-3 text-sm',
+                info.outsideLegend ? 'border-stamp/50 bg-stamp/5' : 'border-line bg-mist',
+              ]}
+            >
+              <span class="text-body">
+                <span class="font-mono font-semibold">{t}</span>
+                {' — '}{info.label}
+                {' '}{info.outsideLegend && <span class="ms-1 text-xs text-stamp">(printed outside the section 4.1 legend)</span>}
+              </span>
+              <span class="shrink-0 font-mono tabular-nums text-ink">{counts.get(t)}</span>
+            </a>
+          )
+        })}
+      </div>
+      <p class="mt-3 text-sm text-body">
+        Counts sum to {elements.length} entries. The legend wording is the publication’s
+        own (section 4.1).
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">By category</h2>
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Category</th>
+              <th class="px-4 py-2 text-right">Entries</th>
+              {tagOrder.filter((t) => counts.has(t)).map((t) => <th class="px-3 py-2 text-right font-mono">{t}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {matrix.map(({ c, total, row }) => (
+              <tr class="border-b border-line/60 last:border-0">
+                <td class="px-4 py-2 text-body">
+                  <a class="text-un-deep underline decoration-un/50" href={href(`/categories/${c.range}`)}>{c.range}</a>
+                  {' '}{c.label}
+                </td>
+                <td class="px-4 py-2 text-right font-mono tabular-nums text-ink">{total}</td>
+                {tagOrder.filter((t) => counts.has(t)).map((t) => (
+                  <td class="px-3 py-2 text-right font-mono tabular-nums text-body">{row.get(t) ?? ''}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Replacements</h2>
+      <p class="mt-2 max-w-2xl text-sm text-body">
+        {replacements.length} of the {counts.get('x') ?? 0} entries marked for deletion print
+        an element to use instead. The rest are plain deletions, or the pointer could not be
+        resolved — see the review policy on the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/docs/provenance')}>provenance note</a>.
+      </p>
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Retired</th>
+              <th class="px-4 py-2">Name (1993)</th>
+              <th class="px-4 py-2">Use instead</th>
+              <th class="px-4 py-2">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {replacements.map(({ from, to }) => (
+              <tr class="border-b border-line/60 last:border-0">
+                <td class="px-4 py-2 font-mono text-body">
+                  <a class="text-un-deep underline decoration-un/50" href={href(`/elements/${from.tag}`)}>{from.tag}</a>
+                </td>
+                <td class="px-4 py-2 text-body">{from.old_name ?? from.name ?? '—'}</td>
+                <td class="px-4 py-2 font-mono text-body">
+                  <a class="text-un-deep underline decoration-un/50" href={href(`/elements/${to}`)}>{to}</a>
+                </td>
+                <td class="px-4 py-2 text-body">{name(to) ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

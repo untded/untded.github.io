@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6246> a utd:TradeDataElement;
+  skos:altLabel "Temperature setting";
   schema:description "To specify the value of a temperature.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Temperature. Measure";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 15;
-  utd:minLength 1;
-  utd:oldName "Temperature setting";
-  utd:representation "n..15";
+  utd:representation [];
   utd:sourcePage 106;
   utd:status "active";
   utd:tag 6246 .

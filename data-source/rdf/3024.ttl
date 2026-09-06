@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3024> a utd:TradeDataElement;
+  skos:altLabel "Goods custodian";
   schema:description "Name and address of party responsible for the keeping of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Custodian. Party Identification.Text";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Goods custodian";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 50;
   utd:status "active";
   utd:tag 3024 .

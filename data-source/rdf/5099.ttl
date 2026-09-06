@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5099> a utd:TradeDataElement;
+  skos:altLabel "Rate classcode",
+    "Charge basis";
   schema:description "Code to indicate applicable rate class for air freight.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Service. Freight Rate Class.Code";
+  utd:bridge [], [];
   utd:bridges "AWB: L 33-44, P 22 CIMP: (507)";
-  utd:businessTerm "Charge basis";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Rate classcode";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5099 .

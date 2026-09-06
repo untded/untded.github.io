@@ -6,13 +6,11 @@
   schema:description "Date on which a Document Despatch Notice is issued.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document Despatch Notice Document. Issue.Date Time";
+  utd:bridge [];
   utd:bridges "UNLK: L 03, P 56-62";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 44;
   utd:status "active";
   utd:tag 2175 .

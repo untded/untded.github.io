@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4428> a utd:TradeDataElement;
+  skos:altLabel "Endorsement",
+    "Signature";
   schema:description "Proof that a document has been signed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Endorsement.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 64, P55-80";
-  utd:businessTerm "Signature";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Endorsement";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 84;
   utd:status "active";
   utd:tag 4428 .

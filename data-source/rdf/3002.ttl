@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3002> a utd:TradeDataElement;
+  skos:altLabel "Buyer",
+    "Purchaser";
   schema:description "Name and address of a party to which merchandise or services are sold.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Buyer. Party Identification.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 10-14, P 45-80";
-  utd:businessTerm "Purchaser";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Buyer";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 49;
   utd:status "active";
   utd:tag 3002 .

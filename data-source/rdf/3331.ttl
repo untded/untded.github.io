@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3331> a utd:TradeDataElement;
+  skos:altLabel "Country of last consignment, coded";
   schema:description "To identify the country from which goods have been or will be consigned prior to final importation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Final Exportation Country.Identifier";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 10)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "a";
-  utd:maxLength 2;
-  utd:minLength 2;
-  utd:oldName "Country of last consignment, coded";
-  utd:representation "a2";
+  utd:representation [];
   utd:sourcePage 65;
   utd:status "active";
   utd:tag 3331 .

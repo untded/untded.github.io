@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1166> a utd:TradeDataElement;
+  skos:altLabel "Number of loading lists";
   schema:description "The number of loading lists, manifests or similar documents";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Loading List Document. Quantity";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 4)";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 5;
-  utd:minLength 1;
-  utd:oldName "Number of loading lists";
-  utd:representation "n..5";
+  utd:representation [];
   utd:sourcePage 32;
   utd:status "active";
   utd:tag 1166 .

@@ -130,3 +130,9 @@ describe('formatBridgeDetail', () => {
     ])
   })
 })
+
+describe('parseBridges (colon-less print)', () => {
+  it('recognizes the scheme printed without a colon at the start of the cell (element 5010)', () => {
+    expect(parseBridges('UNLK L 24, P45-80')).toEqual([{ scheme: 'UNLK', detail: 'L 24, P45-80' }])
+  })
+})

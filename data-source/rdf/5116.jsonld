@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,37 @@
   "sourcePage": 90,
   "name": "Line Item. Charge.Amount",
   "description": "Amount due for each chargeable item of goods or services.",
-  "representation": "n..18",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 18,
-  "oldName": "Item amount",
-  "businessTerm": "Item price",
-  "bridges": "UNLK: L36-46, P 72-80 SAD: (SAD 42)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..18",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 18
+  },
+  "altLabel": [
+    "Item amount",
+    "Item price"
+  ],
+  "bridges": "UNLK: L36-46, P 72-80 SAD: (SAD 42)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L36-46, P 72-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 36,
+          "lineTo": 46,
+          "posFrom": 72,
+          "posTo": 80
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 42)"
+    }
+  ]
 }

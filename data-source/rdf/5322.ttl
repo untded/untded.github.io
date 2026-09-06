@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5322> a utd:TradeDataElement;
+  skos:altLabel "Other charges, sender";
   schema:description "Amount of ancillary charges payable to the carrier by the sender.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Sender Other Charge.Amount";
+  utd:bridge [];
   utd:bridges "CMR: L 56, P 54-63";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Other charges, sender";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 95;
   utd:status "active";
   utd:tag 5322 .

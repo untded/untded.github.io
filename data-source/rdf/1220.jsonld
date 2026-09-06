@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,41 @@
   "sourcePage": 33,
   "name": "Document. Copies Required.Quantity",
   "description": "Quantity of document copies required.",
-  "representation": "n..2",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 2,
-  "oldName": "Number of copies of document required",
-  "bridges": "SWIFT: an..65x12 UNLK: L 63, P 45-49 MAR: IMO/FAL 1"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..2",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 2
+  },
+  "altLabel": [
+    "Number of copies of document required"
+  ],
+  "bridges": "SWIFT: an..65x12 UNLK: L 63, P 45-49 MAR: IMO/FAL 1",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "SWIFT",
+      "detail": "an..65x12"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 63, P 45-49",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 63,
+          "lineTo": 63,
+          "posFrom": 45,
+          "posTo": 49
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 1"
+    }
+  ]
 }

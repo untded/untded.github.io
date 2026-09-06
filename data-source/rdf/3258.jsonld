@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,28 @@
   "sourcePage": 62,
   "name": "Transport Means. Destination Location.Text",
   "description": "Name of the port, airport or other type of location at which a means of transport is scheduled to arrive or has arrived",
-  "representation": "an..256",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 256,
-  "oldName": "Place of destination",
-  "businessTerm": "Airport of destination, Arrival location",
-  "bridges": "AWB: L 24, P 09-12 and P 30-33 and P 37-40 MAR: IMO/FAL 1, 3"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..256",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 256
+  },
+  "altLabel": [
+    "Place of destination",
+    "Airport of destination, Arrival location"
+  ],
+  "bridges": "AWB: L 24, P 09-12 and P 30-33 and P 37-40 MAR: IMO/FAL 1, 3",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 24, P 09-12 and P 30-33 and P 37-40"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 1, 3"
+    }
+  ]
 }

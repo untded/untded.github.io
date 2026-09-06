@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/9004> a utd:TradeDataElement;
+  skos:altLabel "Employment category";
   schema:description "Free form description of an employment category.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Employment. Category.Text";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Employment category";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 128;
   utd:status "active";
   utd:tag 9004 .

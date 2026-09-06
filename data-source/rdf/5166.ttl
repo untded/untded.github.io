@@ -8,10 +8,7 @@
   schema:name "Consignment. Nil Insurance Value.Indicator";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 1;
-  utd:minLength 1;
-  utd:representation "an1";
+  utd:representation [];
   utd:sourcePage 91;
   utd:status "active";
   utd:tag 5166 .

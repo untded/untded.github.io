@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5242> a utd:TradeDataElement;
+  skos:altLabel "Rate/tariff class",
+    "Rate";
   schema:description "Free form description of an applicable rate or tariff class.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tariff. Class.Text";
-  utd:businessTerm "Rate";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Rate/tariff class";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5242 .

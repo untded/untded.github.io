@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,58 @@
   "sourcePage": 32,
   "name": "Transport Contract Document. Identifier",
   "description": "Reference number to identify a document evidencing a transport contract.",
-  "representation": "an..35",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 35,
-  "oldName": "Transport document number",
-  "businessTerm": "Bill of Lading number, Master waybill number",
-  "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63-80"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..35",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 35
+  },
+  "altLabel": [
+    "Transport document number",
+    "Bill of Lading number, Master waybill number"
+  ],
+  "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63-80",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(112): n3; (113): n8 or (119): n8"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 59, P 20-26"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "INV",
+      "detail": "L 36-64, P 09-26"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "Inland Waterways B/L",
+      "detail": "L 02, P 45-62"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..17, L 04, P 63-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 4,
+          "lineTo": 4,
+          "posFrom": 63,
+          "posTo": 80,
+          "fieldFormat": "an..17"
+        }
+      ]
+    }
+  ]
 }

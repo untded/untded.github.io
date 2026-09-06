@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5298> a utd:TradeDataElement;
+  skos:altLabel "Weight/Valuation charge, prepaid";
   schema:description "Indication that weight and valuation charges are wholly prepaid.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Prepaid Weight And Valuation Charge.Indicator";
+  utd:bridge [];
   utd:bridges "AWB: Checkmark L 24, P 51-52";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 1;
-  utd:minLength 1;
-  utd:oldName "Weight/Valuation charge, prepaid";
-  utd:representation "an1";
+  utd:representation [];
   utd:sourcePage 94;
   utd:status "active";
   utd:tag 5298 .

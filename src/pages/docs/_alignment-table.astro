@@ -1,0 +1,31 @@
+---
+// Rendered into docs/alignment-edifact.mdx: the D05B representation
+// disagreements, straight from the generated join (data-source/
+// edifact-links.json — dataset bin/join-edifact is the only writer).
+import { loadEdifactLinks } from '../../lib/edifact'
+import { href } from '../../lib/site'
+
+const diffs = [...loadEdifactLinks().values()].filter((l) => !l.aligned).sort((a, b) => a.tag - b.tag)
+---
+
+{diffs.length === 0 ? (
+  <p>No representation disagreements.</p>
+) : (
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr><th>Tag</th><th>UNTDED 2005</th><th>UN/EDIFACT D05B</th><th>EDED name</th></tr>
+      </thead>
+      <tbody>
+        {diffs.map((l) => (
+          <tr id={`diff-${l.tag}`}>
+            <td><a href={href(`/elements/${l.tag}`)}>{l.tag}</a></td>
+            <td><code>{l.reprRaw ?? '—'}</code></td>
+            <td><code>{l.edifact.type}..{l.edifact.maxLength}</code></td>
+            <td>{l.edifact.name}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}

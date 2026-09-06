@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,41 @@
   "sourcePage": 62,
   "name": "Consignment. Origin Country.Identifier",
   "description": "To identify the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade..",
-  "representation": "an..3",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 3,
-  "oldName": "Country of origin, coded",
-  "bridges": "CIMP: (304): a2 UNLK: L 17, P 60-62 SAD: (SAD 34a)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..3",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 3
+  },
+  "altLabel": [
+    "Country of origin, coded"
+  ],
+  "bridges": "CIMP: (304): a2 UNLK: L 17, P 60-62 SAD: (SAD 34a)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(304): a2"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 17, P 60-62",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 17,
+          "lineTo": 17,
+          "posFrom": 60,
+          "posTo": 62
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 34a)"
+    }
+  ]
 }

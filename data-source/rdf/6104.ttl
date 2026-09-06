@@ -6,13 +6,11 @@
   schema:description "Total number of persons (passengers and crew, including the captain/master) on board of a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Onboard Person.Quantity";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 3";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 4;
-  utd:minLength 1;
-  utd:representation "n..4";
+  utd:representation [];
   utd:sourcePage 103;
   utd:status "active";
   utd:tag 6104 .

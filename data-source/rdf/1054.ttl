@@ -1,19 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1054> a utd:TradeDataElement;
+  skos:altLabel "Message sub-item number";
   schema:description "To identify a sub-item within a document.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Sub-Item.Identifier";
-  utd:businessTerm "Message sub-item number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 6;
-  utd:minLength 1;
-  utd:oldName "Message sub-item number";
-  utd:representation "n..6";
+  utd:representation [];
   utd:sourcePage 29;
   utd:status "active";
   utd:tag 1054 .

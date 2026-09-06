@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3224> a utd:TradeDataElement;
+  skos:altLabel "Place/location";
   schema:description "Name of a location.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Location. Name.Text";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 1, 3, 5-6";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Place/location";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 61;
   utd:status "active";
   utd:tag 3224 .

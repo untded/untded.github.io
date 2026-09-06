@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6424> a utd:TradeDataElement;
+  skos:altLabel "Sample frequency value";
   schema:description "The quantity of samples that have been or should be collected per measure or count..";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Sample. Frequency.Quantity";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 9;
-  utd:minLength 1;
-  utd:oldName "Sample frequency value";
-  utd:representation "n..9";
+  utd:representation [];
   utd:sourcePage 108;
   utd:status "active";
   utd:tag 6424 .

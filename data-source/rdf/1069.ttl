@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1069> a utd:TradeDataElement;
+  skos:altLabel "Number of original Bills of Lading";
   schema:description "Total number, in figures, of the copies of a document issued";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Copies Issued.Quantity";
+  utd:bridge [];
   utd:bridges "UNLK: L 64, P 45-49";
-  utd:businessTerm "Number of original Bills of Lading";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 2;
-  utd:minLength 1;
-  utd:representation "n..2";
+  utd:representation [];
   utd:sourcePage 30;
   utd:status "active";
   utd:tag 1069 .

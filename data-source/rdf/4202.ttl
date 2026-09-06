@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4202> a utd:TradeDataElement;
+  skos:altLabel "ADR/IMDG Certification";
   schema:description "Consignor's statement certifying that dangerous goods to be shipped are authorised for transport according to relevant modal international regulations.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Certifying Text.Text";
+  utd:bridge [];
   utd:bridges "AWB: L 53-54, P 37-81 (Preprinted)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "ADR/IMDG Certification";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 78;
   utd:status "active";
   utd:tag 4202 .

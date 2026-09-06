@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6012> a utd:TradeDataElement;
+  skos:altLabel "Consignment gross weight",
+    "Consignment gross weight; Total gross weight";
   schema:description "Total gross weight (mass) of all goods items referred to as one consignment including packaging but excluding any transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Gross Weight.Measure";
+  utd:bridge [], [], [], [];
   utd:bridges "AWB: n..7; L 46, P 13-19 CIMP: (600):n..7 MAR: IMO/FAL 2, 7 UNLK: L 34 P 64-71";
-  utd:businessTerm "Consignment gross weight; Total gross weight";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 16;
-  utd:minLength 1;
-  utd:oldName "Consignment gross weight";
-  utd:representation "n..16";
+  utd:representation [];
   utd:sourcePage 101;
   utd:status "active";
   utd:tag 6012 .

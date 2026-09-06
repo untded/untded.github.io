@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6146> a utd:TradeDataElement;
+  skos:altLabel "Legal weight";
   schema:description "Weight (mass) of goods which may include such packing as prescribed by law in some countries (may be equal to the net weight (mass)).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Legal Weight. Measure";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cn";
-  utd:charset "n";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:oldName "Legal weight";
-  utd:representation "n..8";
+  utd:representation [];
   utd:sourcePage 104;
   utd:status "active";
   utd:tag 6146 .

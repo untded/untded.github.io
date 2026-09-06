@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,32 @@
   "sourcePage": 37,
   "name": "Order Document. Issue.Date Time",
   "description": "Date of order",
-  "representation": "an..19",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 19,
-  "oldName": "Order date, coded",
-  "businessTerm": "Purchase order date",
-  "bridges": "UNLK: L 03, P 56-62"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..19",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 19
+  },
+  "altLabel": [
+    "Order date, coded",
+    "Purchase order date"
+  ],
+  "bridges": "UNLK: L 03, P 56-62",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 03, P 56-62",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 3,
+          "lineTo": 3,
+          "posFrom": 56,
+          "posTo": 62
+        }
+      ]
+    }
+  ]
 }

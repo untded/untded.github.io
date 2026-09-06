@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4140> a utd:TradeDataElement;
+  skos:altLabel "Container transport indicator";
   schema:description "An indication whether or not goods are transported in a container.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Containerized.Indicator";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 19)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 1;
-  utd:minLength 1;
-  utd:oldName "Container transport indicator";
-  utd:representation "an1";
+  utd:representation [];
   utd:sourcePage 77;
   utd:status "active";
   utd:tag 4140 .

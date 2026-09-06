@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,22 @@
   "sourcePage": 93,
   "name": "Consignment. Consignor Tariff Charge.Amount",
   "description": "Transport charges to be paid by the consignor for each tariff class.",
-  "representation": "n..18",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 18,
-  "oldName": "Charges 'paid' - tariff currency",
-  "bridges": "CIM: L 44-45, P 59-66 and L 50-51, P 59-66 and L 56-57, P59-66 (also on reverse)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..18",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 18
+  },
+  "altLabel": [
+    "Charges 'paid' - tariff currency"
+  ],
+  "bridges": "CIM: L 44-45, P 59-66 and L 50-51, P 59-66 and L 56-57, P59-66 (also on reverse)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "L 44-45, P 59-66 and L 50-51, P 59-66 and L 56-57, P59-66 (also on reverse)"
+    }
+  ]
 }

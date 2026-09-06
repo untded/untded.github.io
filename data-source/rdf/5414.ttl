@@ -1,13 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5414> a utd:TradeDataElement;
+  skos:altLabel "Disburseme nt amount";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridge [];
   utd:bridges "CIM: n..24; L 39-40, P 50-73 (CIM 30)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
-  utd:oldName "Disburseme nt amount";
+  utd:replacedBy <https://www.untded.org/elements/5416>;
   utd:sourcePage 98;
   utd:status "retired";
   utd:tag 5414 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5016> a utd:TradeDataElement;
+  skos:altLabel "Cash-on-delivery amount, in words";
   schema:description "Monetary amount to be paid at time of delivery in words and figures.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Cash On Delivery.Text";
+  utd:bridge [];
   utd:bridges "CMR: L 60, P 45-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Cash-on-delivery amount, in words";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 87;
   utd:status "active";
   utd:tag 5016 .

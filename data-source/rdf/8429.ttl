@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8429> a utd:TradeDataElement;
+  skos:altLabel "Pre-carriage transport means, coded";
   schema:description "Code specifying the means of transport by which goods are moved prior to their main transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Pre-carriage Means Type.Code";
+  utd:bridge [];
   utd:bridges "UNLK: L 21, P 18-26";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:oldName "Pre-carriage transport means, coded";
-  utd:representation "an..8";
+  utd:representation [];
   utd:sourcePage 127;
   utd:status "active";
   utd:tag 8429 .

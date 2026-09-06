@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5320> a utd:TradeDataElement;
+  skos:altLabel "Total other charges due carrier, to collect";
   schema:description "Total amount due carrier of individual charges and fees, other than weight and valuation charge to be collected.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Total Collect Carrier Other Charge.Amount";
+  utd:bridge [], [];
   utd:bridges "AWB: L 56, P 23-36 CIMP: (501): n..12";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Total other charges due carrier, to collect";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 95;
   utd:status "active";
   utd:tag 5320 .

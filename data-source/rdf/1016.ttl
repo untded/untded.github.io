@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1016> a utd:TradeDataElement;
+  skos:altLabel "Booking reference number",
+    "Reservation number of shipment";
   schema:description "Reference number assigned by a carrier or its agent to identify a specific consignment such as a booking reference number when cargo space is reserved prior to loading.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Carrier Assigned.Identifier";
+  utd:bridge [], [], [];
   utd:bridges "CIMP: (117): an..15 MAR: IMO/FAL 7 UNLK: an..17 L 04, P 63-80";
-  utd:businessTerm "Reservation number of shipment";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Booking reference number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1016 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4431> a utd:TradeDataElement;
+  skos:altLabel "Payment guarantee, coded";
   schema:description "Code specifying the means of payment guarantee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Guarantee Means.Code";
+  utd:bridge [];
   utd:bridges "UNLK: L 66, P55-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Payment guarantee, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 84;
   utd:status "active";
   utd:tag 4431 .

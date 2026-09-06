@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,47 @@
   "sourcePage": 65,
   "name": "Consignor. Party Identification.Text",
   "description": "Name of the party consigning goods as stipulated in the transport contract by the party ordering transport",
-  "representation": "an..512",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 512,
-  "oldName": "Consignor",
-  "businessTerm": "Sender, Shipper",
-  "bridges": "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04-08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..512",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  "altLabel": [
+    "Consignor",
+    "Sender, Shipper"
+  ],
+  "bridges": "AWB: L 05-08, P 09-44 CIMP: (109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9 UNLK: an..35x5; L 04-08, P 09-44 (CIM 10; CMR 1) SAD: (SAD 2)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 05-08, P 09-44"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(109):an..14; (300):an..35; (301):an..35; (302):an..17; (303):an..9; (304):a2; (305):an..9"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..35x5; L 04-08, P 09-44 (CIM 10; CMR 1)",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 4,
+          "lineTo": 8,
+          "posFrom": 9,
+          "posTo": 44
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 2)"
+    }
+  ]
 }

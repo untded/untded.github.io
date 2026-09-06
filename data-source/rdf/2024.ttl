@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2024> a utd:TradeDataElement;
+  skos:altLabel "Delivery lastdate (and time)";
   schema:description "Last date, and optionally time of a delivery, in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Delivery. Last Date Time.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 22, P 63-80";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Delivery lastdate (and time)";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 38;
   utd:status "active";
   utd:tag 2024 .

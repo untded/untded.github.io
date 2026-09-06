@@ -6,13 +6,11 @@
   schema:description "Total of all invoice amounts declared in a single declaration.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Declaration. Invoice.Amount";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 22)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5072 .

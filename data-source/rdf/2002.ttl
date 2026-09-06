@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2002> a utd:TradeDataElement;
+  skos:altLabel "Time";
   schema:description "To specify a point of time of a day in hours, minutes, seconds and milliseconds, expressed in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Time. Time.Text";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "u";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Time";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 37;
   utd:status "active";
   utd:tag 2002 .

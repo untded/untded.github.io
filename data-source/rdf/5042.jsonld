@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,27 @@
   "sourcePage": 88,
   "name": "Consignment. Consignee Charge.Amount",
   "description": "Total amount of charges payable by the consignee.",
-  "representation": "n..18",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 18,
-  "oldName": "Total charges, consignee",
-  "bridges": "CIM: n..8 (CIM 92; reverse of CIM form) CMR: L 57, P 71-80"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..18",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 18
+  },
+  "altLabel": [
+    "Total charges, consignee"
+  ],
+  "bridges": "CIM: n..8 (CIM 92; reverse of CIM form) CMR: L 57, P 71-80",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "CIM",
+      "detail": "n..8 (CIM 92; reverse of CIM form)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 57, P 71-80"
+    }
+  ]
 }

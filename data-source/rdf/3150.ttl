@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3150> a utd:TradeDataElement;
+  skos:altLabel "Despatch place",
+    "Shipment place";
   schema:description "Name of place, from or at which despatch is to take place.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch. Location.Text";
+  utd:bridge [], [];
   utd:bridges "SWIFT: an..65 UNLK: L 24, P 27-44";
-  utd:businessTerm "Shipment place";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Despatch place";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3150 .
