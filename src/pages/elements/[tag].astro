@@ -64,7 +64,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
       <aside class="space-y-4 lg:sticky lg:top-6 lg:self-start">
         <TagPlate tag={element.tag} size="lg" />
         <div class="flex flex-wrap items-center gap-2">
-          <ChangeTagBadge changeTag={element.change_tag} />
+          <ChangeTagBadge changeTag={element.change_tag} expand />
           <span
             class:list={[
               'rounded-sm border px-1.5 py-0.5 font-mono text-xs',
@@ -110,9 +110,14 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
       <article>
         {
           element.name ? (
-            <h1 class="text-3xl font-semibold leading-tight tracking-tight text-ink">
-              {element.name}
-            </h1>
+            <>
+              <h1 class="text-3xl font-semibold leading-tight tracking-tight text-ink">
+                {element.name}
+              </h1>
+              {element.old_name && element.old_name !== element.name && (
+                <p class="mt-1 text-sm text-body">1993 name: {element.old_name}</p>
+              )}
+            </>
           ) : (
             <h1 class="text-3xl font-semibold tracking-tight text-stamp">
               Retired element — no 2005 name
@@ -220,18 +225,3 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
   />
 </BaseLayout>
 
-<script data-astro-rerun>
-  for (const btn of document.querySelectorAll<HTMLButtonElement>('.copy-btn')) {
-    btn.addEventListener('click', async () => {
-      const value = btn.dataset.copy ?? ''
-      try {
-        await navigator.clipboard.writeText(value)
-        const original = btn.textContent
-        btn.textContent = `Copied ${value}`
-        setTimeout(() => (btn.textContent = original), 1200)
-      } catch {
-        window.prompt('Copy:', value)
-      }
-    })
-  }
-</script>

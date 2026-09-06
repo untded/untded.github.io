@@ -6,7 +6,7 @@
   schema:description "Location of warehouse where a particular consignment has been stored.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Warehouse. Identification.Text";
-  utd:bridges "CIMP: (321): an..7 UNLK: an..35x3; L 16- 18, P 45-80";
+  utd:bridges "CIMP: (321): an..7 UNLK: an..35x3; L 16-18, P 45-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";

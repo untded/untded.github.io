@@ -1,11 +1,15 @@
 ---
-import { parseBridges } from '../lib/element'
+import { BRIDGE_SCHEME_DEFS, formatBridgeDetail, parseBridges } from '../lib/element'
 
 interface Props {
   bridges: string | null
 }
 const { bridges } = Astro.props
-const entries = parseBridges(bridges)
+const entries = parseBridges(bridges).map((b) => ({
+  ...b,
+  def: BRIDGE_SCHEME_DEFS[b.scheme],
+  segments: formatBridgeDetail(b.detail),
+}))
 ---
 
 {
@@ -14,9 +18,25 @@ const entries = parseBridges(bridges)
   ) : (
     <ul class="space-y-1.5">
       {entries.map((b) => (
-        <li class="flex flex-wrap items-baseline gap-x-2 text-sm">
-          <span class="rounded-sm bg-panel px-1.5 py-0.5 font-mono text-xs text-white">{b.scheme}</span>
-          <span class="font-mono text-xs text-body">{b.detail}</span>
+        <li class="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm">
+          <span
+            class="rounded-sm bg-panel px-1.5 py-0.5 font-mono text-xs text-white"
+            title={b.def ? `${b.scheme} — ${b.def.text}` : b.scheme}
+          >
+            {b.scheme}
+          </span>
+          {b.segments.map((seg) => {
+            if (seg.kind === 'format') {
+              return <span class="rounded-full border border-un/40 bg-un/5 px-2 py-0.5 font-mono text-xs text-un-ink">{seg.text}</span>
+            }
+            if (seg.kind === 'lines') {
+              return <span class="text-body">line{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}</span>
+            }
+            if (seg.kind === 'positions') {
+              return <span class="text-body">position{seg.to ? 's' : ''} {seg.from}{seg.to ? `–${seg.to}` : ''}</span>
+            }
+            return <span class="font-mono text-xs text-body">{seg.text}</span>
+          })}
         </li>
       ))}
     </ul>

@@ -6,7 +6,7 @@
   schema:description "Name and address of the insurance claims adjuster.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Insurance Claims Adjuster. Party Identification.Text";
-  utd:bridges "UNLK: an..35x5; L 56- 60, P 09-44";
+  utd:bridges "UNLK: an..35x5; L 56-60, P 09-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
   utd:charset "an";

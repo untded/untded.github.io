@@ -6,7 +6,7 @@
   schema:description "Monetary amount of all of the consignment charges which have been paid in advance.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Total Prepaid Freight Charge.Amount";
-  utd:bridges "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51- 58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12";
+  utd:bridges "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
   utd:charset "n";

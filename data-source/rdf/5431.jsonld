@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 4,
   "oldName": "Tariff applied, coded",
-  "bridges": "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21- 26 and L 56-57, P 21-26 (also on reverse)"
+  "bridges": "CIM: n4 (6); L 44-45, P 21-26 and L 50-51, P 21-26 and L 56-57, P 21-26 (also on reverse)"
 }

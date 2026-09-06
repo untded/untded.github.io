@@ -6,7 +6,7 @@
   schema:description "Reference number, assigned or accepted by Customs, to identify a goods declaration.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Declaration Document. Customs.Identifier";
-  utd:bridges "CIMP: (904): an..17 UNLK: an..17 L 04, P 63- 80 SAD: (SAD A and SAD C)";
+  utd:bridges "CIMP: (904): an..17 UNLK: an..17 L 04, P 63-80 SAD: (SAD A and SAD C)";
   utd:businessTerm "Goods declaration number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";

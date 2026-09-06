@@ -3,7 +3,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3021> a utd:TradeDataElement;
-  schema:description "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes -an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.";
+  schema:description "Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Importer. Party.Identifier";
   utd:bridges "UNLK: L 09, P 63-80 SAD: (SAD 14(Nr))";

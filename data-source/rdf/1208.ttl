@@ -6,7 +6,7 @@
   schema:description "Reference number to identify an export licence or permit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Export Permit. Identifier";
-  utd:bridges "UNLK: an..17, L 04, P 63- 80";
+  utd:bridges "UNLK: an..17, L 04, P 63-80";
   utd:businessTerm "Export licence permit number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";

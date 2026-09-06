@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { loadCategories as CATEGORY_RANGES } from '../lib/element'
+import { BRIDGE_SCHEME_DEFS, loadCategories as CATEGORY_RANGES } from '../lib/element'
 import { loadElements } from '../lib/data'
 
 const tally = loadElements().reduce((acc, e) => ((acc[e.change_tag] = (acc[e.change_tag] ?? 0) + 1), acc), {} as Record<string, number>)
@@ -107,33 +107,35 @@ import { href } from '../lib/site'
     <section class="mt-10" id="bridges">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Bridges</h2>
       <p class="mt-3 leading-relaxed text-body">
-        The rightmost column of the print maps each element onto the aligned
-        trade documents where it physically lives — line and character
-        positions on standard forms:
+        The rightmost column of the printed directory locates each element on
+        the aligned trade documents and interchange protocols where it is
+        used: line and character positions on standard forms, or a fixed
+        field format in a protocol.
       </p>
       <dl class="mt-4 space-y-3 text-sm">
         <div>
-          <dt class="font-mono font-medium text-ink">UNLK — United Nations Layout Key</dt>
-          <dd class="text-body">Positions on the UN Layout Key for trade documents (ISO 6422).</dd>
+          <dt class="font-mono font-medium text-ink">L / P</dt>
+          <dd class="text-body">Line and character position of the data entry according to ISO 3535
+            and the UNLK, as printed in the publication (section 4.1.2).</dd>
         </div>
-        <div>
-          <dt class="font-mono font-medium text-ink">SAD — Single Administrative Document</dt>
-          <dd class="text-body">The EU customs declaration form; box and sub-division references.</dd>
-        </div>
-        <div>
-          <dt class="font-mono font-medium text-ink">CIM — Consignment Note (rail)</dt>
-          <dd class="text-body">The CIM rail consignment note (OTIF/COTIF Appendix B).</dd>
-        </div>
-        <div>
-          <dt class="font-mono font-medium text-ink">CIMP — IATA cargo procedures</dt>
-          <dd class="text-body">Field references in IATA Cargo Interchange Message Procedures.</dd>
-        </div>
-        <div>
-          <dt class="font-mono font-medium text-ink">MAR — IMO FAL documents</dt>
-          <dd class="text-body">Maritime declarations under the IMO Convention on Facilitation
-            of International Maritime Traffic.</dd>
-        </div>
+        {
+          Object.entries(BRIDGE_SCHEME_DEFS).map(([scheme, def]) => (
+            <div>
+              <dt class="font-mono font-medium text-ink">{scheme}</dt>
+              <dd class="text-body">
+                {def.text}
+                {' '}{def.source === 'editorial' && (
+                  <span class="text-body/60"> (not in the publication’s list of abbreviations)</span>
+                )}
+              </dd>
+            </div>
+          ))
+        }
       </dl>
+      <p class="mt-4 text-sm text-body/70">
+        Scheme expansions are the publication’s own, from its list of
+        abbreviations (introduction, section 1.4).
+      </p>
     </section>
   </div>
 </BaseLayout>

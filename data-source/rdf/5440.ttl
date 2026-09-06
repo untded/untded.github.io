@@ -6,7 +6,7 @@
   schema:description "Specification of a tariff class applicable to a transport service.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Service. Tariff Class.Code";
-  utd:bridges "CIM: n4 (5); L 44-45, P 34-38 and L 50-51, P 34- 38 and L 56-57, P 34-38 (also on reverse) (CIM 57)";
+  utd:bridges "CIM: n4 (5); L 44-45, P 34-38 and L 50-51, P 34-38 and L 56-57, P 34-38 (also on reverse) (CIM 57)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
   utd:charset "an";

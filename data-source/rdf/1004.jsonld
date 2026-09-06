@@ -62,5 +62,5 @@
   "maxLength": 35,
   "oldName": "Document/message number",
   "businessTerm": "Document/message number",
-  "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63- 80 SAD:"
+  "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:"
 }

@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 35,
   "oldName": "Freight to, coded",
-  "bridges": "CIM: (nn-nnnnn,n); L 49, P 04-12 and L 55, P 04- 12 and L 61, P 04-12 and on reverse of CIM form (CIM 63, bottom part)"
+  "bridges": "CIM: (nn-nnnnn,n); L 49, P 04-12 and L 55, P 04-12 and L 61, P 04-12 and on reverse of CIM form (CIM 63, bottom part)"
 }

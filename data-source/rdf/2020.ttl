@@ -6,7 +6,7 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "x";
-  utd:oldName "Forwarding date (day -month)";
+  utd:oldName "Forwarding date (day - month)";
   utd:sourcePage 38;
   utd:status "retired";
   utd:tag 2020 .

@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 18,
   "oldName": "Prepaidamount",
-  "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51- 58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12"
+  "bridges": "AWB: L 60, P 09-22 CIM: n..12; L 49, P 51-58 and L 55, P 51-58 and L 61, P 51-58 (also on reverse) (CIM 71) CIMP: (501): n..12"
 }
