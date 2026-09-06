@@ -40,3 +40,19 @@ website `npm run sync-data` re-exports and copies artifacts into committed
 `scripts/build-data.mjs` (gitignored). Execution order: 01 → 02 → 03 are
 the spine; 04–08 are independent and interleave. Each file carries its own
 task checklist; check off as work lands.
+
+## Outcome
+
+Shipped 2026-09-06, all eight tracks complete. Dataset: untded/untded-2005
+PRs #7 (typed graph semantics) and #8 (context export) — `bin/verify` OK,
+53 specs, export byte-idempotent, sync drift zero. Website: untded/
+untded.github.io PRs #26 (ontology, ledger, bridges, docs corpus, context
+URL, EDED chips) and #27 (complete publication transcription: Foreword,
+cover matter, coverage table) — 93 tests, 0 type errors, 0 link errors,
+live at www.untded.org and per-track contracts verified against the
+deployed pages. Deviations recorded in the track files: no ledger.json/
+bridges.json (the site derives them from elements.json), no graph-level
+seeAlso for EDIFACT (the join ships as edifact-links.json; the graph stays
+mirror-independent). Track 06 also corrected a workspace premise: the
+working copy's pp. 5–8 carry the original Volumes II/III note and Foreword
+with a text layer, not an inserted placeholder.
