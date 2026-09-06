@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 35,
   "oldName": "Documentary credit amount qualification",
-  "bridges": "SWIFT: an..35x4 UNLK: an..35x4; L 28- 52, P 09-44"
+  "bridges": "SWIFT: an..35x4 UNLK: an..35x4; L 28-52, P 09-44"
 }

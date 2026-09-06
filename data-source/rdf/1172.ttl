@@ -6,7 +6,7 @@
   schema:description "Reference number to identify a documentary credit";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit. Identifier";
-  utd:bridges "SWIFT: an..16 UNLK: an..17, L 04, P 63- 80";
+  utd:bridges "SWIFT: an..16 UNLK: an..17, L 04, P 63-80";
   utd:businessTerm "Letter of credit number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";

@@ -6,7 +6,7 @@
   schema:description "Family name and given names of an individual.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Name.Text";
-  utd:bridges "MAR: (IMO FAL Forms 4- 6)";
+  utd:bridges "MAR: (IMO FAL Forms 4-6)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cn";
   utd:charset "an";

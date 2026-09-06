@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 18,
   "oldName": "Additional charges",
-  "bridges": "CIM: (n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23- 48 (also on reverse)"
+  "bridges": "CIM: (n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23-48 (also on reverse)"
 }

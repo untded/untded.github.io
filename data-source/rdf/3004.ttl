@@ -6,7 +6,7 @@
   schema:description "Name and address of party depositing goods in a warehouse.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Warehouse Depositor. Party Identification.Text";
-  utd:bridges "UNLK: an..35x5; L 10- 18, P 09-44";
+  utd:bridges "UNLK: an..35x5; L 10-18, P 09-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnr";
   utd:charset "an";

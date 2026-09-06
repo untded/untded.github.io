@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 512,
   "oldName": "Documentary credit drawee",
-  "bridges": "SWIFT: an..35x2 UNLK: an..35x2; L 25- 26, P 45-80"
+  "bridges": "SWIFT: an..35x2 UNLK: an..35x2; L 25-26, P 45-80"
 }

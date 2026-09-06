@@ -63,6 +63,27 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <ClientRouter />
   </head>
   <body>
+    <script is:inline>
+      // Delegated clipboard copy for .copy-btn (tag / IRI): registered
+      // once on first load; document-level delegation survives every
+      // view-transition swap without re-running.
+      if (!window.__copyWired) {
+        window.__copyWired = true
+        document.addEventListener('click', async (event) => {
+          const btn = event.target instanceof Element && event.target.closest('.copy-btn')
+          if (!btn) return
+          const value = btn.dataset.copy ?? ''
+          try {
+            await navigator.clipboard.writeText(value)
+          } catch {
+            window.prompt('Copy:', value)
+          }
+          const original = btn.textContent
+          btn.textContent = 'Copied ' + value
+          setTimeout(() => { btn.textContent = original }, 1200)
+        })
+      }
+    </script>
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader />
     <main id="main">

@@ -62,5 +62,5 @@
   "maxLength": 35,
   "oldName": "Common access reference (CAR)",
   "businessTerm": "Unique Consignment reference (UCR)",
-  "bridges": "UNLK: an..17, L 06, P 63- 80 CIM: L 64, P 69-79 and n7; L 66, P 73-82"
+  "bridges": "UNLK: an..17, L 06, P 63-80 CIM: L 64, P 69-79 and n7; L 66, P 73-82"
 }

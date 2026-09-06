@@ -6,7 +6,7 @@
   schema:description "Reference number to identify a house waybill.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "House Waybill Document. Identifier";
-  utd:bridges "UNLK: an..17 L 04, P 63- 80";
+  utd:bridges "UNLK: an..17 L 04, P 63-80";
   utd:businessTerm "House bill, House bill of lading";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";

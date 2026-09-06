@@ -6,7 +6,7 @@
   schema:description "Code of type of charge for each individual charge associated with a consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Charge.Code";
-  utd:bridges "AWB: Included in L 48- 52, P 37-81 CIMP: (504):an2";
+  utd:bridges "AWB: Included in L 48-52, P 37-81 CIMP: (504):an2";
   utd:businessTerm "Accessorial charges";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";

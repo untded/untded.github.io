@@ -61,5 +61,5 @@
   "minLength": 1,
   "maxLength": 17,
   "oldName": "Carrier identification",
-  "bridges": "AWB: L 24, P 13-29, 34- 36, 41-43 CIM: L 04-08, P 02-07 CIMP: (312):an2 CMR: L 09, P 63-80 MAR: L 13, P 63-80 UNLK: L 09, P 63-80 MAR: IMO/FAL 1,7"
+  "bridges": "AWB: L 24, P 13-29, 34-36, 41-43 CIM: L 04-08, P 02-07 CIMP: (312):an2 CMR: L 09, P 63-80 MAR: L 13, P 63-80 UNLK: L 09, P 63-80 MAR: IMO/FAL 1,7"
 }

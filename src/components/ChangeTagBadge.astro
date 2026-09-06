@@ -3,14 +3,16 @@ import { changeTagInfo } from '../lib/element'
 
 interface Props {
   changeTag: string
+  /** Render the printed meaning next to the tag code (element pages). */
+  expand?: boolean
 }
-const { changeTag } = Astro.props
+const { changeTag, expand = false } = Astro.props
 const info = changeTagInfo(changeTag)
 ---
 
 <span
   class:list={[
-    'inline-flex items-center rounded-full border px-2 py-0.5 font-mono text-xs leading-4',
+    'inline-flex items-baseline rounded-full border px-2 py-0.5 font-mono text-xs leading-4',
     info.outsideLegend
       ? 'border-stamp/50 bg-stamp/10 text-stamp'
       : 'border-line bg-mist text-body',
@@ -19,5 +21,5 @@ const info = changeTagInfo(changeTag)
     ? `${info.label} — printed outside the section 4.1 legend, kept verbatim`
     : info.label}
 >
-  {info.short}
+  {info.short}{' '}{expand && <span class="ms-1.5 font-sans">— {info.label}</span>}
 </span>

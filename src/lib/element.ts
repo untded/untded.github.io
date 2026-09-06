@@ -69,7 +69,26 @@ export interface Bridge {
   detail: string
 }
 
-const BRIDGE_SCHEME = /(?:CIMP|UNLK|CIM|MAR|SAD|EDIFACT|ISO):/g
+const BRIDGE_SCHEME = /(?:Inland Waterways B\/L|CIMP|UNLK|UNSM|EDIFACT|ODETTE|SWIFT|SAD|MAR|AWB|CMR|CIM|ICC|INV|ISO|B\/L):/g
+
+// Bridge scheme expansions, verbatim from the publication's list of
+// abbreviations (introduction, section 1.4); `editorial` marks the two
+// not printed in that list.
+export const BRIDGE_SCHEME_DEFS: Record<string, { text: string; source: 'publication' | 'editorial' }> = {
+  UNLK: { text: 'United Nations Layout Key', source: 'publication' },
+  SAD: { text: 'Single Administrative Document (EC and EFTA)', source: 'publication' },
+  CIM: { text: 'Rail Consignment Note (CIM Convention)', source: 'publication' },
+  CIMP: { text: 'IATA Cargo Interchange Message Procedures Manual (CARGO-IMP manual)', source: 'publication' },
+  MAR: { text: 'IMO Model forms and ICS Standard Bill of Lading', source: 'publication' },
+  AWB: { text: 'IATA Air Waybill', source: 'publication' },
+  CMR: { text: 'Road Consignment Note (CMR Convention)', source: 'publication' },
+  SWIFT: { text: 'Society for Worldwide Interbank Financial Telecommunication', source: 'publication' },
+  ICC: { text: 'International Chamber of Commerce', source: 'publication' },
+  INV: { text: 'United Nations Layout Key for Aligned Invoices', source: 'publication' },
+  UNSM: { text: 'United Nations Standard Message (UN/EDIFACT)', source: 'publication' },
+  ODETTE: { text: 'Organisation for Data Exchange by Tele Transmission in Europe (automotive EDI)', source: 'editorial' },
+  'Inland Waterways B/L': { text: 'Bill of lading for inland waterways', source: 'editorial' },
+}
 
 // "UNLK: L 04, P 41-45 CIMP: (120): a1" -> per-scheme entries. The
 // trailing colon is part of the match so a scheme word occurring inside
@@ -92,6 +111,35 @@ export function parseBridges(bridges: string | null): Bridge[] {
     out.push({ scheme: lastScheme, detail: bridges.slice(last).trim() })
   }
   return out
+}
+
+export type BridgeSegment =
+  | { kind: 'format'; text: string }
+  | { kind: 'lines'; from: number; to: number | null }
+  | { kind: 'positions'; from: number; to: number | null }
+  | { kind: 'text'; text: string }
+
+// Structured reading of one bridge detail: the printed notation uses
+// "L n" for the line on the form and "P n-n" for character positions
+// (per the publication, section 4.1: ISO 3535 / UNLK), and a
+// representation token (an..17) for the field format in an interchange
+// protocol. Everything else is kept verbatim.
+const BRIDGE_TOKEN = /\b(an\.\.\d+|a\.\.\d+|n\.\.\d+|an\d+|a\d+|n\d+)\b|\bL (\d+)(?:\s*-\s*(\d+))?\b|\bP (\d+)(?:\s*-\s*(\d+))?\b/g
+
+export function formatBridgeDetail(detail: string): BridgeSegment[] {
+  const out: BridgeSegment[] = []
+  let last = 0
+  let m: RegExpExecArray | null
+  BRIDGE_TOKEN.lastIndex = 0
+  while ((m = BRIDGE_TOKEN.exec(detail)) !== null) {
+    if (m.index > last) out.push({ kind: 'text', text: detail.slice(last, m.index).trim() })
+    if (m[1]) out.push({ kind: 'format', text: m[1] })
+    else if (m[2]) out.push({ kind: 'lines', from: Number(m[2]), to: m[3] ? Number(m[3]) : null })
+    else if (m[4]) out.push({ kind: 'positions', from: Number(m[4]), to: m[5] ? Number(m[5]) : null })
+    last = m.index + m[0].length
+  }
+  if (last < detail.length) out.push({ kind: 'text', text: detail.slice(last).trim() })
+  return out.filter((seg) => seg.kind !== 'text' || seg.text)
 }
 
 export function replacementPointer(element: ElementRecord, tags: Set<number>): number | null {
