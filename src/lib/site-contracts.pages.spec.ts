@@ -183,6 +183,21 @@ it("carries the full original documentation", () => {
     }
   })
 
+  it('builds the UN layout key reconstruction', () => {
+    const html = readFileSync(`${dist}/unlk/index.html`, 'utf8')
+    expect(html).toContain('The UN layout key')
+    expect(html).toContain('ISO 6422')
+    expect((html.match(/<title>/g) ?? []).length).toBeGreaterThanOrEqual(100)
+    expect(statSync(`${dist}/unlk/index.html`).size).toBeLessThan(80_000)
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/unlk"')
+  })
+
+  it('shows the element location on the UN layout key', () => {
+    const html = readFileSync(`${dist}/elements/1128/index.html`, 'utf8')
+    expect(html).toContain('On the UN layout key')
+    expect(html).toContain('positions 63–80')
+  })
+
   it('sitemaps the element and category routes', () => {
     const sitemap = readFileSync(`${dist}/sitemap-index.xml`, 'utf8')
     expect(sitemap).toContain('<loc>')
