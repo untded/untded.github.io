@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import OrgCards from '../components/OrgCards.astro'
-import { href } from '../lib/site'
+import { href, ISO_7372_URL, UNECE_UNTDED_URL } from '../lib/site'
 ---
 
 <BaseLayout
@@ -115,8 +115,8 @@ import { href } from '../lib/site'
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Licensing and attribution</h2>
       <p class="mt-3 text-sm leading-relaxed text-body">
-        The directory content is the UN publication ECE/TRADE/362 (in parallel
-        as ISO 7372:2005), © United Nations / UNECE, reproduced with
+        The directory content is the UN publication <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>ECE/TRADE/362</a> (in parallel
+        as <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372:2005</a>), © United Nations / UNECE, reproduced with
         attribution. The code and this website are open
         source under MIT. See{' '}
         <a class="text-un-deep underline decoration-un/50" href={href('/download')}>download</a>
