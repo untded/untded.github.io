@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
   utd:charset "n";
-  utd:extractionConfidence "high";
   utd:maxLength 3;
   utd:minLength 1;
   utd:representation "n..3";

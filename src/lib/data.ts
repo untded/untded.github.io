@@ -14,9 +14,7 @@ export interface Representation {
 }
 
 export interface Provenance {
-  pdf: string
   page: number
-  confidence: 'high' | 'medium' | 'low'
 }
 
 export interface ElementRecord {

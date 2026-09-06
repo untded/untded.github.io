@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 4;
   utd:minLength 1;
   utd:oldName "Dangerous goods label marking";

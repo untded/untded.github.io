@@ -31,7 +31,6 @@
     "businessTerm": "utd:businessTerm",
     "bridges": "utd:bridges",
     "sourcePage": "utd:sourcePage",
-    "extractionConfidence": "utd:extractionConfidence",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
     "position": "schema:position",
@@ -55,7 +54,6 @@
   "changeTag": "x",
   "status": "retired",
   "sourcePage": 82,
-  "extractionConfidence": "medium",
   "oldName": "Transhipment authorization",
   "bridges": "UNLK: L 20, P 09-44"
 }

@@ -10,7 +10,6 @@
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 2;
   utd:minLength 1;
   utd:oldName "Number of original Bills of Lading, in figures";

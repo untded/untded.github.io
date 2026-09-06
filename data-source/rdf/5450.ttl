@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cd";
   utd:charset "an";
-  utd:extractionConfidence "low";
   utd:maxLength 35;
   utd:minLength 1;
   utd:oldName "Documentary Credit. Amount";

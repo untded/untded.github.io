@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Sub-location";
   utd:sourcePage 70;
   utd:status "retired";

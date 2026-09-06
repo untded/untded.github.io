@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
   utd:charset "a";
-  utd:extractionConfidence "medium";
   utd:maxLength 3;
   utd:minLength 3;
   utd:oldName "Payment currency, coded";

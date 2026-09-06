@@ -8,7 +8,6 @@
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
   utd:charset "an";
-  utd:extractionConfidence "medium";
   utd:maxLength 7;
   utd:minLength 1;
   utd:oldName "Hazard substance/item/page number";

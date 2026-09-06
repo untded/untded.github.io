@@ -5,7 +5,6 @@
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Weight qualifier";
   utd:sourcePage 105;
   utd:status "retired";

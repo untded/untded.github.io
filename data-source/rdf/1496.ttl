@@ -9,7 +9,6 @@
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
   utd:charset "n";
-  utd:extractionConfidence "medium";
   utd:maxLength 5;
   utd:minLength 1;
   utd:oldName "Goods item number";

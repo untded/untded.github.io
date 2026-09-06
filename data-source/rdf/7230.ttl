@@ -6,7 +6,6 @@
   utd:bridges "AWB: L 33-44, P 61-81 and CIMP: (708):an..15; (709):an..20";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
-  utd:extractionConfidence "medium";
   utd:oldName "Nature and quantity of goods";
   utd:sourcePage 113;
   utd:status "retired";
