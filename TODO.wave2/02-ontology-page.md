@@ -2,31 +2,39 @@
 
 A first-class page presenting the model: classes, properties, prefixes,
 examples, downloads. vocab-bsp resolves BSP terms; nobody explains TDED's
-own model. Generated, not hand-maintained.
+own model. Generated, not hand-maintained. Branch: `wave2-pages`.
 
-## Work
+## Tasks
 
-- Dataset export grows `derived/vocabulary.json` — the classes, terms,
-  comments and prefixes from `Untded::Vocabulary` (the single declaration);
-  the website fetches it like categories.
-- `/ontology` page: intro (what the ontology covers), prefix table,
-  classes and properties tables (term, IRI, comment), download block
-  (TTL, JSON-LD, context), a worked example (one element's TTL excerpt),
-  links to docs (03) and /download.
-- Element pages: `<link rel="alternate" type="text/turtle">` and
-  `application/ld+json` pointing at the existing per-element `data.*`
-  files; ensure the files are linked visibly too ("machine formats").
+- [x] `src/lib/vocabulary.ts` — loader for `data-source/vocabulary.json`
+  (meta.mjs pattern: read at build time, typed).
+- [x] `src/pages/ontology.astro`:
+  - [x] intro: what the ontology covers, namespace IRI, edition pinning
+  - [x] prefix table (from the JSON)
+  - [x] classes table: term, IRI, comment
+  - [x] properties tables grouped as in the declaration (element-level,
+        category-level, dataset-level): term, IRI, domain, comment
+  - [x] downloads block: `untded.ttl`, `untded.jsonld`, per-element RDF,
+        context — same URLs the /download page serves
+  - [x] worked example: element 1004's TTL excerpt (verbatim from
+        `data-source/rdf/1004.ttl` if it exists in repo, else embedded)
+  - [x] links: docs ontology guide (03), /download, /elements/1004
+- [x] Element pages `[tag].astro`: `<link rel="alternate"
+      type="text/turtle">` + `application/ld+json` to the served per-
+      element `data.*` files; visible "machine formats" line in the
+      provenance/sources area linking the same two URLs.
+- [x] Nav: `Ontology` entry after `Notation`.
+- [x] Contracts: /ontology built; contains `https://www.untded.org/ns/untded#`,
+      the download links, ≥ 3 class rows and ≥ 10 property rows; element
+      page carries both `rel="alternate"` links; nav `href="/ontology"`.
 
 ## Verification
 
-- Contracts: /ontology built, contains the `utd:` namespace, the download
-  links, ≥1 class table row; vocabulary.json drift spec (dataset) asserts
-  the export matches `Untded::Vocabulary`.
-- Playwright: page renders in light/dark; alternates present on
-  /elements/1001.
+Build + tests green; screenshot review light/dark; per-element RDF URLs
+resolve (internal lychee).
 
 ## Beats
 
 Their resolvable vocabulary serves BSP/UNTP terms with no TDED model page;
-we document the directory's own semantics under our namespace, with every
-claim generated from the SSOT.
+we document the directory's own semantics under our namespace, every claim
+generated from the SSOT.

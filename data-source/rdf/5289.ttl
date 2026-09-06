@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5289> a utd:TradeDataElement;
+  skos:altLabel "Duty/tax/fee account identification";
   schema:description "Code specifying a duty or tax or fee account.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax Or Fee. Account.Code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 6;
-  utd:minLength 1;
-  utd:oldName "Duty/tax/fee account identification";
-  utd:representation "an..6";
+  utd:representation [];
   utd:sourcePage 94;
   utd:status "active";
   utd:tag 5289 .

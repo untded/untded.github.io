@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,53 @@
   "sourcePage": 111,
   "name": "Goods Item. Shipping Marks.Text",
   "description": "Free form description of the marks and numbers on a transport unit or package.",
-  "representation": "an..512",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 512,
-  "oldName": "Shipping marks",
-  "businessTerm": "Marks and numbers",
-  "bridges": "AWB: L 28-30, P 09-81 CMR: L 28-42, P 09-26 (CMR 6) UNLK: an..17; L 28-34, P 09-26 MAR: IMO/FAL 2,7 SAD: (SAD 31)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..512",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  "altLabel": [
+    "Shipping marks",
+    "Marks and numbers"
+  ],
+  "bridges": "AWB: L 28-30, P 09-81 CMR: L 28-42, P 09-26 (CMR 6) UNLK: an..17; L 28-34, P 09-26 MAR: IMO/FAL 2,7 SAD: (SAD 31)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 28-30, P 09-81"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 28-42, P 09-26 (CMR 6)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..17; L 28-34, P 09-26",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 28,
+          "lineTo": 34,
+          "posFrom": 9,
+          "posTo": 26,
+          "fieldFormat": "an..17"
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 2,7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 31)"
+    }
+  ]
 }

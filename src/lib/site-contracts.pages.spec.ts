@@ -210,6 +210,66 @@ it("carries the full original documentation", () => {
     expect(html).toContain('unlk#field=4:4:63:80')
   })
 
+  it('publishes the ontology page from the vocabulary declaration', () => {
+    const html = readFileSync(`${dist}/ontology/index.html`, 'utf8')
+    expect(html).toContain('The UNTDED ontology')
+    expect(html).toContain('https://www.untded.org/ns/untded#')
+    expect(html).toContain('utd:TradeDataElement')
+    expect(html).toContain('utd:UnlkZone')
+    expect(html).toContain('/data/untded.ttl')
+    expect(html).toContain('/ns/untded-context.jsonld')
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/ontology"')
+  })
+
+  it('publishes the edition ledger with replacements', () => {
+    const html = readFileSync(`${dist}/ledger/index.html`, 'utf8')
+    expect(html).toContain('The 1993–2005 ledger')
+    expect(html).toContain('id="tag-cndr"')
+    expect(html).toContain('href="/elements/1000"')
+    expect(readFileSync(`${dist}/elements/1128/index.html`, 'utf8')).toContain('/ledger#tag-cndr')
+  })
+
+  it('publishes the bridges map with per-scheme sections', () => {
+    const html = readFileSync(`${dist}/bridges/index.html`, 'utf8')
+    expect(html).toContain('Bridges by scheme')
+    expect(html).toContain('IMO Model forms and ICS Standard Bill of Lading')
+    expect(html).toContain('id="UNLK"')
+    expect((html.match(/href="\/elements\/\d{4}"/g) ?? []).length).toBeGreaterThan(500)
+    expect(readFileSync(`${dist}/elements/1004/index.html`, 'utf8')).toContain('href="/bridges#UNLK"')
+  })
+
+  it('crosslinks elements to UN/EDIFACT EDED entries', () => {
+    const html = readFileSync(`${dist}/elements/1004/index.html`, 'utf8')
+    expect(html).toContain('EDED 1004')
+    expect(html).toContain('aligned')
+    expect(html).toContain('/docs/alignment-edifact')
+    expect(html).toContain('Machine formats:')
+    expect(html).toContain('data.ttl')
+  })
+
+  it('serves the JSON-LD context at the stable URL', () => {
+    const served = readFileSync(`${dist}/ns/untded-context.jsonld`, 'utf8')
+    const source = readFileSync(`data-source/context.jsonld`, 'utf8')
+    expect(served).toBe(source)
+  })
+
+  it('builds the documentation corpus', () => {
+    for (const page of ['index', 'ontology', 'alignment-edifact', 'vocabulary-register', 'provenance', 'context', 'contributing']) {
+      const file = page === 'index' ? `${dist}/docs/index.html` : `${dist}/docs/${page}/index.html`
+      const html = readFileSync(file, 'utf8')
+      expect(html.length, page).toBeGreaterThan(2000)
+    }
+    const align = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    expect(align).toContain('representation differs')
+    expect(align).toMatch(/id="diff-\d{4}"/)
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/docs"')
+  })
+
+  it('carries the UNLK card on the colon-less bridge of element 5010', () => {
+    const html = readFileSync(`${dist}/elements/5010/index.html`, 'utf8')
+    expect(html).toContain('On the UN layout key')
+  })
+
   it('sitemaps the element and category routes', () => {
     const sitemap = readFileSync(`${dist}/sitemap-index.xml`, 'utf8')
     expect(sitemap).toContain('<loc>')
@@ -257,7 +317,7 @@ it("carries the full original documentation", () => {
 
   it('respects the HTML payload budget', () => {
     const budgets: [string, number][] = [
-      [`${dist}/elements/1001/index.html`, 30_000],
+      [`${dist}/elements/1001/index.html`, 32_000],
       [`${dist}/index.html`, 40_000],
       [`${dist}/elements/index.html`, 700_000],
       [`${dist}/about/index.html`, 40_000],

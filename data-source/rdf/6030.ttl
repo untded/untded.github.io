@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6030> a utd:TradeDataElement;
+  skos:altLabel "Chargeable weight, Kg";
   schema:description "Gross weight (mass) on which a charge is to be based";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Chargeable Weight. Basis.Measure";
+  utd:bridge [], [], [];
   utd:bridges "AWB: L 33-44, P 31-37 CIM: L 44-45, P 51-58 and L 50-51, P 51-58 and L 56-57,P 51-58 (also on reverse) (CIM 60) CIMP: (600):n..7";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:oldName "Chargeable weight, Kg";
-  utd:representation "an..8";
+  utd:representation [];
   utd:sourcePage 101;
   utd:status "active";
   utd:tag 6030 .

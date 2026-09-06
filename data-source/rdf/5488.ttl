@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5488> a utd:TradeDataElement;
+  skos:altLabel "Insurance cost (Customs)";
   schema:description "Amount of premium payable to the insurance company to insure the goods to the port or place of importation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. To Importation Location Insurance.Amount";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Insurance cost (Customs)";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 100;
   utd:status "active";
   utd:tag 5488 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6181> a utd:TradeDataElement;
+  skos:altLabel "Payment currency, coded";
   schema:description "The identifier of the monetary unit in which payment is made, or is to be made.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Currency.Identifier";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:charset "a";
-  utd:maxLength 3;
-  utd:minLength 3;
-  utd:oldName "Payment currency, coded";
-  utd:representation "a3";
+  utd:representation [];
   utd:sourcePage 105;
   utd:status "active";
   utd:tag 6181 .

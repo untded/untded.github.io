@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3349> a utd:TradeDataElement;
+  skos:altLabel "Place of acceptance, coded";
   schema:description "To identify the place where the goods are taken over by the carrier";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Acceptance Location.Identifier";
+  utd:bridge [];
   utd:bridges "UNLK: L 21, P 36-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Place of acceptance, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 66;
   utd:status "active";
   utd:tag 3349 .

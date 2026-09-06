@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,36 @@
   "sourcePage": 92,
   "name": "Invoice. Total.Amount",
   "description": "Amount, debited by the seller and being the total of related article item amounts in a commercial invoice.",
-  "representation": "n..18",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 18,
-  "oldName": "Article items total",
-  "bridges": "UNLK: L 56, P 63-80 MAR: IMO/FAL 3-4"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..18",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 18
+  },
+  "altLabel": [
+    "Article items total"
+  ],
+  "bridges": "UNLK: L 56, P 63-80 MAR: IMO/FAL 3-4",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 56, P 63-80",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 56,
+          "lineTo": 56,
+          "posFrom": 63,
+          "posTo": 80
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 3-4"
+    }
+  ]
 }

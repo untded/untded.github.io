@@ -8,10 +8,7 @@
   schema:name "Applicability. Type.Text";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 129;
   utd:status "active";
   utd:tag 9048 .

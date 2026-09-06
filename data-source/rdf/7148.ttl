@@ -1,13 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7148> a utd:TradeDataElement;
+  skos:altLabel "Statistical code number (Customs)";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
+  utd:bridge [];
   utd:bridges "UNLK: L 28-51, P 52-62";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";
-  utd:oldName "Statistical code number (Customs)";
+  utd:replacedBy <https://www.untded.org/elements/7357>;
   utd:sourcePage 112;
   utd:status "retired";
   utd:tag 7148 .

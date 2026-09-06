@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5190> a utd:TradeDataElement;
+  skos:altLabel "Balance brought forward";
   schema:description "Balance available brought forward.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Account. Brought Forward Balance.Amount";
+  utd:bridge [];
   utd:bridges "CIM: (reverse of CIM form)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Balance brought forward";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 92;
   utd:status "active";
   utd:tag 5190 .

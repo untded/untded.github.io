@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7368> a utd:TradeDataElement;
+  skos:altLabel "Total number of packages in";
   schema:description "Total number of packages expressed in words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Total Quantity.Text";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 70;
-  utd:minLength 1;
-  utd:oldName "Total number of packages in";
-  utd:representation "an..70";
+  utd:representation [];
   utd:sourcePage 115;
   utd:status "active";
   utd:tag 7368 .

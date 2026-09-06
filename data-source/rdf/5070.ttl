@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5070> a utd:TradeDataElement;
+  skos:altLabel "Declared Customs value for entire consignment";
   schema:description "Total amount for customs purposes of all goods in a consignment, whether or not they are subject to the same customs procedure, and have the same tariff/statistical heading, country information and duty regime";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. For Customs Total.Amount";
+  utd:bridge [], [];
   utd:bridges "AWB: L 24, P 71-81 CIMP: (509):n..12, or the letters 'NCV'";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Declared Customs value for entire consignment";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5070 .

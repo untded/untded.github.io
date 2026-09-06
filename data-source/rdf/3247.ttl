@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3247> a utd:TradeDataElement;
+  skos:altLabel "Place of delivery, coded";
   schema:description "To identify the place at which the cargo leaves the custody of the carrier under the terms and conditions of the transport contract";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Delivery Location.Identifier";
+  utd:bridge [];
   utd:bridges "UNLK: L 25, P 36-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Place of delivery, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 62;
   utd:status "active";
   utd:tag 3247 .

@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3053> a utd:TradeDataElement;
+  skos:altLabel "Carrier's agent, coded",
+    "Air agent's IATA code";
   schema:description "Identifier of party authorized to act for or on behalf of carrier.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Carrier Agent. Party.Identifier";
+  utd:bridge [], [];
   utd:bridges "AWB: L 20, P 09-26 CIMP: (309):n4; (311):n7";
-  utd:businessTerm "Air agent's IATA code";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Carrier's agent, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 52;
   utd:status "active";
   utd:tag 3053 .

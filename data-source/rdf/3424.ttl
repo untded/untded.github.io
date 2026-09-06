@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3424> a utd:TradeDataElement;
+  skos:altLabel "Transhipment place";
   schema:description "Name of a place where goods are to be or have been transferred from one means of transport to another during the course of one transport operation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Transshipment Location.Text";
+  utd:bridge [];
   utd:bridges "SAD: (SAD 55)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Transhipment place";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 69;
   utd:status "active";
   utd:tag 3424 .

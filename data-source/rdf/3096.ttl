@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3096> a utd:TradeDataElement;
+  skos:altLabel "Customs office of exit";
   schema:description "Name of the customs office at which the goods leave or intended to leave the customs territory of despatch.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Exit Customs Office Location.Text";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Customs office of exit";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 54;
   utd:status "active";
   utd:tag 3096 .

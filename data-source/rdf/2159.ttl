@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2159> a utd:TradeDataElement;
+  skos:altLabel "Offer date, coded",
+    "Quote date, Quotation date";
   schema:description "Issue date of a quotation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Quotation Document. Issue.Date Time";
+  utd:bridge [];
   utd:bridges "UNLK: L 03, P 56-62";
-  utd:businessTerm "Quote date, Quotation date";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:oldName "Offer date, coded";
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 43;
   utd:status "active";
   utd:tag 2159 .

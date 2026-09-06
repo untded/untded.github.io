@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5436> a utd:TradeDataElement;
+  skos:altLabel "Charges at destination";
   schema:description "Handling, storage, etc. charges incurred at destination, in destination currency.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Destination Charge.Amount";
+  utd:bridge [], [];
   utd:bridges "AWB: L 64, P 23-36 CIMP: (501):n..12";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Charges at destination";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 99;
   utd:status "active";
   utd:tag 5436 .

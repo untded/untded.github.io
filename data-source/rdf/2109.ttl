@@ -8,10 +8,7 @@
   schema:name "Delivery. Estimated.Date Time";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 42;
   utd:status "active";
   utd:tag 2109 .

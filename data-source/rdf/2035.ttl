@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2035> a utd:TradeDataElement;
+  skos:altLabel "Payment date, coded";
   schema:description "Date that an amount due becomes available to a creditor under the terms of payment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Availability.Date Time";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:oldName "Payment date, coded";
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 39;
   utd:status "active";
   utd:tag 2035 .

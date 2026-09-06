@@ -8,10 +8,7 @@
   schema:name "Dosage. Identifier";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 8;
-  utd:minLength 1;
-  utd:representation "an..8";
+  utd:representation [];
   utd:sourcePage 103;
   utd:status "active";
   utd:tag 6083 .

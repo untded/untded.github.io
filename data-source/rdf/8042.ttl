@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8042> a utd:TradeDataElement;
+  skos:altLabel "Stowage place onboard",
+    "Cell location";
   schema:description "Textual description of a location on board a means of transport where specified goods or transport equipment have been or are to be stowed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Stowage Location.Text";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 7";
-  utd:businessTerm "Cell location";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Stowage place onboard";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 119;
   utd:status "active";
   utd:tag 8042 .

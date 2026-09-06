@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,33 @@
   "sourcePage": 108,
   "name": "Measurement. Unit.Code",
   "description": "Indication of a unit of measurement in which weight (mass), capacity, length, area, volume or other quantity or measurement is expressed.",
-  "representation": "an..8",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 8,
-  "oldName": "Measure unit qualifier",
-  "businessTerm": "Measure unit qualifier",
-  "bridges": "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..8",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 8
+  },
+  "altLabel": [
+    "Measure unit qualifier",
+    "Measure unit qualifier"
+  ],
+  "bridges": "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 33-44, P 20"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(601):a1; (604):a2"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 47(2))"
+    }
+  ]
 }

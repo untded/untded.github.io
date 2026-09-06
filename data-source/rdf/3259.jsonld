@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,51 @@
   "sourcePage": 63,
   "name": "Transport Means. Destination Location.Identifier",
   "description": "To identify the port, airport or other type of location at which a means of transport is scheduled to arrive or has arrived",
-  "representation": "an..35",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 35,
-  "oldName": "Place of destination, coded",
-  "bridges": "AWB: L 24, P 09-12 and P 30-33 and P 37-40 CIMP: (313):a3 UNLK: L 26, P 18-44 MAR: IMO/FAL 1, 3, 5-6 SWIFT: an..35"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..35",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 35
+  },
+  "altLabel": [
+    "Place of destination, coded"
+  ],
+  "bridges": "AWB: L 24, P 09-12 and P 30-33 and P 37-40 CIMP: (313):a3 UNLK: L 26, P 18-44 MAR: IMO/FAL 1, 3, 5-6 SWIFT: an..35",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 24, P 09-12 and P 30-33 and P 37-40"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(313):a3"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 26, P 18-44",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 26,
+          "lineTo": 26,
+          "posFrom": 18,
+          "posTo": 44
+        }
+      ]
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 1, 3, 5-6"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SWIFT",
+      "detail": "an..35"
+    }
+  ]
 }

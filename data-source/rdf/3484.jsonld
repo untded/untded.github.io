@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,22 @@
   "sourcePage": 71,
   "name": "Person. Nationality.Text",
   "description": "Name of the nationality of a an object, for example the nationality of a person or the nationality of a means of transport.",
-  "representation": "a..35",
-  "charset": "a",
-  "minLength": 1,
-  "maxLength": 35,
-  "oldName": "Nationality of person",
-  "bridges": "MAR: (IMO FAL Forms 5-6)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "a..35",
+    "charset": "a",
+    "minLength": 1,
+    "maxLength": 35
+  },
+  "altLabel": [
+    "Nationality of person"
+  ],
+  "bridges": "MAR: (IMO FAL Forms 5-6)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "(IMO FAL Forms 5-6)"
+    }
+  ]
 }

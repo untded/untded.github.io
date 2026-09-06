@@ -2,29 +2,33 @@
 
 The publication's change tags are an edition-migration ledger in embryo —
 every row carries what changed against the 1993 edition. We hold them for
-all 1504 elements; nobody has ever made them browsable.
+all 1504 elements; nobody has ever made them browsable. Branch:
+`wave2-pages` (data from 01's `derived/ledger.json`).
 
-## Work
+## Tasks
 
-- Dataset: export `derived/ledger.json` — per change tag (`cnd`, `add`,
-  `x`, `cndr`, `u`), the elements and counts; retired rows joined with
-  their replacement targets (from 01's `replacedBy` parsing).
-- Website `/ledger` page:
-  - summary strip: 1504 elements → added / changed / changed+retired /
-    retired / undeleted counts;
-  - per-category breakdown;
-  - the replacement graph as a list: retired tag → use-instead tag
-    (linked element pages);
-  - cross-link from ChangeTagBadge on element pages to the ledger anchor.
-- Copy: define each tag in the legend exactly as the publication prints it
-  (section 4.1), including the two outside-legend tags from the review
-  queue.
+- [x] ~~ledger.ts~~ — the page derives everything from elements.json
+      (change tags + replacementPointer) at build time.
+- [x] `src/pages/ledger.astro`:
+  - [x] summary strip: 1504 elements → per-tag counts (add / cnd / cndr /
+        cnr+cn+cr+cd / u / x) with the legend exactly as the publication
+        prints it in section 4.1 — including the two outside-legend tags
+        from the review queue, marked
+  - [x] per-category breakdown table (9 categories × tag counts)
+  - [x] replacement list: retired → use-instead (linked element pages),
+        driven by the same parsed replacements as `utd:replacedBy`
+  - [x] cross-links from ChangeTagBadge (element pages) to
+        `/ledger#tag-<tag>`
+- [x] `ChangeTagBadge.astro` — element pages wrap the badge in the ledger anchor: badge links its tag row to the ledger
+      anchor (title attribute states the meaning — already present).
+- [x] Contracts: /ledger built; counts sum to 1504; replacement rows
+      match the parsed set (spot: 1002 → 1000); badge link present on
+      /elements/1128.
 
 ## Verification
 
-- Contracts: /ledger built; counts sum to 1504; every retired element with
-  a parsed replacement shows exactly one target link; badge links present.
-- Dataset spec: ledger export matches element data (no drift).
+Dataset `ledger.json` spec asserts the counts against the YAML (no drift);
+website build + tests; screenshot.
 
 ## Beats
 

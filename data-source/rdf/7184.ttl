@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7184> a utd:TradeDataElement;
+  skos:altLabel "Dangerous goods: RID indicator";
   schema:description "Indication that the transport is subject to an international regulation concerning the carriage of dangerous goods or not.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Dangerous Goods.Indicator";
+  utd:bridge [];
   utd:bridges "CIM: Checkmark L 28, P 60 (CIM 33). In interchange: n1";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnr";
-  utd:charset "an";
-  utd:maxLength 1;
-  utd:minLength 1;
-  utd:oldName "Dangerous goods: RID indicator";
-  utd:representation "an1";
+  utd:representation [];
   utd:sourcePage 113;
   utd:status "active";
   utd:tag 7184 .

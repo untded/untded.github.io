@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,48 @@
   "sourcePage": 68,
   "name": "Document. Issue Location.Text",
   "description": "Name of the location where a document was issued and when appropriate, signed or otherwise authenticated.",
-  "representation": "an..256",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 256,
-  "oldName": "Place of issue of document",
-  "businessTerm": "Place document completed",
-  "bridges": "AWB: L 60, P 44-60 CIMP: (302):an..17 CMR: L 60, P 09-26 (CMR 21) INV: L 34-64, P 09-26 MAR: IMO/FAL 7 SAD: (SAD 54)"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..256",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 256
+  },
+  "altLabel": [
+    "Place of issue of document",
+    "Place document completed"
+  ],
+  "bridges": "AWB: L 60, P 44-60 CIMP: (302):an..17 CMR: L 60, P 09-26 (CMR 21) INV: L 34-64, P 09-26 MAR: IMO/FAL 7 SAD: (SAD 54)",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 60, P 44-60"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(302):an..17"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CMR",
+      "detail": "L 60, P 09-26 (CMR 21)"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "INV",
+      "detail": "L 34-64, P 09-26"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "SAD",
+      "detail": "(SAD 54)"
+    }
+  ]
 }

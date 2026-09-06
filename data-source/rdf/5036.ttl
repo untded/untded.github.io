@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5036> a utd:TradeDataElement;
+  skos:altLabel "Declared value for carriage",
+    "Interest in delivery";
   schema:description "Value, declared by the shipper or his agent solely for the purpose of varying the carrier's level of liability from that provided in the contract of carriage, in case of loss or damage to goods or delayed delivery.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. For Carriage Declared Value.Amount";
+  utd:bridge [], [], [], [];
   utd:bridges "AWB: L 24, P 58-69 CIM: L 34-38, P 02-09 (Ref: Article 16 of the CIM Convention) CIMP: (510)n..12, or the letters 'NVD' CMR: L 56, P 30-41 (Ref: Article 24 of the CMR Convention)";
-  utd:businessTerm "Interest in delivery";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Declared value for carriage";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 88;
   utd:status "active";
   utd:tag 5036 .

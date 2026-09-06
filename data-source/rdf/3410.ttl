@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3410> a utd:TradeDataElement;
+  skos:altLabel "Place of issue of document",
+    "Place document completed";
   schema:description "Name of the location where a document was issued and when appropriate, signed or otherwise authenticated.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Issue Location.Text";
+  utd:bridge [], [], [], [], [], [];
   utd:bridges "AWB: L 60, P 44-60 CIMP: (302):an..17 CMR: L 60, P 09-26 (CMR 21) INV: L 34-64, P 09-26 MAR: IMO/FAL 7 SAD: (SAD 54)";
-  utd:businessTerm "Place document completed";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 256;
-  utd:minLength 1;
-  utd:oldName "Place of issue of document";
-  utd:representation "an..256";
+  utd:representation [];
   utd:sourcePage 68;
   utd:status "active";
   utd:tag 3410 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1198> a utd:TradeDataElement;
+  skos:altLabel "Number of copies of document enclosed";
   schema:description "Total number of originals and copies of a document enclosed";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Exemplar.Quantity";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "n";
-  utd:maxLength 2;
-  utd:minLength 1;
-  utd:oldName "Number of copies of document enclosed";
-  utd:representation "n..2";
+  utd:representation [];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1198 .

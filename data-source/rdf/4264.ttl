@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4264> a utd:TradeDataElement;
+  skos:altLabel "Insurance coverage details",
+    "Type of insurance";
   schema:description "Description of risks covered by an insurance.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Insurance Coverage. Risk.Text";
-  utd:businessTerm "Type of insurance";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 70;
-  utd:minLength 1;
-  utd:oldName "Insurance coverage details";
-  utd:representation "an..70";
+  utd:representation [];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4264 .

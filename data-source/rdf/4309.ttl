@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4309> a utd:TradeDataElement;
+  skos:altLabel "Reason for rejection, coded";
   schema:description "Code specifying the reason for a rejection.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Rejection. Reason.Code";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Reason for rejection, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 80;
   utd:status "active";
   utd:tag 4309 .

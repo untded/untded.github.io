@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3255> a utd:TradeDataElement;
+  skos:altLabel "Seller's representative, coded";
   schema:description "To identify a party representing the seller for the purpose of a trade transaction";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Seller Agent. Party.Identifier";
+  utd:bridge [], [];
   utd:bridges "AWB: L 26, P 09-26 UNLK: L15, P 27-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Seller's representative, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 62;
   utd:status "active";
   utd:tag 3255 .

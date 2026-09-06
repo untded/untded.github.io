@@ -1,20 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3238> a utd:TradeDataElement;
+  skos:altLabel "Country of origin";
   schema:description "Name of the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade..";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Origin Country Name.Text";
+  utd:bridge [];
   utd:bridges "UNLK: L 18, P 45-62";
-  utd:businessTerm "Country of origin";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Country of origin";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 62;
   utd:status "active";
   utd:tag 3238 .

@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5054> a utd:TradeDataElement;
+  skos:altLabel "FOB value";
   schema:description "Monetary amount that has to be or has been paid as calculated under the applicable trade delivery.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Trade Term.Amount";
-  utd:businessTerm "FOB value";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 88;
   utd:status "active";
   utd:tag 5054 .

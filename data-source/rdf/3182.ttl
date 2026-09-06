@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3182> a utd:TradeDataElement;
+  skos:altLabel "Surveyor, Party responsible for proof of vanning";
   schema:description "Name and address of the authorized party responsible for certifying that the goods were loaded into the transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment Load Authorization. Party Identification.Text";
-  utd:businessTerm "Surveyor, Party responsible for proof of vanning";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 58;
   utd:status "active";
   utd:tag 3182 .

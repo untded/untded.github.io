@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5275> a utd:TradeDataElement;
+  skos:altLabel "Supplementary rate/tariff basis identification",
+    "Supplementary rate";
   schema:description "Code specifying a supplementary rate or tariff.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Supplementary Tariff. Code";
-  utd:businessTerm "Supplementary rate";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 6;
-  utd:minLength 1;
-  utd:oldName "Supplementary rate/tariff basis identification";
-  utd:representation "an..6";
+  utd:representation [];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5275 .

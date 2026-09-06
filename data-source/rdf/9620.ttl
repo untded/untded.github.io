@@ -8,10 +8,7 @@
   schema:name "Policy. Limitation.Identifier";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 10;
-  utd:minLength 1;
-  utd:representation "an..10";
+  utd:representation [];
   utd:sourcePage 131;
   utd:status "active";
   utd:tag 9620 .

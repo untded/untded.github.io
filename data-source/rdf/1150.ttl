@@ -1,20 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1150> a utd:TradeDataElement;
+  skos:altLabel "Received number";
   schema:description "Reference number assigned to identify a consignment upon its arrival at its destination";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Receipt.Identifier";
+  utd:bridge [];
   utd:bridges "CIM: n..4; L 69, P 76-82";
-  utd:businessTerm "Received number";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Received number";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 31;
   utd:status "active";
   utd:tag 1150 .

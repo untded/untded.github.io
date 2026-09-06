@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2491> a utd:TradeDataElement;
+  skos:altLabel "Date of birth, coded";
   schema:description "Date on which an individual is or was born";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Birth.Date Time";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 5-6";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:oldName "Date of birth, coded";
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 49;
   utd:status "active";
   utd:tag 2491 .

@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2137> a utd:TradeDataElement;
+  skos:altLabel "Delivery firstdate, coded";
   schema:description "First delivery date and optionally time.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Delivery. First.Date Time";
+  utd:bridge [];
   utd:bridges "UNLK: L 21, P 60-72";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:oldName "Delivery firstdate, coded";
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 43;
   utd:status "active";
   utd:tag 2137 .

@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,32 @@
   "sourcePage": 69,
   "name": "Insurer At Destination Agent. Party Identification.Text",
   "description": "Name and address of the agent of the insurer's at the place of destination",
-  "representation": "an..512",
-  "charset": "an",
-  "minLength": 1,
-  "maxLength": 512,
-  "oldName": "Insurer's Agent at destination",
-  "businessTerm": "Insurer's Agent at destination",
-  "bridges": "UNLK: an..35x5; L 50-54, P 09-44"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "an..512",
+    "charset": "an",
+    "minLength": 1,
+    "maxLength": 512
+  },
+  "altLabel": [
+    "Insurer's Agent at destination",
+    "Insurer's Agent at destination"
+  ],
+  "bridges": "UNLK: an..35x5; L 50-54, P 09-44",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "an..35x5; L 50-54, P 09-44",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 50,
+          "lineTo": 54,
+          "posFrom": 9,
+          "posTo": 44
+        }
+      ]
+    }
+  ]
 }

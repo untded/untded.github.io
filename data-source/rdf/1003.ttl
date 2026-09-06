@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1003> a utd:TradeDataElement;
+  skos:altLabel "Message name, coded",
+    "Message name code";
   schema:description "Document type identifier such as INVOIC. See also 0065";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Type.Identifier";
+  utd:bridge [];
   utd:bridges "CIMP: (101): a3";
-  utd:businessTerm "Message name code";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 6;
-  utd:minLength 1;
-  utd:oldName "Message name, coded";
-  utd:representation "an..6";
+  utd:representation [];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1003 .

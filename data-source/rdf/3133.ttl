@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3133> a utd:TradeDataElement;
+  skos:altLabel "Consignee, coded";
   schema:description "Identifier of party to which goods are consigned.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignee. Party.Identifier";
+  utd:bridge [], [], [], [], [];
   utd:bridges "AWB: L 09, P 27-44 CIM: n..13, L 09, P 32-44 (CIM 15) CIMP: (320):an..15 UNLK: L 09, P 27-44 SAD: (SAD 8(Nr))";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Consignee, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 56;
   utd:status "active";
   utd:tag 3133 .

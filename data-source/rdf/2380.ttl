@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2380> a utd:TradeDataElement;
+  skos:altLabel "Date/time/period";
   schema:description "The value of a date, a date and time, a time or of a period in a specified representation.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Date Or Time Or Period. Text";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Date/time/period";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 48;
   utd:status "active";
   utd:tag 2380 .

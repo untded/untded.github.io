@@ -1,0 +1,27 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Vocabulary register — UN/TDED
+description: The external vocabularies and standards the Trade Data Elements Directory lives among, and the role each plays for this registry.
+---
+
+The directory does not stand alone. This register lists the external
+vocabularies and standards it references, and the role each plays here.
+
+| Vocabulary / standard | Role for this registry |
+|---|---|
+| **ISO 7372:2005 / ECE/TRADE/362** | The publication itself — the directory transcribes its 2005 edition. Official pages: [UNECE](https://unece.org/untded-iso7372), [ISO](https://www.iso.org/standard/41237.html). |
+| **ISO 6422** (UN Layout Key) | The master form. The [UNLK reconstruction](/unlk) plots the directory's bridges onto its grid; zone semantics (`utd:UnlkZone`) speak its line/position language. |
+| **ISO 3535** | The layout-chart grid the UNLK is drawn on (A4, image area, standard boxes). Cited wherever geometry matters. |
+| **UN/EDIFACT D.05B** (EDED, UNCL) | The electronic counterpart of the directory. The [alignment page](/docs/alignment-edifact) documents the tag join and its results. |
+| **ISO 11179** | The naming discipline behind the element names (object class · property term · representation term), as the publication's foreword records. |
+| **ebXML CCTS (ISO/TS 15000-5)** | The core-components framing the 2005 revision aligned its entries to; recorded here as context, not consumed as data. |
+| **UN Transparency Protocol (UNTP)** | An interop *target*, not a source: a product-passport payload can cite TDED elements by IRI (see the [context guide](/docs/context)). No content is imported from it. |
+
+## Policy
+
+1. The registry consumes exactly one source: the publication's own text,
+   digitized and verified as described in the [provenance note](/docs/provenance).
+2. External vocabularies appear as citations, alignments, or interop
+   examples — never as inputs to the data.
+3. Every alignment claim (e.g. the EDIFACT join) is generated from data
+   and reproducible from the dataset repository.

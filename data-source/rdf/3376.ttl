@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3376> a utd:TradeDataElement;
+  skos:altLabel "Second notify party",
+    "Also notify, Second notify address";
   schema:description "Name and address of a second party to be notified.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Second Notify Party. Party Identification.Text";
-  utd:businessTerm "Also notify, Second notify address";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Second notify party";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 67;
   utd:status "active";
   utd:tag 3376 .

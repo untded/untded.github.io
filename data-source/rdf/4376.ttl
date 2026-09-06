@@ -1,19 +1,17 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4376> a utd:TradeDataElement;
+  skos:altLabel "Security details",
+    "Type of transit guarantee";
   schema:description "Details regarding undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled, e.g. under a transit procedure.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Obligation. Guarantee.Text";
-  utd:businessTerm "Type of transit guarantee";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Security details";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 82;
   utd:status "active";
   utd:tag 4376 .

@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,9 +71,28 @@
   "sourcePage": 101,
   "name": "Line Item. Gross Weight.Measure",
   "description": "Weight (mass) of line item including packaging but excluding the transport equipment",
-  "representation": "n..16",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 16,
-  "bridges": "UNLK: L 36-46 P 27-55"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..16",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 16
+  },
+  "bridges": "UNLK: L 36-46 P 27-55",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 36-46 P 27-55",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 36,
+          "lineTo": 46,
+          "posFrom": 27,
+          "posTo": 55
+        }
+      ]
+    }
+  ]
 }

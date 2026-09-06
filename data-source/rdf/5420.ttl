@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5420> a utd:TradeDataElement;
+  skos:altLabel "Rate per unit";
   schema:description "To specify the rate per unit specified in the unit price basis.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Unit Price. Rate Basis.Numeric";
+  utd:bridge [];
   utd:bridges "CIM: n..6; L 44-45, P 45-50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:charset "n";
-  utd:maxLength 18;
-  utd:minLength 1;
-  utd:oldName "Rate per unit";
-  utd:representation "n..18";
+  utd:representation [];
   utd:sourcePage 98;
   utd:status "active";
   utd:tag 5420 .

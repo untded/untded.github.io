@@ -6,13 +6,11 @@
   schema:description "Date when a vessel, vehicle or other means of transport was registered by a competent authority.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Registration.Date Time";
+  utd:bridge [];
   utd:bridges "MAR: IMO/FAL 1";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "an";
-  utd:maxLength 19;
-  utd:minLength 1;
-  utd:representation "an..19";
+  utd:representation [];
   utd:sourcePage 40;
   utd:status "active";
   utd:tag 2063 .

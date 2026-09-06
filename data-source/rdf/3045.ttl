@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3045> a utd:TradeDataElement;
+  skos:altLabel "Party name format, coded";
   schema:description "Code specifying the representation of a party name.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Party. Name Format.Code";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 3;
-  utd:minLength 1;
-  utd:oldName "Party name format, coded";
-  utd:representation "an..3";
+  utd:representation [];
   utd:sourcePage 51;
   utd:status "active";
   utd:tag 3045 .

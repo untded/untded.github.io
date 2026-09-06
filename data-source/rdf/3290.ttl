@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3290> a utd:TradeDataElement;
+  skos:altLabel "Documentary credit drawee";
   schema:description "Name and address of party on whom any draft is to be drawn from the documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Drawee. Party Identification.Text";
+  utd:bridge [], [];
   utd:bridges "SWIFT: an..35x2 UNLK: an..35x2; L 25-26, P 45-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 512;
-  utd:minLength 1;
-  utd:oldName "Documentary credit drawee";
-  utd:representation "an..512";
+  utd:representation [];
   utd:sourcePage 64;
   utd:status "active";
   utd:tag 3290 .

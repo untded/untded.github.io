@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,31 @@
   "sourcePage": 104,
   "name": "Width. Measure",
   "description": "To specify the value of a width dimension.",
-  "representation": "n..15",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 15,
-  "oldName": "Width dimension",
-  "bridges": "UNLK: L 36-46, P 09-44"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..15",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 15
+  },
+  "altLabel": [
+    "Width dimension"
+  ],
+  "bridges": "UNLK: L 36-46, P 09-44",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 36-46, P 09-44",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 36,
+          "lineTo": 46,
+          "posFrom": 9,
+          "posTo": 44
+        }
+      ]
+    }
+  ]
 }

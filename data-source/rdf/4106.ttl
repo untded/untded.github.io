@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4106> a utd:TradeDataElement;
+  skos:altLabel "Freight prepayment confirmation";
   schema:description "Request from consignor to carrier for confirmation that freight has been prepaid, and carrier' s confirmation thereof.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Prepayment Confirmation.Text";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Freight prepayment confirmation";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 76;
   utd:status "active";
   utd:tag 4106 .

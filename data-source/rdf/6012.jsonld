@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,11 +71,47 @@
   "sourcePage": 101,
   "name": "Consignment. Gross Weight.Measure",
   "description": "Total gross weight (mass) of all goods items referred to as one consignment including packaging but excluding any transport equipment.",
-  "representation": "n..16",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 16,
-  "oldName": "Consignment gross weight",
-  "businessTerm": "Consignment gross weight; Total gross weight",
-  "bridges": "AWB: n..7; L 46, P 13-19 CIMP: (600):n..7 MAR: IMO/FAL 2, 7 UNLK: L 34 P 64-71"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..16",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 16
+  },
+  "altLabel": [
+    "Consignment gross weight",
+    "Consignment gross weight; Total gross weight"
+  ],
+  "bridges": "AWB: n..7; L 46, P 13-19 CIMP: (600):n..7 MAR: IMO/FAL 2, 7 UNLK: L 34 P 64-71",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "n..7; L 46, P 13-19"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "CIMP",
+      "detail": "(600):n..7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "MAR",
+      "detail": "IMO/FAL 2, 7"
+    },
+    {
+      "@type": "Bridge",
+      "scheme": "UNLK",
+      "detail": "L 34 P 64-71",
+      "zone": [
+        {
+          "@type": "UnlkZone",
+          "lineFrom": 34,
+          "lineTo": 34,
+          "posFrom": 64,
+          "posTo": 71
+        }
+      ]
+    }
+  ]
 }

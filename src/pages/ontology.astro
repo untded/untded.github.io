@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { loadVocabulary } from '../lib/vocabulary'
+import { loadElements } from '../lib/data'
+import { href } from '../lib/site'
+
+const vocab = loadVocabulary()
+const elements = loadElements()
+const withBridges = elements.filter((e) => e.bridges).length
+const withRepr = elements.filter((e) => e.representation).length
+
+const classRows = [...vocab.classes].sort((a, b) => a.term.localeCompare(b.term))
+const groupOrder = ['element-level', 'category-level', 'dataset-level', 'vocabulary definitions']
+const groups = groupOrder
+  .map((g) => ({ g, terms: vocab.terms.filter((t) => t.group === g) }))
+  .filter((g) => g.terms.length > 0)
+const chip = 'rounded-md border border-line bg-mist px-2 py-1 font-mono text-xs text-body'
+const ttlExample = `<https://www.untded.org/elements/1004> a utd:TradeDataElement ;
+    utd:tag 1004 ;
+    schema:name "Document. Identifier" ;
+    utd:representation [ a utd:Representation ;
+        utd:printedForm "an..35" ;
+        utd:charset "an" ;
+        utd:minLength 1 ;
+        utd:maxLength 35 ] ;
+    utd:bridge [ a utd:Bridge ;
+        utd:scheme "UNLK" ;
+        utd:detail "an..17 L 04, P 63-80" ;
+        utd:zone [ a utd:UnlkZone ;
+            utd:lineFrom 4 ; utd:lineTo 4 ;
+            utd:posFrom 63 ; utd:posTo 80 ;
+            utd:fieldFormat "an..17" ] ] .`
+---
+
+<BaseLayout
+  title="Ontology — UN/TDED"
+  description="The RDF vocabulary of the UN Trade Data Elements Directory: classes, properties, prefixes, and the machine-readable downloads."
+  alternates={[
+    { type: 'application/ld+json', href: href('/data/untded.jsonld') },
+    { type: 'text/turtle', href: href('/data/untded.ttl') },
+  ]}
+>
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Registry data</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The UNTDED ontology</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      Every element of the directory is published as linked data under the namespace{' '}
+      <span class="font-mono text-sm">{vocab.namespace}</span>. The vocabulary — classes,
+      properties, prefixes — is declared once in the dataset and everything on this page is
+      generated from that declaration. Elements carry their representation as a structured
+      node, their locations as bridge nodes (with line and position zones on the UN layout
+      key), retired elements link to their replacement, and old names and business terms
+      appear as alternative labels.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      <span class={chip}>{elements.length} elements</span>
+      <span class={chip}>{withRepr} structured representations</span>
+      <span class={chip}>{withBridges} bridged elements</span>
+      <span class={chip}>{classRows.length} classes</span>
+      <span class={chip}>{vocab.terms.length} context terms</span>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Downloads</h2>
+      <div class="mt-3 grid gap-3 sm:grid-cols-2">
+        <a href={href('/data/untded.ttl')} class="rounded-md border border-line bg-paper p-4 transition-colors hover:border-un/60">
+          <p class="font-semibold text-ink">Whole directory — Turtle</p>
+          <p class="mt-1 font-mono text-xs text-body/80">/data/untded.ttl</p>
+        </a>
+        <a href={href('/data/untded.jsonld')} class="rounded-md border border-line bg-paper p-4 transition-colors hover:border-un/60">
+          <p class="font-semibold text-ink">Whole directory — JSON-LD</p>
+          <p class="mt-1 font-mono text-xs text-body/80">/data/untded.jsonld</p>
+        </a>
+        <a href={href('/ns/untded-context.jsonld')} class="rounded-md border border-line bg-paper p-4 transition-colors hover:border-un/60">
+          <p class="font-semibold text-ink">JSON-LD context</p>
+          <p class="mt-1 font-mono text-xs text-body/80">/ns/untded-context.jsonld</p>
+        </a>
+        <a href={href('/download')} class="rounded-md border border-line bg-paper p-4 transition-colors hover:border-un/60">
+          <p class="font-semibold text-ink">All artifacts</p>
+          <p class="mt-1 font-mono text-xs text-body/80">CSV, JSON, RDF, source PDF</p>
+        </a>
+      </div>
+      <p class="mt-3 text-sm text-body">
+        Every element page also serves its own slice at{' '}
+        <span class="font-mono text-xs">/elements/&lt;tag&gt;/data.ttl</span> and{' '}
+        <span class="font-mono text-xs">data.jsonld</span> — see any element, e.g.{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>.
+        How to consume the context:{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/docs/context')}>context guide</a>.
+      </p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Prefixes</h2>
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Prefix</th>
+              <th class="px-4 py-2">Namespace IRI</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(vocab.prefixes).map(([prefix, iri]) => (
+              <tr class="border-b border-line/60 last:border-0">
+                <td class="px-4 py-2 font-mono text-body">{prefix}</td>
+                <td class="px-4 py-2 font-mono text-xs text-body">{iri}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Classes</h2>
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Class</th>
+              <th class="px-4 py-2">Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            {classRows.map((c) => (
+              <tr class="border-b border-line/60 align-top last:border-0">
+                <td class="px-4 py-2 font-mono whitespace-nowrap text-body">{c.term}</td>
+                <td class="px-4 py-2 text-body">{c.comment}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {groups.map(({ g, terms }) => (
+      <section class="mt-10">
+        <h2 class="text-xl font-semibold tracking-tight text-ink capitalize">{g.replace('-', ' ')}</h2>
+        <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+                <th class="px-4 py-2">Term</th>
+                <th class="px-4 py-2">IRI</th>
+                <th class="px-4 py-2">Domain</th>
+                <th class="px-4 py-2">Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              {terms.map((t) => (
+                <tr class="border-b border-line/60 align-top last:border-0">
+                  <td class="px-4 py-2 font-mono whitespace-nowrap text-body">{t.term}</td>
+                  <td class="px-4 py-2 font-mono text-xs text-body">{t.iri}</td>
+                  <td class="px-4 py-2 font-mono text-xs text-body">{t.domain ?? '—'}</td>
+                  <td class="px-4 py-2 text-body">{t.comment ?? '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <section class="mt-10">
+      <h2 class="text-xl font-semibold tracking-tight text-ink">One element, as Turtle</h2>
+      <pre class="mt-3 overflow-x-auto rounded-md border border-line bg-mist p-4 font-mono text-xs leading-relaxed text-body"><code>{ttlExample}</code></pre>
+      <p class="mt-3 text-sm text-body">
+        The{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/docs/ontology')}>ontology guide</a>{' '}
+        walks through the model; the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/docs/provenance')}>provenance note</a>{' '}
+        documents how the data behind it was extracted and verified.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

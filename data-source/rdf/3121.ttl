@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3121> a utd:TradeDataElement;
+  skos:altLabel "Load indicator, coded",
+    "Loader indicator, coded";
   schema:description "To identify the type of party that is performing the loading of transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment Loading. Party.Identifier";
+  utd:bridge [];
   utd:bridges "CIM: (CIM 28) L32, P07 or L33, P07";
-  utd:businessTerm "Loader indicator, coded";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Load indicator, coded";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 55;
   utd:status "active";
   utd:tag 3121 .

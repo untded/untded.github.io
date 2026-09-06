@@ -8,10 +8,7 @@
   schema:name "Time. Date Time";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 9;
-  utd:minLength 9;
-  utd:representation "n9";
+  utd:representation [];
   utd:sourcePage 37;
   utd:status "active";
   utd:tag 2003 .

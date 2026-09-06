@@ -8,6 +8,9 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
+    "Representation": "utd:Representation",
+    "Bridge": "utd:Bridge",
+    "UnlkZone": "utd:UnlkZone",
     "Category": "utd:Category",
     "CategoryScheme": "utd:CategoryScheme",
     "Dataset": "schema:Dataset",
@@ -22,6 +25,7 @@
     "elementCount": "utd:elementCount",
     "tag": "utd:tag",
     "representation": "utd:representation",
+    "printedForm": "utd:printedForm",
     "charset": "utd:charset",
     "minLength": "utd:minLength",
     "maxLength": "utd:maxLength",
@@ -29,7 +33,18 @@
     "status": "utd:status",
     "oldName": "utd:oldName",
     "businessTerm": "utd:businessTerm",
+    "altLabel": "skos:altLabel",
+    "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
+    "bridge": "utd:bridge",
+    "scheme": "utd:scheme",
+    "detail": "utd:detail",
+    "zone": "utd:zone",
+    "lineFrom": "utd:lineFrom",
+    "lineTo": "utd:lineTo",
+    "posFrom": "utd:posFrom",
+    "posTo": "utd:posTo",
+    "fieldFormat": "utd:fieldFormat",
     "sourcePage": "utd:sourcePage",
     "category": "utd:category",
     "tagRange": "utd:tagRange",
@@ -56,10 +71,22 @@
   "sourcePage": 104,
   "name": "Transport Equipment. Tare Weight.Measure",
   "description": "Weight (mass) of transport equipment including permanent equipment but excluding goods and loose accessories.",
-  "representation": "n..5",
-  "charset": "n",
-  "minLength": 1,
-  "maxLength": 5,
-  "oldName": "Container tare weight",
-  "bridges": "AWB: L 33-44, P 13-19"
+  "representation": {
+    "@type": "Representation",
+    "printedForm": "n..5",
+    "charset": "n",
+    "minLength": 1,
+    "maxLength": 5
+  },
+  "altLabel": [
+    "Container tare weight"
+  ],
+  "bridges": "AWB: L 33-44, P 13-19",
+  "bridge": [
+    {
+      "@type": "Bridge",
+      "scheme": "AWB",
+      "detail": "L 33-44, P 13-19"
+    }
+  ]
 }

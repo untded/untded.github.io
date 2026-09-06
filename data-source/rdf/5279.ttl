@@ -1,18 +1,16 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5279> a utd:TradeDataElement;
+  skos:altLabel "Duty/tax/fee rate identification";
   schema:description "Code specifying a rate of a duty or tax or fee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax Or Fee. Rate.Code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 7;
-  utd:minLength 1;
-  utd:oldName "Duty/tax/fee rate identification";
-  utd:representation "an..7";
+  utd:representation [];
   utd:sourcePage 94;
   utd:status "active";
   utd:tag 5279 .

@@ -8,10 +8,7 @@
   schema:name "Event. Sequence.Identifier";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "add";
-  utd:charset "n";
-  utd:maxLength 5;
-  utd:minLength 1;
-  utd:representation "n..5";
+  utd:representation [];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1008 .

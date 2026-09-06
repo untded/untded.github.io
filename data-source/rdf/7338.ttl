@@ -1,20 +1,19 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7338> a utd:TradeDataElement;
+  skos:altLabel "Article batch number",
+    "Lot number";
   schema:description "Reference number assigned by the manufacturer to designate grouping of product within the same production batch.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Product. Production Batch.Identifier";
+  utd:bridge [];
   utd:bridges "UNLK: L 36-46, P 09-44";
-  utd:businessTerm "Lot number";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:charset "an";
-  utd:maxLength 17;
-  utd:minLength 1;
-  utd:oldName "Article batch number";
-  utd:representation "an..17";
+  utd:representation [];
   utd:sourcePage 115;
   utd:status "active";
   utd:tag 7338 .

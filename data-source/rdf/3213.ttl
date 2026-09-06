@@ -1,19 +1,18 @@
 @prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3213> a utd:TradeDataElement;
+  skos:altLabel "Documentary credit expiry place, coded";
   schema:description "To identify the place at which a documentary credit expires";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Expiry Location.Identifier";
+  utd:bridge [], [];
   utd:bridges "SWIFT: an..29 UNLK: L 08, P 63-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:charset "an";
-  utd:maxLength 35;
-  utd:minLength 1;
-  utd:oldName "Documentary credit expiry place, coded";
-  utd:representation "an..35";
+  utd:representation [];
   utd:sourcePage 60;
   utd:status "active";
   utd:tag 3213 .
