@@ -133,12 +133,28 @@ it("carries the full original documentation", () => {
   expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
 })
 
-  it('ships the favicon set (SVG emblem + PNG fallbacks)', () => {
+  it('ships the favicon set (official UN emblem, light + dark SVG, PNG fallbacks)', () => {
     expect(readFileSync(`${dist}/favicon.svg`, 'utf8')).toContain('<svg')
+    expect(readFileSync(`${dist}/favicon-dark.svg`, 'utf8')).toContain('#4bccff')
     for (const f of ['favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {
       expect(existsSync(`${dist}/${f}`), f).toBe(true)
     }
-    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('apple-touch-icon')
+    const html = readFileSync(`${dist}/index.html`, 'utf8')
+    expect(html).toContain('apple-touch-icon')
+    expect(html).toContain('favicon-dark.svg')
+  })
+
+  it('shows the UN emblem in the header (light and dark variants)', () => {
+    const html = readFileSync(`${dist}/index.html`, 'utf8')
+    expect(html).toContain('img/un-logo-light.svg')
+    expect(html).toContain('img/un-logo-dark.svg')
+    expect(existsSync(`${dist}/img/un-logo-dark.svg`)).toBe(true)
+  })
+
+  it('never opens a dialog from copy buttons', () => {
+    const html = readFileSync(`${dist}/elements/1128/index.html`, 'utf8')
+    expect(html).not.toContain('window.prompt')
+    expect(html).toContain('execCommand')
   })
 
   it('keeps the no-JS directory sample lean and signposts categories', () => {
