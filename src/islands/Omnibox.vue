@@ -106,7 +106,7 @@ async function onSearchEvent(e: CustomEvent<string>) {
         />
         <ul class="max-h-80 overflow-auto" role="listbox">
           <li v-if="query && results.length === 0" class="px-4 py-6 text-center text-sm text-body">
-            No element matches “{{ query }}”. Try a tag such as <span class="font-mono">1001</span>, or a name fragment.
+            No element matches “{{ query }}”. Search by tag, e.g. <span class="font-mono">1001</span>, or by name.
           </li>
           <li
             v-for="(r, i) in results"

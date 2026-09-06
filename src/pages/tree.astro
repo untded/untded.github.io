@@ -17,8 +17,8 @@ const categories = loadCategories().map(({ k, range, label }) => ({ k, range, la
     <p class="mt-2 max-w-2xl text-body">
       The 2005 entry names are dotted structures — object class, property,
       representation (<span class="font-mono text-sm">Document. Type.Code</span>).
-      This tree groups every element by category, then by object class, so the
-      vocabulary reads the way it is designed. Prefer a flat list? Use the{' '}
+      This tree groups every element by category, then by object class,
+      following the structure of the names. For a flat list, use the{' '}
       <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
     </p>
 
@@ -28,7 +28,7 @@ const categories = loadCategories().map(({ k, range, label }) => ({ k, range, la
 
     <noscript>
       <p class="mt-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
-        The tree needs JavaScript — the full table is in the{' '}
+        The tree view requires JavaScript; the complete table is in the{' '}
         <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
       </p>
     </noscript>
