@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6300> a utd:TradeDataElement;
   schema:description "The measure of the overall size of a vessel determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969.";

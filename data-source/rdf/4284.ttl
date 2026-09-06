@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4284> a utd:TradeDataElement;
   schema:description "Instructions given and declarations made by the sender to the carrier concerning Customs, insurance, and other formalities.";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4130> a utd:TradeDataElement;
   schema:description "Proof that the document has been signed or otherwise authenticated by the carrier or his agent which, in combination with the sender's authentication, validates the contract of carriage.";

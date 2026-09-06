@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/1095> a utd:TradeDataElement;
   schema:description "Export licence classification for control purposes, for example as per the Wassenaar agreement concerning trade in weapons and dual-use goods and technologies.";

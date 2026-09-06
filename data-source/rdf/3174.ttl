@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3174> a utd:TradeDataElement;
   schema:description "Name, and optionally address, of the party owning, operating or controlling the transport equipment, for example container.";

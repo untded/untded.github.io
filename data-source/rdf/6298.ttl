@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6298> a utd:TradeDataElement;
   schema:description "Actual total weight (mass) of the transport means and the goods loaded on it.";

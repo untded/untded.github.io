@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6092> a utd:TradeDataElement;
   schema:description "Weight (mass) of all goods including packing but excluding carrier's equipment as declared in a document.";

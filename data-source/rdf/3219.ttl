@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3219> a utd:TradeDataElement;
   schema:description "To identify the country where a consignment is off-loaded from the means of transport used for its original exportation";

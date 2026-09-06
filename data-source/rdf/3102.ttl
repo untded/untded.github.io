@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3102> a utd:TradeDataElement;
   schema:description "Name of a place to which a transport charges tariff applies or where freight and other related charges are to be or have been incurred.";

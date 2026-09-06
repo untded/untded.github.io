@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3283> a utd:TradeDataElement;
   schema:description "To identify the name and address of the party where goods are to be, or have been, taken over by a carrier such as the place where a container is picked-up.";

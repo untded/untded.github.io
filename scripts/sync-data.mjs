@@ -13,6 +13,7 @@ execSync('bundle exec bin/export', { cwd: datasetDir, stdio: 'inherit' })
 const outDir = fileURLToPath(new URL('../data-source/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 cpSync(`${datasetDir}/derived/elements.json`, `${outDir}/elements.json`)
+cpSync(`${datasetDir}/derived/categories.json`, `${outDir}/categories.json`)
 for (const f of ['untded.jsonld', 'untded.ttl']) {
   cpSync(`${datasetDir}/derived/${f}`, `${outDir}/${f}`)
 }
@@ -25,4 +26,4 @@ mkdirSync(pdfDir, { recursive: true })
 for (const pdf of ['UNTDED2005.pdf']) {
   cpSync(`${datasetDir}/../references/${pdf}`, `${pdfDir}${pdf}`)
 }
-console.log('synced elements.json, untded.jsonld, untded.ttl, rdf/, pdf/')
+console.log('synced elements.json, categories.json, untded.jsonld, untded.ttl, rdf/, pdf/')

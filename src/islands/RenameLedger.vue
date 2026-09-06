@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
     :aria-label="`Rename example: tag ${lines[index].tag}, ${lines[index].from}, renamed to ${lines[index].to}`"
   >
     <div class="border-b border-line px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-body">
-      1993 <span class="mx-1 text-un">→</span> 2005 · the renaming, live from the ledger
+      1993 <span class="mx-1 text-un">→</span> 2005 · element names in both editions
     </div>
     <Transition name="ledger" mode="out-in">
       <div :key="index" class="grid gap-1 px-4 py-4 sm:grid-cols-[auto_1fr] sm:items-baseline sm:gap-x-4">

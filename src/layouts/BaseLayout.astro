@@ -32,10 +32,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <script is:inline>
-      // no-flash theme bootstrap: persisted choice, else system preference
-      const t = localStorage.getItem('untded-theme')
-      const dark = t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
-      document.documentElement.classList.toggle('dark', dark)
+      // no-flash theme bootstrap: persisted choice, else system preference.
+      // Re-applied after every view-transition swap: ClientRouter replaces
+      // the document element, dropping the class this script set on load.
+      const applyTheme = () => {
+        const t = localStorage.getItem('untded-theme')
+        const dark = t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.classList.toggle('dark', dark)
+      }
+      applyTheme()
+      document.addEventListener('astro:after-swap', applyTheme)
     </script>
     <title>{title}</title>
     <meta name="description" content={description} />

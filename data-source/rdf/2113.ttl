@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2113> a utd:TradeDataElement;
   schema:description "Date and optionally time on which a consignment of goods will be or have been discharged or unloaded from a means of transport..";

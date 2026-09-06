@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { href, REFERENCES_REPO_URL } from '../../lib/site'
+import { href, REFERENCES_REPO_URL, sourcePdfUrl } from '../../lib/site'
 
 const sections = [
   {
@@ -59,7 +59,7 @@ const sections = [
     </div>
 
     <div class="mt-8">
-      <a href={href('/pdf/UNTDED2005.pdf')} class="block rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      <a href={sourcePdfUrl()} class="block rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Read the source PDF ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The full publication — <span class="font-mono text-xs">UNTDED2005.pdf</span> (132 pp,

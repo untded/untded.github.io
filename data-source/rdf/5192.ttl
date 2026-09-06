@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5192> a utd:TradeDataElement;
   schema:description "Description in plain language of an item to be deducted from the article items total in a commercial invoice.";

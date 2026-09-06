@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7124> a utd:TradeDataElement;
   schema:description "United Nations Dangerous Goods Identifier (UNDG) is the unique serial number assigned within the United Nations to substances and articles contained in a list of the dangerous goods most commonly carried.";

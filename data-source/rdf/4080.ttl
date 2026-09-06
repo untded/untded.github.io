@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4080> a utd:TradeDataElement;
   schema:description "Instructions on where or how specified packages or containers are to be loaded on a means of transport.";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3234> a utd:TradeDataElement;
   schema:description "Name and address of a bank, other than an issuing bank, which is acting on behalf of the applicant of a documentary credit";

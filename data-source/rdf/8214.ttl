@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8214> a utd:TradeDataElement;
   schema:description "Indicator whether or not a change of means of transport has taken, or will take, place.";

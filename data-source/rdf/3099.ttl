@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3099> a utd:TradeDataElement;
   schema:description "To identify the seaport, airport, freight terminal, rail station or other location where the goods were first loaded onto the means of transport being utilised for their carriage.";

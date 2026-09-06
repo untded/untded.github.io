@@ -2,7 +2,7 @@
 import '../../styles/filter.css'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import DirectoryFilter from '../../islands/DirectoryFilter.vue'
-import { loadCategories as CATEGORY_RANGES } from '../../lib/element'
+import { categoryOf, loadCategories as CATEGORY_RANGES } from '../../lib/element'
 import { loadElements } from '../../lib/data'
 import { href } from '../../lib/site'
 
@@ -27,7 +27,7 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
     </p>
 
     <div class="mt-6">
-      <DirectoryFilter client:visible="idle" categories={categories} changes={changes} />
+      <DirectoryFilter client:visible categories={categories} changes={changes} />
     </div>
 
     <noscript>
@@ -70,7 +70,7 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
                   </td>
                   <td class="font-mono text-xs text-body">{e.representation?.raw ?? '—'}</td>
                   <td class="font-mono text-xs text-body">{e.change_tag}</td>
-                  <td class="font-mono text-xs text-body">{Math.floor(e.tag / 1000)}000</td>
+                  <td class="font-mono text-xs text-body">{categoryOf(e.tag).range}</td>
                 </tr>
               ))
             }

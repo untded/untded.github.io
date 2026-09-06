@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4112> a utd:TradeDataElement;
   schema:description "Reference to the general conditions of contract under which an Insurance certificate is issued , and/or wording of the specific conditions pertaining to the shipment in question.";
