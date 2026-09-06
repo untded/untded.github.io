@@ -245,6 +245,13 @@ it("carries the full original documentation", () => {
     expect(html).toContain('/docs/alignment-edifact')
     expect(html).toContain('Machine formats:')
     expect(html).toContain('data.ttl')
+
+    const differs = readFileSync(`${dist}/elements/2000/index.html`, 'utf8')
+    expect(differs).toContain('EDED 2000')
+    expect(differs).toContain('representation differs')
+
+    const unmapped = readFileSync(`${dist}/elements/9011/index.html`, 'utf8')
+    expect(unmapped).not.toContain('EDED 9011')
   })
 
   it('serves the JSON-LD context at the stable URL', () => {
