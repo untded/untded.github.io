@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/4248> a utd:TradeDataElement;
   schema:description "Restriction or condition to be fulfilled before goods can be released to the consignee or his agent.";

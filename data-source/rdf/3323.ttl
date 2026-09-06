@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3323> a utd:TradeDataElement;
   schema:description "To identify the place or port at which the cargo is loaded on a means of transport according to the transport contract. The goods may or may not be loaded on the main means of transport at this place or port";

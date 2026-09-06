@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5044> a utd:TradeDataElement;
   schema:description "Specification of any additional charges, dues or deductions, expressed as a percentage.";

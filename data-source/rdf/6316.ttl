@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6316> a utd:TradeDataElement;
   schema:description "Measurement normally arrived at by multiplying the maximum length, width and height of pieces or package or transport equipment. Also known as cube.";

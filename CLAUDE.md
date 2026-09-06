@@ -13,9 +13,9 @@ GitHub Pages (custom domain www.untded.org) from `main` at https://untded.github
 ## Commands
 
 ```sh
-npm run sync-data   # SSOT pull from ../untded-2005 -> data-source/elements.json (commit the result)
+npm run sync-data   # SSOT pull from ../untded-2005 -> data-source/{elements,categories}.json, rdf/, pdf/ (commit the result)
 npm run build       # build-data + astro build + pagefind  (everything regenerates)
-npm test            # lib specs always; page contracts need dist/ (they skip otherwise)
+npm test            # globalSetup rebuilds when dist/ is stale, so contracts can never pass on an old build
 npm run dev
 ```
 
@@ -43,8 +43,10 @@ npm run dev
   literal `@utility` declarations in main.css.
 - Page contracts (`src/lib/site-contracts.pages.spec.ts`) run against
   `dist/`: every element route, sitemap completeness, payload budgets,
-  the mandate citation on /about, retired→replacement links. Keep them
-  green after any template change.
+  the mandate citation on /about, retired→replacement links, the
+  whitespace-collapse contract, the vocabulary closure contract (used
+  utd: terms must be declared in the graph). Keep them green after any
+  template change.
 - Do not use the UN emblem or name-as-logo anywhere — attribution text
   only (see /about licensing section).
 - All changes to `main` via PR; never push tags or commit to main directly.

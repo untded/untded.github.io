@@ -1,6 +1,6 @@
 ---
 import type { Provenance } from '../lib/data'
-import { href } from '../lib/site'
+import { sourcePdfUrl } from '../lib/site'
 
 interface Props {
   provenance: Provenance
@@ -12,7 +12,7 @@ const { provenance } = Astro.props
   <h2 class="mb-2 text-xs font-semibold uppercase tracking-wider text-body">Source</h2>
   <a
     class="font-mono text-xs text-un-deep underline decoration-un/50 hover:text-un-deep"
-    href={href(`/pdf/UNTDED2005.pdf#page=${provenance.page}`)}
+    href={sourcePdfUrl(provenance.page)}
   >
     ECE/TRADE/362, page {provenance.page} ↗
   </a>

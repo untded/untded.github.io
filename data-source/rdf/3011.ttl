@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3011> a utd:TradeDataElement;
   schema:description "Identifier of the location of a customs office at which a payment is to be or has been made.";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2350> a utd:TradeDataElement;
   schema:description "Period of time in which a means of transport stays, or is to stay, in a specific port or other location expressed as startdate and end date in figures and words.";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6046> a utd:TradeDataElement;
   schema:description "Total length in a piece of transport equipment over which the complete width and height is needed for loading goods items or consignments.";

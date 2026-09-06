@@ -20,7 +20,6 @@ export interface Provenance {
 export interface ElementRecord {
   tag: number
   name: string | null
-  name_fr: string | null
   description: string | null
   representation: Representation | null
   change_tag: string
@@ -29,7 +28,6 @@ export interface ElementRecord {
   business_term: string | null
   notes: string | null
   bridges: string | null
-  code_list: { reference: string } | null
   provenance: Provenance
 }
 

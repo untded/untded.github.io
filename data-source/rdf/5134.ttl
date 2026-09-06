@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5134> a utd:TradeDataElement;
   schema:description "Coded description of a rate class for transport equipment such as a Unit Load Device (ULD) rate class.";

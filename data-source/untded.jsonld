@@ -59,6 +59,11 @@
       "comment": "The ordered scheme of the nine tag-range categories."
     },
     {
+      "@id": "https://www.untded.org/ns/untded#elementCount",
+      "@type": "rdf:Property",
+      "comment": "The number of member elements."
+    },
+    {
       "@id": "https://www.untded.org/ns/untded#tag",
       "@type": "rdf:Property",
       "comment": "The four-digit unique identifier of the data element.",
@@ -161,11 +166,6 @@
       "domain": {
         "@id": "https://www.untded.org/ns/untded#Category"
       }
-    },
-    {
-      "@id": "https://www.untded.org/ns/untded#elementCount",
-      "@type": "rdf:Property",
-      "comment": null
     },
     {
       "@id": "https://www.untded.org/dataset/untded-2005",

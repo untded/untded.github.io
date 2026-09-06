@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/6074> a utd:TradeDataElement;
   schema:description "To specify the confidence that a true value falls within a certain confidence interval expressed as a percentage.";

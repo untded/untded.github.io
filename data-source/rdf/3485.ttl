@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3485> a utd:TradeDataElement;
   schema:description "To identify the nationality of a an object, for example the nationality of a person or the nationality of a means of transport.";

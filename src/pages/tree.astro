@@ -23,7 +23,7 @@ const categories = loadCategories().map(({ k, range, label }) => ({ k, range, la
     </p>
 
     <div class="mt-6">
-      <TreeBrowser client:visible="idle" categories={categories} />
+      <TreeBrowser client:visible categories={categories} />
     </div>
 
     <noscript>

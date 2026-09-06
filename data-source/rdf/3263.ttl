@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3263> a utd:TradeDataElement;
   schema:description "A country through which a goods or passengers are routed between the country of original departure and final destination.";

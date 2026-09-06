@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2060> a utd:TradeDataElement;
   schema:description "Number of days within the credit validity period, counted from the date of issuance of the negotiable document, during which documents can be presented in figures and words.";

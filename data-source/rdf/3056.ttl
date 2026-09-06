@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3056> a utd:TradeDataElement;
   schema:description "Concatenation of the name of all ports of call or other locations of an itinerary of a means of transport.";

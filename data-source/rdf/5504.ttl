@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5504> a utd:TradeDataElement;
   schema:description "Self assessed amount of duty/tax/fee (includes all types of charges and duties) due and amount of reduction (if applicable). Assessed per duty/tax/fee type by item and/or declaration.";

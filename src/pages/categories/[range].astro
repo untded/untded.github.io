@@ -35,7 +35,7 @@ const categoryJsonld = jsonldNode(`${origin}/categories/${category.range}`)
   description={`TDED category ${category.range} (${category.label}) of UNTDED 2005: ${elements.length} data elements.`}
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
-    <p class="font-mono text-sm tabular-nums text-body">{category.range}</p>
+    <p class="font-mono text-sm tabular-nums text-body">{category.range} · section {category.section}</p>
     <div class={`mt-2 h-1.5 w-24 rounded-full bg-cat-${category.k}`} aria-hidden="true"></div>
     <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink">{category.label}</h1>
     <div class="mt-2 max-w-md">

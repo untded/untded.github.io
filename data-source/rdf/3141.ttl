@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3141> a utd:TradeDataElement;
   schema:description "Identifier of party which makes a declaration to an official body or - where legally permitted - in whose name, or on whose behalf, a declaration to an official body is made.";

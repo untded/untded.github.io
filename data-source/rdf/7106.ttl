@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/7106> a utd:TradeDataElement;
   schema:description "Temperature, in Celsius, determined by the closed cup test as per ISO 1523:1973 where a vapour is given off that can be ignited.";

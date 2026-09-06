@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5316> a utd:TradeDataElement;
   schema:description "Invoice or other price (e.g. selling price, price of identical goods) to be used as the basis for determining the value for Customs purposes of those goods in a consignment which are subject to the same Customs procedure, and have the same tariff/statistical heading, country and duty regime.";

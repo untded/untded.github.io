@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8250> a utd:TradeDataElement;
   schema:description "To identify the means of transport used at the time of presentation (departure for export, arrival fro import) of the consignment to a Customs office in the context of a goods declaration.";

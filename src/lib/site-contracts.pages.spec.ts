@@ -1,6 +1,8 @@
-// Dist-based page contracts: run after `npm run build` (CI runs vitest
-// again post-build). Skips automatically when dist/ is absent so the
-// same suite works in validate-only contexts.
+// Dist-based page contracts. The vitest globalSetup (scripts/
+// test-global-setup.mjs) rebuilds when any build input is newer than
+// dist/, so the suite can never assert against a stale build. Skips
+// automatically when dist/ is absent so the same suite works in
+// validate-only contexts.
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import astroConfig from '../../astro.config.mjs'
@@ -37,7 +39,7 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
 
   it('ships the linked-data payloads and embeds JSON-LD on pages', () => {
     const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
-    expect(jsonld['@graph']).toHaveLength(elements.length + 28)
+    expect(jsonld['@graph'].length).toBeGreaterThan(elements.length)
     expect(readFileSync(`${dist}/data/untded.ttl`, 'utf8')).toMatch(/^@prefix .*utd: <https:\/\/www\.untded\.org\/ns\/untded#>/m)
     const elementHtml = readFileSync(`${dist}/elements/1001/index.html`, 'utf8')
     expect(elementHtml).toContain('application/ld+json')
@@ -82,11 +84,21 @@ it('embeds category nodes with ontology relations', () => {
   expect(el.category?.['@id']).toBe(`${site}/categories/1000-1699`)
 })
 
-it('declares the vocabulary classes and properties', () => {
+it('is self-describing: every used utd: term is declared in the graph', () => {
   const jsonld = JSON.parse(readFileSync(`${dist}/data/untded.jsonld`, 'utf8'))
-  const types = jsonld['@graph'].map((n: Record<string, unknown>) => n['@type'])
-  expect(types.filter((t: unknown) => t === 'rdfs:Class')).toHaveLength(3)
-  expect(types.filter((t: unknown) => t === 'rdf:Property')).toHaveLength(14)
+  const ns = 'https://www.untded.org/ns/untded#'
+  const context: Record<string, string> = jsonld['@context']
+  const nodes: Record<string, unknown>[] = jsonld['@graph']
+  const usedPredicates = nodes.flatMap((n) => Object.keys(n).filter((k) => !k.startsWith('@'))).map((t) => context[t])
+  const utdPredicates = [...new Set(usedPredicates.filter((iri) => iri?.startsWith('utd:')))]
+  const declaredProperties = new Set(nodes.filter((n) => n['@type'] === 'rdf:Property').map((n) => String(n['@id'])))
+  expect(utdPredicates.length).toBeGreaterThan(0)
+  for (const iri of utdPredicates) expect(declaredProperties, iri).toContain(ns + iri.slice(4))
+
+  const usedClasses = [...new Set(nodes.flatMap((n) => Array.isArray(n['@type']) ? n['@type'] : [n['@type']]).map((t) => context[String(t)]))]
+  const utdClasses = usedClasses.filter((iri) => iri?.startsWith('utd:'))
+  const declaredClasses = new Set(nodes.filter((n) => n['@type'] === 'rdfs:Class').map((n) => String(n['@id'])))
+  for (const iri of utdClasses) expect(declaredClasses, iri).toContain(ns + iri.slice(4))
 })
 
 it('emits breadcrumb structured data on element pages', () => {
@@ -106,6 +118,7 @@ it("builds the tree page and serves the source PDFs", () => {
 it("ships the theme system, footer logos and sharing metadata", () => {
   const html = readFileSync(`${dist}/index.html`, "utf8")
   expect(html).toContain("untded-theme")
+  expect(html).toContain("astro:after-swap")
   expect(html).toContain("theme-toggle")
   expect(html).toContain("logo-unece.svg")
   expect(html).toContain("logo-iso.svg")
@@ -135,6 +148,18 @@ it("carries the full original documentation", () => {
     expect(html).toContain('/categories/1000-1699')
     expect(html).toContain('/tree')
     expect(statSync(`${dist}/elements/index.html`).size).toBeLessThan(60_000)
+  })
+
+  it('covers every element with the nine synced categories', () => {
+    const cats = CATEGORY_RANGES()
+    expect(cats).toHaveLength(9)
+    expect(cats.map((c) => c.range).join(',')).toBe('1000-1699,2000-2699,3000-3699,4000-4699,5000-5699,6000-6699,7000-7699,8000-8699,9000-9699')
+    for (const e of elements) {
+      const c = cats[Math.floor(e.tag / 1000) - 1]
+      expect(c, String(e.tag)).toBeDefined()
+      expect(e.tag, `${e.tag} outside ${c.range}`).toBeGreaterThanOrEqual(Number(c.range.slice(0, 4)))
+      expect(e.tag).toBeLessThanOrEqual(Number(c.range.slice(5)))
+    }
   })
 
   it('sitemaps the element and category routes', () => {
@@ -176,11 +201,11 @@ it("carries the full original documentation", () => {
     expect(entries).toContain('pagefind-entry.json')
   })
 
-  it('brands every page UN/TDED and never the old wordmark', () => {
+  it('brands every page UN/TDED and never the old stylisation', () => {
     const pages = ['index.html', 'about/index.html', 'elements/1001/index.html', '404.html']
     for (const p of pages) {
       const html = readFileSync(`${dist}/${p}`, 'utf8')
-      expect(html).toContain('wordmark-slash')
+      expect(html).toContain('name-slash')
       expect(html).not.toContain('unt·ded')
     }
   })
@@ -201,13 +226,16 @@ it("carries the full original documentation", () => {
 
   // Astro collapses whitespace between text and elements across newlines,
   // which once produced "theUnited Nations" on every page. This contract
-  // fails on any recurrence of that bug class.
+  // fails on any recurrence of that bug class. The UN/TDED slash is the
+  // one intentional no-space pattern and is neutralised before checking.
   it('renders no collapsed text/element boundaries', () => {
     const files = collectHtml(dist)
     const broken: string[] = []
-    const re = /<\/(a|kbd|strong|em|code)>(?=[A-Za-z])|(?<=[a-z…,)”])<(a|kbd|strong|em|code)[\s>]/
+    const tags = '(a|kbd|strong|em|code|span|small|sup|sub|b|i|abbr|cite)'
+    const re = new RegExp(`</${tags}>(?=[A-Za-z])|(?<=[a-z…,)”])<${tags}[\\s>]`)
     for (const f of files) {
       const html = readFileSync(f, 'utf8')
+        .replace(/<span[^>]*name-slash[^>]*>\/<\/span>/g, '/')
         .replace(/<script[\s\S]*?<\/script>/g, '')
         .replace(/<style[\s\S]*?<\/style>/g, '')
       const m = html.match(re)

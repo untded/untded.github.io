@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3221> a utd:TradeDataElement;
   schema:description "To identify the country from which a consignment of goods was initially exported to the importing country without any commercial transaction taking place in intermediate countries. Syn.: country whence consigned. Country of despatch: country from which goods are despatched between countries of a Customs union";

@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/2000> a utd:TradeDataElement;
   schema:description "To specify a calendar day, expressed by some combination of year, month, week, day or day of the year in figures and words.";

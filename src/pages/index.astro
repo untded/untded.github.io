@@ -41,7 +41,7 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
         <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Charges Note">Charges Note</button>
       </p>
       <div class="mt-8 max-w-3xl">
-        <RenameLedger client:visible="idle" lines={ledger} />
+        <RenameLedger client:visible lines={ledger} />
       </div>
     </div>
   </section>

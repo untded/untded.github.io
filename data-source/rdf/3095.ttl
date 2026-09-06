@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/3095> a utd:TradeDataElement;
   schema:description "To identify a port, airport or other type of location which is the next place that a means of transport is scheduled to call.";

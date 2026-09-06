@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/8028> a utd:TradeDataElement;
   schema:description "To identify a journey of a means of transport, for example voyage number, flight number, trip number.";

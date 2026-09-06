@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5150> a utd:TradeDataElement;
   schema:description "Part of 'Paid' charges utilized at the time of departure, in the case of charges paid for a specified amount.";

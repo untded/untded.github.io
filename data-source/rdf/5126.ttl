@@ -1,5 +1,6 @@
 @prefix schema: <https://schema.org/> .
 @prefix utd: <https://www.untded.org/ns/untded#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://www.untded.org/elements/5126> a utd:TradeDataElement;
   schema:description "Rate or price per unit of quantity, or percentage, on which freight charges and other charges are calculated.";
