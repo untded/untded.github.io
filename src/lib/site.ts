@@ -24,3 +24,8 @@ export const UNECE_UNCEFACT_URL = 'https://unece.org/trade/uncefact'
 export const ISO_TC154_URL = 'https://www.isotc154.org'
 export const UNECE_UNTDED_URL = 'https://unece.org/untded-iso7372'
 export const ISO_7372_URL = 'https://www.iso.org/standard/41237.html'
+
+/** The ISO/TC 154 plenary resolution on isotc154.org (the committee's own record). */
+export function tc154ResolutionUrl(id: string): string {
+  return `${ISO_TC154_URL}/decisions/urn:iso:tc154:resolution:plenary-45:${id}`
+}

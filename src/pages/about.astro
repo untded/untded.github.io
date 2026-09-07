@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import OrgCards from '../components/OrgCards.astro'
-import { href, ISO_7372_URL, UNECE_UNTDED_URL } from '../lib/site'
+import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib/site'
 ---
 
 <BaseLayout
@@ -83,27 +83,35 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL } from '../lib/site'
     <section class="mt-10 rounded-md border border-line bg-mist p-6">
       <h2 class="text-xl font-semibold tracking-tight text-ink">The mandate</h2>
       <p class="mt-2 text-sm text-body">
-        The work is mandated by <strong class="text-ink">ISO/TC 154 document
-        N1727</strong> — resolutions of the 45th plenary meeting of ISO/TC 154,
+        The work is mandated by <strong class="text-ink">
+        <a class="text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-07')}>ISO/TC 154 document
+        N1727</a></strong> — resolutions of the 45th plenary meeting of ISO/TC 154,
         DIN Berlin, 2026-08-31 and 2026-09-04 (all resolutions approved by the
         six participating members DIN, SAC, BSI, JISC, UNI, KATS):
       </p>
       <blockquote class="mt-4 border-l-4 border-un bg-paper p-4 text-sm leading-relaxed text-ink">
-        <p class="font-semibold">Resolution P-2026-07 (JWG 9) — Encouragement for exploring the use of an
-        open-source platform to support the maintenance and publication of ISO 7372</p>
+        <p class="font-semibold">
+          <a class="text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-07')}>
+            Resolution P-2026-07 (JWG 9)
+          </a>{' '}
+          — Encouragement for exploring the use of an
+          open-source platform to support the maintenance and publication of ISO 7372
+        </p>
         <p class="mt-1 text-body">
-          “ISO/TC154 resolve to explore the use of an open-source platform (such
+          "ISO/TC154 resolve to explore the use of an open-source platform (such
           as the pilot UN Gitlab environment) to support the maintenance and
           publication of ISO 7372. ISO/TC 154 also request that ISO Central
           Secretariat can share best practices on OSD and Smart Standards
-          developed that could support this work.”
+          developed that could support this work."
         </p>
       </blockquote>
       <p class="mt-3 text-sm leading-relaxed text-body">
-        Companion resolutions: <strong class="text-ink">P-2026-06</strong> (JWG 9)
-        calls for strengthened ISO- and UNECE-side expert support for ISO 7372’s
-        “timely publication before October 2028”;{' '}
-        <strong class="text-ink">P-2026-01</strong>
+        Companion resolutions:{' '}
+        <a class="font-semibold text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-06')}>P-2026-06</a>{' '}
+        (JWG 9)
+        calls for strengthened ISO- and UNECE-side expert support for ISO 7372's
+        "timely publication before October 2028";{' '}
+        <a class="font-semibold text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-01')}>P-2026-01</a>
         {' '}(JWG 1) initiates a meeting with the UNECE Secretariat on the stalled
         maintenance and publication of the UN/EDIFACT Directories (D.25A
         severely delayed). This platform — dataset, website and source code —

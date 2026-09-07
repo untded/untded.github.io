@@ -494,6 +494,13 @@ it("carries the full original documentation", () => {
     expect(html).toContain('href="/elements/1000"')
   })
 
+  it('links the mandate resolutions to isotc154.org', () => {
+    const html = readFileSync(`${dist}/about/index.html`, 'utf8')
+    expect(html).toContain('isotc154.org/decisions/urn:iso:tc154:resolution:plenary-45:P-2026-07')
+    expect(html).toContain('isotc154.org/decisions/urn:iso:tc154:resolution:plenary-45:P-2026-06')
+    expect(html).toContain('isotc154.org/decisions/urn:iso:tc154:resolution:plenary-45:P-2026-01')
+  })
+
   it('cites the mandate verbatim on the about page', () => {
     const html = readFileSync(`${dist}/about/index.html`, 'utf8')
     expect(html).toContain('Resolution P-2026-07')
