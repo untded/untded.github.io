@@ -1,4 +1,5 @@
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -28724,102 +28725,94 @@ utd:UnlkZone a rdfs:Class;
   utd:status "active";
   utd:tag 9649 .
 
-utd:bridge a <rdf:Property>;
+utd:bridge a rdf:Property;
   rdfs:comment "One parsed location on a document scheme, with its zones when the scheme is the UN layout key.";
   rdfs:domain utd:TradeDataElement .
 
-utd:bridges a <rdf:Property>;
+utd:bridges a rdf:Property;
   rdfs:comment "Printed locations on aligned trade documents (UNLK, SAD, CIMP, CIM, MAR).";
   rdfs:domain utd:TradeDataElement .
 
-utd:businessTerm a <rdf:Property>;
-  rdfs:comment "The printed business term (synonym).";
-  rdfs:domain utd:TradeDataElement .
-
-utd:category a <rdf:Property>;
+utd:category a rdf:Property;
   rdfs:comment "The tag-range category the element belongs to.";
   rdfs:domain utd:TradeDataElement .
 
-utd:changeTag a <rdf:Property>;
+utd:changeTag a rdf:Property;
   rdfs:comment "The printed change indicator against the 1993 edition.";
   rdfs:domain utd:TradeDataElement .
 
-utd:charset a <rdf:Property>;
+utd:charset a rdf:Property;
   rdfs:comment "The character class of the representation: a, an or n.";
   rdfs:domain utd:Representation .
 
-utd:detail a <rdf:Property>;
+utd:detail a rdf:Property;
   rdfs:comment "The bridge detail as printed.";
   rdfs:domain utd:Bridge .
 
-utd:elementCount a <rdf:Property>;
+utd:elementCount a rdf:Property;
   rdfs:comment "The number of member elements." .
 
-utd:fieldFormat a <rdf:Property>;
+utd:fieldFormat a rdf:Property;
   rdfs:comment "The interchange format token of the field, e.g. an..17.";
   rdfs:domain utd:UnlkZone .
 
-utd:lineFrom a <rdf:Property>;
+utd:lineFrom a rdf:Property;
   rdfs:comment "First line of the span on the UN layout key.";
   rdfs:domain utd:UnlkZone .
 
-utd:lineTo a <rdf:Property>;
+utd:lineTo a rdf:Property;
   rdfs:comment "Last line of the span on the UN layout key.";
   rdfs:domain utd:UnlkZone .
 
-utd:maxLength a <rdf:Property>;
+utd:maxLength a rdf:Property;
   rdfs:comment "Maximum number of characters in a value.";
   rdfs:domain utd:Representation .
 
-utd:minLength a <rdf:Property>;
+utd:minLength a rdf:Property;
   rdfs:comment "Minimum number of characters in a value.";
   rdfs:domain utd:Representation .
 
-utd:oldName a <rdf:Property>;
-  rdfs:comment "The data element name in the 1993 edition.";
-  rdfs:domain utd:TradeDataElement .
-
-utd:posFrom a <rdf:Property>;
+utd:posFrom a rdf:Property;
   rdfs:comment "First character position of the span.";
   rdfs:domain utd:UnlkZone .
 
-utd:posTo a <rdf:Property>;
+utd:posTo a rdf:Property;
   rdfs:comment "Last character position of the span.";
   rdfs:domain utd:UnlkZone .
 
-utd:printedForm a <rdf:Property>;
+utd:printedForm a rdf:Property;
   rdfs:comment "The printed representation notation, e.g. an..35.";
   rdfs:domain utd:Representation .
 
-utd:replacedBy a <rdf:Property>;
+utd:replacedBy a rdf:Property;
   rdfs:comment "The element to use instead, per the printed pointer on retired entries.";
   rdfs:domain utd:TradeDataElement .
 
-utd:representation a <rdf:Property>;
+utd:representation a rdf:Property;
   rdfs:comment "The character representation as a structured node: printed form, charset, length bounds.";
   rdfs:domain utd:TradeDataElement .
 
-utd:scheme a <rdf:Property>;
+utd:scheme a rdf:Property;
   rdfs:comment "The document scheme the bridge locates the element on (UNLK, SAD, MAR, CIMP, …).";
   rdfs:domain utd:Bridge .
 
-utd:sourcePage a <rdf:Property>;
+utd:sourcePage a rdf:Property;
   rdfs:comment "Page of the source publication the entry appears on.";
   rdfs:domain utd:TradeDataElement .
 
-utd:status a <rdf:Property>;
+utd:status a rdf:Property;
   rdfs:comment "active or retired, per the printed change indicator.";
   rdfs:domain utd:TradeDataElement .
 
-utd:tag a <rdf:Property>;
+utd:tag a rdf:Property;
   rdfs:comment "The four-digit unique identifier of the data element.";
   rdfs:domain utd:TradeDataElement .
 
-utd:tagRange a <rdf:Property>;
+utd:tagRange a rdf:Property;
   rdfs:comment "The tag interval of the category, e.g. 1000-1699.";
   rdfs:domain utd:Category .
 
-utd:zone a <rdf:Property>;
+utd:zone a rdf:Property;
   rdfs:comment "A line and character-position span on the UN layout key.";
   rdfs:domain utd:Bridge .
 

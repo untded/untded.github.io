@@ -7,6 +7,7 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "classes": [
@@ -132,20 +133,6 @@
       "group": "element-level",
       "domain": "TradeDataElement",
       "comment": "active or retired, per the printed change indicator."
-    },
-    {
-      "term": "oldName",
-      "iri": "utd:oldName",
-      "group": "element-level",
-      "domain": "TradeDataElement",
-      "comment": "The data element name in the 1993 edition."
-    },
-    {
-      "term": "businessTerm",
-      "iri": "utd:businessTerm",
-      "group": "element-level",
-      "domain": "TradeDataElement",
-      "comment": "The printed business term (synonym)."
     },
     {
       "term": "altLabel",

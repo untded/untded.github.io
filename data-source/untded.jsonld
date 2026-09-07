@@ -6,6 +6,7 @@
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "TradeDataElement": "utd:TradeDataElement",
     "Representation": "utd:Representation",
@@ -31,8 +32,6 @@
     "maxLength": "utd:maxLength",
     "changeTag": "utd:changeTag",
     "status": "utd:status",
-    "oldName": "utd:oldName",
-    "businessTerm": "utd:businessTerm",
     "altLabel": "skos:altLabel",
     "replacedBy": "utd:replacedBy",
     "bridges": "utd:bridges",
@@ -153,22 +152,6 @@
       "@id": "https://www.untded.org/ns/untded#status",
       "@type": "rdf:Property",
       "comment": "active or retired, per the printed change indicator.",
-      "domain": {
-        "@id": "https://www.untded.org/ns/untded#TradeDataElement"
-      }
-    },
-    {
-      "@id": "https://www.untded.org/ns/untded#oldName",
-      "@type": "rdf:Property",
-      "comment": "The data element name in the 1993 edition.",
-      "domain": {
-        "@id": "https://www.untded.org/ns/untded#TradeDataElement"
-      }
-    },
-    {
-      "@id": "https://www.untded.org/ns/untded#businessTerm",
-      "@type": "rdf:Property",
-      "comment": "The printed business term (synonym).",
       "domain": {
         "@id": "https://www.untded.org/ns/untded#TradeDataElement"
       }
