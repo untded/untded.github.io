@@ -60,6 +60,13 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       </div>
       <button type="button" data-reset class={btn}>Reset view</button>
     </div>
+    <input
+      type="search"
+      id="unlk-filter"
+      class="filter-input mb-3 w-full rounded-md border border-line bg-paper px-3 py-1.5 text-sm text-ink placeholder:text-body/50 focus:border-un focus:outline-none focus:ring-2 focus:ring-un/20"
+      placeholder="Filter fields by tag or name…"
+      aria-label="Filter form fields by tag or element name"
+    />
     <div class="relative">
       <svg
         id="unlk-svg"
@@ -155,7 +162,9 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
 </div>
 
 <style>
-  .unlk-field { cursor: pointer; }
+  .unlk-field { cursor: pointer; transition: opacity 0.2s; }
+  #unlk-svg.filtered .unlk-field { opacity: 0.12; }
+  #unlk-svg.filtered .unlk-field.match { opacity: 1; }
   .unlk-field:hover, .unlk-field:focus-visible { opacity: 0.85; stroke-width: 1; }
   .unlk-field.selected { opacity: 1; stroke-width: 1.2; }
   .unlk-field-label { opacity: 0; transition: opacity 0.15s; pointer-events: none; }
@@ -206,6 +215,26 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
     const userDelta = (dxPx: number, dyPx: number) => {
       const r = svg.getBoundingClientRect()
       return { dx: (dxPx / r.width) * vb.w, dy: (dyPx / r.height) * vb.h }
+    }
+
+    // field filter: dim non-matching fields
+    const filterInput = document.getElementById('unlk-filter') as HTMLInputElement | null
+    if (filterInput) {
+      filterInput.addEventListener('input', () => {
+        const q = filterInput.value.trim().toLowerCase()
+        svg.classList.toggle('filtered', q.length > 0)
+        if (!q) {
+          svg.querySelectorAll('.unlk-field.match').forEach((el) => el.classList.remove('match'))
+          return
+        }
+        for (const f of fields) {
+          const el = svg.querySelector(`[data-key="${f.k}"]`)
+          if (!el) continue
+          const matches = f.e.some(([tag, name]) =>
+            String(tag).startsWith(q) || name.toLowerCase().includes(q))
+          el.classList.toggle('match', matches)
+        }
+      })
     }
 
     const hideTip = () => {

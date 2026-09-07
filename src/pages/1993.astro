@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import ChangeTagBadge from '../components/ChangeTagBadge.astro'
+import { loadElements, loadCategories } from '../lib/data'
+import { href } from '../lib/site'
+
+const elements = loadElements()
+const categories = loadCategories()
+
+// The 1993 directory, reconstructed from the 2005 edition's own
+// metadata: every element whose change_tag is not "add" existed in
+// 1993; old_name is what it was called then.
+const existed1993 = elements.filter((e) => e.change_tag !== 'add')
+const added = elements.length - existed1993.length
+const renamed = existed1993.filter((e) => e.old_name && e.old_name !== e.name).length
+const retiredSince = existed1993.filter((e) => e.status === 'retired').length
+const stillActive = existed1993.length - retiredSince
+
+const byCategory = categories.map((c) => ({
+  ...c,
+  count: existed1993.filter((e) => Math.floor(e.tag / 1000) === c.k).length,
+}))
+
+const name1993 = (e: (typeof elements)[number]) => e.old_name ?? e.name ?? '(retired)'
+---
+
+<BaseLayout
+  title="The 1993 directory — UN/TDED"
+  description="The Trade Data Elements Directory as it stood before the 2005 revision: 1043 elements with their 1993 names, reconstructed from the current edition's own change metadata."
+>
+  <div class="mx-auto max-w-5xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Historical view</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The 1993 directory</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      The 2005 edition's change tags and old names carry the previous edition inside
+      them. This is the directory as it stood before the revision — reconstructed
+      from the current edition's own metadata, not from a separate source. Every
+      element links to its current entry for the full picture.
+    </p>
+
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      <span class="rounded-full border border-line bg-paper px-3 py-1.5">
+        <strong class="font-semibold text-ink">{existed1993.length}</strong>{' '}
+        <span class="text-body">elements in 1993</span>
+      </span>
+      <span class="rounded-full border border-line bg-paper px-3 py-1.5">
+        <strong class="font-semibold text-ink">{added}</strong>{' '}
+        <span class="text-body">added in the 2005 revision</span>
+      </span>
+      <span class="rounded-full border border-line bg-paper px-3 py-1.5">
+        <strong class="font-semibold text-ink">{renamed}</strong>{' '}
+        <span class="text-body">renamed</span>
+      </span>
+      <span class="rounded-full border border-line bg-paper px-3 py-1.5">
+        <strong class="font-semibold text-ink">{retiredSince}</strong>{' '}
+        <span class="text-body">retired since</span>
+      </span>
+      <span class="rounded-full border border-line bg-paper px-3 py-1.5">
+        <strong class="font-semibold text-ink">{stillActive}</strong>{' '}
+        <span class="text-body">still active today</span>
+      </span>
+    </div>
+
+    <section class="mt-8">
+      <h2 class="mb-3 text-xl font-semibold tracking-tight text-ink">By category</h2>
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+        {byCategory.map((c) => (
+          <div class="rounded-md border border-line bg-paper p-3 text-center">
+            <p class="font-mono text-xs text-body/80">{c.range}</p>
+            <p class="mt-1 text-lg font-semibold text-ink">{c.count}</p>
+            <p class="text-[0.7rem] leading-tight text-body">{c.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="mb-3 text-xl font-semibold tracking-tight text-ink">
+        The 1993 names
+      </h2>
+      <p class="mb-4 text-sm text-body">
+        The 2005 revision renamed almost every element (the naming convention moved
+        from slash-separated to qualified dot-separated, per ISO 11179 and ebXML CCTS).
+        The 1993 name appears first; the current name follows where it changed.
+      </p>
+      <div class="overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible">
+        <table class="ledger-table w-full text-sm">
+          <thead>
+            <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+              <th class="px-4 py-2">Tag</th>
+              <th class="px-4 py-2">1993 name</th>
+              <th class="px-4 py-2">Current name</th>
+              <th class="px-3 py-2">Change</th>
+              <th class="px-3 py-2">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {existed1993.map((e) => (
+              <tr class="border-b border-line/60 align-top last:border-0">
+                <td class="px-4 py-2 font-mono whitespace-nowrap">
+                  <a class="text-un-deep underline decoration-un/50" href={href(`/elements/${e.tag}`)}>{e.tag}</a>
+                </td>
+                <td class="px-4 py-2 text-ink">{name1993(e)}</td>
+                <td class="px-4 py-2 text-body">
+                  {e.old_name && e.old_name !== e.name ? e.name : ''}
+                </td>
+                <td class="px-3 py-2">
+                  <ChangeTagBadge changeTag={e.change_tag} />
+                </td>
+                <td class="px-3 py-2">
+                  <span class:list={[
+                    'rounded-sm border px-1.5 py-0.5 font-mono text-xs',
+                    e.status === 'retired' ? 'border-stamp/50 bg-stamp/10 text-stamp' : 'border-line bg-mist text-body',
+                  ]}>{e.status}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

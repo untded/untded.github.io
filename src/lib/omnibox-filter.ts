@@ -56,6 +56,9 @@ export const REGISTRY_PAGES: PageResult[] = [
   { route: '/notation', title: 'Notation', keywords: ['representation', 'abbreviations', 'glossary', 'an35'] },
   { route: '/tree', title: 'The name tree', keywords: ['names', 'hierarchy', 'classes of names'] },
   { route: '/download', title: 'Download the dataset', keywords: ['csv', 'yaml', 'json', 'dataset', 'machine'] },
+  { route: '/1993', title: 'The 1993 directory', keywords: ['history', 'old names', 'previous edition', '1993'] },
+  { route: '/reference', title: 'Printable reference card', keywords: ['print', 'card', 'unlk fields', 'working set'] },
+  { route: '/status', title: 'Publication status', keywords: ['standards', 'environment', 'editions', 'ecosystem'] },
 ]
 
 export function pageFilter(pages: PageResult[], query: string, limit = 4): PageResult[] {
