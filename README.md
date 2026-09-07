@@ -33,9 +33,12 @@ data-source/                committed sync of the dataset SSOT (npm run sync-dat
   elements.json, categories.json, untded.{jsonld,ttl}, vocabulary.json,
   edifact-links.json, context.jsonld, rdf/ (per-element TTL + JSON-LD)
 scripts/                    sync + build-data pipelines; pure seams in scripts/lib/ with specs
-src/lib/data.ts             the only data accessor (typed; JSON-LD nodes read verbatim)
-src/lib/element.ts          domain SSOT: labels, categories, bridges, pointers
+src/lib/data.ts             the single data seam: loadJson + elements, categories,
+                            JSON-LD node access (all node:fs lives here)
+src/lib/element.ts          pure domain SSOT: labels, change-tag legend, bridges,
+                            pointers — no node imports, safe in client bundles
 src/lib/vocabulary.ts       ontology declaration loader (/ontology, from vocabulary.json)
+src/lib/parser-parity.spec  TS ports must reproduce the dataset's parser fixtures
 src/lib/edifact.ts          EDED join loader (element-page chips, from edifact-links.json)
 src/lib/tree.ts             name-hierarchy seam behind /tree
 src/lib/*-filter.ts         pure seams behind the islands (thin Vue shells)

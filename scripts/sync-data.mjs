@@ -21,7 +21,7 @@ const outDir = fileURLToPath(new URL('../data-source/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 cpSync(`${datasetDir}/derived/elements.json`, `${outDir}/elements.json`)
 cpSync(`${datasetDir}/derived/categories.json`, `${outDir}/categories.json`)
-for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json', 'uncl-coverage.json', 'context.jsonld']) {
+for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json', 'uncl-coverage.json', 'parser-fixtures.json', 'context.jsonld']) {
   cpSync(`${datasetDir}/derived/${f}`, `${outDir}/${f}`)
 }
 const rdfDir = fileURLToPath(new URL('../data-source/rdf/', import.meta.url))
@@ -33,4 +33,4 @@ mkdirSync(pdfDir, { recursive: true })
 for (const pdf of ['UNTDED2005.pdf']) {
   cpSync(`${datasetDir}/../references/${pdf}`, `${pdfDir}${pdf}`)
 }
-console.log('synced elements.json, categories.json, untded.jsonld, untded.ttl, vocabulary.json, edifact-links.json, uncl-coverage.json, context.jsonld, rdf/, pdf/')
+console.log('synced elements.json, categories.json, untded.jsonld, untded.ttl, vocabulary.json, edifact-links.json, uncl-coverage.json, parser-fixtures.json, context.jsonld, rdf/, pdf/')

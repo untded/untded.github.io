@@ -2,8 +2,7 @@
 // bin/join-edifact (tag join against the UN/EDIFACT D.05B segments
 // mirror). Only elements referenced by D05B segments appear; absence
 // is informational, not a mismatch.
-import { readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { loadJson } from './data'
 
 export interface EdifactLink {
   tag: number
@@ -13,8 +12,6 @@ export interface EdifactLink {
 }
 
 export function loadEdifactLinks(): Map<number, EdifactLink> {
-  const doc = JSON.parse(
-    readFileSync(resolve(process.cwd(), 'data-source/edifact-links.json'), 'utf8'),
-  )
+  const doc = loadJson<{ links: EdifactLink[] }>('edifact-links.json')
   return new Map(doc.links.map((l: EdifactLink) => [l.tag, l]))
 }

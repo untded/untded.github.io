@@ -1,0 +1,181 @@
+{
+  "source": "untded-2005: Untded::Bridges / UnlkZones / Replacement",
+  "cases": [
+    {
+      "tag": 1002,
+      "status": "retired",
+      "notes": "DE to use instead - 1000",
+      "bridges": null,
+      "entries": [],
+      "zones": [],
+      "replacement": 1000
+    },
+    {
+      "tag": 1004,
+      "status": "active",
+      "notes": null,
+      "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:",
+      "entries": [
+        {
+          "scheme": "CIMP",
+          "detail": "(112) n3 and (114) an6 or (805) n8 and (118) n6"
+        },
+        {
+          "scheme": "MAR",
+          "detail": "IMO/FAL 2"
+        },
+        {
+          "scheme": "UNLK",
+          "detail": "an..17 L 04, P 63-80"
+        },
+        {
+          "scheme": "SAD",
+          "detail": ""
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 4,
+          "lineTo": 4,
+          "posFrom": 63,
+          "posTo": 80,
+          "format": "an..17"
+        }
+      ],
+      "replacement": null
+    },
+    {
+      "tag": 1082,
+      "status": "active",
+      "notes": null,
+      "bridges": "UNLK: L 36-46, P 00-08",
+      "entries": [
+        {
+          "scheme": "UNLK",
+          "detail": "L 36-46, P 00-08"
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 36,
+          "lineTo": 46,
+          "posFrom": 1,
+          "posTo": 8
+        }
+      ],
+      "replacement": null
+    },
+    {
+      "tag": 1128,
+      "status": "active",
+      "notes": null,
+      "bridges": "UNLK: an..17 L 04, P 63-80",
+      "entries": [
+        {
+          "scheme": "UNLK",
+          "detail": "an..17 L 04, P 63-80"
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 4,
+          "lineTo": 4,
+          "posFrom": 63,
+          "posTo": 80,
+          "format": "an..17"
+        }
+      ],
+      "replacement": null
+    },
+    {
+      "tag": 1188,
+      "status": "active",
+      "notes": null,
+      "bridges": "AWB: L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77 CIMP: (112): n3; (113): n8 or (119): n8 CMR: L 59, P 20-26 INV: L 36-64, P 09-26 Inland Waterways B/L: L 02, P 45-62 UNLK: an..17, L 04, P 63-80",
+      "entries": [
+        {
+          "scheme": "AWB",
+          "detail": "L 01, P 09-11; P 15-22; P 66-67; L 64; P 66-77"
+        },
+        {
+          "scheme": "CIMP",
+          "detail": "(112): n3; (113): n8 or (119): n8"
+        },
+        {
+          "scheme": "CMR",
+          "detail": "L 59, P 20-26"
+        },
+        {
+          "scheme": "INV",
+          "detail": "L 36-64, P 09-26"
+        },
+        {
+          "scheme": "Inland Waterways B/L",
+          "detail": "L 02, P 45-62"
+        },
+        {
+          "scheme": "UNLK",
+          "detail": "an..17, L 04, P 63-80"
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 4,
+          "lineTo": 4,
+          "posFrom": 63,
+          "posTo": 80,
+          "format": "an..17"
+        }
+      ],
+      "replacement": null
+    },
+    {
+      "tag": 2025,
+      "status": "active",
+      "notes": null,
+      "bridges": "UNLK: Date only: L 21, p 74-80 Date and time: L 21, p 74-80",
+      "entries": [
+        {
+          "scheme": "UNLK",
+          "detail": "Date only: L 21, p 74-80 Date and time: L 21, p 74-80"
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 21,
+          "lineTo": 21,
+          "posFrom": 74,
+          "posTo": 80
+        },
+        {
+          "lineFrom": 21,
+          "lineTo": 21,
+          "posFrom": 74,
+          "posTo": 80
+        }
+      ],
+      "replacement": null
+    },
+    {
+      "tag": 5010,
+      "status": "active",
+      "notes": null,
+      "bridges": "UNLK L 24, P45-80",
+      "entries": [
+        {
+          "scheme": "UNLK",
+          "detail": "L 24, P45-80"
+        }
+      ],
+      "zones": [
+        {
+          "lineFrom": 24,
+          "lineTo": 24,
+          "posFrom": 45,
+          "posTo": 80
+        }
+      ],
+      "replacement": null
+    }
+  ]
+}
