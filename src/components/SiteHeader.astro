@@ -17,13 +17,15 @@ const current = Astro.url.pathname
 ---
 
 <header class="border-b border-line">
-  <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
-    <a href={href('/')} class="flex items-center gap-2.5" aria-label="UN/TDED home">
+  <div class="mx-auto flex max-w-6xl items-center gap-x-4 px-4 py-3">
+    <a href={href('/')} class="flex shrink-0 items-center gap-2.5" aria-label="UN/TDED home">
       <img src={href('/img/un-logo-light.svg')} alt="United Nations emblem" class="h-7 w-7 dark:hidden" width="28" height="28" />
       <img src={href('/img/un-logo-dark.svg')} alt="" aria-hidden="true" class="hidden h-7 w-7 dark:block" width="28" height="28" />
       <span class="font-mono text-xl font-semibold tracking-tight text-ink">UN<span class="name-slash">/</span>TDED</span>
     </a>
-    <nav aria-label="Site" class="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem]">
+
+    <!-- full nav: lg and up -->
+    <nav aria-label="Site" class="hidden flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem] lg:flex">
       {
         nav.map((item) => (
           <a
@@ -39,12 +41,13 @@ const current = Astro.url.pathname
         ))
       }
     </nav>
+
     <div class="ms-auto flex items-center gap-2">
       <Omnibox client:idle />
       <button
         type="button"
         id="theme-toggle"
-        class="rounded-full border border-line bg-paper p-2 text-body hover:border-un/60 hover:text-un-deep transition-colors"
+        class="rounded-full border border-line bg-paper p-2.5 text-body hover:border-un/60 hover:text-un-deep transition-colors"
         aria-label="Switch light or dark theme"
         aria-pressed="false"
       >
@@ -56,8 +59,47 @@ const current = Astro.url.pathname
           <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
         </svg>
       </button>
+      <!-- hamburger: below lg -->
+      <button
+        type="button"
+        id="nav-toggle"
+        class="rounded-full border border-line bg-paper p-2.5 text-body hover:border-un/60 hover:text-un-deep transition-colors lg:hidden"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="site-nav-mobile"
+      >
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
     </div>
   </div>
+
+  <!-- mobile nav panel: below lg, toggled by the hamburger -->
+  <nav
+    id="site-nav-mobile"
+    aria-label="Site"
+    class="hidden border-t border-line bg-paper px-4 py-2 lg:hidden"
+  >
+    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 py-2 text-[0.95rem] sm:grid-cols-3">
+      {
+        nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              aria-current={current.startsWith(item.href) && item.href !== '/' ? 'page' : undefined}
+              class:list={[
+                'block rounded px-2 py-2 hover:bg-mist hover:text-un-deep',
+                current.startsWith(item.href) && item.href !== '/' ? 'text-un-deep font-medium' : 'text-body',
+              ]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 </header>
 
 <script data-astro-rerun>
@@ -68,5 +110,13 @@ const current = Astro.url.pathname
     const dark = document.documentElement.classList.toggle('dark')
     localStorage.setItem('untded-theme', dark ? 'dark' : 'light')
     sync()
+  })
+
+  const navToggle = document.getElementById('nav-toggle')
+  const navMobile = document.getElementById('site-nav-mobile')
+  navToggle?.addEventListener('click', () => {
+    const open = navMobile?.classList.toggle('hidden') === false
+    navToggle.setAttribute('aria-expanded', String(open))
+    navToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu')
   })
 </script>
