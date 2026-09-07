@@ -318,6 +318,21 @@ it("carries the full original documentation", () => {
     expect(html).toContain("plus and minus zoom, 0 resets")
   })
 
+  it('shows UNCL cross-references on named elements', () => {
+    // the publication's own rule-1.3 example: 3035 BB → [3420]
+    const named = readFileSync(`${dist}/elements/3420/index.html`, 'utf8')
+    expect(named).toContain('Referenced by UNCL code values')
+    expect(named).toMatch(/Buyer's bank|Buyer/)
+    expect(named).toContain('[3420]')
+    expect(named).toContain('equals')
+    // 1000 is active and unreferenced by any UNCL cross-ref
+    const plain = readFileSync(`${dist}/elements/1000/index.html`, 'utf8')
+    expect(plain).not.toContain('Referenced by UNCL code values')
+    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    expect(docs).toContain('Section 4.1.5 cross-references')
+    expect(docs).toContain('uncl-refs.json')
+  })
+
   it('shows UNCL code coverage on coded elements only', () => {
     const coded = readFileSync(`${dist}/elements/3055/index.html`, 'utf8')
     expect(coded).toContain('UNCL D05B')
@@ -327,7 +342,7 @@ it("carries the full original documentation", () => {
     expect(uncoded).not.toContain('UNCL D05B')
     const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
     expect(docs).toContain('id="code-lists-uncl"')
-    expect(docs).toContain('10,104 code values')
+    expect(docs).toContain('10,104')
   })
 
   it('serves the JSON-LD context at the stable URL', () => {
@@ -502,6 +517,7 @@ it("carries the full original documentation", () => {
       '/data/vocabulary.json',
       '/data/edifact-links.json',
       '/data/uncl-coverage.json',
+      '/data/uncl-refs.json',
       '/ns/untded-context.jsonld',
       '/elements/1004/data.ttl',
     ]) {

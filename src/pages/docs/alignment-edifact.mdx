@@ -47,21 +47,39 @@ import AlignmentTable from './_alignment-table.astro'
 
 The foreword's claim covers the UN Codes Library as well: Volume II of
 the publication is the code-list volume (part of UNCL of the UN/EDIFACT
-directory). Element pages show a **UNCL D05B chip** when the element is
-code-qualified in the D.05B code list, with the number of code values —
-for example [3055](/elements/3055) carries 316 values.
+directory). Two joins surface it.
 
-- **Coverage:** 256 active elements of this directory are code-qualified
-  in the D.05B UNCL, carrying 10,104 code values between them. The
-  machine-readable list is [`/data/uncl-coverage.json`](/data/uncl-coverage.json).
-- **Method:** tag join against the code-list mirror in the dataset
-  repository (`bin/join-uncl`); the mirror carries the code values with
-  their short names. Eleven D05B-coded identifiers (3405, 3493, 4071,
-  5501, 6029, 6415, 9155, 9161, 9601, 9633, 9645) are not elements of
-  this directory at all and are skipped.
-- **Limits:** the mirror does not carry the full UNCL descriptions, so
-  the bracket cross-references that section 4.1.5 of the publication
-  describes (a qualifier code whose combined meaning equals a specific
-  TDED element names that element's tag) are not yet derivable; that
-  needs the official UNCL file. And the vintage caveat applies as above
-  — this edition was built on D.02A, D05B is the cross-check vintage.
+### Coverage (D.05B)
+
+Element pages show a **UNCL D05B chip** when the element is
+code-qualified in the D.05B code list, with the number of code values —
+for example [3055](/elements/3055) carries 316 values. 256 active
+elements of this directory are code-qualified, carrying 10,104 code
+values between them. Machine-readable list:
+[`/data/uncl-coverage.json`](/data/uncl-coverage.json). Method: tag join
+against the short-names-only D05B mirror (`bin/join-uncl`). Eleven
+D05B-coded identifiers are not elements of this directory and are
+skipped. Vintage caveat: this edition was built on D.02A; D05B is the
+cross-check vintage.
+
+### Section 4.1.5 cross-references (D.01B)
+
+The publication's rule 1.3: a qualifier code whose combined meaning
+equals a specific TDED element carries that element's tag in
+`[square brackets]` at the start of its description. Rule 1.4 and
+narrative use `(parentheses)` for related tags. Element pages show a
+**Referenced by UNCL code values** block when any code names them — for
+example [3420](/elements/3420) is named by UNCL 3035 code BB ("Buyer's
+bank"), the publication's own rule-1.3 example, reproduced verbatim.
+
+- **Coverage:** 147 TDED elements referenced by 178 code values
+  (96 equals-rule, rest related-rule). Machine-readable list:
+  [`/data/uncl-refs.json`](/data/uncl-refs.json).
+- **Method:** parse of the full-text UNCL D.01B simples
+  (`bin/join-uncl-refs`), mirrored from fretlink/edi-parser's
+  BSD-3-Clause conversion of the UNECE publication. Two tags referenced
+  by the mirror that are not in this directory are skipped.
+- **Vintage:** D.01B — one directory release before the edition's D.02A
+  resource. The official UNCL zips remain CDN-blocked; D.01B is the
+  nearest complete release under a clear license. Labeled as such on
+  every surface.

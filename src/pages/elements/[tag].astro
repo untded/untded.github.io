@@ -15,6 +15,7 @@ import { changeTagInfo, elementUrl, neighbours, pairedTag, parseBridges, replace
 import { categoryOf } from '../../lib/data'
 import { loadEdifactLinks } from '../../lib/edifact'
 import { loadUnclCoverage } from '../../lib/uncl'
+import { loadUnclRefs } from '../../lib/uncl-refs'
 import { DATASET_FILE_BASE, href } from '../../lib/site'
 
 export function getStaticPaths() {
@@ -33,6 +34,7 @@ const unlk = unlkZones(element.bridges)
 const unlkR = unlkRects(element.bridges)
 const edifact = loadEdifactLinks().get(element.tag)
 const uncl = loadUnclCoverage().get(element.tag)
+const unclRefs = loadUnclRefs().get(element.tag)
 const schemes = [...new Set(parseBridges(element.bridges).map((b) => b.scheme))]
 const unlkDeep = unlk[0] && `${href('/unlk')}#field=${[unlk[0].lineFrom, unlk[0].lineTo, unlk[0].posFrom, unlk[0].posTo].join(':')}`
 const { prev, next } = neighbours(element.tag, allTags)
@@ -236,6 +238,38 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
           </p>
         </section>
 
+
+        {unclRefs && unclRefs.length > 0 && (
+          <section class="mt-8" aria-label="Referenced by UNCL code values">
+            <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-body">
+              Referenced by UNCL code values
+            </h2>
+            <p class="mb-3 text-sm text-body">
+              Section 4.1.5 of the publication: a qualifier code whose combined meaning equals
+              this element carries its tag in brackets. Vintage D.01B (one release before the
+              edition's D.02A). See the{' '}
+              <a class="text-un-deep underline decoration-un/50" href={href('/docs/alignment-edifact#code-lists-uncl')}>alignment guide</a>.
+            </p>
+            <ul class="space-y-2">
+              {unclRefs.map((r) => (
+                <li class="rounded-md border border-line bg-paper px-3 py-2 text-sm">
+                  <div class="flex flex-wrap items-baseline gap-2">
+                    <span class="font-mono text-xs text-body/80">UNCL {r.code_list}</span>
+                    <span class="font-mono font-semibold text-ink">{r.code}</span>
+                    <span class="text-body">{r.name}</span>
+                    <span class:list={[
+                      'rounded-full border px-2 py-0.5 text-[0.65rem] uppercase tracking-wide',
+                      r.kind === 'equals' ? 'border-un/40 bg-un/5 text-un-ink' : 'border-line bg-mist text-body',
+                    ]}>{r.kind === 'equals' ? 'equals' : 'related'}</span>
+                  </div>
+                  {r.description && (
+                    <p class="mt-1 font-mono text-xs leading-relaxed text-body/80">{r.description}</p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         {unlk.length > 0 && (
           <section class="mt-8" aria-label="Location on the UN layout key">
             <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-body">

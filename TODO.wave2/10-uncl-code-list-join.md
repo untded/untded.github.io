@@ -58,25 +58,25 @@ posture of the existing `edifact-D05B/segments.xml` mirror.
 
 ## Tasks (once the input exists)
 
-- [ ] Dataset `model/untded/uncl_join.rb` — parse the official UNCL:
+- [x] Dataset `model/untded/uncl_join.rb` — parse the official UNCL:
       for each code entry whose description starts with `[nnnn]` (or
       contains the `(nnnn)` form per the printed sample), extract the
       referenced TDED tag; emit `derived/uncl-links.json`:
       `{tag: [{code, code_list (data element id), name, description}]}`
       plus a summary count. Guard: referenced tags must exist in TDED;
       unknown tags go to the review queue, never silently dropped.
-- [ ] `bin/join-uncl` + wiring into `bin/verify` (counts, tag closure).
-- [ ] Dataset specs: real-file specs against the mirrored XML (skip if the
+- [x] `bin/join-uncl` + wiring into `bin/verify` (counts, tag closure).
+- [x] Dataset specs: real-file specs against the mirrored XML (skip if the
       mirror is absent, like edifact_join_spec); known cases from the
       Vol. II sample (3035 BY → 3002) asserted once available.
-- [ ] `npm run sync-data` copies `uncl-links.json`; website loader.
-- [ ] Element pages: a "Referenced by UNCL code values" block for tags
+- [x] `npm run sync-data` copies `uncl-links.json`; website loader.
+- [x] Element pages: a "Referenced by UNCL code values" block for tags
       with entries (code, code list, name — collapsed if long, linking to
       a per-tag listing or the docs page).
-- [ ] `docs/alignment-edifact.mdx` gains the UNCL half (or a sibling
+- [x] `docs/alignment-edifact.mdx` gains the UNCL half (or a sibling
       `docs/alignment-uncl.mdx`): what 4.1.5 states, the join method,
       coverage stats, and the vintage caveat.
-- [ ] Contracts: chip/block present on a known joined tag; absent on a
+- [x] Contracts: chip/block present on a known joined tag; absent on a
       tag with no UNCL references; docs page cross-linked.
 
 ## Verification
