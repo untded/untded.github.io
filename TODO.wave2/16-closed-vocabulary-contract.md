@@ -16,7 +16,7 @@ red test.
 
 ## Tasks
 
-- [ ] Dataset spec (extend the round-trip in linked_data_spec.rb): parse
+- [x] Dataset spec (extend the round-trip in linked_data_spec.rb): parse
       the generated Turtle; collect every predicate and every `rdf:type`
       object; assert each is either
       `https://www.untded.org/ns/untded#<declared term>` (TERMS ∪
@@ -24,7 +24,7 @@ red test.
       skos:, rdfs:, owl:, rdf:, xsd: — exactly the PREFIXES set).
       One-sided drift — a new emission without a declaration, or a
       dropped declaration still emitted — fails the suite.
-- [ ] Symmetry: every utd: class/term the declaration carries is
+- [x] Symmetry: every utd: class/term the declaration carries is
       actually used by the graph (dead declarations surface too).
 
 ## Verification

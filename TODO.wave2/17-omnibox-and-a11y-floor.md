@@ -18,22 +18,22 @@ page's route suggestions; dark-mode tables and global :focus-visible
 
 ## Tasks
 
-- [ ] `src/lib/omnibox-filter.ts`: page results — a typed static list
+- [x] `src/lib/omnibox-filter.ts`: page results — a typed static list
       (route, title, keywords) for the twelve registry pages
       (/ontology, /ledger, /bridges, /unlk, /document, /docs + the
       guides); matched by normalized title/keyword, ranked below exact
       tag hits and above substring name hits; returned alongside rows.
-- [ ] `Omnibox.vue`: two result sections ("Elements" / "Pages"),
+- [x] `Omnibox.vue`: two result sections ("Elements" / "Pages"),
       keyboard navigation unchanged (arrows move through the merged,
       ordered list; Enter follows).
-- [ ] Specs: page results for "ontology", "unlk", "prov*"; a tag query
+- [x] Specs: page results for "ontology", "unlk", "prov*"; a tag query
       still ranks the element first; empty query returns nothing.
-- [ ] Accessibility floor spec (dist-based, no new dependencies): every
+- [x] Accessibility floor spec (dist-based, no new dependencies): every
       built page has exactly one `<h1>`; heading levels never skip
       (h1→h3); every `<button>`/`<a>` has an accessible name
       (text or aria-label); every `<svg>` in content has role or
       aria-label or is `aria-hidden`.
-- [ ] Fix whatever the floor finds (expected: small).
+- [x] Fix whatever the floor finds (expected: small).
 
 ## Verification
 
