@@ -17,11 +17,11 @@ same sorting as production.
 
 ## Tasks
 
-- [ ] `Untded.elements_from(data_dir)` in `model/untded.rb` (the
+- [x] `Untded.elements_from(data_dir)` in `model/untded.rb` (the
       namespace's own front door): the one definition of corpus loading.
-- [ ] Convert the four bins, Exporter, Verifier, OcrSampler and the five
+- [x] Convert the four bins, Exporter, Verifier, OcrSampler and the five
       spec `let(:elements)` blocks to it.
-- [ ] Spec: loading returns 1504 elements, sorted by file then tag order
+- [x] Spec: loading returns 1504 elements, sorted by file then tag order
       (the same expectation `bin/verify`'s tag-order check relies on).
 
 ## Verification
