@@ -19,7 +19,20 @@ the deep join: the per-code bracket cross-references that section 4.1.5
 describes, which require the official UNCL file. Also checked: the
 Wayback Machine has no copy of either vintage.
 
-## Input status — BLOCKED (2026-09-06)
+## UNBLOCKED (2026-09-07, eighth pass)
+
+Content-based discovery (GitHub code search for the publication's own
+Vol II sample text — not URL guessing) found a full-text mirror:
+fretlink/edi-parser carries the complete UNCL references per release as
+text, including the section-4.1.5 cross-references — its D01B 3035
+reproduces the publication's own rule-1.3 example verbatim
+(BB "Buyer's bank" → [3420]). The repo's conversion is BSD-3-Clause;
+the underlying data is the UNECE publication (same attribution posture
+as the D05B mirror). Vintage: D01B — one directory release before the
+edition's D.02A; labeled as such everywhere. The official zips stay
+CDN-blocked; this mirror is the honest fallback.
+
+## Prior input status — BLOCKED (2026-09-06)
 
 The join needs the official UNCL file with **full descriptions**:
 

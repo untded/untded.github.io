@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { href } from '../../lib/site'
+
+const canonical = 'https://www.untded.org/dataset/untded-2005'
+---
+
+<BaseLayout
+  title="Dataset: UNTDED 2005 — UN/TDED"
+  description="The dataset identified by this IRI: the United Nations Trade Data Elements Directory 2005 (ISO 7372:2005, ECE/TRADE/362), digitized and published on behalf of UN/CEFACT and ISO/TC 154."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Dataset</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">UNTDED 2005</h1>
+    <p class="mt-2 break-all font-mono text-xs text-body">{canonical}</p>
+    <p class="mt-4 leading-relaxed text-body">
+      This IRI identifies the digitized edition of the{' '}
+      <strong class="font-medium text-ink">United Nations Trade Data Elements Directory, 2005
+      edition</strong> — published in parallel as{' '}
+      <strong class="font-medium text-ink">ISO 7372:2005</strong> and as UN document{' '}
+      <span class="font-mono text-xs">ECE/TRADE/362</span>: 1504 trade data elements with
+      their names, definitions, representations, change tags against the 1993 edition,
+      and their locations on the aligned trade document systems. Content
+      © United Nations / UNECE; digitized and published here with attribution on
+      behalf of UN/CEFACT (UNECE) and ISO/TC 154 under their plenary mandate.
+    </p>
+
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      <a href={href('/download')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Machine formats →</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          The whole directory as JSON, CSV, JSON-LD and Turtle, the JSON-LD
+          context, the ontology declaration and the UN/EDIFACT joins.
+        </p>
+      </a>
+      <a href={href('/about')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Operation and mandate →</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          Who maintains this registry, under which resolutions, and how to
+          request corrections or a new edition.
+        </p>
+      </a>
+      <a href={href('/docs/provenance')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Provenance →</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          How the dataset was extracted from the publication and verified —
+          every element names its page in the source.
+        </p>
+      </a>
+      <a href="https://github.com/untded/untded-2005" class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h2 class="font-semibold text-ink">Source repository ↗</h2>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          <span class="font-mono text-xs">untded/untded-2005</span> — the YAML
+          single source of truth and the pipeline that generates every
+          artifact above.
+        </p>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
