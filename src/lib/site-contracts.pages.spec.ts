@@ -273,6 +273,42 @@ it("carries the full original documentation", () => {
     }
   })
 
+  it('reconstructs the 1993 directory from the 2005 change metadata', () => {
+    const html = readFileSync(`${dist}/1993/index.html`, 'utf8')
+    expect(html).toContain('1043')
+    expect(html).toContain('elements in 1993')
+    expect(html).toContain('Document/message name') // the 1993 name of 1000
+    expect(html).toContain('added in the 2005 revision')
+  })
+
+  it('compares elements side by side', () => {
+    const html = readFileSync(`${dist}/compare/1004/1001/index.html`, 'utf8')
+    expect(html).toContain('1004')
+    expect(html).toContain('1001')
+    expect(html).toContain('vs')
+  })
+
+  it('serves the printable reference card', () => {
+    const html = readFileSync(`${dist}/reference/index.html`, 'utf8')
+    expect(html).toContain('reference card')
+    expect(html).toContain('Line ')
+  })
+
+  it('serves the publication status page', () => {
+    const html = readFileSync(`${dist}/status/index.html`, 'utf8')
+    expect(html).toContain('ISO 7372')
+    expect(html).toContain('ISO 6422')
+    expect(html).toContain('UN/EDIFACT')
+    expect(html).toContain('Publication status')
+  })
+
+  it('carries the UNLK field filter', () => {
+    const html = readFileSync(`${dist}/unlk/index.html`, 'utf8')
+    expect(html).toContain('unlk-filter')
+    expect(html).toContain('Filter fields by tag or name')
+    expect(html).toContain('filtered')
+  })
+
   it('dereferences the dataset IRI', () => {
     const html = readFileSync(`${dist}/dataset/untded-2005/index.html`, 'utf8')
     expect(html).toContain('ECE/TRADE/362')

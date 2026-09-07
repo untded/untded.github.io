@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import TagPlate from '../../../components/TagPlate.astro'
+import ReprChip from '../../../components/ReprChip.astro'
+import ChangeTagBadge from '../../../components/ChangeTagBadge.astro'
+import BridgeList from '../../../components/BridgeList.astro'
+import { loadElements, elementByTag } from '../../../lib/data'
+import { reprSummary } from '../../../lib/element'
+import { href } from '../../../lib/site'
+
+export function getStaticPaths() {
+  // Pre-render a curated set of useful comparisons plus the paired
+  // tags (adjacent clear-text / coded pairs); the omnibox can also
+  // construct arbitrary /compare/a/b URLs at runtime.
+  const elements = loadElements()
+  const tags = elements.map((e) => e.tag)
+  const pairs: Array<{ a: number; b: number }> = []
+
+  for (const e of elements) {
+    // adjacent tags (the 4.2.2 pairing: clear-text + coded)
+    const next = elementByTag(e.tag + 1)
+    if (next && e.status === 'active' && next.status === 'active') {
+      pairs.push({ a: e.tag, b: next.tag })
+    }
+    // 1004 vs 1001 (the sample pair users will try)
+    if (e.tag === 1004) pairs.push({ a: 1004, b: 1001 })
+  }
+
+  return pairs.map(({ a, b }) => ({ params: { a: String(a), b: String(b) } }))
+}
+
+interface Props {
+  a: string
+  b: string
+}
+const { a, b } = Astro.params
+const elementA = elementByTag(Number(a))
+const elementB = elementByTag(Number(b))
+
+if (!elementA || !elementB) {
+  return Astro.redirect(href('/elements'))
+}
+
+const repr = (e: typeof elementA) => reprSummary(e.representation)
+const field = (label: string, value: string | null | undefined) =>
+  value ? { label, value } : null
+
+const side = (e: typeof elementA) => [
+  field('Representation', repr(e)),
+  field('Description', e.description),
+  field('Note', e.notes),
+  field('1993 name', e.old_name && e.old_name !== e.name ? e.old_name : null),
+  field('Business term', e.business_term),
+].filter(Boolean)
+---
+
+<BaseLayout
+  title={`Compare ${a} / ${b} — UN/TDED`}
+  description={`Side-by-side comparison of TDED elements ${a} and ${b}: names, definitions, representations and bridges.`}
+>
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Comparison</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">
+      {elementA.name ?? '(retired)'} <span class="text-body/50">vs</span> {elementB.name ?? '(retired)'}
+    </h1>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      {[elementA, elementB].map((e) => (
+        <div class="rounded-lg border border-line bg-paper p-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <TagPlate tag={e.tag} size="lg" />
+            <ChangeTagBadge changeTag={e.change_tag} expand />
+          </div>
+
+          <h2 class="mt-4 text-xl font-semibold tracking-tight text-ink">
+            {e.name ?? 'Retired — no 2005 name'}
+          </h2>
+
+          <dl class="mt-4 space-y-3">
+            {side(e).map((f) => (
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wider text-body">{f!.label}</dt>
+                <dd class:list={['mt-0.5 text-sm', f!.label === 'Representation' ? 'font-mono' : 'text-body']}>
+                  {f!.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+
+          <div class="mt-4">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-body">Bridges</h3>
+            <div class="mt-1"><BridgeList bridges={e.bridges} /></div>
+          </div>
+
+          <a
+            href={href(`/elements/${e.tag}`)}
+            class="mt-4 inline-block text-sm text-un-deep underline decoration-un/50"
+          >
+            Full entry →
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <p class="mt-6 text-sm text-body">
+      Compare any two elements by URL: <span class="font-mono text-xs">/compare/&lt;tag-a&gt;/&lt;tag-b&gt;</span>.
+      Adjacent-tag pairs (the 4.2.2 clear-text / coded convention) are pre-rendered.
+    </p>
+  </div>
+</BaseLayout>

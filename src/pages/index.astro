@@ -109,6 +109,27 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
           register, provenance and the JSON-LD context.
         </p>
       </a>
+      <a href={href('/1993')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The 1993 directory →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          The previous edition reconstructed from the current one's change
+          metadata — 1043 elements with their 1993 names.
+        </p>
+      </a>
+      <a href={href('/reference')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">Reference card →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          The UNLK-bridged elements as a printable one-sheet, grouped by
+          form line.
+        </p>
+      </a>
+      <a href={href('/status')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">Publication status →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          The standards environment the directory lives in — current
+          editions and relationships.
+        </p>
+      </a>
     </div>
   </section>
 

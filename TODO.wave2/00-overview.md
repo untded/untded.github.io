@@ -24,7 +24,7 @@ operate.
 | Architecture | single language | pure domain core, one data seam, closed vocabulary, parser parity contract, measured budgets | 12, 14, 16, 18 |
 | Front door | BSP vocabulary | six registry cards, stat strip with 12 document systems, accessibility floor | 15, 17 |
 
-**Wave 2 complete: tracks 00–21, 2026-09-06/07.** Track 21: LICENSE files for all three repos (the MIT claim is now legally real; GitHub badges verified).
+**Wave 2 complete: tracks 00–26, 2026-09-06/07.** Tracks 22–26: the 1993 reconstruction (/1993 — 1043 elements with their old names), element comparison (/compare/a/b), UNLK field filter, printable reference card (/reference), and publication status (/status). Track 21: LICENSE files for all three repos (the MIT claim is now legally real; GitHub badges verified).
 
 Principles (standing):
 

@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { href, ISO_7372_URL, UNECE_UNTDED_URL } from '../lib/site'
+
+interface Standard {
+  designation: string
+  title: string
+  edition: string
+  relationship: string
+  publisher: string
+  url?: string
+}
+
+const standards: Standard[] = [
+  {
+    designation: 'ISO 7372',
+    title: 'Trade Data Elements Directory (TDED)',
+    edition: '2005 (this registry\'s edition)',
+    relationship: 'The directory itself — this registry is its digital publication',
+    publisher: 'ISO / UNECE (joint)',
+    url: ISO_7372_URL,
+  },
+  {
+    designation: 'ECE/TRADE/362',
+    title: 'United Nations Trade Data Elements Directory (UNTDED)',
+    edition: '2005',
+    relationship: 'The UN designation of the same publication',
+    publisher: 'UNECE',
+    url: UNECE_UNTDED_URL,
+  },
+  {
+    designation: 'ISO 6422',
+    title: 'Layout Key for Trade Documents',
+    edition: '1985',
+    relationship: 'The UNLK master form the directory\'s bridges locate elements on',
+    publisher: 'ISO',
+  },
+  {
+    designation: 'ISO 3535',
+    title: 'Forms design sheet and layout chart',
+    edition: '1977',
+    relationship: 'The grid the UNLK is built on',
+    publisher: 'ISO',
+  },
+  {
+    designation: 'UN/EDIFACT D.02A',
+    title: 'United Nations Electronic Data Interchange for Administration, Commerce and Transport',
+    edition: '2002, release A',
+    relationship: 'The edition\'s named resource (Foreword) — EDED and UNCL cross-checked',
+    publisher: 'UNECE',
+  },
+  {
+    designation: 'UN/EDIFACT D.05B',
+    title: 'UN/EDIFACT Syntax and Directories',
+    edition: '2005, release B',
+    relationship: 'Cross-check vintage for the EDED join and UNCL coverage',
+    publisher: 'UNECE',
+  },
+  {
+    designation: 'ISO 11179',
+    title: 'Information technology — Metadata registries (MDR)',
+    edition: 'multi-part',
+    relationship: 'Naming rules the 2005 revision complies with (Foreword)',
+    publisher: 'ISO',
+  },
+  {
+    designation: 'ISO/TS 15000-5',
+    title: 'ebXML Core Components Technical Specification (CCTS)',
+    edition: 'ebXML CCTS',
+    relationship: 'The specification whose dictionary-entry naming the revision adopted',
+    publisher: 'ISO',
+  },
+  {
+    designation: 'ISO 9735',
+    title: 'EDIFACT application level syntax rules',
+    edition: '2002, parts 1–10',
+    relationship: 'The syntax the directory is designed to work within',
+    publisher: 'ISO',
+  },
+]
+---
+
+<BaseLayout
+  title="Publication status — UN/TDED"
+  description="The standards environment this registry references: current editions, relationships, and publisher links."
+>
+  <div class="mx-auto max-w-4xl px-4 py-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Environment</p>
+    <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">Publication status</h1>
+    <p class="mt-3 max-w-2xl leading-relaxed text-body">
+      The standards and publications this registry references, with their current
+      editions and their relationship to the directory. Curated; verified against
+      the publication's own reference list.
+    </p>
+
+    <div class="mt-8 overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible">
+      <table class="ledger-table w-full text-sm">
+        <thead>
+          <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
+            <th class="px-4 py-2">Designation</th>
+            <th class="px-4 py-2">Title</th>
+            <th class="px-4 py-2">Edition</th>
+            <th class="px-4 py-2">Relationship</th>
+          </tr>
+        </thead>
+        <tbody>
+          {standards.map((s) => (
+            <tr class="border-b border-line/60 align-top last:border-0">
+              <td class="px-4 py-2 font-mono whitespace-nowrap text-ink">
+                {s.url ? (
+                  <a class="text-un-deep underline decoration-un/50" href={s.url}>{s.designation} ↗</a>
+                ) : (
+                  s.designation
+                )}
+              </td>
+              <td class="px-4 py-2 text-body">{s.title}</td>
+              <td class="px-4 py-2 text-body">{s.edition}</td>
+              <td class="px-4 py-2 text-body/80">{s.relationship}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-4 text-sm text-body">
+      Editions and designations are curated from the publication's own reference
+      list (introduction §1.2) and the references repo. When UN/CEFACT or ISO
+      publishes a new edition of any of these, this page is the place it will
+      be noted first.
+    </p>
+  </div>
+</BaseLayout>
