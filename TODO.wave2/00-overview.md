@@ -79,4 +79,9 @@ Tracks 14–15: the dataset loader seam (Untded.elements_from — the
 13-copy corpus-loading idiom now has one owner, untded-2005#11) and
 the front-door pass (the homepage now surfaces ontology, ledger,
 bridges, UNLK, the publication and the docs; stat strip carries the
-12 bridged document systems).
+12 bridged document systems). Tracks 16–17: the closed-vocabulary
+contract on the RDF graph (it caught a missing rdf: prefix declaration
+and two dead term declarations, both fixed — untded-2005#12), the
+omnibox's Pages section (⌘K reaches the whole registry), and an
+accessibility floor over every built page (passed first try, now
+guarded).
