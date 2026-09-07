@@ -2,8 +2,7 @@
 // bin/join-uncl (tag join against the UN/EDIFACT D.05B UNCL code-list
 // mirror, references/edifact-D05B/codes.xml). Only coded active
 // elements appear; absence is informational, not a mismatch.
-import { readFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { loadJson } from './data'
 
 export interface UnclLink {
   tag: number
@@ -11,8 +10,6 @@ export interface UnclLink {
 }
 
 export function loadUnclCoverage(): Map<number, number> {
-  const doc = JSON.parse(
-    readFileSync(resolve(process.cwd(), 'data-source/uncl-coverage.json'), 'utf8'),
-  )
+  const doc = loadJson<{ links: UnclLink[] }>('uncl-coverage.json')
   return new Map((doc.links as UnclLink[]).map((l) => [l.tag, l.code_values]))
 }

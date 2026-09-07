@@ -2,7 +2,7 @@
 import '../styles/filter.css'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TreeBrowser from '../islands/TreeBrowser.vue'
-import { loadCategories } from '../lib/element'
+import { loadCategories } from '../lib/data'
 import { href } from '../lib/site'
 
 const categories = loadCategories().map(({ k, range, label }) => ({ k, range, label }))

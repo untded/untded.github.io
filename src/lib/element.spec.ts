@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
+import { categoryOf } from './data'
 import {
-  categoryOf,
   formatBridgeDetail,
   changeTagInfo,
   neighbours,

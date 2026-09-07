@@ -7,7 +7,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import astroConfig from '../../astro.config.mjs'
 import { loadElements } from './data'
-import { loadCategories as CATEGORY_RANGES } from './element'
+import { loadCategories as CATEGORY_RANGES } from './data'
 
 const site = astroConfig.site as string
 const dist = 'dist'

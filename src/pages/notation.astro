@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { BRIDGE_SCHEME_DEFS, loadCategories as CATEGORY_RANGES } from '../lib/element'
+import { BRIDGE_SCHEME_DEFS } from '../lib/element'
+import { loadCategories as CATEGORY_RANGES } from '../lib/data'
 import { loadElements } from '../lib/data'
 
 const tally = loadElements().reduce((acc, e) => ((acc[e.change_tag] = (acc[e.change_tag] ?? 0) + 1), acc), {} as Record<string, number>)
