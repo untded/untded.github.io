@@ -21,10 +21,13 @@ const schemes = [...byScheme.entries()].sort((a, b) => b[1].length - a[1].length
 
 const matrix = schemes.map(([scheme, rows]) => ({
   scheme,
+  total: rows.length,
   cells: categories.map((c) => rows.filter((r) => Math.floor(r.tag / 1000) === c.k).length),
 }))
 const maxCell = Math.max(...matrix.flatMap((m) => m.cells), 1)
 const tint = (n: number) => (n === 0 ? '' : `background-color: rgb(0 158 219 / ${Math.max(0.08, (n / maxCell) * 0.55).toFixed(2)})`)
+const schemeTotals = new Map(schemes.map(([scheme, rows]) => [scheme, rows.length]))
+const bridgedCount = [...schemeTotals.values()].reduce((a, b) => a + b, 0)
 ---
 
 <BaseLayout
@@ -57,28 +60,38 @@ const tint = (n: number) => (n === 0 ? '' : `background-color: rgb(0 158 219 / $
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Coverage by category</h2>
-      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
-        <table class="w-full text-sm">
+      <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible">
+        <table class="ledger-table ledger-table--head w-full text-sm">
           <thead>
             <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
               <th class="px-4 py-2">Scheme</th>
               {categories.map((c) => <th class="px-3 py-2 text-right font-mono">{c.k}</th>)}
+              <th class="px-3 py-2 text-right font-mono">Σ</th>
             </tr>
           </thead>
           <tbody>
-            {matrix.map(({ scheme, cells }) => (
+            {matrix.map(({ scheme, cells, total }) => (
               <tr class="border-b border-line/60 last:border-0">
                 <td class="px-4 py-2 font-mono text-body">{scheme}</td>
                 {cells.map((n) => (
                   <td class="px-3 py-2 text-right font-mono tabular-nums text-body" style={tint(n)}>{n === 0 ? '' : n}</td>
                 ))}
+                <td class="px-3 py-2 text-right font-mono font-medium tabular-nums text-ink">{total}</td>
               </tr>
             ))}
+            <tr class="border-t border-line">
+              <td class="px-4 py-2 text-xs uppercase tracking-wide text-body/80">Total</td>
+              {matrix.map(({ scheme }) => (
+                <td class="px-3 py-2 text-right font-mono tabular-nums text-ink">{schemeTotals.get(scheme)}</td>
+              ))}
+              <td class="px-3 py-2 text-right font-mono font-semibold tabular-nums text-ink">{bridgedCount}</td>
+            </tr>
           </tbody>
         </table>
       </div>
       <p class="mt-2 text-xs text-body/80">
-        Column heads are the nine tag-range categories (thousands). Tint scales with count.
+        Column heads are the nine tag-range categories (thousands); Σ totals each scheme.
+        Tint scales with count.
       </p>
     </section>
 
@@ -100,7 +113,7 @@ const tint = (n: number) => (n === 0 ? '' : `background-color: rgb(0 158 219 / $
             </p>
           )}
           <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
-            <table class="w-full text-sm">
+            <table class="ledger-table w-full text-sm">
               <thead>
                 <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
                   <th class="px-4 py-2">Tag</th>

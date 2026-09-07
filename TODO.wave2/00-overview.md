@@ -70,4 +70,8 @@ bracket cross-references; one manual browser download of uncl.zip
 coverage half from the D05B codes mirror: 256 coded active elements /
 10,104 code values as chips on element pages, a docs section, and the
 /data/uncl-coverage.json artifact (references #1, dataset #9, website
-#30); only the per-code bracket cross-references of track 10 remain.
+#30); only the per-code bracket cross-references of track 10 remain. Tracks
+12–13 (2026-09-07): the architecture deepening pass (pure domain core,
+one data seam, Ruby⇄TS parser parity — report in the repo TODO) and the
+UX coherence pass (ledger tables with sticky heads and zebra, matrix
+totals, one chip row, docs ToC, keyboard-operable UNLK explorer).

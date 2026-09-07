@@ -64,9 +64,10 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       <svg
         id="unlk-svg"
         viewBox={`0 0 ${UNLK.pageW} ${UNLK.pageH}`}
-        class="block h-auto w-full cursor-grab touch-none select-none active:cursor-grabbing"
+        class="block h-auto w-full cursor-grab touch-none select-none active:cursor-grabbing focus:outline-none focus-visible:outline-2 focus-visible:outline-un"
         role="group"
-        aria-label="The UN layout key. Pan and zoom; fields are selectable."
+        tabindex="0"
+        aria-label="The UN layout key. Pan and zoom; fields are selectable. Keyboard: arrow keys pan, plus and minus zoom, 0 resets."
       >
         <rect x="0" y="0" width={UNLK.pageW} height={UNLK.pageH} class="fill-white dark:fill-[#101a26]" />
         <rect x={UNLK.marginX} y={UNLK.marginY} width={UNLK.imageW} height={UNLK.imageH} class="fill-un/[0.04] stroke-line" stroke-width="0.6" />
@@ -117,7 +118,12 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       >
       </div>
     </div>
-    <p class="mt-2 text-xs text-body/80">Scroll or pinch to zoom, drag to pan. Field tags appear at higher zoom.</p>
+    <p class="mt-2 text-xs text-body/80">
+      Scroll or pinch to zoom, drag to pan — or focus the form and use the arrow
+      keys,{' '}
+      <kbd class="rounded border border-line bg-mist px-1 font-mono">+</kbd>/<kbd class="rounded border border-line bg-mist px-1 font-mono">−</kbd>{' '}
+      and <kbd class="rounded border border-line bg-mist px-1 font-mono">0</kbd>. Field tags appear at higher zoom.
+    </p>
   </div>
 
   <div class="space-y-4">
@@ -273,7 +279,39 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
     }
     svg.addEventListener('pointerup', release)
     svg.addEventListener('pointercancel', (e) => pointers.delete(e.pointerId))
+    // keyboard: arrows pan, +/- zoom, 0 resets — usable without a pointer
     svg.addEventListener('keydown', (e) => {
+      if (!e.altKey && !e.ctrlKey && !e.metaKey) {
+        const stepPx = e.shiftKey ? 160 : 64
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+          e.preventDefault()
+          const dx = e.key === 'ArrowLeft' ? stepPx : e.key === 'ArrowRight' ? -stepPx : 0
+          const dy = e.key === 'ArrowUp' ? stepPx : e.key === 'ArrowDown' ? -stepPx : 0
+          const d = userDelta(dx, dy)
+          vb = panView(vb, d.dx, d.dy)
+          apply()
+          return
+        }
+        if (e.key === '+' || e.key === '=') {
+          e.preventDefault()
+          vb = zoomView(vb, 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+          apply()
+          return
+        }
+        if (e.key === '-' || e.key === '_') {
+          e.preventDefault()
+          vb = zoomView(vb, 1 / 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+          apply()
+          return
+        }
+        if (e.key === '0') {
+          e.preventDefault()
+          vb = FULL_VIEW
+          clear()
+          apply()
+          return
+        }
+      }
       if (e.key !== 'Enter' && e.key !== ' ') return
       const field = (e.target as Element).closest('[data-key]')
       if (field) {
