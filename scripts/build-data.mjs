@@ -17,7 +17,7 @@ const outDir = fileURLToPath(new URL('../public/data/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 writeFileSync(`${outDir}/index.json`, JSON.stringify(rows))
 writeFileSync(`${outDir}/meta.json`, JSON.stringify(meta))
-for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json']) {
+for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json', 'uncl-coverage.json']) {
   copyFileSync(
     fileURLToPath(new URL(`../data-source/${f}`, import.meta.url)),
     `${outDir}/${f}`,

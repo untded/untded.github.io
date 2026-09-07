@@ -13,6 +13,7 @@ import ProvenanceCard from '../../components/ProvenanceCard.astro'
 import { loadElements, jsonldNode } from '../../lib/data'
 import { categoryOf, changeTagInfo, elementUrl, neighbours, pairedTag, parseBridges, replacementPointer } from '../../lib/element'
 import { loadEdifactLinks } from '../../lib/edifact'
+import { loadUnclCoverage } from '../../lib/uncl'
 import { DATASET_FILE_BASE, href } from '../../lib/site'
 
 export function getStaticPaths() {
@@ -30,6 +31,7 @@ const replacement = replacementPointer(element, new Set(allTags))
 const unlk = unlkZones(element.bridges)
 const unlkR = unlkRects(element.bridges)
 const edifact = loadEdifactLinks().get(element.tag)
+const uncl = loadUnclCoverage().get(element.tag)
 const schemes = [...new Set(parseBridges(element.bridges).map((b) => b.scheme))]
 const unlkDeep = unlk[0] && `${href('/unlk')}#field=${[unlk[0].lineFrom, unlk[0].lineTo, unlk[0].posFrom, unlk[0].posTo].join(':')}`
 const { prev, next } = neighbours(element.tag, allTags)
@@ -210,6 +212,18 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
                 <span class="font-mono font-semibold">EDED {edifact.tag}</span>
                 <span class="font-mono">{edifact.edifact.type}..{edifact.edifact.maxLength}</span>
                 <span>{edifact.aligned ? 'aligned' : 'representation differs'}</span>
+              </a>
+            </p>
+          )}
+          {uncl !== undefined && (
+            <p class={edifact ? 'mt-2' : 'mt-3'}>
+              <a
+                class="inline-flex items-baseline gap-2 rounded-full border border-line bg-mist px-3 py-1 text-xs text-body"
+                title="Code-qualified in the UN/EDIFACT D.05B UNCL (Volume II of the publication is the code-list volume)"
+                href={href('/docs/alignment-edifact#code-lists-uncl')}
+              >
+                <span class="font-mono font-semibold">UNCL D05B</span>
+                <span>{uncl === 1 ? '1 code value' : `${uncl} code values`}</span>
               </a>
             </p>
           )}
