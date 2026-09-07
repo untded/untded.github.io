@@ -254,6 +254,25 @@ it("carries the full original documentation", () => {
     expect(unmapped).not.toContain('EDED 9011')
   })
 
+  it('holds the accessibility floor across every built page', () => {
+    const pages = collectHtml(dist)
+    expect(pages.length).toBeGreaterThan(1500)
+    for (const f of pages) {
+      const html = readFileSync(f, 'utf8')
+        .replace(/<script[\s\S]*?<\/script>/g, '')
+        .replace(/<style[\s\S]*?<\/style>/g, '')
+      const file = f.replace(`${dist}/`, '')
+      const h1s = html.match(/<h1\b/g)?.length ?? 0
+      expect(h1s, `${file}: ${h1s} h1 elements`).toBeLessThanOrEqual(1)
+      const levels = [...html.matchAll(/<h([1-6])\b/g)].map((m) => Number(m[1]))
+      for (let i = 1; i < levels.length; i++) {
+        expect(levels[i]!, `${file}: heading skip ${levels[i - 1]}->${levels[i]}`).toBeLessThan(levels[i - 1]! + 2)
+      }
+      const namelessLinks = html.match(/<a\s[^>]*href="[^"]*"[^>]*>\s*<\/(a|svg)>/g) ?? []
+      expect(namelessLinks.length, `${file}: links without text`).toBe(0)
+    }
+  })
+
   it('opens the front door onto the whole registry surface', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
     for (const route of ['/ontology', '/ledger', '/bridges', '/unlk', '/document', '/docs']) {
