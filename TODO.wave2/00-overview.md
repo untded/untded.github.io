@@ -9,17 +9,22 @@ descriptions and bridges. We hold the mandate (ISO/TC 154 N1727) and the
 better data. Wave 2 makes that visible in every dimension where they
 operate.
 
-| Axis | vocab-bsp | Us today | Wave 2 deliverable |
+| Axis | vocab-bsp | Us (shipped) | Track(s) |
 |---|---|---|---|
-| Data quality | 1460 rows, lossy | 1504, verified | keep: closure specs, `bin/verify` |
-| Semantics | TDED is a markdown table | JSON-LD/Turtle, flat literals | structured ontology (01) |
-| Vocabulary resolution | per-term URIs, S3/CF | per-element `data.ttl`/`data.jsonld` | `/ontology` + alternates (02) |
-| Documentation | Nextra site, methodology corpus | site + transcribed document | MDX docs corpus (03) |
-| Edition history | (none for TDED) | change tags in data | 1993↔2005 ledger (04) |
-| UN/EDIFACT linkage | none | D05B mirror + crosscheck | element-level crosslinks (05) |
-| Source coverage | mangled front-matter prose | sections 1–4 transcribed | cover pages + coverage audit (06) |
-| Context/interop | UNTP/UNVTD @context mappings | generated context | context URL + guide (07) |
-| Visual exploration | static clickable diagrams | UNLK interactive explorer | bridges-by-scheme map (08) |
+| Data quality | 1460 rows, lossy | 1504 verified, closure specs, `bin/verify`, parser parity | 01, 12 |
+| Semantics | TDED is a markdown table | typed graph: Representation/Bridge/UnlkZone nodes, altLabels, replacedBy; closed-vocabulary contract | 01, 12, 16 |
+| Vocabulary resolution | per-term URIs | `/ontology` page, per-element `data.{ttl,jsonld}` + `rel=alternate`, dataset IRI resolves | 02, 19 |
+| Documentation | Nextra methodology | MDX corpus (7 guides + issue templates), docs ToC, provenance method | 03, 13 |
+| Edition history | (none for TDED) | `/ledger`: legend, category matrix, replacements; checkable totals | 04, 13 |
+| UN/EDIFACT linkage | none | EDED chips (aligned / differs, 37 diffs listed), UNCL coverage (256 elements / 10,104 values), section-4.1.5 cross-refs (147 elements / 178 refs) | 05, 10, 11 |
+| Source coverage | mangled front matter | cover→element-directory transcription (Foreword, cover, full audit), page-by-page coverage table | 06 |
+| Context/interop | UNTP/UNVTD @context mappings | `/ns/untded-context.jsonld` (byte-identical, contract-pinned), context guide + JSON-LD examples | 07, 09 |
+| Visual exploration | static diagrams | UNLK interactive explorer (keyboard-operable), bridges-by-scheme matrix with totals | 08, 13 |
+| Search | Nextra default | full-text pagefind (repaired from never-mounted), ⌘K omnibox with Pages section | 09, 17 |
+| Architecture | single language | pure domain core, one data seam, closed vocabulary, parser parity contract, measured budgets | 12, 14, 16, 18 |
+| Front door | BSP vocabulary | six registry cards, stat strip with 12 document systems, accessibility floor | 15, 17 |
+
+**Wave 2 complete: tracks 00–20, 2026-09-06/07.**
 
 Principles (standing):
 
