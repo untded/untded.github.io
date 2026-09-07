@@ -221,12 +221,12 @@ it("carries the full original documentation", () => {
     expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/ontology"')
   })
 
-  it('publishes the edition ledger with replacements', () => {
-    const html = readFileSync(`${dist}/ledger/index.html`, 'utf8')
-    expect(html).toContain('The 1993–2005 ledger')
+  it('publishes the edition changes with replacements', () => {
+    const html = readFileSync(`${dist}/changes/index.html`, 'utf8')
+    expect(html).toContain('The 1993–2005 changes')
     expect(html).toContain('id="tag-cndr"')
     expect(html).toContain('href="/elements/1000"')
-    expect(readFileSync(`${dist}/elements/1128/index.html`, 'utf8')).toContain('/ledger#tag-cndr')
+    expect(readFileSync(`${dist}/elements/1128/index.html`, 'utf8')).toContain('/changes#tag-cndr')
   })
 
   it('publishes the bridges map with per-scheme sections', () => {
@@ -321,16 +321,16 @@ it("carries the full original documentation", () => {
 
   it('opens the front door onto the whole registry surface', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
-    for (const route of ['/ontology', '/ledger', '/bridges', '/unlk', '/document', '/docs']) {
+    for (const route of ['/ontology', '/changes', '/bridges', '/unlk', '/document', '/docs']) {
       expect(html, route).toContain(`href="${route}"`)
     }
     expect(html).toContain('document systems')
   })
 
-  it('dresses the long tables as ledger tables with checkable totals', () => {
-    for (const p of ['ontology/index.html', 'ledger/index.html', 'bridges/index.html', 'docs/alignment-edifact/index.html']) {
+  it('dresses the long tables as data tables with checkable totals', () => {
+    for (const p of ['ontology/index.html', 'changes/index.html', 'bridges/index.html', 'docs/alignment-edifact/index.html']) {
       const html = readFileSync(`${dist}/${p}`, 'utf8')
-      expect(html, p).toContain('ledger-table')
+      expect(html, p).toContain('data-table')
     }
     const bridges = readFileSync(`${dist}/bridges/index.html`, 'utf8')
     expect(bridges).toContain('>Total</td>')
@@ -503,7 +503,7 @@ it("carries the full original documentation", () => {
   // Payload budgets = measured baseline (2026-09-07) + ~50% headroom,
   // so a real regression trips CI instead of hiding under a 20x margin:
   // element 31.5K, home 34.7K, elements-index 37.7K, ontology 38.2K,
-  // category 78K (largest: 3000-3699 at 146K), ledger 83K, bridges 320K,
+  // category 78K (largest: 3000-3699 at 146K), changes 83K, bridges 320K,
   it('respects the HTML payload budget', () => {
     const budgets: [string, number][] = [
       [`${dist}/elements/1001/index.html`, 48_000],
@@ -513,7 +513,7 @@ it("carries the full original documentation", () => {
       [`${dist}/document/presentation/index.html`, 48_000],
       [`${dist}/categories/3000-3699/index.html`, 220_000],
       [`${dist}/ontology/index.html`, 57_000],
-      [`${dist}/ledger/index.html`, 125_000],
+      [`${dist}/changes/index.html`, 125_000],
       [`${dist}/bridges/index.html`, 480_000],
       [`${dist}/docs/alignment-edifact/index.html`, 37_000],
     ]

@@ -8,7 +8,7 @@ import { href } from '../lib/site'
 const elements = loadElements()
 
 // The UNLK-bridged elements, grouped by form line — the implementer's
-// working set for the master document.
+// reference for the master document's fields.
 const bridged = elements.filter((e) => {
   const zones = unlkZones(e.bridges)
   return zones.length > 0 && e.status === 'active'
