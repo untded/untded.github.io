@@ -254,6 +254,18 @@ it("carries the full original documentation", () => {
     expect(unmapped).not.toContain('EDED 9011')
   })
 
+  it('shows UNCL code coverage on coded elements only', () => {
+    const coded = readFileSync(`${dist}/elements/3055/index.html`, 'utf8')
+    expect(coded).toContain('UNCL D05B')
+    expect(coded).toContain('316 code values')
+    expect(coded).toContain('#code-lists-uncl')
+    const uncoded = readFileSync(`${dist}/elements/1004/index.html`, 'utf8')
+    expect(uncoded).not.toContain('UNCL D05B')
+    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    expect(docs).toContain('id="code-lists-uncl"')
+    expect(docs).toContain('10,104 code values')
+  })
+
   it('serves the JSON-LD context at the stable URL', () => {
     const served = readFileSync(`${dist}/ns/untded-context.jsonld`, 'utf8')
     const source = readFileSync(`data-source/context.jsonld`, 'utf8')
@@ -416,6 +428,7 @@ it("carries the full original documentation", () => {
       '/data/index.json',
       '/data/vocabulary.json',
       '/data/edifact-links.json',
+      '/data/uncl-coverage.json',
       '/ns/untded-context.jsonld',
       '/elements/1004/data.ttl',
     ]) {

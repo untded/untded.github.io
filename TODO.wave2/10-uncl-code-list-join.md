@@ -11,6 +11,14 @@ at the start of its description (the Vol. II sample on printed page v
 shows it: `BY Buyer (3002) Party to whom merchandise and/or service is
 sold`).
 
+## Note (2026-09-07)
+
+The coverage half is now delivered by track 11 (which elements are
+code-qualified, with counts, from the mirror). What remains here is only
+the deep join: the per-code bracket cross-references that section 4.1.5
+describes, which require the official UNCL file. Also checked: the
+Wayback Machine has no copy of either vintage.
+
 ## Input status — BLOCKED (2026-09-06)
 
 The join needs the official UNCL file with **full descriptions**:
