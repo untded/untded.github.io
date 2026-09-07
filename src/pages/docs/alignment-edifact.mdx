@@ -42,3 +42,26 @@ import AlignmentTable from './_alignment-table.astro'
   report lives in the dataset repository.
 - Representation disagreements are printed as-is on both sides; none are
   silently reconciled.
+
+## Code lists (UNCL)
+
+The foreword's claim covers the UN Codes Library as well: Volume II of
+the publication is the code-list volume (part of UNCL of the UN/EDIFACT
+directory). Element pages show a **UNCL D05B chip** when the element is
+code-qualified in the D.05B code list, with the number of code values —
+for example [3055](/elements/3055) carries 316 values.
+
+- **Coverage:** 256 active elements of this directory are code-qualified
+  in the D.05B UNCL, carrying 10,104 code values between them. The
+  machine-readable list is [`/data/uncl-coverage.json`](/data/uncl-coverage.json).
+- **Method:** tag join against the code-list mirror in the dataset
+  repository (`bin/join-uncl`); the mirror carries the code values with
+  their short names. Eleven D05B-coded identifiers (3405, 3493, 4071,
+  5501, 6029, 6415, 9155, 9161, 9601, 9633, 9645) are not elements of
+  this directory at all and are skipped.
+- **Limits:** the mirror does not carry the full UNCL descriptions, so
+  the bracket cross-references that section 4.1.5 of the publication
+  describes (a qualifier code whose combined meaning equals a specific
+  TDED element names that element's tag) are not yet derivable; that
+  needs the official UNCL file. And the vintage caveat applies as above
+  — this edition was built on D.02A, D05B is the cross-check vintage.

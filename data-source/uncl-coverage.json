@@ -1,0 +1,1032 @@
+{
+  "source": "UN/EDIFACT D.05B UNCL code-list mirror (unece.org/trade/uncefact/unedifact)",
+  "coverage": "active elements with code values in the D05B UNCL (short names; full descriptions are not mirrored)",
+  "elements": 256,
+  "code_values": 10104,
+  "links": [
+    {
+      "tag": 1001,
+      "code_values": 627
+    },
+    {
+      "tag": 1049,
+      "code_values": 9
+    },
+    {
+      "tag": 1073,
+      "code_values": 2
+    },
+    {
+      "tag": 1153,
+      "code_values": 772
+    },
+    {
+      "tag": 1159,
+      "code_values": 6
+    },
+    {
+      "tag": 1225,
+      "code_values": 65
+    },
+    {
+      "tag": 1227,
+      "code_values": 9
+    },
+    {
+      "tag": 1229,
+      "code_values": 112
+    },
+    {
+      "tag": 1373,
+      "code_values": 37
+    },
+    {
+      "tag": 1501,
+      "code_values": 8
+    },
+    {
+      "tag": 1503,
+      "code_values": 4
+    },
+    {
+      "tag": 1505,
+      "code_values": 11
+    },
+    {
+      "tag": 1507,
+      "code_values": 4
+    },
+    {
+      "tag": 2005,
+      "code_values": 748
+    },
+    {
+      "tag": 2009,
+      "code_values": 17
+    },
+    {
+      "tag": 2013,
+      "code_values": 16
+    },
+    {
+      "tag": 2015,
+      "code_values": 48
+    },
+    {
+      "tag": 2017,
+      "code_values": 10
+    },
+    {
+      "tag": 2023,
+      "code_values": 6
+    },
+    {
+      "tag": 2151,
+      "code_values": 22
+    },
+    {
+      "tag": 2155,
+      "code_values": 6
+    },
+    {
+      "tag": 2379,
+      "code_values": 80
+    },
+    {
+      "tag": 2475,
+      "code_values": 64
+    },
+    {
+      "tag": 3035,
+      "code_values": 559
+    },
+    {
+      "tag": 3045,
+      "code_values": 3
+    },
+    {
+      "tag": 3055,
+      "code_values": 316
+    },
+    {
+      "tag": 3077,
+      "code_values": 7
+    },
+    {
+      "tag": 3079,
+      "code_values": 2
+    },
+    {
+      "tag": 3083,
+      "code_values": 4
+    },
+    {
+      "tag": 3131,
+      "code_values": 3
+    },
+    {
+      "tag": 3139,
+      "code_values": 97
+    },
+    {
+      "tag": 3153,
+      "code_values": 25
+    },
+    {
+      "tag": 3155,
+      "code_values": 45
+    },
+    {
+      "tag": 3227,
+      "code_values": 254
+    },
+    {
+      "tag": 3237,
+      "code_values": 20
+    },
+    {
+      "tag": 3279,
+      "code_values": 6
+    },
+    {
+      "tag": 3285,
+      "code_values": 16
+    },
+    {
+      "tag": 3289,
+      "code_values": 1
+    },
+    {
+      "tag": 3295,
+      "code_values": 1
+    },
+    {
+      "tag": 3299,
+      "code_values": 10
+    },
+    {
+      "tag": 3301,
+      "code_values": 9
+    },
+    {
+      "tag": 3397,
+      "code_values": 6
+    },
+    {
+      "tag": 3401,
+      "code_values": 2
+    },
+    {
+      "tag": 3403,
+      "code_values": 14
+    },
+    {
+      "tag": 3455,
+      "code_values": 7
+    },
+    {
+      "tag": 3457,
+      "code_values": 3
+    },
+    {
+      "tag": 3475,
+      "code_values": 5
+    },
+    {
+      "tag": 3477,
+      "code_values": 9
+    },
+    {
+      "tag": 3479,
+      "code_values": 6
+    },
+    {
+      "tag": 4017,
+      "code_values": 23
+    },
+    {
+      "tag": 4025,
+      "code_values": 55
+    },
+    {
+      "tag": 4027,
+      "code_values": 1
+    },
+    {
+      "tag": 4035,
+      "code_values": 10
+    },
+    {
+      "tag": 4037,
+      "code_values": 6
+    },
+    {
+      "tag": 4043,
+      "code_values": 21
+    },
+    {
+      "tag": 4049,
+      "code_values": 1
+    },
+    {
+      "tag": 4051,
+      "code_values": 3
+    },
+    {
+      "tag": 4053,
+      "code_values": 2
+    },
+    {
+      "tag": 4055,
+      "code_values": 6
+    },
+    {
+      "tag": 4059,
+      "code_values": 1
+    },
+    {
+      "tag": 4065,
+      "code_values": 39
+    },
+    {
+      "tag": 4079,
+      "code_values": 9
+    },
+    {
+      "tag": 4183,
+      "code_values": 177
+    },
+    {
+      "tag": 4215,
+      "code_values": 29
+    },
+    {
+      "tag": 4219,
+      "code_values": 4
+    },
+    {
+      "tag": 4221,
+      "code_values": 49
+    },
+    {
+      "tag": 4233,
+      "code_values": 31
+    },
+    {
+      "tag": 4237,
+      "code_values": 4
+    },
+    {
+      "tag": 4277,
+      "code_values": 7
+    },
+    {
+      "tag": 4279,
+      "code_values": 79
+    },
+    {
+      "tag": 4295,
+      "code_values": 57
+    },
+    {
+      "tag": 4343,
+      "code_values": 23
+    },
+    {
+      "tag": 4347,
+      "code_values": 12
+    },
+    {
+      "tag": 4383,
+      "code_values": 63
+    },
+    {
+      "tag": 4401,
+      "code_values": 98
+    },
+    {
+      "tag": 4403,
+      "code_values": 33
+    },
+    {
+      "tag": 4405,
+      "code_values": 128
+    },
+    {
+      "tag": 4407,
+      "code_values": 2
+    },
+    {
+      "tag": 4419,
+      "code_values": 4
+    },
+    {
+      "tag": 4431,
+      "code_values": 12
+    },
+    {
+      "tag": 4435,
+      "code_values": 16
+    },
+    {
+      "tag": 4437,
+      "code_values": 17
+    },
+    {
+      "tag": 4439,
+      "code_values": 51
+    },
+    {
+      "tag": 4447,
+      "code_values": 11
+    },
+    {
+      "tag": 4451,
+      "code_values": 357
+    },
+    {
+      "tag": 4453,
+      "code_values": 7
+    },
+    {
+      "tag": 4455,
+      "code_values": 6
+    },
+    {
+      "tag": 4457,
+      "code_values": 8
+    },
+    {
+      "tag": 4461,
+      "code_values": 75
+    },
+    {
+      "tag": 4463,
+      "code_values": 1
+    },
+    {
+      "tag": 4465,
+      "code_values": 90
+    },
+    {
+      "tag": 4471,
+      "code_values": 38
+    },
+    {
+      "tag": 4475,
+      "code_values": 5
+    },
+    {
+      "tag": 4487,
+      "code_values": 15
+    },
+    {
+      "tag": 4493,
+      "code_values": 12
+    },
+    {
+      "tag": 4499,
+      "code_values": 11
+    },
+    {
+      "tag": 4501,
+      "code_values": 2
+    },
+    {
+      "tag": 4503,
+      "code_values": 3
+    },
+    {
+      "tag": 4505,
+      "code_values": 8
+    },
+    {
+      "tag": 4507,
+      "code_values": 11
+    },
+    {
+      "tag": 4509,
+      "code_values": 15
+    },
+    {
+      "tag": 4511,
+      "code_values": 30
+    },
+    {
+      "tag": 4513,
+      "code_values": 12
+    },
+    {
+      "tag": 4517,
+      "code_values": 5
+    },
+    {
+      "tag": 5007,
+      "code_values": 28
+    },
+    {
+      "tag": 5013,
+      "code_values": 3
+    },
+    {
+      "tag": 5025,
+      "code_values": 532
+    },
+    {
+      "tag": 5027,
+      "code_values": 2
+    },
+    {
+      "tag": 5039,
+      "code_values": 1
+    },
+    {
+      "tag": 5047,
+      "code_values": 7
+    },
+    {
+      "tag": 5049,
+      "code_values": 12
+    },
+    {
+      "tag": 5125,
+      "code_values": 11
+    },
+    {
+      "tag": 5153,
+      "code_values": 52
+    },
+    {
+      "tag": 5189,
+      "code_values": 70
+    },
+    {
+      "tag": 5213,
+      "code_values": 3
+    },
+    {
+      "tag": 5237,
+      "code_values": 23
+    },
+    {
+      "tag": 5243,
+      "code_values": 12
+    },
+    {
+      "tag": 5245,
+      "code_values": 161
+    },
+    {
+      "tag": 5249,
+      "code_values": 20
+    },
+    {
+      "tag": 5261,
+      "code_values": 12
+    },
+    {
+      "tag": 5267,
+      "code_values": 3
+    },
+    {
+      "tag": 5273,
+      "code_values": 3
+    },
+    {
+      "tag": 5283,
+      "code_values": 8
+    },
+    {
+      "tag": 5305,
+      "code_values": 13
+    },
+    {
+      "tag": 5315,
+      "code_values": 3
+    },
+    {
+      "tag": 5375,
+      "code_values": 28
+    },
+    {
+      "tag": 5379,
+      "code_values": 12
+    },
+    {
+      "tag": 5387,
+      "code_values": 103
+    },
+    {
+      "tag": 5393,
+      "code_values": 7
+    },
+    {
+      "tag": 5419,
+      "code_values": 11
+    },
+    {
+      "tag": 5463,
+      "code_values": 24
+    },
+    {
+      "tag": 5495,
+      "code_values": 2
+    },
+    {
+      "tag": 6063,
+      "code_values": 465
+    },
+    {
+      "tag": 6069,
+      "code_values": 58
+    },
+    {
+      "tag": 6071,
+      "code_values": 1
+    },
+    {
+      "tag": 6077,
+      "code_values": 6
+    },
+    {
+      "tag": 6079,
+      "code_values": 3
+    },
+    {
+      "tag": 6085,
+      "code_values": 2
+    },
+    {
+      "tag": 6087,
+      "code_values": 26
+    },
+    {
+      "tag": 6145,
+      "code_values": 14
+    },
+    {
+      "tag": 6155,
+      "code_values": 48
+    },
+    {
+      "tag": 6167,
+      "code_values": 16
+    },
+    {
+      "tag": 6173,
+      "code_values": 3
+    },
+    {
+      "tag": 6245,
+      "code_values": 6
+    },
+    {
+      "tag": 6311,
+      "code_values": 102
+    },
+    {
+      "tag": 6313,
+      "code_values": 248
+    },
+    {
+      "tag": 6321,
+      "code_values": 12
+    },
+    {
+      "tag": 6331,
+      "code_values": 9
+    },
+    {
+      "tag": 6341,
+      "code_values": 24
+    },
+    {
+      "tag": 6343,
+      "code_values": 18
+    },
+    {
+      "tag": 6347,
+      "code_values": 7
+    },
+    {
+      "tag": 6353,
+      "code_values": 13
+    },
+    {
+      "tag": 7001,
+      "code_values": 4
+    },
+    {
+      "tag": 7007,
+      "code_values": 15
+    },
+    {
+      "tag": 7009,
+      "code_values": 5
+    },
+    {
+      "tag": 7011,
+      "code_values": 11
+    },
+    {
+      "tag": 7039,
+      "code_values": 2
+    },
+    {
+      "tag": 7045,
+      "code_values": 7
+    },
+    {
+      "tag": 7047,
+      "code_values": 6
+    },
+    {
+      "tag": 7059,
+      "code_values": 18
+    },
+    {
+      "tag": 7073,
+      "code_values": 29
+    },
+    {
+      "tag": 7075,
+      "code_values": 5
+    },
+    {
+      "tag": 7077,
+      "code_values": 8
+    },
+    {
+      "tag": 7081,
+      "code_values": 189
+    },
+    {
+      "tag": 7083,
+      "code_values": 3
+    },
+    {
+      "tag": 7085,
+      "code_values": 22
+    },
+    {
+      "tag": 7133,
+      "code_values": 4
+    },
+    {
+      "tag": 7143,
+      "code_values": 107
+    },
+    {
+      "tag": 7161,
+      "code_values": 159
+    },
+    {
+      "tag": 7171,
+      "code_values": 7
+    },
+    {
+      "tag": 7173,
+      "code_values": 33
+    },
+    {
+      "tag": 7187,
+      "code_values": 31
+    },
+    {
+      "tag": 7233,
+      "code_values": 47
+    },
+    {
+      "tag": 7273,
+      "code_values": 64
+    },
+    {
+      "tag": 7293,
+      "code_values": 30
+    },
+    {
+      "tag": 7295,
+      "code_values": 13
+    },
+    {
+      "tag": 7297,
+      "code_values": 18
+    },
+    {
+      "tag": 7299,
+      "code_values": 11
+    },
+    {
+      "tag": 7365,
+      "code_values": 134
+    },
+    {
+      "tag": 7383,
+      "code_values": 33
+    },
+    {
+      "tag": 7405,
+      "code_values": 84
+    },
+    {
+      "tag": 7429,
+      "code_values": 2
+    },
+    {
+      "tag": 7431,
+      "code_values": 12
+    },
+    {
+      "tag": 7433,
+      "code_values": 5
+    },
+    {
+      "tag": 7449,
+      "code_values": 3
+    },
+    {
+      "tag": 7451,
+      "code_values": 4
+    },
+    {
+      "tag": 7455,
+      "code_values": 2
+    },
+    {
+      "tag": 7459,
+      "code_values": 5
+    },
+    {
+      "tag": 7491,
+      "code_values": 4
+    },
+    {
+      "tag": 7493,
+      "code_values": 1
+    },
+    {
+      "tag": 7495,
+      "code_values": 24
+    },
+    {
+      "tag": 7497,
+      "code_values": 12
+    },
+    {
+      "tag": 7511,
+      "code_values": 1
+    },
+    {
+      "tag": 7515,
+      "code_values": 4
+    },
+    {
+      "tag": 8015,
+      "code_values": 4
+    },
+    {
+      "tag": 8025,
+      "code_values": 23
+    },
+    {
+      "tag": 8035,
+      "code_values": 2
+    },
+    {
+      "tag": 8051,
+      "code_values": 26
+    },
+    {
+      "tag": 8053,
+      "code_values": 61
+    },
+    {
+      "tag": 8077,
+      "code_values": 7
+    },
+    {
+      "tag": 8101,
+      "code_values": 9
+    },
+    {
+      "tag": 8155,
+      "code_values": 40
+    },
+    {
+      "tag": 8169,
+      "code_values": 8
+    },
+    {
+      "tag": 8179,
+      "code_values": 106
+    },
+    {
+      "tag": 8249,
+      "code_values": 14
+    },
+    {
+      "tag": 8273,
+      "code_values": 18
+    },
+    {
+      "tag": 8281,
+      "code_values": 3
+    },
+    {
+      "tag": 8323,
+      "code_values": 5
+    },
+    {
+      "tag": 8335,
+      "code_values": 33
+    },
+    {
+      "tag": 8339,
+      "code_values": 4
+    },
+    {
+      "tag": 8341,
+      "code_values": 2
+    },
+    {
+      "tag": 8393,
+      "code_values": 8
+    },
+    {
+      "tag": 8395,
+      "code_values": 4
+    },
+    {
+      "tag": 8457,
+      "code_values": 23
+    },
+    {
+      "tag": 8459,
+      "code_values": 4
+    },
+    {
+      "tag": 9003,
+      "code_values": 4
+    },
+    {
+      "tag": 9013,
+      "code_values": 105
+    },
+    {
+      "tag": 9015,
+      "code_values": 10
+    },
+    {
+      "tag": 9017,
+      "code_values": 26
+    },
+    {
+      "tag": 9023,
+      "code_values": 3
+    },
+    {
+      "tag": 9025,
+      "code_values": 3
+    },
+    {
+      "tag": 9029,
+      "code_values": 5
+    },
+    {
+      "tag": 9031,
+      "code_values": 4
+    },
+    {
+      "tag": 9035,
+      "code_values": 7
+    },
+    {
+      "tag": 9037,
+      "code_values": 1
+    },
+    {
+      "tag": 9039,
+      "code_values": 9
+    },
+    {
+      "tag": 9043,
+      "code_values": 8
+    },
+    {
+      "tag": 9045,
+      "code_values": 3
+    },
+    {
+      "tag": 9051,
+      "code_values": 1
+    },
+    {
+      "tag": 9141,
+      "code_values": 13
+    },
+    {
+      "tag": 9143,
+      "code_values": 18
+    },
+    {
+      "tag": 9153,
+      "code_values": 18
+    },
+    {
+      "tag": 9169,
+      "code_values": 12
+    },
+    {
+      "tag": 9175,
+      "code_values": 3
+    },
+    {
+      "tag": 9213,
+      "code_values": 5
+    },
+    {
+      "tag": 9285,
+      "code_values": 2
+    },
+    {
+      "tag": 9303,
+      "code_values": 7
+    },
+    {
+      "tag": 9353,
+      "code_values": 13
+    },
+    {
+      "tag": 9411,
+      "code_values": 7
+    },
+    {
+      "tag": 9415,
+      "code_values": 14
+    },
+    {
+      "tag": 9417,
+      "code_values": 6
+    },
+    {
+      "tag": 9421,
+      "code_values": 1
+    },
+    {
+      "tag": 9437,
+      "code_values": 2
+    },
+    {
+      "tag": 9441,
+      "code_values": 4
+    },
+    {
+      "tag": 9443,
+      "code_values": 8
+    },
+    {
+      "tag": 9447,
+      "code_values": 4
+    },
+    {
+      "tag": 9453,
+      "code_values": 3
+    },
+    {
+      "tag": 9501,
+      "code_values": 11
+    },
+    {
+      "tag": 9507,
+      "code_values": 4
+    },
+    {
+      "tag": 9509,
+      "code_values": 5
+    },
+    {
+      "tag": 9623,
+      "code_values": 3
+    },
+    {
+      "tag": 9625,
+      "code_values": 1
+    },
+    {
+      "tag": 9635,
+      "code_values": 2
+    },
+    {
+      "tag": 9641,
+      "code_values": 5
+    },
+    {
+      "tag": 9643,
+      "code_values": 1
+    },
+    {
+      "tag": 9649,
+      "code_values": 6
+    }
+  ]
+}
