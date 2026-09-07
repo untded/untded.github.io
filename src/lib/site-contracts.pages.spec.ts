@@ -254,6 +254,33 @@ it("carries the full original documentation", () => {
     expect(unmapped).not.toContain('EDED 9011')
   })
 
+  it('dresses the long tables as ledger tables with checkable totals', () => {
+    for (const p of ['ontology/index.html', 'ledger/index.html', 'bridges/index.html', 'docs/alignment-edifact/index.html']) {
+      const html = readFileSync(`${dist}/${p}`, 'utf8')
+      expect(html, p).toContain('ledger-table')
+    }
+    const bridges = readFileSync(`${dist}/bridges/index.html`, 'utf8')
+    expect(bridges).toContain('>Total</td>')
+    expect(bridges).toContain('tabular-nums text-ink">') // totals column present
+  })
+
+  it('carries the docs table of contents and one chip row', () => {
+    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    expect(docs).toContain('On this page')
+    expect(docs).toContain('href="#code-lists-uncl"')
+    const e3055 = readFileSync(`${dist}/elements/3055/index.html`, 'utf8')
+    expect(e3055).toContain('flex flex-wrap items-center gap-2')
+    expect(e3055).toContain('EDED 3055')
+    expect(e3055).toContain('UNCL D05B')
+  })
+
+  it('makes the UNLK explorer operable by keyboard', () => {
+    const html = readFileSync(`${dist}/unlk/index.html`, 'utf8')
+    expect(html).toContain('Keyboard: arrow keys pan')
+    expect(html).toMatch(/<svg id="unlk-svg"[\s\S]{0,700}?tabindex="0"/)
+    expect(html).toContain("plus and minus zoom, 0 resets")
+  })
+
   it('shows UNCL code coverage on coded elements only', () => {
     const coded = readFileSync(`${dist}/elements/3055/index.html`, 'utf8')
     expect(coded).toContain('UNCL D05B')

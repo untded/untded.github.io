@@ -80,7 +80,7 @@ const name = (t: number) => elements.find((e) => e.tag === t)?.name
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">By category</h2>
       <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
-        <table class="w-full text-sm">
+        <table class="ledger-table w-full text-sm">
           <thead>
             <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
               <th class="px-4 py-2">Category</th>
@@ -115,7 +115,7 @@ const name = (t: number) => elements.find((e) => e.tag === t)?.name
         <a class="text-un-deep underline decoration-un/50" href={href('/docs/provenance')}>provenance note</a>.
       </p>
       <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
-        <table class="w-full text-sm">
+        <table class="ledger-table w-full text-sm">
           <thead>
             <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
               <th class="px-4 py-2">Retired</th>

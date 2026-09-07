@@ -149,6 +149,22 @@ body {
 @utility text-cat-9 { color: var(--color-cat-9); }
 
 /* Documentation prose (MDX docs pages) */
+/* Ledger tables — the wave-2 pages' long tables read like the printed
+   directory: sticky head on md+ (where the wrapper stops scrolling
+   horizontally), zebra rows in the mist tint. ledger-table--head is the
+   variant for tables that carry their own cell tint (the coverage
+   matrix): sticky head, no zebra. */
+.ledger-table tbody tr:nth-child(even) { background: color-mix(in oklab, var(--color-mist) 50%, transparent); }
+.ledger-table--head tbody tr:nth-child(even) { background: transparent; }
+@media (min-width: 768px) {
+  .ledger-table thead th, .ledger-table--head thead th {
+    position: sticky;
+    top: 0;
+    background: var(--color-paper);
+    z-index: 1;
+  }
+}
+
 .prose-doc { max-width: 72ch; }
 .prose-doc h2 { margin-top: 2.25rem; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; color: var(--color-ink); }
 .prose-doc h3 { margin-top: 1.75rem; font-size: 1rem; font-weight: 600; color: var(--color-ink); }

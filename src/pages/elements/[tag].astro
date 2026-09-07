@@ -201,31 +201,31 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
               <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
             </p>
           )}
-          {edifact && (
-            <p class="mt-3">
-              <a
-                class:list={[
-                  'inline-flex items-baseline gap-2 rounded-full border px-3 py-1 text-xs',
-                  edifact.aligned ? 'border-line bg-mist text-body' : 'border-stamp/50 bg-stamp/5 text-stamp',
-                ]}
-                href={href(edifact.aligned ? '/docs/alignment-edifact' : '/docs/alignment-edifact#diff-' + edifact.tag)}
-              >
-                <span class="font-mono font-semibold">EDED {edifact.tag}</span>
-                <span class="font-mono">{edifact.edifact.type}..{edifact.edifact.maxLength}</span>
-                <span>{edifact.aligned ? 'aligned' : 'representation differs'}</span>
-              </a>
-            </p>
-          )}
-          {uncl !== undefined && (
-            <p class={edifact ? 'mt-2' : 'mt-3'}>
-              <a
-                class="inline-flex items-baseline gap-2 rounded-full border border-line bg-mist px-3 py-1 text-xs text-body"
-                title="Code-qualified in the UN/EDIFACT D.05B UNCL (Volume II of the publication is the code-list volume)"
-                href={href('/docs/alignment-edifact#code-lists-uncl')}
-              >
-                <span class="font-mono font-semibold">UNCL D05B</span>
-                <span>{uncl === 1 ? '1 code value' : `${uncl} code values`}</span>
-              </a>
+          {(edifact || uncl !== undefined) && (
+            <p class="mt-3 flex flex-wrap items-center gap-2">
+              {edifact && (
+                <a
+                  class:list={[
+                    'inline-flex items-baseline gap-2 rounded-full border px-3 py-1 text-xs',
+                    edifact.aligned ? 'border-line bg-mist text-body' : 'border-stamp/50 bg-stamp/5 text-stamp',
+                  ]}
+                  href={href(edifact.aligned ? '/docs/alignment-edifact' : '/docs/alignment-edifact#diff-' + edifact.tag)}
+                >
+                  <span class="font-mono font-semibold">EDED {edifact.tag}</span>
+                  <span class="font-mono">{edifact.edifact.type}..{edifact.edifact.maxLength}</span>
+                  <span>{edifact.aligned ? 'aligned' : 'representation differs'}</span>
+                </a>
+              )}
+              {uncl !== undefined && (
+                <a
+                  class="inline-flex items-baseline gap-2 rounded-full border border-line bg-mist px-3 py-1 text-xs text-body"
+                  title="Code-qualified in the UN/EDIFACT D.05B UNCL (Volume II of the publication is the code-list volume)"
+                  href={href('/docs/alignment-edifact#code-lists-uncl')}
+                >
+                  <span class="font-mono font-semibold">UNCL D05B</span>
+                  <span>{uncl === 1 ? '1 code value' : `${uncl} code values`}</span>
+                </a>
+              )}
             </p>
           )}
           <p class="mt-3 text-xs text-body/80">

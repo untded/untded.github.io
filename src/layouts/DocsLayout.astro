@@ -5,14 +5,35 @@ interface Props {
   frontmatter: { title: string; description: string; eyebrow?: string }
 }
 const { frontmatter } = Astro.props
+
+// Render the page once, mine its h2 anchors for the "On this page" list
+// (ids come from the MDX integration's slugger), then inject the same
+// HTML — one render, no duplication.
+const html = await Astro.slots.render('default')
+const heads = [...html.matchAll(/<h2 id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map((m) => ({
+  id: m[1],
+  text: m[2].replace(/<[^>]+>/g, '').trim(),
+}))
 ---
 
 <BaseLayout title={frontmatter.title} description={frontmatter.description}>
-  <div class="mx-auto max-w-3xl px-4 py-12">
+  <div class="mx-auto max-w-3xl px-4 py-12 xl:max-w-4xl">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">{frontmatter.eyebrow ?? 'Documentation'}</p>
     <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">{frontmatter.title.replace(/ — UN\/TDED.*$/, '')}</h1>
-    <div class="prose-doc mt-6">
-      <slot />
+    <div class="mt-6 xl:grid xl:grid-cols-[11rem_minmax(0,72ch)] xl:gap-10">
+      {heads.length > 1 && (
+        <nav class="mb-6 xl:sticky xl:top-6 xl:mb-0 xl:self-start" aria-label="On this page">
+          <p class="text-xs font-semibold uppercase tracking-wider text-body">On this page</p>
+          <ul class="mt-2 space-y-1.5 text-sm xl:border-s xl:border-line xl:ps-4">
+            {heads.map((h) => (
+              <li><a class="text-body decoration-un/40 underline-offset-2 hover:text-un-deep hover:underline" href={`#${h.id}`}>{h.text}</a></li>
+            ))}
+          </ul>
+        </nav>
+      )}
+      <div class="prose-doc">
+        <Fragment set:html={html} />
+      </div>
     </div>
   </div>
 </BaseLayout>

@@ -12,7 +12,7 @@ const diffs = [...loadEdifactLinks().values()].filter((l) => !l.aligned).sort((a
   <p>No representation disagreements.</p>
 ) : (
   <div class="overflow-x-auto">
-    <table>
+    <table class="ledger-table w-full text-sm">
       <thead>
         <tr><th>Tag</th><th>UNTDED 2005</th><th>UN/EDIFACT D05B</th><th>EDED name</th></tr>
       </thead>
