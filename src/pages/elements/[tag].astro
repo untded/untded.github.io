@@ -62,8 +62,16 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
       <a class="hover:text-un-deep" href={href(`/categories/${category.range}`)}>{category.range}</a>
     </nav>
 
-    <div class="mb-6">
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-2">
       <ElementPager prev={prev} next={next} />
+      {next && (
+        <a
+          href={href(`/compare/${element.tag}/${next}`)}
+          class="text-xs text-body underline decoration-un/40 hover:text-un-deep"
+        >
+          Compare with {next} →
+        </a>
+      )}
     </div>
 
     <div class="grid gap-8 lg:grid-cols-[16rem_1fr]">
