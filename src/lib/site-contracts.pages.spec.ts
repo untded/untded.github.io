@@ -273,6 +273,16 @@ it("carries the full original documentation", () => {
     }
   })
 
+  it('dereferences the dataset IRI', () => {
+    const html = readFileSync(`${dist}/dataset/untded-2005/index.html`, 'utf8')
+    expect(html).toContain('ECE/TRADE/362')
+    expect(html).toContain('https://www.untded.org/dataset/untded-2005')
+    expect(html).toContain('href="/download"')
+    expect(html).toContain('href="/about"')
+    const home = readFileSync(`${dist}/index.html`, 'utf8')
+    expect(home).toContain('dataset/untded-2005')
+  })
+
   it('opens the front door onto the whole registry surface', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
     for (const route of ['/ontology', '/ledger', '/bridges', '/unlk', '/document', '/docs']) {
