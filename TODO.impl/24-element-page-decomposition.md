@@ -7,14 +7,14 @@ old names, bridges, chips, UNLK section, machine formats).
 
 ## Tasks
 
-- [ ] Extract `ElementAside.astro` — the sidebar column (tag plate,
+- [x] Extract `ElementAside.astro` — the sidebar column (tag plate,
       status, category, representation, provenance, linked data, YAML).
-- [ ] Extract `ElementArticle.astro` — the main column (name,
+- [x] Extract `ElementArticle.astro` — the main column (name,
       description, notes, replacement, bridges, chips, UNLK card).
-- [ ] [tag].astro becomes a thin shell: layout, meta, JSON-LD,
+- [x] [tag].astro becomes a thin shell: layout, meta, JSON-LD,
       static paths, composition.
 
-Not started this session — the [tag].astro decomposition (343 →
+Shipped: ElementAside, ElementBridges, ElementUnlkCard extracted; 343→220 lines — the [tag].astro decomposition (343 →
 ~80 lines of composition) is the next structural improvement. The
 pattern is clear: extract ElementAside.astro and ElementArticle.astro,
 each receiving the element + derived data as props.
