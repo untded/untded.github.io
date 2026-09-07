@@ -1,0 +1,17 @@
+---
+// The data-table pattern: scrollable wrapper on narrow screens,
+// full-width on md+, with the data-table styling (sticky head,
+// zebra rows). One definition for the six pages that carry tables.
+interface Props {
+  class?: string
+  scroll?: boolean
+}
+const { class: extra, scroll = true } = Astro.props
+const wrapper = scroll ? 'overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible' : 'rounded-md border border-line bg-paper'
+---
+
+<div class={wrapper}>
+  <table class:list={['data-table w-full text-sm', extra]}>
+    <slot />
+  </table>
+</div>

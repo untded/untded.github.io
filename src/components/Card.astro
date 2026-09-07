@@ -1,0 +1,21 @@
+---
+// The card pattern: bordered paper surface with hover affordance.
+// Used 12+ times across homepage, download, dataset, document and
+// docs pages. One definition; every call site is a slot.
+interface Props {
+  href?: string
+  class?: string
+}
+const { href, class: extra } = Astro.props
+const base = 'rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60'
+---
+
+{href ? (
+  <a href={href} class:list={[base, extra]}>
+    <slot />
+  </a>
+) : (
+  <div class:list={[base, extra]}>
+    <slot />
+  </div>
+)}
