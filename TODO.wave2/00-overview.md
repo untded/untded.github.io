@@ -84,4 +84,7 @@ contract on the RDF graph (it caught a missing rdf: prefix declaration
 and two dead term declarations, both fixed — untded-2005#12), the
 omnibox's Pages section (⌘K reaches the whole registry), and an
 accessibility floor over every built page (passed first try, now
-guarded).
+guarded). Tracks 19 + 10: the dataset IRI finally resolves
+(/dataset/untded-2005), and the UNCL section-4.1.5 bracket join ships
+from the D.01B full-text mirror (147 elements / 178 refs; the
+publication's own BB→[3420] example reproduces verbatim).

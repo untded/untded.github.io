@@ -16,12 +16,15 @@ if (existsSync(fileURLToPath(new URL('../../references/edifact-D05B/segments.xml
     execSync('bundle exec ruby bin/join-uncl', { cwd: datasetDir, stdio: 'inherit' })
   }
 }
+if (existsSync(fileURLToPath(new URL('../../references/edifact-D01B/uncl', import.meta.url)))) {
+  execSync('bundle exec ruby bin/join-uncl-refs', { cwd: datasetDir, stdio: 'inherit' })
+}
 
 const outDir = fileURLToPath(new URL('../data-source/', import.meta.url))
 mkdirSync(outDir, { recursive: true })
 cpSync(`${datasetDir}/derived/elements.json`, `${outDir}/elements.json`)
 cpSync(`${datasetDir}/derived/categories.json`, `${outDir}/categories.json`)
-for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json', 'uncl-coverage.json', 'parser-fixtures.json', 'context.jsonld']) {
+for (const f of ['untded.jsonld', 'untded.ttl', 'vocabulary.json', 'edifact-links.json', 'uncl-coverage.json', 'uncl-refs.json', 'parser-fixtures.json', 'context.jsonld']) {
   cpSync(`${datasetDir}/derived/${f}`, `${outDir}/${f}`)
 }
 const rdfDir = fileURLToPath(new URL('../data-source/rdf/', import.meta.url))
@@ -33,4 +36,4 @@ mkdirSync(pdfDir, { recursive: true })
 for (const pdf of ['UNTDED2005.pdf']) {
   cpSync(`${datasetDir}/../references/${pdf}`, `${pdfDir}${pdf}`)
 }
-console.log('synced elements.json, categories.json, untded.jsonld, untded.ttl, vocabulary.json, edifact-links.json, uncl-coverage.json, parser-fixtures.json, context.jsonld, rdf/, pdf/')
+console.log('synced elements.json, categories.json, untded.jsonld, untded.ttl, vocabulary.json, edifact-links.json, uncl-coverage.json, uncl-refs.json, parser-fixtures.json, context.jsonld, rdf/, pdf/')

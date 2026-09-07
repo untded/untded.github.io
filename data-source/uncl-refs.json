@@ -1,0 +1,1996 @@
+{
+  "source": "UN/EDIFACT D.01B UNCL full-text mirror (fretlink/edi-parser BSD conversion of the UNECE publication)",
+  "vintage": "D.01B — one release before the edition's D.02A resource; labeled as such",
+  "coverage": "section 4.1.5 cross-references: [nnnn] equals-rule and (nnnn) related-rule",
+  "elements": 147,
+  "refs": 178,
+  "equals": 96,
+  "related": 82,
+  "unknown_tags": [
+    1961,
+    4110
+  ],
+  "links": [
+    {
+      "tag": 1004,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "DM",
+          "name": "Document number",
+          "kind": "equals",
+          "description": "[1004] Reference number assigned to the document by the issuer."
+        }
+      ]
+    },
+    {
+      "tag": 1014,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "PK",
+          "name": "Packing list number",
+          "kind": "related",
+          "description": "(1014) Reference number assigned to a packing list, see: 1001 = 271."
+        }
+      ]
+    },
+    {
+      "tag": 1016,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "BN",
+          "name": "Booking reference number",
+          "kind": "equals",
+          "description": "[1016] Reference number assigned by the carrier or his agent when cargo space is reserved prior to loading."
+        }
+      ]
+    },
+    {
+      "tag": 1018,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAA",
+          "name": "Acknowledgement of order number",
+          "kind": "equals",
+          "description": "[1018] Reference number assigned by the seller to his acknowledgement of an order."
+        }
+      ]
+    },
+    {
+      "tag": 1022,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "CO",
+          "name": "Buyers order number",
+          "kind": "equals",
+          "description": "[1022] Reference number assigned by the buyer to an order."
+        },
+        {
+          "code_list": 1153,
+          "code": "ON",
+          "name": "Order number (purchase)",
+          "kind": "equals",
+          "description": "[1022] Reference number assigned by the buyer to an order."
+        }
+      ]
+    },
+    {
+      "tag": 1030,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ACN",
+          "name": "Advice of collection number",
+          "kind": "equals",
+          "description": "[1030] Number of the Advice of Collection attached to the Rail Consignment Note (CIM 75)."
+        }
+      ]
+    },
+    {
+      "tag": 1070,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "CNO",
+          "name": "Charge note reference number",
+          "kind": "equals",
+          "description": "[1070] Indication in pre-printed form that a Charges note has been established and is attached to the Rail Consignment Note (CIM 76)."
+        }
+      ]
+    },
+    {
+      "tag": 1088,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAB",
+          "name": "Proforma invoice number",
+          "kind": "equals",
+          "description": "[1088] Reference number assigned by the seller to a Proforma Invoice."
+        }
+      ]
+    },
+    {
+      "tag": 1106,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "IP",
+          "name": "Import licence number",
+          "kind": "equals",
+          "description": "[1106] Reference number assigned by the issuing authority to an Import Licence."
+        }
+      ]
+    },
+    {
+      "tag": 1128,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAU",
+          "name": "Despatch note number",
+          "kind": "equals",
+          "description": "[1128] Reference number assigned by the seller to a Despatch Note."
+        },
+        {
+          "code_list": 1153,
+          "code": "AEZ",
+          "name": "Despatch note (post parcels) number",
+          "kind": "related",
+          "description": "(1128) Reference number assigned to a despatch note (post parcels), see: 1001 = 750."
+        }
+      ]
+    },
+    {
+      "tag": 1140,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "CU",
+          "name": "Consignor's reference number",
+          "kind": "equals",
+          "description": "[1140] Reference number assigned by a consignor to a particular shipment for his own purposes or for those of the consignee."
+        }
+      ]
+    },
+    {
+      "tag": 1150,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "REN",
+          "name": "Received number",
+          "kind": "equals",
+          "description": "[1150] Number assigned to a rail consignment upon its arrival at its destination station (CIM 84)."
+        }
+      ]
+    },
+    {
+      "tag": 1156,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "LI",
+          "name": "Line item reference number",
+          "kind": "related",
+          "description": "(1156) Reference number identifying a particular line in a document."
+        }
+      ]
+    },
+    {
+      "tag": 1166,
+      "refs": [
+        {
+          "code_list": 6069,
+          "code": "13",
+          "name": "Number of loading lists",
+          "kind": "equals",
+          "description": "[1166] Number of loading lists, manifests or other similar specifications attached to a document."
+        }
+      ]
+    },
+    {
+      "tag": 1168,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ABI",
+          "name": "Deferred payment reference",
+          "kind": "equals",
+          "description": "[1168] Reference or indication of the deferred payment of duty/tax."
+        }
+      ]
+    },
+    {
+      "tag": 1172,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAC",
+          "name": "Documentary credit number",
+          "kind": "equals",
+          "description": "[1172] Reference number assigned by issuing bank to a Documentary credit."
+        }
+      ]
+    },
+    {
+      "tag": 1188,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAS",
+          "name": "Transport document number",
+          "kind": "equals",
+          "description": "[1188] Reference assigned by the carrier or his agent to the transport document."
+        }
+      ]
+    },
+    {
+      "tag": 1202,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "UCN",
+          "name": "Unique consignment reference number",
+          "kind": "related",
+          "description": "(1202) Unique reference of a consignment (UCRN) used for identification purposes in documents and messages exchanged between parties in international trade. See also: Unique Identifier Code (UNIC) in UN/ECE Recommendation No. 8, March 1992."
+        }
+      ]
+    },
+    {
+      "tag": 1208,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "EX",
+          "name": "Export licence number",
+          "kind": "equals",
+          "description": "[1208] Reference number assigned by issuing authority to an Export Licence."
+        }
+      ]
+    },
+    {
+      "tag": 1310,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAP",
+          "name": "Part consignment number",
+          "kind": "equals",
+          "description": "[1310] Reference to a specific consignment forming part of a contract allowing part deliveries."
+        }
+      ]
+    },
+    {
+      "tag": 1318,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAD",
+          "name": "Contract addendum number",
+          "kind": "equals",
+          "description": "[1318] Reference number assigned by the issuer to a Contract Addendum."
+        }
+      ]
+    },
+    {
+      "tag": 1334,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "IV",
+          "name": "Invoice number",
+          "kind": "equals",
+          "description": "[1334] Reference number assigned by the seller to a Commercial Invoice."
+        }
+      ]
+    },
+    {
+      "tag": 1362,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAO",
+          "name": "Consignee's shipment reference number",
+          "kind": "equals",
+          "description": "[1362] Reference assigned by the consignee to a shipment."
+        }
+      ]
+    },
+    {
+      "tag": 1370,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "DO",
+          "name": "Document recipient",
+          "kind": "related",
+          "description": "(1370) Party which should receive a specified document."
+        }
+      ]
+    },
+    {
+      "tag": 1426,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ABT",
+          "name": "Customs declaration number",
+          "kind": "equals",
+          "description": "[1426] Number, assigned or accepted by Customs, to identify a Goods declaration."
+        }
+      ]
+    },
+    {
+      "tag": 1460,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "FF",
+          "name": "Freight forwarder's reference number",
+          "kind": "equals",
+          "description": "[1460] Reference number assigned to the consignment by the freight forwarder."
+        }
+      ]
+    },
+    {
+      "tag": 2006,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "137",
+          "name": "Document/message date/time",
+          "kind": "related",
+          "description": "(2006) Date/time when a document/message is issued. This may include authentication."
+        }
+      ]
+    },
+    {
+      "tag": 2010,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "4",
+          "name": "Order date/time",
+          "kind": "equals",
+          "description": "[2010] Date when an order is issued."
+        }
+      ]
+    },
+    {
+      "tag": 2032,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "141",
+          "name": "Presentation date of Goods declaration (Customs)",
+          "kind": "equals",
+          "description": "[2032] Date on which a Goods declaration is presented or lodged with Customs."
+        }
+      ]
+    },
+    {
+      "tag": 2034,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "138",
+          "name": "Payment date",
+          "kind": "equals",
+          "description": "[2034] Date on which an amount due is made available to the creditor, in accordance with the terms of payment."
+        }
+      ]
+    },
+    {
+      "tag": 2036,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "148",
+          "name": "Acceptance date of Goods declaration (Customs)",
+          "kind": "equals",
+          "description": "[2036] Date on which a Goods declaration is accepted by Customs in accordance with Customs legislation."
+        }
+      ]
+    },
+    {
+      "tag": 2078,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "147",
+          "name": "Expiry date of export licence",
+          "kind": "equals",
+          "description": "[2078] Date of expiry of the validity of an Export Licence."
+        }
+      ]
+    },
+    {
+      "tag": 2106,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "178",
+          "name": "Arrival date/time, actual",
+          "kind": "equals",
+          "description": "[2106] Date (and time) of arrival of means of transport."
+        }
+      ]
+    },
+    {
+      "tag": 2126,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "143",
+          "name": "Acceptance date/time of goods",
+          "kind": "equals",
+          "description": "[2126] Date on which the goods are taken over by the carrier at the place of acceptance (CMR 4)."
+        }
+      ]
+    },
+    {
+      "tag": 2138,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "69",
+          "name": "Delivery date/time, promised for",
+          "kind": "equals",
+          "description": "[2138] Date by which, or period within which, the merchandise should be delivered to the buyer, as agreed between the seller and the buyer (generic term)."
+        }
+      ]
+    },
+    {
+      "tag": 2170,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "11",
+          "name": "Despatch date and or time",
+          "kind": "related",
+          "description": "(2170) Date/time on which the goods are or are expected to be despatched or shipped."
+        }
+      ]
+    },
+    {
+      "tag": 2218,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "124",
+          "name": "Despatch note date",
+          "kind": "equals",
+          "description": "[2218] Date when a Despatch Note is issued."
+        }
+      ]
+    },
+    {
+      "tag": 2272,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "195",
+          "name": "Expiry date of import licence",
+          "kind": "equals",
+          "description": "[2272] Date of expiry of the validity of an Import Licence."
+        }
+      ]
+    },
+    {
+      "tag": 2280,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "136",
+          "name": "Departure date/time",
+          "kind": "equals",
+          "description": "[2280] Date (and time) of departure of means of transport."
+        },
+        {
+          "code_list": 2005,
+          "code": "186",
+          "name": "Departure date/time, actual",
+          "kind": "related",
+          "description": "(2280) Date (and time) of departure of means of transport."
+        }
+      ]
+    },
+    {
+      "tag": 2292,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "125",
+          "name": "Import licence date",
+          "kind": "equals",
+          "description": "[2292] Date when Import Licence is issued."
+        }
+      ]
+    },
+    {
+      "tag": 2326,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "126",
+          "name": "Contract date",
+          "kind": "equals",
+          "description": "[2326] Date when a Contract is agreed."
+        }
+      ]
+    },
+    {
+      "tag": 2348,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "132",
+          "name": "Arrival date/time, estimated",
+          "kind": "related",
+          "description": "(2348) Date/time when carrier estimates that a means of transport should arrive at the port of discharge or place of destination."
+        }
+      ]
+    },
+    {
+      "tag": 2376,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "3",
+          "name": "Invoice date/time",
+          "kind": "equals",
+          "description": "[2376] Date when a Commercial Invoice is issued."
+        }
+      ]
+    },
+    {
+      "tag": 3004,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "WD",
+          "name": "Warehouse depositor",
+          "kind": "related",
+          "description": "(3004) Party depositing goods in a warehouse."
+        }
+      ]
+    },
+    {
+      "tag": 3006,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "IV",
+          "name": "Invoicee",
+          "kind": "related",
+          "description": "(3006) Party to whom an invoice is issued."
+        }
+      ]
+    },
+    {
+      "tag": 3018,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "1",
+          "name": "Place of terms of delivery",
+          "kind": "related",
+          "description": "(3018) Point or port of departure, shipment or destination, as required under the applicable terms of delivery, e.g. Incoterms."
+        }
+      ]
+    },
+    {
+      "tag": 3020,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "IM",
+          "name": "Importer",
+          "kind": "related",
+          "description": "(3020) Party who makes - or on whose behalf a Customs clearing agent or other authorized person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned."
+        }
+      ]
+    },
+    {
+      "tag": 3022,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "WH",
+          "name": "Warehouse keeper",
+          "kind": "related",
+          "description": "(3022) Party taking responsibility for goods entered into a warehouse."
+        }
+      ]
+    },
+    {
+      "tag": 3024,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "GC",
+          "name": "Goods custodian",
+          "kind": "related",
+          "description": "(3024) Party responsible for the keeping of goods."
+        }
+      ]
+    },
+    {
+      "tag": 3026,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "GR",
+          "name": "Goods releaser",
+          "kind": "related",
+          "description": "(3026) Party entitled to authorize release of goods from custodian."
+        }
+      ]
+    },
+    {
+      "tag": 3028,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "II",
+          "name": "Issuer of invoice",
+          "kind": "related",
+          "description": "(3028) Party issuing an invoice."
+        }
+      ]
+    },
+    {
+      "tag": 3030,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "EX",
+          "name": "Exporter",
+          "kind": "related",
+          "description": "(3030) Party who makes - or on whose behalf a Customs clearing agent or other authorized person makes - an export declaration. This may include a manufacturer, seller or other person. Within a Customs union, consignor may have the same meaning as exporter."
+        }
+      ]
+    },
+    {
+      "tag": 3074,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "RQR",
+          "name": "Requested routes/routing instructions",
+          "kind": "equals",
+          "description": "[3074] Names of places via which the consignor requests a consignment to be routed."
+        }
+      ]
+    },
+    {
+      "tag": 3080,
+      "refs": [
+        {
+          "code_list": 2005,
+          "code": "58",
+          "name": "Clearance date (Customs)",
+          "kind": "related",
+          "description": "(3080) Date on which Customs formalities necessary to allow goods to be exported, to enter home use, or to be placed under another Customs procedure has been accomplished (CCC)."
+        },
+        {
+          "code_list": 3227,
+          "code": "22",
+          "name": "Customs office of clearance",
+          "kind": "related",
+          "description": "(3080) Place where Customs clearance procedure occur (CCC)."
+        }
+      ]
+    },
+    {
+      "tag": 3086,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "45",
+          "name": "Customs office of destination (transit)",
+          "kind": "related",
+          "description": "(3086) Customs office at which a transit operation is terminated. Synonym: Customs office of transit termination."
+        }
+      ]
+    },
+    {
+      "tag": 3088,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "41",
+          "name": "Customs office of entry",
+          "kind": "equals",
+          "description": "[3088] Customs office at which the goods enter the country of destination."
+        }
+      ]
+    },
+    {
+      "tag": 3096,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "42",
+          "name": "Customs office of exit",
+          "kind": "equals",
+          "description": "[3096] Customs office at which the goods leave the country of dispatch/export."
+        }
+      ]
+    },
+    {
+      "tag": 3106,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "50",
+          "name": "Customs office of transit",
+          "kind": "equals",
+          "description": "[3106] Customs office which is competent for transit formalities en route."
+        }
+      ]
+    },
+    {
+      "tag": 3110,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "119",
+          "name": "Customs office of transit guarantee",
+          "kind": "equals",
+          "description": "[3110] Customs office at which a security or guarantee for the movement of goods under a transit procedure is lodged."
+        }
+      ]
+    },
+    {
+      "tag": 3116,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "121",
+          "name": "Country of sale",
+          "kind": "equals",
+          "description": "[3116] Country where exporter's co-contractor is domiciled or has his business."
+        }
+      ]
+    },
+    {
+      "tag": 3126,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "CA",
+          "name": "Carrier",
+          "kind": "related",
+          "description": "(3126) Party undertaking or arranging transport of goods between named points."
+        },
+        {
+          "code_list": 3035,
+          "code": "OV",
+          "name": "Owner of means of transport",
+          "kind": "related",
+          "description": "(3126) Party owning the means of transport. No synonym of carrier = CA."
+        },
+        {
+          "code_list": 3139,
+          "code": "CA",
+          "name": "Carrier",
+          "kind": "related",
+          "description": "(3126) Party undertaking or arranging transport of goods between named points."
+        }
+      ]
+    },
+    {
+      "tag": 3132,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "CN",
+          "name": "Consignee",
+          "kind": "related",
+          "description": "(3132) Party to which goods are consigned."
+        },
+        {
+          "code_list": 3139,
+          "code": "CN",
+          "name": "Consignee",
+          "kind": "related",
+          "description": "(3132) Party to which goods are consigned."
+        }
+      ]
+    },
+    {
+      "tag": 3140,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "DT",
+          "name": "Declarant",
+          "kind": "related",
+          "description": "(3140) Party who makes a declaration to an official body or - where legally permitted - in whose name, or on whose behalf, a declaration to an official body is made."
+        }
+      ]
+    },
+    {
+      "tag": 3144,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "DP",
+          "name": "Delivery party",
+          "kind": "related",
+          "description": "(3144) Party to which goods should be delivered, if not identical with consignee."
+        }
+      ]
+    },
+    {
+      "tag": 3156,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "18",
+          "name": "Warehouse",
+          "kind": "related",
+          "description": "(3156) Warehouse where a particular consignment has been stored."
+        }
+      ]
+    },
+    {
+      "tag": 3180,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "NI",
+          "name": "Notify party",
+          "kind": "related",
+          "description": "(3180) Party to be notified of arrival of goods."
+        }
+      ]
+    },
+    {
+      "tag": 3196,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "AG",
+          "name": "Agent/representative",
+          "kind": "related",
+          "description": "(3196) Party authorized to act on behalf of another party."
+        }
+      ]
+    },
+    {
+      "tag": 3214,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "5",
+          "name": "Place of departure",
+          "kind": "related",
+          "description": "(3214) Port, airport or other location from which a means of transport or transport equipment is scheduled to depart or has departed."
+        }
+      ]
+    },
+    {
+      "tag": 3216,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "36",
+          "name": "Country of ultimate destination",
+          "kind": "related",
+          "description": "(3216) Country known to the consignor or his agent at the time of despatch to be the final country to which the goods are to be delivered."
+        }
+      ]
+    },
+    {
+      "tag": 3219,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "38",
+          "name": "Country of first destination",
+          "kind": "equals",
+          "description": "[3219] Country where the goods are offloaded from the means of transport used for their exportation."
+        }
+      ]
+    },
+    {
+      "tag": 3220,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "35",
+          "name": "Country of exportation/despatch",
+          "kind": "related",
+          "description": "(3220) Country from which the goods were initially exported to the importing country without any commercial transaction taking place in intermediate countries. Syn.: country whence consigned. Country of despatch: country from which goods are despatched between countries of a Customs union."
+        }
+      ]
+    },
+    {
+      "tag": 3228,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "163   Country sub-entity",
+          "kind": "related",
+          "description": "(3228) Identification of country sub-entity (region, department, state, province) defined by appropriate authority. 1. This code value will be removed effective with directory D.04A."
+        }
+      ]
+    },
+    {
+      "tag": 3238,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "27",
+          "name": "Country of origin",
+          "kind": "equals",
+          "description": "[3238] Country in which the goods have been produced or manufactured, according to criteria laid down for the purposes of application of the Customs tariff, of quantitative restrictions, or of any other measure related to trade."
+        }
+      ]
+    },
+    {
+      "tag": 3246,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "7",
+          "name": "Place of delivery",
+          "kind": "related",
+          "description": "(3246) Place to which the goods are to be finally delivered under transport contract terms (operational term)."
+        },
+        {
+          "code_list": 3227,
+          "code": "133",
+          "name": "Region of delivery",
+          "kind": "related",
+          "description": "(3246) Region to which the goods are to be finally delivered under transport contract terms (operational term)."
+        }
+      ]
+    },
+    {
+      "tag": 3251,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "16    Postcode directory",
+          "kind": "equals",
+          "description": "[3251] Code defining postal zones or addresses. 1. This code value will be removed effective with directory D.04A."
+        }
+      ]
+    },
+    {
+      "tag": 3254,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "SR",
+          "name": "Seller's agent/representative",
+          "kind": "related",
+          "description": "(3254) Party representing the seller for the purpose of the trade transaction."
+        }
+      ]
+    },
+    {
+      "tag": 3274,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "55",
+          "name": "Charges and freight payable to",
+          "kind": "equals",
+          "description": "[3274] Name of place up to which freight charges and other charges are to be paid."
+        }
+      ]
+    },
+    {
+      "tag": 3282,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "PW",
+          "name": "Despatch party",
+          "kind": "related",
+          "description": "(3282) Party where goods are collected or taken over by the carrier (i.e. if other than consignor)."
+        }
+      ]
+    },
+    {
+      "tag": 3308,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "PR",
+          "name": "Payer",
+          "kind": "related",
+          "description": "(3308) Party initiating payment."
+        }
+      ]
+    },
+    {
+      "tag": 3331,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "37",
+          "name": "Country of last consignment",
+          "kind": "equals",
+          "description": "[3331] Country where the goods are loaded onto the means of transport used for their importation."
+        }
+      ]
+    },
+    {
+      "tag": 3336,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "CZ",
+          "name": "Consignor",
+          "kind": "related",
+          "description": "(3336) Party which, by contract with a carrier, consigns or sends goods with the carrier, or has them conveyed by him. Synonym: shipper, sender."
+        },
+        {
+          "code_list": 3139,
+          "code": "CO",
+          "name": "Consignor",
+          "kind": "related",
+          "description": "(3336) Party which, by contract with a carrier, consigns or sends goods with the carrier, or has them conveyed by him. Synonym: shipper/sender."
+        }
+      ]
+    },
+    {
+      "tag": 3340,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "AL",
+          "name": "Principal",
+          "kind": "related",
+          "description": "(3340) Party accepting liability for goods held or moving (e.g. transit) under a Customs authorization and - when applicable - a guarantee."
+        }
+      ]
+    },
+    {
+      "tag": 3346,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "SE",
+          "name": "Seller",
+          "kind": "related",
+          "description": "(3346) Party selling merchandise to a buyer."
+        }
+      ]
+    },
+    {
+      "tag": 3348,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "10",
+          "name": "Place of acceptance",
+          "kind": "related",
+          "description": "(3348) Place at which the goods are taken over by the carrier."
+        }
+      ]
+    },
+    {
+      "tag": 3352,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "AP",
+          "name": "Accepting party",
+          "kind": "related",
+          "description": "(3352) Party accepting goods, products, services etc."
+        }
+      ]
+    },
+    {
+      "tag": 3384,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "156   Location of goods",
+          "kind": "related",
+          "description": "(3384) Indication of the place where goods are located and where they are available for examination. 1. This code value will be removed effective with directory D.04A."
+        },
+        {
+          "code_list": 3227,
+          "code": "14",
+          "name": "Location of goods",
+          "kind": "related",
+          "description": "(3384) Place where goods are located and where they are available for examination."
+        }
+      ]
+    },
+    {
+      "tag": 3394,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "102",
+          "name": "Country of purchase",
+          "kind": "equals",
+          "description": "[3394] Country where the importer's co-contractor is domiciled or has his business."
+        }
+      ]
+    },
+    {
+      "tag": 3410,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "44",
+          "name": "Place of authentication of document",
+          "kind": "related",
+          "description": "(3410) Place where document is signed or otherwise authenticated. Synonym: Place of issue of document."
+        }
+      ]
+    },
+    {
+      "tag": 3420,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "BB",
+          "name": "Buyer's bank",
+          "kind": "equals",
+          "description": "[3420] Bank employed by the buyer to make payment."
+        }
+      ]
+    },
+    {
+      "tag": 3424,
+      "refs": [
+        {
+          "code_list": 3227,
+          "code": "13",
+          "name": "Place of transhipment",
+          "kind": "related",
+          "description": "(3424) Place where goods are transferred from one means of transport to another (operational term)."
+        }
+      ]
+    },
+    {
+      "tag": 3450,
+      "refs": [
+        {
+          "code_list": 3035,
+          "code": "FT",
+          "name": "Party responsible for financial settlement",
+          "kind": "related",
+          "description": "(3450) Party responsible for either the transfer or repatriation of the funds relating to a transaction."
+        }
+      ]
+    },
+    {
+      "tag": 4020,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "DCL",
+          "name": "Declaration",
+          "kind": "equals",
+          "description": "[4020] Text of a declaration made by the issuer of the document (CIM 12)."
+        }
+      ]
+    },
+    {
+      "tag": 4034,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "AAH",
+          "name": "Customs information",
+          "kind": "equals",
+          "description": "[4034] Information entered by Customs on the CIM."
+        }
+      ]
+    },
+    {
+      "tag": 4053,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "AAR",
+          "name": "Terms of delivery",
+          "kind": "related",
+          "description": "(4053) Free text of the non Incoterms terms of delivery. For Incoterms, use: 4053."
+        }
+      ]
+    },
+    {
+      "tag": 4070,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "ICN",
+          "name": "Information for consignee",
+          "kind": "equals",
+          "description": "[4070] Any remark given for the information of the consignee (CIM 21)."
+        }
+      ]
+    },
+    {
+      "tag": 4078,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "HAN",
+          "name": "Handling instructions",
+          "kind": "equals",
+          "description": "[4078] Instructions on how specified goods, packages or containers should be handled."
+        }
+      ]
+    },
+    {
+      "tag": 4090,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "IRP",
+          "name": "Information for railway purpose",
+          "kind": "equals",
+          "description": "[4090] Date entered by railway stations when required, e.g. specified trains, additional sheets for freight calculations, special measures, etc. (CIM 8)."
+        }
+      ]
+    },
+    {
+      "tag": 4092,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "LAN",
+          "name": "Loading authorization number",
+          "kind": "equals",
+          "description": "[4092] A number assigned to the loading authorization granted by the forwarding station when the consignment is subject to traffic limitations (CIM 43)."
+        }
+      ]
+    },
+    {
+      "tag": 4120,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "RQT",
+          "name": "Tariffs and route requested",
+          "kind": "equals",
+          "description": "[4120] Stipulation of the tariffs to be applied showing, where applicable, special-agreement numbers or references; indication of routes by frontier points or by frontier stations and, when necessary, by transit stations between."
+        }
+      ]
+    },
+    {
+      "tag": 4240,
+      "refs": [
+        {
+          "code_list": 6311,
+          "code": "ASW",
+          "name": "Weight ascertained",
+          "kind": "equals",
+          "description": "[4240] Endorsement of the true weight (mass) as ascertained or verified by the railway (CIM 81)."
+        },
+        {
+          "code_list": 6313,
+          "code": "ACE",
+          "name": "Weight ascertained",
+          "kind": "equals",
+          "description": "[4240] Endorsement of the true weight (mass) as ascertained or verified by the railway (CIM 81)."
+        }
+      ]
+    },
+    {
+      "tag": 4276,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "AAB",
+          "name": "Terms of payments",
+          "kind": "equals",
+          "description": "[4276] Conditions of payment between the parties to a transaction (generic term)."
+        }
+      ]
+    },
+    {
+      "tag": 4284,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "SIC",
+          "name": "Sender's instruction to carrier",
+          "kind": "equals",
+          "description": "[4284] Instructions given and declarations made by the sender to the carrier concerning Customs, insurance, and other formalities."
+        }
+      ]
+    },
+    {
+      "tag": 4390,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "134   Duty, tax or fee payment method",
+          "kind": "equals",
+          "description": "[4390] Method by which a duty or tax is paid to the relevant administration. 1. This code value will be removed effective with directory D.04A."
+        }
+      ]
+    },
+    {
+      "tag": 5010,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "157",
+          "name": "Insurance value",
+          "kind": "related",
+          "description": "(5010) Value for which the goods are insured."
+        }
+      ]
+    },
+    {
+      "tag": 5020,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "46",
+          "name": "Deductions (Customs)",
+          "kind": "equals",
+          "description": "[5020] Allowable deductions from the Customs value basis used."
+        }
+      ]
+    },
+    {
+      "tag": 5032,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "40",
+          "name": "Customs value",
+          "kind": "related",
+          "description": "(5032) Value declared for Customs purposes on those goods in a consignment which are subject to the same Customs procedure, and have the same tariff/statistical heading, country information and duty regime."
+        }
+      ]
+    },
+    {
+      "tag": 5036,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "44",
+          "name": "Declared value for carriage",
+          "kind": "related",
+          "description": "(5036) Value, declared by the shipper or his agent solely for the purpose of varying the carrier's level of liability from that provided in the contract of carriage, in case of loss or damage to goods or delayed delivery."
+        }
+      ]
+    },
+    {
+      "tag": 5068,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "38",
+          "name": "Invoice item amount",
+          "kind": "related",
+          "description": "(5068) Total sum charged in respect of a single Invoice item in accordance with the terms of delivery."
+        },
+        {
+          "code_list": 5025,
+          "code": "77",
+          "name": "Invoice amount",
+          "kind": "equals",
+          "description": "[5068] Total sum charged in respect of a single Invoice in accordance with the terms of delivery."
+        }
+      ]
+    },
+    {
+      "tag": 5070,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "43",
+          "name": "Declared total Customs value",
+          "kind": "equals",
+          "description": "[5070] Total value declared for Customs purposes of all goods in a consignment, whether or not they are subject to the same Customs procedure, or have the same tariff/statistical heading, country information, and duty regime."
+        },
+        {
+          "code_list": 6069,
+          "code": "17",
+          "name": "Declared total Customs value",
+          "kind": "equals",
+          "description": "[5070] Total value declared for Customs purposes of all goods in a consignment, whether or not they are subject to the same Customs procedure, or have the same tariff/statistical heading, country information, and duty regime."
+        }
+      ]
+    },
+    {
+      "tag": 5110,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "146",
+          "name": "Unit price",
+          "kind": "related",
+          "description": "(5110) Reporting monetary amount is a \"per unit\" amount."
+        }
+      ]
+    },
+    {
+      "tag": 5140,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "136",
+          "name": "Total invoice additional amount",
+          "kind": "related",
+          "description": "(5140) Amount to be added to the sum of invoice line amounts to arrive at the total invoice amount."
+        }
+      ]
+    },
+    {
+      "tag": 5210,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "97",
+          "name": "Offer amount",
+          "kind": "equals",
+          "description": "[5210] Total amount of an offer."
+        }
+      ]
+    },
+    {
+      "tag": 5218,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "123",
+          "name": "Statistical value",
+          "kind": "equals",
+          "description": "[5218] Value declared for statistical purposes of those goods in a consignment which have the same statistical heading and country of origin."
+        }
+      ]
+    },
+    {
+      "tag": 5292,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "68",
+          "name": "Insurance and transport charges (Customs)",
+          "kind": "related",
+          "description": "(5488)+(5292) Sum total of transport and insurance charges (CCC)."
+        },
+        {
+          "code_list": 5025,
+          "code": "69",
+          "name": "Insurance and transport charges incurred outside Customs",
+          "kind": "related",
+          "description": "territory (5488)+(5292) Insurance and transport charges incurred outside a Customs territory (or a Customs union)."
+        },
+        {
+          "code_list": 5025,
+          "code": "104",
+          "name": "Other transport charges",
+          "kind": "related",
+          "description": "(5292) Other charges paid for transport."
+        },
+        {
+          "code_list": 5025,
+          "code": "144",
+          "name": "Transport charges (Customs)",
+          "kind": "related",
+          "description": "(5292) Cost incurred by shipper in moving goods, by whatever means, from one place to another under the terms of the contract of carriage, see UN/ECE Recommendation No 23. Synonym: freight charges (Customs)."
+        },
+        {
+          "code_list": 5025,
+          "code": "145",
+          "name": "Transport charges incurred outside Customs territory",
+          "kind": "related",
+          "description": "(5292) Transport charges incurred outside a Customs territory (or a Customs union)."
+        },
+        {
+          "code_list": 5025,
+          "code": "158",
+          "name": "Insurance and transport charges incurred inside Customs",
+          "kind": "related",
+          "description": "territory (5488)+(5292) Charges to be paid for moving goods, by whatever means, from the point of entry into the Customs territory (within a Customs union: to the point of entry in the final destination country)."
+        }
+      ]
+    },
+    {
+      "tag": 5302,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "113",
+          "name": "Prepaid amount",
+          "kind": "related",
+          "description": "(5302) Amount which has been prepaid in advance."
+        }
+      ]
+    },
+    {
+      "tag": 5346,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "160",
+          "name": "Other costs",
+          "kind": "related",
+          "description": "(5346) Costs, other than packing, freight and insurance costs, specified separately."
+        }
+      ]
+    },
+    {
+      "tag": 5422,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "8",
+          "name": "Allowance or charge amount",
+          "kind": "equals",
+          "description": "[5422] Total amount of allowance or charge."
+        }
+      ]
+    },
+    {
+      "tag": 5424,
+      "refs": [
+        {
+          "code_list": 5245,
+          "code": "1",
+          "name": "Allowance",
+          "kind": "related",
+          "description": "(5424) Allowance expressed as a percentage."
+        },
+        {
+          "code_list": 5245,
+          "code": "2",
+          "name": "Charge",
+          "kind": "related",
+          "description": "(5424) Charge expressed as a percentage."
+        },
+        {
+          "code_list": 5245,
+          "code": "3",
+          "name": "Allowance or charge",
+          "kind": "equals",
+          "description": "[5424] Allowance or charge expressed as a percentage."
+        }
+      ]
+    },
+    {
+      "tag": 5430,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "TCA",
+          "name": "Tariff applied",
+          "kind": "equals",
+          "description": "[5430] Specification of the tariff applied."
+        }
+      ]
+    },
+    {
+      "tag": 5444,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "39",
+          "name": "Invoice total amount",
+          "kind": "equals",
+          "description": "[5444] Total sum charged in respect of one or more Invoices in accordance with the terms of delivery."
+        },
+        {
+          "code_list": 6069,
+          "code": "12",
+          "name": "Invoice total amount",
+          "kind": "equals",
+          "description": "[5444] Total sum charged in respect of one or more Invoices in accordance with the terms of delivery."
+        }
+      ]
+    },
+    {
+      "tag": 5448,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "107",
+          "name": "Packing cost (Customs)",
+          "kind": "equals",
+          "description": "[5448] Costs incurred for all containers and coverings of whatever nature which are considered as being one for Customs purposes with the goods, and the cost of packing whether for labour or material."
+        }
+      ]
+    },
+    {
+      "tag": 5488,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "68",
+          "name": "Insurance and transport charges (Customs)",
+          "kind": "related",
+          "description": "(5488)+(5292) Sum total of transport and insurance charges (CCC)."
+        },
+        {
+          "code_list": 5025,
+          "code": "69",
+          "name": "Insurance and transport charges incurred outside Customs",
+          "kind": "related",
+          "description": "territory (5488)+(5292) Insurance and transport charges incurred outside a Customs territory (or a Customs union)."
+        },
+        {
+          "code_list": 5025,
+          "code": "70",
+          "name": "Insurance charges (Customs)",
+          "kind": "equals",
+          "description": "[5488] Amount of premium payable to the insurance company to insure the goods to the port or place of importation."
+        },
+        {
+          "code_list": 5025,
+          "code": "71",
+          "name": "Insurance charges incurred outside of Customs territory",
+          "kind": "related",
+          "description": "(5488) Insurance charges incurred outside a Customs territory (or a Customs union)."
+        },
+        {
+          "code_list": 5025,
+          "code": "158",
+          "name": "Insurance and transport charges incurred inside Customs",
+          "kind": "related",
+          "description": "territory (5488)+(5292) Charges to be paid for moving goods, by whatever means, from the point of entry into the Customs territory (within a Customs union: to the point of entry in the final destination country)."
+        }
+      ]
+    },
+    {
+      "tag": 5490,
+      "refs": [
+        {
+          "code_list": 5025,
+          "code": "150",
+          "name": "Value added tax",
+          "kind": "equals",
+          "description": "[5490] Amount in national currency resulting from the application, at the appropriate rate, of value added tax (or similar tax) to the invoice amount subject to such tax."
+        }
+      ]
+    },
+    {
+      "tag": 6048,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "AAF",
+          "name": "Net net weight",
+          "kind": "equals",
+          "description": "[6048] Weight (mass) of the goods themselves without any packing."
+        }
+      ]
+    },
+    {
+      "tag": 6150,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "U",
+          "name": "Weight per unit",
+          "kind": "equals",
+          "description": "[6150] Numeric value of weight."
+        },
+        {
+          "code_list": 6313,
+          "code": "WT",
+          "name": "Weight",
+          "kind": "equals",
+          "description": "[6150] Numeric value of weight."
+        }
+      ]
+    },
+    {
+      "tag": 6160,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "AAA",
+          "name": "Unit net weight",
+          "kind": "equals",
+          "description": "[6160] Weight (mass) of goods including any packing normally going with them to a buyer in a retail sale."
+        },
+        {
+          "code_list": 6313,
+          "code": "AAL",
+          "name": "Net weight",
+          "kind": "equals",
+          "description": "[6160] Weight (mass) of goods including any packing normally going with them to a buyer in a retail sale."
+        }
+      ]
+    },
+    {
+      "tag": 6168,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "LN",
+          "name": "Length dimension",
+          "kind": "related",
+          "description": "(6168) Length of pieces or packages stated for transport purposes."
+        }
+      ]
+    },
+    {
+      "tag": 6292,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "AAB",
+          "name": "Unit gross weight",
+          "kind": "equals",
+          "description": "[6292] Weight (mass) of goods including packing but excluding the carrier's equipment."
+        },
+        {
+          "code_list": 6313,
+          "code": "AAD",
+          "name": "Total gross weight",
+          "kind": "equals",
+          "description": "[6292] Weight (mass) of goods including packing but excluding the carrier's equipment."
+        },
+        {
+          "code_list": 6313,
+          "code": "G",
+          "name": "Gross weight",
+          "kind": "equals",
+          "description": "[6292] Weight (mass) of goods including packing but excluding the carrier's equipment."
+        }
+      ]
+    },
+    {
+      "tag": 6300,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "AAM",
+          "name": "Gross tonnage of the vessel",
+          "kind": "equals",
+          "description": "[6300] The measure of the overall size of a ship determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969."
+        }
+      ]
+    },
+    {
+      "tag": 6302,
+      "refs": [
+        {
+          "code_list": 6313,
+          "code": "AAN",
+          "name": "Net tonnage of the vessel",
+          "kind": "equals",
+          "description": "[6302] The measure of the useful capacity of a ship determined in accordance with the provisions of the International Convention on Tonnage Measurement of Ships, 1969."
+        }
+      ]
+    },
+    {
+      "tag": 6314,
+      "refs": [
+        {
+          "code_list": 6311,
+          "code": "AAE",
+          "name": "Measurement",
+          "kind": "equals",
+          "description": "[6314] Value of the measured unit."
+        }
+      ]
+    },
+    {
+      "tag": 6318,
+      "refs": [
+        {
+          "code_list": 5245,
+          "code": "6",
+          "name": "Quality/yield",
+          "kind": "related",
+          "description": "(6318) The percentage of a specified material in the total product."
+        }
+      ]
+    },
+    {
+      "tag": 7002,
+      "refs": [
+        {
+          "code_list": 4451,
+          "code": "AAA",
+          "name": "Goods description",
+          "kind": "equals",
+          "description": "[7002] Plain language description of the nature of the goods sufficient to identify them at the level required for banking, Customs, statistical or transport purposes, avoiding unnecessary detail (Generic term)."
+        },
+        {
+          "code_list": 4451,
+          "code": "ADW",
+          "name": "Characteristics of goods",
+          "kind": "related",
+          "description": "Description of the characteristics of goods in addition to the description of the goods [7002]."
+        }
+      ]
+    },
+    {
+      "tag": 7070,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ACI",
+          "name": "Outerpackaging unit identification",
+          "kind": "related",
+          "description": "(7070) Identifying marks on packing units contained within an outermost shipping unit."
+        },
+        {
+          "code_list": 1153,
+          "code": "CW",
+          "name": "Package number",
+          "kind": "related",
+          "description": "(7070) Reference number identifying a package or carton within a consignment."
+        }
+      ]
+    },
+    {
+      "tag": 7124,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "UN",
+          "name": "United Nations dangerous goods (UNDG) number",
+          "kind": "equals",
+          "description": "[7124] Unique serial number assigned within the United Nations to substances and articles contained in a list of the dangerous goods most commonly carried."
+        }
+      ]
+    },
+    {
+      "tag": 7282,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ABD",
+          "name": "Customs tariff number",
+          "kind": "equals",
+          "description": "[7282] Code number of the goods in accordance with the tariff nomenclature system of classification in use where the Customs declaration is made."
+        }
+      ]
+    },
+    {
+      "tag": 7357,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "122   Commodity",
+          "kind": "related",
+          "description": "(7357) Code identifying types of goods for Customs, transport or statistical purposes (generic term). 1. This code value will be removed effective with directory D.04A."
+        }
+      ]
+    },
+    {
+      "tag": 7370,
+      "refs": [
+        {
+          "code_list": 6069,
+          "code": "11",
+          "name": "Total number of packages",
+          "kind": "equals",
+          "description": "[7370] Total number of packages of the entire consignment."
+        }
+      ]
+    },
+    {
+      "tag": 8028,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "CRN",
+          "name": "Conveyance reference number",
+          "kind": "equals",
+          "description": "[8028] Unique reference given by the carrier to a certain journey or departure of a means of transport (generic term)."
+        }
+      ]
+    },
+    {
+      "tag": 8030,
+      "refs": [
+        {
+          "code_list": 8053,
+          "code": "TS",
+          "name": "Tackles",
+          "kind": "equals",
+          "description": "[8030] Identification marks and numbers of loading tackle used (sheets, ropes, chains, etc.), as specified in DCU 9 to CIM Article 13; and of containers, as specified in Articles 5 and 10 of Annex III to CIM (CIM 17)."
+        }
+      ]
+    },
+    {
+      "tag": 8110,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AF",
+          "name": "Airlines flight identification number",
+          "kind": "related",
+          "description": "(8110) Identification of a commercial flight by carrier code and number as assigned by the airline (IATA)."
+        }
+      ]
+    },
+    {
+      "tag": 8123,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "VM",
+          "name": "Vessel identification",
+          "kind": "related",
+          "description": "(8123) Reference identifying a vessel (UN/ECE Recommendation No 10)."
+        }
+      ]
+    },
+    {
+      "tag": 8228,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "VON",
+          "name": "Voyage number",
+          "kind": "equals",
+          "description": "[8228] Reference number assigned by the carrier or his agent to the voyage of the vessel."
+        }
+      ]
+    },
+    {
+      "tag": 8260,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "AAQ",
+          "name": "Unit load device (e.g. container) identification number",
+          "kind": "equals",
+          "description": "[8260] Marks (letters and/or numbers) which identify a unit load device e.g. freight container."
+        }
+      ]
+    },
+    {
+      "tag": 8320,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "ACR",
+          "name": "Railway wagon number",
+          "kind": "related",
+          "description": "(8320) Registered identification initials and numbers of railway wagon. Synonym: Rail car number."
+        }
+      ]
+    },
+    {
+      "tag": 9308,
+      "refs": [
+        {
+          "code_list": 1153,
+          "code": "SN",
+          "name": "Seal number",
+          "kind": "equals",
+          "description": "[9308] Identification number on Customs or other seals affixed to containers or other transport units."
+        }
+      ]
+    },
+    {
+      "tag": 9380,
+      "refs": [
+        {
+          "code_list": 1131,
+          "code": "X",
+          "name": "117   Customs procedure",
+          "kind": "related",
+          "description": "(9380) Customs code to identify goods which are subject to Customs control (e.g. home use, Customs warehousing, temporary admission, Customs transit). 1. This code value will be removed effective with directory D.04A."
+        }
+      ]
+    }
+  ]
+}
