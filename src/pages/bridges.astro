@@ -61,7 +61,7 @@ const bridgedCount = [...schemeTotals.values()].reduce((a, b) => a + b, 0)
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Coverage by category</h2>
       <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible">
-        <table class="ledger-table ledger-table--head w-full text-sm">
+        <table class="data-table data-table--head w-full text-sm">
           <thead>
             <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
               <th class="px-4 py-2">Scheme</th>
@@ -113,7 +113,7 @@ const bridgedCount = [...schemeTotals.values()].reduce((a, b) => a + b, 0)
             </p>
           )}
           <div class="mt-3 overflow-x-auto rounded-md border border-line bg-paper">
-            <table class="ledger-table w-full text-sm">
+            <table class="data-table w-full text-sm">
               <thead>
                 <tr class="border-b border-line text-left text-xs uppercase tracking-wide text-body/80">
                   <th class="px-4 py-2">Tag</th>

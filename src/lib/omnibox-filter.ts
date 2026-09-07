@@ -45,7 +45,7 @@ export interface PageResult {
 
 export const REGISTRY_PAGES: PageResult[] = [
   { route: '/ontology', title: 'The ontology', keywords: ['vocabulary', 'model', 'classes', 'properties', 'rdf', 'turtle'] },
-  { route: '/ledger', title: 'The 1993–2005 ledger', keywords: ['change', 'history', 'edition', 'retired', 'replaced', 'deletion'] },
+  { route: '/changes', title: 'The 1993–2005 changes', keywords: ['change', 'history', 'edition', 'retired', 'replaced', 'deletion'] },
   { route: '/bridges', title: 'Bridges by document system', keywords: ['unlk', 'sad', 'mar', 'cimp', 'cim', 'awb', 'cmr', 'swift', 'carrier', 'coverage'] },
   { route: '/unlk', title: 'The UN layout key', keywords: ['form', 'layout', 'master', 'iso 6422', 'positions'] },
   { route: '/document', title: 'The publication itself', keywords: ['foreword', 'introduction', 'maintenance', 'presentation', 'text'] },

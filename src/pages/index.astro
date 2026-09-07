@@ -9,7 +9,7 @@ import { buildMeta } from '../../scripts/lib/meta.mjs'
 import { href } from '../lib/site'
 
 const elements = loadElements()
-const ledger = buildLedger(elements)
+const renameLines = buildLedger(elements)
 const meta = buildMeta(elements)
 const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/dataset/untded-2005`)
 ---
@@ -41,7 +41,7 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
         <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Charges Note">Charges Note</button>
       </p>
       <div class="mt-8 max-w-3xl">
-        <RenameLedger client:visible lines={ledger} />
+        <RenameLedger client:visible lines={renameLines} />
       </div>
     </div>
   </section>
@@ -74,8 +74,8 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
           zones under our namespace, downloadable as Turtle or JSON-LD.
         </p>
       </a>
-      <a href={href('/ledger')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
-        <h3 class="text-base font-semibold text-ink">The 1993–2005 ledger →</h3>
+      <a href={href('/changes')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The 1993–2005 changes →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           What the 2005 revision added, changed and retired — the
           publication's own change tags, browsable, with every replacement.
