@@ -1,0 +1,41 @@
+---
+// The element page's UNLK section: the form diagram, zone listing,
+// and position rulers for elements with UNLK bridges.
+import UnlkForm from './UnlkForm.astro'
+import PositionRuler from './PositionRuler.astro'
+import { href } from '../lib/site'
+import type { UnlkZone } from '../lib/unlk'
+
+interface Props {
+  zones: UnlkZone[]
+  rects: ReturnType<typeof import('../lib/unlk').unlkRects>
+}
+const { zones, rects } = Astro.props
+const unlkDeep = zones[0] && `${href('/unlk')}#field=${[zones[0].lineFrom, zones[0].lineTo, zones[0].posFrom, zones[0].posTo].join(':')}`
+---
+
+<section class="mt-8" aria-label="Location on the UN layout key">
+  <h2 class="mb-3 text-xs font-semibold uppercase tracking-wider text-body">
+    On the UN layout key
+  </h2>
+  <div class="flex flex-wrap items-start gap-6">
+    <UnlkForm zones={rects} />
+    <div class="min-w-[12rem] flex-1 space-y-3">
+      {zones.map((z) => (
+        <div>
+          <p class="text-sm text-body">
+            line{z.lineTo > z.lineFrom ? 's' : ''} {z.lineFrom}{z.lineTo > z.lineFrom ? `–${z.lineTo}` : ''},
+            position{z.posTo > z.posFrom ? 's' : ''} {z.posFrom}{z.posTo > z.posFrom ? `–${z.posTo}` : ''}
+            {z.format && <span> — field format <span class="font-mono text-xs">{z.format}</span></span>}
+          </p>
+          <PositionRuler from={z.posFrom} to={z.posTo} format={z.format} />
+        </div>
+      ))}
+      <p class="text-xs text-body/80">
+        The standard A4 form of ISO 6422 — the same data realized as a printed
+        document. See the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={unlkDeep ?? href('/unlk')}>full reconstruction</a>.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+---
+// The element page's sidebar column: tag plate, status, category,
+// representation, provenance, linked data, and the YAML record link.
+// Extracted from [tag].astro for locality (the aside changes for
+// different reasons than the article) and reuse (the compare page
+// can use it for its side-by-side cards).
+import TagPlate from './TagPlate.astro'
+import ReprChip from './ReprChip.astro'
+import ChangeTagBadge from './ChangeTagBadge.astro'
+import ProvenanceCard from './ProvenanceCard.astro'
+import type { ElementRecord, Category } from '../lib/data'
+import { href } from '../lib/site'
+
+interface Props {
+  element: ElementRecord
+  category: Category
+  iri: string
+  dataFile: string
+}
+const { element, category, iri, dataFile } = Astro.props
+---
+
+<aside class="space-y-4 lg:sticky lg:top-6 lg:self-start">
+  <TagPlate tag={element.tag} size="lg" />
+  <div class="flex flex-wrap items-center gap-2">
+    <a href={href('/changes#tag-' + element.change_tag)} class="shrink-0"><ChangeTagBadge changeTag={element.change_tag} expand /></a>
+    <span
+      class:list={[
+        'rounded-sm border px-1.5 py-0.5 font-mono text-xs',
+        element.status === 'retired'
+          ? 'border-stamp/50 bg-stamp/10 text-stamp'
+          : 'border-line bg-mist text-body',
+      ]}
+    >
+      {element.status === 'retired' ? 'retired' : 'active'}
+    </span>
+  </div>
+  <p class="text-sm text-body">
+    <span class={`me-1 inline-block h-2 w-2 rounded-full bg-cat-${category.k} align-middle`} aria-hidden="true"></span>
+    <a class="hover:text-un-deep" href={href(`/categories/${category.range}`)}>
+      {category.label}
+    </a>
+  </p>
+  <div>
+    <h2 class="mb-1 text-xs font-semibold uppercase tracking-wider text-body">Representation</h2>
+    <ReprChip repr={element.representation} size="lg" />
+  </div>
+  <ProvenanceCard provenance={element.provenance} />
+  <div>
+    <h2 class="mb-1 text-xs font-semibold uppercase tracking-wider text-body">Linked data</h2>
+    <p class="break-all font-mono text-[0.7rem] leading-snug text-ink">{iri}</p>
+    <button type="button" class="copy-btn filter-btn mt-1 font-mono text-xs" data-copy={iri}>
+      Copy IRI
+    </button>
+    <ul class="mt-2 space-y-1 text-xs">
+      <li><a class="text-un-deep underline decoration-un/50" href={href(`/elements/${element.tag}/data.jsonld`)}>data.jsonld</a></li>
+      <li><a class="text-un-deep underline decoration-un/50" href={href(`/elements/${element.tag}/data.ttl`)}>data.ttl</a></li>
+    </ul>
+  </div>
+  <div class="text-xs">
+    <a class="text-un-deep underline decoration-un/50" href={dataFile}>YAML record ↗</a>
+  </div>
+</aside>
