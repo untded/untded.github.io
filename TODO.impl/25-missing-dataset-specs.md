@@ -7,10 +7,10 @@ Two model modules have no dedicated spec file:
 
 ## Tasks
 
-- [ ] `spec/validator_spec.rb` — run the validator against the real
+- [x] `spec/validator_spec.rb` — run the validator against the real
   YAML; assert zero errors (or the known set); perturb one element
   and assert the error is caught.
-- [ ] `spec/exporter_spec.rb` — run `Exporter#call` into a tmpdir;
+- [x] `spec/exporter_spec.rb` — run `Exporter#call` into a tmpdir;
   assert all 7 artifacts are written; assert elements.csv row count;
   assert vocabulary.json has the expected shape.
 
