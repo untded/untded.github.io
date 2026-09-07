@@ -66,4 +66,8 @@ PagefindUI destructured from a bundle that only sets window.PagefindUI)
 consistency claim), is fully specified but input-blocked: the official
 UNCL archive sits behind the UNECE CDN challenge and mirrors strip the
 bracket cross-references; one manual browser download of uncl.zip
-(D.02A preferred) unblocks it — see the file.
+(D.02A preferred) unblocks it — see the file. Track 11 (2026-09-07) delivered the
+coverage half from the D05B codes mirror: 256 coded active elements /
+10,104 code values as chips on element pages, a docs section, and the
+/data/uncl-coverage.json artifact (references #1, dataset #9, website
+#30); only the per-code bracket cross-references of track 10 remain.
