@@ -75,3 +75,8 @@ coverage half from the D05B codes mirror: 256 coded active elements /
 one data seam, Ruby⇄TS parser parity — report in the repo TODO) and the
 UX coherence pass (ledger tables with sticky heads and zebra, matrix
 totals, one chip row, docs ToC, keyboard-operable UNLK explorer).
+Tracks 14–15: the dataset loader seam (Untded.elements_from — the
+13-copy corpus-loading idiom now has one owner, untded-2005#11) and
+the front-door pass (the homepage now surfaces ontology, ledger,
+bridges, UNLK, the publication and the docs; stat strip carries the
+12 bridged document systems).

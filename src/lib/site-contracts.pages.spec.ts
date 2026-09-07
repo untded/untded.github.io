@@ -254,6 +254,14 @@ it("carries the full original documentation", () => {
     expect(unmapped).not.toContain('EDED 9011')
   })
 
+  it('opens the front door onto the whole registry surface', () => {
+    const html = readFileSync(`${dist}/index.html`, 'utf8')
+    for (const route of ['/ontology', '/ledger', '/bridges', '/unlk', '/document', '/docs']) {
+      expect(html, route).toContain(`href="${route}"`)
+    }
+    expect(html).toContain('document systems')
+  })
+
   it('dresses the long tables as ledger tables with checkable totals', () => {
     for (const p of ['ontology/index.html', 'ledger/index.html', 'bridges/index.html', 'docs/alignment-edifact/index.html']) {
       const html = readFileSync(`${dist}/${p}`, 'utf8')

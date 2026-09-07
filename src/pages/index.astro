@@ -51,6 +51,7 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
       stats={[
         { value: String(meta.count), label: 'elements', href: href('/elements') },
         { value: String(meta.categories.length), label: 'categories', href: href('/elements') },
+        { value: '12', label: 'document systems', href: href('/bridges') },
         { value: String(meta.groups.added), label: 'added in 2005' },
         { value: String(meta.groups.changed), label: 'renamed / changed' },
         { value: String(meta.groups.retired), label: 'retired' },
@@ -61,6 +62,54 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
   <section class="mx-auto max-w-6xl px-4 pb-10" aria-label="Categories">
     <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">Nine categories, tags 1000–9699</h2>
     <CategoryGrid categories={meta.categories} />
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 pb-12" aria-label="Explore the registry">
+    <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">More than a list</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <a href={href('/ontology')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The ontology →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          Every element is a linked-data resource — classes, properties and
+          zones under our namespace, downloadable as Turtle or JSON-LD.
+        </p>
+      </a>
+      <a href={href('/ledger')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The 1993–2005 ledger →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          What the 2005 revision added, changed and retired — the
+          publication's own change tags, browsable, with every replacement.
+        </p>
+      </a>
+      <a href={href('/bridges')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">Bridges by document system →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          Where each element lives on the aligned trade documents — UNLK,
+          SAD, MAR, CIMP and the rest — coverage scheme by scheme.
+        </p>
+      </a>
+      <a href={href('/unlk')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The UN layout key →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          The model form of ISO 6422 reconstructed from the bridges — every
+          field at its line and character position, pan and zoom it.
+        </p>
+      </a>
+      <a href={href('/document')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The publication itself →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          Foreword, introduction, maintenance procedures and presentation
+          rules — transcribed in full, cover to element directory.
+        </p>
+      </a>
+      <a href={href('/docs')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+        <h3 class="text-base font-semibold text-ink">The documentation →</h3>
+        <p class="mt-2 text-sm leading-relaxed text-body">
+          Guides to the model, the UN/EDIFACT alignment, the vocabulary
+          register, provenance and the JSON-LD context.
+        </p>
+      </a>
+    </div>
   </section>
 
   <section class="mx-auto max-w-6xl px-4 pb-14" aria-label="Why trust this data">
