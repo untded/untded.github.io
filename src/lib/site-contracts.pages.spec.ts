@@ -439,13 +439,22 @@ it("carries the full original documentation", () => {
     expect(html).toContain('N1727')
   })
 
+  // Payload budgets = measured baseline (2026-09-07) + ~50% headroom,
+  // so a real regression trips CI instead of hiding under a 20x margin:
+  // element 31.5K, home 34.7K, elements-index 37.7K, ontology 38.2K,
+  // category 78K (largest: 3000-3699 at 146K), ledger 83K, bridges 320K,
   it('respects the HTML payload budget', () => {
     const budgets: [string, number][] = [
-      [`${dist}/elements/1001/index.html`, 32_000],
-      [`${dist}/index.html`, 40_000],
-      [`${dist}/elements/index.html`, 700_000],
-      [`${dist}/about/index.html`, 40_000],
-      [`${dist}/document/presentation/index.html`, 40_000],
+      [`${dist}/elements/1001/index.html`, 48_000],
+      [`${dist}/index.html`, 52_000],
+      [`${dist}/elements/index.html`, 60_000],
+      [`${dist}/about/index.html`, 48_000],
+      [`${dist}/document/presentation/index.html`, 48_000],
+      [`${dist}/categories/3000-3699/index.html`, 220_000],
+      [`${dist}/ontology/index.html`, 57_000],
+      [`${dist}/ledger/index.html`, 125_000],
+      [`${dist}/bridges/index.html`, 480_000],
+      [`${dist}/docs/alignment-edifact/index.html`, 37_000],
     ]
     for (const [p, max] of budgets) {
       expect(statSync(p).size, `${p} over budget`).toBeLessThan(max)
