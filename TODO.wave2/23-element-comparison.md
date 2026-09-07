@@ -16,6 +16,9 @@ has all the data; it lacks the view.
       content; representation and bridges from both; links back to
       each element page.
 
+Navigation from element pages shipped (each active
+ element links to its next-tag comparison). All suites green.
+
 ## Beats
 
 Their site has no comparison; ours puts any two elements face to face
