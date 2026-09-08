@@ -173,7 +173,8 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
 </style>
 
 <script>
-  import { FULL_VIEW, MAX_ZOOM, UNLK, fitZone, panView, zoomView, type UnlkViewBox } from '../lib/unlk'
+  import { FULL_VIEW, UNLK } from '../lib/unlk'
+  import { UnlkViewModel } from '../lib/unlk-view'
 
   interface Island {
     k: string
@@ -195,44 +196,34 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
     if (!(svg instanceof SVGSVGElement) || !readout || !bandsPanel || !detail || !tip || !island) return
     const fields: Island[] = JSON.parse(island.textContent ?? '[]')
 
-    let vb: UnlkViewBox = FULL_VIEW
+    const vm = new UnlkViewModel(fields.map((f: Island) => ({ key: f.k, rect: f.r as [number,number,number,number], elements: f.e })))
 
     const apply = () => {
       if (!svg.isConnected) return
+      const vb = vm.viewBox
       svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`)
       svg.classList.toggle('zoomed-in', svg.getBoundingClientRect().width / vb.w >= 6)
-      readout.textContent = `${(FULL_VIEW.w / vb.w).toFixed(1)}×`
+      readout.textContent = `${vm.zoomLevel.toFixed(1)}×`
       const zoomIn = root.querySelector<HTMLButtonElement>('[data-zoom="in"]')
       const zoomOut = root.querySelector<HTMLButtonElement>('[data-zoom="out"]')
-      if (zoomIn) zoomIn.disabled = vb.w <= UNLK.pageW / MAX_ZOOM + 1e-9
-      if (zoomOut) zoomOut.disabled = vb.w >= UNLK.pageW - 1e-9
+      if (zoomIn) zoomIn.disabled = !vm.canZoomIn
+      if (zoomOut) zoomOut.disabled = !vm.canZoomOut
     }
 
-    const userPoint = (cx: number, cy: number) => {
-      const r = svg.getBoundingClientRect()
-      return { x: vb.x + ((cx - r.left) / r.width) * vb.w, y: vb.y + ((cy - r.top) / r.height) * vb.h }
-    }
-    const userDelta = (dxPx: number, dyPx: number) => {
-      const r = svg.getBoundingClientRect()
-      return { dx: (dxPx / r.width) * vb.w, dy: (dyPx / r.height) * vb.h }
-    }
+    const rect = () => svg.getBoundingClientRect()
+    const toModel = (cx: number, cy: number) => vm.pixelPoint(cx, cy, rect())
+    const panPx = (dx: number, dy: number) => vm.pan(dx, dy, rect().width)
 
     // field filter: dim non-matching fields
     const filterInput = document.getElementById('unlk-filter') as HTMLInputElement | null
     if (filterInput) {
       filterInput.addEventListener('input', () => {
-        const q = filterInput.value.trim().toLowerCase()
-        svg.classList.toggle('filtered', q.length > 0)
-        if (!q) {
-          svg.querySelectorAll('.unlk-field.match').forEach((el) => el.classList.remove('match'))
-          return
-        }
+        vm.setFilter(filterInput.value)
+        svg.classList.toggle('filtered', vm.isFiltered)
         for (const f of fields) {
           const el = svg.querySelector(`[data-key="${f.k}"]`)
           if (!el) continue
-          const matches = f.e.some(([tag, name]) =>
-            String(tag).startsWith(q) || name.toLowerCase().includes(q))
-          el.classList.toggle('match', matches)
+          el.classList.toggle('match', vm.fieldMatches(f.k))
         }
       })
     }
@@ -252,8 +243,8 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       'wheel',
       (e) => {
         e.preventDefault()
-        const p = userPoint(e.clientX, e.clientY)
-        vb = zoomView(vb, Math.exp(-e.deltaY * 0.0016), p.x, p.y)
+        const p = toModel(e.clientX, e.clientY)
+        vm.zoomAt(Math.exp(-e.deltaY * 0.0016), p)
         apply()
         hideTip()
       },
@@ -283,18 +274,17 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       }
       if (pointers.size === 1) {
         moved += Math.abs(e.clientX - prev.x) + Math.abs(e.clientY - prev.y)
-        const d = userDelta(prev.x - e.clientX, prev.y - e.clientY)
-        vb = panView(vb, d.dx, d.dy)
+        panPx(prev.x - e.clientX, prev.y - e.clientY)
         apply()
       } else if (pointers.size === 2) {
         const other = [...pointers.entries()].find(([id]) => id !== e.pointerId)![1]
         const before = { mid: midpoint(other, prev), dist: Math.hypot(other.x - prev.x, other.y - prev.y) }
         const cur = { x: e.clientX, y: e.clientY }
         const after = { mid: midpoint(other, cur), dist: Math.hypot(other.x - cur.x, other.y - cur.y) }
-        const p = userPoint(after.mid.x, after.mid.y)
-        vb = zoomView(vb, after.dist / Math.max(before.dist, 1), p.x, p.y)
-        const pan = userDelta(before.mid.x - after.mid.x, before.mid.y - after.mid.y)
-        vb = panView(vb, pan.dx, pan.dy)
+        const p = vm.pixelPoint(after.mid.x, after.mid.y, rect())
+        vm.zoomAt(after.dist / Math.max(before.dist, 1), p)
+        const panD = vm.pixelDelta(before.mid.x - after.mid.x, before.mid.y - after.mid.y, rect().width)
+        vm.pan(panD.dx, panD.dy, rect().width)
         moved = 99
         apply()
       }
@@ -316,26 +306,25 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
           e.preventDefault()
           const dx = e.key === 'ArrowLeft' ? stepPx : e.key === 'ArrowRight' ? -stepPx : 0
           const dy = e.key === 'ArrowUp' ? stepPx : e.key === 'ArrowDown' ? -stepPx : 0
-          const d = userDelta(dx, dy)
-          vb = panView(vb, d.dx, d.dy)
+          panPx(dx, dy)
           apply()
           return
         }
         if (e.key === '+' || e.key === '=') {
           e.preventDefault()
-          vb = zoomView(vb, 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+          vm.zoomCenter(1.6)
           apply()
           return
         }
         if (e.key === '-' || e.key === '_') {
           e.preventDefault()
-          vb = zoomView(vb, 1 / 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+          vm.zoomCenter(1 / 1.6)
           apply()
           return
         }
         if (e.key === '0') {
           e.preventDefault()
-          vb = FULL_VIEW
+          vm.reset()
           clear()
           apply()
           return
@@ -396,7 +385,7 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
       svg.querySelectorAll('.selected').forEach((el) => el.classList.remove('selected'))
       svg.querySelector(`[data-key="${key}"]`)?.classList.add('selected')
       renderDetail(f)
-      vb = fitZone({ x: f.r[0], y: f.r[1], w: f.r[2], h: f.r[3] }, 8)
+      vm.fit({ x: f.r[0], y: f.r[1], w: f.r[2], h: f.r[3] }, 8)
       apply()
       history.replaceState(null, '', `#field=${key}`)
     }
@@ -404,20 +393,20 @@ const btn = 'rounded-md border border-line bg-paper px-2.5 py-1 text-sm text-bod
     root.querySelectorAll<HTMLButtonElement>('[data-fit]').forEach((b) => {
       b.addEventListener('click', () => {
         const [x, y, w, h] = (b.dataset.zone ?? '').split(',').map(Number)
-        vb = fitZone({ x, y, w, h }, 4)
+        vm.fit({ x, y, w, h }, 4)
         apply()
       })
     })
     root.querySelector<HTMLButtonElement>('[data-zoom="in"]')?.addEventListener('click', () => {
-      vb = zoomView(vb, 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+      vm.zoomCenter(1.6)
       apply()
     })
     root.querySelector<HTMLButtonElement>('[data-zoom="out"]')?.addEventListener('click', () => {
-      vb = zoomView(vb, 1 / 1.6, vb.x + vb.w / 2, vb.y + vb.h / 2)
+      vm.zoomCenter(1 / 1.6)
       apply()
     })
     root.querySelector<HTMLButtonElement>('[data-reset]')?.addEventListener('click', () => {
-      vb = FULL_VIEW
+      vm.reset()
       clear()
       apply()
     })
