@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import RenameLedger from '../islands/RenameLedger.vue'
 import StatStrip from '../components/StatStrip.astro'
+import Card from '../components/Card.astro'
 import CategoryGrid from '../components/CategoryGrid.astro'
 import { loadElements, jsonldNode } from '../lib/data'
 import { buildLedger } from '../lib/ledgers'
@@ -67,90 +68,90 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
   <section class="mx-auto max-w-6xl px-4 pb-12" aria-label="Explore the registry">
     <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">More than a list</h2>
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a href={href('/ontology')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      <Card href={href('/ontology')}>
         <h3 class="text-base font-semibold text-ink">The ontology →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           Every element is a linked-data resource — classes, properties and
           zones under our namespace, downloadable as Turtle or JSON-LD.
         </p>
-      </a>
-      <a href={href('/changes')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/changes')}>
         <h3 class="text-base font-semibold text-ink">The 1993–2005 changes →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           What the 2005 revision added, changed and retired — the
           publication's own change tags, browsable, with every replacement.
         </p>
-      </a>
-      <a href={href('/bridges')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/bridges')}>
         <h3 class="text-base font-semibold text-ink">Bridges by document system →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           Where each element lives on the aligned trade documents — UNLK,
           SAD, MAR, CIMP and the rest — coverage scheme by scheme.
         </p>
-      </a>
-      <a href={href('/unlk')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/unlk')}>
         <h3 class="text-base font-semibold text-ink">The UN layout key →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The model form of ISO 6422 reconstructed from the bridges — every
           field at its line and character position, pan and zoom it.
         </p>
-      </a>
-      <a href={href('/document')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/document')}>
         <h3 class="text-base font-semibold text-ink">The publication itself →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           Foreword, introduction, maintenance procedures and presentation
           rules — transcribed in full, cover to element directory.
         </p>
-      </a>
-      <a href={href('/docs')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/docs')}>
         <h3 class="text-base font-semibold text-ink">The documentation →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           Guides to the model, the UN/EDIFACT alignment, the vocabulary
           register, provenance and the JSON-LD context.
         </p>
-      </a>
-      <a href={href('/1993')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/1993')}>
         <h3 class="text-base font-semibold text-ink">The 1993 directory →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The previous edition reconstructed from the current one's change
           metadata — 1043 elements with their 1993 names.
         </p>
-      </a>
-      <a href={href('/reference')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/reference')}>
         <h3 class="text-base font-semibold text-ink">Reference card →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The UNLK-bridged elements as a printable one-sheet, grouped by
           form line.
         </p>
-      </a>
-      <a href={href('/status')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/status')}>
         <h3 class="text-base font-semibold text-ink">Publication status →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The standards environment the directory lives in — current
           editions and relationships.
         </p>
-      </a>
+      </Card>
     </div>
   </section>
 
   <section class="mx-auto max-w-6xl px-4 pb-14" aria-label="Why trust this data">
     <div class="grid gap-4 md:grid-cols-2">
-      <a href={href('/about')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      <Card href={href('/about')}>
         <h3 class="text-base font-semibold text-ink">Operation and governance →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           Operated on behalf of UN/CEFACT (UNECE) and ISO/TC 154 under their
           plenary mandate. Every entry names its page in the source
           publication, and the whole dataset is open to inspection and reuse.
         </p>
-      </a>
-      <a href={href('/download')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
+      </Card>
+      <Card href={href('/download')}>
         <h3 class="text-base font-semibold text-ink">Take the dataset →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
           The full directory as YAML, CSV or JSON — free to use and reuse,
           all under the{' '}
           <span class="font-mono text-xs">untded</span> organization.
         </p>
-      </a>
+      </Card>
     </div>
   </section>
   {datasetJsonld && <script type="application/ld+json" set:html={JSON.stringify(datasetJsonld)} />}
