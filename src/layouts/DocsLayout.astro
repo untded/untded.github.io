@@ -20,7 +20,12 @@ const heads = [...html.matchAll(/<h2 id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g)].map(
   <div class="mx-auto max-w-3xl px-4 py-12 xl:max-w-4xl">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">{frontmatter.eyebrow ?? 'Documentation'}</p>
     <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">{frontmatter.title.replace(/ — UN\/TDED.*$/, '')}</h1>
-    <div class="mt-6 xl:grid xl:grid-cols-[11rem_minmax(0,72ch)] xl:gap-10">
+    <div
+      class:list={[
+        'mt-6',
+        heads.length > 1 && 'xl:grid xl:grid-cols-[11rem_minmax(0,72ch)] xl:gap-10',
+      ]}
+    >
       {heads.length > 1 && (
         <nav class="mb-6 xl:sticky xl:top-6 xl:mb-0 xl:self-start" aria-label="On this page">
           <p class="text-xs font-semibold uppercase tracking-wider text-body">On this page</p>
