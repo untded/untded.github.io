@@ -44,9 +44,7 @@ const isGroupCurrent = (items: { href: string }[]) => items.some((item) => isCur
 
 <header class="border-b border-line">
   <div class="mx-auto flex max-w-6xl items-center gap-x-4 px-4 py-3">
-    <a href={href('/')} class="flex shrink-0 items-center gap-2.5" aria-label="UN/TDED home">
-      <img src={href('/img/un-logo-light.svg')} alt="United Nations emblem" class="h-7 w-7 dark:hidden" width="28" height="28" />
-      <img src={href('/img/un-logo-dark.svg')} alt="" aria-hidden="true" class="hidden h-7 w-7 dark:block" width="28" height="28" />
+    <a href={href('/')} class="flex shrink-0 items-center" aria-label="UN/TDED home">
       <span class="font-mono text-xl font-semibold tracking-tight text-ink">UN<span class="name-slash">/</span>TDED</span>
     </a>
 

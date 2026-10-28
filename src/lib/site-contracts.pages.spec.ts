@@ -139,15 +139,14 @@ it("builds the tree page and serves the source PDFs", () => {
   expect(readFileSync(`${dist}/elements/1001/index.html`, "utf8")).toContain(`pdf/UNTDED2005.pdf#page=`)
 })
 
-it("ships the theme system, footer logos and sharing metadata", () => {
+it("ships the theme system, a text-only footer and sharing metadata", () => {
   const html = readFileSync(`${dist}/index.html`, "utf8")
   expect(html).toContain("untded-theme")
   expect(html).toContain("astro:after-swap")
   expect(html).toContain("theme-toggle")
-  expect(html).toContain("logo-unece-light.svg")
-  expect(html).toContain("logo-unece-dark.svg")
-  expect(html).toContain("logo-iso-light.svg")
-  expect(html).toContain("logo-iso-dark.svg")
+  for (const logo of ["logo-unece-light.svg", "logo-unece-dark.svg", "logo-iso-light.svg", "logo-iso-dark.svg"]) {
+    expect(html).not.toContain(logo)
+  }
   expect(html).toContain("https://unece.org/untded-iso7372")
   expect(html).toContain("https://www.iso.org/standard/41237.html")
   expect(html).toContain("og:image")
@@ -180,11 +179,10 @@ it("carries the full publication transcription", () => {
     expect(html).toContain('apple-touch-icon')
   })
 
-  it('shows the UN emblem in the header (light and dark variants)', () => {
+  it('omits the UN emblem from the header', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
-    expect(html).toContain('img/un-logo-light.svg')
-    expect(html).toContain('img/un-logo-dark.svg')
-    expect(existsSync(`${dist}/img/un-logo-dark.svg`)).toBe(true)
+    expect(html).not.toContain('img/un-logo-light.svg')
+    expect(html).not.toContain('img/un-logo-dark.svg')
   })
 
   it('never opens a dialog from copy buttons', () => {
@@ -612,12 +610,11 @@ it("carries the full publication transcription", () => {
     }
   })
 
-  it('shows both organization cards with logos on the about page', () => {
+  it('shows both organization cards without logos on the about page', () => {
     const html = readFileSync(`${dist}/about/index.html`, 'utf8')
-    expect(html).toContain('img/logo-unece-light.svg')
-    expect(html).toContain('img/logo-unece-dark.svg')
-    expect(html).toContain('img/logo-iso-light.svg')
-    expect(html).toContain('img/logo-iso-dark.svg')
+    for (const logo of ['img/logo-unece-light.svg', 'img/logo-unece-dark.svg', 'img/logo-iso-light.svg', 'img/logo-iso-dark.svg']) {
+      expect(html).not.toContain(logo)
+    }
     expect(html).toContain('UNECE — UN/CEFACT')
     expect(html).toContain('ISO/TC 154')
     expect(html).toContain('https://unece.org/untded-iso7372')
