@@ -10,11 +10,25 @@
   schema:description "Code to indicate applicable rate class for air freight.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Service. Freight Rate Class.Code";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 22";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(507)";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: L 33-44, P 22 CIMP: (507)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5099 .

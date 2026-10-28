@@ -9,7 +9,13 @@
   schema:name "Dosage. Text";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 103;
   utd:status "active";
   utd:tag 6082 .

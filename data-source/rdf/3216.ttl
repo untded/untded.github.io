@@ -10,11 +10,36 @@
   schema:description "Name of the country to which the goods are to be delivered to the final consignee or buyer";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Final Destination Country Name.Text";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 2";
+    utd:scheme "MAR"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 18, P 63-79";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 18;
+      utd:lineTo 18;
+      utd:posFrom 63;
+      utd:posTo 79
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 17)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "MAR: IMO/FAL 2 UNLK: L 18, P 63-79 SAD: (SAD 17)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 60;
   utd:status "active";
   utd:tag 3216 .

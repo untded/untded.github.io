@@ -11,7 +11,13 @@
   schema:name "Hazardous Material. Medical First Guide.Identifier";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 4;
+    utd:minLength 1;
+    utd:printedForm "an..4"
+  ];
   utd:sourcePage 127;
   utd:status "active";
   utd:tag 8410 .

@@ -9,11 +9,32 @@
   schema:description "Free form description of a type of transport movement.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Transport Movement Type.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(804): an..53";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28, P 12-38";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 28;
+      utd:posFrom 12;
+      utd:posTo 38
+    ]
+  ];
   utd:bridges "CIMP: (804): an..53 UNLK: L 28, P 12-38";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 126;
   utd:status "active";
   utd:tag 8334 .

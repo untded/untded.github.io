@@ -10,11 +10,28 @@
   schema:description "Free form description of delivery or transport terms.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Trade Term. Description.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35xn; L 20, P 49-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 20;
+      utd:lineTo 20;
+      utd:posFrom 49;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: an..35xn; L 20, P 49-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 74;
   utd:status "active";
   utd:tag 4052 .

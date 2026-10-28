@@ -9,11 +9,32 @@
   schema:description "Identifier of party undertaking forwarding of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Forwarder. Party.Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(320):an..15";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 15, P 27-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 15;
+      utd:lineTo 15;
+      utd:posFrom 27;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "CIMP: (320):an..15 UNLK: L 15, P 27-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 58;
   utd:status "active";
   utd:tag 3171 .

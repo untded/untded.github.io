@@ -9,11 +9,21 @@
   schema:description "Value declared for statistical purposes of those goods in a consignment which have the same statistical heading.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. For Statistics Declared Value.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 46)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 46)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 92;
   utd:status "active";
   utd:tag 5218 .

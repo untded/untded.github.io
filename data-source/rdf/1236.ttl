@@ -10,11 +10,28 @@
   schema:description "Serial number differentiating each separate freight charge.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Sequence.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 54-60, P 00-08";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 54;
+      utd:lineTo 60;
+      utd:posFrom 1;
+      utd:posTo 8
+    ]
+  ];
   utd:bridges "UNLK: L 54-60, P 00-08";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 5;
+    utd:minLength 1;
+    utd:printedForm "n..5"
+  ];
   utd:sourcePage 34;
   utd:status "active";
   utd:tag 1236 .

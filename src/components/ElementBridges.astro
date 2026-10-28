@@ -29,8 +29,9 @@ const { element, schemes, edifact, uncl } = Astro.props
           <a class="text-un-deep underline decoration-un/50" href={href('/bridges#' + sc.replace(/[^A-Za-z0-9]/g, ''))}>{sc}</a>
         </>
       ))}{' '}
-      — see the{' '}
-      <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>.
+      are listed on the bridges page, and the{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/notation/#bridges')}>bridge glossary</a>{' '}
+      records the scheme expansions.
     </p>
   )}
   {(edifact || uncl !== undefined) && (
@@ -41,7 +42,7 @@ const { element, schemes, edifact, uncl } = Astro.props
             'inline-flex items-baseline gap-2 rounded-full border px-3 py-1 text-xs',
             edifact.aligned ? 'border-line bg-mist text-body' : 'border-stamp/50 bg-stamp/5 text-stamp',
           ]}
-          href={href(edifact.aligned ? '/docs/alignment-edifact' : '/docs/alignment-edifact#diff-' + edifact.tag)}
+          href={href(edifact.aligned ? '/guides/alignment-edifact' : '/guides/alignment-edifact#diff-' + edifact.tag)}
         >
           <span class="font-mono font-semibold">EDED {edifact.tag}</span>
           <span class="font-mono">{edifact.edifact.type}..{edifact.edifact.maxLength}</span>
@@ -52,7 +53,7 @@ const { element, schemes, edifact, uncl } = Astro.props
         <a
           class="inline-flex items-baseline gap-2 rounded-full border border-line bg-mist px-3 py-1 text-xs text-body"
           title="Code-qualified in the UN/EDIFACT D.05B UNCL (Volume II of the publication is the code-list volume)"
-          href={href('/docs/alignment-edifact#code-lists-uncl')}
+          href={href('/guides/alignment-edifact#code-lists-uncl')}
         >
           <span class="font-mono font-semibold">UNCL D05B</span>
           <span>{uncl === 1 ? '1 code value' : `${uncl} code values`}</span>

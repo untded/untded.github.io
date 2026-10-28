@@ -34,7 +34,7 @@ const ttlExample = `<https://www.untded.org/elements/1004> a utd:TradeDataElemen
 
 <BaseLayout
   title="Ontology — UN/TDED"
-  description="The RDF vocabulary of the UN Trade Data Elements Directory: classes, properties, prefixes, and the machine-readable downloads."
+  description="This page documents the RDF vocabulary of the UN Trade Data Elements Directory, including its classes, properties, prefixes and machine-readable downloads."
   alternates={[
     { type: 'application/ld+json', href: href('/data/untded.jsonld') },
     { type: 'text/turtle', href: href('/data/untded.ttl') },
@@ -45,12 +45,13 @@ const ttlExample = `<https://www.untded.org/elements/1004> a utd:TradeDataElemen
     <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The UNTDED ontology</h1>
     <p class="mt-3 max-w-2xl leading-relaxed text-body">
       Every element of the directory is published as linked data under the namespace{' '}
-      <span class="font-mono text-sm">{vocab.namespace}</span>. The vocabulary — classes,
-      properties, prefixes — is declared once in the dataset and everything on this page is
-      generated from that declaration. Elements carry their representation as a structured
-      node, their locations as bridge nodes (with line and position zones on the UN layout
-      key), retired elements link to their replacement, and old names and business terms
-      appear as alternative labels.
+      <span class="font-mono text-sm">{vocab.namespace}</span>. The vocabulary, which
+      comprises the classes, the properties and the prefixes, is declared once in the
+      dataset, and every item on this page is generated from that declaration. Each
+      element carries its representation as a structured node and its locations as
+      bridge nodes, with line and position zones on the UN layout key; a retired
+      element links to its replacement, and old names and business terms appear as
+      alternative labels.
     </p>
 
     <div class="mt-6 flex flex-wrap gap-3 text-sm">
@@ -84,10 +85,11 @@ const ttlExample = `<https://www.untded.org/elements/1004> a utd:TradeDataElemen
       <p class="mt-3 text-sm text-body">
         Every element page also serves its own slice at{' '}
         <span class="font-mono text-xs">/elements/&lt;tag&gt;/data.ttl</span> and{' '}
-        <span class="font-mono text-xs">data.jsonld</span> — see any element, e.g.{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>.
-        How to consume the context:{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/docs/context')}>context guide</a>.
+        <span class="font-mono text-xs">data.jsonld</span>, as element{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>{' '}
+        demonstrates. The{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/guides/context')}>context guide</a>{' '}
+        describes how to consume the context.
       </p>
     </section>
 
@@ -168,10 +170,10 @@ const ttlExample = `<https://www.untded.org/elements/1004> a utd:TradeDataElemen
       <pre class="mt-3 overflow-x-auto rounded-md border border-line bg-mist p-4 font-mono text-xs leading-relaxed text-body"><code>{ttlExample}</code></pre>
       <p class="mt-3 text-sm text-body">
         The{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/docs/ontology')}>ontology guide</a>{' '}
-        walks through the model; the{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/docs/provenance')}>provenance note</a>{' '}
-        documents how the data behind it was extracted and verified.
+        <a class="text-un-deep underline decoration-un/50" href={href('/guides/ontology')}>ontology guide</a>{' '}
+        describes the model, and the{' '}
+        <a class="text-un-deep underline decoration-un/50" href={href('/guides/provenance')}>provenance note</a>{' '}
+        describes how the data behind it was extracted and verified.
       </p>
     </section>
   </div>

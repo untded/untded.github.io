@@ -9,7 +9,13 @@
   schema:name "Monetary Amount. Function.Text";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 86;
   utd:status "active";
   utd:tag 5006 .

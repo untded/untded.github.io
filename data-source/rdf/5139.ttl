@@ -9,11 +9,25 @@
   schema:description "To identify a method of payment of charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Charge Payment Method.Code";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 24, P 48-49";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(503): a2";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: L 24, P 48-49 CIMP: (503): a2";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5139 .

@@ -9,7 +9,13 @@
   schema:name "Document. Release Location.Text";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 50;
   utd:status "active";
   utd:tag 3016 .

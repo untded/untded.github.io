@@ -10,11 +10,25 @@
   schema:description "Code specifying the type of packaging of an item.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Package. Type.Code";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 2,7";
+    utd:scheme "MAR"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 31)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "MAR: IMO/FAL 2,7 SAD: (SAD 31)";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 110;
   utd:status "active";
   utd:tag 7065 .

@@ -10,7 +10,13 @@
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";
   utd:replacedBy <https://www.untded.org/elements/9143>;
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 100;
   utd:status "retired";
   utd:tag 5479 .

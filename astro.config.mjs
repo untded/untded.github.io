@@ -8,7 +8,12 @@ export default defineConfig({
   site: 'https://www.untded.org',
   output: 'static',
   trailingSlash: 'never',
-  integrations: [vue(), mdx(), sitemap()],
+  integrations: [
+    vue(),
+    mdx(),
+    // The redirect stubs for the retired routes stay out of the sitemap.
+    sitemap({ filter: (page) => !/\/(document|docs|status|reference)(\/|$)/.test(new URL(page).pathname) }),
+  ],
   // hover-prefetch internal links registry-wide; element pages feel instant
   prefetch: {
     prefetchAll: true,

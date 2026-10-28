@@ -10,11 +10,25 @@
   schema:description "To identify a journey of a means of transport, for example voyage number, flight number, trip number.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Journey.Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(201):a3; (202):n2; (312):an2;(800):n3(n1)(a 1)";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1, 5-7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "CIMP: (201):a3; (202):n2; (312):an2;(800):n3(n1)(a 1) MAR: IMO/FAL 1, 5-7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 118;
   utd:status "active";
   utd:tag 8028 .

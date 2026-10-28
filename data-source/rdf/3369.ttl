@@ -9,11 +9,21 @@
   schema:description "To identify a place over which freight rates are combined";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Rate. Combination Location.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 09-12 (IATA location identifiercode)";
+    utd:scheme "AWB"
+  ];
   utd:bridges "AWB: L 33-44, P 09-12 (IATA location identifiercode)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 67;
   utd:status "active";
   utd:tag 3369 .

@@ -9,11 +9,21 @@
   schema:description "To identify a party liable for goods moving under a customs authorisation and, when applicable, a guarantee";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Responsible To Customs. Party.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 50 (Nr))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 50 (Nr))";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 66;
   utd:status "active";
   utd:tag 3341 .

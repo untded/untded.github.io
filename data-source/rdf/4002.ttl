@@ -9,11 +9,25 @@
   schema:description "Reference to carrier's conditions of carriage printed on document or provided separately.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Condition.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 08-14, P 45-81 (Preprinted)";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "an..35x2 L 07-08, P 45-80";
+    utd:scheme "CMR"
+  ];
   utd:bridges "AWB: L 08-14, P 45-81 (Preprinted) CMR: an..35x2 L 07-08, P 45-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 72;
   utd:status "active";
   utd:tag 4002 .

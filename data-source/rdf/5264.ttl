@@ -9,11 +9,21 @@
   schema:description "Amount deductible from the carriage charges payable to the carrier by a consignee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Freight Charge Deduction.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 53, P 71-80";
+    utd:scheme "CMR"
+  ];
   utd:bridges "CMR: L 53, P 71-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5264 .

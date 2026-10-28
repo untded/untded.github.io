@@ -9,11 +9,28 @@
   schema:description "Plain language description of a consignment in summary terms.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Summary Description.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..30xn L28-34, P 27-56";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 34;
+      utd:posFrom 27;
+      utd:posTo 56
+    ]
+  ];
   utd:bridges "UNLK: an..30xn L28-34, P 27-56";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 109;
   utd:status "active";
   utd:tag 7004 .

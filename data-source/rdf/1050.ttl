@@ -9,11 +9,21 @@
   schema:description "To identify a position within a sequence.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Sequence. Position.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 4-5";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 4-5";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 10;
+    utd:minLength 1;
+    utd:printedForm "an..10"
+  ];
   utd:sourcePage 29;
   utd:status "active";
   utd:tag 1050 .

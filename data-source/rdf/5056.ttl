@@ -9,11 +9,28 @@
   schema:description "Discount, expressed as a percentage, deductible from the total amount due if payment takes place within a specified period or before the fixed due date.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Discount Percentage.Numeric";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 36-46, P 09-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 36;
+      utd:lineTo 46;
+      utd:posFrom 9;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "UNLK: L 36-46, P 09-44";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 10;
+    utd:minLength 1;
+    utd:printedForm "n..10"
+  ];
   utd:sourcePage 88;
   utd:status "active";
   utd:tag 5056 .

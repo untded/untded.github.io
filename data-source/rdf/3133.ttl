@@ -9,11 +9,44 @@
   schema:description "Identifier of party to which goods are consigned.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignee. Party.Identifier";
-  utd:bridge [], [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 09, P 27-44";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "n..13, L 09, P 32-44 (CIM 15)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(320):an..15";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 09, P 27-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 9;
+      utd:lineTo 9;
+      utd:posFrom 27;
+      utd:posTo 44
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 8(Nr))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 09, P 27-44 CIM: n..13, L 09, P 32-44 (CIM 15) CIMP: (320):an..15 UNLK: L 09, P 27-44 SAD: (SAD 8(Nr))";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 56;
   utd:status "active";
   utd:tag 3133 .

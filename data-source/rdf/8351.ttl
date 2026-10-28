@@ -10,11 +10,25 @@
   schema:description "To identify a hazard class applicable to dangerous goods as defined by the relevant regulation authority such as the IMDG Class Number of the SOLAS Convention of IMO and the ADR/RID Class Number for the road/rail environment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Hazard Class. Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 44, P 09-44";
+    utd:scheme "CMR"
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "CMR: L 44, P 09-44 MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 7;
+    utd:minLength 1;
+    utd:printedForm "an..7"
+  ];
   utd:sourcePage 126;
   utd:status "active";
   utd:tag 8351 .

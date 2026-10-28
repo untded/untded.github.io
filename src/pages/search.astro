@@ -5,22 +5,22 @@ import { href } from '../lib/site'
 
 <BaseLayout
   title="Search — UN/TDED"
-  description="Full-text search across the whole registry — all 1504 element entries and every page of the publication's documentation."
+  description="Full-text search covers all 1504 element entries and every page of the guides and the publication."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Search</h1>
     <p class="mt-2 text-body">
-      Full text of every element entry and every documentation page —
-      names, definitions, notes, bridges, guides. For
-      tag/name lookup, press{' '}
+      The full text of every element entry and of every guide page is searchable
+      here, including names, definitions, notes, bridges and guides. Tag and name
+      lookup with{' '}
       <kbd class="rounded border border-line bg-mist px-1.5 font-mono text-sm">⌘K</kbd>{' '}
-      anywhere.
+      is available on every page.
     </p>
     <div id="search" class="mt-6"></div>
     <link rel="stylesheet" href={href('/pagefind/pagefind-ui.css')} />
     <p id="search-fallback" class="mt-4 hidden rounded-md border border-line bg-mist p-4 text-sm text-body">
-      The search index could not be loaded; reload the page to retry. Tag and
-      name lookup with ⌘K is available on every page.
+      The search index could not be loaded. Reload the page to retry; tag and name
+      lookup with ⌘K remains available on every page.
     </p>
   </div>
 </BaseLayout>

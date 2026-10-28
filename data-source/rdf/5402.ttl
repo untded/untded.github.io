@@ -10,11 +10,33 @@
   schema:description "The rate at which one specified currency is expressed in another specified currency.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Currency. Exchange Rate.Numeric";
-  utd:bridge [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 62, P 09-22";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "n..8; L 39, P 75-82 and L.42, P 75-82 and L 47, P 51-18 and L 47, P 75-82 and L 53, P 51-58 and L 53, P 75-82 and L 59";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(607):n..11";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 23)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 62, P 09-22 CIM: n..8; L 39, P 75-82 and L.42, P 75-82 and L 47, P 51-18 and L 47, P 75-82 and L 53, P 51-58 and L 53, P 75-82 and L 59 CIMP: (607):n..11 SAD: (SAD 23)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 98;
   utd:status "active";
   utd:tag 5402 .

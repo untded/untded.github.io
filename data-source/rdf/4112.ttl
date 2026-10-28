@@ -11,7 +11,13 @@
   schema:name "Insurance. Condition.Text";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 76;
   utd:status "active";
   utd:tag 4112 .

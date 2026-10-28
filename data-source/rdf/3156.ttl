@@ -9,11 +9,32 @@
   schema:description "Location of warehouse where a particular consignment has been stored.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Warehouse. Identification.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(321): an..7";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "an..35x3; L 16-18, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 16;
+      utd:lineTo 18;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "CIMP: (321): an..7 UNLK: an..35x3; L 16-18, P 45-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3156 .

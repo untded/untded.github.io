@@ -10,11 +10,21 @@
   schema:description "Textual representation of the type of party that is performing the loading of transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment Loading. Party Identification.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(CIM 28) L32, P07 or L33, P07";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: (CIM 28) L32, P07 or L33, P07";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 55;
   utd:status "active";
   utd:tag 3120 .

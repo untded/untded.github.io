@@ -26,8 +26,32 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     for (const c of CATEGORY_RANGES()) {
       expect(existsSync(`${dist}/categories/${c.range}/index.html`)).toBe(true)
     }
-    for (const p of ['index.html', 'about/index.html', 'notation/index.html', 'download/index.html', 'search/index.html', 'document/index.html', 'elements/index.html', '404.html']) {
+    for (const p of ['index.html', 'about/index.html', 'notation/index.html', 'download/index.html', 'search/index.html', 'publication/index.html', 'elements/index.html', '404.html']) {
       expect(existsSync(`${dist}/${p}`), `missing ${p}`).toBe(true)
+    }
+  })
+
+  it('redirects the retired routes to their successors', () => {
+    const moves: [string, string][] = [
+      ['document/index.html', '/publication'],
+      ['document/foreword/index.html', '/publication/foreword'],
+      ['document/introduction/index.html', '/publication/introduction'],
+      ['document/maintenance/index.html', '/publication/maintenance'],
+      ['document/presentation/index.html', '/publication/presentation'],
+      ['docs/index.html', '/guides'],
+      ['docs/ontology/index.html', '/guides/ontology'],
+      ['docs/alignment-edifact/index.html', '/guides/alignment-edifact'],
+      ['docs/vocabulary-register/index.html', '/guides/vocabulary-register'],
+      ['docs/provenance/index.html', '/guides/provenance'],
+      ['docs/context/index.html', '/guides/context'],
+      ['docs/contributing/index.html', '/guides/contributing'],
+      ['status/index.html', '/standards'],
+      ['reference/index.html', '/unlk/fields'],
+    ]
+    for (const [file, target] of moves) {
+      const html = readFileSync(`${dist}/${file}`, 'utf8')
+      expect(html, file).toContain(`url=${target}`)
+      expect(html, file).toContain('noindex')
     }
   })
 
@@ -63,11 +87,11 @@ describe.skipIf(!hasDist)('site contracts (dist)', () => {
     expect(html).toContain('Copy IRI')
   })
 
-  it('builds the original-documentation pages', () => {
-    for (const p of ['document/index.html', 'document/introduction/index.html', 'document/maintenance/index.html', 'document/presentation/index.html']) {
+  it('builds the publication transcription pages', () => {
+    for (const p of ['publication/index.html', 'publication/introduction/index.html', 'publication/maintenance/index.html', 'publication/presentation/index.html']) {
       expect(existsSync(`${dist}/${p}`), p).toBe(true)
     }
-    const presentation = readFileSync(`${dist}/document/presentation/index.html`, 'utf8')
+    const presentation = readFileSync(`${dist}/publication/presentation/index.html`, 'utf8')
     expect(presentation).toContain('The change indicator marks shall be')
     expect(presentation).toContain('marked for deletion')
   })
@@ -115,15 +139,14 @@ it("builds the tree page and serves the source PDFs", () => {
   expect(readFileSync(`${dist}/elements/1001/index.html`, "utf8")).toContain(`pdf/UNTDED2005.pdf#page=`)
 })
 
-it("ships the theme system, footer logos and sharing metadata", () => {
+it("ships the theme system, a text-only footer and sharing metadata", () => {
   const html = readFileSync(`${dist}/index.html`, "utf8")
   expect(html).toContain("untded-theme")
   expect(html).toContain("astro:after-swap")
   expect(html).toContain("theme-toggle")
-  expect(html).toContain("logo-unece-light.svg")
-  expect(html).toContain("logo-unece-dark.svg")
-  expect(html).toContain("logo-iso-light.svg")
-  expect(html).toContain("logo-iso-dark.svg")
+  for (const logo of ["logo-unece-light.svg", "logo-unece-dark.svg", "logo-iso-light.svg", "logo-iso-dark.svg"]) {
+    expect(html).not.toContain(logo)
+  }
   expect(html).toContain("https://unece.org/untded-iso7372")
   expect(html).toContain("https://www.iso.org/standard/41237.html")
   expect(html).toContain("og:image")
@@ -131,11 +154,11 @@ it("ships the theme system, footer logos and sharing metadata", () => {
   expect(readFileSync(`${dist}/robots.txt`, "utf8")).toContain(`Sitemap: ${site}/sitemap-index.xml`)
 })
 
-it("carries the full original documentation", () => {
-  expect(readFileSync(`${dist}/document/introduction/index.html`, "utf8")).toContain("Rec. No. 25")
-  expect(readFileSync(`${dist}/document/presentation/index.html`, "utf8")).toContain("Group 9")
-  expect(readFileSync(`${dist}/document/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
-  const html = readFileSync(`${dist}/document/index.html`, "utf8")
+it("carries the full publication transcription", () => {
+  expect(readFileSync(`${dist}/publication/introduction/index.html`, "utf8")).toContain("Rec. No. 25")
+  expect(readFileSync(`${dist}/publication/presentation/index.html`, "utf8")).toContain("Group 9")
+  expect(readFileSync(`${dist}/publication/maintenance/index.html`, "utf8")).toContain("shall not be re-used")
+  const html = readFileSync(`${dist}/publication/index.html`, "utf8")
   expect(html).toContain("https://unece.org/untded-iso7372")
   expect(html).toContain("https://www.iso.org/standard/41237.html")
 })
@@ -156,11 +179,10 @@ it("carries the full original documentation", () => {
     expect(html).toContain('apple-touch-icon')
   })
 
-  it('shows the UN emblem in the header (light and dark variants)', () => {
+  it('omits the UN emblem from the header', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
-    expect(html).toContain('img/un-logo-light.svg')
-    expect(html).toContain('img/un-logo-dark.svg')
-    expect(existsSync(`${dist}/img/un-logo-dark.svg`)).toBe(true)
+    expect(html).not.toContain('img/un-logo-light.svg')
+    expect(html).not.toContain('img/un-logo-dark.svg')
   })
 
   it('never opens a dialog from copy buttons', () => {
@@ -242,7 +264,7 @@ it("carries the full original documentation", () => {
     const html = readFileSync(`${dist}/elements/1004/index.html`, 'utf8')
     expect(html).toContain('EDED 1004')
     expect(html).toContain('aligned')
-    expect(html).toContain('/docs/alignment-edifact')
+    expect(html).toContain('/guides/alignment-edifact')
     expect(html).toContain('Machine formats:')
     expect(html).toContain('data.ttl')
 
@@ -289,17 +311,17 @@ it("carries the full original documentation", () => {
   })
 
   it('serves the printable reference card', () => {
-    const html = readFileSync(`${dist}/reference/index.html`, 'utf8')
+    const html = readFileSync(`${dist}/unlk/fields/index.html`, 'utf8')
     expect(html).toContain('reference card')
     expect(html).toContain('Line ')
   })
 
   it('serves the publication status page', () => {
-    const html = readFileSync(`${dist}/status/index.html`, 'utf8')
+    const html = readFileSync(`${dist}/standards/index.html`, 'utf8')
     expect(html).toContain('ISO 7372')
     expect(html).toContain('ISO 6422')
     expect(html).toContain('UN/EDIFACT')
-    expect(html).toContain('Publication status')
+    expect(html).toContain('Standards environment')
   })
 
   it('carries the UNLK field filter', () => {
@@ -321,14 +343,14 @@ it("carries the full original documentation", () => {
 
   it('opens the front door onto the whole registry surface', () => {
     const html = readFileSync(`${dist}/index.html`, 'utf8')
-    for (const route of ['/ontology', '/changes', '/bridges', '/unlk', '/document', '/docs']) {
+    for (const route of ['/ontology', '/changes', '/bridges', '/unlk', '/publication', '/guides']) {
       expect(html, route).toContain(`href="${route}"`)
     }
     expect(html).toContain('document systems')
   })
 
   it('dresses the long tables as data tables with checkable totals', () => {
-    for (const p of ['ontology/index.html', 'changes/index.html', 'bridges/index.html', 'docs/alignment-edifact/index.html']) {
+    for (const p of ['ontology/index.html', 'changes/index.html', 'bridges/index.html', 'guides/alignment-edifact/index.html']) {
       const html = readFileSync(`${dist}/${p}`, 'utf8')
       expect(html, p).toContain('data-table')
     }
@@ -338,7 +360,7 @@ it("carries the full original documentation", () => {
   })
 
   it('carries the docs table of contents and one chip row', () => {
-    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    const docs = readFileSync(`${dist}/guides/alignment-edifact/index.html`, 'utf8')
     expect(docs).toContain('On this page')
     expect(docs).toContain('href="#code-lists-uncl"')
     const e3055 = readFileSync(`${dist}/elements/3055/index.html`, 'utf8')
@@ -364,7 +386,7 @@ it("carries the full original documentation", () => {
     // 1000 is active and unreferenced by any UNCL cross-ref
     const plain = readFileSync(`${dist}/elements/1000/index.html`, 'utf8')
     expect(plain).not.toContain('Referenced by UNCL code values')
-    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    const docs = readFileSync(`${dist}/guides/alignment-edifact/index.html`, 'utf8')
     expect(docs).toContain('Section 4.1.5 cross-references')
     expect(docs).toContain('uncl-refs.json')
   })
@@ -376,7 +398,7 @@ it("carries the full original documentation", () => {
     expect(coded).toContain('#code-lists-uncl')
     const uncoded = readFileSync(`${dist}/elements/1004/index.html`, 'utf8')
     expect(uncoded).not.toContain('UNCL D05B')
-    const docs = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    const docs = readFileSync(`${dist}/guides/alignment-edifact/index.html`, 'utf8')
     expect(docs).toContain('id="code-lists-uncl"')
     expect(docs).toContain('10,104')
   })
@@ -389,14 +411,14 @@ it("carries the full original documentation", () => {
 
   it('builds the documentation corpus', () => {
     for (const page of ['index', 'ontology', 'alignment-edifact', 'vocabulary-register', 'provenance', 'context', 'contributing']) {
-      const file = page === 'index' ? `${dist}/docs/index.html` : `${dist}/docs/${page}/index.html`
+      const file = page === 'index' ? `${dist}/guides/index.html` : `${dist}/guides/${page}/index.html`
       const html = readFileSync(file, 'utf8')
       expect(html.length, page).toBeGreaterThan(2000)
     }
-    const align = readFileSync(`${dist}/docs/alignment-edifact/index.html`, 'utf8')
+    const align = readFileSync(`${dist}/guides/alignment-edifact/index.html`, 'utf8')
     expect(align).toContain('representation differs')
     expect(align).toMatch(/id="diff-\d{4}"/)
-    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/docs"')
+    expect(readFileSync(`${dist}/index.html`, 'utf8')).toContain('href="/guides"')
   })
 
   it('carries the UNLK card on the colon-less bridge of element 5010', () => {
@@ -405,13 +427,13 @@ it("carries the full original documentation", () => {
   })
 
   it('transcribes the foreword and the cover matter with coverage accounting', () => {
-    const foreword = readFileSync(`${dist}/document/foreword/index.html`, 'utf8')
+    const foreword = readFileSync(`${dist}/publication/foreword/index.html`, 'utf8')
     expect(foreword).toContain('This third edition cancels and replaces the second edition (ISO 7372:1993)')
     expect(foreword).toContain('(ISO6422)')
     expect(foreword).toContain('fully consistent with the set of UN/EDIFACT directories')
     expect(foreword).toContain('François Vuilleumier')
 
-    const index = readFileSync(`${dist}/document/index.html`, 'utf8')
+    const index = readFileSync(`${dist}/publication/index.html`, 'utf8')
     expect(index).toContain('ECE/TRADE/362')
     expect(index).toContain('New York and Geneva, 2005')
     expect(index).toContain('no ISBN or copyright line is printed')
@@ -422,7 +444,7 @@ it("carries the full original documentation", () => {
   })
 
   it('completes the introduction and maintenance transcriptions', () => {
-    const intro = readFileSync(`${dist}/document/introduction/index.html`, 'utf8')
+    const intro = readFileSync(`${dist}/publication/introduction/index.html`, 'utf8')
     for (const def of ['1.3.5', '1.3.6', '1.3.7', '1.3.8']) {
       expect(intro, def).toContain(def)
     }
@@ -430,7 +452,7 @@ it("carries the full original documentation", () => {
     expect(intro).toContain('1.8 Availability of the UNTDED and ISO 7372')
     expect(intro).toContain('(1)&nbsp; Available from the International Organization for Standardization')
 
-    const maintenance = readFileSync(`${dist}/document/maintenance/index.html`, 'utf8')
+    const maintenance = readFileSync(`${dist}/publication/maintenance/index.html`, 'utf8')
     for (const heading of [
       '2.2 Role of the Maintenance Agency',
       '2.3 Membership',
@@ -517,12 +539,12 @@ it("carries the full original documentation", () => {
       [`${dist}/index.html`, 52_000],
       [`${dist}/elements/index.html`, 60_000],
       [`${dist}/about/index.html`, 48_000],
-      [`${dist}/document/presentation/index.html`, 48_000],
+      [`${dist}/publication/presentation/index.html`, 48_000],
       [`${dist}/categories/3000-3699/index.html`, 220_000],
       [`${dist}/ontology/index.html`, 57_000],
       [`${dist}/changes/index.html`, 125_000],
       [`${dist}/bridges/index.html`, 480_000],
-      [`${dist}/docs/alignment-edifact/index.html`, 37_000],
+      [`${dist}/guides/alignment-edifact/index.html`, 37_000],
     ]
     for (const [p, max] of budgets) {
       expect(statSync(p).size, `${p} over budget`).toBeLessThan(max)
@@ -588,12 +610,11 @@ it("carries the full original documentation", () => {
     }
   })
 
-  it('shows both organization cards with logos on the about page', () => {
+  it('shows both organization cards without logos on the about page', () => {
     const html = readFileSync(`${dist}/about/index.html`, 'utf8')
-    expect(html).toContain('img/logo-unece-light.svg')
-    expect(html).toContain('img/logo-unece-dark.svg')
-    expect(html).toContain('img/logo-iso-light.svg')
-    expect(html).toContain('img/logo-iso-dark.svg')
+    for (const logo of ['img/logo-unece-light.svg', 'img/logo-unece-dark.svg', 'img/logo-iso-light.svg', 'img/logo-iso-dark.svg']) {
+      expect(html).not.toContain(logo)
+    }
     expect(html).toContain('UNECE — UN/CEFACT')
     expect(html).toContain('ISO/TC 154')
     expect(html).toContain('https://unece.org/untded-iso7372')

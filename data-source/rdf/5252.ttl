@@ -9,11 +9,21 @@
   schema:description "Description of type of charge for each individual charge associated with a consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Charge.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 48-52, P 37-81";
+    utd:scheme "AWB"
+  ];
   utd:bridges "AWB: L 48-52, P 37-81";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 30;
+    utd:minLength 1;
+    utd:printedForm "an..30"
+  ];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5252 .

@@ -9,11 +9,21 @@
   schema:description "Code specifying the level of danger for which the packaging must cater.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Packaging. Danger Level.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 126;
   utd:status "active";
   utd:tag 8339 .

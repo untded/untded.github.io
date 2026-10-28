@@ -9,11 +9,28 @@
   schema:description "Total number, in words, of the originals of a document issued";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Originals Issued Quantity.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 64, P 36-54";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 64;
+      utd:lineTo 64;
+      utd:posFrom 36;
+      utd:posTo 54
+    ]
+  ];
   utd:bridges "UNLK: L 64, P 36-54";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 30;
   utd:status "active";
   utd:tag 1066 .

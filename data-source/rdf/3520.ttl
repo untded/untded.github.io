@@ -9,7 +9,13 @@
   schema:name "Document. Receiving Party Identification.Text";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 72;
   utd:status "active";
   utd:tag 3520 .

@@ -9,11 +9,21 @@
   schema:description "Name of the place at which the goods have been or are to be received by the consignee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Goods Receipt Location Name.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 62, P 45-62 (CMR 24)";
+    utd:scheme "CMR"
+  ];
   utd:bridges "CMR: L 62, P 45-62 (CMR 24)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3160 .

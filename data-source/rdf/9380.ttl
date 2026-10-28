@@ -9,11 +9,21 @@
   schema:description "Textual description of a procedure performed by Customs on goods which are subject to Customs control.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Party. Procedure.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD E)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD E)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 130;
   utd:status "active";
   utd:tag 9380 .

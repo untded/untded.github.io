@@ -9,11 +9,32 @@
   schema:description "Amount, debited by the seller and being the total of related article item amounts in a commercial invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice. Total.Amount";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 56, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 56;
+      utd:lineTo 56;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 3-4";
+    utd:scheme "MAR"
+  ];
   utd:bridges "UNLK: L 56, P 63-80 MAR: IMO/FAL 3-4";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 92;
   utd:status "active";
   utd:tag 5214 .

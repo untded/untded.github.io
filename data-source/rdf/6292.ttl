@@ -10,11 +10,48 @@
   schema:description "Weight (mass) of goods including packaging but excluding the carrier's equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Gross Weight.Measure";
-  utd:bridge [], [], [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 13-19";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28-33, P 63-74 (CIM 26)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(600):n..7";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28-42, P 63-71 (CMR 11)";
+    utd:scheme "CMR"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 35)";
+    utd:scheme "SAD"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28-52, P 63-74";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 52;
+      utd:posFrom 63;
+      utd:posTo 74
+    ]
+  ];
   utd:bridges "AWB: L 33-44, P 13-19 CIM: L 28-33, P 63-74 (CIM 26) CIMP: (600):n..7 CMR: L 28-42, P 63-71 (CMR 11) SAD: (SAD 35) UNLK: L 28-52, P 63-74";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 14;
+    utd:minLength 1;
+    utd:printedForm "n..14"
+  ];
   utd:sourcePage 106;
   utd:status "active";
   utd:tag 6292 .

@@ -9,11 +9,21 @@
   schema:description "Transport charges to be paid by the consignor for each tariff class.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Consignor Tariff Charge.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 44-45, P 59-66 and L 50-51, P 59-66 and L 56-57, P59-66 (also on reverse)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 44-45, P 59-66 and L 50-51, P 59-66 and L 56-57, P59-66 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5250 .

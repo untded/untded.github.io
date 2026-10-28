@@ -9,11 +9,36 @@
   schema:description "To identify the country in which the goods have been produced or manufactured, according to criteria laid down for the application of the Customs tariff or quantitative restrictions, or any measure related to trade..";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Origin Country.Identifier";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(304): a2";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 17, P 60-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 17;
+      utd:lineTo 17;
+      utd:posFrom 60;
+      utd:posTo 62
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 34a)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "CIMP: (304): a2 UNLK: L 17, P 60-62 SAD: (SAD 34a)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 62;
   utd:status "active";
   utd:tag 3239 .

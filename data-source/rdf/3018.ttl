@@ -9,11 +9,32 @@
   schema:description "Name of the point or port of departure, shipment or destination, as required under the applicable terms of delivery, e.g. Incoterm.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Trade Term. Location.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 20, P 49-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 20;
+      utd:lineTo 20;
+      utd:posFrom 49;
+      utd:posTo 80
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 20)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "UNLK: L 20, P 49-80 SAD: (SAD 20)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 50;
   utd:status "active";
   utd:tag 3018 .

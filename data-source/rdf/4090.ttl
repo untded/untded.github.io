@@ -7,7 +7,11 @@
 <https://www.untded.org/elements/4090> a utd:TradeDataElement;
   skos:altLabel "Information for railway purposes";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..28x6 (reverse of form)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: an..28x6 (reverse of form)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";

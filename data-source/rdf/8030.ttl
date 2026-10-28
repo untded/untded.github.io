@@ -10,11 +10,21 @@
   schema:description "To identify the marks and numbers on a piece of transport equipment attached to another piece of transport equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Attached Transport Equipment. Shipping Marks.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 09, P 52-63 and P 71082";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 09, P 52-63 and P 71082";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 12;
+    utd:minLength 1;
+    utd:printedForm "an..12"
+  ];
   utd:sourcePage 119;
   utd:status "active";
   utd:tag 8030 .

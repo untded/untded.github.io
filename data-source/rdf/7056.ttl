@@ -9,11 +9,21 @@
   schema:description "Total number of the passengers on board a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Passenger.Quantity";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 1";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 4;
+    utd:minLength 1;
+    utd:printedForm "n..4"
+  ];
   utd:sourcePage 110;
   utd:status "active";
   utd:tag 7056 .

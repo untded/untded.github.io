@@ -10,11 +10,32 @@
   schema:description "Amount due for each chargeable item of goods or services.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Line Item. Charge.Amount";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L36-46, P 72-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 36;
+      utd:lineTo 46;
+      utd:posFrom 72;
+      utd:posTo 80
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 42)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "UNLK: L36-46, P 72-80 SAD: (SAD 42)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5116 .

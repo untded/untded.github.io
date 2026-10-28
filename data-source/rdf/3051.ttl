@@ -9,11 +9,21 @@
   schema:description "Code specifying a route to be used for the transport of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Route.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "n..3; L 44, P 18-19 and L 50, P 18-19 and L 56,P 18-19 and on reverse of CIM form (CIM 54)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: n..3; L 44, P 18-19 and L 50, P 18-19 and L 56,P 18-19 and on reverse of CIM form (CIM 54)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 52;
   utd:status "active";
   utd:tag 3051 .

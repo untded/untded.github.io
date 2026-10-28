@@ -9,11 +9,32 @@
   schema:description "Name and address of party on whom any draft is to be drawn from the documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Drawee. Party Identification.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35x2";
+    utd:scheme "SWIFT"
+  ], [
+    a utd:Bridge;
+    utd:detail "an..35x2; L 25-26, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 25;
+      utd:lineTo 26;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "SWIFT: an..35x2 UNLK: an..35x2; L 25-26, P 45-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 64;
   utd:status "active";
   utd:tag 3290 .

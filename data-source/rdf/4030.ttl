@@ -9,11 +9,21 @@
   schema:description "Report for the purpose of adding clauses to the transport contract document stating the facts in cases when packages are missing or when damages or defects have been observed when loading the goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Goods Condition.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(706):a4";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (706):a4";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 73;
   utd:status "active";
   utd:tag 4030 .

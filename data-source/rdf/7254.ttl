@@ -9,11 +9,21 @@
   schema:description "Proper shipping name, supplemented as necessary with the correct technical name, by which a dangerous substance or article may be correctly identified, or which is sufficiently informative to permit identification by reference to generally available literature.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Technical Name.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 26;
+    utd:minLength 1;
+    utd:printedForm "an..26"
+  ];
   utd:sourcePage 114;
   utd:status "active";
   utd:tag 7254 .

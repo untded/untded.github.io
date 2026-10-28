@@ -9,11 +9,28 @@
   schema:description "Unit of quantity for the calculation of freight charges and other charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Quantity Unit Basis.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 52-66 P 27-54";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 52;
+      utd:lineTo 66;
+      utd:posFrom 27;
+      utd:posTo 54
+    ]
+  ];
   utd:bridges "UNLK: L 52-66 P 27-54";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 104;
   utd:status "active";
   utd:tag 6131 .

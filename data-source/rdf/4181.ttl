@@ -9,11 +9,28 @@
   schema:description "Code specifying a clause on a transport document regarding the cargo being consigned.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Clause.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 52-60, P 36-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 52;
+      utd:lineTo 60;
+      utd:posFrom 36;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 52-60, P 36-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 77;
   utd:status "active";
   utd:tag 4181 .

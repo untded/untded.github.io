@@ -31383,7 +31383,7 @@ utd:zone a rdf:Property;
 
 <https://www.untded.org/dataset/untded-2005> a schema:Dataset;
   dct:source "ECE/TRADE/362 (ISO 7372:2005), © United Nations / UNECE, reproduced with attribution";
-  schema:description "1504 trade data elements of the 2005 edition (ECE/TRADE/362, ISO 7372:2005). Operated on behalf of UN/CEFACT (UNECE) and ISO/TC 154.";
+  schema:description "The 1504 trade data elements of the 2005 edition (ECE/TRADE/362, ISO 7372:2005) as structured, machine-readable records. The digitization and the registry that publishes it are a member contribution and a pilot project to UN/CEFACT (UNECE) and ISO/TC 154, and are not an official publication of, and are not endorsed by, either organization. The Directory itself is the official publication ECE/TRADE/362, published in parallel as ISO 7372:2005.";
   schema:distribution [
     a schema:DataDownload;
     schema:encodingFormat "application/ld+json"

@@ -9,11 +9,21 @@
   schema:description "To specify the rate per unit specified in the unit price basis.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Unit Price. Rate Basis.Numeric";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "n..6; L 44-45, P 45-50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: n..6; L 44-45, P 45-50 and L 50-51, P 45-50 and L 56-57, P 45-50 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 98;
   utd:status "active";
   utd:tag 5420 .

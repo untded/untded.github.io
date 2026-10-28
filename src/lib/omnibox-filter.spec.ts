@@ -40,8 +40,8 @@ describe('pageFilter', () => {
   it('finds registry pages by title and keyword', () => {
     expect(pageFilter(REGISTRY_PAGES, 'ontology').map((p) => p.route)).toContain('/ontology')
     expect(pageFilter(REGISTRY_PAGES, 'unlk').map((p) => p.route)).toContain('/unlk')
-    expect(pageFilter(REGISTRY_PAGES, 'prov').map((p) => p.route)).toContain('/docs/provenance')
-    expect(pageFilter(REGISTRY_PAGES, 'eded').map((p) => p.route)).toContain('/docs/alignment-edifact')
+    expect(pageFilter(REGISTRY_PAGES, 'prov').map((p) => p.route)).toContain('/guides/provenance')
+    expect(pageFilter(REGISTRY_PAGES, 'eded').map((p) => p.route)).toContain('/guides/alignment-edifact')
   })
 
   it('never matches digits — tag queries stay element-only', () => {

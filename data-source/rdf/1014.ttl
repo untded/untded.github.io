@@ -9,11 +9,29 @@
   schema:description "Reference number to identify a packing list";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Packing List Document. Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..17, L 04 P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:fieldFormat "an..17";
+      utd:lineFrom 4;
+      utd:lineTo 4;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: an..17, L 04 P 63-80";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1014 .

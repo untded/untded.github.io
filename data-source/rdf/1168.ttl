@@ -9,11 +9,21 @@
   schema:description "Reference number identifying a payment of a duty or tax e.g. under a transit procedure.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax. Payment.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 48)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 48)";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 32;
   utd:status "active";
   utd:tag 1168 .

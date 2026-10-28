@@ -9,11 +9,36 @@
   schema:description "Quantity of document copies required.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Copies Required.Quantity";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..65x12";
+    utd:scheme "SWIFT"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 63, P 45-49";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 63;
+      utd:lineTo 63;
+      utd:posFrom 45;
+      utd:posTo 49
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1";
+    utd:scheme "MAR"
+  ];
   utd:bridges "SWIFT: an..65x12 UNLK: L 63, P 45-49 MAR: IMO/FAL 1";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 2;
+    utd:minLength 1;
+    utd:printedForm "n..2"
+  ];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1220 .

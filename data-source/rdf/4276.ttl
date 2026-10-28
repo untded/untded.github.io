@@ -9,11 +9,28 @@
   schema:description "Free form description of the conditions of payment between the parties to a transaction.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment Term. Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35x10; L 29-54, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 29;
+      utd:lineTo 54;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: an..35x10; L 29-54, P 45-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4276 .

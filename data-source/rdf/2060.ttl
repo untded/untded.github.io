@@ -9,11 +9,32 @@
   schema:description "Number of days within the credit validity period, counted from the date of issuance of the negotiable document, during which documents can be presented in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Presentation Duration.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35x4";
+    utd:scheme "SWIFT"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 55, P 09-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 55;
+      utd:lineTo 55;
+      utd:posFrom 9;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "SWIFT: an..35x4 UNLK: L 55, P 09-44";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 40;
   utd:status "active";
   utd:tag 2060 .

@@ -9,11 +9,21 @@
   schema:description "Count of the number of axles on a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Axle.Quantity";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 13-14, P 80-82 (CIM 45)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 13-14, P 80-82 (CIM 45)";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 2;
+    utd:minLength 1;
+    utd:printedForm "n..2"
+  ];
   utd:sourcePage 119;
   utd:status "active";
   utd:tag 8040 .

@@ -9,11 +9,29 @@
   schema:description "Indication of a unit of measurement in which weight (mass), capacity, length, area, volume or other quantity or measurement is expressed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Measurement. Unit.Code";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 20";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(601):a1; (604):a2";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 47(2))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 8;
+    utd:minLength 1;
+    utd:printedForm "an..8"
+  ];
   utd:sourcePage 108;
   utd:status "active";
   utd:tag 6411 .

@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/3394> a utd:TradeDataElement;
   skos:altLabel "Country of purchase";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 16, P 45-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 16;
+      utd:lineTo 16;
+      utd:posFrom 45;
+      utd:posTo 62
+    ]
+  ];
   utd:bridges "UNLK: L 16, P 45-62";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";

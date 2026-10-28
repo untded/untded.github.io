@@ -5,7 +5,7 @@ import { alignmentExample, contextUrl, passportExample } from './interop-example
 
 const context = JSON.parse(
   readFileSync(resolve(process.cwd(), 'data-source/context.jsonld'), 'utf8'),
-)
+)['@context'] as Record<string, unknown>
 const elements = JSON.parse(
   readFileSync(resolve(process.cwd(), 'data-source/elements.json'), 'utf8'),
 )

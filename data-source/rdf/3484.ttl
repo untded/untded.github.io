@@ -9,11 +9,21 @@
   schema:description "Name of the nationality of a an object, for example the nationality of a person or the nationality of a means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Nationality.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(IMO FAL Forms 5-6)";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: (IMO FAL Forms 5-6)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "a";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "a..35"
+  ];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3484 .

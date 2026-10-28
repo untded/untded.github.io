@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/5446> a utd:TradeDataElement;
   skos:altLabel "Packing cost";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 48, P 69-78 to be moved";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 48;
+      utd:lineTo 48;
+      utd:posFrom 69;
+      utd:posTo 78
+    ]
+  ];
   utd:bridges "UNLK: L 48, P 69-78 to be moved";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";

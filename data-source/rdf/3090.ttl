@@ -9,11 +9,21 @@
   schema:description "Name of place from which the transport charges tariff applies or where charges have been incurred.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Freight Charge. Payable From Location.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 50, P 02-20 and L 56, P 02-50 and on reverse of CIM form";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 50, P 02-20 and L 56, P 02-50 and on reverse of CIM form";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 54;
   utd:status "active";
   utd:tag 3090 .

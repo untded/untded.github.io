@@ -9,11 +9,28 @@
   schema:description "Actual date and optionally time when a consignment of goods is taken over by the carrier at the place of acceptance";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Actual Acceptance.Date Time";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 21, P 20-26";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 21;
+      utd:lineTo 21;
+      utd:posFrom 20;
+      utd:posTo 26
+    ]
+  ];
   utd:bridges "UNLK: L 21, P 20-26";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 19;
+    utd:minLength 1;
+    utd:printedForm "an..19"
+  ];
   utd:sourcePage 42;
   utd:status "active";
   utd:tag 2127 .

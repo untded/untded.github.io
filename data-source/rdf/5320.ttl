@@ -9,11 +9,25 @@
   schema:description "Total amount due carrier of individual charges and fees, other than weight and valuation charge to be collected.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Total Collect Carrier Other Charge.Amount";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 56, P 23-36";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(501): n..12";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: L 56, P 23-36 CIMP: (501): n..12";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 95;
   utd:status "active";
   utd:tag 5320 .

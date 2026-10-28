@@ -9,11 +9,32 @@
   schema:description "To identify a piece of transport equipment e.g. container or unit load device.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 2, 7";
+    utd:scheme "MAR"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 13-14, P 45-68";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 13;
+      utd:lineTo 14;
+      utd:posFrom 45;
+      utd:posTo 68
+    ]
+  ];
   utd:bridges "MAR: IMO/FAL 2, 7 UNLK: L 13-14, P 45-68";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 125;
   utd:status "active";
   utd:tag 8260 .

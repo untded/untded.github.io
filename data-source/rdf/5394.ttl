@@ -11,7 +11,13 @@
   schema:name "Price. Multiplier Rate.Numeric";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 97;
   utd:status "active";
   utd:tag 5394 .

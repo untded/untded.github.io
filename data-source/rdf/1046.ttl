@@ -9,11 +9,32 @@
   schema:description "Total number of pages in a document";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Total Page.Quantity";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 02, P 76-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 2;
+      utd:lineTo 2;
+      utd:posFrom 76;
+      utd:posTo 80
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 3(2))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "UNLK: L 02, P 76-80 SAD: (SAD 3(2))";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "n..3"
+  ];
   utd:sourcePage 29;
   utd:status "active";
   utd:tag 1046 .

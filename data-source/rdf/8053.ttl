@@ -9,11 +9,21 @@
   schema:description "Code specifying a type of equipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Category.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 09, P 45-51 and 64-70";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 09, P 45-51 and 64-70";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 119;
   utd:status "active";
   utd:tag 8053 .

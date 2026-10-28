@@ -12,7 +12,13 @@
   schema:name "Supplementary Tariff. Code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 6;
+    utd:minLength 1;
+    utd:printedForm "an..6"
+  ];
   utd:sourcePage 93;
   utd:status "active";
   utd:tag 5275 .

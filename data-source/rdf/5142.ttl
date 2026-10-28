@@ -9,11 +9,21 @@
   schema:description "Total charges amount collected at destination or 'Collect' amount to carry forward.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Collect Carry Forward Charge.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 62, P 74-82";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 62, P 74-82";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5142 .

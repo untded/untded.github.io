@@ -9,11 +9,33 @@
   schema:description "To identify the party consigning goods as stipulated in the transport contract by the party ordering transport";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignor. Party.Identifier";
-  utd:bridge [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 03, P 27-44";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "n13; L 03, P 32-44 CIM 11";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(320):an..15";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 2 (Nr))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 03, P 27-44 CIM: n13; L 03, P 32-44 CIM 11 CIMP: (320):an..15 SAD: (SAD 2 (Nr))";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 66;
   utd:status "active";
   utd:tag 3337 .

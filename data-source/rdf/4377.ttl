@@ -9,11 +9,21 @@
   schema:description "To identify details regarding undertaking given in cash, bond or as a written guarantee to ensure that an obligation will be fulfilled, e.g. under a transit procedure.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Obligation. Guarantee.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 52)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 52)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 82;
   utd:status "active";
   utd:tag 4377 .

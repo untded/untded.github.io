@@ -11,7 +11,13 @@
   schema:name "Seller. Bank Account.Identifier";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 10;
+    utd:minLength 1;
+    utd:printedForm "an..10"
+  ];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3492 .

@@ -10,11 +10,28 @@
   schema:description "Means of transport by which goods are moved after the main transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. On-carriage Means Type.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 26, P 09-26";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 26;
+      utd:lineTo 26;
+      utd:posFrom 9;
+      utd:posTo 26
+    ]
+  ];
   utd:bridges "UNLK: L 26, P 09-26";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 120;
   utd:status "active";
   utd:tag 8082 .

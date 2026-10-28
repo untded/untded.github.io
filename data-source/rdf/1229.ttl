@@ -9,11 +9,21 @@
   schema:description "Code specifying the action to be taken or already taken.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Action. Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(409)";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (409)";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 34;
   utd:status "active";
   utd:tag 1229 .

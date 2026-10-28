@@ -9,11 +9,21 @@
   schema:description "Any further conditions of the Documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit. Additional Condition.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..65x24";
+    utd:scheme "SWIFT"
+  ];
   utd:bridges "SWIFT: an..65x24";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4260 .

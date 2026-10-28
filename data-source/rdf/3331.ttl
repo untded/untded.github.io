@@ -9,11 +9,21 @@
   schema:description "To identify the country from which goods have been or will be consigned prior to final importation";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Final Exportation Country.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 10)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 10)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "a";
+    utd:maxLength 2;
+    utd:minLength 2;
+    utd:printedForm "a2"
+  ];
   utd:sourcePage 65;
   utd:status "active";
   utd:tag 3331 .

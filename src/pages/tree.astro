@@ -10,16 +10,18 @@ const categories = loadCategories().map(({ k, range, label }) => ({ k, range, la
 
 <BaseLayout
   title="The name tree — UN/TDED"
-  description="Browse all 1504 elements through their 2005 names: category, object class, element. The dotted entry names are a designed hierarchy."
+  description="This page arranges all 1504 elements by their 2005 names, from category to object class to element. The dotted entry names are a designed hierarchy."
 >
   <div class="mx-auto max-w-4xl px-4 py-10">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">The name tree</h1>
     <p class="mt-2 max-w-2xl text-body">
-      The 2005 entry names are dotted structures — object class, property,
-      representation (<span class="font-mono text-sm">Document. Type.Code</span>).
-      This tree groups every element by category, then by object class,
-      following the structure of the names. For a flat list, use the{' '}
-      <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
+      The 2005 entry names are dotted structures that consist of an object class, a
+      property and a representation term, as in{' '}
+      <span class="font-mono text-sm">Document. Type.Code</span>. The tree groups
+      every element by category and then by object class, in accordance with the
+      structure of the names. The{' '}
+      <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>{' '}
+      provides a flat list of the same elements.
     </p>
 
     <div class="mt-6">
@@ -28,7 +30,7 @@ const categories = loadCategories().map(({ k, range, label }) => ({ k, range, la
 
     <noscript>
       <p class="mt-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
-        The tree view requires JavaScript; the complete table is in the{' '}
+        The tree view requires JavaScript. The complete table is available in the{' '}
         <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
       </p>
     </noscript>

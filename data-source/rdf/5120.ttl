@@ -9,11 +9,28 @@
   schema:description "Amount of additional charges payable to the carrier by a consignee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Consignee Supplementary Charge.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 54, P 62-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 54;
+      utd:lineTo 54;
+      utd:posFrom 62;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 54, P 62-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 10;
+    utd:minLength 1;
+    utd:printedForm "n..10"
+  ];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5120 .

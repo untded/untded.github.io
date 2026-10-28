@@ -9,11 +9,21 @@
   schema:description "Name and address of the bank advising of a documentary credit to the beneficiary";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Advising Bank. Party Identification.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "- (Header)";
+    utd:scheme "SWIFT"
+  ];
   utd:bridges "SWIFT: - (Header)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 59;
   utd:status "active";
   utd:tag 3190 .

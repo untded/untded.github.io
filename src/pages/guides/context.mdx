@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: JSON-LD context — UN/TDED
+description: How a JSON-LD document cites UN Trade Data Elements Directory terms through the registry's context, with worked examples.
+---
+
+The registry publishes a JSON-LD context at [`/ns/untded-context.jsonld`](/ns/untded-context.jsonld). A JSON-LD document cites the terms of the Directory by setting its `@context` to this address and then using the terms by name. The context is generated from the single vocabulary declaration of the dataset and is pinned to the 2005 edition, so its terms do not change.
+
+## Example — citing an element
+
+import { alignmentExample, passportExample } from '../../lib/interop-examples'
+
+```json
+{JSON.stringify(alignmentExample, null, 2)}
+```
+
+## Example — a product-passport-shaped payload
+
+```json
+{JSON.stringify(passportExample, null, 2)}
+```
+
+Both examples expand against the live context. A test in the site's suite re-validates them against the generated context and the element data on every build.
+
+## Notes
+
+- Element IRIs are the registry pages, such as `https://www.untded.org/elements/1004`. Each page serves its own JSON-LD at `data.jsonld` and its Turtle at `data.ttl`.
+- The context maps the terms of the registry itself, in the `utd:` namespace, and the external terms it reuses, including `schema:`, `skos:` and `dct:`. The [ontology page](/ontology) tabulates the complete mapping.
+- The context covers the 2005 edition. A future edition receives its own context address, and this context will not be repurposed for another edition.

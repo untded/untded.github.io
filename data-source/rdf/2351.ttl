@@ -9,11 +9,21 @@
   schema:description "Period of time in which a means of transport stays, or is to stay, in a specific port or other location expressed as startdate and end date in figures.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Stay.Date Time";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 3";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 3";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 21;
+    utd:minLength 1;
+    utd:printedForm "an..21"
+  ];
   utd:sourcePage 47;
   utd:status "active";
   utd:tag 2351 .

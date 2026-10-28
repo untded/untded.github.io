@@ -44,7 +44,7 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
   title={`${element.tag}${element.name ? ` — ${element.name}` : ' (retired)'} · UN/TDED`}
   description={
     element.description
-      ?? `${element.name ?? 'Retired element'} — UNTDED 2005 data element ${element.tag}.`
+      ?? `${element.name ?? 'This element'} is data element ${element.tag} of UNTDED 2005${element.status === 'retired' ? ', and it is retired' : ''}.`
   }
   alternates={[
     { type: 'application/ld+json', href: href(`/elements/${element.tag}/data.jsonld`) },
@@ -154,10 +154,11 @@ const iri = `${Astro.site?.toString().replace(/\/$/, '')}/elements/${element.tag
               Referenced by UNCL code values
             </h2>
             <p class="mb-3 text-sm text-body">
-              Section 4.1.5 of the publication: a qualifier code whose combined meaning equals
-              this element carries its tag in brackets. Vintage D.01B (one release before the
-              edition's D.02A). See the{' '}
-              <a class="text-un-deep underline decoration-un/50" href={href('/docs/alignment-edifact#code-lists-uncl')}>alignment guide</a>.
+              Section 4.1.5 of the publication states that a qualifier code whose combined
+              meaning equals this element carries its tag in brackets. The code list is of
+              vintage D.01B, one release before the edition's D.02A. The{' '}
+              <a class="text-un-deep underline decoration-un/50" href={href('/guides/alignment-edifact#code-lists-uncl')}>alignment guide</a>{' '}
+              describes the comparison.
             </p>
             <ul class="space-y-2">
               {unclRefs.map((r) => (

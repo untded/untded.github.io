@@ -17,13 +17,13 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
 
 <BaseLayout
   title="Directory — UN/TDED"
-  description="All 1504 trade data elements of UNTDED 2005, filterable by tag, name, category, change and representation."
+  description="This page lists all 1504 trade data elements of UNTDED 2005, filterable by tag, name, category, change and representation."
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Directory</h1>
     <p class="mt-2 max-w-2xl text-body">
-      All {elements.length} elements of the 2005 edition. Filter state is carried
-      in the URL — any view can be shared as a link.
+      The directory contains all {elements.length} elements of the 2005 edition. The
+      filter state is carried in the URL, so any view can be shared as a link.
     </p>
 
     <div class="mt-6">
@@ -32,7 +32,7 @@ const categories = CATEGORY_RANGES().map(({ k, range, label }) => ({
 
     <noscript>
       <p class="mb-4 rounded-md border border-line bg-mist p-3 text-sm text-body">
-        Filtering requires JavaScript. The first 40 elements are listed below;
+        Filtering requires JavaScript. The first 40 elements are listed below, and
         the complete directory is available by category (
         {
           CATEGORY_RANGES().map((c, i) => (

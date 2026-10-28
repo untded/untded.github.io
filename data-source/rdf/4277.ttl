@@ -9,11 +9,28 @@
   schema:description "Identification of the terms of payment between the parties to a transaction (generic term).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment Term. Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 23, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 23;
+      utd:lineTo 23;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 23, P 63-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4277 .

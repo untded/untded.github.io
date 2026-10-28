@@ -78,7 +78,6 @@
     "maxLength": 8
   },
   "altLabel": [
-    "Measure unit qualifier",
     "Measure unit qualifier"
   ],
   "bridges": "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))",

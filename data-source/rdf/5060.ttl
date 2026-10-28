@@ -11,7 +11,13 @@
   schema:name "Contract. Total Amount.Amount";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 88;
   utd:status "active";
   utd:tag 5060 .

@@ -9,11 +9,25 @@
   schema:description "Coded description of a rate class for transport equipment such as a Unit Load Device (ULD) rate class.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Rate Class.Code";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 23-29";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(513): n1(a1)a1";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: L 33-44, P 23-29 CIMP: (513): n1(a1)a1";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 90;
   utd:status "active";
   utd:tag 5134 .
