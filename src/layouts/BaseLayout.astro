@@ -8,6 +8,7 @@ import '../styles/main.css'
 import { ClientRouter } from 'astro:transitions'
 import SiteHeader from '../components/SiteHeader.astro'
 import SiteFooter from '../components/SiteFooter.astro'
+import PilotNotice from '../components/PilotNotice.astro'
 import { href } from '../lib/site'
 
 interface Alternate {
@@ -104,6 +105,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
       }
     </script>
     <a class="skip-link" href="#main">Skip to content</a>
+    <PilotNotice />
     <SiteHeader />
     <main id="main">
       <slot />

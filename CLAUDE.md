@@ -13,7 +13,7 @@ GitHub Pages (custom domain www.untded.org) from `main` at https://untded.github
 ## Commands
 
 ```sh
-npm run sync-data   # SSOT pull from ../untded-2005 -> data-source/{elements,categories}.json, rdf/, pdf/ (commit the result)
+npm run sync-data   # SSOT pull from ../untded-2005 -> data-source/ (elements+categories JSON, graph/vocab/joins/fixtures, context.jsonld, rdf/, pdf/) — commit the result
 npm run build       # build-data + astro build + pagefind  (everything regenerates)
 npm test            # globalSetup rebuilds when dist/ is stale, so contracts can never pass on an old build
 npm run dev
@@ -21,6 +21,11 @@ npm run dev
 
 ## Non-negotiables
 
+- **Pilot status (asked for by ISO/TC 154/JWG 9 and UNECE, 2026-10):** the
+  site is a member-contribution **pilot project**, not an official
+  publication and not endorsed by ISO or UNECE. The `PilotNotice` banner
+  sits on every page (BaseLayout) and `/about#pilot` states the status —
+  keep both; never reintroduce "operated on behalf of" phrasing anywhere.
 - **data-source/elements.json is the committed sync of the dataset SSOT.**
   Never hand-edit it — run `npm run sync-data` (needs the
   `~/src/untded/untded-2005` sibling with `bundle install` done).

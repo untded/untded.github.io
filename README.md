@@ -3,9 +3,11 @@
 The public registry website for the digitized **UNTDED 2005** (United
 Nations Trade Data Elements Directory, ECE/TRADE/362 = ISO 7372:2005):
 1504 data elements, machine-readable, with verifiable provenance.
-Operated on behalf of **UN/CEFACT (UNECE)** and **ISO/TC 154** — see
-[`/about`](https://untded.github.io/about) for the mandate (ISO/TC 154
-N1727, resolutions P-2026-06/07).
+A **member contribution and pilot project** to **UN/CEFACT (UNECE)** and
+**ISO/TC 154** — not an official publication of, and not endorsed by,
+either organization; see [`/about`](https://untded.github.io/about) for
+the pilot status and the mandate (ISO/TC 154 N1727, resolutions
+P-2026-06/07).
 
 Live at **https://www.untded.org**.
 

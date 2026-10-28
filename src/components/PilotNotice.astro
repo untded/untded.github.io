@@ -1,0 +1,40 @@
+---
+import { href } from '../lib/site'
+---
+
+<aside
+  role="note"
+  aria-label="Pilot notice"
+  class="border-b border-amber-300/80 bg-amber-100 text-amber-950 dark:border-amber-800/50 dark:bg-amber-950/60 dark:text-amber-100"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-start gap-2.5 px-4 py-2 text-[0.8rem] leading-relaxed sm:items-center"
+  >
+    <svg
+      class="mt-0.5 h-3.5 w-3.5 shrink-0 sm:mt-0"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path
+        d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"
+      />
+      <path d="M8.5 2h7" />
+      <path d="M7 16h10" />
+    </svg>
+    <p>
+      <strong class="font-semibold">Pilot notice.</strong> UN/TDED is a member
+      contribution and pilot project to ISO/TC 154 and UN/CEFACT (UNECE) — not an
+      official publication and not endorsed by either organization. Data accuracy is
+      not guaranteed; use at your own risk.{' '}
+      <a
+        class="font-semibold underline decoration-amber-600/70 underline-offset-2 hover:decoration-amber-600 dark:decoration-amber-400/70 dark:hover:decoration-amber-400"
+        href={href('/about#pilot')}>Details</a
+      >
+    </p>
+  </div>
+</aside>
