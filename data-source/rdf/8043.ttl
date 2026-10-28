@@ -9,11 +9,25 @@
   schema:description "To identify a location on board a means of transport where specified goods or transport equipment have been or are to be stowed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Stowage Location.Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(807):a1";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "CIMP: (807):a1 MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 119;
   utd:status "active";
   utd:tag 8043 .

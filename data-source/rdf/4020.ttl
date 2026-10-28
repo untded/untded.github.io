@@ -9,11 +9,33 @@
   schema:description "Text of a declaration made by the issuer of the document.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Issuer Declaration.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 4-8, P 45-82";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "an..35; L 36-64, P 09-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:fieldFormat "an..35";
+      utd:lineFrom 36;
+      utd:lineTo 64;
+      utd:posFrom 9;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "CIM: L 4-8, P 45-82 UNLK: an..35; L 36-64, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 73;
   utd:status "active";
   utd:tag 4020 .

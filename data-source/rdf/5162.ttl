@@ -9,11 +9,21 @@
   schema:description "Amount of balance available in case of charges paid for a specified amount.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Available Balance. Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(n2-n..7) (reverse of CIM form)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: (n2-n..7) (reverse of CIM form)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 91;
   utd:status "active";
   utd:tag 5162 .

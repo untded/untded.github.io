@@ -2,18 +2,44 @@
 import Omnibox from '../islands/Omnibox.vue'
 import { href } from '../lib/site'
 
-const nav = [
-  { href: '/elements', label: 'Directory' },
-  { href: '/tree', label: 'Tree' },
-  { href: '/notation', label: 'Notation' },
-  { href: '/ontology', label: 'Ontology' },
-  { href: '/unlk', label: 'UNLK' },
-  { href: '/document', label: 'Document' },
-  { href: '/docs', label: 'Docs' },
-  { href: '/download', label: 'Download' },
-  { href: '/about', label: 'About' },
+const groups = [
+  {
+    label: 'Data',
+    items: [
+      { href: '/elements', label: 'Directory' },
+      { href: '/tree', label: 'Tree' },
+      { href: '/changes', label: 'Changes' },
+    ],
+  },
+  {
+    label: 'Semantics',
+    items: [
+      { href: '/ontology', label: 'Ontology' },
+      { href: '/unlk', label: 'UNLK' },
+      { href: '/notation', label: 'Notation' },
+      { href: '/bridges', label: 'Bridges' },
+    ],
+  },
+  {
+    label: 'Source',
+    items: [
+      { href: '/publication', label: 'Publication' },
+      { href: '/1993', label: '1993 edition' },
+      { href: '/standards', label: 'Standards' },
+    ],
+  },
+  {
+    label: 'Project',
+    items: [
+      { href: '/guides', label: 'Guides' },
+      { href: '/download', label: 'Download' },
+      { href: '/about', label: 'About' },
+    ],
+  },
 ]
 const current = Astro.url.pathname
+const isCurrent = (path: string) => current.startsWith(path)
+const isGroupCurrent = (items: { href: string }[]) => items.some((item) => isCurrent(item.href))
 ---
 
 <header class="border-b border-line">
@@ -24,20 +50,39 @@ const current = Astro.url.pathname
       <span class="font-mono text-xl font-semibold tracking-tight text-ink">UN<span class="name-slash">/</span>TDED</span>
     </a>
 
-    <!-- full nav: lg and up -->
-    <nav aria-label="Site" class="hidden flex-wrap items-center gap-x-5 gap-y-1 text-[0.95rem] lg:flex">
+    <!-- full nav: lg and up; each group is a native disclosure that opens on hover -->
+    <nav aria-label="Site" class="hidden items-center gap-x-1 text-[0.95rem] lg:flex">
       {
-        nav.map((item) => (
-          <a
-            href={item.href}
-            aria-current={current.startsWith(item.href) && item.href !== '/' ? 'page' : undefined}
-            class:list={[
-              'hover:text-un-deep',
-              current.startsWith(item.href) && item.href !== '/' ? 'text-un-deep font-medium' : 'text-body',
-            ]}
-          >
-            {item.label}
-          </a>
+        groups.map((group) => (
+          <details class="nav-group group relative" data-nav-group>
+            <summary
+              class:list={[
+                'flex cursor-pointer list-none items-center gap-1 rounded px-2 py-1.5 hover:text-un-deep [&::-webkit-details-marker]:hidden',
+                isGroupCurrent(group.items) ? 'font-medium text-un-deep' : 'text-body',
+              ]}
+            >
+              {group.label}
+              <svg class="h-3 w-3 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <ul class="absolute start-0 top-full z-40 mt-1 min-w-44 rounded-md border border-line bg-paper p-1 shadow-lg">
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    href={href(item.href)}
+                    aria-current={isCurrent(item.href) ? 'page' : undefined}
+                    class:list={[
+                      'block rounded px-3 py-2 hover:bg-mist hover:text-un-deep',
+                      isCurrent(item.href) ? 'font-medium text-un-deep' : 'text-body',
+                    ]}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
         ))
       }
     </nav>
@@ -79,30 +124,63 @@ const current = Astro.url.pathname
   <nav
     id="site-nav-mobile"
     aria-label="Site"
-    class="hidden border-t border-line bg-paper px-4 py-2 lg:hidden"
+    class="hidden border-t border-line bg-paper px-4 py-3 lg:hidden"
   >
-    <ul class="grid grid-cols-2 gap-x-4 gap-y-1 py-2 text-[0.95rem] sm:grid-cols-3">
+    <div class="grid gap-x-6 gap-y-4 sm:grid-cols-2">
       {
-        nav.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              aria-current={current.startsWith(item.href) && item.href !== '/' ? 'page' : undefined}
-              class:list={[
-                'block rounded px-2 py-2 hover:bg-mist hover:text-un-deep',
-                current.startsWith(item.href) && item.href !== '/' ? 'text-un-deep font-medium' : 'text-body',
-              ]}
-            >
-              {item.label}
-            </a>
-          </li>
+        groups.map((group) => (
+          <div>
+            <p class="px-2 text-xs font-semibold uppercase tracking-wider text-body/80">{group.label}</p>
+            <ul class="mt-1 space-y-0.5 text-[0.95rem]">
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    href={href(item.href)}
+                    aria-current={isCurrent(item.href) ? 'page' : undefined}
+                    class:list={[
+                      'block rounded px-2 py-1.5 hover:bg-mist hover:text-un-deep',
+                      isCurrent(item.href) ? 'font-medium text-un-deep' : 'text-body',
+                    ]}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         ))
       }
-    </ul>
+    </div>
   </nav>
 </header>
 
 <script data-astro-rerun>
+  const navGroups = [...document.querySelectorAll('[data-nav-group]')]
+
+  // Pointer users get hover disclosure; keyboard users get native
+  // details/summary behaviour from the same element.
+  if (window.matchMedia('(hover: hover)').matches) {
+    for (const group of navGroups) {
+      group.addEventListener('pointerenter', () => {
+        for (const other of navGroups) if (other !== group) other.removeAttribute('open')
+        group.setAttribute('open', '')
+      })
+      group.addEventListener('pointerleave', () => group.removeAttribute('open'))
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) return
+    if (event.target.closest('[data-nav-group]')) return
+    for (const group of navGroups) group.removeAttribute('open')
+  })
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      for (const group of navGroups) group.removeAttribute('open')
+    }
+  })
+
   const btn = document.getElementById('theme-toggle')
   const sync = () => btn?.setAttribute('aria-pressed', String(document.documentElement.classList.contains('dark')))
   sync()

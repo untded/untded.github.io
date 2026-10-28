@@ -1,0 +1,27 @@
+---
+import { href } from '../lib/site'
+
+interface Props {
+  to: string
+}
+
+const { to } = Astro.props
+const target = href(to)
+const absolute = new URL(target, Astro.site)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting</title>
+    <link rel="canonical" href={absolute} />
+    <meta name="robots" content="noindex,follow" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <script is:inline define:vars={{ target }}>location.replace(target)</script>
+  </head>
+  <body data-pagefind-ignore>
+    <p>This page has moved to <a href={target}>{target}</a>.</p>
+  </body>
+</html>

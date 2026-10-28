@@ -10,11 +10,21 @@
   schema:description "Code specifying how full a piece of transport equipment is.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Equipment. Fullness.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(803):n1";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (803):n1";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 123;
   utd:status "active";
   utd:tag 8169 .

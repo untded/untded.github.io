@@ -9,11 +9,28 @@
   schema:description "Total sum charged with respect to a single line item of an invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Invoice. Line Item. Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 56, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 56;
+      utd:lineTo 56;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 56, P 63-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 89;
   utd:status "active";
   utd:tag 5068 .

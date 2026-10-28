@@ -7,11 +7,28 @@
   schema:description "Date on which a Dangerous Goods Declaration is issued.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods Declaration Document. Issue.Date Time";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 03, P 56-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 3;
+      utd:lineTo 3;
+      utd:posFrom 56;
+      utd:posTo 62
+    ]
+  ];
   utd:bridges "UNLK: L 03, P 56-62";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 19;
+    utd:minLength 1;
+    utd:printedForm "an..19"
+  ];
   utd:sourcePage 44;
   utd:status "active";
   utd:tag 2179 .

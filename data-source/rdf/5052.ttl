@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/5052> a utd:TradeDataElement;
   skos:altLabel "Current domestic value";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 36-44, P 09-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 36;
+      utd:lineTo 44;
+      utd:posFrom 9;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "UNLK: L 36-44, P 09-44";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";

@@ -78,7 +78,6 @@
     "maxLength": 512
   },
   "altLabel": [
-    "Insurer's Agent at destination",
     "Insurer's Agent at destination"
   ],
   "bridges": "UNLK: an..35x5; L 50-54, P 09-44",

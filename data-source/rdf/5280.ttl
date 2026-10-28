@@ -9,11 +9,21 @@
   schema:description "Amount of additional charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Additional Charge.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23-48 (also on reverse)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: (n..3-n..8); L 47-49, P 23-48 and L 53-55, P 23-48 and L 59-61, P 23-48 (also on reverse)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 94;
   utd:status "active";
   utd:tag 5280 .

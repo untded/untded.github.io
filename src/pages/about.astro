@@ -6,7 +6,7 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
 
 <BaseLayout
   title="About — UN/TDED"
-  description="What UN/TDED is, its status as a pilot project, and the ISO/TC 154 resolution behind the open-source maintenance of ISO 7372 (UNTDED)."
+  description="The status of this website as a member-contribution pilot project, the ISO/TC 154 mandate behind it, and the two organizations that publish the United Nations Trade Data Elements Directory."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">About</p>
@@ -23,12 +23,13 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Mission</h2>
       <p class="prose-def mt-3">
-        The Trade Data Elements Directory is the lexicon of trade: the controlled
-        vocabulary that defines every data element on an aligned trade document —
-        its number, name, definition and representation. This project publishes
-        the 2005 edition (ECE/TRADE/362, ISO 7372:2005) as an open,
-        machine-readable dataset, so that the vocabulary of trade can be
-        maintained and consumed as data, not as a scanned PDF.
+        The United Nations Trade Data Elements Directory (UNTDED) is the
+        controlled vocabulary that defines every data element on an aligned
+        trade document, with its number, name, definition and representation.
+        This website publishes the 2005 edition, which is ECE/TRADE/362 and
+        ISO 7372:2005, as an open and machine-readable dataset, so that this
+        vocabulary can be maintained and consumed as data rather than as a
+        scanned PDF.
       </p>
     </section>
 
@@ -38,15 +39,19 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
     >
       <h2 class="text-xl font-semibold tracking-tight text-ink">Pilot status</h2>
       <p class="mt-3 text-sm leading-relaxed text-body">
-        UN/TDED is a <strong class="text-ink">member contribution and a pilot
-        project</strong>, performed to complement the work of ISO/TC 154 and
-        UN/CEFACT (UNECE) under JWG 9 resolution P-2026-07 (see{' '}
+        This website and the machine-readable dataset that it publishes are a{' '}
+        <strong class="text-ink">member contribution and a pilot project</strong> to the
+        United Nations Economic Commission for Europe (UNECE), through UN/CEFACT, and
+        to ISO/TC 154. The work is performed to complement the two organizations and is
+        recorded in JWG 9 resolution P-2026-07 (see{' '}
         <a class="text-un-deep underline decoration-un/50" href="#mandate">the mandate</a>).
-        It is <strong class="text-ink">not an official project</strong> of either
-        organization and is <strong class="text-ink">not endorsed</strong> by ISO or
-        UNECE. The data is digitized from the printed edition and provided without
-        any guarantee of accuracy — use it at your own risk. The official sources
-        remain the publications of the two organizations:{' '}
+        The website is <strong class="text-ink">not an official project or publication</strong>{' '}
+        of either organization, and <strong class="text-ink">neither organization has endorsed it</strong>.
+        The data is digitized from the printed edition and is provided without any
+        guarantee of accuracy, so use of the website is at the user’s own risk. The
+        UN/TDED publication itself is the official publication ECE/TRADE/362, published
+        in parallel as ISO 7372:2005. The official sources remain the publications of
+        the two organizations:{' '}
         <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>UN/TDED — UNECE</a> and{' '}
         <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372 — ISO</a>.
       </p>
@@ -62,44 +67,46 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
         <ul class="space-y-3 text-sm leading-relaxed text-body">
           <li class="flex items-start gap-2.5">
             <span class="mt-1 inline-block h-3 w-3 shrink-0 rounded-[2px] bg-un" aria-hidden="true"></span>
-            <span><strong class="text-ink">UN blue #009EDB</strong> — the official blue of the
-            United Nations (Pantone 2925), used for the slash and the accents.</span>
+            <span>The slash and the accents use <strong class="text-ink">UN blue #009EDB</strong>,
+            which is the official blue of the United Nations (Pantone 2925).</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="mt-1 inline-flex shrink-0 gap-1" aria-hidden="true">
               <span class="inline-block h-3 w-3 rounded-[2px] bg-flag"></span>
               <span class="inline-block h-3 w-3 rounded-[2px] bg-cat-5"></span>
             </span>
-            <span><strong class="text-ink">Category colours</strong> — one colour per tag range,
-            in tag order.</span>
+            <span>The <strong class="text-ink">category colours</strong> assign one colour to
+            each tag range, in tag order.</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="mt-1 inline-block h-3 w-3 shrink-0 rounded-[2px] border border-line bg-paper" aria-hidden="true"></span>
-            <span><strong class="text-ink">The name</strong> — written the UN standards-family
-            way, like UN/CEFACT and UN/EDIFACT.</span>
+            <span>The <strong class="text-ink">name</strong> follows the spelling convention of
+            the UN standards family, which includes UN/CEFACT and UN/EDIFACT.</span>
           </li>
           <li class="flex items-start gap-2.5">
             <span class="mt-1 inline-block h-3 w-3 shrink-0 rounded-[2px] border border-line bg-mist" aria-hidden="true"></span>
-            <span><strong class="text-ink">The tag plate</strong> — a bordered plate with the
-            four-digit tag, after the pre-printed field boxes of trade documents.</span>
+            <span>The <strong class="text-ink">tag plate</strong> reproduces the bordered plate
+            with the four-digit tag that follows the pre-printed field boxes of trade
+            documents.</span>
           </li>
         </ul>
       </div>
       <p class="mt-4 text-sm text-body">
-        The UN emblem is the official artwork, in light and dark variants
-        (UN blue #009EDB on light backgrounds).
+        The UN emblem is the official artwork, and it is provided in light and dark
+        variants, with UN blue #009EDB on light backgrounds.
       </p>
     </section>
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Operation and governance</h2>
       <p class="mt-3 leading-relaxed text-body">
-        This site and its repositories are a pilot project performed to complement
+        This website and its repositories are a pilot project performed to complement
         the work of the United Nations and the International Organization for
-        Standardization, which jointly maintain ISO 7372 / the TDED through{' '}
-        <strong class="text-ink">ISO/TC 154/JWG 9</strong>. It is not an official
-        project of either organization — see{' '}
-        <a class="text-un-deep underline decoration-un/50" href="#pilot">pilot status</a>.
+        Standardization, which jointly maintain ISO 7372 and the TDED through{' '}
+        <strong class="text-ink">ISO/TC 154/JWG 9</strong>. The website is not an official
+        project of either organization, as the{' '}
+        <a class="text-un-deep underline decoration-un/50" href="#pilot">pilot status</a>{' '}
+        above states.
       </p>
       <div class="mt-5">
         <OrgCards />
@@ -111,9 +118,9 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
       <p class="mt-2 text-sm text-body">
         The work is mandated by <strong class="text-ink">
         <a class="text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-07')}>ISO/TC 154 document
-        N1727</a></strong> — resolutions of the 45th plenary meeting of ISO/TC 154,
-        DIN Berlin, 2026-08-31 and 2026-09-04 (all resolutions approved by the
-        six participating members DIN, SAC, BSI, JISC, UNI, KATS):
+        N1727</a></strong>, which records the resolutions of the 45th plenary meeting of
+        ISO/TC 154, held at DIN in Berlin on 2026-08-31 and 2026-09-04. All resolutions
+        were approved by the six participating members: DIN, SAC, BSI, JISC, UNI and KATS.
       </p>
       <blockquote class="mt-4 border-l-4 border-un bg-paper p-4 text-sm leading-relaxed text-ink">
         <p class="font-semibold">
@@ -132,30 +139,28 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
         </p>
       </blockquote>
       <p class="mt-3 text-sm leading-relaxed text-body">
-        Companion resolutions:{' '}
+        Two companion resolutions apply.{' '}
         <a class="font-semibold text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-06')}>P-2026-06</a>{' '}
-        (JWG 9)
-        calls for strengthened ISO- and UNECE-side expert support for ISO 7372's
-        "timely publication before October 2028";{' '}
+        (JWG 9) calls for strengthened expert support on the ISO side and on the UNECE
+        side for the timely publication of ISO 7372 before October 2028.{' '}
         <a class="font-semibold text-un-deep underline decoration-un/50" href={tc154ResolutionUrl('P-2026-01')}>P-2026-01</a>
         {' '}(JWG 1) initiates a meeting with the UNECE Secretariat on the stalled
-        maintenance and publication of the UN/EDIFACT Directories (D.25A
-        severely delayed). This platform — dataset, website and source code —
-        is the open-source platform those resolutions call for, developed and
-        operated as a pilot project to ISO/TC 154 and UNECE, with
-        UNTDED 2005 as its first complete edition.
+        maintenance and publication of the UN/EDIFACT Directories, whose D.25A release
+        is severely delayed. This platform, which comprises the dataset, this website
+        and the source code, is the open-source platform that those resolutions call
+        for. It is developed and operated as a pilot project to ISO/TC 154 and UNECE,
+        with UNTDED 2005 as its first complete edition.
       </p>
     </section>
 
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Licensing and attribution</h2>
       <p class="mt-3 text-sm leading-relaxed text-body">
-        The directory content is the UN publication <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>ECE/TRADE/362</a> (in parallel
-        as <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372:2005</a>), © United Nations / UNECE, reproduced with
-        attribution. The code and this website are open
-        source under MIT. See{' '}
-        <a class="text-un-deep underline decoration-un/50" href={href('/download')}>download</a>
-        {' '}for the exact artifacts.
+        The content of the directory is the UN publication <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>ECE/TRADE/362</a> (in parallel
+        as <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372:2005</a>), © United Nations / UNECE, and it is reproduced with
+        attribution. The code and this website are open source under the MIT license.
+        The <a class="text-un-deep underline decoration-un/50" href={href('/download')}>download page</a>{' '}
+        lists the exact artifacts.
       </p>
     </section>
   </div>

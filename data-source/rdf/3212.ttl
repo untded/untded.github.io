@@ -9,11 +9,28 @@
   schema:description "Name of the place at which a documentary credit expires";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Expiry Location.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 08, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 8;
+      utd:lineTo 8;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 08, P 45-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 59;
   utd:status "active";
   utd:tag 3212 .

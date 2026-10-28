@@ -9,11 +9,25 @@
   schema:description "Indication that other charges are wholly prepaid.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Prepaid Other Charge.Indicator";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "Checkmark L 24, P 55-56";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(403):a1";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: Checkmark L 24, P 55-56 CIMP: (403):a1";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 1;
+    utd:minLength 1;
+    utd:printedForm "an1"
+  ];
   utd:sourcePage 91;
   utd:status "active";
   utd:tag 5158 .

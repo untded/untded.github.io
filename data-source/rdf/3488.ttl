@@ -9,11 +9,21 @@
   schema:description "Name of the place where a person or persons join a means of transport";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Embarkation Location.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 6";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 6";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3488 .

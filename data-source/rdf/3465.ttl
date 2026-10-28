@@ -9,7 +9,13 @@
   schema:name "In-house. Identifier";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 9;
+    utd:minLength 1;
+    utd:printedForm "an..9"
+  ];
   utd:sourcePage 70;
   utd:status "active";
   utd:tag 3465 .

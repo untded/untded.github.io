@@ -9,11 +9,21 @@
   schema:description "Name of the customs office which is responsible for transit formalities en route.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transit . Customs Office Location .Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "SAD an..11 (SAD 51)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: SAD an..11 (SAD 51)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 55;
   utd:status "active";
   utd:tag 3106 .

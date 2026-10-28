@@ -10,11 +10,36 @@
   schema:description "Code specifying the name of a document such as 352 for proforma invoice, 380 for commercial invoice.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Type.Code";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 04, P 41-45";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 4;
+      utd:lineTo 4;
+      utd:posFrom 41;
+      utd:posTo 45
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(120): a1";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 1(first to third subdivision))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "UNLK: L 04, P 41-45 CIMP: (120): a1 SAD: (SAD 1(first to third subdivision))";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1001 .

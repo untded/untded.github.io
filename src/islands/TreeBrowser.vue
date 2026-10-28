@@ -62,7 +62,7 @@ onMounted(load)
         id="tree-q"
         class="filter-input"
         type="search"
-        placeholder="Filter by tag or name — branches open as you type…"
+        placeholder="Filter by tag or name; branches open as you type…"
         :value="query"
         @input="onQ"
       />

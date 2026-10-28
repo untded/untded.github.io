@@ -9,11 +9,29 @@
   schema:description "Gross weight (mass) on which a charge is to be based";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Chargeable Weight. Basis.Measure";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 31-37";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 44-45, P 51-58 and L 50-51, P 51-58 and L 56-57,P 51-58 (also on reverse) (CIM 60)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(600):n..7";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "AWB: L 33-44, P 31-37 CIM: L 44-45, P 51-58 and L 50-51, P 51-58 and L 56-57,P 51-58 (also on reverse) (CIM 60) CIMP: (600):n..7";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 8;
+    utd:minLength 1;
+    utd:printedForm "an..8"
+  ];
   utd:sourcePage 101;
   utd:status "active";
   utd:tag 6030 .

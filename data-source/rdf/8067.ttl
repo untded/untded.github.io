@@ -9,11 +9,21 @@
   schema:description "Code specifying a mode of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Mode.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 26)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 26)";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 120;
   utd:status "active";
   utd:tag 8067 .

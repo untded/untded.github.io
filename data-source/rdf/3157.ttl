@@ -9,11 +9,21 @@
   schema:description "To identify a warehouse where a particular consignment has been stored.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Warehouse. Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 49)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 49)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3157 .

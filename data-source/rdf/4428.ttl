@@ -10,11 +10,28 @@
   schema:description "Proof that a document has been signed.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Endorsement.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 64, P55-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 64;
+      utd:lineTo 64;
+      utd:posFrom 55;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 64, P55-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 84;
   utd:status "active";
   utd:tag 4428 .

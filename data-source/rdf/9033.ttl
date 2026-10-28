@@ -9,11 +9,21 @@
   schema:description "Code specifying the Customs procedure, if any, which has been applied to the goods prior to the application of a different Customs procedure.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs. Previous Procedure.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 37)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 37)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 7;
+    utd:minLength 1;
+    utd:printedForm "an..7"
+  ];
   utd:sourcePage 129;
   utd:status "active";
   utd:tag 9033 .

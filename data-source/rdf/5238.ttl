@@ -10,11 +10,21 @@
   schema:description "Required additions to the Customs value basis used.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs. Additional Value Basis.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 47(3))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 47(3))";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 92;
   utd:status "active";
   utd:tag 5238 .

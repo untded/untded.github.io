@@ -1,0 +1,33 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Provenance — UN/TDED
+description: This note describes how the UN Trade Data Elements Directory 2005 was digitized and verified and how it is maintained, including the extraction, character conservation, OCR cross-checks and the review queue.
+---
+
+## Source
+
+The registry derives from one source: the published directory, *United Nations Trade Data Elements Directory (UNTDED) 2005*, which is ECE/TRADE/362 and was published in parallel as ISO 7372:2005. Pages 20–132 of the working copy carry a text layer, and the front matter on pages 9–19 exists only as page images in the original publication, so it was transcribed from renderings of those pages.
+
+## Extraction
+
+- The element table on pages 28–132 is extracted from the text layer with the layout preserved (`pdftotext -layout`), and column bounding boxes route each cell into the nine printed columns.
+- Wrapped cells are joined by explicit rules. The printed hyphenation of narrow columns, as in "Document/m essage", is reassembled, and prose spacing is never glued.
+- The result is a YAML single source of truth of 1504 elements, with one file per tag-range category, and every entry carries its PDF page.
+
+## Verification
+
+Every claim on this website is backed by a check that runs in the test suite of the dataset:
+
+- **Regeneration:** the YAML must be byte-identical to a fresh extraction from the source PDF, and any hand edit fails the build.
+- **Character conservation:** the exact multiset of non-space characters is conserved from the text layer through routing, joining and normalization, in two independently checked stages.
+- **UID reconciliation:** every printed four-digit tag became exactly one element.
+- **Independent re-reads:** sampled rows are re-read from page images by optical character recognition (OCR) with tesseract and compared against the extracted cells.
+- **Bridge zones:** parsed UNLK zones stay within printable ranges and carry ordered spans.
+
+## The review queue
+
+Where the source is itself ambiguous, such as a wrapped digit or a change tag printed outside the legend, the entry is recorded with its provenance and flagged in a review queue, and the value is never guessed silently. Two change tags, `cd` and the `cr` class, are printed outside the section 4.1 legend, and every occurrence is marked as such.
+
+## Corrections
+
+A suspected error in a cell is raised through the process described in the [contributing guide](/guides/contributing). Every correction is re-verified against the source before it lands.

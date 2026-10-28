@@ -11,7 +11,13 @@
   schema:name "Package. Total Quantity.Text";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 115;
   utd:status "active";
   utd:tag 7368 .

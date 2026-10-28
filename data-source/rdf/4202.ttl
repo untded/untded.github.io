@@ -9,11 +9,21 @@
   schema:description "Consignor's statement certifying that dangerous goods to be shipped are authorised for transport according to relevant modal international regulations.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Certifying Text.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 53-54, P 37-81 (Preprinted)";
+    utd:scheme "AWB"
+  ];
   utd:bridges "AWB: L 53-54, P 37-81 (Preprinted)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 78;
   utd:status "active";
   utd:tag 4202 .

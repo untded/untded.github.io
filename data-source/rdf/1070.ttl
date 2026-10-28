@@ -9,11 +9,21 @@
   schema:description "Indication that a charges note has been established and attached to a transport contract document or not";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Charges Note Document. Attachment.Indicator";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "Checkmark L 62, P 47";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: Checkmark L 62, P 47";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 1;
+    utd:minLength 1;
+    utd:printedForm "an1"
+  ];
   utd:sourcePage 30;
   utd:status "active";
   utd:tag 1070 .

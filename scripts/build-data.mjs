@@ -33,7 +33,7 @@ for (const file of readdirSync(rdfDir)) {
   mkdirSync(tagDir, { recursive: true })
   copyFileSync(`${rdfDir}/${file}`, `${tagDir}/data.${m[2]}`)
 }
-// the JSON-LD context served at /ns/untded-context.jsonld (see /docs/context)
+// the JSON-LD context served at /ns/untded-context.jsonld (see /guides/context)
 mkdirSync(fileURLToPath(new URL('../public/ns/', import.meta.url)), { recursive: true })
 copyFileSync(
   fileURLToPath(new URL('../data-source/context.jsonld', import.meta.url)),

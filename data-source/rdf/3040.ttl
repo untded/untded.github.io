@@ -9,11 +9,21 @@
   schema:description "Name of the port, either inward or outward, where a declaration is made.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Declaration. Reporting Port Location.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/Fal 2-7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/Fal 2-7";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 51;
   utd:status "active";
   utd:tag 3040 .

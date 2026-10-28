@@ -9,7 +9,13 @@
   schema:name "Code. Set.Indicator";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 1;
+    utd:minLength 1;
+    utd:printedForm "an1"
+  ];
   utd:sourcePage 129;
   utd:status "active";
   utd:tag 9160 .

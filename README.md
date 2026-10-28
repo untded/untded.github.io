@@ -13,7 +13,7 @@ Live at **https://www.untded.org**.
 
 ## Stack
 
-Astro 7 (static, MDX for the docs corpus) · Vite 8 · Vue 3 islands
+Astro 7 (static, MDX for the guides corpus) · Vite 8 · Vue 3 islands
 (`src/islands/`) · Tailwind CSS 4 via `@tailwindcss/vite` · Pagefind
 full-text search · Node 22.
 
@@ -47,21 +47,25 @@ src/lib/*-filter.ts         pure seams behind the islands (thin Vue shells)
 src/lib/*.spec.ts           sibling specs + dist-based site contracts
 src/islands/                RenameLedger, DirectoryFilter, TreeBrowser, Omnibox, UnlkExplorer (Vue)
 src/components/             Astro components (TagPlate, ReprChip, UnlkForm, PositionRuler, …)
-src/layouts/DocsLayout.astro  shared prose layout for the MDX docs corpus
+src/layouts/DocsLayout.astro  shared prose layout for the MDX guides corpus
 src/pages/                  routes below · .github/ISSUE_TEMPLATE/ DMR forms
 ```
 
 Routes: 1504 element pages (each serving `data.ttl`/`data.jsonld` +
-`rel=alternate`) + 9 category pages + the UNLK explorer (`/unlk`) and the
-content surface — `/document` (the publication's own text, cover to
-presentation rules, with a page-by-page coverage table), `/ontology` (the
-model), `/ledger` (the 1993↔2005 change tags), `/bridges` (carrier-scheme
-coverage), `/docs` (MDX guides: ontology, EDIFACT alignment, vocabulary
-register, provenance, JSON-LD context, contributing), `/notation`,
-`/download`, `/about`, `/search`, `/tree` — plus the JSON-LD context at
-`/ns/untded-context.jsonld`. All static. The directory island fetches
-`/data/index.json` (compact wire format, generated at build); the no-JS
-baseline is the full SSR table.
+`rel=alternate`) + 9 category pages + compare pairs + the UNLK explorer
+(`/unlk`), the printable field card (`/unlk/fields`) and the content
+surface — `/publication` (the publication's own text, cover to
+presentation rules, with a page-by-page coverage table), `/guides` (MDX
+guides: ontology, EDIFACT alignment, vocabulary register, provenance,
+JSON-LD context, contributing), `/ontology` (the model), `/changes` (the
+1993↔2005 change tags and replacements), `/1993` (the previous edition),
+`/bridges` (carrier-scheme coverage), `/standards`, `/notation`,
+`/download`, `/dataset/untded-2005`, `/about`, `/search`, `/tree` — plus
+the JSON-LD context at `/ns/untded-context.jsonld`. The retired routes
+`/document`, `/docs`, `/status` and `/reference` serve client-side
+redirect stubs and stay out of the sitemap. All static. The directory
+island fetches `/data/index.json` (compact wire format, generated at
+build); the no-JS baseline is the full SSR table.
 
 ## Data flow
 

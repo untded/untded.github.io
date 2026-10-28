@@ -9,11 +9,29 @@
   schema:description "Information for accounting purposes.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Accounting. Information.Text";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 16-22, P 45-81 and";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(410): an..34";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD B)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 16-22, P 45-81 and CIMP: (410): an..34 SAD: (SAD B)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 83;
   utd:status "active";
   utd:tag 4410 .

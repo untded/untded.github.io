@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/3117> a utd:TradeDataElement;
   skos:altLabel "Country of sale, coded";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 15, P 60-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 15;
+      utd:lineTo 15;
+      utd:posFrom 60;
+      utd:posTo 62
+    ]
+  ];
   utd:bridges "UNLK: L 15, P 60-62";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";

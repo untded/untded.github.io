@@ -9,11 +9,21 @@
   schema:description "Number of packages in a split goods item.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Split Goods Item. Package.Quantity";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(701):n..4";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (701):n..4";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 6;
+    utd:minLength 1;
+    utd:printedForm "n..6"
+  ];
   utd:sourcePage 113;
   utd:status "active";
   utd:tag 7226 .

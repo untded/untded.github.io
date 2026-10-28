@@ -11,7 +11,13 @@
   schema:name "Customs Control. Start Date.Indicator";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 1;
+    utd:minLength 1;
+    utd:printedForm "an1"
+  ];
   utd:sourcePage 40;
   utd:status "active";
   utd:tag 2056 .

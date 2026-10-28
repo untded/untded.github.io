@@ -9,11 +9,21 @@
   schema:description "To identify the means of transport used in crossing the border out of the country of despatch for export or into the country of final destination for import.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. At Border Crossing.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 21)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 21)";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 25;
+    utd:minLength 1;
+    utd:printedForm "an..25"
+  ];
   utd:sourcePage 125;
   utd:status "active";
   utd:tag 8270 .

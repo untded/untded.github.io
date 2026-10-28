@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/7148> a utd:TradeDataElement;
   skos:altLabel "Statistical code number (Customs)";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 28-51, P 52-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 51;
+      utd:posFrom 52;
+      utd:posTo 62
+    ]
+  ];
   utd:bridges "UNLK: L 28-51, P 52-62";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "x";

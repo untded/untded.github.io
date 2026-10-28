@@ -9,11 +9,21 @@
   schema:description "Code specifying the country in which a means of transport is registered";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Registration Nationality.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1-7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 1-7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 127;
   utd:status "active";
   utd:tag 8453 .

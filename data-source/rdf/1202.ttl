@@ -10,11 +10,33 @@
   schema:description "Unique reference identifying a particular consignment of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Identifier";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..17, L 06, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:fieldFormat "an..17";
+      utd:lineFrom 6;
+      utd:lineTo 6;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "L 64, P 69-79 and n7; L 66, P 73-82";
+    utd:scheme "CIM"
+  ];
   utd:bridges "UNLK: an..17, L 06, P 63-80 CIM: L 64, P 69-79 and n7; L 66, P 73-82";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "u";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1202 .

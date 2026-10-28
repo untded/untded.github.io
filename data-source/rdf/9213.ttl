@@ -9,11 +9,21 @@
   schema:description "Code specifying a regime according to which tax is assessed such as preferential duty rate.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Tax. Regime Type.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 36)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 36)";
   utd:category <https://www.untded.org/categories/9000-9699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 130;
   utd:status "active";
   utd:tag 9213 .

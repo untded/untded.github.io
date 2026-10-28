@@ -9,11 +9,28 @@
   schema:description "Code specifying a type of transport movement.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Transport Movement Type.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 28, P 09-ll";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 28;
+      utd:posFrom 9;
+      utd:posTo 9
+    ]
+  ];
   utd:bridges "UNLK: L 28, P 09-ll";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 126;
   utd:status "active";
   utd:tag 8335 .

@@ -32,7 +32,7 @@ const categoryJsonld = jsonldNode(`${origin}/categories/${category.range}`)
 
 <BaseLayout
   title={`${category.range} — ${category.label} · UN/TDED`}
-  description={`TDED category ${category.range} (${category.label}) of UNTDED 2005: ${elements.length} data elements.`}
+  description={`TDED category ${category.range} (${category.label}) of UNTDED 2005 contains ${elements.length} data elements.`}
 >
   <div class="mx-auto max-w-6xl px-4 py-10">
     <p class="font-mono text-sm tabular-nums text-body">{category.range} · section {category.section}</p>
@@ -42,8 +42,8 @@ const categoryJsonld = jsonldNode(`${origin}/categories/${category.range}`)
       <CompositionBar groups={groups} count={elements.length} />
     </div>
     <p class="mt-2 text-body">
-      {elements.length} elements
-      ({elements.filter((e) => e.status === 'active').length} active) ·{' '}
+      {elements.length} elements belong to this category, of which{' '}
+      {elements.filter((e) => e.status === 'active').length} are active.{' '}
       <a class="text-un-deep underline decoration-un/50" href={href(`/elements?cat=${category.k}`)}>
         Filter this category in the directory
       </a>

@@ -78,7 +78,6 @@
     "maxLength": 35
   },
   "altLabel": [
-    "Part consignment number",
     "Part consignment number"
   ],
   "bridges": "CIMP: (703): a1; (905): n2",

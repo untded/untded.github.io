@@ -78,7 +78,6 @@
     "maxLength": 8
   },
   "altLabel": [
-    "Total number of packages",
     "Total number of packages"
   ],
   "bridges": "SAD: (SAD 6)",

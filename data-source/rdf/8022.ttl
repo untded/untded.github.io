@@ -10,11 +10,28 @@
   schema:description "Free form description of a charge such as freight and other charges.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Charge. Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L53-66, P 28-65";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 53;
+      utd:lineTo 66;
+      utd:posFrom 28;
+      utd:posTo 65
+    ]
+  ];
   utd:bridges "UNLK: L53-66, P 28-65";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 26;
+    utd:minLength 1;
+    utd:printedForm "an..26"
+  ];
   utd:sourcePage 118;
   utd:status "active";
   utd:tag 8022 .

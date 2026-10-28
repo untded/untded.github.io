@@ -9,11 +9,21 @@
   schema:description "Identification of a party authorised to act on behalf of another party.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Agent. Party.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 14 (Nr))";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 14 (Nr))";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 59;
   utd:status "active";
   utd:tag 3197 .

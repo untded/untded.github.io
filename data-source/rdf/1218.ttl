@@ -9,11 +9,28 @@
   schema:description "Quantity of document originals required.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Originals Required.Quantity";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 63, P 36-40";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 63;
+      utd:lineTo 63;
+      utd:posFrom 36;
+      utd:posTo 40
+    ]
+  ];
   utd:bridges "UNLK: L 63, P 36-40";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 2;
+    utd:minLength 1;
+    utd:printedForm "n..2"
+  ];
   utd:sourcePage 33;
   utd:status "active";
   utd:tag 1218 .

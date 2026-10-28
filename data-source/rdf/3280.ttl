@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/3280> a utd:TradeDataElement;
   skos:altLabel "Supplier";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 03, P 27-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 3;
+      utd:lineTo 3;
+      utd:posFrom 27;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "UNLK: L 03, P 27-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";

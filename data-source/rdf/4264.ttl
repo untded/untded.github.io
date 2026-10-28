@@ -12,7 +12,13 @@
   schema:name "Insurance Coverage. Risk.Text";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4264 .

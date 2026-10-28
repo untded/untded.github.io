@@ -9,11 +9,36 @@
   schema:description "Amount of discount or percentage, other than payment (cash) discount, deductible from Invoice amount under conditions to be specified.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Discount. Amount";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 39-46, P 48-59";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(514):n..8";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 54, P 62-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 54;
+      utd:lineTo 54;
+      utd:posFrom 62;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "AWB: L 33-44, P 39-46, P 48-59 CIMP: (514):n..8 UNLK: L 54, P 62-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 86;
   utd:status "active";
   utd:tag 5014 .

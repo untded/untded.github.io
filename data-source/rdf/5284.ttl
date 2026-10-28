@@ -12,7 +12,13 @@
   schema:name "Unit Price. Basis.Quantity";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 9;
+    utd:minLength 1;
+    utd:printedForm "n..9"
+  ];
   utd:sourcePage 94;
   utd:status "active";
   utd:tag 5284 .

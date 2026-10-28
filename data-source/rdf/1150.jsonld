@@ -78,7 +78,6 @@
     "maxLength": 35
   },
   "altLabel": [
-    "Received number",
     "Received number"
   ],
   "bridges": "CIM: n..4; L 69, P 76-82",

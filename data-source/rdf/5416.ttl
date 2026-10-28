@@ -9,7 +9,11 @@
   schema:description "Amount of disbursements to be collected by the carrier according to the order given by the consignor.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Disbursement.Amount";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L40, P 75-82 (CIM 74)";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L40, P 75-82 (CIM 74)";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";

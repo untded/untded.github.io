@@ -1,0 +1,23 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Vocabulary register — UN/TDED
+description: This register lists the external vocabularies and standards that the Trade Data Elements Directory references, and the role each plays for this registry.
+---
+
+The directory does not stand alone. This register lists the external vocabularies and standards that it references, together with the role that each plays here.
+
+| Vocabulary or standard | Role for this registry |
+|---|---|
+| **ISO 7372:2005 and ECE/TRADE/362** | These are the publication itself, and the registry transcribes its 2005 edition. Official pages: [UNECE](https://unece.org/untded-iso7372), [ISO](https://www.iso.org/standard/41237.html). |
+| **ISO 6422** (United Nations Layout Key) | ISO 6422 defines the master form. The [UNLK reconstruction](/unlk) plots the bridges of the directory onto its grid, and the zone semantics of `utd:UnlkZone` follow its line-and-position language. |
+| **ISO 3535** | ISO 3535 defines the layout-chart grid on which the UNLK is drawn, including the A4 page, the image area and the standard boxes. The registry cites it wherever geometry matters. |
+| **UN/EDIFACT D.05B** (EDED and UNCL) | The D.05B directories form the electronic counterpart of the directory. The [alignment guide](/guides/alignment-edifact) documents the tag join and its results. |
+| **ISO 11179** | ISO 11179 supplies the naming discipline behind the element names (object class, property term and representation term), as the foreword of the publication records. |
+| **ebXML CCTS (ISO/TS 15000-5)** | ebXML CCTS forms the core-components framing to which the 2005 revision aligned its entries. The registry records it as context and does not consume it as data. |
+| **UN Transparency Protocol (UNTP)** | UNTP is an interoperability target rather than a source, because a product-passport payload can cite TDED elements by IRI, as the [context guide](/guides/context) describes. The registry imports no content from it. |
+
+## Policy
+
+1. The registry consumes exactly one source, which is the text of the publication, digitized and verified as the [provenance note](/guides/provenance) describes.
+2. External vocabularies appear as citations, alignments or interoperability examples, and never as inputs to the data.
+3. Every alignment claim, such as the EDIFACT join, is generated from the data and is reproducible from the dataset repository.

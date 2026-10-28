@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/5094> a utd:TradeDataElement;
   skos:altLabel "Invoice total in home currency";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 56, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 56;
+      utd:lineTo 56;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 56, P 63-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";

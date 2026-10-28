@@ -8,12 +8,13 @@ const elements = loadElements()
 
 <BaseLayout
   title="Download — UN/TDED"
-  description="The UNTDED 2005 dataset as YAML, CSV, JSON, JSON-LD and RDF Turtle, plus the source publication."
+  description="The UNTDED 2005 dataset is available as YAML, CSV, JSON, JSON-LD and RDF Turtle, together with the source publication."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <h1 class="text-3xl font-semibold tracking-tight text-ink">Download</h1>
     <p class="mt-2 max-w-2xl text-body">
-      The complete dataset, in machine-readable formats.
+      The complete dataset is published in machine-readable formats, and every
+      artifact below is generated from a single source.
     </p>
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2">
@@ -21,11 +22,11 @@ const elements = loadElements()
         href="https://github.com/untded/untded-2005"
         class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60"
       >
-        <h2 class="font-semibold text-ink">YAML — full dataset ↗</h2>
+        <h2 class="font-semibold text-ink">YAML: full dataset ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">untded/untded-2005</span> — nine
-          category files covering every element, each naming its page in the
-          source publication.
+          The repository <span class="font-mono text-xs">untded/untded-2005</span>{' '}
+          contains nine category files that cover every element, and each entry names
+          its page in the source publication.
         </p>
       </a>
       <a
@@ -34,86 +35,87 @@ const elements = loadElements()
       >
         <h2 class="font-semibold text-ink">CSV &amp; JSON exports ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Release artifacts:{' '}
-          <span class="font-mono text-xs">elements.csv</span>{' '}
-          (one row per element) and{' '}
-          <span class="font-mono text-xs">elements.json</span>{' '}
-          (full records), generated from the dataset.
+          The release artifacts include{' '}
+          <span class="font-mono text-xs">elements.csv</span>, with one row per element, and{' '}
+          <span class="font-mono text-xs">elements.json</span>, with the full records;
+          both are generated from the dataset.
         </p>
       </a>
       <a href={href('/data/untded.jsonld')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">JSON-LD</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/untded.jsonld</span> — the whole
-          directory as a linked-data graph: every element an identified
-          resource with schema.org and UNTDED vocabulary terms.
+          The file <span class="font-mono text-xs">/data/untded.jsonld</span> carries the
+          whole directory as a linked-data graph, in which every element is an
+          identified resource that uses schema.org and UNTDED vocabulary terms.
         </p>
       </a>
       <a href={href('/data/untded.ttl')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">RDF Turtle</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/untded.ttl</span> — the same
-          graph as Turtle, for SPARQL stores and RDF tooling. The vocabulary is
-          defined in the dataset’s YAML-LD context.
+          The file <span class="font-mono text-xs">/data/untded.ttl</span> carries the
+          same graph as Turtle for SPARQL stores and RDF tooling, and the YAML-LD
+          context of the dataset defines the vocabulary.
         </p>
       </a>
       <a href={href('/data/index.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Compact index</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/index.json</span> — a light
-          JSON list of all {elements.length} elements: tag, name,
-          representation, change tag, status, category.
+          The file <span class="font-mono text-xs">/data/index.json</span> is a light
+          JSON list of all {elements.length} elements, with the tag, name,
+          representation, change tag, status and category of each.
         </p>
       </a>
       <a href={href('/data/vocabulary.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Vocabulary declaration</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/vocabulary.json</span> — the
-          ontology as data: prefixes, classes and properties, generated from
-          the dataset’s single vocabulary declaration.
+          The file <span class="font-mono text-xs">/data/vocabulary.json</span> publishes
+          the ontology as data, with the prefixes, classes and properties generated
+          from the single vocabulary declaration of the dataset.
         </p>
       </a>
       <a href={href('/data/edifact-links.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">UN/EDIFACT join</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/edifact-links.json</span> —
-          the element-by-element join against the D05B EDED mirror, with the
+          The file <span class="font-mono text-xs">/data/edifact-links.json</span> carries
+          the element-by-element join against the D.05B EDED mirror, with the
           representation-alignment verdict for every joined tag.
         </p>
       </a>
       <a href={href('/data/uncl-coverage.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">UNCL code coverage</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/uncl-coverage.json</span> —
-          which elements are code-qualified in the UN/EDIFACT D05B code list
-          and with how many values.
+          The file <span class="font-mono text-xs">/data/uncl-coverage.json</span> records
+          which elements are code-qualified in the UN/EDIFACT D.05B code list and how
+          many values each of them carries.
         </p>
       </a>
       <a href={href('/data/uncl-refs.json')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">UNCL cross-references</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/data/uncl-refs.json</span> —
-          section 4.1.5 cross-references: which UNCL code values name a
-          TDED element (equals and related), from the D.01B full text.
+          The file <span class="font-mono text-xs">/data/uncl-refs.json</span> records the
+          section 4.1.5 cross-references, which state which UNCL code values name a
+          TDED element by the equals rule or by the related rule, from the full text of
+          D.01B.
         </p>
       </a>
       <a href={href('/ns/untded-context.jsonld')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">JSON-LD context</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/ns/untded-context.jsonld</span> —
-          the context for referencing TDED elements from JSON-LD, pinned to
-          this edition. See the{' '}
-          <a class="text-un-deep underline decoration-un/50" href={href('/docs/context')}>context guide</a>.
+          The file <span class="font-mono text-xs">/ns/untded-context.jsonld</span> is the
+          context for citing TDED elements from JSON-LD, and it is pinned to this
+          edition. The{' '}
+          <a class="text-un-deep underline decoration-un/50" href={href('/guides/context')}>context guide</a>{' '}
+          describes its use.
         </p>
       </a>
       <a href={href('/elements/1004/data.ttl')} class="rounded-md border border-line bg-paper p-5 transition-colors hover:border-un/60">
         <h2 class="font-semibold text-ink">Per-element RDF</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">/elements/&lt;tag&gt;/data.ttl</span>
-          {' '}and{' '}
-          <span class="font-mono text-xs">data.jsonld</span> — every element
-          resolves individually in both RDF syntaxes (example:{' '}
-          <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>).
+          Every element resolves individually in both RDF syntaxes at{' '}
+          <span class="font-mono text-xs">/elements/&lt;tag&gt;/data.ttl</span>{' '}
+          and <span class="font-mono text-xs">data.jsonld</span>, and element{' '}
+          <a class="text-un-deep underline decoration-un/50" href={href('/elements/1004')}>1004</a>{' '}
+          is an example.
         </p>
       </a>
       <a
@@ -122,8 +124,8 @@ const elements = loadElements()
       >
         <h2 class="font-semibold text-ink">Source publication ↗</h2>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          <span class="font-mono text-xs">untded/references</span> — the
-          2005 edition PDF and related reference documents.
+          The repository <span class="font-mono text-xs">untded/references</span>{' '}
+          contains the PDF of the 2005 edition and the related reference documents.
         </p>
       </a>
     </div>
@@ -131,12 +133,12 @@ const elements = loadElements()
     <section class="mt-10 rounded-md border border-line bg-mist p-6 text-sm leading-relaxed text-body">
       <h2 class="font-semibold text-ink">Attribution</h2>
       <p class="mt-2">
-        Content: UNTDED 2005, ECE/TRADE/362 (in parallel ISO 7372:2005),
-        © United Nations / UNECE. Digitized by this project — a
-        member-contribution pilot to UN/CEFACT and ISO/TC 154, not an official
-        publication; reproduced with attribution. Code: MIT.
-        When you use the dataset, cite the source publication and this
-        dataset.
+        The content is UNTDED 2005, ECE/TRADE/362 (in parallel ISO 7372:2005),
+        © United Nations / UNECE, and it is reproduced with attribution. The
+        digitization is by this project, which is a member-contribution pilot to
+        UN/CEFACT and ISO/TC 154 and is not an official publication. The code is
+        released under the MIT license. A user of the dataset cites the source
+        publication and this dataset.
       </p>
     </section>
   </div>

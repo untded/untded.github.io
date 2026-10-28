@@ -9,11 +9,25 @@
   schema:description "Name of the place at which Customs clearance should take place.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs. Clearance Location.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 22, P 45-82 (CIM 47)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(313):a3";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIM: L 22, P 45-82 (CIM 47) CIMP: (313):a3";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 53;
   utd:status "active";
   utd:tag 3080 .

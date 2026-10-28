@@ -10,11 +10,28 @@
   schema:description "Total number, in figures, of the originals of a document issued";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Originals Issued.Quantity";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 64, P 36-40";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 64;
+      utd:lineTo 64;
+      utd:posFrom 36;
+      utd:posTo 40
+    ]
+  ];
   utd:bridges "UNLK: L 64, P 36-40";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 2;
+    utd:minLength 1;
+    utd:printedForm "n..2"
+  ];
   utd:sourcePage 30;
   utd:status "active";
   utd:tag 1067 .

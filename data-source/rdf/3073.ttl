@@ -7,7 +7,18 @@
 <https://www.untded.org/elements/3073> a utd:TradeDataElement;
   skos:altLabel "Service provider, coded";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 09, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 9;
+      utd:lineTo 9;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 09, P 63-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "x";

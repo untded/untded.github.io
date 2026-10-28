@@ -16,8 +16,8 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
 ---
 
 <BaseLayout
-  title="UN/TDED — the UN Trade Data Elements Directory, machine-readable"
-  description="The United Nations Trade Data Elements Directory 2005 (ISO 7372:2005): 1504 trade data elements with their definitions and representations. A pilot project to UN/CEFACT and ISO/TC 154, not an official publication."
+  title="UN/TDED — the United Nations Trade Data Elements Directory, machine-readable"
+  description="This website publishes the 1504 trade data elements of the United Nations Trade Data Elements Directory 2005 (ECE/TRADE/362, ISO 7372:2005) as structured data. It is a member-contribution pilot project to UN/CEFACT (UNECE) and ISO/TC 154, and it is not an official publication."
 >
   <section class="border-b border-line bg-mist">
     <div class="mx-auto max-w-6xl px-4 pb-12 pt-14">
@@ -25,18 +25,20 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
         United Nations Trade Data Elements Directory · 2005 edition
       </p>
       <h1 class="mt-3 max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
-        The vocabulary of trade,<br class="hidden sm:block" />
-        machine-readable.
+        This website publishes the United Nations Trade Data Elements
+        Directory as machine-readable data.
       </h1>
       <p class="mt-4 max-w-2xl text-lg leading-relaxed text-body">
-        Every data element on a trade document — its number, name, definition and
-        representation — in one open dataset. Press{' '}
+        The directory contains 1504 trade data elements, and each element is
+        presented with its tag, name, definition, representation and the page
+        of the publication on which it appears. The dataset can be searched
+        with{' '}
         <kbd class="rounded border border-line bg-paper px-1.5 font-mono text-sm">⌘K</kbd>{' '}
-        to search, or browse the{' '}
+        or browsed in the{' '}
         <a class="text-un-deep underline decoration-un/50" href={href('/elements')}>directory</a>.
       </p>
       <p class="mt-3 flex flex-wrap items-center gap-2 text-sm text-body/80">
-        <span>Try:</span>
+        <span>Example queries:</span>
         <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="1001">1001</button>
         <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Monetary Amount">Monetary Amount</button>
         <button type="button" class="try-chip filter-btn font-mono text-xs" data-q="Charges Note">Charges Note</button>
@@ -61,96 +63,106 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
   </section>
 
   <section class="mx-auto max-w-6xl px-4 pb-10" aria-label="Categories">
-    <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">Nine categories, tags 1000–9699</h2>
+    <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">The directory divides into nine categories, which span tags 1000–9699</h2>
     <CategoryGrid categories={meta.categories} />
   </section>
 
-  <section class="mx-auto max-w-6xl px-4 pb-12" aria-label="Explore the registry">
-    <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">More than a list</h2>
+  <section class="mx-auto max-w-6xl px-4 pb-12" aria-label="Registry views">
+    <h2 class="mb-4 text-xl font-semibold tracking-tight text-ink">The registry offers several views of the data</h2>
     <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <Card href={href('/ontology')}>
-        <h3 class="text-base font-semibold text-ink">The ontology →</h3>
+        <h3 class="text-base font-semibold text-ink">The ontology</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Every element is a linked-data resource — classes, properties and
-          zones under our namespace, downloadable as Turtle or JSON-LD.
+          The ontology publishes every element as a linked-data resource, with
+          the classes, properties and zones that the registry namespace
+          defines, and it is downloadable as Turtle or JSON-LD.
         </p>
       </Card>
       <Card href={href('/changes')}>
-        <h3 class="text-base font-semibold text-ink">The 1993–2005 changes →</h3>
+        <h3 class="text-base font-semibold text-ink">The 1993–2005 changes</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          What the 2005 revision added, changed and retired — the
-          publication's own change tags, browsable, with every replacement.
+          The 2005 revision added, changed and retired elements, and the
+          change tags of the publication itself make each change browsable,
+          together with the replacement that the source names for every
+          retired element.
         </p>
       </Card>
       <Card href={href('/bridges')}>
-        <h3 class="text-base font-semibold text-ink">Bridges by document system →</h3>
+        <h3 class="text-base font-semibold text-ink">Bridges by document system</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Where each element lives on the aligned trade documents — UNLK,
-          SAD, MAR, CIMP and the rest — coverage scheme by scheme.
+          The Locations column places each element on the aligned trade
+          documents, which include the UN layout key, the Single
+          Administrative Document and the CIM and CMR consignment notes, and
+          the coverage is reported scheme by scheme.
         </p>
       </Card>
       <Card href={href('/unlk')}>
-        <h3 class="text-base font-semibold text-ink">The UN layout key →</h3>
+        <h3 class="text-base font-semibold text-ink">The UN layout key</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          The model form of ISO 6422 reconstructed from the bridges — every
-          field at its line and character position, pan and zoom it.
+          The model form of ISO 6422 is reconstructed from the bridges, so
+          that every field appears at its line and character position, and
+          the form can be panned and zoomed.
         </p>
       </Card>
-      <Card href={href('/document')}>
-        <h3 class="text-base font-semibold text-ink">The publication itself →</h3>
+      <Card href={href('/publication')}>
+        <h3 class="text-base font-semibold text-ink">The publication</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Foreword, introduction, maintenance procedures and presentation
-          rules — transcribed in full, cover to element directory.
+          The foreword, the introduction, the maintenance procedures and the
+          presentation rules of the publication are transcribed in full, and
+          the element entries are published as the directory.
         </p>
       </Card>
-      <Card href={href('/docs')}>
-        <h3 class="text-base font-semibold text-ink">The documentation →</h3>
+      <Card href={href('/guides')}>
+        <h3 class="text-base font-semibold text-ink">The guides</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Guides to the model, the UN/EDIFACT alignment, the vocabulary
-          register, provenance and the JSON-LD context.
+          The guides describe the RDF model, the UN/EDIFACT alignment, the
+          vocabulary register, the provenance of the digitization and the
+          JSON-LD context.
         </p>
       </Card>
       <Card href={href('/1993')}>
-        <h3 class="text-base font-semibold text-ink">The 1993 directory →</h3>
+        <h3 class="text-base font-semibold text-ink">The 1993 directory</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          The previous edition reconstructed from the current one's change
-          metadata — 1043 elements with their 1993 names.
+          The previous edition is reconstructed from the change metadata of
+          the 2005 edition, and it lists 1043 elements with the names that
+          they carried in 1993.
         </p>
       </Card>
-      <Card href={href('/reference')}>
-        <h3 class="text-base font-semibold text-ink">Reference card →</h3>
+      <Card href={href('/unlk/fields')}>
+        <h3 class="text-base font-semibold text-ink">The UNLK field card</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          The UNLK-bridged elements as a printable one-sheet, grouped by
-          form line.
+          The elements that carry UNLK bridges are presented as a printable
+          reference sheet, grouped by form line.
         </p>
       </Card>
-      <Card href={href('/status')}>
-        <h3 class="text-base font-semibold text-ink">Publication status →</h3>
+      <Card href={href('/standards')}>
+        <h3 class="text-base font-semibold text-ink">The standards environment</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          The standards environment the directory lives in — current
-          editions and relationships.
+          The standards environment of the directory is recorded with the
+          current editions and the relationships among them.
         </p>
       </Card>
     </div>
   </section>
 
-  <section class="mx-auto max-w-6xl px-4 pb-14" aria-label="Why trust this data">
+  <section class="mx-auto max-w-6xl px-4 pb-14" aria-label="Operation and reuse">
     <div class="grid gap-4 md:grid-cols-2">
       <Card href={href('/about')}>
-        <h3 class="text-base font-semibold text-ink">Operation and governance →</h3>
+        <h3 class="text-base font-semibold text-ink">Operation and governance</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          A member-contribution pilot project to UN/CEFACT (UNECE) and ISO/TC 154
-          under JWG 9 resolution P-2026-07 — not an official publication. Every
-          entry names its page in the source publication, and the whole dataset is
-          open to inspection and reuse.
+          This website and its dataset are a member-contribution pilot
+          project to UN/CEFACT (UNECE) and ISO/TC 154 under resolution
+          P-2026-07 of JWG 9, and they are not an official publication.
+          Every entry names its page in the source publication, and the whole
+          dataset is open to inspection and reuse.
         </p>
       </Card>
       <Card href={href('/download')}>
-        <h3 class="text-base font-semibold text-ink">Take the dataset →</h3>
+        <h3 class="text-base font-semibold text-ink">Reusing the dataset</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          The full directory as YAML, CSV or JSON — free to use and reuse,
-          all under the{' '}
-          <span class="font-mono text-xs">untded</span> organization.
+          The complete directory is published as YAML, CSV and JSON under the{' '}
+          <span class="font-mono text-xs">untded</span> organization, and it is
+          free to use and reuse.
         </p>
       </Card>
     </div>

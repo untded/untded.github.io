@@ -9,7 +9,13 @@
   schema:name "Remuneration. Type.Code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 95;
   utd:status "active";
   utd:tag 5315 .

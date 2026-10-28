@@ -9,11 +9,25 @@
   schema:description "Free text information provided by Customs";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Customs Information. Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..32x5 L 35-39, P 51-82";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD H and SAD I)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "CIM: an..32x5 L 35-39, P 51-82 SAD: (SAD H and SAD I)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 74;
   utd:status "active";
   utd:tag 4034 .

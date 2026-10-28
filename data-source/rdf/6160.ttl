@@ -9,11 +9,40 @@
   schema:description "Weight (mass) of goods including any packaging that normally going with the goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Net Weight. Measure";
-  utd:bridge [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "";
+    utd:scheme "SAD"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 32, P 63-74 (SAD 38)";
+    utd:scheme "SAD"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28-34, P 63-71";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 34;
+      utd:posFrom 63;
+      utd:posTo 71
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "SAD: SAD: L 32, P 63-74 (SAD 38) UNLK: L 28-34, P 63-71 MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 11;
+    utd:minLength 1;
+    utd:printedForm "n..11"
+  ];
   utd:sourcePage 104;
   utd:status "active";
   utd:tag 6160 .

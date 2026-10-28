@@ -1,0 +1,24 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Contributing — UN/TDED
+description: How a correction or a new edition of the UN Trade Data Elements Directory registry is requested, and what happens to the request.
+---
+
+This registry is maintained in the open under the [`untded`](https://github.com/untded) organization at GitHub, on the mandate of the plenary resolutions of ISO/TC 154 (see [about](/about)). A contribution follows a data-maintenance process that requires no toolchain.
+
+## Raising a request
+
+The dataset repository provides two issue templates:
+
+- A **correction request** states that a value is wrong — a name, a definition, a representation or a bridge — and gives the tag together with the text that the source prints. [Open a correction request](https://github.com/untded/untded-2005/issues/new?template=correction.md).
+- A **new edition request** states which later edition of the directory, or which related publication, should be digitized, together with the reason for the request. [Open an edition request](https://github.com/untded/untded-2005/issues/new?template=edition.md).
+
+## What happens to a request
+
+1. The maintainers re-verify the claim against the source publication. Every correction must be grounded in the printed text and never in another digital edition (see the [provenance note](/guides/provenance)).
+2. A correction that verifies becomes a change to the extraction or to the data through a pull request, and the verification suite (regeneration, character conservation and UID reconciliation) must remain green.
+3. The website and the machine-readable artifacts regenerate from the dataset, and no downstream copy is edited by hand.
+
+## Code
+
+The website and the tooling accept pull requests. A small and focused change with tests is the fastest to land, and the repository READMEs describe the layout of each repository. Every change ships through review, and no change is committed directly to `main`.

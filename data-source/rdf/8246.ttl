@@ -9,11 +9,21 @@
   schema:description "To identify the marking of dangerous goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Dangerous Goods. Marking.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 7";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 7";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 4;
+    utd:minLength 1;
+    utd:printedForm "an..4"
+  ];
   utd:sourcePage 124;
   utd:status "active";
   utd:tag 8246 .

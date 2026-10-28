@@ -12,7 +12,13 @@
   schema:name "Product. Pricing Group.Code";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 25;
+    utd:minLength 1;
+    utd:printedForm "an..25"
+  ];
   utd:sourcePage 97;
   utd:status "active";
   utd:tag 5389 .

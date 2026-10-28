@@ -7,7 +7,11 @@
 <https://www.untded.org/elements/5474> a utd:TradeDataElement;
   skos:altLabel "Carriage balance, consignee";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 54, P 71-80";
+    utd:scheme "CMR"
+  ];
   utd:bridges "CMR: L 54, P 71-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "x";

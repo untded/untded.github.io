@@ -9,11 +9,29 @@
   schema:description "Description of a route to be used for the transport of goods.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Route.Text";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..38x3; L 24-26, P 45-82 (CIM 49)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 22, P 27-44";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(313):a3";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIM: an..38x3; L 24-26, P 45-82 (CIM 49) AWB: L 22, P 27-44 CIMP: (313):a3";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 512;
+    utd:minLength 1;
+    utd:printedForm "an..512"
+  ];
   utd:sourcePage 52;
   utd:status "active";
   utd:tag 3050 .

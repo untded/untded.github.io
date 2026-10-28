@@ -9,11 +9,29 @@
   schema:description "Date of issue of a transport contract document, in figures and words.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Contract Document. Issue Date Time.Text";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 60, P 37-43";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 60, P 27-44 (CMR 21)";
+    utd:scheme "CMR"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 62, P 54-80";
+    utd:scheme "MAR"
+  ];
   utd:bridges "AWB: L 60, P 37-43 CMR: L 60, P 27-44 (CMR 21) MAR: L 62, P 54-80";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 48;
   utd:status "active";
   utd:tag 2416 .

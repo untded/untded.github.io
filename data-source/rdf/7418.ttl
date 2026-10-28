@@ -9,7 +9,13 @@
   schema:name "Hazardous Material. Category Name.Text";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 116;
   utd:status "active";
   utd:tag 7418 .

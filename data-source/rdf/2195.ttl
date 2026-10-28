@@ -9,11 +9,21 @@
   schema:description "Date and or time when a transport means is scheduled to depart.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Estimated Departure.Date Time";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 1";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "add";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 19;
+    utd:minLength 1;
+    utd:printedForm "an..19"
+  ];
   utd:sourcePage 44;
   utd:status "active";
   utd:tag 2195 .

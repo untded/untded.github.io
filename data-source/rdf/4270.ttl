@@ -9,11 +9,32 @@
   schema:description "Any further qualification of the amount of the Documentary credit.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Additional Information.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35x4";
+    utd:scheme "SWIFT"
+  ], [
+    a utd:Bridge;
+    utd:detail "an..35x4; L 28-52, P 09-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 52;
+      utd:posFrom 9;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "SWIFT: an..35x4 UNLK: an..35x4; L 28-52, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 79;
   utd:status "active";
   utd:tag 4270 .

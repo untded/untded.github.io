@@ -7,7 +7,11 @@
 <https://www.untded.org/elements/4120> a utd:TradeDataElement;
   skos:altLabel "Tariffs and routes requested";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..35x3 L 20-22, P 09-44";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: an..35x3 L 20-22, P 09-44";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";

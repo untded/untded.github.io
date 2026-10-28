@@ -10,11 +10,56 @@
   schema:description "Code specifying a type of goods for Customs, transport or statistical purposes (generic term).";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Type.Code";
-  utd:bridge [], [], [], [], [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 33-44, P 23-29";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 44-45, P 38-32 and L 50-51, P 28-32 and L 56-57,P 28-32 (also on reverse)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(707):n4..7 and (900):n4..8";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "n5; L 28-32, P 75-82";
+    utd:scheme "CMR"
+  ], [
+    a utd:Bridge;
+    utd:detail "n5; L 28-32, P 75-82";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 2";
+    utd:scheme "MAR"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 33)";
+    utd:scheme "SAD"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 28-50, P 52-62";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 50;
+      utd:posFrom 52;
+      utd:posTo 62
+    ]
+  ];
   utd:bridges "AWB: L 33-44, P 23-29 CIM: L 44-45, P 38-32 and L 50-51, P 28-32 and L 56-57,P 28-32 (also on reverse) CIMP: (707):n4..7 and (900):n4..8 CMR: n5; L 28-32, P 75-82 CIM: n5; L 28-32, P 75-82 MAR: IMO/FAL 2 SAD: (SAD 33) UNLK: L 28-50, P 52-62";
   utd:category <https://www.untded.org/categories/7000-7699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 115;
   utd:status "active";
   utd:tag 7357 .

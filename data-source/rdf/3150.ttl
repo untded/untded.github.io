@@ -10,11 +10,32 @@
   schema:description "Name of place, from or at which despatch is to take place.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Despatch. Location.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "an..65";
+    utd:scheme "SWIFT"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 24, P 27-44";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 24;
+      utd:lineTo 24;
+      utd:posFrom 27;
+      utd:posTo 44
+    ]
+  ];
   utd:bridges "SWIFT: an..65 UNLK: L 24, P 27-44";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 256;
+    utd:minLength 1;
+    utd:printedForm "an..256"
+  ];
   utd:sourcePage 57;
   utd:status "active";
   utd:tag 3150 .

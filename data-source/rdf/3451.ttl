@@ -9,11 +9,21 @@
   schema:description "To identify the party responsible for either the transfer or repatriation of the funds relating to a transaction";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Financial Settlement. Party.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(SAD 9)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "SAD: (SAD 9)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 70;
   utd:status "active";
   utd:tag 3451 .

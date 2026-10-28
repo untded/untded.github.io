@@ -9,11 +9,33 @@
   schema:description "Code specifying a monetary unit or currency.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Currency. Identifier";
-  utd:bridge [], [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 24, P 45-48";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "n2; L 45, P 18-19 and L 55, P 18-19 and L 61, P 18-19 (also on reverse)(CIM 70)";
+    utd:scheme "CIM"
+  ], [
+    a utd:Bridge;
+    utd:detail "(606):a3";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 22)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "AWB: L 24, P 45-48 CIM: n2; L 45, P 18-19 and L 55, P 18-19 and L 61, P 18-19 (also on reverse)(CIM 70) CIMP: (606):a3 SAD: (SAD 22)";
   utd:category <https://www.untded.org/categories/6000-6699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 108;
   utd:status "active";
   utd:tag 6345 .

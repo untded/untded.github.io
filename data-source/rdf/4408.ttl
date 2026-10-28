@@ -7,7 +7,11 @@
 <https://www.untded.org/elements/4408> a utd:TradeDataElement;
   skos:altLabel "Accounting information qualifier";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(411)";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (411)";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "x";

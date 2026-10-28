@@ -1,0 +1,44 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: UN/EDIFACT alignment — UN/TDED
+description: How the Trade Data Elements Directory and the UN/EDIFACT D.05B directories corroborate each other, element by element, and the method and limits of the join.
+---
+
+The foreword of the 2005 revision states the relationship directly: the third edition of the Trade Data Elements Directory (TDED) is "fully consistent with the set of UN/EDIFACT directories supporting electronic data interchange, especially with the EDIFACT Data Element Directory (EDED)". This guide tests that statement against the published data and records where the two sources agree and where they differ.
+
+## The join
+
+An element page displays an EDED chip when the element's tag appears in the United Nations Electronic Data Interchange for Administration, Commerce and Transport (UN/EDIFACT) D.05B segments directory, which is a mirror of the official UNECE publication. The chip states the EDED representation (`type..maxlength`) next to the representation printed in the Directory:
+
+- The chip reports **aligned** when the charset and the maximum length corroborate each other.
+- The chip reports **representation differs** when the two printed forms disagree, and the chip links to the corresponding row below.
+
+## The 37 disagreements
+
+Thirty-seven elements carry representations that differ between the two sources. The table below is generated from the dataset at build time.
+
+import AlignmentTable from './_alignment-table.astro'
+
+<AlignmentTable />
+
+## Method and limits
+
+- The mirror lists every data element used in a segment, with its name, description, type and maximum length. Elements that no segment references do not appear in the mirror, so the absence of a chip is informational and does not indicate a mismatch.
+- The join is by tag number. The cross-check (`bin/crosscheck-edifact` in the dataset repository) additionally compares names and descriptions against a normalized similarity threshold, and its full report is kept in the dataset repository.
+- Representation disagreements are printed as both sources state them, and no value is reconciled silently.
+
+## Code lists (UNCL)
+
+The statement in the foreword extends to the United Nations Code List (UNCL), because Volume II of the publication is the code-list volume, which forms part of the UNCL of the UN/EDIFACT directory. Two joins demonstrate the correspondence.
+
+### Coverage in D.05B
+
+An element page displays a UNCL D05B chip when the element is code-qualified in the D.05B code list, together with the number of code values: element [3055](/elements/3055), for example, carries 316 values. A total of 256 active elements of the Directory are code-qualified, and they carry 10,104 code values between them. The machine-readable list is published at [`/data/uncl-coverage.json`](/data/uncl-coverage.json). The join is by tag against the short-names-only D.05B mirror (`bin/join-uncl`), and eleven D05B-coded identifiers that are not elements of this Directory were skipped. The 2005 edition was built on D.02A, and D05B is the cross-check vintage.
+
+### Section 4.1.5 cross-references in D.01B
+
+Rule 1.3 of the publication states that a qualifier code whose combined meaning equals a specific TDED element carries that element's tag in `[square brackets]` at the start of its description, and rule 1.4 and the narrative use `(parentheses)` for related tags. An element page displays a **Referenced by UNCL code values** block when any code names the element: element [3420](/elements/3420), for example, is named by UNCL 3035 code BB ("Buyer's bank"), which is the publication's own rule-1.3 example, reproduced verbatim.
+
+- 147 TDED elements are referenced by 178 code values, of which 96 follow the equals rule and the remainder follow the related rule. The machine-readable list is published at [`/data/uncl-refs.json`](/data/uncl-refs.json).
+- The join parses the full-text UNCL D.01B simples (`bin/join-uncl-refs`), mirrored from the BSD-3-Clause conversion of the UNECE publication published by fretlink/edi-parser. Two tags that the mirror references are not elements of this Directory and were skipped.
+- The D.01B vintage is one directory release before the D.02A resource of the 2005 edition. The official UNCL archives remain unavailable through their content delivery network, and D.01B is the nearest complete release under a clear license. Every page that carries the data labels the vintage.

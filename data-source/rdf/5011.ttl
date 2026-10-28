@@ -9,11 +9,36 @@
   schema:description "Representation in figures of the total sum covered by an insurance for a particular consignment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Insured Value.Amount";
-  utd:bridge [], [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 26, P 45-55";
+    utd:scheme "AWB"
+  ], [
+    a utd:Bridge;
+    utd:detail "(508) n..11, or the letters 'XXX'";
+    utd:scheme "CIMP"
+  ], [
+    a utd:Bridge;
+    utd:detail "L 26, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 26;
+      utd:lineTo 26;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "AWB: L 26, P 45-55 CIMP: (508) n..11, or the letters 'XXX' UNLK: L 26, P 45-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 18;
+    utd:minLength 1;
+    utd:printedForm "n..18"
+  ];
   utd:sourcePage 86;
   utd:status "active";
   utd:tag 5011 .

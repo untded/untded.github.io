@@ -9,11 +9,28 @@
   schema:description "Sequence number differentiating a specific goods item within a consignment";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Goods Item. Sequence.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 28-50, P 00-08 SAD (SAD 32)";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 28;
+      utd:lineTo 50;
+      utd:posFrom 1;
+      utd:posTo 8
+    ]
+  ];
   utd:bridges "UNLK: L 28-50, P 00-08 SAD (SAD 32)";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "n";
+    utd:maxLength 5;
+    utd:minLength 1;
+    utd:printedForm "n..5"
+  ];
   utd:sourcePage 36;
   utd:status "active";
   utd:tag 1496 .

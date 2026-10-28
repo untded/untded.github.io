@@ -10,11 +10,21 @@
   schema:description "Document type identifier such as INVOIC. See also 0065";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Document. Type.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(101): a3";
+    utd:scheme "CIMP"
+  ];
   utd:bridges "CIMP: (101): a3";
   utd:category <https://www.untded.org/categories/1000-1699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 6;
+    utd:minLength 1;
+    utd:printedForm "an..6"
+  ];
   utd:sourcePage 28;
   utd:status "active";
   utd:tag 1003 .

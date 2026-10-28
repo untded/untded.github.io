@@ -12,7 +12,13 @@
   schema:name "Export Permit. Effective Start.Date Time";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 19;
+    utd:minLength 1;
+    utd:printedForm "an..19"
+  ];
   utd:sourcePage 45;
   utd:status "active";
   utd:tag 2241 .

@@ -9,11 +9,25 @@
   schema:description "Code specifying a type of means of transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Type.Code";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 1";
+    utd:scheme "MAR"
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 26)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "MAR: IMO/FAL 1 SAD: (SAD 26)";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 8;
+    utd:minLength 1;
+    utd:printedForm "an..8"
+  ];
   utd:sourcePage 123;
   utd:status "active";
   utd:tag 8179 .

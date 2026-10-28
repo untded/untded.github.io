@@ -10,11 +10,21 @@
   schema:description "Name of the Master of a means of transport such as a vessel";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Means. Master Name.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "(IMO FAL Forms 1-2)";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: (IMO FAL Forms 1-2)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 70;
+    utd:minLength 1;
+    utd:printedForm "an..70"
+  ];
   utd:sourcePage 68;
   utd:status "active";
   utd:tag 3408 .

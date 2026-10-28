@@ -272,7 +272,7 @@
       "@id": "https://www.untded.org/dataset/untded-2005",
       "@type": "Dataset",
       "name": "UNTDED 2005 — United Nations Trade Data Elements Directory",
-      "description": "1504 trade data elements of the 2005 edition (ECE/TRADE/362, ISO 7372:2005). Operated on behalf of UN/CEFACT (UNECE) and ISO/TC 154.",
+      "description": "The 1504 trade data elements of the 2005 edition (ECE/TRADE/362, ISO 7372:2005) as structured, machine-readable records. The digitization and the registry that publishes it are a member contribution and a pilot project to UN/CEFACT (UNECE) and ISO/TC 154, and are not an official publication of, and are not endorsed by, either organization. The Directory itself is the official publication ECE/TRADE/362, published in parallel as ISO 7372:2005.",
       "source": "ECE/TRADE/362 (ISO 7372:2005), © United Nations / UNECE, reproduced with attribution",
       "elementCount": 1504,
       "distribution": [
@@ -448,7 +448,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Document/message name",
         "Document/message name"
       ],
       "bridges": "UNLK: L 02, P 45-80 MAR: IMO/FAL 1-7",
@@ -606,7 +605,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Document/message number",
         "Document/message number"
       ],
       "bridges": "CIMP: (112) n3 and (114) an6 or (805) n8 and (118) n6 MAR: IMO/FAL 2 UNLK: an..17 L 04, P 63-80 SAD:",
@@ -1442,7 +1440,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Message item number",
         "Message item number"
       ]
     },
@@ -1469,7 +1466,6 @@
         "maxLength": 6
       },
       "altLabel": [
-        "Message sub-item number",
         "Message sub-item number"
       ]
     },
@@ -2763,7 +2759,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Received number",
         "Received number"
       ],
       "bridges": "CIM: n..4; L 69, P 76-82",
@@ -3948,7 +3943,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Contract number",
         "Contract number"
       ],
       "bridges": "UNLK: an..17 L 04, P 63-80",
@@ -3993,7 +3987,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Part consignment number",
         "Part consignment number"
       ],
       "bridges": "CIMP: (703): a1; (905): n2",
@@ -4143,7 +4136,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Invoice number",
         "Invoice number"
       ],
       "bridges": "UNLK: an..17 L 04, P 63-80",
@@ -4331,7 +4323,6 @@
         "maxLength": 70
       },
       "altLabel": [
-        "Document/message source",
         "Document/message source"
       ]
     },
@@ -12290,7 +12281,6 @@
         "maxLength": 256
       },
       "altLabel": [
-        "Customs office of destination (transit)",
         "Customs office of destination (transit)"
       ],
       "bridges": "SAD: (SAD 53)",
@@ -12857,7 +12847,6 @@
         "maxLength": 256
       },
       "altLabel": [
-        "Customs office of guarantee",
         "Customs office of guarantee"
       ],
       "bridges": "SAD: (SAD 52)",
@@ -13056,7 +13045,6 @@
         "maxLength": 512
       },
       "altLabel": [
-        "Name and address line",
         "Name and address line"
       ]
     },
@@ -13841,7 +13829,6 @@
         "maxLength": 256
       },
       "altLabel": [
-        "Goods receipt place",
         "Goods receipt place"
       ],
       "bridges": "CMR: L 62, P 45-62 (CMR 24)",
@@ -14049,7 +14036,6 @@
         "maxLength": 512
       },
       "altLabel": [
-        "Container operator",
         "Container operator"
       ]
     },
@@ -15430,7 +15416,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Country of origin",
         "Country of origin"
       ],
       "bridges": "UNLK: L 18, P 45-62",
@@ -18546,7 +18531,6 @@
         "maxLength": 512
       },
       "altLabel": [
-        "Insurer's Agent at destination",
         "Insurer's Agent at destination"
       ],
       "bridges": "UNLK: an..35x5; L 50-54, P 09-44",
@@ -24202,7 +24186,6 @@
         "maxLength": 17
       },
       "altLabel": [
-        "Nature of transaction",
         "Nature of transaction"
       ]
     },
@@ -26169,7 +26152,6 @@
         "maxLength": 18
       },
       "altLabel": [
-        "Interest on arrears",
         "Interest on arrears"
       ],
       "bridges": "UNLK: L 36-46, P 09-44",
@@ -26429,7 +26411,6 @@
         "maxLength": 4
       },
       "altLabel": [
-        "Additional charges/deductions",
         "Additional charges/deductions"
       ],
       "bridges": "CIM: L 44-45, P 40-43 and L 50-51, P 40-43 and L 56-57,P 40-43 (also on reverse)",
@@ -32360,7 +32341,6 @@
         "maxLength": 14
       },
       "altLabel": [
-        "Vehicle tare",
         "Vehicle tare"
       ],
       "bridges": "CIM: L 13-14, P 69-73 (CIM 20)",
@@ -32986,7 +32966,6 @@
         "maxLength": 13
       },
       "altLabel": [
-        "Supplementary quantity",
         "Supplementary quantity"
       ],
       "bridges": "SAD: (SAD 41)",
@@ -34897,7 +34876,6 @@
         "maxLength": 8
       },
       "altLabel": [
-        "Measure unit qualifier",
         "Measure unit qualifier"
       ],
       "bridges": "AWB: L 33-44, P 20 CIMP: (601):a1; (604):a2 SAD: (SAD 47(2))",
@@ -37052,7 +37030,6 @@
         "maxLength": 8
       },
       "altLabel": [
-        "Number of packages",
         "Number of packages"
       ],
       "bridges": "AWB: L 33-44, P 09-12 CIMP: (701):n..4 CMR: L 28-42, P 27-33 (CMR 7) UNLK: L 28-51, P 27-33 Add MAR: IMO/FAL 2,7 SAD: (SAD 31)",
@@ -37851,7 +37828,6 @@
         "maxLength": 8
       },
       "altLabel": [
-        "Total number of packages",
         "Total number of packages"
       ],
       "bridges": "SAD: (SAD 6)",
@@ -37932,7 +37908,6 @@
         "maxLength": 35
       },
       "altLabel": [
-        "Identity number",
         "Identity number"
       ],
       "bridges": "UNLK: L 36-46, P 09-44",

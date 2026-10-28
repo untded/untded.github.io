@@ -10,11 +10,28 @@
   schema:description "Means of transport by which goods are moved prior to their main transport.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Transport Movement. Pre-carriage Means Type.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 22, P 09-26";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 22;
+      utd:lineTo 22;
+      utd:posFrom 9;
+      utd:posTo 26
+    ]
+  ];
   utd:bridges "UNLK: L 22, P 09-26";
   utd:category <https://www.untded.org/categories/8000-8699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 127;
   utd:status "active";
   utd:tag 8428 .

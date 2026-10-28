@@ -10,11 +10,32 @@
   schema:description "Name of country from which a consignment of goods was initially exported to the importing country without any commercial transaction taking place in intermediate countries. Syn.: country whence consigned. Country of despatch: country from which goods are despatched between countries of a Customs union";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Exportation Country. Name.Text";
-  utd:bridge [], [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 16, P 45 - 61";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 16;
+      utd:lineTo 16;
+      utd:posFrom 45;
+      utd:posTo 61
+    ]
+  ], [
+    a utd:Bridge;
+    utd:detail "(SAD 15)";
+    utd:scheme "SAD"
+  ];
   utd:bridges "UNLK: L 16, P 45 - 61 SAD: (SAD 15)";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 60;
   utd:status "active";
   utd:tag 3220 .

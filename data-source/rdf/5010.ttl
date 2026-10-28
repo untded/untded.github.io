@@ -10,11 +10,28 @@
   schema:description "Representation in letters of the total sum covered by an insurance for a particular shipment.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Consignment. Insured Value. Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 24, P45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 24;
+      utd:lineTo 24;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK L 24, P45-80";
   utd:category <https://www.untded.org/categories/5000-5699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 86;
   utd:status "active";
   utd:tag 5010 .

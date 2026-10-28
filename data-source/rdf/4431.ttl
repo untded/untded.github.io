@@ -9,11 +9,28 @@
   schema:description "Code specifying the means of payment guarantee.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Payment. Guarantee Means.Code";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 66, P55-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 66;
+      utd:lineTo 66;
+      utd:posFrom 55;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 66, P55-80";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 3;
+    utd:minLength 1;
+    utd:printedForm "an..3"
+  ];
   utd:sourcePage 84;
   utd:status "active";
   utd:tag 4431 .

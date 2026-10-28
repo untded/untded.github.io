@@ -9,11 +9,21 @@
   schema:description "Name of a job title, such as rank or rating of crew member.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Person. Job Title.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "IMO/FAL 4-5";
+    utd:scheme "MAR"
+  ];
   utd:bridges "MAR: IMO/FAL 4-5";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 71;
   utd:status "active";
   utd:tag 3480 .

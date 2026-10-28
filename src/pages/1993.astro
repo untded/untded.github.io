@@ -26,16 +26,16 @@ const name1993 = (e: (typeof elements)[number]) => e.old_name ?? e.name ?? '(ret
 
 <BaseLayout
   title="The 1993 directory — UN/TDED"
-  description="The Trade Data Elements Directory as it stood before the 2005 revision: 1043 elements with their 1993 names, reconstructed from the current edition's own change metadata."
+  description="The Trade Data Elements Directory before the 2005 revision contained 1043 elements. This page reconstructs that edition and its names from the change metadata of the current edition."
 >
   <div class="mx-auto max-w-5xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">Historical view</p>
     <h1 class="mt-2 text-3xl font-semibold tracking-tight text-ink">The 1993 directory</h1>
     <p class="mt-3 max-w-2xl leading-relaxed text-body">
-      The 2005 edition's change tags and old names carry the previous edition inside
-      them. This is the directory as it stood before the revision — reconstructed
-      from the current edition's own metadata, not from a separate source. Every
-      element links to its current entry for the full picture.
+      The change tags and old names of the 2005 edition carry the previous edition
+      inside them. This page reconstructs the directory as it stood before the
+      revision, from the metadata of the current edition rather than from a separate
+      source, and every element links to its current entry for the full record.
     </p>
 
     <div class="mt-6 flex flex-wrap gap-3 text-sm">
@@ -53,11 +53,11 @@ const name1993 = (e: (typeof elements)[number]) => e.old_name ?? e.name ?? '(ret
       </span>
       <span class="rounded-full border border-line bg-paper px-3 py-1.5">
         <strong class="font-semibold text-ink">{retiredSince}</strong>{' '}
-        <span class="text-body">retired since</span>
+        <span class="text-body">retired by 2005</span>
       </span>
       <span class="rounded-full border border-line bg-paper px-3 py-1.5">
         <strong class="font-semibold text-ink">{stillActive}</strong>{' '}
-        <span class="text-body">still active today</span>
+        <span class="text-body">still active</span>
       </span>
     </div>
 
@@ -79,9 +79,10 @@ const name1993 = (e: (typeof elements)[number]) => e.old_name ?? e.name ?? '(ret
         The 1993 names
       </h2>
       <p class="mb-4 text-sm text-body">
-        The 2005 revision renamed almost every element (the naming convention moved
-        from slash-separated to qualified dot-separated, per ISO 11179 and ebXML CCTS).
-        The 1993 name appears first; the current name follows where it changed.
+        The 2005 revision renamed almost every element, because the naming convention
+        moved from slash-separated to qualified dot-separated in accordance with
+        ISO 11179 and ebXML CCTS. The 1993 name appears first, and the current name
+        follows where it changed.
       </p>
       <div class="overflow-x-auto rounded-md border border-line bg-paper md:overflow-visible">
         <table class="data-table w-full text-sm">

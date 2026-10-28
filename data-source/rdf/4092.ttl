@@ -9,11 +9,21 @@
   schema:description "Identity assigned to the loading authorisation granted by the forwarding location e.g. railway or airport, when the consignment id subject to traffic limitations.";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Loading. Authorisation.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 02, P 66-82";
+    utd:scheme "CIM"
+  ];
   utd:bridges "CIM: L 02, P 66-82";
   utd:category <https://www.untded.org/categories/4000-4699>;
   utd:changeTag "cndr";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 75;
   utd:status "active";
   utd:tag 4092 .

@@ -9,11 +9,28 @@
   schema:description "Identifier of a party to which merchandise or services are sold";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Buyer. Party.Identifier";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 09, P 63-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 9;
+      utd:lineTo 9;
+      utd:posFrom 63;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 09, P 63-80";
   utd:category <https://www.untded.org/categories/3000-3699>;
   utd:changeTag "cn";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 17;
+    utd:minLength 1;
+    utd:printedForm "an..17"
+  ];
   utd:sourcePage 49;
   utd:status "active";
   utd:tag 3003 .

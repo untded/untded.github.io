@@ -9,11 +9,28 @@
   schema:description "Date on which the validity of a documentary credit expires, in figures and words";
   schema:isPartOf <https://www.untded.org/dataset/untded-2005>;
   schema:name "Documentary Credit Document. Effective End Date Time.Text";
-  utd:bridge [];
+  utd:bridge [
+    a utd:Bridge;
+    utd:detail "L 10, P 45-80";
+    utd:scheme "UNLK";
+    utd:zone [
+      a utd:UnlkZone;
+      utd:lineFrom 10;
+      utd:lineTo 10;
+      utd:posFrom 45;
+      utd:posTo 80
+    ]
+  ];
   utd:bridges "UNLK: L 10, P 45-80";
   utd:category <https://www.untded.org/categories/2000-2699>;
   utd:changeTag "cnd";
-  utd:representation [];
+  utd:representation [
+    a utd:Representation;
+    utd:charset "an";
+    utd:maxLength 35;
+    utd:minLength 1;
+    utd:printedForm "an..35"
+  ];
   utd:sourcePage 45;
   utd:status "active";
   utd:tag 2210 .
