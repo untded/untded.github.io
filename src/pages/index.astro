@@ -17,7 +17,7 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
 
 <BaseLayout
   title="UN/TDED — the UN Trade Data Elements Directory, machine-readable"
-  description="The United Nations Trade Data Elements Directory 2005 (ISO 7372:2005): 1504 trade data elements with their definitions and representations. Operated on behalf of UN/CEFACT and ISO/TC 154."
+  description="The United Nations Trade Data Elements Directory 2005 (ISO 7372:2005): 1504 trade data elements with their definitions and representations. A pilot project to UN/CEFACT and ISO/TC 154, not an official publication."
 >
   <section class="border-b border-line bg-mist">
     <div class="mx-auto max-w-6xl px-4 pb-12 pt-14">
@@ -139,9 +139,10 @@ const datasetJsonld = jsonldNode(`${Astro.site?.toString().replace(/\/$/, '')}/d
       <Card href={href('/about')}>
         <h3 class="text-base font-semibold text-ink">Operation and governance →</h3>
         <p class="mt-2 text-sm leading-relaxed text-body">
-          Operated on behalf of UN/CEFACT (UNECE) and ISO/TC 154 under their
-          plenary mandate. Every entry names its page in the source
-          publication, and the whole dataset is open to inspection and reuse.
+          A member-contribution pilot project to UN/CEFACT (UNECE) and ISO/TC 154
+          under JWG 9 resolution P-2026-07 — not an official publication. Every
+          entry names its page in the source publication, and the whole dataset is
+          open to inspection and reuse.
         </p>
       </Card>
       <Card href={href('/download')}>

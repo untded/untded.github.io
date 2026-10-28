@@ -6,7 +6,7 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
 
 <BaseLayout
   title="About — UN/TDED"
-  description="What UN/TDED is, who operates it, and the ISO/TC 154 resolution mandate behind the open-source maintenance of ISO 7372 (UNTDED)."
+  description="What UN/TDED is, its status as a pilot project, and the ISO/TC 154 resolution behind the open-source maintenance of ISO 7372 (UNTDED)."
 >
   <div class="mx-auto max-w-3xl px-4 py-12">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-un-deep">About</p>
@@ -29,6 +29,26 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
         the 2005 edition (ECE/TRADE/362, ISO 7372:2005) as an open,
         machine-readable dataset, so that the vocabulary of trade can be
         maintained and consumed as data, not as a scanned PDF.
+      </p>
+    </section>
+
+    <section
+      id="pilot"
+      class="mt-10 rounded-md border border-amber-300 bg-amber-50 p-6 dark:border-amber-800/60 dark:bg-amber-950/40"
+    >
+      <h2 class="text-xl font-semibold tracking-tight text-ink">Pilot status</h2>
+      <p class="mt-3 text-sm leading-relaxed text-body">
+        UN/TDED is a <strong class="text-ink">member contribution and a pilot
+        project</strong>, performed to complement the work of ISO/TC 154 and
+        UN/CEFACT (UNECE) under JWG 9 resolution P-2026-07 (see{' '}
+        <a class="text-un-deep underline decoration-un/50" href="#mandate">the mandate</a>).
+        It is <strong class="text-ink">not an official project</strong> of either
+        organization and is <strong class="text-ink">not endorsed</strong> by ISO or
+        UNECE. The data is digitized from the printed edition and provided without
+        any guarantee of accuracy — use it at your own risk. The official sources
+        remain the publications of the two organizations:{' '}
+        <a class="text-un-deep underline decoration-un/50" href={UNECE_UNTDED_URL}>UN/TDED — UNECE</a> and{' '}
+        <a class="text-un-deep underline decoration-un/50" href={ISO_7372_URL}>ISO 7372 — ISO</a>.
       </p>
     </section>
 
@@ -74,17 +94,19 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
     <section class="mt-10">
       <h2 class="text-xl font-semibold tracking-tight text-ink">Operation and governance</h2>
       <p class="mt-3 leading-relaxed text-body">
-        This site and its repositories are operated on behalf of the United
-        Nations and the International Organization for Standardization, which
-        jointly maintain ISO 7372 / the TDED through{' '}
-        <strong class="text-ink">ISO/TC 154/JWG 9</strong>.
+        This site and its repositories are a pilot project performed to complement
+        the work of the United Nations and the International Organization for
+        Standardization, which jointly maintain ISO 7372 / the TDED through{' '}
+        <strong class="text-ink">ISO/TC 154/JWG 9</strong>. It is not an official
+        project of either organization — see{' '}
+        <a class="text-un-deep underline decoration-un/50" href="#pilot">pilot status</a>.
       </p>
       <div class="mt-5">
         <OrgCards />
       </div>
     </section>
 
-    <section class="mt-10 rounded-md border border-line bg-mist p-6">
+    <section id="mandate" class="mt-10 rounded-md border border-line bg-mist p-6">
       <h2 class="text-xl font-semibold tracking-tight text-ink">The mandate</h2>
       <p class="mt-2 text-sm text-body">
         The work is mandated by <strong class="text-ink">
@@ -119,7 +141,8 @@ import { href, ISO_7372_URL, UNECE_UNTDED_URL, tc154ResolutionUrl } from '../lib
         {' '}(JWG 1) initiates a meeting with the UNECE Secretariat on the stalled
         maintenance and publication of the UN/EDIFACT Directories (D.25A
         severely delayed). This platform — dataset, website and source code —
-        is the open-source platform those resolutions call for, with
+        is the open-source platform those resolutions call for, developed and
+        operated as a pilot project to ISO/TC 154 and UNECE, with
         UNTDED 2005 as its first complete edition.
       </p>
     </section>
